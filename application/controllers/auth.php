@@ -53,8 +53,8 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$this->load->library('form_validation'); 
 		$this->load->helper('alert'); 
 
-		$mail = $_REQUEST['mail'];
-		$password =  $_REQUEST['password'];
+		//$mail = $_REQUEST['mail'];
+		//$password =  $_REQUEST['password'];
 		echo "->".$mail ;
 		exit();
 		//폼 검증할 필드와 규칙 사전 정의 
@@ -140,7 +140,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$mode = $_REQUEST['selnum'];
 
 		$date=date("Y-m-d H:i:s",time());
-		$message="<a href='http://163.180.73.62/index.php/auth/member_comfirm?to=$mode' > 인증확인  </a>  admin@linkasia.co.kr<br>卓尼制作 : $date";
+		$message="<a href='http://163.180.73.25/index.php/auth/member_comfirm?to=$mode' > 인증확인  </a>  admin@linkasia.co.kr<br>卓尼制作 : $date";
 		
 		$config['mailtype']  = "html";
 		$config['charset']   = "utf-8";

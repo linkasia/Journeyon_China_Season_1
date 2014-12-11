@@ -1,7 +1,6 @@
 <?
-//$regUser = "";
+$regUser = "0000000001";
 foreach($salesCityQnA as $v){
-
 ?>
 			<div class="reply"><!-- 질문 부분 -->
 				<div class="profile_pic">
@@ -13,25 +12,34 @@ foreach($salesCityQnA as $v){
 				</div>
 				<div class="reply_textQnA"><span class="reply_id"><?=$v->Name_cn_en?> : </span><?=$v->content?>
 				<br><span class="time_log"><?=$v->create_date?></span>
-				<br><span class="addReply">add a comment</span>
+				<?//if($v->user_num == $regUser){?>
+					<br><span class="addReply" id='add_Reply' onclick="addReply('<?=$v->qna_num?>')"><ins>add a comment</ins></span>
+				<?//}?>
 				</div>
 			</div>
+			<div id='addReply<?=$v->qna_num?>'> </div>
+			<?foreach($salesCityQnA2 as $k){
+			if( $v->qna_num == $k->qna_num){?>
+				<div class="reply"><!-- 답변 달리는 부분 -->
+					<img src="/application/views/images/contents/reply.png" alt="" class="reply_arrow">
+					<div class="profile_pic_answer">
+						<img src="<?=$k->face_img_path?>" alt="" class="img-circle profile_image">
+						<img src="<?=$k->country_flog?>" alt="" class="flag_image">
+						<?if($v->v_get_code == "0001"){?>
+							<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
+						<?}?>
+					</div>
+					<div class="reply_text_answerQnA"><span class="reply_id"><?=$k->Name_cn_en?>： </span><?=$k->content?>
+					<br><span class="time_log"><?=$k->create_date?></span>
+					</div>
+				</div>
+			<?}
+			}
+			?>
+				
+<?}?>		
 			
-			<div class="reply"><!-- 답변 달리는 부분 -->
-				<img src="/application/views/images/contents/reply.png" alt="" class="reply_arrow">
-				<div class="profile_pic_answer">
-					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
-					<img src="<?=$v->country_flog?>" alt="" class="flag_image">
-					<?if($v->v_get_code == "0001"){?>
-						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
-					<?}?>
-				</div>
-				<div class="reply_text_answerQnA"><span class="reply_id"><?=$v->Name_cn_en?>： </span><?=$v->content?>
-				<br><span class="time_log"><?=$v->create_date?></span>
-				<br><span class="addReply">add a comment</span>
-				</div>
-			</div>
-<?}?>
+
 			<div class="typingBox">
 				<div class="profile_pic">
 					<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">

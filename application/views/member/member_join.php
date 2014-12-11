@@ -1,4 +1,6 @@
-<?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<?if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+$Host ="http://163.180.73.25:80/";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -91,6 +93,7 @@
 
 
 <script type="text/javascript">
+		var Host ="<?=$Host?>";
 		//인증번호 생성
 		var _random="";
 
@@ -127,7 +130,7 @@
 								dataType:"text",
 								contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 								data:{selnum: _selnum},
-								url:"http://163.180.73.62/index.php/member/memberJoin/searchMem",
+								url:Host+"index.php/member/memberJoin/searchMem",
 								success: function (data){
 									if(data =="fail"){
 										alert("이미가입되어있습니다.");
@@ -137,7 +140,7 @@
 											dataType:"text",
 											contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 											data:{selnum: _selnum},
-											url:"http://163.180.73.62/index.php/auth/sendmail",
+											url:Host+"index.php/auth/sendmail",
 											success: function (data){
 												alert("인증메일을 전송하였습니다!");
 											}
@@ -152,7 +155,7 @@
 				});
 				
 				$('#logo').click( function(){
-					location.href = "http://163.180.73.62:80/";
+					location.href = Host;
 				});
 
 				$('#cancel').click( function(){

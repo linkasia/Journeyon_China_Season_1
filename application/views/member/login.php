@@ -1,5 +1,5 @@
 <?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
-
+$Host ="http://163.180.73.25:80/";
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -86,12 +86,11 @@
 		</div>
 
 		<script type="text/javascript">
-		
+			var Host ="<?=$Host?>";
 			$(function(){
-				
 				//로고 클릭시 메인페이지 이동
 				$('#logo').click( function(){
-					location.href = "http://163.180.73.62:80/";
+					location.href = Host;
 				});
 
 				//취소버튼 클릭시 메인페이지 이동

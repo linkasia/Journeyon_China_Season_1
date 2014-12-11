@@ -186,6 +186,7 @@
 		function salesDetailCityQnA($num)
 		{
 			$sql ="SELECT a.num,
+											a.qna_num,
 											a.user_num,
 											a.product_num,
 											a.content,
@@ -200,6 +201,31 @@
 							FROM user_question_product a
 							LEFT JOIN USER b ON a.user_num = b.num
 							LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
+							WHERE a.product_num='".$num."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		//선택한 도시 상세 QnA
+		function salesDetailCityQnA2($num)
+		{
+			$sql ="SELECT a.num,
+											a.qna_num,
+											a.user_num,
+											a.product_num,
+											a.content,
+											DATE_FORMAT(a.create_date,'%Y-%m-%d %H:%i') AS create_date,
+											b.Name_cn_en,
+											b.face_img_path,
+											b.v_get_code,
+											b.mother_area_code,
+											b.mother_country_code,
+											c.code_nm AS country_nm,
+											c.ref1 AS country_flog
+								FROM answer a
+								LEFT JOIN USER b ON a.user_num = b.num
+								LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
 							WHERE a.product_num='".$num."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();

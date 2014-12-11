@@ -13,7 +13,12 @@ $salesNum = $_REQUEST['salesNum'];
 
 		<!-- salesCity1.php 로 뺀 부분 CI로딩 -->
 		<div id='viewContents' name='viewContents' class="contents_wrap">
-			<!-- include 한 부분 --><?$this->load->view("/contents/salesCity1");?>
+			<!-- include 한 부분 --><?
+			
+			$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
+
+			$this->load->view("/contents/salesCity1",$data);
+			?>
 		</div>
 	</section>
 
@@ -118,8 +123,9 @@ $salesNum = $_REQUEST['salesNum'];
 </div>
 
 
-<script type="text/javascript"t>
-
+<script type="text/javascript">
+	var _checkDate="";
+	var _tmpCheckDate = "";
 	//달력제어
 	$(document).ready(function () {           
 		var today = new Date();
@@ -128,13 +134,20 @@ $salesNum = $_REQUEST['salesNum'];
 
 	$(function(){
 		var _salesNum= "<?=$salesNum?>";
-		var _checkDate="";
+		
+		var i=0;
 		$('#calendarContent').click( function(){
+
 			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + $('#jqxWidget').val().getMonth() + "-" + $('#jqxWidget').val().getDate();
+
+			
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");
 			}else{
-				_checkDate += "<li class='checkdateLi'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClose'></li> ";
+				
+				//alert(_checkDate);
+				_checkDate += "<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
+				i++;
 			}
 			
 			document.getElementById('checkDate').innerHTML = _checkDate;
@@ -185,4 +198,25 @@ $salesNum = $_REQUEST['salesNum'];
 			});
 		});
 	});
+
+
+	function checkCancel(i)
+	{
+		var choiceDate=document.getElementById('date'+i).value;
+		 var _tmpCheckDate =document.getElementById("li"+i).innerHTML="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
+		 _checkDate = _checkDate.replace(_tmpCheckDate,"");
+		 document.getElementById("li"+i).innerHTML="";
+	}
+
+	function addReply(num)
+	{
+		var insertBox ="<div class='typingBox2'>"
+									+"<img src='/application/views/images/contents/reply.png' class='reply_arrow'>"
+									+"<textarea name='typingArea' id='' cols='20' rows='20' class='typingArea'></textarea>"
+									+"<button class='btn btnQna2'>上传</button>"
+									+"</div>";
+									
+			document.getElementById('addReply'+num).innerHTML = insertBox;
+	}
+
 </script>

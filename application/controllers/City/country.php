@@ -113,6 +113,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	function detailCity2(){
 		$salesNum = $_REQUEST['salesNum'];
 		$data['salesCityQnA']= $this->country_M->salesDetailCityQnA($salesNum);
+		$data['salesCityQnA2']= $this->country_M->salesDetailCityQnA2($salesNum);
 		$this->load->view("/contents/salesCity2",$data);
 	}
 

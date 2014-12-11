@@ -123,7 +123,7 @@ $salesNum = $_REQUEST['salesNum'];
 </div>
 
 
-<script type="text/javascript"t>
+<script type="text/javascript">
 	var _checkDate="";
 	var _tmpCheckDate = "";
 	//달력제어
@@ -207,4 +207,16 @@ $salesNum = $_REQUEST['salesNum'];
 		 _checkDate = _checkDate.replace(_tmpCheckDate,"");
 		 document.getElementById("li"+i).innerHTML="";
 	}
+
+	function addReply(num)
+	{
+		var insertBox ="<div class='typingBox2'>"
+									+"<img src='/application/views/images/contents/reply.png' class='reply_arrow2'>"
+									+"<textarea name='typingArea' id='' cols='20' rows='20' class='typingArea'></textarea>"
+									+"<button class='btn btnQna2'>上传</button>"
+									+"</div>";
+									
+			document.getElementById('addReply'+num).innerHTML = insertBox;
+	}
+
 </script>

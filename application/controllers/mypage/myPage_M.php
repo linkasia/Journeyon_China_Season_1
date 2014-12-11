@@ -25,5 +25,61 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('include/footer');
 	}
 
+	/*profile*/
+	function myprofile()
+	{
+		$this->load->view('mypage/myprofile');
+	}
+
+	
+	function myChat()
+	{
+		$this->load->view('mypage/mypageChat');
+	}
+
+	function myAccount()
+	{
+		$this->load->view('mypage/mypageAccount');
+	}
+
+	function HostProduct()
+	{
+		$this->load->view('mypage/hostProduct');
+	}
+
+	function HostSales()
+	{
+		$this->load->view('mypage/hostSales');
+	}
+
+	function HostCancel()
+	{
+		$this->load->view('mypage/hostCancel');
+	}
+
+	function HostProfit()
+	{
+		$this->load->view('mypage/hostProfit');
+	}
+
+	function GuestCounsel()
+	{
+		$this->load->view('mypage/guestCounsel');
+	}
+
+	function Guestwish()
+	{
+		$this->load->view('mypage/guestwish');
+	}
+
+	function GuestBeen()
+	{
+		$this->load->view('mypage/guestBeen');
+	}
+
+	function GuestCancel()
+	{
+		$this->load->view('mypage/guestCancel');
+	}
 
 }

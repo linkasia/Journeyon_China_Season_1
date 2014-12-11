@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<img src="/application/views/images/main/profile01.jpg"  class="profilePic img-circle" alt="profile_picture">
-			<p class="btn btn-danger edit_profile1">Modify</p>
+			<p class="btn btn-danger edit_profile1" id='profileModify'>Modify</p>
 		</div><!-- profileWrap1 -->
 
 		<div class="profileWrap2">
@@ -59,7 +59,7 @@
 							<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">	当地人
 						</div>
 					</div>
-					<img src="/application/views/images/contents/img01.jpg" alt="" class="pic1_img">
+					<img src="/application/views/images/contents/img01.jpg" alt="" class="pic1_img" style="width: 270px; height: 180px;">
 					<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
 					<img src="/application/views/images/left_menu/flag03_usa.png" alt="" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
@@ -97,7 +97,7 @@
 							<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">	当地人
 						</div>
 					</div>
-					<img src="/application/views/images/contents/img03.jpg" alt="" class="pic1_img">
+					<img src="/application/views/images/contents/img03.jpg" alt="" class="pic1_img" style="width: 270px; height: 180px;">
 					<img src="/application/views/images/main/profile05.jpg" alt="" class="img-circle profile_image">
 					<img src="/application/views/images/left_menu/flag12_nl.png" alt="" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
@@ -136,7 +136,7 @@
 									<div class="portfolio-hover2">
 										<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 									</div>
-									<img src="/application/views/images/main/img15_some05.png" alt="">
+									<img src="/application/views/images/main/img15_some05.png" alt="" style="width: 300px; height: 240px;">
 								</div>
 								<div class="somenail_transbox2" style="background-color:rgba(237,28,36,.6)">
 									<p class="somenail_title">首尔地铁沿线游之3号线</p>
@@ -172,7 +172,7 @@
 									<div class="portfolio-hover2">
 										<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 									</div>
-									<img src="/application/views/images/main/img16_some06.png" alt="">
+									<img src="/application/views/images/main/img16_some06.png" alt="" style="width: 300px; height: 240px;">
 								</div>
 								<div class="somenail_transbox2" style="background-color:rgba(195,119,228,.6)">
 									<p class="somenail_title">来首尔林荫道, 玩一把小清新</p>
@@ -209,7 +209,7 @@
 									<div class="portfolio-hover2">
 										<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 									</div>
-									<img src="/application/views/images/main/img13_some03.png" alt="">
+									<img src="/application/views/images/main/img13_some03.png" alt="" style="width: 300px; height: 240px;">
 								</div>
 								<div class="somenail_transbox2" style="background-color:rgba(63,127,206,.6)">
 									<p class="somenail_title">搜寻那些首尔的人气美甲店</p>
@@ -245,7 +245,7 @@
 									<div class="portfolio-hover2">
 										<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 									</div>
-									<img src="/application/views/images/main/img17_some07.png" alt="">
+									<img src="/application/views/images/main/img17_some07.png" alt="" style="width: 300px; height: 240px;">
 								</div>
 								<div class="somenail_transbox2" style="background-color:rgba(243,164,107,.6)">
 									<p class="somenail_title">热辣旅游主题NBA, 纽约麦迪逊现场为...</p>

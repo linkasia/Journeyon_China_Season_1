@@ -1,5 +1,7 @@
-<?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
-<?$to=$_GET['to'];
+<?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+$Host ="http://163.180.73.25:80/";
+
+$to=$_GET['to'];
 if($to == "" || $to == null){
 	return;
 }
@@ -80,6 +82,7 @@ if($to == "" || $to == null){
 
 
 	<script type="text/javascript">
+	var Host ="<?=$Host?>";
 	var _selnum = "<?=$to?>";
 		$(function(){
 			$('#comfirm').click( function(){
@@ -96,7 +99,7 @@ if($to == "" || $to == null){
 							dataType:"text",
 							contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 							data:{selnum: _selnum, password:pw},
-							url:"http://163.180.73.62/index.php/member/memberJoin/",
+							url: Host+"index.php/member/memberJoin/",
 							success: function (data){
 								alert("가입되었습니다.");
 								location.href = "<?=site_url('auth/index'); ?>";
@@ -109,7 +112,7 @@ if($to == "" || $to == null){
 			});
 
 			$('#logo').click( function(){
-					location.href = "http://163.180.73.62:80/";
+					location.href = Host;
 				});
 
 			$('#cancel').click( function(){

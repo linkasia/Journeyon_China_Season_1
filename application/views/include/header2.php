@@ -62,7 +62,7 @@
 	
 		$(function(){
 			$('#logo').click( function(){
-				location.href = "http://163.180.73.62:80/";
+				location.href = "http://163.180.73.25:80/";
 			});
 
 		});
