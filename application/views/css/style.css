@@ -20,7 +20,10 @@
 	#header_top>ul>li.become_host{width: 151px; height: 19px; background-image: url(/application/views/images/main/img02_text.png); position: absolute; left: 183px; top: 22px;}
 	#header_top>ul>li.how_works{width: 88px; height: 19px; background-image: url(/application/views/images/main/img03_text.png); position: absolute; left: 718px; top: 22px;}
 	#header_top>ul>li.login{width: 44px; height: 19px; background-image: url(/application/views/images/main/img04_text.png); position: absolute; left: 832px; top: 22px;}
-	#header_top>ul>li.logout{width: 44px; height: 19px; background-image: url(/application/views/images/main/img04_text2.png); position: absolute; left: 832px; top: 22px;}
+	#header_top>ul>li.login_email{position: absolute; right: 250px; top: 20px; font-size: 1.3em; color: #fff;}
+	#mypage{margin-left: 360px; margin-top: 10px; width: 50px; height: 30px; color: #fff;}
+
+	#header_top>ul>a.logout{width: 44px; height: 19px; position: absolute; left: 832px; top: 22px;}
 	#header_top>ul>li.signup{width: 44px; height: 19px; background-image: url(/application/views/images/main/img05_text.png); position: absolute; left: 896px; top: 22px;}
 	#header_top>ul:after{clear: both; display: block; *zoom: 1;} /* Float 사용 후 정렬 */
 
@@ -348,7 +351,7 @@
 	#section_wrap #select2{padding: 5px 20px 5px 20px; display: none;}
 
 	/*타이틀, 아래 버튼*/
-	.title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 50px;}
+	.title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-top: 40px; margin-bottom: 20px;}
 	.title .underline{border-bottom: 2px #f3c807 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	.sort{width: 100%; height: 40px;}
 	.flr{float: right;}
@@ -680,14 +683,14 @@
 		#mypage_wrap #mypage_rightWrap .profileWrap4{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap4 .title4{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap4 .title4 .underline{border-bottom: 2px #f3a46b solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
-		#mypage_wrap #mypage_rightWrap .profileWrap4 .somenail_wrap{margin-left: 35px;}
+		#mypage_wrap #mypage_rightWrap .profileWrap4 .somenail_wrap{width: 100%; height: 800px; margin-left: 0px; border: 1px solid #f0f1f5; background-color: #fefefe;}
 
 		/*섬네일 끌어온 부분 CSS*/
 		#mypage_wrap #mypage_rightWrap ul:after{clear: both; display: block; *zoom: 1;}
-		#mypage_wrap #mypage_rightWrap ul > li{float: left; margin-right: 13px; margin-bottom: 20px;}
+		#mypage_wrap #mypage_rightWrap ul > li{float: left; margin-right: 20px; margin-bottom: 20px; display: block;}
 
 		#mypage_wrap #mypage_rightWrap .sub_title{height: 80px; padding-top: 20px;}
-		#mypage_wrap #mypage_rightWrap .somenail_caption{width: 300px; height: 118px; border: 1px solid #f0f1f5; position: relative;}
+		#mypage_wrap #mypage_rightWrap .somenail_caption{width: 300px; height: 118px; border: 1px solid #f0f1f5; position: relative; background-color: #fff;}
 		#mypage_wrap #mypage_rightWrap .somenail_caption:after{clear: both;display: block; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap .somenail_caption .circle-div2{width: 82px; height: 82px; margin: 18px 0 0 13px; position: absolute;}
 		#mypage_wrap #mypage_rightWrap .somenail_caption .circle-div2 .somenail_profile{width: 100%; height: 100%; cursor: pointer;}
@@ -699,7 +702,7 @@
 		#mypage_wrap #mypage_rightWrap .somenail_caption .vbox{position: absolute; top: 80px; left: 73px;}
 		#mypage_wrap #mypage_rightWrap .somenail_caption .navibox{position: absolute; top: 50px; right: 60px;}
 
-		#mypage_wrap #mypage_rightWrap .somenail_bootstrap2{position: relative;}
+		#mypage_wrap #mypage_rightWrap .somenail_bootstrap2{position: relative; margin-left: 22px; margin-top: 20px;}
 		#mypage_wrap #mypage_rightWrap .somenail_bootstrap2:after{clear: both; display: block; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap .somenail_transbox2{width: 300px; height: 40px; top: 200px; position: absolute; cursor: pointer; }
 		#mypage_wrap #mypage_rightWrap .somenail_transcity2{width: 90px; height: 35px; background-color: rgba(255,255,255,.6); right: 10px; top: 10px; position: absolute; cursor: pointer; border: 1px solid #ffffff; line-height: 35px; text-align: center; color: #fff; font-size: 1.125em;}
@@ -759,25 +762,20 @@
 		/* 여기서부터 host 페이지 스타일링 */
 		#mypage_wrap #mypage_rightWrap .hostWrap{width: 710px; height: ; float: left; margin-bottom: 20px; position: relative;}		
 		#mypage_wrap #mypage_rightWrap .hostWrap:after{clear: both; display: none; *zoom: 1;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 30px; margin-top: 0px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .title1 .underline{border-bottom: 2px #c377e4 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .title1 .underline{border-bottom: 2px #c377e4 solid; width: 140px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .sort_button{width: 100%; height: 40px;}
 		#mypage_wrap #mypage_rightWrap .hostWrap button{margin-right: 5px; margin-top: 0px; float: right;}
 
-		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list1{width: 100%; height: 180px; border: solid #f0f1f5 1px; margin-top: 15px; position: relative; cursor: pointer; margin-top: 80px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1{width: 270px; height: 180px; background-color: #eee; position: relative; float: left; cursor: pointer;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band{width: 270px; height: 30px; background-color: rgba(0, 0, 0, 0.8); position: absolute; top: 125px; line-height: 30px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band .wishcount{width: 52px; height: 30px; margin-left: 97px; float: left; text-overflow: ellipsis;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band .reviewcount{width: 52px; height: 30px; float: left; text-overflow: ellipsis;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band .localcount{width: 69px; height: 30px; float: left; text-overflow: ellipsis;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list1{width: 100%; height: 210px; border: solid #f0f1f5 1px; margin-top: 15px; position: relative; cursor: pointer; margin-top: 20px;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1{width: 290px; height: 193px; background-color: #eee; position: relative; float: left; cursor: pointer;}
+		#mypage_wrap #mypage_rightWrap .bottom_text{padding: 3px;}
+		#mypage_wrap #mypage_rightWrap .list_rightwrap .host-btn{padding: 2px 10px 2px 10px; margin-top: 5px;}
 
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .pic1_img{width: 270px; height: 180px;} /* 이미지 사이즈 고정 */
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .profile_image{width: 74px; height: 74px; position: absolute; left: 20px; top:102px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .flag_image{width: 20px; height: 14px; left: 9px; top: 133px; position: absolute;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .vmark_image{width: 18px; height: 18px; left: 75px; top: 156px; position: absolute;}
 
 		.span_e{width: 20px; text-overflow: ellipsis;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap{width: 416px; height: 45px; background-color: #eee; float: left;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_title{width: 407px; height: 45px; line-height: 45px; margin-left: 10px;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap{width: 417px; height: 45px; background-color: #eee; float: left;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_title{height: 45px; line-height: 45px; text-indent: 10px; overflow: hidden;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_title .money{width: 85px; height: 45px; background-color: #ddd; float: right; text-align: center; overflow: hidden; text-overflow: ellipsis; position: absolute; top: 0px; right: 0px;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_text{width: 416px; height: 70px; overflow: hidden; text-overflow: ellipsis; display: block; padding-left: 8px; padding-top: 8px; margin-bottom: 10px;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .bottom_text{width: 416px; height: 50px; display: block; padding-left: 8px;}
@@ -925,3 +923,4 @@
 
 #map {width: 90%; height: 400px; margin: 0 auto;}
 #map_canvas{margin: 0; padding: 0; height: 100%;}
+

@@ -21,83 +21,15 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 
 	function index()
 	{  		
-		/*
-		$mail = $_REQUEST['mail'];
-		$password =  $_REQUEST['password'];
-		if( $mail == "" || $password=="" ){
-
-		}else{
-			
-		}
-	
-		$mail = "hhc@linkasia.co.kr";
-		$password =  "1q2w3e4r";
-		$this->login($mail,$password); 
-				
-		$login['user']=$this->membersJoin->loginMember($mail,$password);
-*/
-		//$this->login($mail,$password); 
-
+		$loginInfop['newdata'] =array();
 		$data['country'] = $this->main_i->Country();
 		$data['Travel'] = $this->main_i->Travel();
 		$data['choice'] = $this->main_i->Admin_choice();
 
-    	$this->load->view('include/header');
+    	$this->load->view('include/header',$loginInfop);
     	$this->load->view('main/contents' ,$data);
     	$this->load->view('include/footer');
 	}
-
-	function login() 
-    {
-        //폼 검증 라이브러리 로드 
-		$this->load->library('form_validation'); 
-		$this->load->helper('alert'); 
-
-		//$mail = $_REQUEST['mail'];
-		//$password =  $_REQUEST['password'];
-		echo "->".$mail ;
-		exit();
-		//폼 검증할 필드와 규칙 사전 정의 
-		$this->form_validation->set_rules('email','이메일', 'required|alpha_numeric'); 
-		$this->form_validation->set_rules('password', '비밀번호','required'); 
-        //echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'; 
-		if ( $this->form_validation->run() == TRUE ) 
-		{
-			$auth_data = array( 
-				'email' => $this->input->post('email', TRUE), 
-				'password' => $this->input->post('password', TRUE) 
-			); 
-			$result = $this->auth_m->login($auth_data); 
-			if ( $result ) 
-			{
-				//세션 생성 
-				$newdata = array( 
-					'email' => $result->$mail, 
-					'password' => $result->$password, 
-					'logged_in' => TRUE 
-                ); 
-				$this->session->set_userdata($newdata); 
-                //alert('Login Success', '/ci/board/lists/ci_board/page/1'); 
-				exit; 
-            } 
-            else 
-            { 
-                //실패시 
-				alert('Check your ID and Password', '/ci/board/lists/ci_board/page/1'); 
-				exit; 
-            } 
-        } 
-        else 
-        {
-			$data['country'] = $this->main_i->Country();
-			$data['Travel'] = $this->main_i->Travel();
-			$data['choice'] = $this->main_i->Admin_choice();
-
-			$this->load->view('include/header');
-			$this->load->view('main/contents' ,$data);
-			$this->load->view('include/footer');
-        } 
-    } 
 
 	/*회원 로그인페이지*/
 	function Login_view()

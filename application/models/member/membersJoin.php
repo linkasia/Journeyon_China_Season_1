@@ -97,8 +97,15 @@
 								WHERE email = '".$mail."'
 								AND password = '".$password."'";
 			$query = $this->db->query($sql);
-			$result = $query->result();
-			return $result;
+
+			if($query->num_rows() > 0)
+			{ 
+				return $query->row();
+			}
+			else
+			{
+				return FALSE;
+			}
 		}
 	}
 ?>

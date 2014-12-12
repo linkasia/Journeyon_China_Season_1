@@ -1,5 +1,6 @@
 <?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
-<?$Host ="http://163.180.73.25:80/"?>
+<?$Host ="http://163.180.73.25:80/";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -53,10 +54,14 @@
 						<li class="logo" name="logo" id="logo"></li>
 						<li class="become_host" name="become_host" id="become_host"></li>
 						<li class="how_works" name="how_works" id="how_works"></li>
-						<li class="login" name="login" id="login"></li>
-						<!-- <li class="logout" name="logout" id="logout"></li> -->
-						<li class="signup" name="signup" id="signup"></li>
-						<a href="http://163.180.73.25/index.php/mypage/myPage_M/mypageintro"></a>
+						<?if(count($newdata) > 0){?>
+							<li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$newdata['email']?></a></li>
+							<a href="/index.php/member/memberJoin/logout" class="logout"><img src="/application/views/images/main/img04_text2.png" alt=""></a>
+							<!--li class="logout" name="logout" id="logout"></li-->
+						<?}else{?>
+							<li class="login" name="login" id="login"></li>
+							<li class="signup" name="signup" id="signup"></li>
+						<?}?>
 					</ul>
 				</header>
 			</header>

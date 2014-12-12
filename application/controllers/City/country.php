@@ -29,7 +29,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['sexual'] = $this->tb_code->sexual();
 		
 
-		$this->load->view('include/header');
+		$loginInfop['newdata'] =array();
+		$this->load->view('include/header',$loginInfop);
 		$this->load->view('contents/city',$data);
 		$this->load->view('include/footer');
 	}
@@ -40,7 +41,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$salesNum = $_REQUEST['salesNum'];
 		$data['salesBasic']= $this->country_M->salesDetailCountry($salesNum);
 
-		$this->load->view('include/header');
+		$loginInfop['newdata'] =array();
+		$this->load->view('include/header',$loginInfop);
 		$this->load->view('contents/detailCity',$data);
 		$this->load->view('include/footer');
 	}
@@ -57,14 +59,16 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*QnA로 이동*/
 	function pageQna(){
-		$this->load->view('include/header');
+		$loginInfop['newdata'] =array();
+		$this->load->view('include/header',$loginInfop);
 		$this->load->view('contents/Qna');
 		$this->load->view('include/footer');
 	}
 
 	/*QnA로 이동*/
 	function pageProfile(){
-		$this->load->view('include/header');
+		$loginInfop['newdata'] =array();
+		$this->load->view('include/header',$loginInfop);
 		$this->load->view('contents/pageProfile');
 		$this->load->view('include/footer');
 	}

@@ -56,14 +56,14 @@ $Host ="http://163.180.73.25:80/";
 					</ul>
 				</header>
 			</header>
+			<form id="frm" name="frm" action="/index.php/member/memberJoin/login" method="post" style="margin-top: 50px;" role="form">
 			<div class="form-group">
-			
 				<div class="input_container">
-					<input class="form-control input-lg" type="text" id="inputLarge" placeholder="登录名有误">
+					<input class="form-control input-lg" type="text" id="inputLarge"  name="inputLarge" placeholder="登录名有误">
 					<span id="e-mail2">已经被申请</span>
-					<input class="form-control input-lg" type="password" id="password" placeholder="登陆密码">
+					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="登陆密码">
 					<!--button class="btn-primary btn" id='login' name='login'>登陆</button-->
-					<a href="login" class="btn-primary btn" id='login' name='login'>登陆</a>
+					<button class="btn-primary btn" id='login' name='login'  onclick="id_save(); return false;">登陆</button>
 					<!-- <span>已注册？回到登陆页</span> -->
 					<button class="btn-danger btn" id='cancel' name='cancel'>取消</button>
 				</div>
@@ -84,7 +84,7 @@ $Host ="http://163.180.73.25:80/";
 				</div>
 			</div>
 		</div>
-
+		</form>
 		<script type="text/javascript">
 			var Host ="<?=$Host?>";
 			$(function(){
@@ -107,31 +107,47 @@ $Host ="http://163.180.73.25:80/";
 						dataType:"text",
 						contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 						data:{mail: _mail, password:_password},
-						url:"http://163.180.73.62/index.php/member/memberJoin/loginMem",
+						url:"http://163.180.73.25/index.php/member/memberJoin/login",
 						success: function (data){
-							if(data=="success")
-							{
-								/*
-								$.ajax({
-									type:"POST" ,
-									dataType:"text",
-									contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-									data:{mail: _mail, password:_password},
-									url:"auth/login",
-									success: function (data){
-										//alert(data);
-									}
-								});
-								
-								//alert("로그인에 성공하였습니다");
-							}else{
-								alert("메일 주소와 패스워드를 확인해 주세요");
-							}
+							alert(data);
 						}
 					});
 				});
 				*/
 			});
+
+			 function id_save()
+			 {
+				 if(frm.idcheck.checked) 
+				 {	
+					 saveLogin(frm.company_id.value);
+					 document.frm.submit();
+				 }
+				  else 
+				  {
+					  saveLogin("");
+					  document.frm.submit();
+				  }
+			 }
+
+			  function saveLogin(id)
+			 {
+				  if(id != "")
+				  {
+				   // userid 쿠키에 id 값을5일간 저장
+				   setsave("com_id", id, 5);
+				  }else{
+				   // userid 쿠키 삭제
+				   setsave("com_id", id, -1);
+				  }
+			 }
+
+			  function setsave(name, value, expiredays)
+			 {
+				  var today = new Date();
+				  today.setDate( today.getDate() + expiredays );
+				  document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + today.toGMTString() + ";";
+			 }
 		</script>
 	</body>
 </html>
