@@ -20,8 +20,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	/*회원 로그인페이지*/
 	function mypageIntro()
 	{
-		$loginInfop['newdata'] =array();
-		$this->load->view('include/header',$loginInfop);
+		$this->load->view('include/header');
 		$this->load->view('mypage/mypageMain');
 		$this->load->view('include/footer');
 	}

@@ -1,6 +1,4 @@
 <?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
-<?$Host ="http://163.180.73.25:80/";
-?>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -54,10 +52,16 @@
 						<li class="logo" name="logo" id="logo"></li>
 						<li class="become_host" name="become_host" id="become_host"></li>
 						<li class="how_works" name="how_works" id="how_works"></li>
-						<?if(count($newdata) > 0){?>
-							<li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><i><?=$newdata['email']?></i></a></li>
+						<?
+						if(@$this->session->userdata['logged_in'] == TRUE)
+						{
+							if($this->session->userdata['email']!=null){
+							?>
+							<li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><i><?=$this->session->userdata['email']?></i></a></li>
 							<a href="/index.php/member/memberJoin/logout" class="logout"><img src="/application/views/images/main/img04_text2.png" alt=""></a>
 							<!--li class="logout" name="logout" id="logout"></li-->
+						<?}?>
+							
 						<?}else{?>
 							<li class="login" name="login" id="login"></li>
 							<li class="signup" name="signup" id="signup"></li>
@@ -69,25 +73,9 @@
 
 
 		<script type="text/javascript">
-			var Host ="<?$Host?>";
 			$(function(){
 				$('#logo').click( function(){
-					location.href = Host;
-					/*
-					if(document.getElementById('header_wrap2') == null){
-						if(document.getElementById('header_wrap').id == 'header_wrap'){
-							document.getElementById('header_wrap').id = 'header_wrap2';
-						}else{
-							document.getElementById('header_wrap').id = 'header_wrap';
-						}
-					}else{
-						if(document.getElementById('header_wrap2').id == 'header_wrap'){
-							document.getElementById('header_wrap2').id = 'header_wrap2';
-						}else{
-							document.getElementById('header_wrap2').id = 'header_wrap';
-						}
-					}
-					*/
+					location.href ="http://163.180.73.25:80/";
 				});
 
 				$('#become_host').click( function(){
@@ -97,7 +85,6 @@
 
 				$('#how_works').click( function(){
 					//alert("how_works");
-					
 				});
 
 				$('#login').click( function(){
@@ -106,13 +93,11 @@
 
 				$('#logout').click( function(){
 					alert("logout");
-					//location.href = "http://127.0.0.1/"
 				});
 
 				$('#signup').click( function(){
 					location.href = "<?=site_url('auth/member_join'); ?>";
 				});
-
 			});
 		
 		</script>

@@ -45,7 +45,7 @@
 				<div class="rightColorband" id="rightColorband">
 					<span class="rightStatus" id="rightStatus">咨询中</span>
 				</div>
-				<div class="rightDate" id="rightDate"><span>预定日期</span><br><span>2014. 10. 30</span>
+				<div class="rightDate" id="rightDate"><span>预定日期</span>
 				</div>
 				<div class="rightPriceWrap" id="rightPriceWrap">
 					<span>确定价格</span>

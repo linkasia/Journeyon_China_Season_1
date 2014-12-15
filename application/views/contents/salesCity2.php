@@ -1,5 +1,4 @@
 <?
-$regUser = "0000000001";
 foreach($salesCityQnA as $v){
 ?>
 			<div class="reply"><!-- 질문 부분 -->
@@ -12,9 +11,11 @@ foreach($salesCityQnA as $v){
 				</div>
 				<div class="reply_textQnA"><span class="reply_id"><?=$v->Name_cn_en?> : </span><?=$v->content?>
 				<br><span class="time_log"><?=$v->create_date?></span>
-				<?//if($v->user_num == $regUser){?>
+				<?if(@$this->session->userdata['logged_in'] == TRUE){
+						if($this->session->userdata['num'] == $v->user_num){?>
 					<br><span class="addReply" id='add_Reply' onclick="addReply('<?=$v->qna_num?>')"><ins>add a comment</ins></span>
-				<?//}?>
+				<?}
+				}?>
 				</div>
 			</div>
 			<div id='addReply<?=$v->qna_num?>'> </div>
@@ -38,14 +39,21 @@ foreach($salesCityQnA as $v){
 			?>
 				
 <?}?>		
-			
-
+<?
+		if(@$this->session->userdata['logged_in'] == TRUE)
+		{
+			if($this->session->userdata['email']!=null){
+			?>
 			<div class="typingBox">
 				<div class="profile_pic">
-					<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
-					<img src="/application/views/images/left_menu/flag03_usa.png" alt="" class="flag_image">
-					<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
+					<img src="<?=$this->session->userdata['face_img_path']?>" alt="" class="img-circle profile_image">
+					<img src="<?=$this->session->userdata['country_img']?>" alt="" class="flag_image">
+					<?if($this->session->userdata['country_img'] == "0001"){?>
+						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
+					<?}?>
 				</div>
-					<textarea name="typingArea" id="" cols="30" rows="10" class="typingArea"></textarea>
-					<button class="btn btnQna">上传</button>
+					<textarea name="typingArea" id="quetionArea" cols="30" rows="10" class="typingArea"></textarea>
+					<button class="btn btnQna" id="quetion"name="quetion" onclick="insertQuetion('<?=$this->session->userdata['num']?>')">上传</button>
 			</div>
+		<?}
+		}?>

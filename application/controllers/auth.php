@@ -21,12 +21,12 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 
 	function index()
 	{  		
-		$loginInfop['newdata'] =array();
+
 		$data['country'] = $this->main_i->Country();
 		$data['Travel'] = $this->main_i->Travel();
 		$data['choice'] = $this->main_i->Admin_choice();
 
-    	$this->load->view('include/header',$loginInfop);
+    	$this->load->view('include/header');
     	$this->load->view('main/contents' ,$data);
     	$this->load->view('include/footer');
 	}

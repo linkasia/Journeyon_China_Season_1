@@ -1,7 +1,8 @@
+			<?foreach($userInfo as $v){?>
 			<div class="profileWrap1">
 				<div class="title1"><div class="underline">基本信息</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
-				<div class="profile_text1">是否是专业导游<br>Host<br>生活在<br>现居住在纽约<br>年龄<br>性别<br>注册时间<br>语言<br>职业<br>最近登录时间<br></div>
-				<div class="profile_text2">是<br>Available<br>韩国<br>5年<br>30岁<br>女<br>2014年01月02日<br>韩国语（上）汉语（中）<br>学生、专业<br>10分钟前（微博为准）<br>
+				<div class="profile_text1">是否是专业导游<br>Host<br>生活在<br>现居住在纽约<br>年龄<br>性别<br>注册时间<br>语言<br><br>职业<br>最近登录时间<br></div>
+				<div class="profile_text2"><?if($v ->g_get_code=="0001"){ ?>是<?}else{?>no<?}?><br><?if($v ->v_get_code=="0001"){ ?>Available<?}else{?>no<?}?><br><?=$v->live_country?><br><?=$v->live_country_year?>年<br><?=$v->age?>岁<br><?=$v->gender?><br><?=$v->create_day?><br><?=$v->lang1?>（<?=$v->langSkill1?>）<?=$v->lang2?>（<?=$v->langSkill2?>）<?=$v->lang3?>（<?=$v->langSkill3?>）<br>学生、专业<br>10分钟前（微博为准）<br>
 				<div class="sns_icon">
 					<img src="/application/views/images/main/sns01.png" alt="">
 					<img src="/application/views/images/main/sns02.png" alt="">
@@ -24,19 +25,19 @@
 						<div class="tag">Art</div>
 						<div class="tag">Venture</div>
 					</p><br><br>
-					<p class="salescity3_p">个人介绍</p><p>纽约是什么样的呢？是电影中午夜时分的灯红酒绿，还是黑暗阴影中的危机四伏？每个人心目中都有一副纽约的图像，诚然，纽约是一座集经济、科技、旅游、娱乐、影视、时尚于一身的豪华大城市。这里是旅游之都，高耸的帝国大厦，散发着耀眼的光芒，就如同霸气一身的王者；被誉为“照耀世界之神”的自由女神像，彰显着美丽的容颜和非凡的气质，令无数的游客折服，每一个到美国的人都不会错过。这里也是购物之都，人潮拥挤的第五大道，是购物狂的天堂，你几乎可以买到世界上任何的名牌。这里还是经济之都，在气氛紧张的纽约证劵交易所里，每天都上演着经济大战......不要只停留在美剧当中的纽约啦，赶快出发吧，玩转纽约，来一场说走就走的旅行吧！ </p>
+					<p class="salescity3_p">个人介绍</p><p><?=$v->selfintroduce?></p>
 
 				</div>
 				<div class="profile_text4">
 					<p>微旅行经验</p>
 					<p>专家 : 0  |  客人 : 0</p>
 					<p>什么类型</p>
-					<p>纽约是什么样的呢？是电影中午夜时分的灯红酒绿，还是黑暗阴影中的危机四伏？</p>
+					<p><?=$v->interesting1?></p>
 					<p>兴趣爱好</p>
-					<p>纽约是什么样的呢？是电影中午夜时分的灯红酒绿，还是黑暗阴影中的危机四伏？纽约是什么样的呢？是电影中午夜时分的灯红酒绿，还是黑暗阴影中的危机四伏？纽约是什么样的呢？是电影中午夜时分的灯红酒绿，</p>
+					<p><?=$v->interesting2?></p>
 				</div>
 			</div><!-- profileWrap2 -->
-
+		<?}?>	
 			<div class="profileWrap3">
 				<div class="title3">
 					<div class="underline">微旅客</div>

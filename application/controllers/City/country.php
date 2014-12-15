@@ -29,8 +29,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['sexual'] = $this->tb_code->sexual();
 		
 
-		$loginInfop['newdata'] =array();
-		$this->load->view('include/header',$loginInfop);
+		$this->load->view('include/header');
 		$this->load->view('contents/city',$data);
 		$this->load->view('include/footer');
 	}
@@ -41,8 +40,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$salesNum = $_REQUEST['salesNum'];
 		$data['salesBasic']= $this->country_M->salesDetailCountry($salesNum);
 
-		$loginInfop['newdata'] =array();
-		$this->load->view('include/header',$loginInfop);
+		$this->load->view('include/header');
 		$this->load->view('contents/detailCity',$data);
 		$this->load->view('include/footer');
 	}
@@ -59,16 +57,16 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*QnA로 이동*/
 	function pageQna(){
-		$loginInfop['newdata'] =array();
-		$this->load->view('include/header',$loginInfop);
+
+		$this->load->view('include/header');
 		$this->load->view('contents/Qna');
 		$this->load->view('include/footer');
 	}
 
 	/*QnA로 이동*/
 	function pageProfile(){
-		$loginInfop['newdata'] =array();
-		$this->load->view('include/header',$loginInfop);
+
+		$this->load->view('include/header');
 		$this->load->view('contents/pageProfile');
 		$this->load->view('include/footer');
 	}
@@ -123,7 +121,38 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*상세페이지3*/
 	function detailCity3(){
-		$this->load->view("/contents/salesCity3");
+		$salesNum = $_REQUEST['salesNum'];
+		$user = $_REQUEST['user'];
+
+		$data['userInfo']= $this->country_M->detailUser($salesNum);
+		$this->load->view("/contents/salesCity3",$data);
+	}
+
+	/*Question 입력*/
+	function Question(){
+		$salesNum = $_REQUEST['salesNum'];
+		$content = $_REQUEST['content'];
+		$userNum = $this->session->userdata['num'];
+		
+		$insert['insertQuestion'] = $this->country_M->insertQuestion($salesNum,$content,$userNum);
+
+		$data['salesCityQnA']= $this->country_M->salesDetailCityQnA($salesNum);
+		$data['salesCityQnA2']= $this->country_M->salesDetailCityQnA2($salesNum);
+		$this->load->view("/contents/salesCity2",$data);
+	}
+
+	/*Agency 입력*/
+	function Agency(){
+		$salesNum = $_REQUEST['salesNum'];
+		$content = $_REQUEST['content'];
+		$qna_num = $_REQUEST['qna_num'];
+		$userNum = $_REQUEST['userNum'];
+		
+		$insert['insertAgency'] = $this->country_M->insertAgency($salesNum, $content, $qna_num, $userNum);
+
+		$data['salesCityQnA']= $this->country_M->salesDetailCityQnA($salesNum);
+		$data['salesCityQnA2']= $this->country_M->salesDetailCityQnA2($salesNum);
+		$this->load->view("/contents/salesCity2",$data);
 	}
 }
 ?>

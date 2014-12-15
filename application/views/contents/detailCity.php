@@ -72,6 +72,7 @@ $salesNum = $_REQUEST['salesNum'];
 		<?}?>
 
 		<?foreach($salesBasic as $v){?>
+			<input type='hidden' id='user_num' name='user_num' value='<?=$v->num?>' >
 			<div class="right_profile">
 				<div class="gray_box"><span><img src="/application/views/images/main/img27_navi.PNG" alt="">  当地人</span>
 					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
@@ -184,19 +185,22 @@ $salesNum = $_REQUEST['salesNum'];
 		});
 
 		$('#city3').click( function(){
+			var _user=document.getElementById('user_num').value;
+			
 			$.ajax({
 				type:"GET" ,
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-				data:{ salesNum : _salesNum},
+				data:{ salesNum : _salesNum, user:_user},
 				//url:"http://163.180.73.62/index.php/city/country/detailCity3",
 				url:"http://163.180.73.25/index.php/city/country/detailCity3",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
-					
 				}
 			});
 		});
+
+		
 	});
 
 
@@ -212,11 +216,48 @@ $salesNum = $_REQUEST['salesNum'];
 	{
 		var insertBox ="<div class='typingBox2'>"
 									+"<img src='/application/views/images/contents/reply.png' class='reply_arrow2'>"
-									+"<textarea name='typingArea' id='' cols='20' rows='20' class='typingArea'></textarea>"
-									+"<button class='btn btnQna2'>上传</button>"
+									+"<textarea name='agencyArea' id='agencyArea' cols='20' rows='20' class='typingArea'></textarea>"
+									+"<input type='hidden' value='"+num+"' name='qna_num' id='qna_num' >"
+									+"<button class='btn btnQna2' id='agency' name='agency' onclick='insertAgency()'>上传</button>"
 									+"</div>";
 									
 			document.getElementById('addReply'+num).innerHTML = insertBox;
 	}
 
+	function insertQuetion(userNum){
+		var _salesNum= "<?=$salesNum?>";
+		var _content = document.getElementById('quetionArea').value;
+		var _userNum= userNum;
+		
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ salesNum: _salesNum,  content:_content, userNum:_userNum},
+			//url:"http://163.180.73.62/index.php/city/country/detailCity3",
+			url:"http://163.180.73.25/index.php/city/country/Question",
+			success: function (data){
+				document.getElementById('viewContents').innerHTML = data;
+			}
+		});
+	}
+
+	function insertAgency(){
+
+		var _salesNum= "<?=$salesNum?>";
+		var _content = document.getElementById('agencyArea').value;
+		var _qna_num =  document.getElementById('qna_num').value;
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ salesNum: _salesNum,  content:_content, qna_num:_qna_num},
+			//url:"http://163.180.73.62/index.php/city/country/detailCity3",
+			url:"http://163.180.73.25/index.php/city/country/Agency",
+			success: function (data){
+				document.getElementById('viewContents').innerHTML = data;
+			}
+		});
+
+	}
 </script>

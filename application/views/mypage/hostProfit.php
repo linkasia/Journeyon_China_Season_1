@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>Document</title>
- </head>
- <body>
-  
- </body>
-</html>
+		<div class="hostWrap">
+			<div class="title2">
+				<div class="underline">当地人 - 余额</div>
+			</div>
+		</div><!-- hostWrap 닫음 -->
+
+		

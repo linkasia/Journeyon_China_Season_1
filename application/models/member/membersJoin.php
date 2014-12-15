@@ -92,10 +92,12 @@
 
 		function loginMember($mail,$password)
 		{
-			$sql ="SELECT *
-								FROM user
-								WHERE email = '".$mail."'
-								AND password = '".$password."'";
+			$sql ="SELECT a.*,
+											b.ref1 AS country_img
+								FROM USER a
+								LEFT JOIN country_table b ON a.mother_area_code = b.class AND a.mother_country_code = b.code
+								WHERE a.email = '".$mail."'
+								AND a.password = '".$password."'";
 			$query = $this->db->query($sql);
 
 			if($query->num_rows() > 0)

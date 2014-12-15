@@ -122,7 +122,7 @@
 											b.messenger_qq,
 											b.messenger_weixin,
 											b.face_img_path,
-											b.age,
+											DATE_FORMAT(SYSDATE(),'%Y')-DATE_FORMAT(b.birthday,'%Y') AS age,
 											b.gender_code,
 											i.code_nm AS gender_nm,
 											c.code_nm AS country_nm,
@@ -185,8 +185,7 @@
 		//선택한 도시 상세 QnA
 		function salesDetailCityQnA($num)
 		{
-			$sql ="SELECT a.num,
-											a.qna_num,
+			$sql ="SELECT a.qna_num,
 											a.user_num,
 											a.product_num,
 											a.content,
@@ -197,11 +196,14 @@
 											b.mother_area_code,
 											b.mother_country_code,
 											c.code_nm AS country_nm,
-											c.ref1 AS country_flog
+											c.ref1 AS country_flog,
+											d.user_num
 							FROM user_question_product a
 							LEFT JOIN USER b ON a.user_num = b.num
 							LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
-							WHERE a.product_num='".$num."'";
+							LEFT JOIN product d ON a.product_num = d.num
+							WHERE a.product_num='".$num."'
+							ORDER BY a.create_date ASC";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -210,8 +212,7 @@
 		//선택한 도시 상세 QnA
 		function salesDetailCityQnA2($num)
 		{
-			$sql ="SELECT a.num,
-											a.qna_num,
+			$sql ="SELECT a.qna_num,
 											a.user_num,
 											a.product_num,
 											a.content,
@@ -226,11 +227,80 @@
 								FROM answer a
 								LEFT JOIN USER b ON a.user_num = b.num
 								LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
-							WHERE a.product_num='".$num."'";
+							WHERE a.product_num='".$num."'
+							ORDER BY a.create_date ASC";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function insertQuestion($productNum,$content,$userNum)
+		{
+			$sql ="INSERT INTO user_question_product 
+						(qna_num, 
+						user_num, 
+						product_num, 
+						content, 
+						create_date
+						)
+						VALUES
+						(0,
+						'".$userNum."', 
+						'".$productNum."', 
+						'".$content."', 
+						SYSDATE()
+						);";
+			$query = $this->db->query($sql);
+		}
+
+		function insertAgency($productNum,$content,$qna_num,$userNum)
+		{
+			$sql ="INSERT INTO answer 
+						(qna_num, 
+						user_num, 
+						product_num, 
+						content, 
+						create_date
+						)
+						VALUES
+						('".$qna_num."',
+						'".$userNum."', 
+						'".$productNum."', 
+						'".$content."', 
+						SYSDATE()
+						);";
+			$query = $this->db->query($sql);
+		}
+
+		function detailUser($userNum)
+		{
+			$sql ="SELECT a.*,
+											b.code_nm AS live_country,
+											c.code_nm AS gender,
+											DATE_FORMAT(SYSDATE(),'%Y')-DATE_FORMAT(a.birthday,'%Y') AS age,
+											d.code_nm AS lang1,
+											e.code_nm AS langSkill1,
+											f.code_nm AS lang2,
+											g.code_nm AS langSkill2,
+											h.code_nm AS lang3,
+											i.code_nm AS langSkill3,
+											DATE_FORMAT(a.create_time,'%Y-%m-%d') AS create_day
+							FROM USER a
+							LEFT JOIN country_table b ON a.live_area_code = b.class AND a.live_country_code = b.code
+							LEFT JOIN code_table c ON a.gender_code = c.code AND c.class='0002'
+							LEFT JOIN code_table d ON a.lang1_code = d.code AND d.class='0015'
+							LEFT JOIN code_table e ON a.lang1_skill = e.code AND e.class='0014'
+							LEFT JOIN code_table f ON a.lang1_code = f.code AND f.class='0015'
+							LEFT JOIN code_table g ON a.lang1_skill = g.code AND g.class='0014'
+							LEFT JOIN code_table h ON a.lang1_code = h.code AND h.class='0015'
+							LEFT JOIN code_table i ON a.lang1_skill = i.code AND i.class='0014'
+							LEFT JOIN code_table j ON a.lang1_skill = j.code AND j.class='0011'
+							LEFT JOIN code_table k ON a.lang1_skill = k.code AND k.class='0011'
+							LEFT JOIN code_table l ON a.lang1_skill = l.code AND l.class='0011'
+							WHERE a.num='".$userNum."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
 		}
 	}
-
 ?>

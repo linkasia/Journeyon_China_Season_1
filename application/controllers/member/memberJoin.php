@@ -71,6 +71,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 						'phone_num_country' =>$result->phone_num_country,
 						'phone_num_user' => $result->phone_num_user,
 						'face_img_path' => $result->face_img_path,
+						'country_img' => $result->country_img,
 						'Name_cn_en' => $result->Name_cn_en,
 						'mother_area_code' =>$result->mother_area_code,
 						'mother_country_code' => $result->mother_country_code,
@@ -80,7 +81,6 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 						'live_city_code' => $result->live_city_code,
 						'live_country_year' => $result->live_country_year,
 						'birthday' => $result->birthday,
-						'age' =>$result->age,
 						'gender_code' => $result->gender_code,
 						'job' => $result->job,
 						'job_detail' => $result->job_detail,
@@ -97,9 +97,9 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 					$data['country'] = $this->main_i->Country();
 					$data['Travel'] = $this->main_i->Travel();
 					$data['choice'] = $this->main_i->Admin_choice();
-					$loginInfop['newdata'] = $newdata;
 
-					$this->load->view('include/header',$loginInfop);
+
+					$this->load->view('include/header');
 					$this->load->view('main/contents' ,$data);
 					$this->load->view('include/footer');
 
@@ -124,8 +124,8 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 			$data['country'] = $this->main_i->Country();
 			$data['Travel'] = $this->main_i->Travel();
 			$data['choice'] = $this->main_i->Admin_choice();
-			$loginInfop['newdata'] =array();
-			$this->load->view('include/header',$loginInfop);
+
+			$this->load->view('include/header');
 			$this->load->view('main/contents' ,$data);
 			$this->load->view('include/footer');
 		}
@@ -140,8 +140,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 		$data['Travel'] = $this->main_i->Travel();
 		$data['choice'] = $this->main_i->Admin_choice();
 
-		$loginInfop['newdata'] =array();
-		$this->load->view('include/header',$loginInfop);
+		$this->load->view('include/header');
 		$this->load->view('main/contents' ,$data);
 		$this->load->view('include/footer');
 	}
