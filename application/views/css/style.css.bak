@@ -774,7 +774,7 @@
 
 
 		.span_e{width: 20px; text-overflow: ellipsis;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap{width: 437px; height: 45px; background-color: #eee; float: left;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap{width: 418px; height: 45px; background-color: #eee; float: left;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_title{height: 45px; line-height: 45px; text-indent: 10px; overflow: hidden;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_title .money{width: 85px; height: 45px; background-color: #ddd; float: right; text-align: center; overflow: hidden; text-overflow: ellipsis; position: absolute; top: 0px; right: 0px;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_text{width: 416px; height: 70px; overflow: hidden; text-overflow: ellipsis; display: block; padding-left: 8px; padding-top: 8px; margin-bottom: 10px;}
@@ -981,3 +981,5 @@
 #map {width: 90%; height: 400px; margin: 0 auto;}
 #map_canvas{margin: 0; padding: 0; height: 100%;}
 
+
+.githubTest{width: 600; height: 400; background-color: #eee;}
