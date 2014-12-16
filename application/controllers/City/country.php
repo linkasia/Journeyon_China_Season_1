@@ -125,6 +125,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$user = $_REQUEST['user'];
 
 		$data['userInfo']= $this->country_M->detailUser($salesNum);
+		$data['userSales']= $this->country_M->userSales($user);
+
 		$this->load->view("/contents/salesCity3",$data);
 	}
 
@@ -132,7 +134,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	function Question(){
 		$salesNum = $_REQUEST['salesNum'];
 		$content = $_REQUEST['content'];
-		$userNum = $this->session->userdata['num'];
+		$userNum = $_REQUEST['userNum'];
 		
 		$insert['insertQuestion'] = $this->country_M->insertQuestion($salesNum,$content,$userNum);
 
@@ -146,7 +148,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$salesNum = $_REQUEST['salesNum'];
 		$content = $_REQUEST['content'];
 		$qna_num = $_REQUEST['qna_num'];
-		$userNum = $_REQUEST['userNum'];
+		$userNum = $this->session->userdata['num'];
 		
 		$insert['insertAgency'] = $this->country_M->insertAgency($salesNum, $content, $qna_num, $userNum);
 

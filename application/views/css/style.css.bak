@@ -774,7 +774,7 @@
 
 
 		.span_e{width: 20px; text-overflow: ellipsis;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap{width: 417px; height: 45px; background-color: #eee; float: left;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap{width: 437px; height: 45px; background-color: #eee; float: left;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_title{height: 45px; line-height: 45px; text-indent: 10px; overflow: hidden;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_title .money{width: 85px; height: 45px; background-color: #ddd; float: right; text-align: center; overflow: hidden; text-overflow: ellipsis; position: absolute; top: 0px; right: 0px;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap .right_text{width: 416px; height: 70px; overflow: hidden; text-overflow: ellipsis; display: block; padding-left: 8px; padding-top: 8px; margin-bottom: 10px;}
@@ -817,16 +817,16 @@
 
 		/* guestCounsel */
 		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2{width: 522px; height: 180px; border: solid #f0f1f5 1px; margin-top: 15px; position: relative; cursor: pointer; float: left;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1{width: 250px; height: 180px; background-color: #eee; position: relative; float: left; cursor: pointer;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band{width: 250px; height: 30px; background-color: rgba(0, 0, 0, 0.8); position: absolute; top: 125px; line-height: 30px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band .wishcount{width: 48px; height: 30px; margin-left: 84px; float: left; text-overflow: ellipsis;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band .reviewcount{width: 52px; height: 30px; float: left; text-overflow: ellipsis;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .band .localcount{width: 65px; height: 30px; float: left; text-overflow: ellipsis;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1{width: 250px; height: 180px; background-color: #f9fafc; position: relative; float: left; cursor: pointer;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .band{width: 250px; height: 30px; background-color: rgba(0, 0, 0, 0.8); position: absolute; top: 125px; line-height: 30px;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .band .wishcount{width: 48px; height: 30px; margin-left: 84px; float: left; text-overflow: ellipsis;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .band .reviewcount{width: 52px; height: 30px; float: left; text-overflow: ellipsis;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .band .localcount{width: 65px; height: 30px; float: left; text-overflow: ellipsis;}
 
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .pic1_img{width: 250px; height: 180px;} /* 이미지 사이즈 고정 */
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .profile_image{width: 60px; height: 60px; position: absolute; left: 20px; top:108px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .flag_image{width: 20px; height: 14px; left: 9px; top: 133px; position: absolute;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .list_image1 .vmark_image{width: 18px; height: 18px; left: 63px; top: 153px; position: absolute;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .pic1_img{width: 250px; height: 180px;} /* 이미지 사이즈 고정 */
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .profile_image{width: 60px; height: 60px; position: absolute; left: 20px; top:108px;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .flag_image{width: 20px; height: 14px; left: 9px; top: 133px; position: absolute;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list2 .list_image1 .vmark_image{width: 18px; height: 18px; left: 63px; top: 153px; position: absolute;}
 
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap2{width: 270px; height: 45px; background-color: #f9fafc; float: left;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .list_rightwrap2 .right_title{width: 270px; height: 45px; line-height: 45px; margin-left: 10px;}

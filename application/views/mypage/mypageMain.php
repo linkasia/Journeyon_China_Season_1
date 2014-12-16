@@ -30,7 +30,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/myprofile",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myprofile",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -45,7 +45,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/myChat",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myChat",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -60,7 +60,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/myAccount",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myAccount",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -75,7 +75,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/HostProduct",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/HostProduct",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -90,7 +90,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/HostProduct",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/HostProduct",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -105,7 +105,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/HostSales",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/HostSales",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -120,7 +120,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/HostCancel",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/HostCancel",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -135,7 +135,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/HostProfit",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/HostProfit",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -150,7 +150,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/GuestCounsel",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/GuestCounsel",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -165,7 +165,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/Guestwish",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/Guestwish",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -180,7 +180,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/GuestBeen",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/GuestBeen",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					
@@ -195,7 +195,7 @@
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ },
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/mypage/myPage_M/GuestCancel",
+				url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/GuestCancel",
 				success: function (data){
 					document.getElementById('mypage_rightWrap').innerHTML = data;
 					

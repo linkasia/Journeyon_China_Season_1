@@ -2030,7 +2030,7 @@ button.jqx-button, input[type=button].jqx-button,  input[type=submit].jqx-button
 /*applied to a calendar cell when the cell's date represents a date from the previous or next month.*/
 .jqx-calendar-cell-othermonth
 {
-    color: #898989 !important;
+    color: #f0f1f5 !important;
     margin: 0 0 0 0;
     cursor: pointer;
 }
@@ -3340,7 +3340,7 @@ of the horizontal scrollbar.*/
 }
 
 /*applied to all widgets*/
-.jqx-widget{-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none; zoom: 1; color: #a9a9a9; -moz-background-clip: padding; background-clip: padding-box; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-appearance: none; -webkit-background-clip: padding-box; direction: ltr !important; -webkit-tap-highlight-color: rgba(0,0,0,0); font-family: Verdana,Arial,sans-serif; font-style: normal; font-size: 13px;}
+.jqx-widget{-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none; zoom: 1; color: blue; -moz-background-clip: padding; background-clip: padding-box; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-appearance: none; -webkit-background-clip: padding-box; direction: ltr !important; -webkit-tap-highlight-color: rgba(0,0,0,0); font-family: Verdana,Arial,sans-serif; font-style: normal; font-size: 13px;}
 
 .jqx-item{-ms-touch-action: none; -moz-box-sizing: content-box; box-sizing: content-box;  color: inherit; -webkit-text-size-adjust: none;}
 

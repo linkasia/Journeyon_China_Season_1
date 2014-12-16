@@ -75,7 +75,7 @@
 		<script type="text/javascript">
 			$(function(){
 				$('#logo').click( function(){
-					location.href ="http://163.180.73.25:80/";
+					location.href ="http://www.linkasia.co.kr/";
 				});
 
 				$('#become_host').click( function(){

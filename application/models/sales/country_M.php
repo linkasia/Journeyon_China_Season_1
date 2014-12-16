@@ -290,14 +290,47 @@
 							LEFT JOIN code_table c ON a.gender_code = c.code AND c.class='0002'
 							LEFT JOIN code_table d ON a.lang1_code = d.code AND d.class='0015'
 							LEFT JOIN code_table e ON a.lang1_skill = e.code AND e.class='0014'
-							LEFT JOIN code_table f ON a.lang1_code = f.code AND f.class='0015'
-							LEFT JOIN code_table g ON a.lang1_skill = g.code AND g.class='0014'
-							LEFT JOIN code_table h ON a.lang1_code = h.code AND h.class='0015'
-							LEFT JOIN code_table i ON a.lang1_skill = i.code AND i.class='0014'
-							LEFT JOIN code_table j ON a.lang1_skill = j.code AND j.class='0011'
-							LEFT JOIN code_table k ON a.lang1_skill = k.code AND k.class='0011'
-							LEFT JOIN code_table l ON a.lang1_skill = l.code AND l.class='0011'
+							LEFT JOIN code_table f ON a.lang2_code = f.code AND f.class='0015'
+							LEFT JOIN code_table g ON a.lang2_skill = g.code AND g.class='0014'
+							LEFT JOIN code_table h ON a.lang3_code = h.code AND h.class='0015'
+							LEFT JOIN code_table i ON a.lang3_skill = i.code AND i.class='0014'
+							LEFT JOIN code_table j ON a.special1_code = j.code AND j.class='0011'
+							LEFT JOIN code_table k ON a.special2_code = k.code AND k.class='0011'
+							LEFT JOIN code_table l ON a.special3_code = l.code AND l.class='0011'
 							WHERE a.num='".$userNum."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function userSales($userNum)
+		{
+			$sql ="SELECT b.mother_area_code,
+											b.mother_country_code,
+											b.v_get_code,
+											b.face_img_path,
+											c.code_nm AS country_nm,
+											c.ref1 AS countryimg,
+											d.code_nm AS tem1,
+											d.ref1 AS refrem1,
+											e.code_nm AS tem2,
+											e.ref1 AS refrem2,
+											f.code_nm AS tem3,
+											f.ref1 AS refrem3,
+											g.code_nm AS recom1,
+											g.ref1 AS refrecom1,
+											h.code_nm AS recom2,
+											h.ref1 AS refrecom2,
+											a.*
+								FROM product a
+								LEFT JOIN USER b ON a.user_num=b.num
+								LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
+								LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
+								LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
+								LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
+								LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
+								LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
+							WHERE b.num='".$userNum."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

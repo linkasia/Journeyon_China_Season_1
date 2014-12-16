@@ -128,8 +128,9 @@ $salesNum = $_REQUEST['salesNum'];
 	var _checkDate="";
 	var _tmpCheckDate = "";
 	//달력제어
-	$(document).ready(function () {           
+	$(document).ready(function () {
 		var today = new Date();
+		//$(".")
 		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
 	 });
 
@@ -145,7 +146,6 @@ $salesNum = $_REQUEST['salesNum'];
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");
 			}else{
-				
 				//alert(_checkDate);
 				_checkDate += "<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
 				i++;
@@ -161,7 +161,7 @@ $salesNum = $_REQUEST['salesNum'];
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://163.180.73.25/index.php/city/country/detailCity1",
+				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity1",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 					
@@ -176,7 +176,7 @@ $salesNum = $_REQUEST['salesNum'];
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
 				//url:"http://163.180.73.62/index.php/city/country/detailCity2",
-				url:"http://163.180.73.25/index.php/city/country/detailCity2",
+				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity2",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 					
@@ -193,7 +193,7 @@ $salesNum = $_REQUEST['salesNum'];
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum, user:_user},
 				//url:"http://163.180.73.62/index.php/city/country/detailCity3",
-				url:"http://163.180.73.25/index.php/city/country/detailCity3",
+				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity3",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 				}
@@ -234,8 +234,7 @@ $salesNum = $_REQUEST['salesNum'];
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 			data:{ salesNum: _salesNum,  content:_content, userNum:_userNum},
-			//url:"http://163.180.73.62/index.php/city/country/detailCity3",
-			url:"http://163.180.73.25/index.php/city/country/Question",
+			url:"http://www.linkasia.co.kr/index.php/city/country/Question",
 			success: function (data){
 				document.getElementById('viewContents').innerHTML = data;
 			}
@@ -252,12 +251,16 @@ $salesNum = $_REQUEST['salesNum'];
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 			data:{ salesNum: _salesNum,  content:_content, qna_num:_qna_num},
-			//url:"http://163.180.73.62/index.php/city/country/detailCity3",
-			url:"http://163.180.73.25/index.php/city/country/Agency",
+			url:"http://www.linkasia.co.kr/index.php/city/country/Agency",
 			success: function (data){
 				document.getElementById('viewContents').innerHTML = data;
 			}
 		});
+	}
 
+	//상세페이지
+	function detailPage(num)
+	{
+		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"'); ?>";
 	}
 </script>
