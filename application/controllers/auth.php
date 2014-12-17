@@ -1,6 +1,6 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class auth extends CI_Controller { // controller 파일이름이 곧 class파일 이름이다  
+class auth extends CI_Controller { // controller 파일이름이 곧 class파일 이름이다
 
 	function auth()
 	{
@@ -8,7 +8,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 
 		$this->CI =& get_instance();
 		//$this->CI->load->config('auth', TRUE);
-		$this->load->library('session'); 
+		$this->load->library('session');
 
 		$this->load->database();
 		$this->load->model('main/main_i');
@@ -16,11 +16,11 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$this->load->helper('url');
 		$this->load->helper('util_helper');
 
-		//$this -> load -> library('layout', 'layouts/layout_main');		
+		//$this -> load -> library('layout', 'layouts/layout_main');
 	}
 
 	function index()
-	{  		
+	{
 
 		$data['country'] = $this->main_i->Country();
 		$data['Travel'] = $this->main_i->Travel();
@@ -50,7 +50,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 	/*도시이동*/
 	/*
 	function city_search(){
-		
+
 		$data['country'] = $this->main_i->Country();
 
 		$this->load->view('include/header');
@@ -68,12 +68,17 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 	*/
 	//메일보내기
 	function sendmail()
-	{	
-		$mode = $_REQUEST['selnum'];
-
+	{
+		$mail = $_REQUEST['selnum'];
+		$mode = $_REQUEST['mode'];
 		$date=date("Y-m-d H:i:s",time());
-		$message="<a href='http://163.180.73.25/index.php/auth/member_comfirm?to=$mode' > 인증확인  </a>  admin@linkasia.co.kr<br>卓尼制作 : $date";
-		
+		if($mode == "password"){
+			$result = $this->membersJoin->searchEmail($mail);
+			$password = $result->password;
+			$message="password : $password  <br />관리자문의 : admin@linkasia.co.kr<br>卓尼制作 : $date";
+		}else{
+			$message="<a href='http://163.180.73.25/index.php/auth/member_comfirm?to=$mail' > 인증확인  </a>  admin@linkasia.co.kr<br>卓尼制作 : $date";
+		}
 		$config['mailtype']  = "html";
 		$config['charset']   = "utf-8";
 		$config['protocol']  = "smtp";
@@ -86,10 +91,10 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$this->email->set_newline("\r\n");
 		$this->email->clear();
 		$this->email->from("admin@linkasia.co.kr", "Linkasia");
-		$this->email->to($mode);
+		$this->email->to($mail);
 		$this->email->subject("test");//이메일 제목
 		$this->email->message($message);
 
 		$data = $this->email->send();
-	}	
+	}
 }

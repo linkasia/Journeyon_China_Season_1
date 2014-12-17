@@ -1,6 +1,4 @@
-<?if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-$Host ="http://163.180.73.25:80/";
-?>
+<?if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -14,11 +12,11 @@ $Host ="http://163.180.73.25:80/";
 		<title>Journey On - 上海卓尼旅游咨询有限公司</title>
 
 		<!-- Bootstrap core CSS (나중에 경로 다시 잡아줘야할 듯 -->
-		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">	
+		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">
 
 		<!-- Bootstrap Theme -->
 		<link href="/application/views/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-		
+
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
 		<link href="/application/views/css/agency.css" rel="stylesheet">
@@ -45,7 +43,7 @@ $Host ="http://163.180.73.25:80/";
 		<script src="/application/views/js/agency.js"></script>
 
 	</head>
-	
+
 
 	<body id="page-top" class="index">
 
@@ -93,7 +91,6 @@ $Host ="http://163.180.73.25:80/";
 
 
 <script type="text/javascript">
-		var Host ="<?=$Host?>";
 		//인증번호 생성
 		var _random="";
 
@@ -102,14 +99,14 @@ $Host ="http://163.180.73.25:80/";
 				{
 					var oldMail = document.getElementById('hidden_mail');
 					var newOld=document.getElementById('inputLarge');
-					
+
 					var format  = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
 					 _selnum = $('#inputLarge').val();
-					
+
 					if(_selnum == null || _selnum=="")
 					{
 						alert('请填写Email！');
-						return;    
+						return;
 					}
 					else if(_selnum.search(format) == -1)
 					{
@@ -130,7 +127,7 @@ $Host ="http://163.180.73.25:80/";
 								dataType:"text",
 								contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 								data:{selnum: _selnum},
-								url:Host+"index.php/member/memberJoin/searchMem",
+								url:"http://www.linkasia.co.kr/index.php/member/memberJoin/searchMem",
 								success: function (data){
 									if(data =="fail"){
 										alert("이미가입되어있습니다.");
@@ -140,7 +137,7 @@ $Host ="http://163.180.73.25:80/";
 											dataType:"text",
 											contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 											data:{selnum: _selnum},
-											url:Host+"index.php/auth/sendmail",
+											url:"http://www.linkasia.co.kr/index.php/auth/sendmail",
 											success: function (data){
 												alert("인증메일을 전송하였습니다!");
 											}
@@ -153,9 +150,9 @@ $Host ="http://163.180.73.25:80/";
 						}
 					}
 				});
-				
+
 				$('#logo').click( function(){
-					location.href = Host;
+					location.href = "http://www.linkasia.co.kr";
 				});
 
 				$('#cancel').click( function(){
