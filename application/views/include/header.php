@@ -69,7 +69,8 @@
 					</ul>
 				</header>
 				<div id="headerTitle">
-					<h1>KOREA</h1>
+					<h1 id="headerText">KOREA</h1>
+					<h4 id="headerContents">纽约军事历史主题</h4>
 				</div>
 			</header>
 		</div>
