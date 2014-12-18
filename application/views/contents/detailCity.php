@@ -67,13 +67,10 @@ $mode = $_REQUEST['mode'];
 				<div class="aside-menu">
 					<button class="btn btn-primary" id="calPop" name="calPop">定制游咨询</button>
 				</div>
-				<div class="aside-menu">
+				<div class="aside-like">
 					<hr>
 					<img src="/application/views/images/contents/heart.PNG" alt="heart">
-					<span><?=$v->wishcount?>名 想去</span>
-				</div>
-				<div class="aside-menu">
-					<button class="btn btn-primary">我想去</button>
+					<span>&nbsp;<?=$v->wishcount?>名 想去</span>
 				</div>
 			</div>
 		<?}?>

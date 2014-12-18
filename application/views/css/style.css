@@ -538,6 +538,7 @@
 	#right_aside .right_reservation .price .price_sub{text-align: right; font-size: 1.3em; font-weight: 700;}
 	#right_aside .right_reservation .calandar img{margin-left: 5px; margin-top: 10px;}
 	#right_aside .right_reservation .calandar .select{}
+	#right_aside .right_reservation .calandar{margin-top: 10px;}
 
 
 	.reply_id{font-weight: 700; color: #3f7fce;}
@@ -618,7 +619,10 @@
 
 	#right_aside .aside-menu{margin-top: 30px;}
 	#right_aside .aside-menu img{margin-left: 50px;}
+	#right_aside .aside-like{margin-left: 45px; cursor: pointer;}
+
 	#right_aside .btn{display: block; margin: 0 auto;}
+
 
 
 
