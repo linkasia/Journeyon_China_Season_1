@@ -87,12 +87,12 @@
 				$('#logo').click( function(){
 					location.href = "http://www.linkasia.co.kr/";
 				});
-
+/*
 				//취소버튼 클릭시 메인페이지 이동
 				$('#cancel').click( function(){
-					location.href = "<?=site_url('auth/index'); ?>";
+					location.href = "http://www.linkasia.co.kr/";
 				});
-
+*/
 				$('#e-mail2').click( function(){
 					var _selnum = $('#inputLarge').val();
 					var _mode = "password";

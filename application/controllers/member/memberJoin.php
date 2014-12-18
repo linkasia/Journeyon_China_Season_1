@@ -1,11 +1,11 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class memberJoin extends CI_Controller { // controller 파일이름이 곧 class파일 이름이다  
+class memberJoin extends CI_Controller { // controller 파일이름이 곧 class파일 이름이다
 
 	function memberJoin()
 	{
 		parent::__construct();
-		
+
 		$this->load->database();
 		$this->load->model('member/membersJoin');
 		$this->load->model('main/main_i');
@@ -15,7 +15,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 	}
 
 	function index()
-    {  
+    {
 		$to = $_REQUEST['selnum'];
 		$pw = $_REQUEST['password'];
 
@@ -23,7 +23,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
     }
 
 	function searchMem()
-    {  
+    {
 		$mail = $_REQUEST['selnum'];
 		$data['searchMem'] = $this->membersJoin->searchMember($mail);
 		if(count($data['searchMem']) > 0)
@@ -33,12 +33,12 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
     }
 
 	function loginMem()
-    {  
+    {
 		$mail = $_REQUEST['mail'];
 		$password =  $_REQUEST['password'];
 		$data['loginMem'] = $this->membersJoin->loginMember($mail,$password);
 		if(count($data['loginMem']) == 1)
-		{		
+		{
 			print_r("success");
 		}else{
 			print_r("fail");
@@ -46,10 +46,10 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
     }
 
 	//로그인
-	function login() 
+	function login()
     {
 		if($_POST)
-		{	
+		{
 			//echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
 			 $email = $_POST['inputLarge'];
 			$password = $_POST['password'];
@@ -110,13 +110,17 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 					alert('승인된 아이디가 아닙니다!(관리자에게 문의하세요)','/index.php/auth');
 					return false;
 				}
-				
+
 			}
 			else
-			{	
-				//echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
-				echo "<script> alert('请确认高级会员的用户名和密码' );</script>";
-				$this->load->view('member/login');
+			{
+				$data['country'] = $this->main_i->Country();
+				$data['Travel'] = $this->main_i->Travel();
+				$data['choice'] = $this->main_i->Admin_choice();
+
+				$this->load->view('include/header');
+				$this->load->view('main/contents' ,$data);
+				$this->load->view('include/footer');
 			}
 		}
 		else
@@ -129,7 +133,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 			$this->load->view('main/contents' ,$data);
 			$this->load->view('include/footer');
 		}
-    } 
+    }
 
 	//로그아웃
 	function logout()

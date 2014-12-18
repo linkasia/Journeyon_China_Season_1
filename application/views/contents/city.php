@@ -5,10 +5,10 @@ $countryList = $_REQUEST['countryList'];
 ?>
 <div id="contents_wrap1"> <!-- 컨텐츠 영역 나중에 include -->
 	<div id="contents_wrapcenter"> <!-- 가운데로 가로값 줘서 가운데 정렬시키는 wrap -->
-		
-		
+
+
 		<!-- left_box.php로 뺀 자리 -->
-		
+
 		<aside id="aside_wrap"> <!-- 좌측 정렬 부분 감싸는 영역 -->
 
 			<div class="div_box1">
@@ -21,7 +21,7 @@ $countryList = $_REQUEST['countryList'];
 						<span id='change_button' name='change_button'><img src="/application/views/images/left_menu/check_box.png" alt=""  onclick="countryList()"></span>
 					</div>
 					<?}?>
-					<!-- <div class="selectParent"> 
+					<!-- <div class="selectParent">
 						<select class="select_option"> <span>China</span>
 							<option value=''>China</option>
 							<option value=''>Korea</option>
@@ -156,13 +156,13 @@ $countryList = $_REQUEST['countryList'];
 								<?}?>
 						</div> <!-- div.nation_list 끝 -->
 				</div><!-- div_box 1-1 끝 -->
-					
+
 				<div class="div_box1-2">
 					<div class="nation2"><img src="/application/views/images/left_menu/icon01_country.PNG" alt="">
 						<p class="stitle">City</p>
 					</div>
 					<div class="selectParent">
-						<select class="select_option"> 
+						<select class="select_option">
 							<option value=''>서울</option>
 							<option value=''>대전</option>
 							<option value=''>대구</option>
@@ -181,7 +181,7 @@ $countryList = $_REQUEST['countryList'];
 			</div>
 
 
-			
+
 			<div class="div_box2"> <!-- 현지인 & V인증마크 영역 -->
 				<ul class="local"><img src="/application/views/images/left_menu/icon03_guide.PNG" alt=""><p class="stitle">导游特征</p>
 
@@ -197,7 +197,7 @@ $countryList = $_REQUEST['countryList'];
 					</li>
 					<?$i++;
 					}?>
-				</ul>	
+				</ul>
 
 				<!-- 성별 선택 옮겨온 부분 -->
 				<ul class="gender"><img src="/application/views/images/left_menu/icon07_gender.PNG" alt=""><p class="stitle">性别</p>
@@ -214,7 +214,7 @@ $countryList = $_REQUEST['countryList'];
 				<?$i++;
 				}?>
 				</ul>
-				
+
 				<ul class="vmark"><img src="/application/views/images/left_menu/icon04_vmark.PNG" alt=""><p class="stitle">V. 认证</p>
 					<?foreach($guide as $v){?>
 					<li>
@@ -277,7 +277,7 @@ $countryList = $_REQUEST['countryList'];
 			</div> -->
 
 		</aside><!-- 왼쪽 메뉴 끝 -->
-		
+
 
 
 		<section id="section_wrap"> <!-- 여기서부터 우측 감싸는 영역 -->
@@ -286,21 +286,21 @@ $countryList = $_REQUEST['countryList'];
 				<button id="select1" type="image" class="btn btn-primary">微旅行</button>
 				<button id="select2" class="btn btn-primary">点评</button>
 			</div><!-- 버튼 2개 넣을 곳 -->
-	
+
 
 			<!-- 우측컨텐츠 right_contents.php 로 뺀 영역 -->
 
-			
+
 
 			<?
 				$data['salesCountry']= $this->country_M->salesCountry($scountry,$countryList);
 			?>
-			
-			<div id='viewContents' name='viewContents'><?$this->load->view("/contents/right_contents",$data);?></div>
-			
-			
+
+			<div id='viewContents' name='viewContents'><?$this->load->view("/contents/frm_city",$data);?></div>
+
+
 		</section> <!-- 우측 감싸는 section 닫음 -->
-		
+
 	</div> <!-- contents_wrap center 주는거 닫음 -->
 </div> <!-- contents_wrap1 닫음  -->
 
@@ -362,7 +362,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -401,7 +400,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -440,7 +438,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -479,7 +476,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -597,7 +593,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -636,7 +631,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -675,10 +669,8 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
-					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
 				}
 			});
@@ -714,7 +706,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -753,7 +744,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -792,7 +782,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -831,7 +820,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -870,7 +858,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -909,7 +896,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -948,7 +934,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -987,7 +972,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -1026,7 +1010,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -1065,7 +1048,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -1104,7 +1086,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -1143,7 +1124,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -1182,7 +1162,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -1222,7 +1201,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
@@ -1262,7 +1240,6 @@ $countryList = $_REQUEST['countryList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide },
-				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
 				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);

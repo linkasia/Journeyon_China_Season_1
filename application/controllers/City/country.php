@@ -1,10 +1,10 @@
 <?
-class country extends CI_Controller { // controller 파일이름이 곧 class파일 이름이다  
+class country extends CI_Controller { // controller 파일이름이 곧 class파일 이름이다
 
 	function country()
 	{
 		parent::__construct();
-		
+
 		$this->load->database();
 		$this->load->model('code/tb_code');
 		$this->load->model('main/main_i');
@@ -15,19 +15,19 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*도시이동*/
 	function city_search(){
-		
+
 		$scontry = $_REQUEST['scountry'];
 		$contry = $_REQUEST['countryList'];
-		
+
 		$data['country'] = $this->main_i->Country();
 		$data['choiceCountry'] = $this->main_i->choiceCountry($scontry,$contry);
-		
+
 		$data['guideType'] = $this->tb_code->guideType();
 		$data['guide'] = $this->tb_code->guide();
 		$data['theme'] = $this->tb_code->theme();
 		$data['recommend'] = $this->tb_code->recommend();
 		$data['sexual'] = $this->tb_code->sexual();
-		
+
 
 		$this->load->view('include/header');
 		$this->load->view('contents/city',$data);
@@ -49,10 +49,10 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	function countryList(){
 		$scountry = $_REQUEST['scountry'];
 		$countryList = $_REQUEST['countryList'];
-		
+
 		$data['salesCountry']= $this->country_M->salesCountry($scountry,$countryList);
 
-		$this->load->view("/contents/right_contents",$data);
+		$this->load->view("/contents/frm_city",$data);
 	}
 
 	/*QnA로 이동*/
@@ -81,7 +81,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$temCode = $_REQUEST['temCode'];
 		$recommend = $_REQUEST['recommend'];
 		$guide = $_REQUEST['guide'];
-		
+
 		if($guideType != ""){
 			$guideType = substr($guideType,0,strlen($guideType)-1);
 		}
@@ -100,10 +100,10 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$data['salesCountry']= $this->country_M->salesCountrySort($scountry, $countryList, $guideType, $genderCode, $temCode ,$recommend ,$guide);
 
-		$this->load->view("/contents/right_contents",$data);
-		
+		$this->load->view("/contents/frm_city",$data);
+
 	}
-	
+
 	/*상세페이지1*/
 	function detailCity1(){
 		$salesNum = $_REQUEST['salesNum'];
@@ -135,7 +135,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$salesNum = $_REQUEST['salesNum'];
 		$content = $_REQUEST['content'];
 		$userNum = $_REQUEST['userNum'];
-		
+
 		$insert['insertQuestion'] = $this->country_M->insertQuestion($salesNum,$content,$userNum);
 
 		$data['salesCityQnA']= $this->country_M->salesDetailCityQnA($salesNum);
@@ -149,7 +149,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$content = $_REQUEST['content'];
 		$qna_num = $_REQUEST['qna_num'];
 		$userNum = $this->session->userdata['num'];
-		
+
 		$insert['insertAgency'] = $this->country_M->insertAgency($salesNum, $content, $qna_num, $userNum);
 
 		$data['salesCityQnA']= $this->country_M->salesDetailCityQnA($salesNum);

@@ -4,7 +4,7 @@
 			<div class="city_title">
 				<h3 class="city_text">目前有<span class="font_blue">2万多</span>人访问了<span class="font_blue">200多</span>个不同的国家</h3>
 			</div>
-			
+
 			<div class="city_icon">
 				<?for($i=41; $i<=50; $i++){?>
 					<div id="city<?=$i?>" class="city<?=$i?>" name="city<?=$i?>"><img src="/application/views/images/main/img<?=$i?>.png" alt="" onclick="Country_move(<?=$i?>)">
@@ -31,7 +31,7 @@
 					<?}?>
 
 					</div>
-				
+
 				<?}?>
 			</div>
 		</section>
@@ -39,7 +39,7 @@
 		<section id="section2">
 			<div class="s_button"><img src="/application/views/images/main/button01_travel.png" alt="scroll_button" onclick="pushEvent()" name="btnImg" id="btnImg">
 				 <div class="nation_list" name="nation_list" id="nation_list">
-							
+
 							<?foreach($country as $v){
 								if($v->class == "0001" && $v->CODE == "0001"){?>
 									<div class="menu-column1">
@@ -165,21 +165,21 @@
 							<?}?>
 
 				</div>
-			</div> 
+			</div>
 		</section>
 	</div> <!-- wrap1 이 여기서 끝남 -->
 
 
 	<div id="contents_wrap3">
 		<section id="section3">
-			<div class="sub_title"> <h4>11月 主题纽约 <span>去纽约玩什么？  当地人带你去游玩！</span></h4> </div>
+			<div class="sub_title"> <h4><?=date('m')?>月 主题纽约 <span>去纽约玩什么？  当地人带你去游玩！</span></h4> </div>
 			<div class="somenail_wrap">
 				<ul class="somenail_list">
 				<?$i=1;?>
 				<? foreach($choice as $v){ ?>
 					<li class="somenail1">
 						<section class="somenail_bootstrap">
-							<div class="portfolio-item"  name='backpic' id='backpic' >
+							<div class="portfolio-item"  name='backpic' id='backpic' onclick="detailCity('<?=$v->num?>')">
 								<div class="portfolio-link">
 										<div class="portfolio-hover">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
@@ -187,20 +187,20 @@
 										<img style="width: 300px; height: 240px;" src="<?=$v->pic1_img?>" alt="">
 								</div>
 								<?if($i== 1){?>
-									<div class="somenail_transbox" style="background-color:rgba(59,183,202,.6)"><p class="somenail_title"><?=$v->title?></p></div> 
+									<div class="somenail_transbox" style="background-color:rgba(59,183,202,.6)"><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 2){ ?>
 									<div class="somenail_transbox" style="background-color:rgba(195,119,228,.6)"><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 3){?>
 									<div class="somenail_transbox" style="background-color:rgba(63,127,206,.6)"><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 4){?>
-									<div class="somenail_transbox" style="background-color:rgba(255,210,5,.6)"><p class="somenail_title"><?=$v->title?></p></div> 
+									<div class="somenail_transbox" style="background-color:rgba(255,210,5,.6)"><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 5){?>
-									<div class="somenail_transbox" style="background-color:rgba(243,164,107,.6)"><p class="somenail_title"><?=$v->title?></p></div> 
+									<div class="somenail_transbox" style="background-color:rgba(243,164,107,.6)"><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 6){?>
 									<div class="somenail_transbox" style="background-color:rgba(48,59,76,.6)"><p class="somenail_title"><?=$v->title?></p></div>
 								<?}?>
-							</div> 
-							
+							</div>
+
 							<div class="somenail_transcity"><p><?=$v->code_nm?></p></div>
 
 							<div class="somenail_caption">
@@ -239,7 +239,7 @@
 	<div id="contents wrap4">
 		<section id="section4">
 			<div class="sub_title"> <h4>最新上传的首尔旅行 <span> / 最新准备的首尔旅行！</span></h4> </div>
-			
+
 			<?foreach($Travel as $v){?>
 				<div class="somenail_wrap">
 					<ul class="somenail_list">
@@ -255,7 +255,7 @@
 									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,.6)">
 										<p class="somenail_title"><?=$v->title?></p>
 									</div>
-								</div> 
+								</div>
 								<div class="somenail_transcity2">
 									<p><?=$v->code_nm?></p>
 								</div>
@@ -316,7 +316,7 @@
 				document.getElementById('section2').style.transition="all ease .8s";
 				document.getElementById('section2').style.height="0px";
 			}
-			
+
 			if(document.getElementById('nation_list').style.height == "0px"){
 				document.getElementById('nation_list').style.transition="all ease .8s";
 				document.getElementById('nation_list').style.height="370px";
@@ -327,7 +327,7 @@
 				document.getElementById('nation_list').style.height="0px";
 				document.getElementById('btnImg').src="/application/views/images/main/button01_traveldown.png";
 			}
-			
+
 		}
 
 		function page_country(country,city){
@@ -335,26 +335,21 @@
 		}
 
 		function Country_move(code){
-			
-			
-			//location.href = "<?=site_url('City/country/city_search'); ?>";
+
+			//location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"'); ?>";
 		}
 
-		//도시 이미지 클릭시
-		function selectBackpic(code){
-			alert("배경"+code);
+		function detailCity(code)
+		{
+			location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+code+"'); ?>";
 		}
+/*
+		$(function(){
 
-		//프로필 사진 클릭시
-		function selectProfile(code){
-			alert("프로필이동"+code);
-		}
+			$('#backpic').click( function(){
+				alert("AAA");
+			});
 
-		
-
-		//$(function(){
-			
-		
-		//});
-	
+		});
+*/
 	</script>

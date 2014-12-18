@@ -65,7 +65,7 @@
 							<ul id="ul_margin">
 								<li id='ul'><input type='button' class="btn-primary btn" id='send' name='send' value='免费注册'></li>
 							</ul>
-							<span id="repeated_join" name="repeated_join">已注册？回到登陆页</span>
+							<span id="repeated_join" name="repeated_join"><ins><font color='#62b8ef'>已注册？回到登陆页</font></ins></span>
 							<button class="btn-danger btn" id='cancel' name='cancel'>取消</button>
 							<span id="clause" name="clause">《蚂蜂窝用户使用协议》</span>
 					</div>
@@ -155,8 +155,12 @@
 					location.href = "http://www.linkasia.co.kr";
 				});
 
+				$('#repeated_join').click( function(){
+					location.href = "http://www.linkasia.co.kr/index.php/auth/Login_view";
+				});
+
 				$('#cancel').click( function(){
-					location.href = "<?=site_url('auth/index'); ?>";
+					location.href = "http://www.linkasia.co.kr";
 				});
 
 			});
