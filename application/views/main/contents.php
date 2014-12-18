@@ -261,7 +261,7 @@
 								</div>
 								<div class="somenail_caption">
 									<div class="circle-div2">
-										<img src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle2 somenail_profile" onclick="detailProfile('<?=$v->user_num?>');'>
+										<img src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle2 somenail_profile"onclick="detailProfile('<?=$v->user_num?>')" >
 									</div>
 									<div class="back-line1">
 										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span><?=$v->fat_price?> 元</span>

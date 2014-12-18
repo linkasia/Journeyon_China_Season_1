@@ -68,6 +68,9 @@
 						<?}?>
 					</ul>
 				</header>
+				<div id="headerTitle">
+					<h1>KOREA</h1>
+				</div>
 			</header>
 		</div>
 
