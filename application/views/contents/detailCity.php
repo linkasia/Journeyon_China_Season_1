@@ -165,7 +165,6 @@ $mode = $_REQUEST['mode'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
-				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
 				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity1",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
@@ -234,8 +233,6 @@ $mode = $_REQUEST['mode'];
 				}
 			});
 		});
-
-
 	});
 
 

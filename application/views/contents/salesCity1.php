@@ -1,6 +1,6 @@
 <div class="title"><div class="underline">微旅行</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 	<?foreach($salesCity as $v){?>
-		<div class="contents_text1"><?=$v->title?></div>	
+		<div class="contents_text1"><?=$v->title?></div>
 		<div class="contents_img">
 			<div class="img_big"  id='clickDivBig' ><img style="width:660px; height:528px;"src="<?=$v->pic1_img?>" alt="img_big" id='clickImgBig'></div>
 			<div class="img1" id='clickDiv1'><img style="width:157px; height:105px;" src="<?=$v->pic1_img?>" alt="img_a" id='clickImg1'></div>
@@ -17,11 +17,11 @@
 
 				<dt><span><img src="/application/views/images/contents/icon31_included.PNG" alt=""></span>费用包括</dt>
 				<dd><?=$v->include?></dd>
-				
-				
+
+
 				<dt><span><img src="/application/views/images/contents/icon32_notincluded.PNG" alt="">费用不包括</dt>
 				<dd><?=$v->not_include?></dd>
-				
+
 
 				<dt><span><img src="/application/views/images/contents/icon33_first.PNG" alt="">见面地点</dt>
 				<dd><?=$v->meeting_place_describe?></dd>
@@ -59,9 +59,10 @@
 <script type="text/javascript"t>
 	$(function(){
 		$('#clickDiv1').click( function(){
-			$('#clickImgBig').attr('src',$('#clickImg1').attr('src'));
+			//$('#clickImgBig').attr('src',$('#clickImg1').attr('src'));
+			alert("A");
 		});
-		
+
 		$('#clickDiv2').click( function(){
 			$('#clickImgBig').attr('src',$('#clickImg2').attr('src'));
 		});
