@@ -1,4 +1,7 @@
-<?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+<?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+$mainTitle="为您准备的300个不同的微旅行";
+$maincontents="当地人推荐的最佳自由行之地 Journey On";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
@@ -69,8 +72,8 @@
 					</ul>
 				</header>
 				<div id="headerTitle">
-					<h1 id="headerText">KOREA</h1>
-					<h4 id="headerContents">纽约军事历史主题</h4>
+					<h2 id="headerText"><?=$mainTitle?></h2>
+					<h4 id="headerContents"><?=$maincontents?></h4>
 				</div>
 			</header>
 		</div>
