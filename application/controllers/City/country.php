@@ -124,7 +124,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$salesNum = $_REQUEST['salesNum'];
 		$user = $_REQUEST['user'];
 
-		$data['userInfo']= $this->country_M->detailUser($salesNum);
+		$data['userInfo']= $this->country_M->detailUser($user);
 		$data['userSales']= $this->country_M->userSales($user);
 
 		$this->load->view("/contents/salesCity3",$data);

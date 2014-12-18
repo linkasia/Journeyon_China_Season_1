@@ -206,7 +206,7 @@
 							<div class="somenail_caption">
 
 									<div class="circle-div">
-										<img name='profile' id='profile' src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle somenail_profile">
+										<img name='profile' id='profile' src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle somenail_profile" onclick="detailProfile('<?=$v->user_num?>')">
 									</div>
 
 									<div class="back-line1">
@@ -245,7 +245,7 @@
 					<ul class="somenail_list">
 						<li class="somenail2_1">
 							<section class="somenail_bootstrap2">
-								<div class="portfolio-item2">
+								<div class="portfolio-item2" onclick="detailCity('<?=$v->num?>')">
 									<div class="portfolio-link2">
 										<div class="portfolio-hover2">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
@@ -261,7 +261,7 @@
 								</div>
 								<div class="somenail_caption">
 									<div class="circle-div2">
-										<img src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle2 somenail_profile");'>
+										<img src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle2 somenail_profile" onclick="detailProfile('<?=$v->user_num?>');'>
 									</div>
 									<div class="back-line1">
 										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span><?=$v->fat_price?> 元</span>
@@ -339,9 +339,13 @@
 			//location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"'); ?>";
 		}
 
+		function detailProfile(code)
+		{
+			location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+code+"&mode=P'); ?>";
+		}
 		function detailCity(code)
 		{
-			location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+code+"'); ?>";
+			location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+code+"&mode='); ?>";
 		}
 /*
 		$(function(){

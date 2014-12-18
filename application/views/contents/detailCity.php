@@ -1,5 +1,6 @@
 <?
 $salesNum = $_REQUEST['salesNum'];
+$mode = $_REQUEST['mode'];
 ?>
 
 
@@ -13,11 +14,17 @@ $salesNum = $_REQUEST['salesNum'];
 
 		<!-- salesCity1.php 로 뺀 부분 CI로딩 -->
 		<div id='viewContents' name='viewContents' class="contents_wrap">
-			<!-- include 한 부분 --><?
-			
-			$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
+			<!-- include 한 부분 -->
+			<?
+			/*
+			if($mode == "P"){
 
-			$this->load->view("/contents/salesCity1",$data);
+			}else{
+				$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
+
+				$this->load->view("/contents/salesCity1",$data);
+			}
+			*/
 			?>
 		</div>
 	</section>
@@ -37,18 +44,18 @@ $salesNum = $_REQUEST['salesNum'];
 				<div class="calandar">
 					<div class="select">
 					</div>
-					
+
 					<div id='divCal' name='divCal'> <?$this->load->view("/include/calendar");?> </div>
 
 					<!-- <img src="/application/views/images/contents/calandar.png" alt=""> --> <!-- 캘린더 들어가는 칸 -->
 					<div class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
 						<ul id='checkDate' name='checkDate'>	</ul>
-						
-						<!--select class="select_option2"> 
+
+						<!--select class="select_option2">
 							<option value=''>2014-12-10</option>
 						</select-->
 
-						<!--select class="select_option3"> 
+						<!--select class="select_option3">
 							<option value=''>1名</option>
 							<option value=''>2名</option>
 							<option value=''>3名</option>
@@ -72,7 +79,7 @@ $salesNum = $_REQUEST['salesNum'];
 		<?}?>
 
 		<?foreach($salesBasic as $v){?>
-			<input type='hidden' id='user_num' name='user_num' value='<?=$v->num?>' >
+			<input type='hidden' id='user_num' name='user_num' value='<?=$v->user_num?>' >
 			<div class="right_profile">
 				<div class="gray_box"><span><img src="/application/views/images/main/img27_navi.PNG" alt="">  当地人</span>
 					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
@@ -99,12 +106,12 @@ $salesNum = $_REQUEST['salesNum'];
 						年龄 :  <?=$v->age?>岁 <br>
 						性别 : <?=$v->gender_nm?> <br>
 						注册时间 : <?=$v->YEAR?> 年 <?=$v->mon?> 月 <?=$v->DAY?> 日 <br>
-						语言 : <?=$v->lang1_nm?>（<?=$v->lang1_skill_nm?>）<?=$v->lang2_nm?>（<?=$v->lang2_skill_nm?>）<?=$v->lang3_nm?>（<?=$v->lang3_skill_nm?>）<br>		
+						语言 : <?=$v->lang1_nm?>（<?=$v->lang1_skill_nm?>）<?=$v->lang2_nm?>（<?=$v->lang2_skill_nm?>）<?=$v->lang3_nm?>（<?=$v->lang3_skill_nm?>）<br>
 						职业 : <?=$v->job?>、<?=$v->job_detail?> <br>
 					</p>
 				</div>
 				<div class="sns_icon">
-					
+
 					<?if($v->messenger_qq == null || $v->messenger_qq == ""){?>
 						<img src="/application/views/images/main/sns03G.png" alt="" class="sns_icon1G">
 					<?}else{?>
@@ -136,13 +143,42 @@ $salesNum = $_REQUEST['salesNum'];
 
 	$(function(){
 		var _salesNum= "<?=$salesNum?>";
-		
+		var mode= "<?=$mode?>";
+
+		if(mode =="P")
+		{
+			var _user=document.getElementById('user_num').value;
+
+			$.ajax({
+				type:"GET" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ salesNum : _salesNum, user:_user},
+				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity3",
+				success: function (data){
+					document.getElementById('viewContents').innerHTML = data;
+				}
+			});
+		}else{
+			$.ajax({
+				type:"GET" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ salesNum : _salesNum},
+				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
+				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity1",
+				success: function (data){
+					document.getElementById('viewContents').innerHTML = data;
+
+				}
+			});
+		}
+
 		var i=0;
 		$('#calendarContent').click( function(){
 
 			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + $('#jqxWidget').val().getMonth() + "-" + $('#jqxWidget').val().getDate();
 
-			
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");
 			}else{
@@ -150,7 +186,7 @@ $salesNum = $_REQUEST['salesNum'];
 				_checkDate += "<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
 				i++;
 			}
-			
+
 			document.getElementById('checkDate').innerHTML = _checkDate;
 		});
 
@@ -164,7 +200,7 @@ $salesNum = $_REQUEST['salesNum'];
 				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity1",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
-					
+
 				}
 			});
 		});
@@ -179,20 +215,19 @@ $salesNum = $_REQUEST['salesNum'];
 				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity2",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
-					
+
 				}
 			});
 		});
 
 		$('#city3').click( function(){
 			var _user=document.getElementById('user_num').value;
-			
+
 			$.ajax({
 				type:"GET" ,
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum, user:_user},
-				//url:"http://163.180.73.62/index.php/city/country/detailCity3",
 				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity3",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
@@ -200,7 +235,7 @@ $salesNum = $_REQUEST['salesNum'];
 			});
 		});
 
-		
+
 	});
 
 
@@ -220,7 +255,7 @@ $salesNum = $_REQUEST['salesNum'];
 									+"<input type='hidden' value='"+num+"' name='qna_num' id='qna_num' >"
 									+"<button class='btn btnQna2' id='agency' name='agency' onclick='insertAgency()'>上传</button>"
 									+"</div>";
-									
+
 			document.getElementById('addReply'+num).innerHTML = insertBox;
 	}
 
@@ -228,7 +263,7 @@ $salesNum = $_REQUEST['salesNum'];
 		var _salesNum= "<?=$salesNum?>";
 		var _content = document.getElementById('quetionArea').value;
 		var _userNum= userNum;
-		
+
 		$.ajax({
 			type:"GET" ,
 			dataType:"text",
@@ -261,6 +296,6 @@ $salesNum = $_REQUEST['salesNum'];
 	//상세페이지
 	function detailPage(num)
 	{
-		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"'); ?>";
+		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"&mode='); ?>";
 	}
 </script>

@@ -309,7 +309,7 @@ $countryList = $_REQUEST['countryList'];
 	//상세페이지
 	function detail_page(num)
 	{
-		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"'); ?>";
+		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"&mode='); ?>";
 	}
 
 	function selecCountry(country,city)
@@ -329,7 +329,12 @@ $countryList = $_REQUEST['countryList'];
 		document.getElementById('change_button').innerHTML ="<img src='/application/views/images/left_menu/check_box.png' alt=''  onclick='countryList()'>"
 	}
 
+
 	$(function(){
+
+		//메인 이미지 변경
+		$("#header_wrap").css("height","350px");
+		$("#header_wrap").css("background-image","url(/application/views/images/main/bg02.png)");
 
 		$('#checkboxG0').click( function(){
 			var _co="<?=$scountry?>";
