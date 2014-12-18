@@ -336,6 +336,9 @@ $countryList = $_REQUEST['countryList'];
 		$("#header_wrap").css("height","350px");
 		$("#header_wrap").css("background-image","url(/application/views/images/main/bg02.png)");
 
+		//헤더텍스트 높낮이 변경 padding
+		$("#headerText").css("padding-top","108px");
+
 		$('#checkboxG0').click( function(){
 			var _co="<?=$scountry?>";
 			var _ci="<?=$countryList?>";
