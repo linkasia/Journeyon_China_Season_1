@@ -121,7 +121,6 @@ $mode = $_REQUEST['mode'];
 						<img src="/application/views/images/main/sns02.png" alt="" class="sns_icon2C">
 					<?}?>
 				</div>
-				<button class="btn btn-info profile-btn">更多</button>
 			</div>
 		<?}?>
 	</aside>
