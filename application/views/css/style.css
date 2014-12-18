@@ -353,7 +353,7 @@
 	#section_wrap #select2{padding: 5px 20px 5px 20px; display: none;}
 
 	/*타이틀, 아래 버튼*/
-	.title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-top: 40px; margin-bottom: 20px;}
+	.title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px;} /*주의*/
 	.title .underline{border-bottom: 2px #f3c807 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	.sort{width: 100%; height: 40px;}
 	.flr{float: right;}
