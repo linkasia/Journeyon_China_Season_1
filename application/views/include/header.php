@@ -57,7 +57,12 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 
 	<body id="page-top" class="index">
+<<<<<<< HEAD
+		<div id="wrap"><!-- wrap 각주에 글씨-->
+=======
+
 		<div id="wrap"><!-- wrap -->
+>>>>>>> origin/Development
 			<header id="header_wrap">
 				<!-- <video autoplay loop id="bgvid">
 					<source src="/application/views/images/Paris-P1-1.mp4">
