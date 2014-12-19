@@ -1,4 +1,4 @@
-<?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+<?if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 $mainTitle="为您准备的300个不同的微旅行";
 $maincontents="当地人推荐的最佳自由行之地 Journey On";
 ?>
@@ -14,11 +14,11 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<title>Journey On - 上海卓尼旅游咨询有限公司</title>
 
 		<!-- Bootstrap core CSS (나중에 경로 다시 잡아줘야할 듯 -->
-		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">	
+		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">
 
 		<!-- Bootstrap Theme -->
 		<link href="/application/views/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
-		
+
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
 		<!-- <link href="/application/views/css/agency2.css" rel="stylesheet"> -->
@@ -43,7 +43,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script src="/application/views/js/classie.js"></script>
 		<script src="/application/views/js/cbpAnimatedHeader.js"></script>
 		<script src="/application/views/js/agency.js"></script>
-		
+
 		<!-- 캘린더 js 불러온 부분 -->
 		<link rel="stylesheet" href="/application/views/jqwidgets/styles/jqx.base.css" type="text/css" />
 		<!-- <script type="text/javascript" src="/application/views/scripts/jquery-1.11.1.min.js"></script> -->
@@ -54,10 +54,10 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script type="text/javascript" src="/application/views//jqwidgets/jqxtooltip.js"></script>
 		<script type="text/javascript" src="/application/views/jqwidgets/globalization/globalize.js"></script>
 	</head>
-	
+
 
 	<body id="page-top" class="index">
-		
+
 		<div id="wrap"><!-- wrap -->
 			<header id="header_wrap">
 				<!-- <video autoplay loop id="bgvid">
@@ -78,7 +78,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<a href="/index.php/member/memberJoin/logout" class="logout">退出<!-- <img src="/application/views/images/main/img04_text2.png" alt=""> --></a>
 							<!--li class="logout" name="logout" id="logout"></li-->
 						<?}?>
-							
+
 						<?}else{?>
 							<li class="login" name="login" id="login">登陆&nbsp;&nbsp;|</li>
 							<li class="signup" name="signup" id="signup">注册</li>
@@ -87,7 +87,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 				</header>
 				<div id="headerTitle">
 					<h2 id="headerText"><img src="/application/views/images/main/headerText.png" alt=""></h2>
-					<h4 id="headerContents"></h4>			
+					<h4 id="headerContents"></h4>
 				</div>
 			</header>
 		</div>
@@ -120,7 +120,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					location.href = "<?=site_url('auth/member_join'); ?>";
 				});
 			});
-		
+
 		</script>
 	</body>
 </html>
