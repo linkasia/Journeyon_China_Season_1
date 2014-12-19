@@ -57,7 +57,11 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 
 	<body id="page-top" class="index">
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> parent of 949d806... Mainpage - video insert
 		<div id="wrap"><!-- wrap -->
 			<header id="header_wrap">
 				<!-- <video autoplay loop id="bgvid">
