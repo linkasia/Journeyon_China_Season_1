@@ -45,7 +45,8 @@ $mode = $_REQUEST['mode'];
 					<div class="select">
 					</div>
 
-					<div id='divCal' name='divCal'> <?$this->load->view("/include/calendar");?> </div>
+					<!--div id='divCal' name='divCal'> <?//$this->load->view("/include/calendar");?> </div-->
+					<div id='jqxWidget'> </div>
 
 					<!-- <img src="/application/views/images/contents/calandar.png" alt=""> --> <!-- 캘린더 들어가는 칸 -->
 					<div class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
@@ -65,7 +66,29 @@ $mode = $_REQUEST['mode'];
 					</div>
 				</div>
 				<div class="aside-menu">
-					<button class="btn btn-primary" id="calPop" name="calPop">定制游咨询</button>
+
+					<button type="button" class="btn btn-primary" id="calPop" name="calPop" data-toggle="modal" data-target="#myModal">定制游咨询
+					</button>
+
+					<!-- Modal 여기서부터 Overview 박스 시작 -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									<h4 class="modal-title" id="myModalLabel">예약 일정을 선택하세요</h4>
+								</div><!-- modal-header 닫힘 -->
+								<div class="modal-body">
+									  <div id='content'><!--div id='jqxWidget'> </div--></div>
+								</div><!-- modal-body 닫힘 -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Save changes</button>
+								</div><!-- modal-footer 닫힘 -->
+							</div><!-- modal-content 닫힘 -->
+						</div><!-- modal-dialog 닫힘 -->
+					</div><!-- modal fade Overveiw 끝 -->
+
 				</div>
 				<div class="aside-like">
 					<hr>

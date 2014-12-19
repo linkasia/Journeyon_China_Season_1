@@ -43,6 +43,16 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script src="/application/views/js/classie.js"></script>
 		<script src="/application/views/js/cbpAnimatedHeader.js"></script>
 		<script src="/application/views/js/agency.js"></script>
+		
+		<!-- 캘린더 js 불러온 부분 -->
+		<link rel="stylesheet" href="/application/views/jqwidgets/styles/jqx.base.css" type="text/css" />
+		<!-- <script type="text/javascript" src="/application/views/scripts/jquery-1.11.1.min.js"></script> -->
+		<script type="text/javascript" src="/application/views/scripts/demos.js"></script>
+		<script type="text/javascript" src="/application/views//jqwidgets/jqxcore.js"></script>
+		<script type="text/javascript" src="/application/views/jqwidgets/jqxdatetimeinput.js"></script>
+		<script type="text/javascript" src="/application/views/jqwidgets/jqxcalendar.js"></script>
+		<script type="text/javascript" src="/application/views//jqwidgets/jqxtooltip.js"></script>
+		<script type="text/javascript" src="/application/views/jqwidgets/globalization/globalize.js"></script>
 	</head>
 	
 
