@@ -25,12 +25,13 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
-		<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+			<script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+			<script>	document.createElement('video');</script>
 		<![endif]-->
 
 		<script src="/application/views/js/jquery-1.8.3.min.js" type="text/javascript"></script>
@@ -57,13 +58,12 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 	
 
 	<body id="page-top" class="index">
-		
 		<div id="wrap"><!-- wrap -->
 			<header id="header_wrap">
-				<!-- <video autoplay loop id="bgvid">
+				<video autoplay loop id="bgvid">
 					<source src="/application/views/images/Paris-P1-1.mp4">
 					<source src="/application/views/images/Paris-P1-1.webm">
-				</video> -->
+				</video>
 				<header id="header_top">
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>

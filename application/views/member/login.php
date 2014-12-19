@@ -44,6 +44,10 @@
 
 	<body id="login-body" class="index">
 		<img id="bg" src="/application/views/images/main/bg03.jpg" alt="">
+		<!-- <video autoplay loop id="bgvid">
+					<source src="/application/views/images/Paris-P1-1.mp4">
+					<source src="/application/views/images/Paris-P1-1.webm">
+		</video> -->
 		<div id="login_wrap"><!-- 사이트 전체를 감싸는 wrap -->
 			<header id="header_wrap3">
 				<header id="header_top2">

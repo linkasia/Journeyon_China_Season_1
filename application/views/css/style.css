@@ -17,8 +17,9 @@
 
 
 /* Header 부분 스타일링 */
-	#header_wrap{width: 100%; height: 450px; background-image: url(/application/views/images/main/bg01b.png); background-size: 1920px 450px; background-attachment: fixed; background-position: center 0;}
-	#header_wrap2{width: 100%; height: 450px; background-image: url(/application/views/images/main/bg02.png); background-size: 1920px 450px; background-attachment: fixed; background-position: center 0;}
+	/*#header_wrap{width: 100%; height: 450px; background-image: url(/application/views/images/main/bg01b.png); background-size: 1920px 450px; background-attachment: fixed; background-position: center 0; position: relative; z-index: 100;} */
+	#header_wrap{width: 100%; height: 450px; background-size: 1920px 450px; background-attachment: fixed; background-position: center 0; position: relative; z-index: 100;}
+	#header_wrap2{width: 100%; height: 450px; background-image: url(/application/views/images/main/bg02.png); background-size: 1920px 450px; background-attachment: fixed; background-position: center 0; z-index: 105;}
 	#header_top{width: 100%;height: 55px; background-color: rgba(0, 0, 0, 0.55); position: relative;}
 	#header_wrap #headerTitle{width: 1200px; height: 280px; top: 150px; color: #fff; text-align: center; margin: 0 auto;}
 	#header_wrap #headerTitle #headerText{margin: 0 auto; padding-top: 138px;}
@@ -37,6 +38,15 @@
 	#header_top>ul>a.logout{width: 64px; height: 22px; position: absolute; left: 832px; top: 20px;}
 	#header_top>ul>li.signup{width: 44px; height: 22px; /*background-image: url(/application/views/images/main/img05_text.png);*/ position: absolute; left: 896px; top: 20px;}
 	#header_top>ul:after{clear: both; display: block; *zoom: 1;} /* Float 사용 후 정렬 */
+
+	#bgvid{
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		display: inline-block;
+		z-index: -50;}
+	
+	video{display: block;}
 
 
 /* Header2 부분 */
@@ -115,7 +125,7 @@
 
 
 /* Contents 도시, 지도 선택 부분 main/contents.php */
-	#contents_wrap1{width: 100%; height: auto;}
+	#contents_wrap1{width: 100%; height: auto; z-index: 10; background-color: #fff;}
 	#contents_wrap1>#section1{width: 940px; height: 250px; margin: 0px auto; background-color: #fff;}
 	#contents_wrap1>#section1>div.city_title{text-align: center; padding-top: 20px; padding-bottom: 10px;}
 
