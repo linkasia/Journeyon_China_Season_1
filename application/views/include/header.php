@@ -50,30 +50,34 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		
 		<div id="wrap"><!-- wrap -->
 			<header id="header_wrap">
+				<!-- <video autoplay loop id="bgvid">
+					<source src="/application/views/images/Paris-P1-1.mp4">
+					<source src="/application/views/images/Paris-P1-1.webm">
+				</video> -->
 				<header id="header_top">
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
-						<li class="become_host" name="become_host" id="become_host"></li>
-						<li class="how_works" name="how_works" id="how_works"></li>
+						<li class="become_host" name="become_host" id="become_host">申请加入当地人</li>
+						<li class="how_works" name="how_works" id="how_works">如何参与</li>
 						<?
 						if(@$this->session->userdata['logged_in'] == TRUE)
 						{
 							if($this->session->userdata['email']!=null){
 							?>
-							<li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><i><?=$this->session->userdata['email']?></i></a></li>
-							<a href="/index.php/member/memberJoin/logout" class="logout"><img src="/application/views/images/main/img04_text2.png" alt=""></a>
+							<li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li>
+							<a href="/index.php/member/memberJoin/logout" class="logout">退出<!-- <img src="/application/views/images/main/img04_text2.png" alt=""> --></a>
 							<!--li class="logout" name="logout" id="logout"></li-->
 						<?}?>
 							
 						<?}else{?>
-							<li class="login" name="login" id="login"></li>
-							<li class="signup" name="signup" id="signup"></li>
+							<li class="login" name="login" id="login">登陆&nbsp;&nbsp;|</li>
+							<li class="signup" name="signup" id="signup">注册</li>
 						<?}?>
 					</ul>
 				</header>
 				<div id="headerTitle">
-					<h2 id="headerText"><?=$mainTitle?></h2>
-					<h4 id="headerContents"><?=$maincontents?></h4>
+					<h2 id="headerText"><img src="/application/views/images/main/headerText.png" alt=""></h2>
+					<h4 id="headerContents"></h4>			
 				</div>
 			</header>
 		</div>
