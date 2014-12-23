@@ -66,21 +66,39 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 				<header id="header_top">
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
-						<li class="become_host" name="become_host" id="become_host">申请加入当地人</li>
-						<li class="how_works" name="how_works" id="how_works">如何参与</li>
+						<li class="become_host" name="become_host" id="become_host"><i>申请加入当地人</i></li>
+						<li class="how_works" name="how_works" id="how_works"><i>如何参与</i></li>
+						<li class="talkbox"><img src="/application/views/images/main/icon_talkboxN.png" alt="icon_talkboxN"></li>
+						<li class="profilePic">
+							<div class="dropdown">
+								<!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> -->
+									<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block"></span>
+								<!-- </button> -->
+								<ul class="dropdown-menu" role="menu" aria-labelledby="profileMenu">
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">View on Public</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account&Setting</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Guide</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Guest</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+								</ul>
+							</div>
+						
+						
+						</li>
+		
 						<?
 						if(@$this->session->userdata['logged_in'] == TRUE)
 						{
 							if($this->session->userdata['email']!=null){
 							?>
-							<li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li>
-							<a href="/index.php/member/memberJoin/logout" class="logout">退出<!-- <img src="/application/views/images/main/img04_text2.png" alt=""> --></a>
+							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 --> 
+							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
 							<!--li class="logout" name="logout" id="logout"></li-->
 						<?}?>
 
 						<?}else{?>
-							<li class="login" name="login" id="login">登陆&nbsp;&nbsp;|</li>
-							<li class="signup" name="signup" id="signup">注册</li>
+							<li class="login" name="login" id="login"><i>登陆&nbsp;&nbsp;|</i></li>
+							<li class="signup" name="signup" id="signup"><i>注册</i></li>
 						<?}?>
 					</ul>
 				</header>
