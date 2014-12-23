@@ -59,10 +59,10 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 	<body id="page-top" class="index">
 		<div id="wrap"><!-- wrap 각주에 글씨-->
 			<header id="header_wrap">
-				<!-- <video autoplay loop id="bgvid">
+				<video autoplay loop id="bgvid">
 					<source src="/application/views/images/Paris-P1-1.mp4">
 					<source src="/application/views/images/Paris-P1-1.webm">
-				</video> -->
+				</video>
 				<header id="header_top">
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>

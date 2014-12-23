@@ -66,10 +66,7 @@ $mode = $_REQUEST['mode'];
 					</div>
 				</div>
 				<div class="aside-menu">
-
-					<button type="button" class="btn btn-primary" id="calPop" name="calPop" data-toggle="modal" data-target="#myModal">定制游咨询
-					</button>
-
+					<button type="button" class="btn btn-primary" id="calPop" name="calPop" data-toggle="modal" data-target="#myModal">定制游咨询</button>
 					<!-- Modal 여기서부터 Overview 박스 시작 -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
