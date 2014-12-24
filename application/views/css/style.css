@@ -661,13 +661,15 @@
 
 
 /* 여기서부터 Mypage 스타일링 시작 */
+
 	/* 첫 페이지 */
-	#mypage_wrap{width: 940px; height: auto; margin: 0 auto; margin-top: 30px; position: relative;}
+	/* 아이콘들 */
+	#mypage_wrap{width: 940px; margin: 0 auto; margin-top: 30px; position: relative;}
 	#mypage_wrap .list-group{width: 190px; float: left;}
 	#mypage_wrap .icon_profile{position: absolute; top: 9px;}
 	#mypage_wrap .icon_host{position: absolute; top: 9px;}
 	#mypage_wrap .icon_guest{position: absolute; top: 10px;}
-	#mypage_wrap .list-group span{cursor: pointer;}
+	#mypage_wrap .list-group span{cursor: pointer;} 
 
 	#mypage_rightWrap{width: 710px; margin-left: 30px; float: left; padding-top: 10px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap1{width: 710px; height: ; float: left; margin-bottom: 20px; position: relative;}
@@ -682,7 +684,7 @@
 
 		#mypage_wrap #mypage_rightWrap .profileWrap2{width: 690px; height: ; float: left; margin-bottom: 20px; position: relative;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#mypage_wrap #mypage_rightWrap .profileWrap2 .title2 .underline{border-bottom: 2px #1bbc9b solid; width: 280px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .profileWrap2 .title2 .underline{border-bottom: 2px #1bbc9b solid; width: 300px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .profile_text3{width: 300px; height: ; float: left; margin-left: 40px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .profile_text4{width: 300px; height: ; float: left; margin-left: 10px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .profile_text3 .tag{width: ; height: 24px; background-color: #f0f1f5; border-radius: 5px; float: left; margin-right: 10px; padding: 5px; line-height: ;}
@@ -749,7 +751,7 @@
 
 		#mypage_wrap #mypage_rightWrap  .profileWrap5{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#mypage_wrap #mypage_rightWrap  .profileWrap5 .title5{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#mypage_wrap #mypage_rightWrap  .profileWrap5 .title5 .underline{border-bottom: 2px #c377e4 solid; width: 180px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap  .profileWrap5 .title5 .underline{border-bottom: 2px #c377e4 solid; width: 200px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		#mypage_wrap #mypage_rightWrap .reply{width: 100%; background-color: ; float: left; position: relative; margin-bottom: 20px;}
 		#mypage_wrap #mypage_rightWrap .reply .profile_pic{width: 110px; height: 90px; position: relative; background-color: ; float: left;}
@@ -883,7 +885,14 @@
 		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list3 .rightColorband{width: 100%; height: 45px; line-height: 45px; background-color: #62b8ef; color: #fff; text-align: right; padding-right: 10px;}
 
 
-/* 버튼 스타일링 */
+
+
+
+
+
+
+
+
 
 
 /* 섬네일 부트스트랩 갖다쓴 CSS */
