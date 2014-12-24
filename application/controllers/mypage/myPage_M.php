@@ -36,14 +36,20 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function myguide(){
+		$this->load->view('include/header');
 		$this->load->view('mypage/m_guide');
+		$this->load->view('include/footer');
 	}
 
 	function myaccountSetting(){
+		$this->load->view('include/header');
 		$this->load->view('mypage/m_accountSetting');
+		$this->load->view('include/footer');
 	}
 
 	function myguest(){
+		$this->load->view('include/header');
 		$this->load->view('mypage/m_guest');
+		$this->load->view('include/footer');
 	}
 }
