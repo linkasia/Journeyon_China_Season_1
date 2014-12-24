@@ -68,6 +68,16 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 						<li class="logo" name="logo" id="logo"></li>
 						<li class="become_host" name="become_host" id="become_host"><i>申请加入当地人</i></li>
 						<li class="how_works" name="how_works" id="how_works"><i>如何参与</i></li>
+
+		
+						<?
+						if(@$this->session->userdata['logged_in'] == TRUE)
+						{
+							if($this->session->userdata['email']!=null){
+							?>
+							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 --> 
+							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
+							<!--li class="logout" name="logout" id="logout"></li-->
 						<li class="talkbox"><img src="/application/views/images/main/icon_talkboxN.png" alt="icon_talkboxN"></li>
 						<li class="profilePic">
 							<div class="dropdown">
@@ -82,18 +92,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
 								</ul>
 							</div>
-						
-						
 						</li>
-		
-						<?
-						if(@$this->session->userdata['logged_in'] == TRUE)
-						{
-							if($this->session->userdata['email']!=null){
-							?>
-							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 --> 
-							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
-							<!--li class="logout" name="logout" id="logout"></li-->
 						<?}?>
 
 						<?}else{?>
