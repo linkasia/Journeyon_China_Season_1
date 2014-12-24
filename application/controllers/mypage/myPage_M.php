@@ -34,8 +34,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	function mypublic(){
 		$this->load->view('include/header');
 		$this->load->view('mypage/menu_public');
-
-
+		$this->load->view('include/footer');
 	}
 
 	function myguide(){
