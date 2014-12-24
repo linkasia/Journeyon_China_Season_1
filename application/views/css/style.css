@@ -37,7 +37,7 @@
 	
 	#header_top>ul>li>div.dropdown{position: relative;}
 	#header_top>ul>li>div.dropdown>#profileMenu{width: 40px; height: 40px; float: left;}
-	#header_top>ul>li>div.dropdown>.caret-block{position: absolute; top:17px;}
+	#header_top>ul>li>div.dropdown>.caret-block{position: absolute; top:17px; cursor: pointer;}
 	#header_top>ul>li>div.dropdown{position: absolute; top: 0px;}
 	#header_top>ul>li>div>ul.dropdown-menu{background-color: rgba(255,255,255,0.95); left: -100px;}
 
