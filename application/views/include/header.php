@@ -85,10 +85,10 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 									<img src="/application/views/images/main/profile01.jpg" alt="myprofile_Picture" class="img-circle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block" data-toggle="dropdown" aria-expanded="true"></span>
 								<!-- </button> -->
 								<ul class="dropdown-menu" role="menu" aria-labelledby="profileMenu">
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/mypageintro">View on Public</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account&Setting</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Guide</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Guest</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/mypublic">View on Public</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myaccountSetting">Account&Setting</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguide">Guide</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguest">Guest</a></li>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/member/memberJoin/logout">Logout</a></li>
 								</ul>
 							</div>
