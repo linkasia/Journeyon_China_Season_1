@@ -45,7 +45,7 @@
 		<link rel="stylesheet" href="/application/views/css/simplemodal.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="/application/views/js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/application/views/js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
-		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script> 
+		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
 
 
 
@@ -97,12 +97,12 @@
 				$('#logo').click( function(){
 					location.href = "http://www.linkasia.co.kr/";
 				});
-/*
+
 				//취소버튼 클릭시 메인페이지 이동
-				$('#cancel').click( function(){
+				$('#LoginCancel').click( function(){
 					location.href = "http://www.linkasia.co.kr/";
 				});
-*/
+
 				$('#e-mail2').click( function(){
 					var _selnum = $('#inputLarge').val();
 					var _mode = "password";
