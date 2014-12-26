@@ -201,7 +201,7 @@
 								<?}?>
 							</div>
 
-							<div class="somenail_transcity"><p><?=$v->code_nm?></p></div>
+							<div class="somenail_transcity" onclick="detailCity('<?=$v->num?>')"><p><?=$v->code_nm?></p></div>
 
 							<div class="somenail_caption">
 
@@ -240,6 +240,7 @@
 		<section id="section4">
 			<div class="sub_title"> <h4>最新上传的首尔旅行 <span> / 最新准备的首尔旅行！</span></h4> </div>
 
+			<?$k=1;?>
 			<?foreach($Travel as $v){?>
 				<div class="somenail_wrap">
 					<ul class="somenail_list">
@@ -252,11 +253,15 @@
 										</div>
 										<img style="width: 300px; height: 240px" src="<?=$v->pic1_img?>" alt="">
 									</div>
-									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,.6)" title='<?=$v->title?>'>
-										<p class="somenail_title"><?=$v->title?></p>
-									</div>
+									<?if($k== 1){?>
+									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,0.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<?}else if($k== 2){ ?>
+									<div class="somenail_transbox2" style="background-color:rgba(195,119,228,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<?}else if($k== 3){?>
+									<div class="somenail_transbox2" style="background-color:rgba(27,188,155 ,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<?}?>
 								</div>
-								<div class="somenail_transcity2">
+								<div class="somenail_transcity2" onclick="detailCity('<?=$v->num?>')">
 									<p><?=$v->code_nm?></p>
 								</div>
 								<div class="somenail_caption">
@@ -281,6 +286,7 @@
 						</li>
 					</ul>
 				</div> <!-- somenail_wrap 닫음 -->
+				<?$k++;?>
 			<?}?>
 
 		</section> <!-- section4 닫음 -->
