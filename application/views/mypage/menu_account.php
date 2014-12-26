@@ -168,8 +168,8 @@
 							  <div id='content'>
 									<p>한번 비활성화되면 다시 살릴 수 없습니다. 개인정보를 제외한 나머지 정보들은 사이트에 지속 남아있습니다.
 									정말로 지우겠습니까?<br>
-									<button class="btn btn-danger">No, 아니 다시 생각해보니 안지울래요.</button><br>
-									<button class="btn btn-info">Yes, 다음에 좋은 기회에 다시 봐요.</button>
+									<button class="btn btn-danger btn-no">No, 아니 다시 생각해보니 안지울래요.</button><br>
+									<button class="btn btn-info btn-yes">Yes, 다음에 좋은 기회에 다시 봐요.</button>
 									</p>
 							  </div>
 						</div><!-- modal-body 닫힘 -->
