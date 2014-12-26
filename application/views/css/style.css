@@ -906,12 +906,13 @@
 		#accountWrap #rightWrap .accountDetail .password .password-f2{top:50px;  left:170px; position: absolute;}
 
 
-		#accountWrap #rightWrap .basicInformation{width: 100%;  height: 200px; margin-bottom: 20px; border-bottom: 1px solid #f0f1f5; position: relative;}
+
+		#accountWrap #rightWrap .basicInformation{width: 100%;  height: 160px; margin-bottom: 20px; border-bottom: 1px solid #f0f1f5; position: relative;}
 		#accountWrap #rightWrap .basicInformation:after{clear: both; display: none; *zoom:1;}
 		#accountWrap #rightWrap .basicInformation .grew{width: 500px; margin-left: 100px; position: relative; padding-top: 20px;}
 		#accountWrap #rightWrap .basicInformation .grew:after{clear: both; display: none; *zoom:1;}
 
-		#accountWrap #rightWrap .basicInformation .grew .grewup{float: left; position: relative; margin-right: 10px;}
+		#accountWrap #rightWrap .basicInformation .grew .grewup{float: left; position: relative; margin-right: 50px;}
 
 		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group{float: left;}
 		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group input{height: 25px; padding-top: 0px;}
@@ -922,6 +923,9 @@
 		#accountWrap #rightWrap .basicInformation .grew .button2 .btn-group button{float: left; height: 25px; padding-top: 0px;}
 		.dropdown-menu{overflow-y: auto; max-height: 400px;}
 
+		#accountWrap #rightWrap .savebtn{margin-left: 450px;}
+		
+
 		/* 팝업창 bootstrap fix */
 		.modal-dialog2{width: 500px; margin: 200px auto;}
 		.modal-body2{height: 300px; position: relative; padding: 15px;}
@@ -931,6 +935,13 @@
 		.modal-body2 #content .presentemail4{position: absolute; top: 120px; left: 230px;}
 		.modal-body2 #content .presentemail5{position: absolute; top: 160px; left: 100px;}
 		.modal-body2 #content .presentemail6{position: absolute; top: 160px; left: 230px;}
+
+		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f1{top: 30px; left: 80px; position: absolute;}
+		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f2{top: 30px; left: 230px; position: absolute;}
+		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f3{top: 70px; left: 80px; position: absolute;}
+		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f4{top: 70px; left: 230px; position: absolute;}
+		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f5{top: 110px; left: 80px; position: absolute;}
+		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f6{top: 110px; left: 230px; position: absolute;}
 
 		.modal-dialog3{width: 500px; margin: 200px auto;}
 
@@ -1075,97 +1086,3 @@
 
 
 .githubTest{width: 600; height: 400; background-color: #eee;}
-
-
-
-
-
-
-/* alert plug in demo.css */
-
-/* Header */
-.header {
-  position: relative;
-  background: #dce0ed;
-  display: block;
-  height: 220px;
-  text-align: center;
-}
-.header .window {
-  position: relative;
-  display: block;
-  width: 125px;
-  height: 131px;
-	padding:32px 0 0;
-	margin:0 auto;
-  background: transparent url("../images/simpleModalSmallWhite.png") no-repeat center center;
-}
-/*Wrapper*/
-.wrapper{
-	display:block;
-	width:960px;
-	margin:0 auto;
-}
-.simple-modal-title{
-  position: relative;
-  display: block;
-  width: 200px;
-  height: 35px;
-	padding:4px 0 0;
-	margin:0 auto;
-  background: transparent url("../images/demo.png") no-repeat center center;
-}
-
-/* Examples */
-.example-item {
-  position: relative;
-  background: #FFFFFF;
-  float:left;
-	margin:20px 10px 0 10px;
-  width: 218px;
-  height: 198px;
-  border: 1px solid #d9cfd8;
-  text-align: center;
-  cursor: pointer;
-}
-.example-item img {
-  margin: 11px;
-  border: 1px solid #dce0ed;
-  width: 196px;
-  height: 147px;
-  line-height: 147px;
-  cursor: pointer;
-}
-.example-item a,
-.example-item a:link,
-.example-item a:visited,
-.example-item a:active {
-  width: 218px;
-  bottom: 10px;
-  font-family: 'Helvetica', Arial, serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  color: #8188a0;
-}
-.example-item a:hover {
-  color: #444;
-}
-
-p.credits{
-  display:block;
-	padding:20px 0 10px 0;
-	text-align:center;
-	font-size:11px;
-	color:#AAA;
-}
-.clear{
-	clear:both;
-}
-.align-left{
-  text-align:left !important;
-}
-.align-right{
-  text-align:right !important;
-}

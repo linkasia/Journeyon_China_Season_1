@@ -50,9 +50,9 @@
 								</div><!-- modal-header 닫힘 -->
 								<div class="modal-body2">
 									  <div id='content'>
-											<span>Present Password</span><input type="password"><br>
-											<span>New Password</span><input type="password"><br>
-											<span>Password</span><input type="password">
+											<span class="overviewpw-f1">Present Password</span><input type="password" class="overviewpw-f2"><br>
+											<span class="overviewpw-f3">New Password</span><input type="password" class="overviewpw-f4"><br>
+											<span class="overviewpw-f5">Password</span><input type="password" class="overviewpw-f6">
 									  </div>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
@@ -182,4 +182,5 @@
 			</div><!-- modal fade Overveiw 끝 -->
 
 	</div><!-- rightWrap end -->
+   
 </div><!-- accountWrap end -->
