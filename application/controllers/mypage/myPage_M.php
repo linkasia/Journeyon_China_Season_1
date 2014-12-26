@@ -54,4 +54,16 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/menu_guest');
 		$this->load->view('include/footer');
 	}
+
+	function myAccount(){
+		$this->load->view('mypage/m_accountSetting1');
+	}
+
+	function myPayment(){
+		$this->load->view('mypage/m_accountSetting2');
+	}
+
+	function myV_Certicification  (){
+		$this->load->view('mypage/m_accountSetting3');
+	}
 }
