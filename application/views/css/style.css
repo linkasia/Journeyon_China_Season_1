@@ -932,7 +932,6 @@
 		.modal-body2 #content .presentemail5{position: absolute; top: 160px; left: 100px;}
 		.modal-body2 #content .presentemail6{position: absolute; top: 160px; left: 230px;}
 
-
 		.modal-dialog3{width: 500px; margin: 200px auto;}
 
 
@@ -1076,3 +1075,69 @@
 
 
 .githubTest{width: 600; height: 400; background-color: #eee;}
+
+
+
+Alert
+ {
+  roundedBottomCorners:true; 
+  color : #124332;
+  background-color: #ffffff;
+  header-colors : #73c7ea, #0156a9;
+  header-height:19;
+  drop-shadow-enabled: true;
+  drop-shadow-color :#243322;
+  corner-radius :15;
+  border-style :solid;
+  border-thickness:2;
+  border-thickness-top:0;
+  border-thickness-bottom:0;
+  borderThicknessLeft:5;
+  borderThicknessRight:5;
+  border-color : #0156a9;
+  footer-colors : #243322, #ffffff;
+  title-style-name : "title";
+  message-style-name:"messageStyle";  
+  button-style-name:"AlertButtons";  
+ }
+
+.title
+ {
+  header-colors : #73c7ea, #0156a9;
+  cornerRadius:4; 
+     highlightAlphas:0.59, 0.5; 
+     fillAlphas:1, 1, 1, 1; 
+     fillColors:#040404, #4c4c4c, #c60303, #ff4300; 
+     color:#ffffff; 
+     textRollOverColor:#ffffff; 
+     borderColor:#474747; 
+     themeColor:#333333; 
+     fontFamily:Arial; 
+     fontSize:11; fontWeight:bold;
+     
+ }  
+
+.messageStyle 
+ { 
+     letterSpacing:0; 
+     color:#333333; 
+     textAlign:left; 
+     fontFamily:Arial; 
+     fontSize:11; 
+     font-weight:normal; 
+     corner-radius :15;
+ } 
+
+.AlertButtons
+ { 
+     cornerRadius:4; 
+     highlightAlphas:0.59, 0.5; 
+     fillAlphas:1, 1, 1, 1; 
+     fillColors:#040404, #4c4c4c, #c60303, #ff4300; 
+     color:#ffffff; 
+     textRollOverColor:#ffffff; 
+     borderColor:#ff0000; 
+     themeColor:#0156a9; 
+     fontFamily:Arial; 
+     fontSize:11; fontWeight:bold;
+ } 
