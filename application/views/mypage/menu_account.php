@@ -15,13 +15,13 @@
 				<span class="email-f3"><a href="#" data-toggle="modal" data-target="#myModal1">Change your E-Mail</a></span>
 
 					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
+						<div class="modal-dialog2">
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 									<h4 class="modal-title" id="myModalLabel">Email Change</h4>
 								</div><!-- modal-header 닫힘 -->
-								<div class="modal-body">
+								<div class="modal-body2">
 									  <div id='content'>
 											<span>Present E-mail</span><span>James@linkasia.co.kr</span><br>
 											<span>New E-Mail</span><input type="textbox"><br>
@@ -42,7 +42,7 @@
 				<span><a href="#" data-toggle="modal" data-target="#myModal2">Change your password</a></span>
 
 					<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
+						<div class="modal-dialog2">
 							<div class="modal-content">
 								<div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -65,56 +65,100 @@
 
 			</div><!-- password end -->
 		</div><!-- accountDetail end -->
+
 		<div class="basicInformation">
 			<p>Basic Information</p>
 			<div class="grew">
-				<span>Grew up in</span>
-
-				<!-- Split button -->
-				<div class="btn-group">
-					<button type="button" class="btn btn-info">Country</button>
-					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-					<span class="caret"></span>
-					<span class="sr-only">Toggle Dropdown</span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">China</a></li>
-						<li><a href="#">U.S.A</a></li>
-						<li><a href="#">Korea</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Japan</a></li>
-						<li><a href="#">France</a></li>
-						<li><a href="#">Germen</a></li>
-						<li><a href="#">India</a></li>
-						<li><a href="#">Taiwan</a></li>
-					</ul>
-				</div><!-- Split button -->
-
-				<!-- Split button -->
-				<div class="btn-group">
-					<button type="button" class="btn btn-info">City</button>
-					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-					<span class="caret"></span>
-					<span class="sr-only">Toggle Dropdown</span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">China</a></li>
-						<li><a href="#">U.S.A</a></li>
-						<li><a href="#">Korea</a></li>
-						<li><a href="#">Japan</a></li>
-						<li><a href="#">France</a></li>
-						<li><a href="#">Germen</a></li>
-						<li><a href="#">India</a></li>
-						<li><a href="#">Taiwan</a></li>
-					</ul>
-				</div><!-- Split button -->
+				<span class="grewup">Grew up in</span>
+				<div class="button1">
+					<!-- Split button -->
+					<div class="btn-group">
+						<input type="button" class="btn btn-info dropdown-toggle" value="Country" data-toggle="dropdown" aria-expanded="false">
+						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">China</a></li>
+							<li><a href="#">U.S.A</a></li>
+							<li><a href="#">Korea</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Japan</a></li>
+							<li><a href="#">France</a></li>
+							<li><a href="#">Germen</a></li>
+							<li><a href="#">India</a></li>
+							<li><a href="#">Taiwan</a></li>
+						</ul>
+					</div><!-- Split button -->
+				</div>
+				
+				<div class="button2">
+					<!-- Split button -->
+					<div class="btn-group">
+						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">City</button>
+						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+							<li><a href="#">Seoul</a></li>
+							<li><a href="#">Beijing</a></li>
+							<li><a href="#">Tokyo</a></li>
+							<li><a href="#">Paris</a></li>
+							<li><a href="#">London</a></li>
+							<li><a href="#">Newyork</a></li>
+						</ul>
+					</div><!-- Split button end -->
+				</div><!-- button2 end -->
 			</div>
 
 		</div>
 		<button class="btn btn-primary savebtn">Save changes</button>
 		<a href="#" class="deactive" data-toggle="modal" data-target="#myModal3">Deactivate your</a>
 			<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
+				<div class="modal-dialog2">
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

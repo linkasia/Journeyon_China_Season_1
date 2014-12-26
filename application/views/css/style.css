@@ -42,7 +42,6 @@
 	#header_top>ul>li>div>ul.dropdown-menu{background-color: rgba(255,255,255,0.95); left: -100px;}
 
 
-
 	#mypage{margin-top: 8px; width: 50px; height: 30px; color: #fff;  font-size: 0.9em; color: #fff; text-decoration: none;}
 
 	#header_top>ul>a.logout{width: 64px; height: 22px; position: absolute; left: 832px; top: 20px;}
@@ -887,26 +886,37 @@
 		
 	/* 12/24 여기서부터 새로 만드는겨 */
 	#accountWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
+	#accountWrap:after{clear: both; display: none; *zoom:1;}
+
 	
 		/* 왼쪽 메뉴 */
 		#accountWrap #leftmenuWrap{width: 220px; float: left;}
 
 		/* 오른쪽 영역 */
 		#accountWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
-		#accountWrap #rightWrap .accountDetail{width: 100%; height: 200px; background-color: #f0f1f5; margin-bottom: 20px;}
-		#accountWrap #rightWrap .accountDetail .email{margin-left: 50px;}
+		#accountWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
+		#accountWrap #rightWrap .accountDetail{width: 100%; margin-bottom: 50px; border-bottom: 1px solid #f0f1f5; padding-bottom: 50px;}
+		#accountWrap #rightWrap .accountDetail .email{margin-left: 50px; padding-top: 20px; padding-bottom: 20px;}
 		#accountWrap #rightWrap .accountDetail .password{margin-left: 50px;}
-		#accountWrap #rightWrap .accountDetail{}
 
-		#accountWrap #rightWrap .basicInformation{width: 100%; height: 200px; background-color: #f0f1f5; margin-bottom: 20px;}
-		#accountWrap #rightWrap .basicInformation .grew{margin-left: 50px;}
-		
-	
+		#accountWrap #rightWrap .basicInformation{width: 100%;  height: 200px; margin-bottom: 20px; border-bottom: 1px solid #f0f1f5; position: relative;}
+		#accountWrap #rightWrap .basicInformation:after{clear: both; display: none; *zoom:1;}
+		#accountWrap #rightWrap .basicInformation .grew{width: 500px; margin-left: 50px; position: relative; padding-top: 20px;}
+		#accountWrap #rightWrap .basicInformation .grew:after{clear: both; display: none; *zoom:1;}
+
+		#accountWrap #rightWrap .basicInformation .grew .grewup{float: left; position: relative; margin-right: 10px;}
+
+		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group{float: left;}
+		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group input{height: 25px; padding-top: 0px;}
+		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group button{height: 25px; padding-top: 0px; margin-right: 10px;}
 
 
+		#accountWrap #rightWrap .basicInformation .grew .button2{float: left; position: relative;}
+		#accountWrap #rightWrap .basicInformation .grew .button2 .btn-group button{float: left; height: 25px; padding-top: 0px;}
+		.dropdown-menu{overflow-y: auto; max-height: 400px;}
 
-
-
+		/* 팝업창 bootstrap fix */
+		.modal-body2 {height: 400px; position: relative; padding: 15px;}
 
 
 
