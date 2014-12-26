@@ -92,7 +92,10 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 				$this->session->set_userdata($newdata);
 				//데이터 이동
 				if($this->session->userdata['num']!=0){
-					echo "<script> alert('login successful'); </script>";
+					echo "<script>
+									document.getElementById('myModalLabel').innerHTML='alert';
+									document.getElementById('content').innerHTML='로그인 되었습니다.';
+								</script>";
 
 					$data['country'] = $this->main_i->Country();
 					$data['Travel'] = $this->main_i->Travel();

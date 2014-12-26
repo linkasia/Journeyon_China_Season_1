@@ -117,13 +117,9 @@
 							data:{selnum: _selnum, mode:_mode},
 							url:"http://www.linkasia.co.kr/index.php/auth/sendmail",
 							success: function (data){
-								var SM = new SimpleModal({"btn_ok":"Confirm button"});
-								SM.show({
-									"model":"confirm",
-									"title":"Title",
-									"contents":"패스워드가 메일로 전송되었습니다."
-
-								});
+								//bootbox.alert("Hello world!", function() {
+								//	Example.show("Hello world callback");
+								//});
 							}
 						});
 					}
