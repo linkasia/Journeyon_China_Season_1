@@ -40,6 +40,15 @@
 		<script src="/application/views/js/classie.js"></script>
 		<script src="/application/views/js/cbpAnimatedHeader.js"></script>
 		<script src="/application/views/js/agency.js"></script>
+
+		<!-- modal plugin -->
+		<link rel="stylesheet" href="/application/views/css/simplemodal.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="/application/views/js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/application/views/js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script> 
+
+
+
 	</head>
 
 	<body id="login-body" class="index">
