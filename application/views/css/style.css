@@ -52,7 +52,7 @@
 		position: absolute;
 		width: 100%;
 		min-width: 1920px;
-		bottom: -280px;
+		bottom: -400px; /*280*/
 		/*display: inline-block;*/
 		z-index: -50;}
 	
