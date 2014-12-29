@@ -91,16 +91,16 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<!--li class="logout" name="logout" id="logout"></li-->
 						<li class="talkbox"><img src="/application/views/images/main/icon_talkboxN.png" alt="icon_talkboxN"></li>
 						<li class="profilePic">
+
 							<div class="dropdown">
-								<!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"> -->
-									<img src="/application/views/images/main/profile01.jpg" alt="myprofile_Picture" class="img-circle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block" data-toggle="dropdown" aria-expanded="true"></span>
-								<!-- </button> -->
+								<img src="/application/views/images/main/profile01.jpg" alt="myprofile_Picture" class="img-circle dropdown-toggle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block" data-toggle="dropdown" aria-expanded="true"></span>
+								<!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"></button> -->
 								<ul class="dropdown-menu" role="menu" aria-labelledby="profileMenu">
-									<li role="presentation"><a role="menuitem" href="/index.php/mypage/myPage_M/mypublic">View on Public</a></li>
-									<li role="presentation"><a role="menuitem" href="/index.php/mypage/myPage_M/myaccountSetting">Account&Setting</a></li>
-									<li role="presentation"><a role="menuitem" href="/index.php/mypage/myPage_M/myguide">Guide</a></li>
-									<li role="presentation"><a role="menuitem" href="/index.php/mypage/myPage_M/myguest">Guest</a></li>
-									<li role="presentation"><a role="menuitem" href="/index.php/member/memberJoin/logout">Logout</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/mypublic">View on Public</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myaccountSetting">Account&Setting</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguide">Guide</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguest">Guest</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/member/memberJoin/logout">Logout</a></li>
 								</ul>
 							</div>
 						</li>
