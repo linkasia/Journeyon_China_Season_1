@@ -1,5 +1,5 @@
 		<div class="accountDetail">
-			<p>Account Detail</p>
+			<p class="txt_blue">Account Detail</p>
 			<div class="email">
 				<span class="email-f1">E-mail</span>
 				<span class="email-f2">james@linkasia.co.kr</span>
@@ -58,7 +58,7 @@
 		</div><!-- accountDetail end -->
 
 		<div class="basicInformation">
-			<p>Basic Information</p>
+			<p class="txt_blue">Basic Information</p>
 			<div class="grew">
 				<span class="grewup">Grew up in</span>
 				<div class="button1">
