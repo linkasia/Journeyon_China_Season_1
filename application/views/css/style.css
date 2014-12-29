@@ -918,6 +918,7 @@
 		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group input{height: 25px; padding-top: 0px;}
 		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group button{height: 25px; padding-top: 0px; margin-right: 10px;}
 
+
 		#accountWrap #rightWrap .basicInformation .grew .button2{float: left; position: relative;}
 		#accountWrap #rightWrap .basicInformation .grew .button2 .btn-group button{float: left; height: 25px; padding-top: 0px;}
 		.dropdown-menu{overflow-y: auto; max-height: 400px;}
@@ -945,44 +946,6 @@
 		.modal-dialog3{width: 500px; margin: 200px auto;}
 		#accountWrap #rightWrap .modal-dialog3 .modal-body2 .btn-no{margin-left: 110px; margin-top: 70px; margin-bottom: 20px;}
 		#accountWrap #rightWrap .modal-dialog3 .modal-body2 .btn-yes{margin-left: 120px;}
-
-
-		/* 페이먼트 */
-		#accountWrap #rightWrap .profileWrap1 .paymentWrap{width: 640px; height: 800px; background-color: #f0f1f5;}
-
-		/* V certicification */
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap1{width: 640px; height: 460px; background-color: #;}
-
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2{width: 100%; height: 200px; position: relative;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .circle{width: 96px; height: 96px; border-radius: 50%; background-color: #f0f1f5; line-height: 96px; text-align: center; float: left; margin-right: 50px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow1{position: absolute; top: 80px; left: 160px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow2{position: absolute; top: 80px; left: 306px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow3{position: absolute; top: 80px; left: 452px;}
-
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3{width: 640px; height: 400px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .countryCode{margin-left: 70px; height: 30px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .countryInput{padding-top: 3px; padding-bottom: 3px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .phoneNumber{margin-left: 20px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .phone_t{margin-left: 50px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .ID_t{margin-left: 50px; margin-top: 30px;}
-		#accountWrap #rightWrap .profileWrap1 .vtitle{margin-bottom: 30px;}
-
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{width: 310px; height: 200px; border-radius: 15px; background-color: #f0f1f5; margin-left: 70px; position: relative; cursor: pointer;}
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv:hover{background-color: #eee;}
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.glyphicon-plus{font-size: 5em; line-height: 200px; margin-left: 120px;}
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.id_s{position: absolute; top: 140px; left: 100px;}
-
-		
-
-
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
-
-
-
-
-
-
-
 
 
 
@@ -1124,6 +1087,3 @@
 
 
 .githubTest{width: 600; height: 400; background-color: #eee;}
-
-
-.txt_blue{font-weight: 600; color: #62b8ef;}
