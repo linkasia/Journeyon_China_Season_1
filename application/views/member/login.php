@@ -47,6 +47,8 @@
 		<script src="/application/views/js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
 
+		<script src="/application/views/js/example.js" type="text/javascript" charset="utf-8"></script>
+
 
 
 	</head>
@@ -117,8 +119,9 @@
 							data:{selnum: _selnum, mode:_mode},
 							url:"http://www.linkasia.co.kr/index.php/auth/sendmail",
 							success: function (data){
+								alert("패스워드가 발송되었습니다.");
 								//bootbox.alert("Hello world!", function() {
-								//	Example.show("Hello world callback");
+									//Example.show("Hello world callback");
 								//});
 							}
 						});
