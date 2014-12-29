@@ -63,7 +63,13 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_accountSetting2');
 	}
 
-	function myV_Certicification  (){
+	function myV_Certicification(){
+		//임시
+		$this->load->view('include/header');
+
 		$this->load->view('mypage/m_accountSetting3');
+
+		//임시
+		$this->load->view('include/footer');
 	}
 }
