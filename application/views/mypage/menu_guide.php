@@ -1,15 +1,16 @@
 <div id="guideWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">Guide Home&nbsp;&nbsp;<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></span>
-		<span class="list-group-item" id='guideR'><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;가이드 신청</span>
-		<span class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>&nbsp;&nbsp;상품관리&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='salesAdmin'><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>&nbsp;&nbsp;판매관리&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='cancelAdmin'><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>&nbsp;&nbsp;취소관리&nbsp;&nbsp;</span>
+		<span class="list-group-item active">Guide Menu</span></span>
+		<span class="list-group-item" id='guideHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Guide Home</span>
+		<span class="list-group-item" id='guideR'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;Guide Request</span>
+		<span class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Product Management&nbsp;&nbsp;</span>
+		<span class="list-group-item" id='salesAdmin'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;Sales Management&nbsp;&nbsp;</span>
+		<span class="list-group-item" id='cancelAdmin'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;Cancel Management&nbsp;&nbsp;</span>
 	</aside><!-- leftmenuWrap end -->
 
 	<div id="rightWrap">
 		<? $data = "";
-			$this->load->view("/mypage/m_guest1",$data);
+			$this->load->view("/mypage/m_guide0",$data);
 		?>
 	</div><!-- rightWrap end -->
 
@@ -18,13 +19,27 @@
 <script type="text/javascript">
 	$(function(){
 
+			$('#guideHome').click( function(){
+				$.ajax({
+					type:"POST" ,
+					dataType:"text",
+					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+					data:{ },
+					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myGuideHome",
+					success: function (data){
+						//alert(data);
+						document.getElementById('rightWrap').innerHTML =data;
+					}
+				});
+			});
+
 			$('#guideR').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myGuide",
+					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myGuideAdmin",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -46,7 +61,7 @@
 				});
 			});
 
-			$('#salesdmin').click( function(){
+			$('#salesAdmin').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -66,7 +81,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myV_Certicification",
+					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myCancelAdmin",
 					success: function (data){
 						document.getElementById('rightWrap').innerHTML =data;
 					}

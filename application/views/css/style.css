@@ -143,7 +143,7 @@
 	#contents_wrap1>#section1>div.city_icon>div{display: block; float: left; text-align: center; margin-right: 15px; margin-top: 15px; text-decoration: none; color: #a9a9a9;}
 	#contents_wrap1>#section1>div.city_icon>div:hover{color: #f3a46b;}
 	#contents_wrap1>#section1>div.city_icon>div:nth-of-type(10){margin-right: 0px;} /* 10개 이미지 중 첫번째 선택자, 마지막 선택자 간격조절 */
-	#contents_wrap1>#section1>div>div>p{padding-top: 5px; font-size: 1.15em;}
+	#contents_wrap1>#section1>div>div>p{padding-top: 5px; font-size: 1em;}
 
 	#contents_wrap1>#section1>div.city_icon{overflow: hidden; cursor: pointer;}
 	#contents_wrap1>#section1>div.city_icon:after{clear: both; display: block; *zoom: 1;} /* Float 사용 후 정렬 */
@@ -884,6 +884,10 @@
 		#mypage_wrap #mypage_rightWrap .hostWrap .contents_list3 .rightColorband{width: 100%; height: 45px; line-height: 45px; background-color: #62b8ef; color: #fff; text-align: right; padding-right: 10px;}
 
 		
+
+
+
+
 	/* 12/24 여기서부터 새로 만드는겨 */
 	#accountWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
 	#accountWrap:after{clear: both; display: none; *zoom:1;}
@@ -895,6 +899,7 @@
 		#accountWrap #Account{cursor: pointer;}
 		#accountWrap #Payment{cursor: pointer;}
 		#accountWrap #V_Certicification{cursor: pointer;}
+
 		/* 타이틀 밑줄 */
 		#accountWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
 		#accountWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
@@ -904,6 +909,7 @@
 		#accountWrap .profileWrap1 .title2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#accountWrap .profileWrap1 .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
 		#accountWrap .profileWrap1 .title3 .underline{border-bottom: 2px #c377e4 solid; width: 150px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
 
 		/* 오른쪽 영역 */
 		#accountWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
@@ -986,15 +992,34 @@
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.glyphicon-plus{font-size: 5em; line-height: 200px; margin-left: 120px;}
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.id_s{position: absolute; top: 140px; left: 100px;}
 
-		
-
-
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
 
 
+		/* 마이페이지 가이드 menu */
 
+		#guideWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
+		#guideWrap:after{clear: both; display: none; *zoom:1;}
+		
+		/* 왼쪽 메뉴 */
+		#guideWrap #leftmenuWrap{width: 220px; float: left;}
+		#guideWrap #Account{cursor: pointer;}
+		#guideWrap #Payment{cursor: pointer;}
+		#guideWrap #V_Certicification{cursor: pointer;}
 
+		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
+		/* 오른쪽 영역 스타일링 */
+		#guideWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
+		#guideWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
+
+		#guideWrap .profileWrap1{width: 100%; position: relative;}
+		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; height: 1200px;}
+		#guideWrap .profileWrap1 .guideimgBand{width: 680px; height: 40px; background-color: rgba(0,0,0,0.75); position: absolute; top: 400px;}
+		#guideWrap .profileWrap1 .guideimgBand .guide_txt{color: #fff; line-height: 40px; font-size: 1.3em; margin-left: 10px;}
+		#guideWrap .profileWrap1 .guideimgBand .guide_next{color: #fff; line-height: 40px; font-size: 1.3em; margin-left: 10px; cursor: pointer;}
+		#guideWrap .profileWrap1 .guideimgBand .guide_next:hover{font-}
 
 
 

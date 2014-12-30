@@ -6,32 +6,11 @@
 			</div>
 
 			<div class="city_icon">
-				<?for($i=51; $i<=60; $i++){?>
-					<div id="city<?=$i?>" class="city<?=$i?>" name="city<?=$i?>"><img src="/application/views/images/main/img<?=$i?>.png" alt="" onclick="Country_move(<?=$i?>)">
-					<?if($i == 51){?>
-						<p>50号公路</p>
-					<?}else if($i == 52){?>
-						<p>大阪</p>
-					<?}else if($i == 53){?>
-						<p>卢塞恩</p>
-					<?}else if($i == 54){?>
-						<p>法兰克福</p>
-					<?}else if($i == 55){?>
-						<p>普吉岛</p>
-					<?}else if($i == 56){?>
-						<p>普罗旺斯</p>
-					<?}else if($i == 57){?>
-						<p>威尼斯</p>
-					<?}else if($i == 58){?>
-						<p>巴黎</p>
-					<?}else if($i == 59){?>
-						<p>布拉格</p>
-					<?}else if($i == 60){?>
-						<p>皇后镇</p>
-					<?}?>
 
+			<?foreach($city as $v) {?>
+					<div id="city" class="city" name="city"><img src="<?=$v->ref1?>" alt="" onclick="Country_move('<?=$v->sclass?>','<?=$v->class?>','<?=$v->code?>')">
+						<p><?=$v->code_nm?></p>
 					</div>
-
 				<?}?>
 			</div>
 		</section>
@@ -340,8 +319,8 @@
 			location.href = "<?=site_url('City/country/city_search?scountry="+country+"&countryList="+city+"'); ?>";
 		}
 
-		function Country_move(code){
-
+		function Country_move(a,b,c){
+			//alert(a+"::::"+b+"::::"+c)
 			//location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"'); ?>";
 		}
 

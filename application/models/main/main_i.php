@@ -4,11 +4,11 @@
 		function __construct()
 		{
 			parent::__construct();
-			
+
 			$this->load->helper('util_helper');
-			
+
 		}
-		
+
 		//전체나라
 		function country()
 		{
@@ -19,7 +19,7 @@
 			$result = $query->result();
 			return $result;
 		}
-		
+
 		//선택나라
 		function choiceCountry($co,$ci)
 		{
@@ -32,7 +32,18 @@
 			$result = $query->result();
 			return $result;
 		}
-		
+
+		//도시
+		function cityList()
+		{
+			$sql ="SELECT *
+							FROM city_table
+							WHERE viewYn='Y'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
 		//최근 올라온 3개의 도시
 		function Travel(){
 
@@ -43,7 +54,7 @@
 											a.*
 						FROM product a
 						LEFT JOIN USER b ON a.user_num = b.num
-						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code 
+						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
 						WHERE a.useYn='Y'
 						ORDER BY a.create_date DESC
 						LIMIT 3";
@@ -62,7 +73,7 @@
 											a.*
 						FROM product a
 						LEFT JOIN USER b ON a.user_num = b.num
-						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code 
+						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
 						WHERE a.useYn='Y'
 						AND a.adminYn='Y'
 						ORDER BY a.create_date DESC

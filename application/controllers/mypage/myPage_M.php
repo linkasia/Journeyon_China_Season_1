@@ -68,7 +68,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_accountSetting3');
 	}
 
-	function myGuide(){
+	function myGuideAdmin(){
 		$this->load->view('mypage/m_guide1');
 	}
 
@@ -82,6 +82,10 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 
 	function myCancelAdmin(){
 		$this->load->view('mypage/m_guide4');
+	}
+
+	function myGuideHome(){
+		$this->load->view('mypage/m_guide0');
 	}
 
 	function mailChange(){
