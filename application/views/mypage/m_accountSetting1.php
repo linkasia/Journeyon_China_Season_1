@@ -2,7 +2,7 @@
 			<p class="txt_blue">Account Detail</p>
 			<div class="email">
 				<span class="email-f1">E-mail</span>
-				<span class="email-f2">james@linkasia.co.kr</span>
+				<span class="email-f2"><?=$this->session->userdata['email']?></span>
 				<span class="email-f3"><a href="#" data-toggle="modal" data-target="#myModal1">Change your E-Mail</a></span>
 
 					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -14,13 +14,17 @@
 								</div><!-- modal-header 닫힘 -->
 								<div class="modal-body2">
 									  <div id='content'>
-											<span class="presentemail1">Present E-mail</span><span class="presentemail2">James@linkasia.co.kr</span><br>
-											<span class="presentemail3">New E-Mail</span><input type="textbox" class="presentemail4"><br>
-											<span class="presentemail5">Password</span><input type="password" class="presentemail6">
+											<span class="presentemail1">Present E-mail</span><span class="presentemail2"><?=$this->session->userdata['email']?></span><br>
+											<span class="presentemail3">New E-Mail</span><input type="textbox" class="presentemail4" id='newMail' name='newMail'><br>
+											<span id='sendMail' name='sendMail' style='cursor:pointer'><ins><font color='#62b8ef'>메일발송</font></ins></span>
+											<span class="presentemail5">Password</span><input type="password" class="presentemail6" id='mailPass' name='mailPass'><br>
+											<span class="presentemail7">Confirm number</span><input type="text" class="presentemail8" id='confirmNum' name='confirmNum'><br>
+											<input type="text" id='hiddenNum' name='hiddenNum'>
+
 									  </div>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary">Confirm New E-mail</button>
+									<button type="button" class="btn btn-primary" id="Email" name="Email">Confirm New E-mail</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
@@ -82,7 +86,7 @@
 						</ul>
 					</div><!-- Split button -->
 				</div>
-				
+
 				<div class="button2">
 					<!-- Split button -->
 					<div class="btn-group">
@@ -171,3 +175,63 @@
 					</div><!-- modal-content 닫힘 -->
 				</div><!-- modal-dialog 닫힘 -->
 			</div><!-- modal fade Overveiw 끝 -->
+
+			<script type="text/javascript">
+				$(function(){
+
+					$('#sendMail').click( function(){
+						var _selnum = document.getElementById('newMail').value;
+						var _mode = "mailChange";
+
+						 document.getElementById('hiddenNum').value="";
+						var _ran = "";
+						for(var i =0; i<6; i++){
+							_ran += Math.ceil(Math.random() * 9);
+						}
+						document.getElementById('hiddenNum').value=_ran;
+
+						$.ajax({
+							type:"POST" ,
+							dataType:"text",
+							contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+							data:{selnum: _selnum,  mode:_mode,ran:_ran},
+							url:"http://www.linkasia.co.kr/index.php/auth/sendmail",
+							success: function (data){
+								alert("인증메일을 전송하였습니다!");
+							}
+						});
+					});
+
+					$('#Email').click( function(){
+						var pass = "<?=$this->session->userdata['password']?>";
+						var _selnum = document.getElementById('newMail').value;
+						if( $('#confirmNum').val() == ""  ||  $('#confirmNum').val() == null )
+						{
+							alert("인증번호가 비어있습니다.!")
+						}else{
+							if( $('#hiddenNum').val() != $('#confirmNum').val()){
+								alert("인증번호가 다릅니다 확인 메일을 확인해 주세요.!");
+							}else if ( $('#mailPass').val()  != pass ){
+								alert("password 다 다릅니다");
+							}else{
+
+								$.ajax({
+									type:"POST" ,
+									dataType:"text",
+									contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+									data:{selnum: _selnum},
+									url:"http://www.linkasia.co.kr/index.php//mypage/myPage_M/mailChange",
+									success: function (data){
+										//alert("인증메일을 전송하였습니다!");
+										alert(document.getElementById('rightWrap'));
+										alert(data);
+										//document.getElementById('rightWrap').innerHTML = data;
+									}
+								});
+
+							}
+						}
+					});
+
+				});
+			</script>

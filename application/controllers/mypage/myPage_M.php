@@ -13,6 +13,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->database();
 		$this->load->model('main/main_i');
 		$this->load->model('member/membersJoin');
+		$this->load->model('mypage/myModify');
 		$this->load->helper('url');
 		$this->load->helper('util_helper');
 	}
@@ -67,10 +68,11 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_accountSetting3');
 	}
 
-	//임시 함수 작업 후 삭제
-	function myVCerticification(){
-		$this->load->view('include/header');
-		$this->load->view('mypage/m_accountSetting3');
-		$this->load->view('include/footer');
+	function mailChange(){
+
+		$to = $_REQUEST['selnum'];
+		$insert['mailUpdate'] = $this->myModify->updateMail($to, $this->session->userdata['email']);
+		$this->load->view('mypage/m_accountSetting1');
 	}
+
 }
