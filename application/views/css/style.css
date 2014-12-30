@@ -888,13 +888,27 @@
 	#accountWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
 	#accountWrap:after{clear: both; display: none; *zoom:1;}
 
+
 	
 		/* 왼쪽 메뉴 */
 		#accountWrap #leftmenuWrap{width: 220px; float: left;}
+		#accountWrap #Account{cursor: pointer;}
+		#accountWrap #Payment{cursor: pointer;}
+		#accountWrap #V_Certicification{cursor: pointer;}
+		/* 타이틀 밑줄 */
+		#accountWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+		#accountWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+		#accountWrap .profileWrap1 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+		#accountWrap .profileWrap1 .title2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .profileWrap1 .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+		#accountWrap .profileWrap1 .title3 .underline{border-bottom: 2px #c377e4 solid; width: 150px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		/* 오른쪽 영역 */
 		#accountWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
 		#accountWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
+
 		#accountWrap #rightWrap .accountDetail{width: 100%; height: 200px; margin-bottom: 50px; border-bottom: 1px solid #f0f1f5; padding-bottom: 50px;}
 		#accountWrap #rightWrap .accountDetail .email{margin-left: 50px; padding-top: 20px; padding-bottom: 20px; position: relative;}
 		#accountWrap #rightWrap .accountDetail .password{margin-left: 50px; position: relative;}
@@ -951,9 +965,9 @@
 		#accountWrap #rightWrap .profileWrap1 .paymentWrap{width: 640px; height: 800px; background-color: #f0f1f5;}
 
 		/* V certicification */
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap1{width: 640px; height: 460px; background-color: #;}
+		#accountWrap #rightWrap .profileWrap1 .vcertiWrap1{width: 640px; height: 500px; background-color: #;}
 
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2{width: 100%; height: 200px; position: relative;}
+		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2{width: 100%; height: 250px; position: relative;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .circle{width: 96px; height: 96px; border-radius: 50%; background-color: #f0f1f5; line-height: 96px; text-align: center; float: left; margin-right: 50px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow1{position: absolute; top: 80px; left: 160px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow2{position: absolute; top: 80px; left: 306px;}

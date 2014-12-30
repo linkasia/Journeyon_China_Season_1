@@ -10,8 +10,15 @@
 
 		function updateMail($mail, $oldMail)
 		{
-			$sql ="UPDATE user SET email = ".$mail."
-							WHERE email = ".$oldMai."";
+			$sql ="UPDATE user SET email = '".$mail."'
+							WHERE email = '".$oldMail."'";
+			$query = $this->db->query($sql);
+		}
+
+		function updatePassword($mail, $password)
+		{
+			$sql ="UPDATE user SET password = '".$password."'
+							WHERE email = '".$mail."'";
 			$query = $this->db->query($sql);
 		}
 

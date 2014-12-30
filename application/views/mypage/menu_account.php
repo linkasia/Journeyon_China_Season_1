@@ -53,7 +53,6 @@
 					data:{ },
 					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myV_Certicification",
 					success: function (data){
-						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
 					}
 				});

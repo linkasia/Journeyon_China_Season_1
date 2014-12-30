@@ -68,11 +68,31 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_accountSetting3');
 	}
 
-	function mailChange(){
+	function myGuid(){
+		$this->load->view('mypage/m_guide1');
+	}
 
+	function myItemAdmin(){
+		$this->load->view('mypage/m_guide2');
+	}
+
+	function mySalesAdmin(){
+		$this->load->view('mypage/m_guide3');
+	}
+
+	function myCancelAdmin(){
+		$this->load->view('mypage/m_guide4');
+	}
+
+	function mailChange(){
 		$to = $_REQUEST['selnum'];
-		$insert['mailUpdate'] = $this->myModify->updateMail($to, $this->session->userdata['email']);
-		$this->load->view('mypage/m_accountSetting1');
+		$update['mailUpdate'] = $this->myModify->updateMail($to, $this->session->userdata['email']);
+	}
+
+	function changePassword(){
+		$newPass = $_REQUEST['newPass'];
+		$to = $this->session->userdata['email'];
+		$update['passwordUpdate'] = $this->myModify->updatePassword($to, $newPass);
 	}
 
 }

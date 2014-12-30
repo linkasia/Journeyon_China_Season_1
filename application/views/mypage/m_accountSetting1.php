@@ -45,13 +45,13 @@
 								</div><!-- modal-header 닫힘 -->
 								<div class="modal-body2">
 									  <div id='content'>
-											<span class="overviewpw-f1">Present Password</span><input type="password" class="overviewpw-f2"><br>
-											<span class="overviewpw-f3">New Password</span><input type="password" class="overviewpw-f4"><br>
-											<span class="overviewpw-f5">Password</span><input type="password" class="overviewpw-f6">
+											<span class="overviewpw-f1">Present Password</span><input type="password" class="overviewpw-f2" id='oldPass' name='oldPass'><br>
+											<span class="overviewpw-f3">New Password</span><input type="password" class="overviewpw-f4" id='newPass' name='newPass'><br>
+											<span class="overviewpw-f5">Password</span><input type="password" class="overviewpw-f6" id='againPass' name='againPass'>
 									  </div>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary">Confirm</button>
+									<button type="button" class="btn btn-primary" id='changePass'>Confirm</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
@@ -189,7 +189,6 @@
 							_ran += Math.ceil(Math.random() * 9);
 						}
 						document.getElementById('hiddenNum').value=_ran;
-
 						$.ajax({
 							type:"POST" ,
 							dataType:"text",
@@ -212,9 +211,8 @@
 							if( $('#hiddenNum').val() != $('#confirmNum').val()){
 								alert("인증번호가 다릅니다 확인 메일을 확인해 주세요.!");
 							}else if ( $('#mailPass').val()  != pass ){
-								alert("password 다 다릅니다");
+								alert("password 가 다릅니다");
 							}else{
-
 								$.ajax({
 									type:"POST" ,
 									dataType:"text",
@@ -222,15 +220,39 @@
 									data:{selnum: _selnum},
 									url:"http://www.linkasia.co.kr/index.php//mypage/myPage_M/mailChange",
 									success: function (data){
-										//alert("인증메일을 전송하였습니다!");
-										alert(document.getElementById('rightWrap'));
-										alert(data);
-										//document.getElementById('rightWrap').innerHTML = data;
+										alert("email이 변경되었습니다 다시 로그인 해주세요");
+										location.href = "/index.php/member/memberJoin/logout";
 									}
 								});
 
 							}
 						}
+					});
+
+					$('#changePass').click( function(){
+						var pass = "<?=$this->session->userdata['password']?>";
+						if( pass != $('#oldPass').val() ){
+							alert("기존 password 가 틀립니다.");
+						}else if( $('#newPass').val() == "" || $('#newPass').val() ==null){
+							alert("newpassword 가 빈칸입니다.");
+						}else if($('#againPass').val() == "" || $('#againPass').val() == null ){
+							alert("password 가 빈칸입니다.");
+						}else if( $('#newPass').val() != $('#againPass').val() ){
+							alert("New Password 와 password가 일치하지 않습니다");
+						}else{
+							$.ajax({
+								type:"POST" ,
+								dataType:"text",
+								contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+								data:{newPass: $('#newPass').val()},
+								url:"http://www.linkasia.co.kr/index.php//mypage/myPage_M/changePassword",
+								success: function (data){
+									alert("password가 변경되었습니다 다시 로그인 해주세요");
+									location.href = "/index.php/member/memberJoin/logout";
+								}
+							});
+						}
+
 					});
 
 				});

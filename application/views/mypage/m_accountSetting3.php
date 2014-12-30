@@ -1,5 +1,7 @@
 		<div class="profileWrap1">
-			<p class="txt_blue">V Certicification</p>
+			<div class="title3"> <!-- 라인 들어가는 타이틀 city부분 복제 -->
+				<div class="underline">V Certicification</div>
+			</div>
 			<div class="vcertiWrap1">
 				<p class="vtitle">Identify Verification</p>
 				<iframe class="company_intro" width="620" height="360" src="//www.youtube.com/embed/JbGvVyCJCSM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
