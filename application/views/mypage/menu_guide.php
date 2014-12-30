@@ -24,7 +24,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myAccount",
+					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myGuide",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -33,6 +33,20 @@
 			});
 
 			$('#itemAdmin').click( function(){
+				$.ajax({
+					type:"POST" ,
+					dataType:"text",
+					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+					data:{ },
+					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myPayment",
+					success: function (data){
+						//alert(data);
+						document.getElementById('rightWrap').innerHTML =data;
+					}
+				});
+			});
+
+			$('#salesdmin').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",

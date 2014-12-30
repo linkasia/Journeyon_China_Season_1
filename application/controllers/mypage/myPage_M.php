@@ -68,7 +68,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_accountSetting3');
 	}
 
-	function myGuid(){
+	function myGuide(){
 		$this->load->view('mypage/m_guide1');
 	}
 
