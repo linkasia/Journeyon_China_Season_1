@@ -27,7 +27,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['theme'] = $this->tb_code->theme();
 		$data['recommend'] = $this->tb_code->recommend();
 		$data['sexual'] = $this->tb_code->sexual();
-
+		$data['countryCityList'] = $this->country_M->cityList($scontry,$contry);
 
 		$this->load->view('include/header');
 		$this->load->view('contents/city',$data);
@@ -50,7 +50,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$scountry = $_REQUEST['scountry'];
 		$countryList = $_REQUEST['countryList'];
 
-		$data['salesCountry']= $this->country_M->salesCountry($scountry,$countryList);
+		$data['salesCountry']= $this->country_M->salesCountry($scountry,$countryList,null);
 
 		$this->load->view("/contents/frm_city",$data);
 	}
@@ -81,6 +81,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$temCode = $_REQUEST['temCode'];
 		$recommend = $_REQUEST['recommend'];
 		$guide = $_REQUEST['guide'];
+		$selectCityList = $_REQUEST['selectCityList'];
 
 		if($guideType != ""){
 			$guideType = substr($guideType,0,strlen($guideType)-1);
@@ -98,7 +99,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 			$guide = substr($guide,0,strlen($guide)-1);
 		}
 
-		$data['salesCountry']= $this->country_M->salesCountrySort($scountry, $countryList, $guideType, $genderCode, $temCode ,$recommend ,$guide);
+		$data['salesCountry']= $this->country_M->salesCountrySort($scountry, $countryList, $guideType, $genderCode, $temCode ,$recommend ,$guide,$selectCityList);
 
 		$this->load->view("/contents/frm_city",$data);
 

@@ -64,9 +64,53 @@
 		<div class="basicInformation">
 			<p class="txt_blue">Basic Information</p>
 			<div class="grew">
-				<span class="grewup">Grew up in</span>
-				<div class="button1">
-					<!-- Split button -->
+				<span class="grewup">Grew up in</span><span>Country / </span><span>City</span>
+				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4">Change your Country & City</a></span>
+
+					<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog2">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									<h4 class="modal-title" id="myModalLabel">Basic Information Change</h4>
+								</div><!-- modal-header 닫힘 -->
+								<div class="modal-body2">
+									<div id='content'>
+
+										<div class="selectParent countrySelect">
+											<select class="select_option" id='countrySelect' name='countrySelect'>
+												<option value="China">China</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+											</select>
+										</div>
+
+										<div class="selectParent citySelect">
+											<select class="select_option" id='citySelect' name='citySelect'>
+												<option value="Beijing">Beijing</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+											</select>
+										</div>
+
+									</div>
+								</div><!-- modal-body 닫힘 -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" id='changePass'>Confirm</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div><!-- modal-footer 닫힘 -->
+							</div><!-- modal-content 닫힘 -->
+						</div><!-- modal-dialog 닫힘 -->
+					</div><!-- modal fade Overveiw 끝 -->
+
+		
+					<!-- Split button >
 					<div class="btn-group">
 						<input type="button" class="btn btn-info dropdown-toggle" value="Country" data-toggle="dropdown" aria-expanded="false">
 						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -85,73 +129,12 @@
 							<li><a href="#">Taiwan</a></li>
 						</ul>
 					</div><!-- Split button -->
-				</div>
 
-				<div class="button2">
-					<!-- Split button -->
-					<div class="btn-group">
-						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">City</button>
-						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-							<li><a href="#">Seoul</a></li>
-							<li><a href="#">Beijing</a></li>
-							<li><a href="#">Tokyo</a></li>
-							<li><a href="#">Paris</a></li>
-							<li><a href="#">London</a></li>
-							<li><a href="#">Newyork</a></li>
-						</ul>
-					</div><!-- Split button end -->
-				</div><!-- button2 end -->
-			</div>
-
+				</div><!-- div.grew end -->
+			</div><!-- basic information end -->
 		</div>
-		<button class="btn btn-primary savebtn">Save changes</button>
-		<a href="#" class="deactive" data-toggle="modal" data-target="#myModal3">Deactivate your</a>
+
+			<a href="#" class="deactive" data-toggle="modal" data-target="#myModal3">Deactivate your</a>
 			<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog3">
 					<div class="modal-content">

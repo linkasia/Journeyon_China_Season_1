@@ -4,14 +4,19 @@
 		function __construct()
 		{
 			parent::__construct();
-			
+
 			$this->load->helper('util_helper');
-			
+
 		}
-		
+
 		//선택한 나라 상품
-		function salesCountry($co,$ci)
+		function salesCountry($co,$ci,$city)
 		{
+			$cityChoice ="";
+
+			if($city != null){
+				$cityChoice = "AND city_code='".$city."'";
+			}
 			$sql ="SELECT b.mother_area_code,
 											b.mother_country_code,
 											b.v_get_code,
@@ -38,17 +43,20 @@
 								LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 								LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
 							WHERE sortcountry='".$co."'
-							AND country_code='".$ci."'";
+							AND country_code='".$ci."'
+							".$cityChoice;
+
+
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
 		}
 
 		//선택한 나라 정렬
-		function salesCountrySort($scountry, $countryList, $guideType, $genderCode, $temCode ,$recommend ,$guide)
+		function salesCountrySort($scountry, $countryList, $guideType, $genderCode, $temCode ,$recommend ,$guide,$selectCityList)
 		{
 			$sqlplus = "";
-			
+
 			if($guideType != ""){
 				$sqlplus = "";
 			}
@@ -68,8 +76,11 @@
 			if($guide != ""){
 				$sqlplus = "AND b.v_get_code IN (".$guide.")";
 			}
-			
-		
+
+			if($selectCityList != null){
+				$sqlplus = "AND a.city_code  IN (".$selectCityList.")";
+			}
+
 			$sql ="SELECT b.mother_area_code,
 								b.mother_country_code,
 								b.v_get_code,
@@ -236,18 +247,18 @@
 
 		function insertQuestion($productNum,$content,$userNum)
 		{
-			$sql ="INSERT INTO user_question_product 
-						(qna_num, 
-						user_num, 
-						product_num, 
-						content, 
+			$sql ="INSERT INTO user_question_product
+						(qna_num,
+						user_num,
+						product_num,
+						content,
 						create_date
 						)
 						VALUES
 						(0,
-						'".$userNum."', 
-						'".$productNum."', 
-						'".$content."', 
+						'".$userNum."',
+						'".$productNum."',
+						'".$content."',
 						SYSDATE()
 						);";
 			$query = $this->db->query($sql);
@@ -255,18 +266,18 @@
 
 		function insertAgency($productNum,$content,$qna_num,$userNum)
 		{
-			$sql ="INSERT INTO answer 
-						(qna_num, 
-						user_num, 
-						product_num, 
-						content, 
+			$sql ="INSERT INTO answer
+						(qna_num,
+						user_num,
+						product_num,
+						content,
 						create_date
 						)
 						VALUES
 						('".$qna_num."',
-						'".$userNum."', 
-						'".$productNum."', 
-						'".$content."', 
+						'".$userNum."',
+						'".$productNum."',
+						'".$content."',
 						SYSDATE()
 						);";
 			$query = $this->db->query($sql);
@@ -331,6 +342,36 @@
 								LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 								LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
 							WHERE b.num='".$userNum."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		//도시 리스트
+		function cityList($scontry,$contry)
+		{
+			$sql ="SELECT '0000' AS sclass,
+											'0000' AS class,
+											'0000' AS CODE,
+											'-- all --' AS code_nm,
+											'-- all --' AS code_decription,
+											NULL AS ref1,
+											NULL AS ref2,
+											NULL AS ref3,
+											NULL AS ref4,
+											NULL AS ref5,
+											NULL AS ref6,
+											NULL AS ref7,
+											NULL AS ref8,
+											NULL AS ref9,
+											NULL AS ref10,
+											'Y' AS useYn,
+											'N' AS viewYn
+							UNION ALL
+							SELECT *
+							FROM city_table
+							WHERE sclass = '".$scontry."'
+							AND class = '".$contry."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

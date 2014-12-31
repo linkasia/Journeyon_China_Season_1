@@ -112,19 +112,10 @@ $mode = $_REQUEST['mode'];
 				</div>
 				<div class="text">
 					<p>
-						是否是专业导游 : <?=$v->country_nm?> <br>
-						<?if ( $v->g_get_code == "0001"){ ?>
-							Host : Available  <br>
-						<?}else{?>
-							Host : Disable  <br>
-						<?}?>
 						生活在 : <?=$v->live_city_nm?> <br>
 						现居住在纽约 : <?=$v->live_country_year?>年 <br>
-						年龄 :  <?=$v->age?>岁 <br>
 						性别 : <?=$v->gender_nm?> <br>
-						注册时间 : <?=$v->YEAR?> 年 <?=$v->mon?> 月 <?=$v->DAY?> 日 <br>
 						语言 : <?=$v->lang1_nm?>（<?=$v->lang1_skill_nm?>）<?=$v->lang2_nm?>（<?=$v->lang2_skill_nm?>）<?=$v->lang3_nm?>（<?=$v->lang3_skill_nm?>）<br>
-						职业 : <?=$v->job?>、<?=$v->job_detail?> <br>
 					</p>
 				</div>
 				<div class="sns_icon">

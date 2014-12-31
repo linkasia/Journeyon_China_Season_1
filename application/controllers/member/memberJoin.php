@@ -98,6 +98,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 					$data['country'] = $this->main_i->Country();
 					$data['Travel'] = $this->main_i->Travel();
 					$data['choice'] = $this->main_i->Admin_choice();
+					$data['city'] = $this->main_i->cityList();
 
 
 					$this->load->view('include/header');
@@ -118,6 +119,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 				$data['country'] = $this->main_i->Country();
 				$data['Travel'] = $this->main_i->Travel();
 				$data['choice'] = $this->main_i->Admin_choice();
+				$data['city'] = $this->main_i->cityList();
 
 				$this->load->view('include/header');
 				$this->load->view('main/contents' ,$data);
@@ -129,6 +131,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 			$data['country'] = $this->main_i->Country();
 			$data['Travel'] = $this->main_i->Travel();
 			$data['choice'] = $this->main_i->Admin_choice();
+			$data['city'] = $this->main_i->cityList();
 
 			$this->load->view('include/header');
 			$this->load->view('main/contents' ,$data);
@@ -144,6 +147,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 		$data['country'] = $this->main_i->Country();
 		$data['Travel'] = $this->main_i->Travel();
 		$data['choice'] = $this->main_i->Admin_choice();
+		$data['city'] = $this->main_i->cityList();
 
 		$this->load->view('include/header');
 		$this->load->view('main/contents' ,$data);

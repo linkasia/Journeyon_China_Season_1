@@ -316,12 +316,11 @@
 		}
 
 		function page_country(country,city){
-			location.href = "<?=site_url('City/country/city_search?scountry="+country+"&countryList="+city+"'); ?>";
+			location.href = "<?=site_url('City/country/city_search?scountry="+country+"&countryList="+city+"&cityList='); ?>";
 		}
 
 		function Country_move(a,b,c){
-			//alert(a+"::::"+b+"::::"+c)
-			//location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"'); ?>";
+			location.href = "<?=site_url('City/country/city_search?scountry="+a+"&countryList="+b+"&cityList="+c+"'); ?>";
 		}
 
 		function detailProfile(code)

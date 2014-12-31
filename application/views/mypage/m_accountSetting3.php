@@ -16,6 +16,7 @@
 				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow2">
 				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow3">
 			</div>
+
 			<div class="vcertiWrap3">
 				<p class="vtitle">Identify Verification Data</p>
 				<p class="phone_t">PHONE</p>

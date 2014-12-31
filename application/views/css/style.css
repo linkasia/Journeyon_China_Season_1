@@ -270,13 +270,13 @@
 	/* div1 국가, 도시영역 */
 		#aside_wrap .div_box1{width: 230px; height: 120px; border: solid #f0f1f5 1px; position: relative;}
 		#aside_wrap .div_box1:after{clear: both; display: block; *zoom:1;}
-		#aside_wrap .div_box1 .div_box1-1 .nation1{width: 90px; height: 30px; float: left;}
-		#aside_wrap .nation2{width: 90px; height: 30px; float: left;}
+		#aside_wrap .div_box1 .div_box1-1 .nation1{width: 80px; height: 30px; float: left;}
+		#aside_wrap .nation2{width: 80px; height: 30px; float: left;}
 		#aside_wrap .city{width: 90px; height: 30px; float: left;}
 		#aside_wrap .div_box1 .div_box1-1{width: 100%; height: 30px; margin-left: 17px; margin-top: 26px; position: relative;}
 		#aside_wrap .div_box1 .div_box1-2{width: 100%; height: 30px; margin-left: 17px; margin-top: 10px;}
 		
-		#aside_wrap .div_box1 .div_box1-1 .selectDiv{width: 100px; height: 21px; background-color: #f0f1f5; float: left; text-indent: 4pt; cursor: pointer;}
+		#aside_wrap .div_box1 .div_box1-1 .selectDiv{width: 110px; height: 21px; background-color: #f0f1f5; float: left; text-indent: 4pt; cursor: pointer;}
 		#aside_wrap .div_box1 .div_box1-1 .selectDiv img{float: right;}
 
 			/* nation_list 스타일링 */
@@ -329,15 +329,15 @@
 
 
 		/* Select box 스타일링 */
-		#aside_wrap	.selectParent{width: 100px; overflow:hidden; background-color: #f0f1f5; float: left;} 
+		#aside_wrap .selectParent{width: 110px; overflow:hidden; background-color: #f0f1f5; float: left; z-index: -9999;} /*회색 바탕 조절*/
 		#aside_wrap .selectParent .select_option{
 			border: 0 !important;  /*Removes border*/
 			-webkit-appearance: none;  /*Removes default chrome and safari style*/
 			-moz-appearance: none; /* Removes Default Firefox style*/
-			background: url(/application/views/images/left_menu/check_box.png) no-repeat 80px;
-			width: 100px; /*Width of select dropdown to give space for arrow image*/
+			background: url(/application/views/images/left_menu/check_box.png) no-repeat 90px; z-index: 9999; /* arrow 이미지 위치 */
+			width: 110px; /*Width of select dropdown to give space for arrow image*/
 			text-indent: 0.01px; /* Removes default arrow from firefox*/
-			text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+			text-overflow: ellipsis;  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
 			box-shadow: inset 0 0 1px rgba(000,000,000, 0.5)
 			float: left;
 		} 
@@ -933,7 +933,10 @@
 		#accountWrap #rightWrap .basicInformation .grew:after{clear: both; display: none; *zoom:1;}
 
 		#accountWrap #rightWrap .basicInformation .grew .grewup{float: left; position: relative; margin-right: 50px;}
+		#accountWrap #rightWrap .basicInformation .grew .grewup-f1{margin-left: 123px;}
 
+
+		/*버튼 관련해서 만든 CSS*/
 		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group{float: left;}
 		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group input{height: 25px; padding-top: 0px;}
 		#accountWrap #rightWrap .basicInformation .grew .button1 .btn-group button{height: 25px; padding-top: 0px; margin-right: 10px;}
@@ -942,8 +945,24 @@
 		#accountWrap #rightWrap .basicInformation .grew .button2 .btn-group button{float: left; height: 25px; padding-top: 0px;}
 		.dropdown-menu{overflow-y: auto; max-height: 400px;}
 
-		#accountWrap #rightWrap .savebtn{margin-left: 450px;}
+		#accountWrap #rightWrap .deactive{margin-left: 450px;}
 		
+
+		/* grew up 내부의 select box */
+
+		#accountWrap #rightWrap #myModal4 .selectParent{width: 110px; overflow:hidden; background-color: #f0f1f5; float: left; z-index: -9999;} /*회색 바탕 조절*/
+		#accountWrap #rightWrap #myModal4 .selectParent .select_option{
+			border: 0 !important;  /*Removes border*/
+			-webkit-appearance: none;  /*Removes default chrome and safari style*/
+			-moz-appearance: none; /* Removes Default Firefox style*/
+			background: url(/application/views/images/left_menu/check_box.png) no-repeat 90px; z-index: 9999; /* arrow 이미지 위치 */
+			width: 110px; /*Width of select dropdown to give space for arrow image*/
+			text-indent: 0.01px; /* Removes default arrow from firefox*/
+			text-overflow: ellipsis;  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+			box-shadow: inset 0 0 1px rgba(000,000,000, 0.5)
+			float: left;
+		} 
+
 
 		/* 팝업창 bootstrap fix */
 		.modal-dialog2{width: 500px; margin: 200px auto;}
@@ -962,9 +981,12 @@
 		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f5{top: 180px; left: 90px; position: absolute;}
 		#accountWrap #rightWrap .accountDetail .password .modal-body2 .overviewpw-f6{top: 180px; left: 230px; position: absolute;}
 
+		
 		.modal-dialog3{width: 500px; margin: 200px auto;}
 		#accountWrap #rightWrap .modal-dialog3 .modal-body2 .btn-no{margin-left: 110px; margin-top: 70px; margin-bottom: 20px;}
 		#accountWrap #rightWrap .modal-dialog3 .modal-body2 .btn-yes{margin-left: 120px;}
+
+
 
 
 		/* 페이먼트 */
@@ -995,6 +1017,7 @@
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
 
 
+
 		/* 마이페이지 가이드 menu */
 
 		#guideWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
@@ -1002,28 +1025,71 @@
 		
 		/* 왼쪽 메뉴 */
 		#guideWrap #leftmenuWrap{width: 220px; float: left;}
-		#guideWrap #Account{cursor: pointer;}
-		#guideWrap #Payment{cursor: pointer;}
-		#guideWrap #V_Certicification{cursor: pointer;}
+		#guideWrap #guideHome{cursor: pointer;}
+		#guideWrap #guideR{cursor: pointer;}
+		#guideWrap #itemAdmin{cursor: pointer;}
+		#guideWrap #salesAdmin{cursor: pointer;}
+		#guideWrap #cancelAdmin{cursor: pointer;}
 
-		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em;}
-		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
-		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		/* 오른쪽 영역 스타일링 */
+		
+		/* 타이틀 줄 모아서 관리 */
+		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+
 		#guideWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
 		#guideWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
 
 		#guideWrap .profileWrap1{width: 100%; position: relative;}
-		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; height: 1200px;}
-		#guideWrap .profileWrap1 .guideimgBand{width: 680px; height: 40px; background-color: rgba(0,0,0,0.75); position: absolute; top: 400px;}
-		#guideWrap .profileWrap1 .guideimgBand .guide_txt{color: #fff; line-height: 40px; font-size: 1.3em; margin-left: 10px;}
+		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; height: 900px;}
+		#guideWrap .profileWrap1 .guideimgBand{
+			width: 680px;
+			height: 40px;
+			background-color: rgba(0,0,0,0.75);
+			filter:Alpha(opacity=75); /* For IE8 and earlier */
+			position: absolute; top: 400px;
+			}
+		#guideWrap .profileWrap1 .guideimgBand .guide_txt{color: #fff; line-height: 40px; font-size: 1.3em; margin-left: 10px; margin-right: 200px;}
 		#guideWrap .profileWrap1 .guideimgBand .guide_next{color: #fff; line-height: 40px; font-size: 1.3em; margin-left: 10px; cursor: pointer;}
-		#guideWrap .profileWrap1 .guideimgBand .guide_next:hover{font-}
+		#guideWrap .profileWrap1 .guideimgBand .guide_next:hover{color: #ddd;}
 
+		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; position: relative;}
+		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv{width: 680px; height: 397px; position: relative; background-color: #ddd; overflow: hidden; margin-bottom: 30px;}
+		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv .guideimgBand2{width: 100%; height: 40px; background-color: rgba(0,0,0,0.75); filter:Alpha(opacity=75); position: absolute; top: 357px; color: #fff; font-size: 1.35em; line-height: 40px;}
+		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv .guideimgBand2 span{margin-left: 10px;}
 
+		#guideWrap .profileWrap1 #guidehomeWrap .guidetxtWrap{width: 680px; height: 500px;}
 
+		#guideWrap .profileWrap1 #guidehomeWrap .cols1{width: 213px; float: left; margin-right: 20px;}
+		#guideWrap .profileWrap1 #guidehomeWrap .cols2{width: 213px; float: left; margin-right: 20px;}
+		#guideWrap .profileWrap1 #guidehomeWrap .cols3{width: 214px; float: left;}
 
+		#guideWrap .profileWrap1 #guidehomeWrap .colsP1{font-size: 1.125em; font-weight: 600; color: #f3a46b; margin: 20px 0 10px 0;}
+		#guideWrap .profileWrap1 #guidehomeWrap .colsP2{font-size: 1.125em; font-weight: 600; color: #1bbc9b; margin: 20px 0 10px 0;}
+		#guideWrap .profileWrap1 #guidehomeWrap .colsP3{font-size: 1.125em; font-weight: 600; color: #3bb7ca; margin: 20px 0 10px 0;}
+		
+
+		/* Guide 신청 */
+		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap{width: 100%; height: 180px; position: relative;}
+
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle{width: 96px; height: 96px; border-radius: 50%; background-color: #f0f1f5; text-align: center; float: left; margin-right: 50px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow1{position: absolute; top: 75px; left: 170px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow2{position: absolute; top: 75px; left: 316px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow3{position: absolute; top: 75px; left: 462px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle p{margin-top: 36px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle p span{font-size:0.8em;}
+
+		#guideWrap .profileWrap1 #guideRequestWrap .alert{width: 530px; margin-left: 60px; margin-bottom: 20px;}
+
+		#guideWrap .profileWrap1 #guideData{height: 200px; position: relative;}
+		#guideWrap .profileWrap1 #guideData .dataView{padding-left: 60px; position: relative;}
+		#guideWrap .profileWrap1 #guideData .dataView p{margin-top: 20px;}
+		#guideWrap .profileWrap1 #guideData .dataView #profileModify{position: absolute; top: -3px; left: 200px; padding: 1px 8px 1px 8px;}
+		#guideWrap .profileWrap1 #guideData .dataView #snsModify{position: absolute; top: 30px; left: 200px; padding: 1px 8px 1px 8px;}
+		#guideWrap .profileWrap1 #guideData #request{position: absolute; right: 10px; bottom: 10px;}
 
 
 
@@ -1163,6 +1229,5 @@
 
 
 .githubTest{width: 600; height: 400; background-color: #eee;}
-
-
 .txt_blue{font-weight: 600; color: #62b8ef;}
+.sub_title{margin-bottom: 20px; font-size: 1.2em; margin-top: 40px;}
