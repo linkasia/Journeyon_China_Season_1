@@ -72,6 +72,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 						'phone_num_country' =>$result->phone_num_country,
 						'phone_num_user' => $result->phone_num_user,
 						'face_img_path' => $result->face_img_path,
+						'country_nm' => $result->country_nm,
 						'country_img' => $result->country_img,
 						'Name_cn_en' => $result->Name_cn_en,
 						'mother_area_code' =>$result->mother_area_code,

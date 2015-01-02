@@ -93,7 +93,8 @@
 		function loginMember($mail,$password)
 		{
 			$sql ="SELECT	a.*,
-							b.ref1 AS country_img
+							b.ref1 AS country_img,
+							b.code_nm AS country_nm
 					FROM USER a
 					LEFT JOIN country_table b ON a.mother_area_code = b.class AND a.mother_country_code = b.code
 					WHERE a.email = '".$mail."'

@@ -57,7 +57,6 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function myAccount(){
-		$data['city'] = $this->main_i->cityList();
 		$data['countryList'] = $this->main_i->country();
 		$this->load->view('mypage/m_accountSetting1',$data);
 	}

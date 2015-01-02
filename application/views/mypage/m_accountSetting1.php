@@ -64,8 +64,8 @@
 		<div class="basicInformation">
 			<p class="txt_blue">Basic Information</p>
 			<div class="grew">
-				<span class="grewup">Grew up in</span><span>Country / </span><span>City</span><br>
-				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4">Change your Country & City</a></span>
+				<span class="grewup">Grew up in</span><span><?=$this->session->userdata['country_nm']?> </span><!--span>/City</span--><br>
+				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4">Change your Country <!-- & City --> </a></span>
 				<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog2">
 						<div class="modal-content">
@@ -78,16 +78,13 @@
 
 									<div class="selectParent countrySelect">
 										<select class="select_option" id='countrySelect' name='countrySelect'>
-											<option value="China">China</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
+										<?foreach($countryList as $v){?>
+											<option value="China"><?=$v->code_nm?></option>
+										<?}?>
 										</select>
 									</div>
 
-									<div class="selectParent citySelect">
+									<!--div class="selectParent citySelect">
 										<select class="select_option" id='citySelect' name='citySelect'>
 											<option value="Beijing">Beijing</option>
 											<option value="volvo">volvo</option>
@@ -96,7 +93,7 @@
 											<option value="volvo">volvo</option>
 											<option value="volvo">volvo</option>
 										</select>
-									</div>
+									</div-->
 
 								</div>
 							</div><!-- modal-body 닫힘 -->
