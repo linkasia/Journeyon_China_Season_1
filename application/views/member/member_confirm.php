@@ -26,7 +26,7 @@ if($to == "" || $to == null){
 
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
-		<link href="/application/views/css/agency.css" rel="stylesheet">
+		<!-- <link href="/application/views/css/agency.css" rel="stylesheet"> -->
 
 
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
