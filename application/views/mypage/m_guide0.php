@@ -11,7 +11,7 @@
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 			<div id="guidehomeWrap">
-				<button class="btn btn-info product-upload">Guide 상품 올리러가기</button>
+				<a href="/index.php/City/country/productUpload" class="btn btn-info product-upload" id='productUpload' name='productUpload'>Guide 상품 올리러가기</a>
 				<div class="guideimgDiv">
 					<img src="/application/views/images/mypage/img_guide2.png" alt="guide_image2">
 					<div class="guideimgBand2">
@@ -19,7 +19,7 @@
 					</div>
 				</div><!-- guideimgDiv end -->
 				<div class="guidetxtWrap">
-					<div class="cols1">	
+					<div class="cols1">
 						<img src="/application/views/images/mypage/col1.png" alt="guide_image2">
 						<p class="colsP1">Guide 활동 신청하기</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu condimentum dolor. Duis lacinia placerat risus vitae facilisis. Cras non nibh sit amet lectus cursus auctor sit amet ut sapien. Aliquam dignissim euismod risus, sit amet venenatis nunc sollicitudin sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
@@ -37,7 +37,7 @@
 						<p>Sed tincidunt feugiat interdum. Nunc vulputate feugiat mi, sit amet fringilla purus ornare sagittis. Vivamus eget sem lacus. Vestibulum tincidunt diam felis, et varius quam tempus a. Nullam gravida in tellus non ultricies. Nullam vel iaculis ex, sed consectetur orci. Nunc luctus nisi dolor, in maximus ipsum ultricies molestie. </p>
 						<a href="#">더보기</a>
 					</div>
-				</div><!-- guidetxtWrap end -->		
+				</div><!-- guidetxtWrap end -->
 			</div> <!-- guidehomeWrap -->
 
 		</div><!-- profileWrap1 -->

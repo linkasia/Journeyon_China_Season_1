@@ -157,5 +157,13 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['salesCityQnA2']= $this->country_M->salesDetailCityQnA2($salesNum);
 		$this->load->view("/contents/salesCity2",$data);
 	}
+
+
+	/*상품 업로드 입력*/
+	function productUpload(){
+		$this->load->view('include/header');
+		$this->load->view('contents/productWrite');
+		$this->load->view('include/footer');
+	}
 }
 ?>
