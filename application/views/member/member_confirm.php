@@ -1,5 +1,4 @@
 <?if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 $to=$_GET['to'];
 if($to == "" || $to == null){
 	return;
@@ -73,42 +72,9 @@ if($to == "" || $to == null){
 	<div class="form-group">
 		<div class="input_container">
 			<select class="selectpicker" data-style="btn-warning" id="yourCountry">
-				<option>China</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
+			<?foreach($countryList as $v){?>
+				<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
+			<?}?>
 			</select>
 
 			<input class="form-control input-lg" type="password" id="password" placeholder="您的密码">
@@ -122,29 +88,26 @@ if($to == "" || $to == null){
 
 
 
-
-	
-
-
 	<script type="text/javascript">
 	var _selnum = "<?=$to?>";
 		$(function(){
 
 			$('#comfirm').click( function(){
 				if($('#password').val().length < 5 || $('#password').val().length >= 21){
-
 					alert("패스워드를 5자 이상 20자이내로 입력해주세요!");
 				}else{
-
 					if($('#password').val() == $('#password_comfirm').val())
 					{
 						var pw = $('#password').val();
+						var _countrySelectClass = $('#yourCountry').val().substring(0,4);
+						var _code = $('#yourCountry').val().substring(5,9);
+
 						$.ajax({
 							type:"POST" ,
 							dataType:"text",
 							contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-							data:{selnum: _selnum, password:pw},
-							url: "/index.php/member/memberJoin/",
+							data:{ selnum: _selnum, password:pw, countrySelectClass:_countrySelectClass, code:_code },
+							url: "/index.php/member/memberJoin/insertMember",
 							success: function (data){
 								alert("가입되었습니다.");
 								location.href = "<?=site_url('auth/index'); ?>";
@@ -157,7 +120,7 @@ if($to == "" || $to == null){
 			});
 
 			$('#logo').click( function(){
-					location.href = Host;
+					location.href = "http://www.linkasia.co.kr";
 				});
 
 			$('#cancel').click( function(){

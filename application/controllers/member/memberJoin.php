@@ -14,12 +14,16 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 		$this->load->helper('util_helper');
 	}
 
-	function index()
+	function insertMember()
     {
 		$to = $_REQUEST['selnum'];
 		$pw = $_REQUEST['password'];
+		$countrySelectClass = $_REQUEST["countrySelectClass"];
+		//$countrycode = $_REQUEST["code"];
+		//echo "--->".$_REQUEST["code"];
 
-		$insert['inserMem'] = $this->membersJoin->insertMem($to,$pw);
+		$insert['inserMem'] = $this->membersJoin->insertMem($to,$pw, $countrySelectClass, $_REQUEST["code"]);
+
     }
 
 	function searchMem()

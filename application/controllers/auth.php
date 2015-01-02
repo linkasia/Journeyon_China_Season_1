@@ -45,7 +45,8 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 
 	/*회원패스워드페이지*/
 	function member_comfirm(){
-		$this->load->view('member/member_confirm');
+		$data['countryList'] = $this->main_i->country();
+		$this->load->view('member/member_confirm',$data);
 	}
 
 	/*도시이동*/

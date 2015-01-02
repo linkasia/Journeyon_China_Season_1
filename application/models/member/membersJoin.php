@@ -8,7 +8,7 @@
 			$this->load->helper('util_helper');
 		}
 
-		function insertMem($to,$pw)
+		function insertMem($to,$pw,$countryClass,$code)
 		{
 			$sql ="INSERT INTO user
 						(num,
@@ -26,7 +26,6 @@
 						live_country_code,
 						live_country_year,
 						birthday,
-						age,
 						gender_code,
 						job,
 						job_detail,
@@ -53,9 +52,8 @@
 						'',
 						'',
 						'',
-						'',
-						'',
-						'',
+						'".$countryClass."',
+						'".$code."',
 						'',
 						'',
 						'',
@@ -76,7 +74,9 @@
 						'',
 						SYSDATE()
 						);";
+
 			$query = $this->db->query($sql);
+
 		}
 
 
