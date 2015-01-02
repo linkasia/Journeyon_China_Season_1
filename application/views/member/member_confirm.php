@@ -23,6 +23,7 @@ if($to == "" || $to == null){
 
 		<!-- Bootstrap Theme -->
 		<link href="/application/views/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="/application/views/css/bootstrap-select.css">
 
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
@@ -49,6 +50,7 @@ if($to == "" || $to == null){
 		<script src="/application/views/js/cbpAnimatedHeader.js"></script>
 		<script src="/application/views/js/agency.js"></script>
 
+		<script type="text/javascript" src="/application/views/js/bootstrap-select.js"></script>
 	</head>
 
 
@@ -68,21 +70,66 @@ if($to == "" || $to == null){
 
 		<!--<div class="fullscreen-bg"> <img style="width: 100%; min-width: 1920px; min-height: 1080px;"  class="bg" src="/application/views/images/main/bg03.jpg" alt=""> -->
 
-					<div class="form-group">
-						<div class="input_container">
-							<input class="form-control input-lg" type="password" id="password" placeholder="您的密码">
-							<span></span>
-							<input class="form-control input-lg" type="password" id="password_comfirm" placeholder="确认密码">
-							<button class="btn-primary btn" id='comfirm' name='comfirm'>登陆</button>
-							<!-- <span>已注册？回到登陆页</span> -->
-							<button class="btn-danger btn" id='cancel' name='cancel'>取消</button>
-						</div>
+	<div class="form-group">
+		<div class="input_container">
+			<select class="selectpicker" data-style="btn-warning" id="yourCountry">
+				<option>China</option>
+				<option>Ketchup</option>
+				<option>Relish</option>
+				<option>Tent</option>
+				<option>Flashlight</option>
+				<option>Toilet Paper</option>
+				<option>Mustard</option>
+				<option>Ketchup</option>
+				<option>Relish</option>
+				<option>Tent</option>
+				<option>Flashlight</option>
+				<option>Toilet Paper</option>
+				<option>Mustard</option>
+				<option>Ketchup</option>
+				<option>Relish</option>
+				<option>Tent</option>
+				<option>Flashlight</option>
+				<option>Toilet Paper</option>
+				<option>Mustard</option>
+				<option>Ketchup</option>
+				<option>Relish</option>
+				<option>Tent</option>
+				<option>Flashlight</option>
+				<option>Toilet Paper</option>
+				<option>Mustard</option>
+				<option>Ketchup</option>
+				<option>Relish</option>
+				<option>Tent</option>
+				<option>Flashlight</option>
+				<option>Toilet Paper</option>
+				<option>Mustard</option>
+				<option>Ketchup</option>
+				<option>Relish</option>
+				<option>Tent</option>
+				<option>Flashlight</option>
+				<option>Toilet Paper</option>
+			</select>
+
+			<input class="form-control input-lg" type="password" id="password" placeholder="您的密码">
+			<span></span>
+			<input class="form-control input-lg" type="password" id="password_comfirm" placeholder="确认密码">
+			<button class="btn-primary btn" id='comfirm' name='comfirm'>登陆</button>
+			<!-- <span>已注册？回到登陆页</span> -->
+			<button class="btn-danger btn" id='cancel' name='cancel'>取消</button>
+		</div>
 	</div>
+
+
+
+
+	
 
 
 	<script type="text/javascript">
 	var _selnum = "<?=$to?>";
 		$(function(){
+
 			$('#comfirm').click( function(){
 				if($('#password').val().length < 5 || $('#password').val().length >= 21){
 

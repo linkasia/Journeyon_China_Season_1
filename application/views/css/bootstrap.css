@@ -3258,7 +3258,9 @@ tbody.collapse.in {
 
 .open{
 	display: block;
-}
+}/*block 을 논으로*/
+
+
 
 .dropdown-menu > li > a {
   display: block;
@@ -3299,9 +3301,16 @@ tbody.collapse.in {
 .open > .dropdown-menu {
   display: block;
 }
+
+/* open2 생성 */
+.open2{display: none;}
+.open2 > .dropdown-menu {display: block;}
+.open2 > a {outline: 0;}
+
 .open > a {
   outline: 0;
 }
+
 .dropdown-menu-right {
   right: 0;
   left: auto;

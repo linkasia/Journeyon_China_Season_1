@@ -21,6 +21,10 @@
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
 		<link href="/application/views/css/agency.css" rel="stylesheet">
 
+		<!-- Bootstrap Select -->
+		<link rel="stylesheet" type="text/css" href="/application/views/css/bootstrap-select.css">
+
+
 
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
 		<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,13 +38,19 @@
 		<script src="/application/views/js/jquery-1.8.3.min.js" type="text/javascript"></script>
 		<script src="/application/views/js/bootstrap.min.js" type="text/javascript"></script>
 
-
 		<!-- startbootstrap -->
 		<script src="/application/views/js/jquery.js" type="text/javascript"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 		<script src="/application/views/js/classie.js"></script>
 		<script src="/application/views/js/cbpAnimatedHeader.js"></script>
 		<script src="/application/views/js/agency.js"></script>
+
+		<script type="text/javascript" src="/application/views/js/bootstrap-select.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<!-- bootstrap select -->
+		<!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+
+
 
 	</head>
 	

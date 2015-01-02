@@ -83,7 +83,7 @@
 	}
 
 	.form-group{width: 610px; height: 620px; background-color: rgba(0,0,0,0.55); border-radius: 5px; margin: 230px auto 0 auto;}
-	.form-group .input_container{width: 280px; height: auto; padding-top: 110px; margin: 0 auto;}
+	.form-group .input_container{width: 280px; height: auto; padding-top: 140px; margin: 0 auto;}
 	.form-group .input_container:after{clear: both; display: block; *zoom: 1;}
 	.form-group .input_container > span {color: white; font-weight: normal; display: block; float: right;}
 	.input-lg{width: 280px;}
@@ -132,6 +132,8 @@
 	.sns_container .sns_icon > img:last-child{margin-right: 0;}
 	#ul_margin{margin: 0;}
 	#repeated_join{cursor: pointer;}
+
+	.input_container #yourCountry{width: 150px;}
 
 
 /* Contents 도시, 지도 선택 부분 main/contents.php */
