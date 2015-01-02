@@ -1,5 +1,4 @@
-<?if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
-$Host ="http://163.180.73.25:80/";
+<?if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 $to=$_GET['to'];
 if($to == "" || $to == null){
@@ -20,11 +19,11 @@ if($to == "" || $to == null){
 		<title>Journey On - 上海卓尼旅游咨询有限公司</title>
 
 		<!-- Bootstrap core CSS (나중에 경로 다시 잡아줘야할 듯 -->
-		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">	
+		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">
 
 		<!-- Bootstrap Theme -->
 		<link href="/application/views/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
-		
+
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
 		<link href="/application/views/css/agency.css" rel="stylesheet">
@@ -82,7 +81,6 @@ if($to == "" || $to == null){
 
 
 	<script type="text/javascript">
-	var Host ="<?=$Host?>";
 	var _selnum = "<?=$to?>";
 		$(function(){
 			$('#comfirm').click( function(){
@@ -99,7 +97,7 @@ if($to == "" || $to == null){
 							dataType:"text",
 							contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 							data:{selnum: _selnum, password:pw},
-							url: Host+"index.php/member/memberJoin/",
+							url: "/index.php/member/memberJoin/",
 							success: function (data){
 								alert("가입되었습니다.");
 								location.href = "<?=site_url('auth/index'); ?>";
@@ -120,9 +118,9 @@ if($to == "" || $to == null){
 			});
 
 		});
-	
-		
+
+
 	</script>
-	
+
 </body>
 </html>

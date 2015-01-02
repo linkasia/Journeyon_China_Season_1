@@ -64,100 +64,77 @@
 		<div class="basicInformation">
 			<p class="txt_blue">Basic Information</p>
 			<div class="grew">
-				<span class="grewup">Grew up in</span><span>Country / </span><span>City</span>
+				<span class="grewup">Grew up in</span><span>Country / </span><span>City</span><br>
 				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4">Change your Country & City</a></span>
+				<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog2">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<h4 class="modal-title" id="myModalLabel">Basic Information Change</h4>
+							</div><!-- modal-header 닫힘 -->
+							<div class="modal-body2">
+								<div id='content'>
 
-					<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog2">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-									<h4 class="modal-title" id="myModalLabel">Basic Information Change</h4>
-								</div><!-- modal-header 닫힘 -->
-								<div class="modal-body2">
-									<div id='content'>
-
-										<div class="selectParent countrySelect">
-											<select class="select_option" id='countrySelect' name='countrySelect'>
-												<option value="China">China</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-											</select>
-										</div>
-
-										<div class="selectParent citySelect">
-											<select class="select_option" id='citySelect' name='citySelect'>
-												<option value="Beijing">Beijing</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-												<option value="volvo">volvo</option>
-											</select>
-										</div>
-
+									<div class="selectParent countrySelect">
+										<select class="select_option" id='countrySelect' name='countrySelect'>
+											<option value="China">China</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+										</select>
 									</div>
-								</div><!-- modal-body 닫힘 -->
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" id='changePass'>Confirm</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div><!-- modal-footer 닫힘 -->
-							</div><!-- modal-content 닫힘 -->
-						</div><!-- modal-dialog 닫힘 -->
-					</div><!-- modal fade Overveiw 끝 -->
 
-		
-					<!-- Split button >
-					<div class="btn-group">
-						<input type="button" class="btn btn-info dropdown-toggle" value="Country" data-toggle="dropdown" aria-expanded="false">
-						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">China</a></li>
-							<li><a href="#">U.S.A</a></li>
-							<li><a href="#">Korea</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Japan</a></li>
-							<li><a href="#">France</a></li>
-							<li><a href="#">Germen</a></li>
-							<li><a href="#">India</a></li>
-							<li><a href="#">Taiwan</a></li>
-						</ul>
-					</div><!-- Split button -->
+									<div class="selectParent citySelect">
+										<select class="select_option" id='citySelect' name='citySelect'>
+											<option value="Beijing">Beijing</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+											<option value="volvo">volvo</option>
+										</select>
+									</div>
 
-				</div><!-- div.grew end -->
-			</div><!-- basic information end -->
-		</div>
+								</div>
+							</div><!-- modal-body 닫힘 -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" id='changePass'>Confirm</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div><!-- modal-footer 닫힘 -->
+						</div><!-- modal-content 닫힘 -->
+					</div><!-- modal-dialog 닫힘 -->
+				</div><!-- modal fade Overveiw 끝 -->
+			</div><!-- div.grew end -->
+		</div><!-- basic information end -->
 
-			<a href="#" class="deactive" data-toggle="modal" data-target="#myModal3">Deactivate your</a>
-			<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog3">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-							<h4 class="modal-title" id="myModalLabel">Confirmation</h4>
-						</div><!-- modal-header 닫힘 -->
-						<div class="modal-body2">
-							  <div id='content'>
-									<p>한번 비활성화되면 다시 살릴 수 없습니다. 개인정보를 제외한 나머지 정보들은 사이트에 지속 남아있습니다.
-									정말로 지우겠습니까?<br>
-									<button class="btn btn-danger btn-no">No, 아니 다시 생각해보니 안지울래요.</button><br>
-									<button class="btn btn-info btn-yes">Yes, 다음에 좋은 기회에 다시 봐요.</button>
-									</p>
-							  </div>
-						</div><!-- modal-body 닫힘 -->
-						<div class="modal-footer">
-							<button type="button" class="btn btn-primary">Confirm</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div><!-- modal-footer 닫힘 -->
-					</div><!-- modal-content 닫힘 -->
-				</div><!-- modal-dialog 닫힘 -->
-			</div><!-- modal fade Overveiw 끝 -->
+
+		<a href="#" class="deactive" data-toggle="modal" data-target="#myModal3"><button class="btn btn-danger">Deactivate your</button></a>
+		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog3">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+					</div><!-- modal-header 닫힘 -->
+					<div class="modal-body2">
+						  <div id='content'>
+								<p>한번 비활성화되면 다시 살릴 수 없습니다. 개인정보를 제외한 나머지 정보들은 사이트에 지속 남아있습니다.
+								정말로 지우겠습니까?<br>
+								<button class="btn btn-danger btn-no">No, 아니 다시 생각해보니 안지울래요.</button><br>
+								<button class="btn btn-info btn-yes">Yes, 다음에 좋은 기회에 다시 봐요.</button>
+								</p>
+						  </div>
+					</div><!-- modal-body 닫힘 -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Confirm</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div><!-- modal-footer 닫힘 -->
+				</div><!-- modal-content 닫힘 -->
+			</div><!-- modal-dialog 닫힘 -->
+		</div><!-- modal fade Overveiw 끝 -->
 
 			<script type="text/javascript">
 				$(function(){

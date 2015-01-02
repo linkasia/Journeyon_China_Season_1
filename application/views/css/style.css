@@ -945,7 +945,7 @@
 		#accountWrap #rightWrap .basicInformation .grew .button2 .btn-group button{float: left; height: 25px; padding-top: 0px;}
 		.dropdown-menu{overflow-y: auto; max-height: 400px;}
 
-		#accountWrap #rightWrap .deactive{margin-left: 450px;}
+		#accountWrap #rightWrap .deactive{float: right;}
 		
 
 		/* grew up 내부의 select box */
@@ -1035,14 +1035,18 @@
 		/* 오른쪽 영역 스타일링 */
 		
 		/* 타이틀 줄 모아서 관리 */
+		#guideWrap .profileWrap1 .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title1_2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
 
 		#guideWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
 		#guideWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
 
 		#guideWrap .profileWrap1{width: 100%; position: relative;}
+		#guideWrap .profileWrap1 .product-upload{width: 680px; padding: 10px 200px 10px 200px; margin: 0 0 20px 0px;}
 		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; height: 900px;}
 		#guideWrap .profileWrap1 .guideimgBand{
 			width: 680px;

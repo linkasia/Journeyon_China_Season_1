@@ -161,7 +161,7 @@ $mode = $_REQUEST['mode'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum, user:_user},
-				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity3",
+				url:"/index.php/city/country/detailCity3",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 				}
@@ -172,7 +172,7 @@ $mode = $_REQUEST['mode'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
-				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity1",
+				url:"/index.php/city/country/detailCity1",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 
@@ -203,7 +203,7 @@ $mode = $_REQUEST['mode'];
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
 				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
-				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity1",
+				url:"/index.php/city/country/detailCity1",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 
@@ -218,7 +218,7 @@ $mode = $_REQUEST['mode'];
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
 				//url:"http://163.180.73.62/index.php/city/country/detailCity2",
-				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity2",
+				url:"/index.php/city/country/detailCity2",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 
@@ -234,7 +234,7 @@ $mode = $_REQUEST['mode'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum, user:_user},
-				url:"http://www.linkasia.co.kr/index.php/city/country/detailCity3",
+				url:"/index.php/city/country/detailCity3",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
 				}
@@ -273,7 +273,7 @@ $mode = $_REQUEST['mode'];
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 			data:{ salesNum: _salesNum,  content:_content, userNum:_userNum},
-			url:"http://www.linkasia.co.kr/index.php/city/country/Question",
+			url:"/index.php/city/country/Question",
 			success: function (data){
 				document.getElementById('viewContents').innerHTML = data;
 			}
@@ -290,7 +290,7 @@ $mode = $_REQUEST['mode'];
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 			data:{ salesNum: _salesNum,  content:_content, qna_num:_qna_num},
-			url:"http://www.linkasia.co.kr/index.php/city/country/Agency",
+			url:"/index.php/city/country/Agency",
 			success: function (data){
 				document.getElementById('viewContents').innerHTML = data;
 			}

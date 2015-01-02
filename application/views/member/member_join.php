@@ -127,7 +127,7 @@
 								dataType:"text",
 								contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 								data:{selnum: _selnum},
-								url:"http://www.linkasia.co.kr/index.php/member/memberJoin/searchMem",
+								url:"/index.php/member/memberJoin/searchMem",
 								success: function (data){
 									if(data =="fail"){
 										alert("이미가입되어있습니다.");
@@ -136,8 +136,8 @@
 											type:"POST" ,
 											dataType:"text",
 											contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-											data:{selnum: _selnum},
-											url:"http://www.linkasia.co.kr/index.php/auth/sendmail",
+											data:{selnum: _selnum,mode: null, ran: null},
+											url:"/index.php/auth/sendmail",
 											success: function (data){
 												alert("인증메일을 전송하였습니다!");
 											}
@@ -156,7 +156,7 @@
 				});
 
 				$('#repeated_join').click( function(){
-					location.href = "http://www.linkasia.co.kr/index.php/auth/Login_view";
+					location.href = "/index.php/auth/Login_view";
 				});
 
 				$('#cancel').click( function(){

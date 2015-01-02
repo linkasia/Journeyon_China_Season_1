@@ -23,7 +23,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myAccount",
+					url:"/index.php/mypage/myPage_M/myAccount",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -37,7 +37,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myPayment",
+					url:"/index.php/mypage/myPage_M/myPayment",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -51,7 +51,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"http://www.linkasia.co.kr/index.php/mypage/myPage_M/myV_Certicification",
+					url:"/index.php/mypage/myPage_M/myV_Certicification",
 					success: function (data){
 						document.getElementById('rightWrap').innerHTML =data;
 					}

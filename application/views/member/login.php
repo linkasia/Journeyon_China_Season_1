@@ -117,7 +117,7 @@
 							dataType:"text",
 							contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 							data:{selnum: _selnum, mode:_mode},
-							url:"http://www.linkasia.co.kr/index.php/auth/sendmail",
+							url:"/index.php/auth/sendmail",
 							success: function (data){
 								alert("패스워드가 발송되었습니다.");
 								//bootbox.alert("Hello world!", function() {

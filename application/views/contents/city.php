@@ -313,7 +313,7 @@ $cityList = $_REQUEST['cityList'];
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 			data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend, guide:_guide, selectCityList:obj.value },
-			url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+			url:"/index.php/city/country/searchCountry",
 			success: function (data){
 				document.getElementById('viewContents').innerHTML =data;
 			}
@@ -386,7 +386,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -424,7 +424,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -462,7 +462,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -500,7 +500,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -539,7 +539,7 @@ $cityList = $_REQUEST['cityList'];
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
 				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -579,7 +579,7 @@ $cityList = $_REQUEST['cityList'];
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
 				//url:"http://163.180.73.62/index.php/city/country/searchCountry",
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -617,7 +617,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -655,7 +655,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -693,7 +693,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML =data;
 				}
@@ -730,7 +730,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -768,7 +768,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -806,7 +806,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -844,7 +844,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -882,7 +882,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -920,7 +920,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -958,7 +958,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -996,7 +996,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -1034,7 +1034,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -1072,7 +1072,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -1110,7 +1110,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -1148,7 +1148,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -1186,7 +1186,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -1225,7 +1225,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;
@@ -1264,7 +1264,7 @@ $cityList = $_REQUEST['cityList'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
-				url:"http://www.linkasia.co.kr/index.php/city/country/searchCountry",
+				url:"/index.php/city/country/searchCountry",
 				success: function (data){
 					//alert(data);
 					document.getElementById('viewContents').innerHTML =data;

@@ -81,7 +81,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		}else if($mode == "mailChange"){
 			$message="인증번호 : $random  <br />관리자문의 : admin@linkasia.co.kr<br>卓尼制作 : $date";
 		}else{
-			$message="<a href='http://163.180.73.25/index.php/auth/member_comfirm?to=$mail' > 인증확인  </a>  admin@linkasia.co.kr<br>卓尼制作 : $date";
+			$message="<a href='http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail' > 인증확인  </a>  admin@linkasia.co.kr<br>卓尼制作 : $date";
 		}
 		$config['mailtype']  = "html";
 		$config['charset']   = "utf-8";
