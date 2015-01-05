@@ -97,12 +97,12 @@
 			$(function(){
 				//로고 클릭시 메인페이지 이동
 				$('#logo').click( function(){
-					location.href = "http://www.linkasia.co.kr/";
+					location.href ="<?=site_url('auth/index'); ?>";
 				});
 
 				//취소버튼 클릭시 메인페이지 이동
 				$('#LoginCancel').click( function(){
-					location.href = "http://www.linkasia.co.kr/";
+					location.href ="<?=site_url('auth/index'); ?>";
 				});
 
 				$('#e-mail2').click( function(){
@@ -132,13 +132,11 @@
 
 			function id_save()
 			{
-				if(frm.idcheck.checked)
-				{
-					saveLogin(frm.company_id.value);
-					document.frm.submit();
-				}
-				else
-				{
+				if(document.getElementById('inputLarge').value == ""  || document.getElementById('inputLarge').value == null){
+					alert("아이디를 입력해주세요");
+				}else if(document.getElementById('password').value == ""  || document.getElementById('password').value == null){
+					alert("패스워드를 입력해 주세요")
+				}else{
 					saveLogin("");
 					document.frm.submit();
 				}
@@ -162,6 +160,7 @@
 				today.setDate( today.getDate() + expiredays );
 				document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + today.toGMTString() + ";";
 			 }
+
 		</script>
 	</body>
 </html>
