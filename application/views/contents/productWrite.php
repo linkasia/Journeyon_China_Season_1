@@ -2,41 +2,18 @@
 	<div class="productWrap">
 		<div class="productDiv1">
 			<p class="productTitle">国家 & 城市</p>
-			<select class="selectpicker" data-style="btn-info" data-size="6" id="selectCountry">
-				<option>China</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
+			<select class="selectpicker" data-style="btn-info" data-size="6" id="selectCountry" onChange="choiceCountry()">
+				<option value = "">-- Select --</option>
+				<?foreach($country as $v){?>
+					<option onclick="" value = "<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
+				<?}?>
 			</select>
 
-			<select class="selectpicker" data-style="btn-info" id="selectCity">
-				<option>Beijing</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-				<option>Tent</option>
-				<option>Flashlight</option>
-				<option>Toilet Paper</option>
-				<option>Mustard</option>
-				<option>Ketchup</option>
-				<option>Relish</option>
-			</select>
+			<div id="selectCtiy" name="selectCtiy">
+				<?
+				$data="";
+				$this->load->view("/contents/comboCity",$data);?>
+			</div>
 		</div><!-- Div1 end -->
 
 		<div class="productDiv2">
@@ -69,7 +46,7 @@
 								<textarea name="pictureCaption" id="pictureCaption" rows="3"></textarea>
 							</div><!-- modal-body 닫힘 -->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-info" id="Email" name="Email">Upload</button>
+								<button type="button" class="btn btn-info" id="imgUpload" name="imgUpload">Upload</button>
 								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 							</div><!-- modal-footer 닫힘 -->
 						</div><!-- modal-content 닫힘 -->
@@ -241,7 +218,38 @@
 
 <script type="text/javascript">
 
-$(function(){
+	function choiceCountry(){
+		var _countrySelectClass = $('#selectCountry').val().substring(0,4);
+		var _code = $('#selectCountry').val().substring(5,9);
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ countrySelectClass: _countrySelectClass, code:_code},
+			url:"/index.php/city/country/changeCity",
+			success: function (data){
+				document.getElementById('selectCtiy').innerHTML =data;
+			}
+		});
+	}
 
+
+
+$(function(){
+/*
+	$("#imgUpload").fileinput({
+		uploadUrl: "' . Url::to(['/site/file-upload']) . '"
+		maxFileCount: 10,
+		overwriteInitial: false,
+		initialPreview: [
+			'<img src="/images/examples/Desert.jpg " class="file-preview-image">',
+			'<img src="/images/examples/Jellyfish.jpg " class="file-preview-image">',
+		],
+		initialPreviewConfig: [
+			{caption: "Desert.jpg", width: "120px", url:"/site/file-delete", key:1},
+			{caption: "Jellyfish.jpg", width: "120px", url:"/site/file-delete", key:2}
+		],
+	});
+*/
 });
 </script>

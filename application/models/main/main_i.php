@@ -44,6 +44,20 @@
 			return $result;
 		}
 
+		//도시
+		function choiceCityList($class ,$code)
+		{
+			$sql ="SELECT *
+							FROM city_table
+							WHERE sclass = '".$class."'
+							AND class ='".$code."'
+							AND useYn='Y'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+
 		//최근 올라온 3개의 도시
 		function Travel(){
 
