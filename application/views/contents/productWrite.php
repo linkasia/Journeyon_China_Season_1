@@ -56,7 +56,7 @@
 
 			<div class="picUpload">
 				<span class="glyphicon glyphicon-remove remove"></span>
-				<img src="/application/views/images/contents/pic1.jpg" alt="">
+				<img id="insertImg1" src="" alt="">
 			</div>
 
 			<div class="picUpload">
@@ -237,7 +237,19 @@
 
 $(function(){
 /*
-	$("#imgUpload").fileinput({
+	//$("#imgUpload").fileinput({
+
+	$(document).read(function(){
+		function readURL(input){
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					$('#insertImg1').attr('src', e.target.result);
+				}
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
 		uploadUrl: "' . Url::to(['/site/file-upload']) . '"
 		maxFileCount: 10,
 		overwriteInitial: false,
@@ -249,6 +261,7 @@ $(function(){
 			{caption: "Desert.jpg", width: "120px", url:"/site/file-delete", key:1},
 			{caption: "Jellyfish.jpg", width: "120px", url:"/site/file-delete", key:2}
 		],
+
 	});
 */
 });

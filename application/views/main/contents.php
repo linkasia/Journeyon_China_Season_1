@@ -163,7 +163,7 @@
 										<div class="portfolio-hover">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
-										<img style="width: 300px; height: 240px;" src="<?=$v->pic1_img?>" alt="">
+										<img style="width: 300px; height: 240px;" src="" alt="">
 								</div>
 								<?if($i== 1){?>
 									<div class="somenail_transbox" style="background-color:rgba(59,183,202,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
@@ -197,8 +197,8 @@
 									</div>
 
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span><?=$v->wishcount?>个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_" class="icon_t">&nbsp;<span>游记 <?=$v->reviewcount?>个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>个</span>&nbsp;&nbsp;
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_" class="icon_t">&nbsp;<span>游记 0个</span>
 									</div>
 
 									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>
@@ -230,7 +230,7 @@
 										<div class="portfolio-hover2">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
-										<img style="width: 300px; height: 240px" src="<?=$v->pic1_img?>" alt="">
+										<img style="width: 300px; height: 240px" src="" alt="">
 									</div>
 									<?if($k== 1){?>
 									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,0.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
@@ -254,8 +254,8 @@
 										<p>赵涧楠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
 									</div>
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 <?=$v->wishcount?>个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span><?=$v->reviewcount?>个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 0个</span>&nbsp;&nbsp;
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>0个</span>
 									</div>
 									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>

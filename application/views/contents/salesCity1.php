@@ -2,11 +2,11 @@
 	<?foreach($salesCity as $v){?>
 		<div class="contents_text1"><?=$v->title?></div>
 		<div class="contents_img">
-			<div class="img_big"  id='clickDivBig' ><img style="width:660px; height:528px;"src="<?=$v->pic1_img?>" alt="img_big" id='clickImgBig'></div>
-			<div class="img1" id='clickDiv1'><img style="width:157px; height:105px;" src="<?=$v->pic1_img?>" alt="img_a" id='clickImg1'></div>
-			<div class="img2" id='clickDiv2'><img style="width:157px; height:105px;" src="<?=$v->pic2_img?>" alt="img_b" id='clickImg2'></div>
-			<div class="img3" id='clickDiv3'><img style="width:157px; height:105px;" src="<?=$v->pic3_img?>" alt="img_c" id='clickImg3'></div>
-			<div class="img4" id='clickDiv4'><img style="width:157px; height:105px;" src="<?=$v->pic4_img?>" alt="img_d" id='clickImg4'></div>
+			<div class="img_big"  id='clickDivBig' ><img style="width:660px; height:528px;"src="" alt="img_big" id='clickImgBig'></div>
+			<div class="img1" id='clickDiv1'><img style="width:157px; height:105px;" src="" alt="img_a" id='clickImg1'></div>
+			<div class="img2" id='clickDiv2'><img style="width:157px; height:105px;" src="" alt="img_b" id='clickImg2'></div>
+			<div class="img3" id='clickDiv3'><img style="width:157px; height:105px;" src="" alt="img_c" id='clickImg3'></div>
+			<div class="img4" id='clickDiv4'><img style="width:157px; height:105px;" src="" alt="img_d" id='clickImg4'></div>
 		</div>
 		<div class="contents_text2"><p><?=$v->describe?></p>
 		</div>

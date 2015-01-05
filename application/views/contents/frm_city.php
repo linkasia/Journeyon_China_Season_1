@@ -12,7 +12,7 @@
 					<button class="btn btn-info">按最新</button>
 				</div>
 			</div>
-			
+
 			<div class="contents">
 			<?
 			if(count($salesCountry) > 0){
@@ -22,26 +22,26 @@
 						<div class="band">
 								<div class="wishcount">
 									<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image">
-									<?=$v->wishcount?>
+
 								</div>
 								<div class="reviewcount">
 									<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image">
-									<?=$v->reviewcount?>
+
 								</div>
 								<div class="localcount">
-									<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">								
+									<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">
 									当地人
 								</div>
 						</div>
 
-							<img src="<?=$v->pic1_img?>" alt="" class="pic1_img">
+							<img src="" alt="" class="pic1_img">
 							<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
 							<img src="<?=$v->countryimg?>" alt="" class="flag_image">
 							<?if($v->v_get_code == "0001"){?>
 							<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 							<?}?>
 					</div>
-					
+
 					<div class="list_rightwrap">
 						<div class="right_title"><span><?=$v->title?></span>
 							<div class="money"><span><?=$v->fat_price?>元</span></div>
@@ -66,4 +66,3 @@
 					<p><b>최초의 가이드가 되어주세요.!</b></p>
 				<?}?>
 			</div> <!-- contents 닫음 -->
-			

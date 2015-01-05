@@ -162,6 +162,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	/*상품 업로드 입력*/
 	function productUpload(){
 
+		$insert['insertproduct'] = $this->country_M->insertproduct($this->session->userdata['num']);
 		$data['country'] = $this->main_i->Country();
 
 		$this->load->view('include/header');

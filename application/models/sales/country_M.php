@@ -123,7 +123,6 @@
 			$sql ="SELECT a.num,
 											a.user_num,
 											a.fat_price,
-											a.wishcount,
 											a.theme_num1_code,
 											f.code_nm AS theme_num1_nm,
 											a.theme_num2_code,
@@ -375,6 +374,68 @@
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
+		}
+
+		function insertProduct($userNum)
+		{
+			$sql ="INSERT INTO product
+													(`num`,
+													`user_num`,
+													`title`,
+													`sortcountry`,
+													`country_code`,
+													`city_code`,
+													`describe`,
+													`theme_num1_code`,
+													`theme_num2_code`,
+													`theme_num3_code`,
+													`recommend1_code`,
+													`recommend2_code`,
+													`travel_time`,
+													`meeting_place`,
+													`latitude`,
+													`longtitude`,
+													`meeting_place_describe`,
+													`fat_price`,
+													`group_price`,
+													`include`,
+													`not_include`,
+													`etc`,
+													`s_get`,
+													`useYn`,
+													`adminYn`,
+													`create_date`,
+													`modified_date`
+													)
+													VALUES
+													(0,
+													'".$userNum."',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													'',
+													SYSDATE());";
+			$query = $this->db->query($sql);
 		}
 	}
 ?>

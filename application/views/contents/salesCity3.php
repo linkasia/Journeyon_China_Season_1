@@ -37,7 +37,7 @@
 					<p><?=$v->interesting2?></p>
 				</div>
 			</div><!-- profileWrap2 -->
-		<?}?>	
+		<?}?>
 			<div class="profileWrap3">
 				<div class="title3">
 					<div class="underline">微旅客</div>
@@ -57,7 +57,7 @@
 									<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">	当地人
 								</div>
 							</div>
-							<img src="<?=$v->pic1_img?>" alt="" class="pic1_img">
+							<img src="" alt="" class="pic1_img">
 							<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
 							<img src="<?=$v->countryimg?>" alt="" class="flag_image">
 							<?if($v->v_get_code == "0001"){?>
@@ -106,7 +106,7 @@
 						<div class="right_title"><span>纽约军事历史主题</span>
 							<div class="money"><span>1500元</span></div>
 						</div>
-						<div class="right_text">纽约是什么样的呢？是电影中午夜时分的灯红酒绿，还是黑暗阴影中的危机四伏？每个人心目中都有一副纽约的图像，诚然，纽约是一座集经济、科技、旅游、娱乐、影视、时尚于一身的豪华大城市。这里是旅游之都，高耸的帝国大厦，散发着耀眼的光芒， 就如同霸气一身的王者；被誉为“照耀世界之神”的自由女神像，彰显着美丽的容颜和非凡的气质，令无数的游客折服，每一个到美国的人都不会错过。这里也是购物之都，人潮拥挤的第五大道，是购物狂的天堂，你几乎可以买到世界上任何的名牌。这里还是经济之都，在气氛紧张的纽约证劵交易所里，每天都上演着经济大战......不要只停留在美剧当中的纽约啦，赶快出发吧，玩转纽约，来一场说走就走的旅行吧！ 
+						<div class="right_text">纽约是什么样的呢？是电影中午夜时分的灯红酒绿，还是黑暗阴影中的危机四伏？每个人心目中都有一副纽约的图像，诚然，纽约是一座集经济、科技、旅游、娱乐、影视、时尚于一身的豪华大城市。这里是旅游之都，高耸的帝国大厦，散发着耀眼的光芒， 就如同霸气一身的王者；被誉为“照耀世界之神”的自由女神像，彰显着美丽的容颜和非凡的气质，令无数的游客折服，每一个到美国的人都不会错过。这里也是购物之都，人潮拥挤的第五大道，是购物狂的天堂，你几乎可以买到世界上任何的名牌。这里还是经济之都，在气氛紧张的纽约证劵交易所里，每天都上演着经济大战......不要只停留在美剧当中的纽约啦，赶快出发吧，玩转纽约，来一场说走就走的旅行吧！
 						</div>
 						<div class="bottom_text">
 							<div class="line1">
@@ -141,7 +141,7 @@
 									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,.6)">
 										<p class="somenail_title">首尔地铁沿线游之3号线</p>
 									</div>
-								</div> 
+								</div>
 								<div class="somenail_transcity2">
 									<p>纽约</p>
 								</div>
@@ -177,7 +177,7 @@
 									<div class="somenail_transbox2" style="background-color:rgba(195,119,228,.6)">
 										<p class="somenail_title">来首尔林荫道, 玩一把小清新</p>
 									</div>
-								</div> 
+								</div>
 								<div class="somenail_transcity2">
 									<p>纽约</p>
 								</div>
@@ -214,7 +214,7 @@
 									<div class="somenail_transbox2" style="background-color:rgba(63,127,206,.6)">
 										<p class="somenail_title">搜寻那些首尔的人气美甲店</p>
 									</div>
-								</div> 
+								</div>
 								<div class="somenail_transcity2">
 									<p>纽约</p>
 								</div>
@@ -250,7 +250,7 @@
 									<div class="somenail_transbox2" style="background-color:rgba(243,164,107,.6)">
 										<p class="somenail_title">热辣旅游主题NBA, 纽约麦迪逊现场为...</p>
 									</div>
-								</div> 
+								</div>
 								<div class="somenail_transcity2">
 									<p>纽约</p>
 								</div>

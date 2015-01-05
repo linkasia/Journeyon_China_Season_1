@@ -90,7 +90,7 @@ $mode = $_REQUEST['mode'];
 				<div class="aside-like">
 					<hr>
 					<img src="/application/views/images/contents/heart.PNG" alt="heart">
-					<span>&nbsp;<?=$v->wishcount?>名 想去</span>
+					<span>&nbsp;名 想去</span>
 				</div>
 			</div>
 		<?}?>
