@@ -21,13 +21,6 @@ $cityList = $_REQUEST['cityList'];
 						<span id='change_button' name='change_button'><img src="/application/views/images/left_menu/check_box.png" alt=""  onclick="countryList()"></span>
 					</div>
 					<?}?>
-					<!-- <div class="selectParent">
-						<select class="select_option"> <span>China</span>
-							<option value=''>China</option>
-							<option value=''>Korea</option>
-							<option value=''>미국</option>
-						</select>
-					</div> -->
 
 				<!-- 여기서부터 나라선택 박스 시작 -->
 					 <div class="nation_list" name="nation_list" id="nation_list">

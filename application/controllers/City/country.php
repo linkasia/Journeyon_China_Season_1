@@ -161,9 +161,21 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*상품 업로드 입력*/
 	function productUpload(){
+
+		$data['country'] = $this->main_i->Country();
+
 		$this->load->view('include/header');
-		$this->load->view('contents/productWrite');
+		$this->load->view('contents/productWrite',$data);
 		$this->load->view('include/footer');
+	}
+
+	/*도시 콤보박스*/
+	function changeCity(){
+		$countrySelectClass = $_REQUEST['countrySelectClass'];
+		$code = $_REQUEST['code'];
+
+		$data['city'] = $this->main_i->choiceCityList($countrySelectClass, $code);
+		$this->load->view('contents/comboCity',$data);
 	}
 }
 ?>
