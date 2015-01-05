@@ -100,4 +100,11 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$update['passwordUpdate'] = $this->myModify->updatePassword($to, $newPass);
 	}
 
+	function changeCountry(){
+		$countrySelectClass = $_REQUEST['countrySelectClass'];
+		$code = $_REQUEST['code'];
+		$to = $this->session->userdata['email'];
+		$update['passwordUpdate'] = $this->myModify->updateCountry($to, $countrySelectClass,$code);
+	}
+
 }

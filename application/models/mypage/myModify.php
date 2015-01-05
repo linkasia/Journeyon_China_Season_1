@@ -22,6 +22,12 @@
 			$query = $this->db->query($sql);
 		}
 
-
+		function updateCountry($mail, $countrySelectClass,$code)
+		{
+			$sql ="UPDATE user SET mother_area_code = '".$countrySelectClass."',
+																mother_country_code= '".$code."'
+							WHERE email = '".$mail."'";
+			$query = $this->db->query($sql);
+		}
 	}
 ?>

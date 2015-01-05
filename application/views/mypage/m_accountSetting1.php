@@ -53,7 +53,7 @@
 									  </div>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" id='changePass'>Confirm</button>
+									<button type="button" class="btn btn-primary" id='changePass'>Confirm New Password</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
@@ -83,7 +83,7 @@
 									<div class="selectParent countrySelect">
 										<select class="select_option" id='countrySelect' name='countrySelect'>
 										<?foreach($countryList as $v){?>
-											<option value="China"><?=$v->code_nm?></option>
+											<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
 										<?}?>
 										</select>
 									</div>
@@ -102,7 +102,7 @@
 								</div>
 							</div><!-- modal-body 닫힘 -->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" id='changePass'>Confirm</button>
+								<button type="button" class="btn btn-primary" id='changeCountry'>Confirm Change your Country</button>
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div><!-- modal-footer 닫힘 -->
 						</div><!-- modal-content 닫힘 -->
@@ -112,7 +112,8 @@
 		</div><!-- basic information end -->
 
 
-		<a href="#" class="deactive" data-toggle="modal" data-target="#myModal3"><button class="btn btn-danger">Deactivate your</button></a>
+<!-- 임시로 막아 놓음 -->
+		<!-- <a href="#" class="deactive" data-toggle="modal" data-target="#myModal3"><button class="btn btn-danger">Deactivate your</button></a>
 		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog3">
 				<div class="modal-content">
@@ -120,6 +121,7 @@
 						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 						<h4 class="modal-title" id="myModalLabel">Confirmation</h4>
 					</div><!-- modal-header 닫힘 -->
+					<!--
 					<div class="modal-body2">
 						  <div id='content'>
 								<p>한번 비활성화되면 다시 살릴 수 없습니다. 개인정보를 제외한 나머지 정보들은 사이트에 지속 남아있습니다.
@@ -129,14 +131,20 @@
 								</p>
 						  </div>
 					</div><!-- modal-body 닫힘 -->
+					<!--
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary">Confirm</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div><!-- modal-footer 닫힘 -->
+					<!--
 				</div><!-- modal-content 닫힘 -->
+				<!--
 			</div><!-- modal-dialog 닫힘 -->
+			<!--
 		</div><!-- modal fade Overveiw 끝 -->
+<div id='test'>
 
+</div>
 			<script type="text/javascript">
 				$(function(){
 
@@ -155,7 +163,7 @@
 							dataType:"text",
 							contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 							data:{selnum: _selnum,  mode:_mode,ran:_ran},
-							url:"http://www.linkasia.co.kr/index.php/auth/sendmail",
+							url:"/index.php/auth/sendmail",
 							success: function (data){
 								alert("인증메일을 전송하였습니다!");
 							}
@@ -179,7 +187,7 @@
 									dataType:"text",
 									contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 									data:{selnum: _selnum},
-									url:"http://www.linkasia.co.kr/index.php//mypage/myPage_M/mailChange",
+									url:"/index.php//mypage/myPage_M/mailChange",
 									success: function (data){
 										alert("email이 변경되었습니다 다시 로그인 해주세요");
 										location.href = "/index.php/member/memberJoin/logout";
@@ -206,15 +214,30 @@
 								dataType:"text",
 								contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 								data:{newPass: $('#newPass').val()},
-								url:"http://www.linkasia.co.kr/index.php//mypage/myPage_M/changePassword",
+								url:"/index.php//mypage/myPage_M/changePassword",
 								success: function (data){
 									alert("password가 변경되었습니다 다시 로그인 해주세요");
 									location.href = "/index.php/member/memberJoin/logout";
 								}
 							});
 						}
-
 					});
 
+					$('#changeCountry').click( function(){
+						var _countrySelectClass = $('#countrySelect').val().substring(0,4);
+						var _code = $('#countrySelect').val().substring(5,9);
+
+						$.ajax({
+							type:"POST" ,
+							dataType:"text",
+							contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+							data:{countrySelectClass:_countrySelectClass, code:_code},
+							url:"/index.php//mypage/myPage_M/changeCountry",
+							success: function (data){
+								alert("Country가 변경되었습니다 다시 로그인 해주세요");
+								location.href = "/index.php/member/memberJoin/logout";
+							}
+						});
+					});
 				});
 			</script>

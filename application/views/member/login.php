@@ -120,9 +120,6 @@
 							url:"/index.php/auth/sendmail",
 							success: function (data){
 								alert("패스워드가 발송되었습니다.");
-								//bootbox.alert("Hello world!", function() {
-									//Example.show("Hello world callback");
-								//});
 							}
 						});
 					}
