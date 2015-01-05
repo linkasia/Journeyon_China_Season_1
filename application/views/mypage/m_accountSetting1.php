@@ -1,5 +1,7 @@
 		<div class="accountDetail">
-			<p class="txt_blue">Account Detail</p>
+			<div class="title2"> <!-- 라인 들어가는 타이틀 city부분 복제 -->
+				<div class="underline">Account Detail</div>
+			</div>
 			<div class="email">
 				<span class="email-f1">E-mail</span>
 				<span class="email-f2"><?=$this->session->userdata['email']?></span>
@@ -62,7 +64,9 @@
 		</div><!-- accountDetail end -->
 
 		<div class="basicInformation">
-			<p class="txt_blue">Basic Information</p>
+			<div class="title2"> <!-- 라인 들어가는 타이틀 city부분 복제 -->
+				<div class="underline">Basic Information</div>
+			</div>
 			<div class="grew">
 				<span class="grewup">Grew up in</span><span><?=$this->session->userdata['country_nm']?> </span><!--span>/City</span--><br>
 				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4">Change your Country <!-- & City --> </a></span>
