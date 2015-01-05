@@ -1002,8 +1002,6 @@
 		#accountWrap #rightWrap .modal-dialog3 .modal-body2 .btn-yes{margin-left: 120px;}
 
 
-
-
 		/* 페이먼트 */
 		#accountWrap #rightWrap .profileWrap1 .paymentWrap{width: 640px; height: 800px; background-color: #f0f1f5;}
 
@@ -1030,7 +1028,6 @@
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.id_s{position: absolute; top: 140px; left: 100px;}
 
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
-
 
 
 		/* 마이페이지 가이드 menu */
@@ -1188,6 +1185,16 @@
 	#productWrapAll .productInfo{width: 230px; height: 350px; border: 1px solid #f0f1f5; float: left; padding: 10px; background-color: #f9fafc;}
 
 
+/* View on Public */
+
+	#accountWrap #publicWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
+
+
+
+
+
+
+
 
 
 /* 부트스트랩  form-control2 */
@@ -1340,7 +1347,6 @@
     text-align: center;
     font-size: 20px;
     color: #fff;
-
 }
 
 .somenail_bootstrap2 .portfolio-item2 .portfolio-link2 .portfolio-hover2 .portfolio-hover-content i {
@@ -1371,7 +1377,6 @@
 
 #map {width: 90%; height: 400px; margin: 0 auto;}
 #map_canvas{margin: 0; padding: 0; height: 100%;}
-
 
 .githubTest{width: 600; height: 400; background-color: #eee;}
 .txt_blue{font-weight: 600; color: #62b8ef;}
