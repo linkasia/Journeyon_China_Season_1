@@ -197,15 +197,28 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	/*상품저장*/
 	function imgUpload(){
 		$product_num = $_REQUEST['product_num'];
-		$save_dir = "/productImages/".$product_num."/";
+		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/productImages/".$product_num."/";
+
+		$file_temp = $_FILES['fileUpload']['tmp_name'];
+		$file_name = $_FILES['fileUpload']['name'];
+		$file_size    = $_FILES['fileUpload']['size'];
+
+		echo $file_temp ."<br />";
+		echo $file_name ."<br />";
+		echo $file_size ."<br />";
+
 		if(is_uploaded_file($_FILES["fileUpload"]["tmp_name"]))
 		{
-			$dest=$_FILES["fileUpload"]["tmp_name"];
-			echo "succse=".$dest;
-		}else{
-			echo "file=".$save_dir;
-		}
 
+			if(!is_dir($save_dir)){
+				@mkdir($save_dir, 0777);
+				chmod($save_dir, 0777);
+			}
+			$dest=$save_dir.$_FILES["fileUpload"]["name"];
+			if(!move_uploaded_file($_FILES["fileUpload"]["tmp_name"],$save_dir)){
+				die("file save fail");
+			}
+		}
 	}
 }
 ?>
