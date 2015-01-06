@@ -1187,8 +1187,14 @@
 
 /* View on Public */
 
-	#accountWrap #publicWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
+	#mypublicWrap{width: 940px; height: 1000px; position: relative; margin: 30px auto 0 auto;}
+	#mypublicWrap #leftAside{width: 250px; height: 510px; background-color: #f0f1f5; position: relative; float: left; margin-right: 30px;}
+	#mypublicWrap #leftAside{}
 
+	#mypublicWrap #rightDiv{position: relative; float: left;}
+	#mypublicWrap #rightDiv #introduceSelf{width: 660px; height: 100px; background-color: #f0f1f5; margin-bottom: 30px;}
+	#mypublicWrap #rightDiv #profileQuestion{width: 660px; height: 1000px; background-color: #f0f1f5;}
+ 
 
 
 
