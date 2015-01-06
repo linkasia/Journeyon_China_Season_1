@@ -57,6 +57,7 @@
 		z-index: -50;}
 	
 	video{display: block;}
+	#darken{width: 100%; height: 500px; position: absolute; top: 0px; background-color: rgba(0,0,0,0.1); z-index: -30;}
 
 
 /* Header2 부분 */
@@ -1187,21 +1188,40 @@
 
 /* View on Public */
 
-	#mypublicWrap{width: 940px; height: 1000px; position: relative; margin: 30px auto 0 auto;}
-	#mypublicWrap #leftAside{width: 250px; height: 510px; background-color: #f0f1f5; position: relative; float: left; margin-right: 30px;}
-	#mypublicWrap #leftAside{}
+	#mypublicWrap{width: 940px; height: ; position: relative; margin: 30px auto 0 auto;}
+	#mypublicWrap #leftAside{width: 250px; height: 400px; background-color: #f9fafc; position: relative; float: left; margin-right: 30px; border: 1px solid #f0f1f5;}
+	#mypublicWrap #leftAside .profileImgDiv{width: 248px; height: 248px; position: relative; float: left;}
+	#mypublicWrap #leftAside .profileImgDiv:after{clear: both; display: block; *zoom: 1;}
+	#mypublicWrap #leftAside .profileImgDiv .bandDiv{width: 250px; height: 34px; position: absolute; top: 216px; background-color: rgba(255,255,255,0.3); color: #fff; line-height: 30px; padding-left: 20px; overflow: hidden;}
+	#mypublicWrap #leftAside .profileImgDiv .profileImg{width: 100%; height: 100%;}
+	#mypublicWrap #leftAside .profileTxt{width: 250px; padding: 20px; float: left;}
 
 	#mypublicWrap #rightDiv{position: relative; float: left;}
-	#mypublicWrap #rightDiv #introduceSelf{width: 660px; height: 100px; background-color: #f0f1f5; margin-bottom: 30px;}
-	#mypublicWrap #rightDiv #profileQuestion{width: 660px; height: 1000px; background-color: #f0f1f5;}
- 
+	#mypublicWrap #rightDiv #introduceSelf{width: 660px; height: 100px; background-color: #f9fafc; margin-bottom: 30px; padding: 30px;}
+	#mypublicWrap #rightDiv #profileQuestion{width: 660px; background-color: #f9fafc; position: relative; float: left; padding: 30px;}
+	#mypublicWrap #rightDiv #profileQuestion #saveProfile{margin-left: 460px; float: left;}
+	#mypublicWrap #rightDiv #profileQuestion #cancelSave{margin-left: 10px; float: left;}
+	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd{width: 230px; height: 230px; position: absolute; top:30px; background-color: #aaa;}
+	#mypublicWrap #rightDiv #profileQuestion .name1{width: 100%; float: left; margin-top: 250px; }
+	#mypublicWrap #rightDiv #profileQuestion .gender2{width: 100%; float: left; margin-top: 20px;}
+ 	#mypublicWrap #rightDiv #profileQuestion .birthday3{width: 100%; float: left; margin-top: 20px;}
+ 	#mypublicWrap #rightDiv #profileQuestion .live4{width: 100%; float: left; margin-top: 20px;}
+ 	#mypublicWrap #rightDiv #profileQuestion .city5{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .occupation6{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .education7{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .detail8{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .fluent9{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .learing10{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .interesting11{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .keyword12{width: 100%; float: left; margin-top: 20px;}
 
+	#mypublicWrap #rightDiv #profileQuestion .leftSection{width: 300px; float: left;}
+	#mypublicWrap #rightDiv #profileQuestion .leftSection .rightAlign{text-align: right; color: #62b8ef; line-height: 30px;}
+	#mypublicWrap #rightDiv #profileQuestion .detail8 .leftSection .rightAlign{line-height: 25px; margin-top: 70px;}
 
-
-
-
-
-
+	#mypublicWrap #rightDiv #profileQuestion .rightSection{width: 300px; float: left;}
+	#mypublicWrap #rightDiv #profileQuestion .rightSection input{width: 300px;}
+	#mypublicWrap #rightDiv #profileQuestion .rightSection #inputDetail{width: 300px; height: 300px; max-width: 300px; max-height: 200px;}
 
 /* 부트스트랩  form-control2 */
 	.form-control2 {

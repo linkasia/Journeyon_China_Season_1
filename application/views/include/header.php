@@ -64,6 +64,16 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script src="/application/views/js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/application/views/js/demo.js" type="text/javascript" charset="utf-8"></script>
+
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				$( "#datepicker" ).datepicker();
+			});
+		</script>
+
+
 	</head>
 
 
@@ -75,10 +85,11 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<source src="/application/views/images/Paris-P1-1.webm">
 				</video> -->
 				<video autoplay loop id="bgvid">
-					<source src="/application/views/images/g2.mp4">
+					<source src="/application/views/images/g3.mp4">
 					<source src="/application/views/images/Paris-P1-1.webm">
 				</video>
 				<header id="header_top">
+					<div id="darken"></div>
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
 						<li class="become_host" name="become_host" id="become_host"><i>申请加入当地人</i></li>
