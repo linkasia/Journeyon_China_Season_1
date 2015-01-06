@@ -422,19 +422,64 @@
 													'',
 													'',
 													'',
+													0,
+													0,
+													'',
+													0,
+													0,
 													'',
 													'',
 													'',
 													'',
 													'',
 													'',
-													'',
-													'',
-													'',
-													'',
-													'',
-													'',
+													SYSDATE(),
 													SYSDATE());";
+			$query = $this->db->query($sql);
+		}
+
+		function maxProduct()
+		{
+			$sql ="SELECT product_num
+							FROM product
+							ORDER BY product_num DESC
+							LIMIT 1";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function updateProduct($productNum)
+		{
+			/*
+			$sql ="UPDATE product
+									SET
+										title = '".."' ,
+										sortcountry = '".."' ,
+										country_code = '".."' ,
+										city_code = '".."' ,
+										DESCRIBE = '".."' ,
+										theme_num1_code = '".."' ,
+										theme_num2_code = '".."' ,
+										theme_num3_code = '".."' ,
+										recommend1_code = '".."' ,
+										recommend2_code = '".."' ,
+										travel_time = '".."' ,
+										meeting_place = '".."' ,
+										meeting_place_describe = '".."' ,
+										fat_price = '".."' ,
+										group_price = '".."' ,
+										include = '".."' ,
+										not_include = '".."' ,
+										etc = '".."' ,
+										s_get = '".."' ,
+										useYn = 'Y' ,
+										adminYn = 'N' ,
+										modified_date = SYSDATE()
+										WHERE
+										product_num = '".."'
+										AND user_num = '".."' ";
+										*/
 			$query = $this->db->query($sql);
 		}
 	}

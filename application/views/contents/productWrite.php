@@ -31,7 +31,7 @@
 				<img src="/application/views/images/contents/pic2.jpg" alt="pic2" data-toggle="modal" data-target="#myModal5">
 				<span class="glyphicon glyphicon-remove remove"></span>
 			</div>
-
+				<form name="imgUpload" id="imgUpload" method='post' enctype="multipart/form-data" action="/index.php/city/country/imgUpload?product_num=0000000001">
 				<!-- 위에 사진을 누르면 여기서부터 overview가 시작됨 data-toggle 과 id로 연동 작동 -->
 				<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog2">
@@ -41,17 +41,18 @@
 								<h4 class="modal-title" id="myModalLabel">Picture Upload</h4>
 							</div><!-- modal-header 닫힘 -->
 							<div class="modal-body2">
-								<input type="file" class="filestyle" id="fileUpload" data-icon="false">
+								<input type="file" class="filestyle" id="fileUpload" name="fileUpload" data-icon="false">
 								<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
 								<textarea name="pictureCaption" id="pictureCaption" rows="3"></textarea>
 							</div><!-- modal-body 닫힘 -->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-info" id="imgUpload" name="imgUpload">Upload</button>
+								<input type="submit" class="btn btn-info" id="imgUpload" name="imgUpload" value="Upload">
 								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 							</div><!-- modal-footer 닫힘 -->
 						</div><!-- modal-content 닫힘 -->
 					</div><!-- modal-dialog 닫힘 -->
 				</div><!-- modal fade Overveiw 끝 -->
+				</form>
 
 
 			<div class="picUpload">
@@ -85,11 +86,12 @@
 			<div class="form-group2">
 				<span class="ml">1人</span>
 				<input type="text" class="form-control2" id="1Price" placeholder="">
-			<span>元</span>
-
-			<span class="ml">Group</span>
+				<span>元</span>
+<!--
+				<span class="ml">Group</span>
 				<input type="text" class="form-control2" id="gPrice" placeholder="">
 				<span>元</span>
+-->
 			</div>
 		</div><!-- Div5 end -->
 
@@ -97,79 +99,35 @@
 			<p class="productTitle">经验类型</p>
 			<div class="themeWrap">
 				<ul class="favorite">
+					<? $i=0;
+					foreach($theme as $v){?>
 					<li>
-						<input type="checkbox" name="checkboxG6" id="checkboxG6" class="css-checkbox"/>
-						<label for="checkboxG6" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
+						<input type="checkbox" name="checkboxG<?=$i?>" id="checkboxG<?=$i?>" class="css-checkbox" onclick="lengCheck('<?=$i?>')"/>
+						<label for="checkboxG<?=$i?>" class="css-label">
+							<div class="round_box"><img src="<?=$v->ref1?>" alt=""><?=$v->code_nm?></div>
+							<input type='hidden' value='<?=$v->code?>' id='hiddenCode<?=$i?>' name='hiddenCode<?=$i?>' />
 						</label>
 					</li>
-					<li>
-						<input type="checkbox" name="checkboxG7" id="checkboxG7" class="css-checkbox"/>
-						<label for="checkboxG7" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="checkboxG8" id="checkboxG8" class="css-checkbox"/>
-						<label for="checkboxG8" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="checkboxG9" id="checkboxG9" class="css-checkbox"/>
-						<label for="checkboxG9" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="checkboxG10" id="checkboxG10" class="css-checkbox"/>
-						<label for="checkboxG10" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
-						</label>
-					</li>
+					<?$i++;
+					}?>
 				</ul>
 			</div>
 		</div><!-- Div6 end -->
-
 
 		<div class="productDiv7">
 			<p class="productTitle">推荐</p>
 			<div class="recmdWrap">
 				<ul class="favorite">
+					<?foreach($recommend as $v){?>
 					<li>
-						<input type="checkbox" name="checkboxG12" id="checkboxG12" class="css-checkbox"/>
-						<label for="checkboxG12" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
+						<input type="checkbox" name="checkboxG<?=$i?>" id="checkboxG<?=$i?>" class="css-checkbox" onclick="priceCheck('<?=$i?>')"/>
+						<label for="checkboxG<?=$i?>" class="css-label">
+							<div class="round_box"><img src="<?=$v->ref1?>" alt=""><?=$v->code_nm?></div>
+							<input type='hidden' value='<?=$v->code?>' id='hiddenCode<?=$i?>' name='hiddenCode<?=$i?>' />
 						</label>
 					</li>
-					<li>
-						<input type="checkbox" name="checkboxG13" id="checkboxG13" class="css-checkbox"/>
-						<label for="checkboxG13" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
-						</label>
-					</li>
-					<li>
-						<input type="checkbox" name="checkboxG14" id="checkboxG14" class="css-checkbox"/>
-						<label for="checkboxG14" class="css-label">
-							<div class="round_box"><img src="" alt=""></div>
-							<input type='hidden' value="" name="">
-							<input type='hidden' value="" name="">
-						</label>
-					</li>
+					<?$i++;
+					}?>
 				</ul>
 			</div>
 		</div><!-- Div7 end -->
@@ -182,10 +140,6 @@
 				<option value="2">2</option>
 				<option value="3">3</option>
 				<option value="4">4</option>
-			</select>
-
-			<select class="selectpicker" data-style="btn-info" id="selectTime2">
-				<option value="可调节">可调节</option>
 			</select>
 		</div><!-- Div8 end -->
 
@@ -209,6 +163,13 @@
 			<p class="productTitle">E.T.C</p>
 			<textarea name="" id="etc"></textarea>
 		</div><!-- Div12 end -->
+		<?foreach($maxProduct as $v){?>
+		<input type="hidden" id="hiddenProductNum" name="hiddenProductNum" value="<?=$v->product_num?>" >
+		<?}?>
+
+		<input type="button" id="saveProduct" name="saveProduct" value="save">
+		<input type="button" id="cancelProduct" name="cancelProduct" value="cancle">
+
 	</div><!-- productWrap -->
 
 	<div class="productInfo">
@@ -217,6 +178,25 @@
 </div><!-- productWrap en -->
 
 <script type="text/javascript">
+	var cnt = 0;
+	var priceCnt=0;
+	function lengCheck(i){
+		if(cnt >= 3){
+			alert("3개 이상등록하실 수 없습니다.");
+			$('#checkboxG'+i).attr("checked",false);
+		}else{
+			cnt++;
+		}
+	}
+
+	function priceCheck(i){
+		if(priceCnt >= 2){
+			alert("2개 이상등록하실 수 없습니다.");
+			$('#checkboxG'+i).attr("checked",false);
+		}else{
+			priceCnt++;
+		}
+	}
 
 	function choiceCountry(){
 		var _countrySelectClass = $('#selectCountry').val().substring(0,4);
@@ -236,9 +216,64 @@
 
 
 $(function(){
-/*
-	//$("#imgUpload").fileinput({
 
+	//저장버튼 클릭시 업데이트
+	$('#saveProduct').click( function(){
+		var _product_num = $('#hiddenProductNum').val();
+		var _theme="";
+
+		for(var k= 0; k < "<?=$i?>"; k++){
+			if($('#checkboxG'+k).is(":checked") == true){
+				_theme +=	$('#hiddenCode'+k).val()+",";
+			}
+		}
+
+		//alert("<?=$i?>");
+		alert(_theme);
+		/*
+		var _product_num = $('#hiddenProductNum').val();
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ product_num: _product_num},
+			url:"/index.php/city/country/updateProduct",
+			success: function (data){
+				alert(data);
+				//location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
+			}
+		});
+		*/
+	});
+
+
+	//취소버튼 클릭시 임시 데이터 삭제
+	$('#cancelProduct').click( function(){
+		var _product_num = $('#hiddenProductNum').val();
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ product_num: _product_num},
+			url:"/index.php/city/country/deleteProduct",
+			success: function (data){
+				location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
+			}
+		});
+	});
+/*
+	$("#imgUpload").click( function(){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ product_num: _product_num},
+			url:"/index.php/city/country/imgUpload",
+			success: function (data){
+				//location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
+			}
+		});
+/*
 	$(document).read(function(){
 		function readURL(input){
 			if (input.files && input.files[0]) {
@@ -261,8 +296,8 @@ $(function(){
 			{caption: "Desert.jpg", width: "120px", url:"/site/file-delete", key:1},
 			{caption: "Jellyfish.jpg", width: "120px", url:"/site/file-delete", key:2}
 		],
-
-	});
 */
+	});
+
 });
 </script>

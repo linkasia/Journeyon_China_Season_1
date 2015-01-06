@@ -161,9 +161,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*상품 업로드 입력*/
 	function productUpload(){
-
 		$insert['insertproduct'] = $this->country_M->insertproduct($this->session->userdata['num']);
 		$data['country'] = $this->main_i->Country();
+		//내가 저장한 값을 가져오기 위한 쿼리
+		$data['maxProduct'] = $this->country_M->maxProduct();
+		$data['theme'] = $this->tb_code->theme();
+		$data['recommend'] = $this->tb_code->recommend();
 
 		$this->load->view('include/header');
 		$this->load->view('contents/productWrite',$data);
@@ -177,6 +180,32 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$data['city'] = $this->main_i->choiceCityList($countrySelectClass, $code);
 		$this->load->view('contents/comboCity',$data);
+	}
+
+	/*상품등록시 취소*/
+	function deleteProduct(){
+		$product_num = $_REQUEST['product_num'];
+		$delete['insertproduct'] = $this->country_M->deleteProduct($product_num);
+	}
+
+	/*상품저장*/
+	function updateProduct(){
+		$product_num = $_REQUEST['product_num'];
+		$delete['insertproduct'] = $this->country_M->updateProduct($product_num);
+	}
+
+	/*상품저장*/
+	function imgUpload(){
+		$product_num = $_REQUEST['product_num'];
+		$save_dir = "/productImages/".$product_num."/";
+		if(is_uploaded_file($_FILES["fileUpload"]["tmp_name"]))
+		{
+			$dest=$_FILES["fileUpload"]["tmp_name"];
+			echo "succse=".$dest;
+		}else{
+			echo "file=".$save_dir;
+		}
+
 	}
 }
 ?>
