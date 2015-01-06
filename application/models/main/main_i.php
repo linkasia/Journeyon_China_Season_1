@@ -67,7 +67,7 @@
 											c.ref1,
 											a.*
 						FROM product a
-						LEFT JOIN USER b ON a.user_num = b.num
+						LEFT JOIN USER b ON a.user_num = b.user_num
 						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
 						WHERE a.useYn='Y'
 						ORDER BY a.create_date DESC
@@ -86,7 +86,7 @@
 											c.ref1,
 											a.*
 						FROM product a
-						LEFT JOIN USER b ON a.user_num = b.num
+						LEFT JOIN USER b ON a.user_num = b.user_num
 						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
 						WHERE a.useYn='Y'
 						AND a.adminYn='Y'

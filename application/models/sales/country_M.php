@@ -35,7 +35,7 @@
 											h.ref1 AS refrecom2,
 											a.*
 								FROM product a
-								LEFT JOIN USER b ON a.user_num=b.num
+								LEFT JOIN USER b ON a.user_num=b.user_num
 								LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
 								LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
 								LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
@@ -101,7 +101,7 @@
 								h.ref1 AS refrecom2,
 								a.*
 					FROM product a
-					LEFT JOIN USER b ON a.user_num=b.num
+					LEFT JOIN USER b ON a.user_num=b.user_num
 					LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
 					LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
 					LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
@@ -160,7 +160,7 @@
 											DATE_FORMAT(b.create_time,'%m') AS mon,
 											DATE_FORMAT(b.create_time,'%d') AS DAY
 								FROM product a
-								LEFT JOIN USER b ON a.user_num = b.num
+								LEFT JOIN USER b ON a.user_num = b.user_num
 								LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code=c.code
 								LEFT JOIN city_table d ON b.mother_area_code = d.sclass AND b.mother_country_code=d.class AND b.mother_city_code = d.code
 								LEFT JOIN city_table e ON b.live_area_code = e.sclass AND b.live_country_code=e.class AND b.live_city_code = e.code
@@ -209,7 +209,7 @@
 											c.ref1 AS country_flog,
 											d.user_num
 							FROM user_question_product a
-							LEFT JOIN USER b ON a.user_num = b.num
+							LEFT JOIN USER b ON a.user_num = b.user_num
 							LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
 							LEFT JOIN product d ON a.product_num = d.num
 							WHERE a.product_num='".$num."'
@@ -235,7 +235,7 @@
 											c.code_nm AS country_nm,
 											c.ref1 AS country_flog
 								FROM answer a
-								LEFT JOIN USER b ON a.user_num = b.num
+								LEFT JOIN USER b ON a.user_num = b.user_num
 								LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
 							WHERE a.product_num='".$num."'
 							ORDER BY a.create_date ASC";
@@ -307,7 +307,7 @@
 							LEFT JOIN code_table j ON a.special1_code = j.code AND j.class='0011'
 							LEFT JOIN code_table k ON a.special2_code = k.code AND k.class='0011'
 							LEFT JOIN code_table l ON a.special3_code = l.code AND l.class='0011'
-							WHERE a.num='".$userNum."'";
+							WHERE a.user_num='".$userNum."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -333,14 +333,14 @@
 											h.ref1 AS refrecom2,
 											a.*
 								FROM product a
-								LEFT JOIN USER b ON a.user_num=b.num
+								LEFT JOIN USER b ON a.user_num=b.user_num
 								LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
 								LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
 								LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
 								LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
 								LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 								LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
-							WHERE b.num='".$userNum."'";
+							WHERE b.user_num='".$userNum."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -379,7 +379,7 @@
 		function insertProduct($userNum)
 		{
 			$sql ="INSERT INTO product
-													(`num`,
+													(`product_num`,
 													`user_num`,
 													`title`,
 													`sortcountry`,

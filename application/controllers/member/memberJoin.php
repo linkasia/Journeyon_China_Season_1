@@ -68,7 +68,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 			if($result)
 			{
 				$newdata = array(
-						'num' =>$result->num,
+						'num' =>$result->user_num,
 						'email' => $result->email,
 						'password' => $result->password,
 						'messenger_qq' => $result->messenger_qq,
