@@ -1189,19 +1189,55 @@
 /* View on Public */
 
 	#mypublicWrap{width: 940px; height: ; position: relative; margin: 30px auto 0 auto;}
-	#mypublicWrap #leftAside{width: 250px; height: 400px; background-color: #f9fafc; position: relative; float: left; margin-right: 30px; border: 1px solid #f0f1f5;}
+	#mypublicWrap #leftAside{
+		width: 250px;
+		height: 400px;
+		background: #4c4c4c; /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRjNGM0YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEyJSIgc3RvcC1jb2xvcj0iIzU5NTk1OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM5JSIgc3RvcC1jb2xvcj0iIzQ3NDc0NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc2JSIgc3RvcC1jb2xvcj0iIzJiMmIyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iIzFjMWMxYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMzEzMTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top,  #4c4c4c 0%, #595959 12%, #474747 39%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(39%,#474747), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#474747 39%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#474747 39%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #4c4c4c 0%,#595959 12%,#474747 39%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#474747 39%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-8 */
+		position: relative; float: left; margin-right: 30px; border: 1px solid #f0f1f5;}
+
 	#mypublicWrap #leftAside .profileImgDiv{width: 248px; height: 248px; position: relative; float: left;}
 	#mypublicWrap #leftAside .profileImgDiv:after{clear: both; display: block; *zoom: 1;}
-	#mypublicWrap #leftAside .profileImgDiv .bandDiv{width: 250px; height: 34px; position: absolute; top: 216px; background-color: rgba(255,255,255,0.3); color: #fff; line-height: 30px; padding-left: 20px; overflow: hidden;}
+
+
+
+	#mypublicWrap #leftAside .profileImgDiv .bandDiv{width: 250px; height: 34px; position: absolute; top: 214px; background-color: rgba(255,255,255,0.3); color: #fff; line-height: 30px; padding-left: 20px; overflow: hidden;}
 	#mypublicWrap #leftAside .profileImgDiv .profileImg{width: 100%; height: 100%;}
 	#mypublicWrap #leftAside .profileTxt{width: 250px; padding: 20px; float: left;}
 
 	#mypublicWrap #rightDiv{position: relative; float: left;}
+
 	#mypublicWrap #rightDiv #introduceSelf{width: 660px; background-color: #f9fafc; margin-bottom: 30px; padding: 30px;}
+	#mypublicWrap #rightDiv #introduceSelf .headline{font-size: 1.3em; color: #62b8ef;}
 	#mypublicWrap #rightDiv #profileQuestion{width: 660px; background-color: #f9fafc; position: relative; float: left; padding: 30px;}
 	#mypublicWrap #rightDiv #profileQuestion #saveProfile{margin-left: 460px; float: left;}
 	#mypublicWrap #rightDiv #profileQuestion #cancelSave{margin-left: 10px; float: left;}
-	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd{width: 230px; height: 230px; position: absolute; top:30px; background-color: #aaa;}
+	#mypublicWrap #rightDiv #profileQuestion #saveProfileBottom{margin-top: 20px; margin-left: 458px;}
+	#mypublicWrap #rightDiv #profileQuestion #cancelSaveBottom{margin-top: 20px; margin-left: 10px;}
+	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd{width: 230px; height: 230px; position: absolute; top:30px; background-color: #000;}
+	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd .plus{position: absolute; color: #fff; top:35%; left: 35%; font-size: 50pt; opacity: 0.5;}
+	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd{
+	    position: absolute;
+		opacity: 0.6;
+		background: rgba(0, 0, 0,.6);
+		-webkit-transition: all ease .8s;
+		-moz-transition: all ease .8s;
+		transition: all ease .8s;
+		cursor: pointer;
+		}
+	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd:hover{
+		opacity: 1;
+		}
+	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd .uploadImg{width: 100%; height: 100%;}
+
 	#mypublicWrap #rightDiv #profileQuestion .name1{width: 100%; float: left; margin-top: 250px; }
 	#mypublicWrap #rightDiv #profileQuestion .gender2{width: 100%; float: left; margin-top: 20px;}
 
@@ -1216,10 +1252,13 @@
 	#mypublicWrap #rightDiv #profileQuestion .education7{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .detail8{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .fluent9{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .fluent9 .rightSection input{margin-bottom: 5px;}
+	
 	#mypublicWrap #rightDiv #profileQuestion .learing10{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .learing10 .rightSection input{margin-bottom: 5px;}
 	#mypublicWrap #rightDiv #profileQuestion .interesting11{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .keyword12{width: 100%; float: left; margin-top: 20px;}
-
+	#mypublicWrap #rightDiv #profileQuestion .keyword12 .rightSection input{margin-bottom: 5px;}
 	#mypublicWrap #rightDiv #profileQuestion .leftSection{width: 300px; float: left;}
 	#mypublicWrap #rightDiv #profileQuestion .leftSection .rightAlign{text-align: right; color: #62b8ef; line-height: 30px;}
 	#mypublicWrap #rightDiv #profileQuestion .detail8 .leftSection .rightAlign{line-height: 25px; margin-top: 70px;}
@@ -1248,7 +1287,7 @@
 		-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 		-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 		transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-	float: left;
+		float: left;
 	}
 	
 	.form-control2:focus {

@@ -10,7 +10,7 @@
 		</div>
 		<div class="profileTxt">
 			<p>From Korea</p>
-			<p>V certifi L Yes</p>
+			<p>V certifi : Yes</p>
 			<p>Guide active : Yes</p>
 			<p>Member since 2014</p>
 		</div>
@@ -28,7 +28,10 @@
 		<div id="profileQuestion">
 			<button class="btn btn-info" id="saveProfile">Save</button>
 			<button class="btn btn-warning" id="cancelSave">Cancel</button>
-			<div class="profilepicAdd" id="profilepicAdd"><img src="" alt=""></div>
+			<div class="profilepicAdd" id="profilepicAdd">
+				<span class="glyphicon glyphicon-plus plus"></span>
+				<img src="/application/views/images/main/profile02.jpg" alt="profile" class="uploadImg" id="profileImg">
+			</div>
 			<div class="name1">
 				<div class="leftSection">
 					<p class="rightAlign">What is your Name?</p>
@@ -84,11 +87,20 @@
 			</div>
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputFluent"></div>			
+				<div class="rightSection">
+					<input type="text" class="form-control2 text" id="inputFluent1">
+					<input type="text" class="form-control2 text" id="inputFluent2">
+					<input type="text" class="form-control2 text" id="inputFluent3">
+	
+				</div>			
 			</div>
 			<div class="learing10">
 				<div class="leftSection"><p class="rightAlign">Language I’m Learing</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputLearing"></div>			
+				<div class="rightSection">
+					<input type="text" class="form-control2 text" id="inputLearing1">
+					<input type="text" class="form-control2 text" id="inputLearing2">
+					<input type="text" class="form-control2 text" id="inputLearing3">
+				</div>
 			</div>
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
@@ -96,8 +108,14 @@
 			</div>
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputKeyword"></div>			
+				<div class="rightSection">
+					<input type="text" class="form-control2 text" id="inputKeyword1">
+					<input type="text" class="form-control2 text" id="inputKeyword2">
+					<input type="text" class="form-control2 text" id="inputKeyword3">
+				</div>			
 			</div>
+			<button class="btn btn-info" id="saveProfileBottom">Save</button>
+			<button class="btn btn-warning" id="cancelSaveBottom">Cancel</button>
 		</div>
 	</div>
 </div><!-- mypublicWrap -->
