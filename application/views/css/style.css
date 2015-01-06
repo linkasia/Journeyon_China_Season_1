@@ -1197,13 +1197,18 @@
 	#mypublicWrap #leftAside .profileTxt{width: 250px; padding: 20px; float: left;}
 
 	#mypublicWrap #rightDiv{position: relative; float: left;}
-	#mypublicWrap #rightDiv #introduceSelf{width: 660px; height: 100px; background-color: #f9fafc; margin-bottom: 30px; padding: 30px;}
+	#mypublicWrap #rightDiv #introduceSelf{width: 660px; background-color: #f9fafc; margin-bottom: 30px; padding: 30px;}
 	#mypublicWrap #rightDiv #profileQuestion{width: 660px; background-color: #f9fafc; position: relative; float: left; padding: 30px;}
 	#mypublicWrap #rightDiv #profileQuestion #saveProfile{margin-left: 460px; float: left;}
 	#mypublicWrap #rightDiv #profileQuestion #cancelSave{margin-left: 10px; float: left;}
 	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd{width: 230px; height: 230px; position: absolute; top:30px; background-color: #aaa;}
 	#mypublicWrap #rightDiv #profileQuestion .name1{width: 100%; float: left; margin-top: 250px; }
 	#mypublicWrap #rightDiv #profileQuestion .gender2{width: 100%; float: left; margin-top: 20px;}
+
+
+	#mypublicWrap #rightDiv #profileQuestion .gender2 .rightSection .male{width: 110px; float: left; margin-left: 70px; line-height: 30px;}
+	#mypublicWrap #rightDiv #profileQuestion .gender2 .rightSection .female{width: 100px; float: left; line-height: 30px;}
+
  	#mypublicWrap #rightDiv #profileQuestion .birthday3{width: 100%; float: left; margin-top: 20px;}
  	#mypublicWrap #rightDiv #profileQuestion .live4{width: 100%; float: left; margin-top: 20px;}
  	#mypublicWrap #rightDiv #profileQuestion .city5{width: 100%; float: left; margin-top: 20px;}
@@ -1219,8 +1224,8 @@
 	#mypublicWrap #rightDiv #profileQuestion .leftSection .rightAlign{text-align: right; color: #62b8ef; line-height: 30px;}
 	#mypublicWrap #rightDiv #profileQuestion .detail8 .leftSection .rightAlign{line-height: 25px; margin-top: 70px;}
 
-	#mypublicWrap #rightDiv #profileQuestion .rightSection{width: 300px; float: left;}
-	#mypublicWrap #rightDiv #profileQuestion .rightSection input{width: 300px;}
+	#mypublicWrap #rightDiv #profileQuestion .rightSection{width: 300px; float: left; position: relative;}
+	#mypublicWrap #rightDiv #profileQuestion .rightSection input.text{width: 300px;}
 	#mypublicWrap #rightDiv #profileQuestion .rightSection #inputDetail{width: 300px; height: 300px; max-width: 300px; max-height: 200px;}
 
 /* 부트스트랩  form-control2 */

@@ -1,9 +1,3 @@
-/*!
- * Bootstrap-select v1.6.3 (http://silviomoreto.github.io/bootstrap-select/)
- *
- * Copyright 2013-2014 bootstrap-select
- * Licensed under MIT (https://github.com/silviomoreto/bootstrap-select/blob/master/LICENSE)
- */
 (function ($) {
   'use strict';
 
@@ -219,7 +213,7 @@
           '<span class="filter-option pull-left"></span>&nbsp;' +
           '<span class="caret"></span>' +
           '</button>' +
-          '<div class="dropdown-menu open2">' +
+          '<div class="dropdown-menu open">' +
           header +
           searchbox +
           actionsbox +
@@ -441,7 +435,7 @@
       if (this.options.size === false) return;
 
       var $selectClone = this.$menu.parent().clone().find('> .dropdown-toggle').prop('autofocus', false).end().appendTo('body'),
-          $menuClone = $selectClone.addClass('open2').find('> .dropdown-menu'),
+          $menuClone = $selectClone.addClass('open').find('> .dropdown-menu'),
           liHeight = $menuClone.find('li').not('.divider').not('.dropdown-header').filter(':visible').children('a').outerHeight(),
           headerHeight = this.options.header ? $menuClone.find('.popover-title').outerHeight() : 0,
           searchHeight = this.options.liveSearch ? $menuClone.find('.bs-searchbox').outerHeight() : 0,
@@ -589,7 +583,7 @@
         }
         getPlacement($(this));
         $drop.appendTo(that.options.container);
-        $drop.toggleClass('open2', !$(this).hasClass('open2'));
+        $drop.toggleClass('open', !$(this).hasClass('open'));
         $drop.append(that.$menu);
       });
       $(window).resize(function () {
@@ -600,7 +594,7 @@
       });
       $('html').on('click', function (e) {
         if ($(e.target).closest(that.$newElement).length < 1) {
-          $drop.removeClass('open2');
+          $drop.removeClass('open');
         }
       });
     },
@@ -962,12 +956,12 @@
 
       $items = $('[role=menu] li a', $parent);
 
-      isActive = that.$menu.parent().hasClass('open2');
+      isActive = that.$menu.parent().hasClass('open');
 
       if (!isActive && /([0-9]|[A-z])/.test(String.fromCharCode(e.keyCode))) {
         if (!that.options.container) {
           that.setSize();
-          that.$menu.parent().addClass('open2');
+          that.$menu.parent().addClass('open');
           isActive = true;
         } else {
           that.$newElement.trigger('click');
@@ -978,7 +972,7 @@
       if (that.options.liveSearch) {
         if (/(^9$|27)/.test(e.keyCode.toString(10)) && isActive && that.$menu.find('.active').length === 0) {
           e.preventDefault();
-          that.$menu.parent().removeClass('open2');
+          that.$menu.parent().removeClass('open');
           that.$button.focus();
         }
         $items = $('[role=menu] li:not(.divider):not(.dropdown-header):visible', $parent);
@@ -1090,7 +1084,7 @@
       }
 
       if ((/(^9$|27)/.test(e.keyCode.toString(10)) && isActive && (that.multiple || that.options.liveSearch)) || (/(27)/.test(e.keyCode.toString(10)) && !isActive)) {
-        that.$menu.parent().removeClass('open2');
+        that.$menu.parent().removeClass('open');
         that.$button.focus();
       }
     },

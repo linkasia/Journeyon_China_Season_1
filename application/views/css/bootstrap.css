@@ -3258,6 +3258,14 @@ tbody.collapse.in {
   background-color: #e5e5e5;
 }
 
+.open {
+  *z-index: 1000;
+}
+
+.open2 {
+  *z-index: 1000;
+}
+
 .open{
 	display: block;
 }/*block 을 논으로*/
@@ -3305,6 +3313,13 @@ tbody.collapse.in {
 }
 
 /* open2 생성 */
+.open2 > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+
 .open2{display: none;}
 .open2 > .dropdown-menu {display: block;}
 .open2 > a {outline: 0;}

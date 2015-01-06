@@ -63,16 +63,10 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script src="/application/views/js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/application/views/js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
-		<script src="/application/views/js/demo.js" type="text/javascript" charset="utf-8"></script>
+		<!-- script src="/application/views/js/demo.js" type="text/javascript" charset="utf-8"></script -->
 
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-		<script>
-			$(function() {
-				$( "#datepicker" ).datepicker();
-			});
-		</script>
-
 
 	</head>
 

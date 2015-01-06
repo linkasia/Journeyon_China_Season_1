@@ -34,55 +34,71 @@
 					<p class="rightAlign">What is your Name?</p>
 				</div>
 				<div class="rightSection">
-						<input type="text" class="form-control2 name" id="inputName">
+						<input type="text" class="form-control2 text" id="inputName">
 				</div>
 			</div>
+
 			<div class="gender2">
 				<div class="leftSection"><p class="rightAlign">What is your Gender?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputGender"></div>			
+				<div class="rightSection">
+					<!-- <input type="text" class="form-control2" id="inputGender"> -->
+					<div class="male">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Male
+						</label>
+					</div>
+					<div class="female">
+						<label>
+							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">	Female
+						</label>
+					</div>
+
+				</div><!-- gender2 end -->			
 			</div>
 			<div class="birthday3">
 				<div class="leftSection"><p class="rightAlign">What is your Birthday?</p></div>
 				<div class="rightSection">
-					<input type="text" value="Date/Month/Year" class="form-control2" id="datepicker">
+					<label for="birth"></label>
+					<input type="date" value="1985-01-01" class="form-control2 text" id="birth">
 				</div>			
 			</div>
 			<div class="live4">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputLive"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputLive"></div>			
 			</div>
 			<div class="city5">
 				<div class="leftSection"><p class="rightAlign">Since, How long do you live in that City?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputCity"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputCity"></div>			
 			</div>
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputOccupation"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation">	</div>			
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputEducation"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation"></div>			
 			</div>
 			<div class="detail8">
 				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
-				<div class="rightSection"><textarea class="form-control2" id="inputDetail"></textarea></div>			
+				<div class="rightSection"><textarea class="form-control2 text" id="inputDetail"></textarea></div>			
 			</div>
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputFluent"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputFluent"></div>			
 			</div>
 			<div class="learing10">
 				<div class="leftSection"><p class="rightAlign">Language I’m Learing</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputLearing"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputLearing"></div>			
 			</div>
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputInteresting"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputInteresting"></div>			
 			</div>
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
-				<div class="rightSection"><input type="text" class="form-control2" id="inputKeyword"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputKeyword"></div>			
 			</div>
 		</div>
 	</div>
 </div><!-- mypublicWrap -->
+
