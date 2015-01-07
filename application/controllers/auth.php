@@ -102,4 +102,10 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 
 		$data = $this->email->send();
 	}
+
+	function chat_List(){
+		$this->load->view('include/header');
+		$this->load->view('contents/chatlist');
+		$this->load->view('include/footer');
+	}
 }
