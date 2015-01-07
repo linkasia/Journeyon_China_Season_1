@@ -196,29 +196,36 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*상품저장*/
 	function imgUpload(){
-		$product_num = $_REQUEST['product_num'];
+		//$formData = $_REQUEST['formData'];
+		print_r($formData);
+		//$product_num = $formData['product_num'];
+
+		//print_r($product_num);
+		//$product_num = $_REQUEST['hiddenProductNum'];
+		//$product_num = $formData->hiddenProductNum;
+
+		//$fileUpload  =$formData['fileUpload'];
+		//echo "-->".$_REQUEST['hiddenProductNum'];
+		//echo "<script>alert(".$_REQUEST['hiddenProductNum'].")</script>";
+		//$fileUpload = $_REQUEST['fileUpload'];
+/*
 		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/productImages/".$product_num."/";
 
-		$file_temp = $_FILES['fileUpload']['tmp_name'];
-		$file_name = $_FILES['fileUpload']['name'];
-		$file_size    = $_FILES['fileUpload']['size'];
 
-		echo $file_temp ."<br />";
-		echo $file_name ."<br />";
-		echo $file_size ."<br />";
-
-		if(is_uploaded_file($_FILES["fileUpload"]["tmp_name"]))
+		if(is_uploaded_file($_FILES[$fileUpload]["tmp_name"]))
 		{
 
 			if(!is_dir($save_dir)){
+				umask(0);
 				@mkdir($save_dir, 0777);
 				chmod($save_dir, 0777);
 			}
-			$dest=$save_dir.$_FILES["fileUpload"]["name"];
-			if(!move_uploaded_file($_FILES["fileUpload"]["tmp_name"],$save_dir)){
+			$dest=$save_dir.$_FILES[$fileUpload]["name"];
+			if(!move_uploaded_file($_FILES[$fileUpload]["tmp_name"],$dest)){
 				die("file save fail");
 			}
 		}
+*/
 	}
 }
 ?>

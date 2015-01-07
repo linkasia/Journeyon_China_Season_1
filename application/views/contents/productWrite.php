@@ -31,7 +31,10 @@
 				<img src="/application/views/images/contents/pic2.jpg" alt="pic2" data-toggle="modal" data-target="#myModal5">
 				<span class="glyphicon glyphicon-remove remove"></span>
 			</div>
-				<form name="imgUpload" id="imgUpload" method='post' enctype="multipart/form-data" action="/index.php/city/country/imgUpload?product_num=0000000001">
+				<form name="imgUploadfrm" id="imgUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/city/country/imgUpload">
+				<?foreach($maxProduct as $v){?>
+				<input type="hidden" id="hiddenProductNum" name="hiddenProductNum" value="<?=$v->product_num?>" >
+				<?}?>
 				<!-- 위에 사진을 누르면 여기서부터 overview가 시작됨 data-toggle 과 id로 연동 작동 -->
 				<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog2">
@@ -46,7 +49,7 @@
 								<textarea name="pictureCaption" id="pictureCaption" rows="3"></textarea>
 							</div><!-- modal-body 닫힘 -->
 							<div class="modal-footer">
-								<input type="submit" class="btn btn-info" id="imgUpload" name="imgUpload" value="Upload">
+								<button type="button" class="btn btn-info" id="imgUpload" name="imgUpload">Upload</button>
 								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 							</div><!-- modal-footer 닫힘 -->
 						</div><!-- modal-content 닫힘 -->
@@ -163,9 +166,7 @@
 			<p class="productTitle">E.T.C</p>
 			<textarea name="" id="etc"></textarea>
 		</div><!-- Div12 end -->
-		<?foreach($maxProduct as $v){?>
-		<input type="hidden" id="hiddenProductNum" name="hiddenProductNum" value="<?=$v->product_num?>" >
-		<?}?>
+
 
 		<input type="button" id="saveProduct" name="saveProduct" value="save">
 		<input type="button" id="cancelProduct" name="cancelProduct" value="cancle">
@@ -212,8 +213,22 @@
 			}
 		});
 	}
-
-
+/*
+$(document).ready(function() {
+	$("#imgUpload").click(function() {
+		alert("aa");
+		var formData = $("#imgUploadfrm").serialize();
+		$.ajax({
+			type : "POST",
+			url : "/index.php/city/country/imgUpload",
+			cache : false,
+			data : formData,
+			success : onSuccess,
+			error : onError
+		});
+	});
+});
+*/
 
 $(function(){
 
@@ -261,43 +276,30 @@ $(function(){
 			}
 		});
 	});
-/*
+
+
+
 	$("#imgUpload").click( function(){
+		var _formData = new FormData();
+				_formData.append("hiddenProductNum", $("input[name=hiddenProductNum]").val());
+				_formData.append("pictureCaption", $("textarea[name=pictureCaption]").text());
+				_formData.append("fileUpload", $("input[name=fileUpload]")[0].files[0]);
+				alert(_formData['hiddenProductNum']);
+
 		$.ajax({
 			type:"POST" ,
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-			data:{ product_num: _product_num},
+			data:{ formData: _formData},
 			url:"/index.php/city/country/imgUpload",
 			success: function (data){
+				alert(data);
 				//location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
 			}
 		});
-/*
-	$(document).read(function(){
-		function readURL(input){
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-				reader.onload = function (e) {
-					$('#insertImg1').attr('src', e.target.result);
-				}
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-
-		uploadUrl: "' . Url::to(['/site/file-upload']) . '"
-		maxFileCount: 10,
-		overwriteInitial: false,
-		initialPreview: [
-			'<img src="/images/examples/Desert.jpg " class="file-preview-image">',
-			'<img src="/images/examples/Jellyfish.jpg " class="file-preview-image">',
-		],
-		initialPreviewConfig: [
-			{caption: "Desert.jpg", width: "120px", url:"/site/file-delete", key:1},
-			{caption: "Jellyfish.jpg", width: "120px", url:"/site/file-delete", key:2}
-		],
-*/
 	});
 
 });
+
+
 </script>
