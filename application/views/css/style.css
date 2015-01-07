@@ -12,6 +12,9 @@
 	img{border: 0;}
 
 
+	
+
+
 /* 전체를 감싸는 wrap */
 	#wrap{width: 100%; height: auto; margin: 0 auto;}
 
@@ -1267,6 +1270,24 @@
 	#mypublicWrap #rightDiv #profileQuestion .rightSection input.text{width: 300px;}
 	#mypublicWrap #rightDiv #profileQuestion .rightSection #inputDetail{width: 300px; height: 300px; max-width: 300px; max-height: 200px;}
 
+
+/* ChatList */
+	#chatlistWrap{width: 940px; height: ; position: relative; margin: 30px auto 0 auto;}
+	#chatlistWrap .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+	#chatlistWrap .title2 .underline{border-bottom: 2px #f3c807 solid; width: 75px; height: 40px; line-height: 40px; font-size: 1.35em;}
+	#chatlistWrap .chatlistDiv{width: 100%; position: relative; border-bottom: 1px solid #f0f1f5; margin-bottom: 30px; float: left;}
+	#chatlistWrap .chatlistDiv .chat1{width: 100%; height: 140px;}
+
+	#chatlistWrap .chatlistDiv .chat1 #chatCheckbox{width: 18px; height: 18px; position: absolute; top: 60px;  left: 20px;}
+	#chatlistWrap .chatlistDiv .chat1 .chatimgDiv{width: 100px; height: 100px; position: absolute; top: 20px; left: 60px;}
+	#chatlistWrap .chatlistDiv .chat1 .chatimgDiv img{width: 100%; height: 100%;}
+	#chatlistWrap .chatlistDiv .chat1 .lastChat{position: absolute; top: 20px; left: 180px;}
+	#chatlistWrap .chatlistDiv .chat1 .chatText{width: 700px; height: 60px; position: absolute; left: 180px; top:50px; background-color: #fffcd2; padding: 20px; border-radius: 10px;}
+	#chatlistWrap #sort1{float: left; margin-left: 800px;}
+	#chatlistWrap #selectAll{float: left; margin-left: 10px;}
+
+	
+
 /* 부트스트랩  form-control2 */
 	.form-control2 {
 		display: block;
@@ -1384,6 +1405,29 @@
 		background: #fed136;
 	}
 
+
+/* scroll bar style */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-button {
+	width: 8px;
+	height:5px;
+}
+::-webkit-scrollbar-track {
+	background:#eee;
+	border: thin solid lightgray;
+	box-shadow: 0px 0px 3px #dfdfdf inset;
+	border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+	background:#999;
+	border: thin solid gray;
+	border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background:#7d7d7d;
+}		
 
 
 /*여기서부터 부트 스트랩 두 번째*/
