@@ -131,8 +131,9 @@ $mode = $_REQUEST['mode'];
 					<?}else{?>
 						<img src="/application/views/images/main/sns02.png" alt="" class="sns_icon2C">
 					<?}?>
-				</div>
-			</div>
+
+				</div><!-- sns_icon end -->
+			</div><!-- right_profile end -->
 		<?}?>
 	</aside>
 </div>
