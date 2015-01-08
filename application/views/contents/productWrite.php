@@ -28,12 +28,12 @@
 		<div class="productDiv3">
 			<p class="productTitle">Picture</p>
 			<div class="picUpload">
-				<img src="/application/views/images/contents/pic2.jpg" alt="pic2" data-toggle="modal" data-target="#myModal5">
+				<img src="/application/views/images/contents/pic2.jpg" alt="pic0" data-toggle="modal" data-target="#myModal5" id='pic0' name='pic0'>
 				<span class="glyphicon glyphicon-remove remove"></span>
 			</div>
 				<form name="imgUploadfrm" id="imgUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/city/country/imgUpload">
 				<?foreach($maxProduct as $v){?>
-				<input type="hidden" id="hiddenProductNum" name="hiddenProductNum" value="<?=$v->product_num?>" >
+					<input type="hidden" id="hiddenProductNum" name="hiddenProductNum" value="<?=$v->product_num?>" >
 				<?}?>
 				<!-- 위에 사진을 누르면 여기서부터 overview가 시작됨 data-toggle 과 id로 연동 작동 -->
 				<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -46,10 +46,12 @@
 							<div class="modal-body2">
 								<input type="file" class="filestyle" id="fileUpload" name="fileUpload" data-icon="false">
 								<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
+								<input type='text' name="hiddenId" id="hiddenId" class="form-control">
+								<input type='text' name="pictureTitle" id="pictureTitle" class="form-control">
 								<textarea name="pictureCaption" id="pictureCaption" rows="3"></textarea>
 							</div><!-- modal-body 닫힘 -->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-info" id="imgUpload" name="imgUpload">Upload</button>
+								<button type="submit" class="btn btn-info" id="imgUpload" name="imgUpload">Upload</button>
 								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 							</div><!-- modal-footer 닫힘 -->
 						</div><!-- modal-content 닫힘 -->
@@ -60,7 +62,7 @@
 
 			<div class="picUpload">
 				<span class="glyphicon glyphicon-remove remove"></span>
-				<img id="insertImg1" src="" alt="">
+				<img id="insertImg1" src="" alt="" data-toggle="modal" data-target="#myModal5">
 			</div>
 
 			<div class="picUpload">
@@ -213,24 +215,19 @@
 			}
 		});
 	}
-/*
-$(document).ready(function() {
-	$("#imgUpload").click(function() {
-		alert("aa");
-		var formData = $("#imgUploadfrm").serialize();
-		$.ajax({
-			type : "POST",
-			url : "/index.php/city/country/imgUpload",
-			cache : false,
-			data : formData,
-			success : onSuccess,
-			error : onError
-		});
-	});
-});
-*/
 
 $(function(){
+
+	$('#imgUploadfrm').ajaxForm();
+
+	$(function(){
+		$('#imgUploadfrm').ajaxForm({
+			success: function(data){
+				//alert(data);
+				$("#pic0").attr("src",data);
+			}
+		});
+	});
 
 	//저장버튼 클릭시 업데이트
 	$('#saveProduct').click( function(){
@@ -276,29 +273,6 @@ $(function(){
 			}
 		});
 	});
-
-
-
-	$("#imgUpload").click( function(){
-		var _formData = new FormData();
-				_formData.append("hiddenProductNum", $("input[name=hiddenProductNum]").val());
-				_formData.append("pictureCaption", $("textarea[name=pictureCaption]").text());
-				_formData.append("fileUpload", $("input[name=fileUpload]")[0].files[0]);
-				alert(_formData['hiddenProductNum']);
-
-		$.ajax({
-			type:"POST" ,
-			dataType:"text",
-			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-			data:{ formData: _formData},
-			url:"/index.php/city/country/imgUpload",
-			success: function (data){
-				alert(data);
-				//location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
-			}
-		});
-	});
-
 });
 
 

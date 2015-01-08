@@ -482,5 +482,25 @@
 										*/
 			$query = $this->db->query($sql);
 		}
+
+		function insertImg($product_num,$pictureTitle,$pictureCaption,$filePath)
+		{
+			$sql ="INSERT INTO spot
+						(product_num,
+						product_seq,
+						name_cn_en,
+						img_path,
+						content,
+						create_time
+						)
+						VALUES
+						('".$product_num."',
+						0,
+						'".$pictureTitle."',
+						'".$filePath."',
+						'".$pictureCaption."',
+						SYSDATE())";
+			$query = $this->db->query($sql);
+		}
 	}
 ?>
