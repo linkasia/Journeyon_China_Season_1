@@ -128,6 +128,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$data['userInfo']= $this->country_M->detailUser($user);
 		$data['userSales']= $this->country_M->userSales($user);
+		$data['ImageCity']= $this->country_M->salesImageCity($salesNum);
 
 		$this->load->view("/contents/salesCity3",$data);
 	}

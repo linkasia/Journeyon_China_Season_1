@@ -222,7 +222,7 @@
 							FROM user_question_product a
 							LEFT JOIN USER b ON a.user_num = b.user_num
 							LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
-							LEFT JOIN product d ON a.product_num = d.num
+							LEFT JOIN product d ON a.product_num = d.product_num
 							WHERE a.product_num='".$num."'
 							ORDER BY a.create_date ASC";
 			$query = $this->db->query($sql);

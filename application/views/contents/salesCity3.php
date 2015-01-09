@@ -44,7 +44,7 @@
 				</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 				<?foreach($userSales as $v){?>
-					<div class="contents_list1" onclick="detailPage('<?=$v->num?>')">
+					<div class="contents_list1" onclick="detailPage('<?=$v->product_num?>')">
 						<div class="list_image1">
 							<div class="band">
 								<div class="wishcount">
@@ -57,7 +57,13 @@
 									<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">	当地人
 								</div>
 							</div>
-							<img src="" alt="" class="pic1_img">
+							<?$i=0;
+							foreach($ImageCity as $k){
+								if($i==0){?>
+								<img src="<?=$k->img_path?>" alt="" class="pic1_img">
+							<?}
+							$i++;
+							}?>
 							<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
 							<img src="<?=$v->countryimg?>" alt="" class="flag_image">
 							<?if($v->v_get_code == "0001"){?>
@@ -68,7 +74,7 @@
 							<div class="right_title"><span><?=$v->title?></span>
 								<div class="money"><span><?=$v->fat_price?>元</span></div>
 							</div>
-							<div class="right_text"><?=$v->describe?></div>
+							<div class="right_text"><?=$v->describe_contents?></div>
 							<div class="bottom_text">
 								<div class="line1">
 									<div class="tag"><img src="<?=$v->refrem1?>" alt=""><?=$v->tem1?></div>
