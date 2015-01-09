@@ -318,6 +318,7 @@ $cityList = $_REQUEST['cityList'];
 	//상세페이지
 	function detail_page(num)
 	{
+		alert(num);
 		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"&mode='); ?>";
 	}
 

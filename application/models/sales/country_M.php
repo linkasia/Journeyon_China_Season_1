@@ -186,7 +186,18 @@
 		{
 			$sql ="SELECT *
 							FROM product
-							WHERE num='".$num."'";
+							WHERE product_num='".$num."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		//선택한 도시 상세 상품
+		function salesImageCity($num)
+		{
+			$sql ="SELECT *
+							FROM spot
+							WHERE product_num='".$num."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

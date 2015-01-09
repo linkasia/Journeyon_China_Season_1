@@ -17,7 +17,7 @@
 			<?
 			if(count($salesCountry) > 0){
 				foreach($salesCountry as $v){?>
-				<div class="contents_list1"  onclick="detail_page('<?=$v->user_num?>')">
+				<div class="contents_list1"  onclick="detail_page('<?=$v->product_num?>')">
 					<div class="list_image1">
 						<div class="band">
 								<div class="wishcount">

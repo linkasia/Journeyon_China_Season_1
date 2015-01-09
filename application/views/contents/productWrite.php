@@ -2,7 +2,7 @@
 	<div class="productWrap">
 		<div class="productDiv1">
 			<p class="productTitle">国家 & 城市</p>
-			<select class="selectpicker" data-style="btn-info" data-size="6" id="selectCountry" onChange="choiceCountry()">
+			<select class="form-control" data-style="" data-size="6" id="selectCountry" onChange="choiceCountry()">
 				<option value = "">-- Select --</option>
 				<?foreach($country as $v){?>
 					<option onclick="" value = "<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
