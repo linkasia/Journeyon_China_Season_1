@@ -164,8 +164,8 @@
 			<textarea name="etc" id="etc"></textarea>
 		</div><!-- Div12 end -->
 
-		<input type="button" id="saveProduct" name="saveProduct" value="save">
-		<input type="button" id="cancelProduct" name="cancelProduct" value="cancle">
+		<input type="button" id="saveProduct" name="saveProduct" value="Save" class="btn btn-primary">
+		<input type="button" id="cancelProduct" name="cancelProduct" value="Cancel" class="btn btn-warning">
 
 	</div><!-- productWrap -->
 

@@ -1118,14 +1118,15 @@
 	#productWrapAll{width: 940px; height: auto; margin: 0 auto; margin-top: 20px;}
 	#productWrapAll .productWrap{width: 690px; height: ; margin-right: 20px; float: left;}
 
-	.productWrap .productDiv1{margin-bottom: 50px;}
+	.productWrap .productDiv1{margin-bottom: 50px; float: left;}
 	.productWrap .productTitle{width: 680px; height: 30px; display: block; font-size: 1.125em; color: #62b8ef; float: left; }
 	.productWrap .productTitleDiv{margin-bottom: 50px;}
-	#productWrapAll .productDiv1 .selectpicker{margin-left: 20px;}
-
+	#productWrapAll .productDiv1 #selectCountry{width: 300px; margin-left: 20px; float: left;}
+	#productWrapAll .productDiv1 #selectCity{width: 300px; margin-left: 25px; float: left;}
 
 	#productWrapAll .productDiv2{width: 100%; position: relative; float: left;}
 	#productWrapAll .productDiv2 #productTitle{width: 650px; margin-left: 20px;}
+
 
 	#productWrapAll .productDiv3{width: 680px; height: ; position: relative; margin-bottom: 50px; display: block; float: left; margin-top: 50px;}
 	#productWrapAll .productDiv3:after{clear: both; display: none; *zoom:1;}
@@ -1188,6 +1189,7 @@
 	#productWrapAll .productDiv12{width: 100%; position: relative; float: left; margin-top: 50px;}
 	#productWrapAll .productDiv12 #etc{width: 650px; max-width: 650px; height: 120px; max-height: 120px; margin-left: 20px; margin-bottom: 20px;}
 
+	#productWrapAll #saveProduct{margin-left: 280px; margin-right: 5px;}
 	#productWrapAll .productInfo{width: 230px; height: 350px; border: 1px solid #f0f1f5; float: left; padding: 10px; background-color: #f9fafc;}
 
 
