@@ -88,20 +88,42 @@
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
 				<div class="rightSection">
-					<input type="text" class="form-control2 text" id="inputFluent1">
-					<input type="text" class="form-control2 text" id="inputFluent2">
-					<input type="text" class="form-control2 text" id="inputFluent3">
+					<select class="form-control languageSelect" id="Language1">
+						<option value="Korean">Korean</option>
+						<option value="Chinese">Chinese</option>
+						<option value="English">English</option>
+					</select>
+					<select class="form-control languageSelect" id="Language2">
+						<option value="Korean">Korean</option>
+						<option value="Chinese">Chinese</option>
+						<option value="English">English</option>
+					</select>
+					<select class="form-control languageSelect" id="Language3">
+						<option value="Korean">Korean</option>
+						<option value="Chinese">Chinese</option>
+						<option value="English">English</option>
+					</select>
+					<select class="form-control languageSelect" id="Language4">
+						<option value="Korean">Korean</option>
+						<option value="Chinese">Chinese</option>
+						<option value="English">English</option>
+					</select>
+					<select class="form-control languageSelect" id="Language5">
+						<option value="Korean">Korean</option>
+						<option value="Chinese">Chinese</option>
+						<option value="English">English</option>
+					</select>
+					<select class="form-control languageSelect" id="Language6">
+						<option value="Korean">Korean</option>
+						<option value="Chinese">Chinese</option>
+						<option value="English">English</option>
+					</select>
+
+
 	
 				</div>			
 			</div>
-			<div class="learing10">
-				<div class="leftSection"><p class="rightAlign">Language I’m Learing</p></div>
-				<div class="rightSection">
-					<input type="text" class="form-control2 text" id="inputLearing1">
-					<input type="text" class="form-control2 text" id="inputLearing2">
-					<input type="text" class="form-control2 text" id="inputLearing3">
-				</div>
-			</div>
+
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="inputInteresting"></div>			

@@ -1256,8 +1256,10 @@
 	#mypublicWrap #rightDiv #profileQuestion .occupation6{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .education7{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .detail8{width: 100%; float: left; margin-top: 20px;}
+
 	#mypublicWrap #rightDiv #profileQuestion .fluent9{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .fluent9 .rightSection input{margin-bottom: 5px;}
+	#mypublicWrap #rightDiv #profileQuestion .fluent9 .languageSelect{width: 145px; float: left; margin-bottom: 5px; margin-left: 5px;}
 	
 	#mypublicWrap #rightDiv #profileQuestion .learing10{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .learing10 .rightSection input{margin-bottom: 5px;}
