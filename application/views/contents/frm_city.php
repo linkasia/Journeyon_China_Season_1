@@ -17,7 +17,7 @@
 			<?
 			if(count($salesCountry) > 0){
 				foreach($salesCountry as $v){?>
-				<div class="contents_list1"  onclick="detail_page('<?=$v->num?>')">
+				<div class="contents_list1"  onclick="detail_page('<?=$v->user_num?>')">
 					<div class="list_image1">
 						<div class="band">
 								<div class="wishcount">
@@ -46,7 +46,7 @@
 						<div class="right_title"><span><?=$v->title?></span>
 							<div class="money"><span><?=$v->fat_price?>元</span></div>
 						</div>
-							<div class="right_text"><?=$v->describe?>
+							<div class="right_text"><?=$v->describe_contents?>
 						</div>
 						<div class="bottom_text">
 							<div class="line1">

@@ -120,7 +120,7 @@
 		//선택한 나라 상세 상품
 		function salesDetailCountry($num)
 		{
-			$sql ="SELECT a.num,
+			$sql ="SELECT a.product_num,
 											a.user_num,
 											a.fat_price,
 											a.theme_num1_code,
@@ -174,7 +174,7 @@
 								LEFT JOIN code_table m ON b.lang1_skill=m.code AND m.class='0014'
 								LEFT JOIN code_table n ON b.lang2_skill=n.code AND n.class='0014'
 								LEFT JOIN code_table o ON b.lang3_skill=o.code AND o.class='0014'
-							WHERE a.num='".$num."'";
+							WHERE a.product_num='".$num."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
