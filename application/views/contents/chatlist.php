@@ -120,9 +120,18 @@
 				<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
 			</div><!-- reservationDay 이게 반복되면서 늘어남 -->
 
-
 		</div>
+
 		<div class="Add">
+			<span id="fixedPrice">Fixed price From Guide</span>
+			<div class="statusDiv" id="statusDiv"><p>판매가격 입력 대기중...</p></div>
+		</div>
+
+		<div class="Add">
+			<span id="fixedPrice">Fixed price From Guide</span>
+			<input type="text" class="form-control" id="inputPrice"><span class="won">元</span>
+			<button class="btn btn-info" id="priceModify">가격수정</button>
+			<button class="btn btn-warning" id="pricePay">결제하기</button>
 		</div>
 	</div><!-- rightWrap end -->
 
