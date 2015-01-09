@@ -385,7 +385,7 @@
 													`sortcountry`,
 													`country_code`,
 													`city_code`,
-													`describe`,
+													`describe_contents`,
 													`theme_num1_code`,
 													`theme_num2_code`,
 													`theme_num3_code`,
@@ -449,37 +449,34 @@
 			return $result;
 		}
 
-		function updateProduct($productNum)
+		function updateProduct($product_num, $productTitle ,$productContents ,$onePrice ,$timeSet ,$meetPlace ,$include ,$notinclude ,$etc ,$theme1 ,$theme2 ,$theme3 ,$priceMember1 ,$priceMember2, $selectClassCountry, $selectCodeCountry, $selectCity)
 		{
-			/*
 			$sql ="UPDATE product
 									SET
-										title = '".."' ,
-										sortcountry = '".."' ,
-										country_code = '".."' ,
-										city_code = '".."' ,
-										DESCRIBE = '".."' ,
-										theme_num1_code = '".."' ,
-										theme_num2_code = '".."' ,
-										theme_num3_code = '".."' ,
-										recommend1_code = '".."' ,
-										recommend2_code = '".."' ,
-										travel_time = '".."' ,
-										meeting_place = '".."' ,
-										meeting_place_describe = '".."' ,
-										fat_price = '".."' ,
-										group_price = '".."' ,
-										include = '".."' ,
-										not_include = '".."' ,
-										etc = '".."' ,
-										s_get = '".."' ,
+										title = '".$productTitle."' ,
+										sortcountry = '".$selectClassCountry."' ,
+										country_code = '".$selectCodeCountry."' ,
+										city_code = '".$selectCity."' ,
+										describe_contents = '".$productContents."' ,
+										theme_num1_code = '".$theme1."' ,
+										theme_num2_code = '".$theme2."' ,
+										theme_num3_code = '".$theme3."' ,
+										recommend1_code = '".$priceMember1."' ,
+										recommend2_code = '".$priceMember2."' ,
+										travel_time = '".$timeSet."' ,
+										meeting_place = '".$meetPlace."' ,
+										meeting_place_describe = '".$meetPlace."' ,
+										fat_price = '".$onePrice."' ,
+										group_price = '".$onePrice."' ,
+										include = '".$include."' ,
+										not_include = '".$notinclude."' ,
+										etc = '".$etc."' ,
 										useYn = 'Y' ,
 										adminYn = 'N' ,
 										modified_date = SYSDATE()
 										WHERE
-										product_num = '".."'
-										AND user_num = '".."' ";
-										*/
+										product_num = '".$product_num."' ";
+										print_r($sql );
 			$query = $this->db->query($sql);
 		}
 

@@ -191,7 +191,24 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	/*상품저장*/
 	function updateProduct(){
 		$product_num = $_REQUEST['product_num'];
-		$delete['insertproduct'] = $this->country_M->updateProduct($product_num);
+		$productTitle = $_REQUEST['productTitle'];
+		$productContents = $_REQUEST['productContents'];
+		$onePrice = $_REQUEST['onePrice'];
+		$timeSet = $_REQUEST['timeSet'];
+		$meetPlace = $_REQUEST['meetPlace'];
+		$include = $_REQUEST['include'];
+		$notinclude = $_REQUEST['notinclude'];
+		$etc = $_REQUEST['etc'];
+		$theme1 = $_REQUEST['theme1'];
+		$theme2 = $_REQUEST['theme2'];
+		$theme3 = $_REQUEST['theme3'];
+		$priceMember1 = $_REQUEST['priceMember1'];
+		$priceMember2 = $_REQUEST['priceMember2'];
+		$selectClassCountry = $_REQUEST['selectClassCountry'];
+		$selectCodeCountry = $_REQUEST['selectCodeCountry'];
+		$selectCity = $_REQUEST['selectCity'];
+
+		$update['updateproduct'] = $this->country_M->updateProduct($product_num, $productTitle ,$productContents ,$onePrice ,$timeSet ,$meetPlace ,$include ,$notinclude ,$etc ,$theme1 ,$theme2 ,$theme3 ,$priceMember1 ,$priceMember2, $selectClassCountry, $selectCodeCountry, $selectCity);
 	}
 
 	/*상품저장*/
