@@ -11,6 +11,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->library('session');
 
 		$this->load->database();
+		$this->load->model('code/tb_code');
 		$this->load->model('main/main_i');
 		$this->load->model('member/membersJoin');
 		$this->load->model('mypage/myModify');
@@ -33,8 +34,12 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 */
 	function mypublic(){
+
+		$data['langList'] = $this->tb_code->langList();
+		$data['learnList'] = $this->tb_code->learnList();
+
 		$this->load->view('include/header');
-		$this->load->view('mypage/menu_public');
+		$this->load->view('mypage/menu_public',$data);
 		$this->load->view('include/footer');
 	}
 
@@ -107,4 +112,9 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$update['passwordUpdate'] = $this->myModify->updateCountry($to, $countrySelectClass,$code);
 	}
 
+	function profileModify(){
+		$countrySelectClass = $_REQUEST['countrySelectClass'];
+
+		$update['passwordUpdate'] = $this->myModify->updateCountry($to, $countrySelectClass,$code);
+	}
 }

@@ -4,15 +4,15 @@
 		function __construct()
 		{
 			parent::__construct();
-			
+
 			$this->load->helper('util_helper');
-			
+
 		}
-		
+
 		//가이드구분
 		function guideType()
 		{
-			$sql ="SELECT * 
+			$sql ="SELECT *
 							FROM code_table
 							WHERE class='0011'
 							AND useYn='Y'";
@@ -24,7 +24,7 @@
 		//테마
 		function theme(){
 
-			$sql ="SELECT * 
+			$sql ="SELECT *
 							FROM code_table
 							WHERE class='0012'
 							AND useYn='Y'";
@@ -36,7 +36,7 @@
 		//그룹
 		function recommend(){
 
-			$sql ="SELECT * 
+			$sql ="SELECT *
 							FROM code_table
 							WHERE class='0013'
 							AND useYn='Y'";
@@ -44,10 +44,10 @@
 			$result = $query->result();
 			return $result;
 		}
-		
-		//V인증 사용자 
+
+		//V인증 사용자
 		function guide(){
-			$sql ="SELECT * 
+			$sql ="SELECT *
 							FROM code_table
 							WHERE class='0010'
 							AND CODE ='0001'
@@ -56,12 +56,34 @@
 			$result = $query->result();
 			return $result;
 		}
-		
+
 		//성별
 		function sexual(){
-			$sql ="SELECT * 
+			$sql ="SELECT *
 							FROM code_table
 							WHERE class='0002'
+							AND useYn='Y'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		//언어
+		function langList(){
+			$sql ="SELECT *
+							FROM code_table
+							WHERE class='0015'
+							AND useYn='Y'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		//습특
+		function learnList(){
+			$sql ="SELECT *
+							FROM code_table
+							WHERE class='0014'
 							AND useYn='Y'";
 			$query = $this->db->query($sql);
 			$result = $query->result();

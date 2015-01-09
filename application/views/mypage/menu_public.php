@@ -17,8 +17,9 @@
 	</aside>
 
 
-	
+
 	<!-- 여기서부터 오른쪽 박스 -->
+	<form name="profileUploadfrm" id="profileUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/mypage/mypage_M/profileModify">
 	<div id="rightDiv">
 		<div id="introduceSelf">
 			<p class="headline">Introduce Your Self</p>
@@ -56,89 +57,106 @@
 						</label>
 					</div>
 
-				</div><!-- gender2 end -->			
+				</div><!-- gender2 end -->
 			</div>
 			<div class="birthday3">
 				<div class="leftSection"><p class="rightAlign">What is your Birthday?</p></div>
 				<div class="rightSection">
 					<label for="birth"></label>
 					<input type="date" value="1985-01-01" class="form-control2 text" id="birth">
-				</div>			
+				</div>
 			</div>
 			<div class="live4">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputLive"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputLive"></div>
 			</div>
 			<div class="city5">
 				<div class="leftSection"><p class="rightAlign">Since, How long do you live in that City?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputCity"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputCity"></div>
 			</div>
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation">	</div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation">	</div>
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation"></div>
 			</div>
 			<div class="detail8">
 				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
-				<div class="rightSection"><textarea class="form-control2 text" id="inputDetail"></textarea></div>			
+				<div class="rightSection"><textarea class="form-control2 text" id="inputDetail"></textarea></div>
 			</div>
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
 				<div class="rightSection">
 					<select class="form-control languageSelect" id="Language1">
-						<option value="Korean">Korean</option>
-						<option value="Chinese">Chinese</option>
-						<option value="English">English</option>
+					<?foreach($langList as $v){?>
+						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language2">
-						<option value="Korean">Korean</option>
-						<option value="Chinese">Chinese</option>
-						<option value="English">English</option>
+					<?foreach($learnList as $v){?>
+						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?}?>>
 					</select>
 					<select class="form-control languageSelect" id="Language3">
-						<option value="Korean">Korean</option>
-						<option value="Chinese">Chinese</option>
-						<option value="English">English</option>
+						<?foreach($langList as $v){?>
+						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language4">
-						<option value="Korean">Korean</option>
-						<option value="Chinese">Chinese</option>
-						<option value="English">English</option>
+						<?foreach($learnList as $v){?>
+						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?}?>>
 					</select>
 					<select class="form-control languageSelect" id="Language5">
-						<option value="Korean">Korean</option>
-						<option value="Chinese">Chinese</option>
-						<option value="English">English</option>
+						<?foreach($langList as $v){?>
+						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language6">
-						<option value="Korean">Korean</option>
-						<option value="Chinese">Chinese</option>
-						<option value="English">English</option>
+						<?foreach($learnList as $v){?>
+						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?}?>>
 					</select>
-
-
-	
-				</div>			
+				</div>
 			</div>
 
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputInteresting"></div>			
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputInteresting"></div>
 			</div>
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
 				<div class="rightSection">
-					<input type="text" class="form-control2 text" id="inputKeyword1">
-					<input type="text" class="form-control2 text" id="inputKeyword2">
-					<input type="text" class="form-control2 text" id="inputKeyword3">
-				</div>			
+					<select class="form-control languageSelect" id="keyword1">
+						<option value=""></option>
+					</select>
+					<select class="form-control languageSelect" id="keyword2">
+						<option value=""></option>
+					</select>
+					<select class="form-control languageSelect" id="keyword3">
+						<option value=""></option>
+					</select>
+				</div>
 			</div>
 			<button class="btn btn-info" id="saveProfileBottom">Save</button>
 			<button class="btn btn-warning" id="cancelSaveBottom">Cancel</button>
 		</div>
 	</div>
 </div><!-- mypublicWrap -->
+</form>
 
+<script>
+$('#profileUploadfrm').ajaxForm();
+$(function(){
+	/*
+		$('#profileUploadfrm').ajaxForm({
+			success: function(data){
+				var key=$('#hiddenId').val();
+				$("#pic"+key).attr("src",data);
+			}
+		});
+		*/
+	});
+</script>

@@ -101,6 +101,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$data['salesCountry']= $this->country_M->salesCountrySort($scountry, $countryList, $guideType, $genderCode, $temCode ,$recommend ,$guide,$selectCityList);
 
+		//$data['ImageCity']= $this->country_M->salesImageCity($salesNum);
+
 		$this->load->view("/contents/frm_city",$data);
 
 	}
