@@ -29,5 +29,16 @@
 							WHERE email = '".$mail."'";
 			$query = $this->db->query($sql);
 		}
+
+		function updateUser($dataList)
+		{
+			//print_r($this->inputDetail);
+
+			$sql ="UPDATE user SET mother_area_code = '".$countrySelectClass."',
+																mother_country_code= '".$code."'
+							WHERE email = '".$mail."'";
+			$query = $this->db->query($sql);
+
+		}
 	}
 ?>

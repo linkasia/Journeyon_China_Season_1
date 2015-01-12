@@ -181,8 +181,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	function changeCity(){
 		$countrySelectClass = $_REQUEST['countrySelectClass'];
 		$code = $_REQUEST['code'];
-
 		$data['city'] = $this->main_i->choiceCityList($countrySelectClass, $code);
+
 		$this->load->view('contents/comboCity',$data);
 	}
 

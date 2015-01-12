@@ -71,66 +71,71 @@
 			<div class="live4">
 				<div class="leftSection"><p class="rightAlign">What is your country?</p></div>
 				<div class="rightSection">
-					<select class="form-control" id="inputCountry">
-						<option value="China">China</option>
+					<select class="form-control" id="inputCountry" name="inputCountry" onChange="comboChange()">
+						<option value="">--Select--</option>
+						<?foreach($countryList as $v){?>
+							<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
+						<?}?>
 					</select>
+					<input type="hidden" id="hiddenClass"  name="hiddenClass">
+					<input type="hidden" id="hiddenCode"  name="hiddenCode">
 				</div>
 			</div>
-			
+
 			<div class="live4">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
-				<div class="rightSection">
-					<select class="form-control" id="inputLive">
-						<option value="Seoul">Seoul</option>
-					</select>
+				<div class="rightSection" id="selectCtiy" name="selectCtiy">
+					<?
+						$data="";
+						$this->load->view("/contents/comboCity",$data);?>
 				</div>
 			</div>
 
 			<div class="city5">
 				<div class="leftSection"><p class="rightAlign">Since, How long do you live in that City?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="howlongCity"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="howlongCity"  name="howlongCity"></div>
 			</div>
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation" name=id="inputEducation"></div>
 			</div>
 			<div class="detail8">
 				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
-				<div class="rightSection"><textarea class="form-control2 text" id="inputDetail"></textarea></div>
+				<div class="rightSection"><textarea class="form-control2 text" id="inputDetail" name="inputDetail"></textarea></div>
 			</div>
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
 				<div class="rightSection">
-					<select class="form-control languageSelect" id="Language1">
+					<select class="form-control languageSelect" id="Language1" name="Language1">
 					<?foreach($langList as $v){?>
 						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
 					<?}?>
 					</select>
-					<select class="form-control languageSelect" id="Language2">
+					<select class="form-control languageSelect" id="Language2"  name="Language2">
 					<?foreach($learnList as $v){?>
 						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
 					<?}?>>
 					</select>
-					<select class="form-control languageSelect" id="Language3">
+					<select class="form-control languageSelect" id="Language3"  name="Language3">
 						<?foreach($langList as $v){?>
 						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
 					<?}?>
 					</select>
-					<select class="form-control languageSelect" id="Language4">
+					<select class="form-control languageSelect" id="Language4"  name="Language4">
 						<?foreach($learnList as $v){?>
 						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
 					<?}?>>
 					</select>
-					<select class="form-control languageSelect" id="Language5">
+					<select class="form-control languageSelect" id="Language5"  name="Language5">
 						<?foreach($langList as $v){?>
 						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
 					<?}?>
 					</select>
-					<select class="form-control languageSelect" id="Language6">
+					<select class="form-control languageSelect" id="Language6"  name="Language6">
 						<?foreach($learnList as $v){?>
 						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
 					<?}?>>
@@ -140,18 +145,18 @@
 
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputInteresting"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputInteresting" name="inputInteresting"></div>
 			</div>
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
 				<div class="rightSection">
-					<select class="form-control languageSelect keyword" id="keyword1">
+					<select class="form-control languageSelect keyword" id="keyword1" name="keyword1">
 						<option value=""></option>
 					</select>
-					<select class="form-control languageSelect keyword" id="keyword2">
+					<select class="form-control languageSelect keyword" id="keyword2" name="keyword2">
 						<option value=""></option>
 					</select>
-					<select class="form-control languageSelect keyword" id="keyword3">
+					<select class="form-control languageSelect keyword" id="keyword3" name="keyword3">
 						<option value=""></option>
 					</select>
 				</div>
@@ -164,6 +169,24 @@
 </form>
 
 <script type="text/javascript">
+
+function comboChange(){
+	var _countrySelectClass = $('#inputCountry').val().substring(0,4);
+	var _code = $('#inputCountry').val().substring(5,9);
+	document.getElementById('hiddenClass').value = _countrySelectClass;
+	document.getElementById('hiddenCode').value = _code;
+
+	$.ajax({
+		type:"GET" ,
+		dataType:"text",
+		contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+		data:{ countrySelectClass: _countrySelectClass, code:_code},
+		url:"/index.php/city/country/changeCity",
+		success: function (data){
+			document.getElementById('selectCtiy').innerHTML =data;
+		}
+	});
+}
 
 function radioMaleChang(){
 	if( $('#optionsRadios1').is(":checked") == true){

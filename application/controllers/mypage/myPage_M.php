@@ -37,6 +37,8 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 
 		$data['langList'] = $this->tb_code->langList();
 		$data['learnList'] = $this->tb_code->learnList();
+		$data['countryList'] = $this->main_i->Country();
+
 
 		$this->load->view('include/header');
 		$this->load->view('mypage/menu_public',$data);
@@ -113,16 +115,31 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function profileModify(){
-
-
 		$newdata = array(
-						'countrySelectClass' =>$_REQUEST['countrySelectClass'],
-						'inputName' =>$_REQUEST['inputName'],
-						'hiddenGerder' =>$_REQUEST['hiddenGerder'],
-						'birth' =>$_REQUEST['birth'],
+			'user_num' =>$this->session->userdata['user_num'];
+			'countrySelectClass' =>$_REQUEST['countrySelectClass'],
+			'inputName' =>$_REQUEST['inputName'],
+			'hiddenGerder' =>$_REQUEST['hiddenGerder'],
+			'birth' =>$_REQUEST['birth'],
+			'hiddenClass' =>$_REQUEST['hiddenClass'],
+			'hiddenCode' =>$_REQUEST['hiddenCode'],
+			'selectCtiy' =>$_REQUEST['selectCtiy'],
+			'howlongCity' =>$_REQUEST['howlongCity'],
+			'inputOccupation' =>$_REQUEST['inputOccupation'],
+			'inputEducation' =>$_REQUEST['inputEducation'],
+			'inputDetail' =>$_REQUEST['inputDetail'],
+			'Language1' =>$_REQUEST['Language1'],
+			'Language2' =>$_REQUEST['Language2'],
+			'Language3' =>$_REQUEST['Language3'],
+			'Language4' =>$_REQUEST['Language4'],
+			'Language5' =>$_REQUEST['Language5'],
+			'Language6' =>$_REQUEST['Language6'],
+			'inputInteresting' =>$_REQUEST['inputInteresting'],
+			'keyword1' =>$_REQUEST['keyword1'],
+			'keyword2' =>$_REQUEST['keyword2'],
+			'keyword3' =>$_REQUEST['keyword3']
+		);
 
-				);
-
-		$update['passwordUpdate'] = $this->myModify->updateCountry($to, $countrySelectClass,$code);
+		$update['userUpdate'] = $this->myModify->updateUser($newdata);
 	}
 }
