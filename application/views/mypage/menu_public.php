@@ -82,7 +82,7 @@
 				</div>
 			</div>
 
-			<div class="live4">
+			<div class="live5">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
 				<div class="rightSection" id="selectCtiy" name="selectCtiy">
 					<?
@@ -97,6 +97,10 @@
 			</div>
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
+			</div>
+			<div class="occupation6">
+				<div class="leftSection"><p class="rightAlign">Job Detail</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
 			</div>
 			<div class="education7">
@@ -145,7 +149,7 @@
 
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputInteresting" name="inputInteresting"></div>
+				<div class="rightSection"><textarea class="form-control" name="inputInteresting" id="inputInteresting" cols="30" rows="10"></textarea></div>
 			</div>
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>

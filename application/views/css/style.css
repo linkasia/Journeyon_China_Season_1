@@ -903,7 +903,7 @@
 
 
 
-	/* 12/24 여기서부터 새로 만드는겨 */
+	/* ------------------------------------------ 12/24 여기서부터 새로 만드는겨 -------------------------------------------------*/
 	#accountWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
 	#accountWrap:after{clear: both; display: none; *zoom:1;}
 
@@ -969,7 +969,6 @@
 		
 
 		/* grew up 내부의 select box */
-
 		#accountWrap #rightWrap #myModal4 .selectParent{width: 110px; overflow:hidden; background-color: #f0f1f5; float: left; z-index: -9999;} /*회색 바탕 조절*/
 		#accountWrap #rightWrap #myModal4 .selectParent .select_option{
 			border: 0 !important;  /*Removes border*/
@@ -1034,7 +1033,8 @@
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
 
 
-		/* 마이페이지 가이드 menu */
+		
+		/* ------------------------------------------------- 마이페이지 가이드 menu ------------------------------------------------- */
 
 		#guideWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
 		#guideWrap:after{clear: both; display: none; *zoom:1;}
@@ -1048,7 +1048,7 @@
 		#guideWrap #cancelAdmin{cursor: pointer;}
 
 
-		/* 오른쪽 영역 스타일링 */
+		/* ----------------- 오른쪽 영역 스타일링  ------------------ */
 		
 		/* 타이틀 줄 모아서 관리 */
 		#guideWrap .profileWrap1 .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
@@ -1093,7 +1093,7 @@
 		#guideWrap .profileWrap1 #guidehomeWrap .colsP3{font-size: 1.125em; font-weight: 600; color: #3bb7ca; margin: 20px 0 10px 0;}
 		
 
-		/* Guide 신청 */
+		/* Guide Request */
 		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap{width: 100%; height: 180px; position: relative;}
 
@@ -1113,8 +1113,56 @@
 		#guideWrap .profileWrap1 #guideData .dataView #snsModify{position: absolute; top: 30px; left: 200px; padding: 1px 8px 1px 8px;}
 		#guideWrap .profileWrap1 #guideData #request{position: absolute; right: 10px; bottom: 10px;}
 
+		/* Guide Product Management */
+		.pmWrap{width: 100%; position: relative;}
+		.pmWrap #sortGroup{margin-left: 400px; margin-top: 20px; margin-bottom: 20px;}
 
-	/* productWrap 상품 업로드 */	
+				/*상품 LIST*/
+				.pmWrap .contents_list1{width: 100%; height: 180px; border: solid #f0f1f5 1px; margin-top: 15px; position: relative; cursor: pointer;}
+				.pmWrap .contents_list1:after{clear: both; display: block; *zoom: 1;}
+				.pmWrap .contents_list1 .list_image1{width: 270px; height: 180px; background-color: #eee; position: relative; float: left; cursor: pointer;}
+				.pmWrap .contents_list1 .list_image1 .band{width: 270px; height: 30px; background-color: rgba(0, 0, 0, 0.8); position: absolute; top: 125px; line-height: 30px;}
+				.pmWrap .contents_list1 .list_image1 .band .wishcount{width: 52px; height: 30px; margin-left: 97px; float: left; text-overflow: ellipsis;}
+				.pmWrap .contents_list1 .list_image1 .band .reviewcount{width: 52px; height: 30px; float: left; text-overflow: ellipsis;}
+				.pmWrap .contents_list1 .list_image1 .band .localcount{width: 69px; height: 30px; float: left; text-overflow: ellipsis;}
+				.pmWrap .contents_list1 .list_image1 .band .localcount .navi_image{padding-bottom: 2px;}
+
+				.pmWrap .contents_list1 .list_image1 .pic1_img{width: 270px; height: 180px;} /* 이미지 사이즈 고정 */
+				.pmWrap .contents_list1 .list_image1 .profile_image{width: 60px; height: 60px; position: absolute; left: 20px; top:108px;}
+				.pmWrap .contents_list1 .list_image1 .flag_image{width: 20px; height: 14px; left: 9px; top: 133px; position: absolute;}
+				.pmWrap .contents_list1 .list_image1 .vmark_image{width: 18px; height: 18px; left: 65px; top: 151px; position: absolute;}
+
+				.span_e{width: 20px; text-overflow: ellipsis;}
+				.pmWrap .contents_list1 .list_rightwrap{width: 406px; height: 45px; float: left;}
+				.pmWrap .contents_list1 .list_rightwrap .right_title{width: 310px; height: 45px; line-height: 45px; margin-left: 10px; position: relative; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+				.pmWrap .contents_list1 .list_rightwrap .money{
+					position: absolute;
+					width: 85px;
+					height: 45px;
+					text-align: center;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					top: 0px;
+					right: 0px;
+					color: #fff;
+					line-height: 45px;
+					float: right;
+					}
+				.pmWrap .contents_list1 .list_rightwrap .right_text{width: 406px; height: 70px; overflow: hidden; text-overflow: ellipsis; display: block; padding-left: 8px; padding-top: 8px; margin-bottom: 10px;}
+				.pmWrap .contents_list1 .list_rightwrap .bottom_text{width: 406px; height: 50px; display: block; padding-left: 8px;}
+				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line1{width: 406px; height: 25px;}
+				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line2{width: 406px; height: 25px;}
+				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line1 .tag{width: 120px; height: 22px; float: left; border: 1px solid #f0f1f5; border-radius: 20px; position: relative; text-indent: 30px; background-color: #f9fafc; margin-right: 5px; text-overflow: ellipsis;}
+				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line2 .tag2{width: 120px; height: 22px; float: left; border: 1px solid #f0f1f5; border-radius: 20px; position: relative; text-indent: 30px; background-color: #f9fafc; margin-right: 5px; text-overflow: ellipsis;}
+				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line1 .tag img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
+				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line2 .tag2 img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
+
+
+
+
+
+
+	/* 여기서부터 productWrap 상품 업로드 */	
 	#productWrapAll{width: 940px; height: auto; margin: 0 auto; margin-top: 20px;}
 	#productWrapAll .productWrap{width: 690px; height: ; margin-right: 20px; float: left;}
 
@@ -1256,12 +1304,16 @@
  	#mypublicWrap #rightDiv #profileQuestion .live4{width: 100%; float: left; margin-top: 20px;}
  	#mypublicWrap #rightDiv #profileQuestion .live4 #inputLive{margin-left: 5px; margin-bottom: 5px;}
  	#mypublicWrap #rightDiv #profileQuestion .live4 #inputCountry{margin-left: 5px; margin-bottom: 5px;}
+ 	#mypublicWrap #rightDiv #profileQuestion .live5{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .live5 #selectCity{margin-left: 5px;}
+
 
  	#mypublicWrap #rightDiv #profileQuestion .city5{width: 100%; float: left; margin-top: 20px;}
  	#mypublicWrap #rightDiv #profileQuestion .city5 #inputSinceCity{margin-left: 5px; margin-bottom: 5px;}
 	#mypublicWrap #rightDiv #profileQuestion .occupation6{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .education7{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .detail8{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .detail8 .leftSection .rightAlign{line-height: 25px; margin-top: 70px;}
 
 	#mypublicWrap #rightDiv #profileQuestion .fluent9{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .fluent9 .rightSection input{margin-bottom: 5px;}
@@ -1270,12 +1322,15 @@
 	#mypublicWrap #rightDiv #profileQuestion .learing10{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .learing10 .rightSection input{margin-bottom: 5px;}
 	#mypublicWrap #rightDiv #profileQuestion .interesting11{width: 100%; float: left; margin-top: 20px;}
+	#mypublicWrap #rightDiv #profileQuestion .interesting11 #inputInteresting{width: 300px; height: 300px; max-width: 300px; max-height: 200px; margin-left: 5px;}
+	#mypublicWrap #rightDiv #profileQuestion .interesting11 .rightAlign{line-height: 25px; margin-top: 70px;}
+
 	#mypublicWrap #rightDiv #profileQuestion .keyword12{width: 100%; float: left; margin-top: 20px;}
 	#mypublicWrap #rightDiv #profileQuestion .keyword12 .rightSection input{margin-bottom: 5px;}
-	#mypublicWrap #rightDiv #profileQuestion .keyword12 .rightSection .keyword	{margin-left: 5px; margin-bottom: 5px;}
+	#mypublicWrap #rightDiv #profileQuestion .keyword12 .rightSection .keyword{margin-left: 5px; margin-bottom: 5px;}
 	#mypublicWrap #rightDiv #profileQuestion .leftSection{width: 300px; float: left;}
 	#mypublicWrap #rightDiv #profileQuestion .leftSection .rightAlign{text-align: right; color: #62b8ef; line-height: 30px;}
-	#mypublicWrap #rightDiv #profileQuestion .detail8 .leftSection .rightAlign{line-height: 25px; margin-top: 70px;}
+
 
 	#mypublicWrap #rightDiv #profileQuestion .rightSection{width: 300px; float: left; position: relative;}
 	#mypublicWrap #rightDiv #profileQuestion .rightSection input.text{width: 300px;}
