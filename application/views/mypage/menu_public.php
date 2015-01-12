@@ -99,17 +99,13 @@
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
 			</div>
-			<div class="occupation6">
-				<div class="leftSection"><p class="rightAlign">Job Detail</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
+			<div class="detail8">
+				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
+				<div class="rightSection"><textarea class="form-control2 text" id="inputJobDetail" name="inputJobDetail"></textarea></div>
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation" name=id="inputEducation"></div>
-			</div>
-			<div class="detail8">
-				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
-				<div class="rightSection"><textarea class="form-control2 text" id="inputDetail" name="inputDetail"></textarea></div>
 			</div>
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>

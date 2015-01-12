@@ -117,7 +117,6 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	function profileModify(){
 		$newdata = array(
 			'user_num' =>$this->session->userdata['user_num'],
-			'countrySelectClass' =>$_REQUEST['countrySelectClass'],
 			'inputName' =>$_REQUEST['inputName'],
 			'hiddenGerder' =>$_REQUEST['hiddenGerder'],
 			'birth' =>$_REQUEST['birth'],
@@ -127,7 +126,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			'howlongCity' =>$_REQUEST['howlongCity'],
 			'inputOccupation' =>$_REQUEST['inputOccupation'],
 			'inputEducation' =>$_REQUEST['inputEducation'],
-			'inputDetail' =>$_REQUEST['inputDetail'],
+			'inputJobDetail' =>$_REQUEST['inputJobDetail'],
 			'Language1' =>$_REQUEST['Language1'],
 			'Language2' =>$_REQUEST['Language2'],
 			'Language3' =>$_REQUEST['Language3'],
