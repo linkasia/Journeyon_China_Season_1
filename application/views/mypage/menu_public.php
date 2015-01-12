@@ -38,7 +38,7 @@
 					<p class="rightAlign">What is your Name?</p>
 				</div>
 				<div class="rightSection">
-						<input type="text" class="form-control2 text" id="inputName">
+						<input type="text" class="form-control2 text" id="inputName"  name="inputName">
 				</div>
 			</div>
 
@@ -48,14 +48,15 @@
 					<!-- <input type="text" class="form-control2" id="inputGender"> -->
 					<div class="male">
 						<label>
-							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Male
+							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="0001" onclick="radioMaleChang()" checked> Male
 						</label>
 					</div>
 					<div class="female">
 						<label>
-							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">	Female
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="0002" onclick="radioFemaleChang()">	Female
 						</label>
 					</div>
+					<input type="hidden" id="hiddenGerder"  name="hiddenGerder">
 
 				</div><!-- gender2 end -->
 			</div>
@@ -63,7 +64,7 @@
 				<div class="leftSection"><p class="rightAlign">What is your Birthday?</p></div>
 				<div class="rightSection">
 					<label for="birth"></label>
-					<input type="date" value="1985-01-01" class="form-control2 text" id="birth">
+					<input type="date" value="1985-01-01" class="form-control2 text" id="birth" name="birth">
 				</div>
 			</div>
 			<div class="live4">
@@ -147,16 +148,31 @@
 </div><!-- mypublicWrap -->
 </form>
 
-<script>
+<script type="text/javascript">
+
+function radioMaleChang(){
+	if( $('#optionsRadios1').is(":checked") == true){
+		$('#optionsRadios2').attr("checked",false);
+		document.getElementById('hiddenGerder').value= $('#optionsRadios1').val();
+	}
+}
+
+function radioFemaleChang(){
+	if( $('#optionsRadios2').is(":checked") == true){
+		$('#optionsRadios1').attr("checked",false);
+		document.getElementById('hiddenGerder').value= $('#optionsRadios2').val();
+	}
+}
+
 $('#profileUploadfrm').ajaxForm();
+
 $(function(){
-	/*
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
-				var key=$('#hiddenId').val();
-				$("#pic"+key).attr("src",data);
+				alert(data);
 			}
 		});
-		*/
 	});
+
+
 </script>

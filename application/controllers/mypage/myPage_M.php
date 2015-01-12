@@ -113,7 +113,15 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function profileModify(){
-		$countrySelectClass = $_REQUEST['countrySelectClass'];
+
+
+		$newdata = array(
+						'countrySelectClass' =>$_REQUEST['countrySelectClass'],
+						'inputName' =>$_REQUEST['inputName'],
+						'hiddenGerder' =>$_REQUEST['hiddenGerder'],
+						'birth' =>$_REQUEST['birth'],
+
+				);
 
 		$update['passwordUpdate'] = $this->myModify->updateCountry($to, $countrySelectClass,$code);
 	}
