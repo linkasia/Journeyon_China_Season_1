@@ -95,10 +95,19 @@
 				<div class="leftSection"><p class="rightAlign">Since, How long do you live in that City?</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="howlongCity"  name="howlongCity"></div>
 			</div>
+			<div class="phone13">
+				<div class="leftSection"><p class="rightAlign">Phone Number</p></div>
+				<div class="rightSection">
+					<input type="text" class="form-control2 text" id="countryNumber"  name="countryNumber" placeholder="Country Number">
+					<input type="text" class="form-control2 text" id="phoneNumber"  name="phoneNumber" placeholder="Phone Number">
+				</div>
+			</div>
+			
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
 			</div>
+
 			<div class="detail8">
 				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
 				<div class="rightSection"><textarea class="form-control2 text" id="inputJobDetail" name="inputJobDetail"></textarea></div>
@@ -160,6 +169,14 @@
 						<option value=""></option>
 					</select>
 				</div>
+			</div>
+			<div class="QQ14">
+				<div class="leftSection"><p class="rightAlign">QQ ID</p></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="publicQQ" name="publicQQ"></div>
+			</div>
+			<div class="Weixin15">
+				<div class="leftSection"><p class="rightAlign">Weixing ID</p></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="publicWeixin" name="publicWeixin"></div>
 			</div>
 			<button class="btn btn-info" id="saveProfileBottom">Save</button>
 			<button class="btn btn-warning" id="cancelSaveBottom">Cancel</button>
