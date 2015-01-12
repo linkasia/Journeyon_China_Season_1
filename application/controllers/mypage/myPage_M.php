@@ -116,6 +116,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 
 	function profileModify(){
 		$newdata = array(
+			/*
 			'user_num' =>$this->session->userdata['user_num'];
 			'countrySelectClass' =>$_REQUEST['countrySelectClass'],
 			'inputName' =>$_REQUEST['inputName'],
@@ -138,6 +139,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			'keyword1' =>$_REQUEST['keyword1'],
 			'keyword2' =>$_REQUEST['keyword2'],
 			'keyword3' =>$_REQUEST['keyword3']
+			*/
 		);
 
 		$update['userUpdate'] = $this->myModify->updateUser($newdata);
