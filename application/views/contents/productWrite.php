@@ -286,7 +286,6 @@ $(function(){
 			data:{ product_num: _product_num, productTitle:_productTitle, productContents:_productContents, onePrice:_onePrice, timeSet:_timeSet, meetPlace:_meetPlace, include:_include, notinclude:_notinclude, etc:_etc, theme1:_theme1, theme2:_theme2, theme3:_theme3, priceMember1:_priceMember1, priceMember2:_priceMember2, selectClassCountry:_selectClassCountry, selectCodeCountry:_selectCodeCountry, selectCity:_selectCity },
 			url:"/index.php/city/country/updateProduct",
 			success: function (data){
-				alert(data);
 				//document.getElementById('test').innerHTML=data;
 				location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
 			}

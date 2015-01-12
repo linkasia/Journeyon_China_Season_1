@@ -116,16 +116,18 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 
 	function profileModify(){
 		$newdata = array(
-			'user_num' =>$this->session->userdata['user_num'],
+			'user_num' =>$this->session->userdata['num'],
 			'inputName' =>$_REQUEST['inputName'],
 			'hiddenGerder' =>$_REQUEST['hiddenGerder'],
 			'birth' =>$_REQUEST['birth'],
 			'hiddenClass' =>$_REQUEST['hiddenClass'],
 			'hiddenCode' =>$_REQUEST['hiddenCode'],
-			'selectCtiy' =>$_REQUEST['selectCtiy'],
+			'countryNumber' =>$_REQUEST['countryNumber'],
+			'phoneNumber'=>$_REQUEST['phoneNumber'],
+			'selectCity' =>$_REQUEST['selectCity'],
 			'howlongCity' =>$_REQUEST['howlongCity'],
 			'inputOccupation' =>$_REQUEST['inputOccupation'],
-			'inputEducation' =>$_REQUEST['inputEducation'],
+			'textEducation' =>$_REQUEST['textEducation'],
 			'inputJobDetail' =>$_REQUEST['inputJobDetail'],
 			'Language1' =>$_REQUEST['Language1'],
 			'Language2' =>$_REQUEST['Language2'],
@@ -136,7 +138,9 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			'inputInteresting' =>$_REQUEST['inputInteresting'],
 			'keyword1' =>$_REQUEST['keyword1'],
 			'keyword2' =>$_REQUEST['keyword2'],
-			'keyword3' =>$_REQUEST['keyword3']
+			'keyword3' =>$_REQUEST['keyword3'],
+			'publicQQ' =>$_REQUEST['publicQQ'],
+			'publicWeixin'=>$_REQUEST['publicWeixin']
 		);
 
 		$update['userUpdate'] = $this->myModify->updateUser($newdata);

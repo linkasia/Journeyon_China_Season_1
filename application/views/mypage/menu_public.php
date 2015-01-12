@@ -27,7 +27,7 @@
 			<!-- <button class="btn btn-primary" id="editProfile">Edit your profile</button> -->
 		</div>
 		<div id="profileQuestion">
-			<button class="btn btn-info" id="saveProfile">Save</button>
+			<button type="submit" class="btn btn-info" id="saveProfile" name="saveProfile">Save</button>
 			<button class="btn btn-warning" id="cancelSave">Cancel</button>
 			<div class="profilepicAdd" id="profilepicAdd">
 				<span class="glyphicon glyphicon-plus plus"></span>
@@ -84,7 +84,7 @@
 
 			<div class="live5">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
-				<div class="rightSection" id="selectCtiy" name="selectCtiy">
+				<div class="rightSection" id="choiceCity" name="choiceCity">
 					<?
 						$data="";
 						$this->load->view("/contents/comboCity",$data);?>
@@ -102,7 +102,7 @@
 					<input type="text" class="form-control2 text" id="phoneNumber"  name="phoneNumber" placeholder="Phone Number">
 				</div>
 			</div>
-			
+
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
@@ -114,7 +114,7 @@
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation" name=id="inputEducation"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="textEducation"  name="textEducation"></div>
 			</div>
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
@@ -200,7 +200,7 @@ function comboChange(){
 		data:{ countrySelectClass: _countrySelectClass, code:_code},
 		url:"/index.php/city/country/changeCity",
 		success: function (data){
-			document.getElementById('selectCtiy').innerHTML =data;
+			document.getElementById('choiceCity').innerHTML =data;
 		}
 	});
 }
@@ -219,9 +219,12 @@ function radioFemaleChang(){
 	}
 }
 
-$('#profileUploadfrm').ajaxForm();
 
 $(function(){
+
+	$('#profileUploadfrm').ajaxForm();
+
+	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
 				alert(data);
@@ -229,5 +232,6 @@ $(function(){
 		});
 	});
 
+});
 
 </script>

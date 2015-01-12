@@ -32,39 +32,37 @@
 
 		function updateUser($dataList)
 		{
-			//print_r($this->inputDetail);
-
 			$sql ="UPDATE USER
 									SET
-											messenger_qq = '' ,
-											messenger_weixin = '' ,
-											phone_num_country = '' ,
-											phone_num_user = '' ,
+											messenger_qq = '".$dataList['publicQQ']."' ,
+											messenger_weixin = '".$dataList['publicWeixin']."' ,
+											phone_num_country = '".$dataList['countryNumber']."' ,
+											phone_num_user = '".$dataList['phoneNumber']."' ,
 											face_img_path = '' ,
-											Name_cn_en = '' ,
-											live_area_code = '' ,
-											live_country_code = '' ,
-											live_city_code = '' ,
-											live_country_year = '' ,
-											birthday = '' ,
-											gender_code = '' ,
-											job = '' ,
-											job_detail = '' ,
-											lang1_code = '' ,
-											lang1_skill = '' ,
-											lang2_code = '' ,
-											lang2_skill = '' ,
-											lang3_code = '' ,
-											lang3_skill = '' ,
-											special1_code = '' ,
-											special2_code = '' ,
-											special3_code = '' ,
+											Name_cn_en = '".$dataList['inputName']."' ,
+											live_area_code = '".$dataList['hiddenClass']."' ,
+											live_country_code = '".$dataList['hiddenCode']."' ,
+											live_city_code = '".$dataList['selectCity']."' ,
+											live_country_year = '".$dataList['howlongCity']."' ,
+											birthday = '".$dataList['birth']."' ,
+											gender_code = '".$dataList['hiddenGerder']."' ,
+											job = '".$dataList['inputOccupation']."' ,
+											job_detail = '".$dataList['inputJobDetail']."' ,
+											education='".$dataList['textEducation']."' ,
+											lang1_code = '".$dataList['Language1']."' ,
+											lang1_skill = '".$dataList['Language2']."' ,
+											lang2_code = '".$dataList['Language3']."' ,
+											lang2_skill = '".$dataList['Language4']."' ,
+											lang3_code = '".$dataList['Language5']."' ,
+											lang3_skill = '".$dataList['Language6']."' ,
+											special1_code = '".$dataList['keyword1']."' ,
+											special2_code = '".$dataList['keyword2']."' ,
+											special3_code = '".$dataList['keyword3']."' ,
 											selfintroduce = '' ,
-											interesting1 = '' ,
-											interesting2 = '' ,
-											v_get_code = '' ,
-											g_get_code = ''
+											interesting1 = '".$dataList['inputInteresting']."' ,
+											interesting2 = ''
 									WHERE user_num = '".$dataList['user_num']."' ";
+									print_r($sql);
 			$query = $this->db->query($sql);
 
 		}
