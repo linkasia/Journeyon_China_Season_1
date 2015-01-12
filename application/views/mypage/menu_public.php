@@ -67,17 +67,32 @@
 					<input type="date" value="1985-01-01" class="form-control2 text" id="birth" name="birth">
 				</div>
 			</div>
+
+			<div class="live4">
+				<div class="leftSection"><p class="rightAlign">What is your country?</p></div>
+				<div class="rightSection">
+					<select class="form-control" id="inputCountry">
+						<option value="China">China</option>
+					</select>
+				</div>
+			</div>
+			
 			<div class="live4">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputLive"></div>
+				<div class="rightSection">
+					<select class="form-control" id="inputLive">
+						<option value="Seoul">Seoul</option>
+					</select>
+				</div>
 			</div>
+
 			<div class="city5">
 				<div class="leftSection"><p class="rightAlign">Since, How long do you live in that City?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputCity"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="howlongCity"></div>
 			</div>
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputEducation">	</div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation"></div>
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
@@ -130,13 +145,13 @@
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
 				<div class="rightSection">
-					<select class="form-control languageSelect" id="keyword1">
+					<select class="form-control languageSelect keyword" id="keyword1">
 						<option value=""></option>
 					</select>
-					<select class="form-control languageSelect" id="keyword2">
+					<select class="form-control languageSelect keyword" id="keyword2">
 						<option value=""></option>
 					</select>
-					<select class="form-control languageSelect" id="keyword3">
+					<select class="form-control languageSelect keyword" id="keyword3">
 						<option value=""></option>
 					</select>
 				</div>
