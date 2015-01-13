@@ -9,12 +9,8 @@
 
 				<!-- 여기서부터 섬네일 시작 -->
 				<div class="contents_list1">
+					<div class="statusDiv redgloss2"><p id="statusP">중지중</p></div>
 					<div class="list_image1">
-						<div class="statusBand transblack">
-							<p id="status" name="status">2015.1.12 판매시작<br>
-							<span class="sub_title"><span id="pNumber">160</span>명의 고객이 다녀갔습니다.</span>
-							</p>
-						</div>
 						<div class="band">
 							<div class="wishcount">
 								<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image">
@@ -55,19 +51,15 @@
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter" role="group" aria-label="" id="b-group">
 					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">Modify</button>
-					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">Stop</button>
+					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">Restart</button>
 					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">Delete</button>
 				</div>
 				<!-- 섬네일 끝 -->
 
 				<!-- 여기서부터 섬네일 시작 -->
 				<div class="contents_list1">
+					<div class="statusDiv redgloss2"><p id="statusP">중지중</p></div>
 					<div class="list_image1">
-						<div class="statusBand transblack">
-							<p id="status" name="status">2015.1.12 판매시작<br>
-							<span class="sub_title"><span id="pNumber">124</span>명의 고객이 다녀갔습니다.</span>
-							</p>
-						</div>
 						<div class="band">
 							<div class="wishcount">
 								<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image">
@@ -108,19 +100,15 @@
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter" role="group" aria-label="" id="b-group">
 					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">Modify</button>
-					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">Stop</button>
+					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">Restart</button>
 					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">Delete</button>
 				</div>
 				<!-- 섬네일 끝 -->
 
 				<!-- 여기서부터 섬네일 시작 -->
 				<div class="contents_list1">
+					<div class="statusDiv redgloss2"><p id="statusP">중지중</p></div>
 					<div class="list_image1">
-						<div class="statusBand transblack">
-							<p id="status" name="status">2015.1.12 판매시작<br>
-							<span class="sub_title"><span id="pNumber">150</span>명의 고객이 다녀갔습니다.</span>
-							</p>
-						</div>
 						<div class="band">
 							<div class="wishcount">
 								<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image">
@@ -161,7 +149,7 @@
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter" role="group" aria-label="" id="b-group">
 					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">Modify</button>
-					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">Stop</button>
+					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">Restart</button>
 					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">Delete</button>
 				</div>
 				<!-- 섬네일 끝 -->
