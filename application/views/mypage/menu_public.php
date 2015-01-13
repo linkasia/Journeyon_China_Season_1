@@ -20,6 +20,7 @@
 
 	<!-- 여기서부터 오른쪽 박스 -->
 	<form name="profileUploadfrm" id="profileUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/mypage/mypage_M/profileModify">
+	<?foreach($user as $v){?>
 	<div id="rightDiv">
 		<div id="introduceSelf">
 			<p class="headline">Introduce Your Self</p>
@@ -38,7 +39,7 @@
 					<p class="rightAlign">What is your Name?</p>
 				</div>
 				<div class="rightSection">
-						<input type="text" class="form-control2 text" id="inputName"  name="inputName">
+						<input type="text" class="form-control2 text" id="inputName"  name="inputName" value="<?=$v->Name_cn_en?>">
 				</div>
 			</div>
 
@@ -48,15 +49,15 @@
 					<!-- <input type="text" class="form-control2" id="inputGender"> -->
 					<div class="male">
 						<label>
-							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="0001" onclick="radioMaleChang()" checked> Male
+							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="0001" onclick="radioMaleChang()" <?if($v->gender_code == "0001"){?>checked <?}?>> Male
 						</label>
 					</div>
 					<div class="female">
 						<label>
-							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="0002" onclick="radioFemaleChang()">	Female
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="0002" onclick="radioFemaleChang()" <?if($v->gender_code == "0002"){?>checked <?}?>>	Female
 						</label>
 					</div>
-					<input type="hidden" id="hiddenGerder"  name="hiddenGerder">
+					<input type="hidden" id="hiddenGerder"  name="hiddenGerder" value="0001">
 
 				</div><!-- gender2 end -->
 			</div>
@@ -64,17 +65,19 @@
 				<div class="leftSection"><p class="rightAlign">What is your Birthday?</p></div>
 				<div class="rightSection">
 					<label for="birth"></label>
-					<input type="date" value="1985-01-01" class="form-control2 text" id="birth" name="birth">
+					<input type="date" value="1985-01-01" class="form-control2 text" id="birth" name="birth" value="<?=$v->birthday?>">
 				</div>
 			</div>
 
 			<div class="live4">
 				<div class="leftSection"><p class="rightAlign">What is your country?</p></div>
 				<div class="rightSection">
+
 					<select class="form-control" id="inputCountry" name="inputCountry" onChange="comboChange()">
 						<option value="">--Select--</option>
-						<?foreach($countryList as $v){?>
-							<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
+						<?echo $v->live_area_code.",".$v->live_country_code."::::::::::".$k->class.",".$k->CODE?>
+						<?foreach($countryList as $k){?>
+							<option value="<?=$k->class?>,<?=$k->CODE?>" <? if( $v->live_area_code.",".$v->live_country_code == $k->class.",".$k->CODE ) {?> selected <?}?>  ><?=$k->code_nm?></option>
 						<?}?>
 					</select>
 					<input type="hidden" id="hiddenClass"  name="hiddenClass">
@@ -183,6 +186,7 @@
 		</div>
 	</div>
 </div><!-- mypublicWrap -->
+<?}?>
 </form>
 
 <script type="text/javascript">

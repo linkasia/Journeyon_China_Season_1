@@ -27,18 +27,14 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('include/footer');
 	}
 
-	/*profile*/
-/*	function myprofile()
-	{
-		$this->load->view('mypage/myprofile');
-	}
-*/
 	function mypublic(){
 
 		$data['langList'] = $this->tb_code->langList();
 		$data['learnList'] = $this->tb_code->learnList();
 		$data['countryList'] = $this->main_i->Country();
 
+
+		$data['user'] = $this->myModify->myProfilePage($this->session->userdata['num']);
 
 		$this->load->view('include/header');
 		$this->load->view('mypage/menu_public',$data);

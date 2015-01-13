@@ -225,7 +225,7 @@
 					<ul class="somenail_list">
 						<li class="somenail2_1">
 							<section class="somenail_bootstrap2">
-								<div class="portfolio-item2" onclick="detailCity('<?=$v->num?>')">
+								<div class="portfolio-item2" onclick="detailCity('<?=$v->product_num?>')">
 									<div class="portfolio-link2">
 										<div class="portfolio-hover2">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
@@ -240,12 +240,12 @@
 									<div class="somenail_transbox2" style="background-color:rgba(27,188,155 ,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}?>
 								</div>
-								<div class="somenail_transcity2" onclick="detailCity('<?=$v->num?>')">
+								<div class="somenail_transcity2" onclick="detailCity('<?=$v->product_num?>')">
 									<p><?=$v->code_nm?></p>
 								</div>
 								<div class="somenail_caption">
 									<div class="circle-div2">
-										<img src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle2 somenail_profile"onclick="detailProfile('<?=$v->user_num?>')" >
+										<img src="<?=$v->face_img_path?>" class="img-circle2 somenail_profile"onclick="detailProfile('<?=$v->user_num?>')" >
 									</div>
 									<div class="back-line1">
 										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span><?=$v->fat_price?> 元</span>

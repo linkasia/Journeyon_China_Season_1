@@ -62,9 +62,17 @@
 											interesting1 = '".$dataList['inputInteresting']."' ,
 											interesting2 = ''
 									WHERE user_num = '".$dataList['user_num']."' ";
-									print_r($sql);
 			$query = $this->db->query($sql);
+		}
 
+		function myProfilePage($num)
+		{
+			$sql ="SELECT *
+					FROM user
+					WHERE user_num = '".$num."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
 		}
 	}
 ?>
