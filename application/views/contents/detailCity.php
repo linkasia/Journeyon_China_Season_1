@@ -76,11 +76,32 @@ $mode = $_REQUEST['mode'];
 									<h4 class="modal-title" id="myModalLabel">예약 일정을 선택하세요</h4>
 								</div><!-- modal-header 닫힘 -->
 								<div class="modal-body">
-									  <div id='content'><!--div id='jqxWidget'> </div--></div>
+									<div id='content'><!--div id='jqxWidget'> </div--></div>
+									<div class="modalFix">
+
+										<div id="modalDiv" name="modalDiv"><!-- 여기서부터 반복 -->
+											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
+											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
+											<span> 名</span>
+										</div>
+										<div id="modalDiv" name="modalDiv"><!-- 반복 -->
+											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
+											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
+											<span> 名</span>
+										</div>									<div id="modalDiv" name="modalDiv"><!-- 반복 -->
+											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
+											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
+											<span> 名</span>
+										</div>
+
+									</div><!-- modalFix 고정 끝 -->
+
+									  <div id="emptyDiv" name="emptyDiv"></div>
+									  <textarea name="recheckTextarea" id="recheckTextarea" cols="30" rows="10"></textarea>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
+									<button type="button" class="btn btn-primary">Chat start</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Save changes</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
 						</div><!-- modal-dialog 닫힘 -->

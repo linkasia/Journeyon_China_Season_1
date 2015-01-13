@@ -667,6 +667,14 @@
 	#right_aside .aside-menu img{margin-left: 50px;}
 	#right_aside .aside-like{margin-left: 45px; cursor: pointer;}
 
+	#right_aside  .aside-menu .modal-dialog{width: 450px;}
+	#right_aside  .aside-menu .modal-body{height: 438px;}
+	#right_aside  .aside-menu .modal-body .modalFix{height: 250px; max-height: 250px; overflow-y: auto; margin-bottom: 10px; margin-top: 50px;}
+	#right_aside  .aside-menu .modal-body #modalDiv{position: relative; margin-bottom: 5px;}
+	#right_aside  .aside-menu .modal-body #modalDiv #recheckDate{width: 160px; height: 30px; float: left; margin-right: 10px; margin-left: 94px;}
+	#right_aside  .aside-menu .modal-body #modalDiv #recheckPerson{width: 42px; height: 30px; float: left; margin-right: 5px;}
+	#right_aside  .aside-menu .modal-body #modalDiv span{line-height: 30px;}
+	#right_aside  .aside-menu .modal-body #recheckTextarea{width: 418px; height: 100px; max-width: 418px; max-height: 100px;}
 
 	#right_aside .btn{margin: 0 auto;}
 	#right_aside #calPop{display: block;}
