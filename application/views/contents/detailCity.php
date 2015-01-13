@@ -88,7 +88,8 @@ $mode = $_REQUEST['mode'];
 											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
 											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
 											<span> 名</span>
-										</div>									<div id="modalDiv" name="modalDiv"><!-- 반복 -->
+										</div>
+										<div id="modalDiv" name="modalDiv"><!-- 반복 -->
 											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
 											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
 											<span> 名</span>
@@ -262,15 +263,19 @@ $mode = $_REQUEST['mode'];
 				}
 			});
 		});
+
+		$('#calPop').click( function(){
+			alert("a");
+		});
 	});
 
 
 	function checkCancel(i)
 	{
 		var choiceDate=document.getElementById('date'+i).value;
-		 var _tmpCheckDate =document.getElementById("li"+i).innerHTML="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
-		 _checkDate = _checkDate.replace(_tmpCheckDate,"");
-		 document.getElementById("li"+i).innerHTML="";
+		var _tmpCheckDate =document.getElementById("li"+i).innerHTML="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
+		_checkDate = _checkDate.replace(_tmpCheckDate,"");
+		document.getElementById("li"+i).innerHTML="";
 	}
 
 	function addReply(num)
