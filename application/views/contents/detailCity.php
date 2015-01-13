@@ -184,7 +184,7 @@ $mode = $_REQUEST['mode'];
 		var i=0;
 		$('#calendarContent').click( function(){
 
-			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + $('#jqxWidget').val().getMonth() + "-" + $('#jqxWidget').val().getDate();
+			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
 
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");

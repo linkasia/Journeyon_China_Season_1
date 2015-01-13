@@ -75,22 +75,25 @@
 
 					<select class="form-control" id="inputCountry" name="inputCountry" onChange="comboChange()">
 						<option value="">--Select--</option>
-						<?echo $v->live_area_code.",".$v->live_country_code."::::::::::".$k->class.",".$k->CODE?>
 						<?foreach($countryList as $k){?>
 							<option value="<?=$k->class?>,<?=$k->CODE?>" <? if( $v->live_area_code.",".$v->live_country_code == $k->class.",".$k->CODE ) {?> selected <?}?>  ><?=$k->code_nm?></option>
 						<?}?>
 					</select>
-					<input type="hidden" id="hiddenClass"  name="hiddenClass">
-					<input type="hidden" id="hiddenCode"  name="hiddenCode">
+					<input type="hidden" id="hiddenClass"  name="hiddenClass" value = "<?=$v->live_area_code?>">
+					<input type="hidden" id="hiddenCode"  name="hiddenCode" value = "<?=$v->live_country_code?>">
 				</div>
 			</div>
 
 			<div class="live5">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
 				<div class="rightSection" id="choiceCity" name="choiceCity">
-					<?
-						$data="";
-						$this->load->view("/contents/comboCity",$data);?>
+					<?$city = $this->main_i->cityList($v->live_area_code,$v->live_country_code); ?>
+						<select class="form-control" data-style="" id="selectCity" name="selectCity">
+							<option value = "">-- Select --</option>
+							<?foreach($city as $k){?>
+								<option value = "<?=$k->code?>"  <?if($k->code == $v->live_city_code){?> selected <?}?>><?=$k->code_nm?></option>
+							<?}?>
+						</select>
 				</div>
 			</div>
 
@@ -101,55 +104,55 @@
 			<div class="phone13">
 				<div class="leftSection"><p class="rightAlign">Phone Number</p></div>
 				<div class="rightSection">
-					<input type="text" class="form-control2 text" id="countryNumber"  name="countryNumber" placeholder="Country Number">
-					<input type="text" class="form-control2 text" id="phoneNumber"  name="phoneNumber" placeholder="Phone Number">
+					<input type="text" class="form-control2 text" id="countryNumber"  name="countryNumber" placeholder="Country Number" value="<?=$v->phone_num_country?>">
+					<input type="text" class="form-control2 text" id="phoneNumber"  name="phoneNumber" placeholder="Phone Number" value="<?=$v->phone_num_user?>">
 				</div>
 			</div>
 
 			<div class="occupation6">
 				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation" value="<?=$v->job?>"></div>
 			</div>
 
 			<div class="detail8">
 				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
-				<div class="rightSection"><textarea class="form-control2 text" id="inputJobDetail" name="inputJobDetail"></textarea></div>
+				<div class="rightSection"><textarea class="form-control2 text" id="inputJobDetail" name="inputJobDetail" value="<?=$v->job_detail?>"></textarea></div>
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="textEducation"  name="textEducation"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="textEducation"  name="textEducation"  value="<?=$v->education?>"></div>
 			</div>
 			<div class="fluent9">
 				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
 				<div class="rightSection">
 					<select class="form-control languageSelect" id="Language1" name="Language1">
-					<?foreach($langList as $v){?>
-						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?foreach($langList as $k){?>
+						<option value="<?=$k->code?>" <?if($k->code == $v->lang1_code){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language2"  name="Language2">
-					<?foreach($learnList as $v){?>
-						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+					<?foreach($learnList as $k){?>
+						<option value="<?=$k->code?>" <?if($k->code == $v->lang1_skill){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>>
 					</select>
 					<select class="form-control languageSelect" id="Language3"  name="Language3">
-						<?foreach($langList as $v){?>
-						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+						<?foreach($langList as $k){?>
+						<option value="<?=$k->code?>" <?if($k->code == $v->lang2_code){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language4"  name="Language4">
-						<?foreach($learnList as $v){?>
-						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+						<?foreach($learnList as $k){?>
+						<option value="<?=$k->code?>" <?if($k->code == $v->lang2_skill){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>>
 					</select>
 					<select class="form-control languageSelect" id="Language5"  name="Language5">
-						<?foreach($langList as $v){?>
-						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+						<?foreach($langList as $k){?>
+						<option value="<?=$k->code?>" <?if($k->code == $v->lang3_code){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language6"  name="Language6">
-						<?foreach($learnList as $v){?>
-						<option value="<?=$v->code?>"><?=$v->code_nm?></option>
+						<?foreach($learnList as $k){?>
+						<option value="<?=$k->code?>"  <?if($k->code == $v->lang3_skill){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>>
 					</select>
 				</div>
@@ -157,7 +160,7 @@
 
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
-				<div class="rightSection"><textarea class="form-control" name="inputInteresting" id="inputInteresting" cols="30" rows="10"></textarea></div>
+				<div class="rightSection"><textarea class="form-control" name="inputInteresting" id="inputInteresting" cols="30" rows="10"  value="<?=$v->interesting1?>"></textarea></div>
 			</div>
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
@@ -175,11 +178,11 @@
 			</div>
 			<div class="QQ14">
 				<div class="leftSection"><p class="rightAlign">QQ ID</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="publicQQ" name="publicQQ"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="publicQQ" name="publicQQ" value="<?=$v->messenger_qq?>"></div>
 			</div>
 			<div class="Weixin15">
 				<div class="leftSection"><p class="rightAlign">Weixing ID</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="publicWeixin" name="publicWeixin"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="publicWeixin" name="publicWeixin"  value="<?=$v->messenger_weixin?>"></div>
 			</div>
 			<button class="btn btn-info" id="saveProfileBottom">Save</button>
 			<button class="btn btn-warning" id="cancelSaveBottom">Cancel</button>

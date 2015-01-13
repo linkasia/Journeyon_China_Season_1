@@ -33,7 +33,6 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$data['learnList'] = $this->tb_code->learnList();
 		$data['countryList'] = $this->main_i->Country();
 
-
 		$data['user'] = $this->myModify->myProfilePage($this->session->userdata['num']);
 
 		$this->load->view('include/header');

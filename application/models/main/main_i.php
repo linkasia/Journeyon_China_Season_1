@@ -47,6 +47,7 @@
 		//도시
 		function choiceCityList($class ,$code)
 		{
+			echo $class .",".$code;
 			$sql ="SELECT *
 							FROM city_table
 							WHERE sclass = '".$class."'

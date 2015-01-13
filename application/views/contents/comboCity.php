@@ -1,6 +1,6 @@
 <select class="form-control" data-style="" id="selectCity" name="selectCity">
 	<option value = "">-- Select --</option>
-	<?foreach($city as $v){?>
-		<option value = "<?=$v->code?>"><?=$v->code_nm?></option>
+	<?foreach($city as $k){?>
+		<option value = "<?=$k->code?>" ><?=$k->code_nm?></option>
 	<?}?>
 </select>
