@@ -19,11 +19,11 @@
 				<div class="underline">판매관리</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 			<div class="btn-group sortGroup" role="group" aria-label="" id="salessortGroup">
-				<button type="button" class="btn btn-info" id="sort1" name="sort1">전체보기<span id="sortNumber1">(42)</span></button>
-				<button type="button" class="btn btn-info" id="sort2" name="sort2">구매결정<span id="sortNumber2">(4)</span></button>
-				<button type="button" class="btn btn-info" id="sort3" name="sort3">가격결정<span id="sortNumber3">(20)</span></button>
-				<button type="button" class="btn btn-info" id="sort4" name="sort4">결제완료<span id="sortNumber4">(25)</span></button>
-				<button type="button" class="btn btn-info" id="sort4" name="sort4">입금완료<span id="sortNumber5">(10)</span></button>
+				<button type="button" class="btn btn-info" id="salessort1" name="salessort1">전체보기<span id="sortNumber1" name="sortNumber1">(42)</span></button>
+				<button type="button" class="btn btn-info" id="salessort2" name="salessort2">구매결정<span id="sortNumber2" name="sortNumber2">(4)</span></button>
+				<button type="button" class="btn btn-info" id="salessort3" name="salessort3">가격결정<span id="sortNumber3" name="sortNumber3">(20)</span></button>
+				<button type="button" class="btn btn-info" id="salessort4" name="salessort4">결제완료<span id="sortNumber4" name="sortNumber4">(25)</span></button>
+				<button type="button" class="btn btn-info" id="salessort5" name="salessort5">입금완료<span id="sortNumber5" name="sortNumber5">(10)</span></button>
 			</div>
 
 

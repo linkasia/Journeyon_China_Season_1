@@ -15,9 +15,9 @@
 			<div class="pmWrap">
 				<a href="/index.php/City/country/productUpload" class="btn btn-primary product-upload" id='productUpload' name='productUpload'>Guide 상품 올리러가기</a>
 				<ul class="nav nav-tabs">
-				  <li role="presentation" class="active" id="nav-tab1">판매중</li>
-				  <li role="presentation"id="nav-tab2">등록중</li>
-				  <li role="presentation" id="nav-tab3">판매중지</li>
+				  <li role="presentation" class="active" id="nav-tab1"><a href="">판매중</a></li>
+				  <li role="presentation"id="nav-tab2"><a href="">등록중</a></li>
+				  <li role="presentation" id="nav-tab3"><a href="">판매중지</a></li>
 				</ul>
 				
 				<?php $this -> load ->view('/mypage/m_guide2_tab1'); ?><!-- Tab영역 불러오기 -->

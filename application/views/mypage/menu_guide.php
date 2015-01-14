@@ -1,6 +1,6 @@
 <div id="guideWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">Guide Menu</span></span>
+		<span class="list-group-item active">Guest Menu</span></span>
 		<span class="list-group-item" id='guideHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Guide Home</span>
 		<span class="list-group-item" id='guideR'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;Guide Request</span>
 		<span class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Product Management&nbsp;&nbsp;</span>
