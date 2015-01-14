@@ -207,12 +207,27 @@ $mode = $_REQUEST['mode'];
 		$('#calendarContent').click( function(){
 
 			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
-
+			if(checkDay.length == 9){
+				checkDay = $('#jqxWidget').val().getFullYear() + "-0" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
+			}
+alert(checkDay);
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");
 			}else{
-				//alert(_checkDate);
-				_checkDate += "<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
+				var insertBox = "<li class='checkdateLi'  id='li"+i+"'>";
+				insertBox += "<div id='modalDiv' name='modalDiv'>";
+				insertBox += "<input type='date' class='form-control' id='recheckDate' name='recheckDate' value='"+checkDay+"'>";
+				insertBox += "<input type='text' class='form-control' id='recheckPerson' name='recheckPerson'>";
+				insertBox += "<span> 名</span>";
+				insertBox += "<img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'>";
+				insertBox += "<input type='hidden' value="+checkDay+" id='date"+i+"'>";
+				insertBox += "</div>";
+				insertBox += "</li>";
+
+				_checkDate +=insertBox;
+				/*
+				"<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
+				*/
 				i++;
 			}
 
@@ -273,7 +288,20 @@ $mode = $_REQUEST['mode'];
 	function checkCancel(i)
 	{
 		var choiceDate=document.getElementById('date'+i).value;
-		var _tmpCheckDate =document.getElementById("li"+i).innerHTML="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
+		var insertBox = "<li class='checkdateLi'  id='li"+i+"'>";
+				insertBox += "<div id='modalDiv' name='modalDiv'>";
+				insertBox += "<input type='date' class='form-control' id='recheckDate' name='recheckDate' value='"+choiceDate+"'>";
+				insertBox += "<input type='text' class='form-control' id='recheckPerson' name='recheckPerson'>";
+				insertBox += "<span> 名</span>";
+				insertBox += "<img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'>";
+				insertBox += "<input type='hidden' value="+choiceDate+" id='date"+i+"'>";
+				insertBox += "</div>";
+				insertBox += "</li>";
+
+		var _tmpCheckDate =document.getElementById("li"+i).innerHTML= insertBox;
+/*
+		"<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
+		*/
 		_checkDate = _checkDate.replace(_tmpCheckDate,"");
 		document.getElementById("li"+i).innerHTML="";
 	}
