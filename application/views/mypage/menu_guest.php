@@ -1,6 +1,6 @@
 <div id="guestWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">Guide Menu</span></span>
+		<span class="list-group-item active">Guest Menu</span></span>
 		<span class="list-group-item" id='guestHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Guest Home</span>
 		<span class="list-group-item" id='guestBucket'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;Bucket List</span>
 		<span class="list-group-item" id='guestReservation'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Reservation List&nbsp;&nbsp;</span>

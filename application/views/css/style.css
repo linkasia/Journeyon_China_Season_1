@@ -1274,8 +1274,56 @@
 		#guestWrap #guestBuy{cursor: pointer;}
 		#guestWrap #guestCancel{cursor: pointer;}
 
+		/* 오른쪽 메뉴 */
 		#guestWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
 		#guestWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
+
+		/* 이미지 관련 부분 */
+		#guestWrap .profileWrap1 #guestImg1{margin-bottom: 50px;}
+		#guestWrap .profileWrap1 .band{position: absolute; width: 680px; height: 42px; background-color: rgba(0,0,0,.6); top: 0px; line-height: 42px; color: #fff; padding-left: 20px;}
+		#guestWrap .profileWrap1 .band2{position: absolute; width: 210px; height: 42px; background-color: rgba(0,0,0,.6); top: 108px; right: 10px; line-height: 42px; color: #fff; text-align: center;}
+		#guestWrap .profileWrap1 .band2:hover{
+					opacity: 0.8;
+					background: rgba(0, 0, 0,.9);
+					-webkit-transition: all ease .8s;
+					-moz-transition: all ease .8s;
+					transition: all ease .8s;
+					cursor: pointer;
+				}
+
+		/*  타이틀, 아래 컨텐츠 CSS */
+		#guestWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
+		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+
+		#guestWrap .profileWrap1 #guesthomeWrap{width: 100%; position: relative;}
+		#guestWrap .profileWrap1 #guesthomeWrap .guestimgDiv{width: 680px; height: 397px; position: relative; background-color: #ddd; overflow: hidden; margin-bottom: 30px;}
+		#guestWrap .profileWrap1 #guesthomeWrap .guestimgDiv .guestBandDiv{width: 100%; height: 60px; background-color: rgba(0,0,0,0.6); filter:Alpha(opacity=75); position: absolute; top: 175px; color: #fff; font-size: 1em; line-height: 60px; text-align: center;}
+		#guestWrap .profileWrap1 #guesthomeWrap .guestimgDiv .guestBandDiv span{margin-left: 10px;}
+		#guestWrap .profileWrap1 #guesthomeWrap .guesttxtWrap{width: 680px; height: 500px;}
+		#guestWrap .profileWrap1 #guesthomeWrap .cols1{width: 213px; float: left; margin-right: 20px;}
+		#guestWrap .profileWrap1 #guesthomeWrap .cols2{width: 213px; float: left; margin-right: 20px;}
+		#guestWrap .profileWrap1 #guesthomeWrap .cols3{width: 214px; float: left;}
+		#guestWrap .profileWrap1 #guesthomeWrap .colsP1{font-size: 1.125em; font-weight: 600; color: #f3a46b; margin: 20px 0 10px 0;}
+		#guestWrap .profileWrap1 #guesthomeWrap .colsP2{font-size: 1.125em; font-weight: 600; color: #1bbc9b; margin: 20px 0 10px 0;}
+		#guestWrap .profileWrap1 #guesthomeWrap .colsP3{font-size: 1.125em; font-weight: 600; color: #c377e4; margin: 20px 0 10px 0;}
+
+		/*  */
+		#guestWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
+		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
