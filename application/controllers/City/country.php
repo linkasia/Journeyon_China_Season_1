@@ -239,5 +239,27 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 			print_r($filePath);
 		}
 	}
+
+	/*채팅저장*/
+	function insertChating(){
+		$salesNum = $_REQUEST['salesNum'];
+		$contents = $_REQUEST['contents'];
+		$user_num = $this->session->userdata['num'];
+
+		$insert['chatSend']= $this->country_M->chatSend( $salesNum, $contents, $user_num );
+	}
+
+	/*채팅시작*/
+	function startChating(){
+		$salesNum = $_REQUEST['salesNum'];
+		$user_num = $this->session->userdata['num'];
+
+		$data['SendList']= $this->country_M->chatList( $salesNum, $user_num );
+		//$data['salesCityQnA2']= $this->country_M->salesDetailCityQnA2($salesNum);
+
+		$this->load->view('include/header');
+		$this->load->view("/contents/chating",$data);
+		$this->load->view('include/footer');
+	}
 }
 ?>

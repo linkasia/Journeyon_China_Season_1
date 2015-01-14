@@ -510,5 +510,41 @@
 						SYSDATE())";
 			$query = $this->db->query($sql);
 		}
+
+		function chatSend( $salesNum, $contents, $user_num)
+		{
+			$sql ="INSERT INTO chat
+													(chat_num,
+													user_num,
+													product_num,
+													content,
+													create_time
+													)VALUES(
+													0,
+													'".$user_num."',
+													'".$salesNum."',
+													'".$contents."',
+													SYSDATE())";
+													print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		function chatList( $salesNum, $user_num )
+		{
+			$sql ="SELECT a.*,
+											b.face_img_path,
+											b.Name_cn_en,
+											b.v_get_code,
+											c.code_nm,
+											c.ref1
+							FROM chat a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+							WHERE a.user_num = '".$user_num."'
+							AND a.product_num = '".$salesNum."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 ?>

@@ -49,24 +49,13 @@ $mode = $_REQUEST['mode'];
 					<div id='jqxWidget'> </div>
 
 					<!-- <img src="/application/views/images/contents/calandar.png" alt=""> --> <!-- 캘린더 들어가는 칸 -->
-					<div class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
+					<div id='insetDiv' name='insetDiv' class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
 						<ul id='checkDate' name='checkDate'>	</ul>
-
-						<!--select class="select_option2">
-							<option value=''>2014-12-10</option>
-						</select-->
-
-						<!--select class="select_option3">
-							<option value=''>1名</option>
-							<option value=''>2名</option>
-							<option value=''>3名</option>
-							<option value=''>4名</option>
-							<option value=''>5名</option>
-						</select-->
 					</div>
+					<textarea name="recheckTextarea" id="recheckTextarea" cols="27" rows="10"></textarea>
 				</div>
 				<div class="aside-menu">
-					<button type="button" class="btn btn-primary" id="calPop" name="calPop" data-toggle="modal" data-target="#myModal">定制游咨询</button>
+					<button type="button" class="btn btn-primary" id="calPop" name="calPop">定制游咨询</button>
 					<!-- Modal 여기서부터 Overview 박스 시작 -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
@@ -77,7 +66,7 @@ $mode = $_REQUEST['mode'];
 								</div><!-- modal-header 닫힘 -->
 								<div class="modal-body">
 									<div id='content'><!--div id='jqxWidget'> </div--></div>
-									<div class="modalFix">
+									<div class="modalFix" id='dateDiv' name='dateDiv'>
 <!--
 										<div id="modalDiv" name="modalDiv">
 											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
@@ -98,7 +87,7 @@ $mode = $_REQUEST['mode'];
 									</div><!-- modalFix 고정 끝 -->
 
 									  <div id="emptyDiv" name="emptyDiv"></div>
-									  <textarea name="recheckTextarea" id="recheckTextarea" cols="30" rows="10"></textarea>
+									  <!--textarea name="recheckTextarea" id="recheckTextarea" cols="30" rows="10"></textarea-->
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
 									<button type="button" class="btn btn-primary">Chat start</button>
@@ -167,7 +156,6 @@ $mode = $_REQUEST['mode'];
 	//달력제어
 	$(document).ready(function () {
 		var today = new Date();
-		//$(".")
 		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
 	 });
 
@@ -209,25 +197,26 @@ $mode = $_REQUEST['mode'];
 			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
 			if(checkDay.length == 9){
 				checkDay = $('#jqxWidget').val().getFullYear() + "-0" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
+			}else if(checkDay.length == 8){
+				checkDay = $('#jqxWidget').val().getFullYear() + "-0" + ($('#jqxWidget').val().getMonth() + 1 ) + "-0" + $('#jqxWidget').val().getDate();
 			}
 
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");
 			}else{
+				/*
 				var insertBox = "<li class='checkdateLi'  id='li"+i+"'>";
 				insertBox += "<div id='modalDiv' name='modalDiv'>";
-				insertBox += "<input type='date' class='form-control' id='recheckDate' name='recheckDate' value='"+checkDay+"'>";
+				insertBox += "<input type='date' class='form-control' id='recheckDate' name='recheckDate' value='"+checkDay+"' readonly>";
 				insertBox += "<input type='text' class='form-control' id='recheckPerson' name='recheckPerson'>";
 				insertBox += "<span> 名</span>";
 				insertBox += "<img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'>";
 				insertBox += "<input type='hidden' value="+checkDay+" id='date"+i+"'>";
 				insertBox += "</div>";
 				insertBox += "</li>";
+*/
+				_checkDate +="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
 
-				_checkDate +=insertBox;
-				/*
-				"<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
-				*/
 				i++;
 			}
 
@@ -240,7 +229,6 @@ $mode = $_REQUEST['mode'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
-				//url:"http://163.180.73.62/index.php/city/country/detailCity1",
 				url:"/index.php/city/country/detailCity1",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
@@ -255,7 +243,6 @@ $mode = $_REQUEST['mode'];
 				dataType:"text",
 				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 				data:{ salesNum : _salesNum},
-				//url:"http://163.180.73.62/index.php/city/country/detailCity2",
 				url:"/index.php/city/country/detailCity2",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
@@ -280,7 +267,23 @@ $mode = $_REQUEST['mode'];
 		});
 
 		$('#calPop').click( function(){
-			document.getElementById('modalFix').innerHTML=
+
+			if( $('#li0').html() == "" || $('#li0').html() == null ){
+				alert("날짜를 1개 이상 선택해주세요~!");
+			}else{
+				var _contents = $('#recheckTextarea').val();
+				$.ajax({
+					type:"GET" ,
+					dataType:"text",
+					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+					data:{ salesNum: _salesNum,  contents:_contents},
+					url:"/index.php/city/country/insertChating",
+					success: function (data){
+						alert(data);
+						//location.href = "<?=site_url('/City/Country/startChating?salesNum="+_salesNum+"'); ?>";
+					}
+				});
+			}
 		});
 	});
 
@@ -288,6 +291,7 @@ $mode = $_REQUEST['mode'];
 	function checkCancel(i)
 	{
 		var choiceDate=document.getElementById('date'+i).value;
+		/*
 		var insertBox = "<li class='checkdateLi'  id='li"+i+"'>";
 				insertBox += "<div id='modalDiv' name='modalDiv'>";
 				insertBox += "<input type='date' class='form-control' id='recheckDate' name='recheckDate' value='"+choiceDate+"'>";
@@ -297,11 +301,9 @@ $mode = $_REQUEST['mode'];
 				insertBox += "<input type='hidden' value="+choiceDate+" id='date"+i+"'>";
 				insertBox += "</div>";
 				insertBox += "</li>";
+*/
+		var _tmpCheckDate =document.getElementById("li"+i).innerHTML= "<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
 
-		var _tmpCheckDate =document.getElementById("li"+i).innerHTML= insertBox;
-/*
-		"<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
-		*/
 		_checkDate = _checkDate.replace(_tmpCheckDate,"");
 		document.getElementById("li"+i).innerHTML="";
 	}

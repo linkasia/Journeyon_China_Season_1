@@ -7,18 +7,21 @@
 		<p class="chatingTitle">《老友记》咖啡馆纽约开张免费迎客</p>
 	</div><!-- div.header end -->
 
-	<div class="chatingFrame">	
+	<div class="chatingFrame">
+	<?foreach($SendList as $v){?>
 		<div id="youChat">
-			<span id="youchatID">Hye-ri <span id="youchatDate">2015年10月20日 18:10</span></span>
+			<span id="youchatID"><?=$v->Name_cn_en?><span id="youchatDate"><?=$v->create_time?></span></span>
 			<div id="chatImg" class="chatImg">
-				<img src="/application/views/images/main/profile01.jpg" alt="" class="profile_image img-circle">
-				<img src="/application/views/images/flag/20american.png" alt="nation_flagImage" class="flag_image">
+				<img src="<?=$v->face_img_path?>" alt="" class="profile_image img-circle">
+				<img src="<?=$v->ref1?>" alt="nation_flagImage" class="flag_image">
+				<?if($v->v_get_code == "0001"){?>
 				<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
+				<?}?>
 			</div>
 			<img src="/application/views/images/contents/chatarrow_left.png" alt="" class="chatarrow1">
-			<div class="youchatBox"><p>距此次《查理周刊》袭击事件不久前，法国曾连续3日发生袭击事件。虽然法当局并未确认这与恐袭有关，并为一连串袭击降温，但有媒体称，这些事件是“疑似恐怖攻击的‘独狼式袭击’”。</p></div>
+			<div class="youchatBox"><p><?=$v->content?></p></div>
 		</div><!-- youChat end -->
-
+	<?}?>
 		<div id="meChat">
 			<span id="mechatID">Hyo-Sung <span id="mechatDate">2015年10月20日 18:12</span></span>
 			<div id="chatImg" class="chatImg">
@@ -30,40 +33,7 @@
 			<div class="mechatBox"><p>1月5日，在位于达州市达川区麻柳镇明月江的一条支流的河床上打捞起一根长22米、重超60吨、价值不菲的千年乌木。据在现场的专家介绍，该段乌木被深埋于数10米深的河床已有3000余年，</p></div>
 		</div>
 
-		<div id="youChat">
-			<span id="youchatID">Hye-ri <span id="youchatDate">2015年10月20日 18:15</span></span>
-			<div id="chatImg" class="chatImg">
-				<img src="/application/views/images/main/profile01.jpg" alt="" class="profile_image img-circle">
-				<img src="/application/views/images/flag/20american.png" alt="nation_flagImage" class="flag_image">
-				<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
-			</div>
-			<img src="/application/views/images/contents/chatarrow_left.png" alt="" class="chatarrow1">
-			<div class="youchatBox"><p>且保存完好，木质坚硬。乌木购买主于1月5日和6日组织两辆挖掘机，在河滩上昼夜不停地施工两个昼夜，终于将该段乌木刨出水面，抬至河岸边。然而，当一切准备妥当后，该段体型巨大的乌木因无法装上大卡车运走外地。</p></div>
-		</div><!-- youChat end -->
 
-		<div id="meChat">
-			<span id="mechatID">Hyo-Sung <span id="mechatDate">2015年10月20日 18:20</span></span>
-			<div id="chatImg" class="chatImg">
-				<img src="/application/views/images/main/profile02.jpg" alt="" class="profile_image img-circle">
-				<img src="/application/views/images/flag/20american.png" alt="nation_flagImage" class="flag_image">
-				<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
-			</div>
-			<img src="/application/views/images/contents/chatarrow_right.png" alt="" class="chatarrow2">
-			<div class="mechatBox"><p>经买主合议之后，命令施工人员将乌木锯成了17米和5米长的两截，并分批装载上车后驶离施工现场。</p></div>
-		</div>
-
-		<div id="youChat">
-			<span id="youchatID">Hye-ri <span id="youchatDate">2015年10月20日 18:45</span></span>
-			<div id="chatImg" class="chatImg">
-				<img src="/application/views/images/main/profile01.jpg" alt="" class="profile_image img-circle">
-				<img src="/application/views/images/flag/20american.png" alt="nation_flagImage" class="flag_image">
-				<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
-			</div>
-			<img src="/application/views/images/contents/chatarrow_left.png" alt="" class="chatarrow1">
-			<div class="youchatBox"><p>1月5日-6日两天，在达川区麻柳镇的河滩上聚集不少人，围观当地被埋在河床下的宝贝——乌木。随着两辆大型挖掘机挺进达川区麻柳镇的明月江支流，在河滩上不停施工挖掘，一根体型巨大，深埋地底的乌木逐渐清晰。
-
-负责现场治安工作的达川区麻柳镇民警介绍，乌木被深埋在河床10余米的淤泥中，且树木表皮保存完好，木质坚硬，其经济价值巨大。为成功打捞起该段乌木，当天施工部门不仅租用两辆大型挖掘机，还雇佣了数台运输装载的车辆与机器。</p></div>
-		</div><!-- youChat end -->
 	</div><!-- chatingFrame end -->
 
 
