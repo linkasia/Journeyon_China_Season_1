@@ -11,7 +11,7 @@
 
 	<div id="rightWrap">
 		<? $data = "";
-			$this->load->view("/mypage/m_guide0",$data);
+			$this->load->view("/mypage/m_guest0",$data);
 		?>
 	</div><!-- rightWrap end -->
 </div><!-- guestWrap end -->
@@ -27,7 +27,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuideHome",
+					url:"/index.php/mypage/myPage_M/myGuestHome",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -41,7 +41,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuideAdmin",
+					url:"/index.php/mypage/myPage_M/myGuestAdmin",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -55,7 +55,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myItemAdmin",
+					url:"/index.php/mypage/myPage_M/myGuestItemAdmin",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -69,7 +69,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/mySalesAdmin",
+					url:"/index.php/mypage/myPage_M/myGuestSalesAdmin",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -83,7 +83,7 @@
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myCancelAdmin",
+					url:"/index.php/mypage/myPage_M/myGuestCancelAdmin",
 					success: function (data){
 						document.getElementById('rightWrap').innerHTML =data;
 					}

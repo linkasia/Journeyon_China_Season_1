@@ -78,23 +78,23 @@ $mode = $_REQUEST['mode'];
 								<div class="modal-body">
 									<div id='content'><!--div id='jqxWidget'> </div--></div>
 									<div class="modalFix">
-
-										<div id="modalDiv" name="modalDiv"><!-- 여기서부터 반복 -->
+<!--
+										<div id="modalDiv" name="modalDiv">
 											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
 											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
 											<span> 名</span>
 										</div>
-										<div id="modalDiv" name="modalDiv"><!-- 반복 -->
+										<div id="modalDiv" name="modalDiv">
 											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
 											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
 											<span> 名</span>
 										</div>
-										<div id="modalDiv" name="modalDiv"><!-- 반복 -->
+										<div id="modalDiv" name="modalDiv">
 											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
 											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
 											<span> 名</span>
 										</div>
-
+-->
 									</div><!-- modalFix 고정 끝 -->
 
 									  <div id="emptyDiv" name="emptyDiv"></div>
@@ -210,7 +210,7 @@ $mode = $_REQUEST['mode'];
 			if(checkDay.length == 9){
 				checkDay = $('#jqxWidget').val().getFullYear() + "-0" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
 			}
-alert(checkDay);
+
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");
 			}else{
@@ -280,7 +280,7 @@ alert(checkDay);
 		});
 
 		$('#calPop').click( function(){
-			alert("a");
+			document.getElementById('modalFix').innerHTML=
 		});
 	});
 

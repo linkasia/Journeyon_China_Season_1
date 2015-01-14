@@ -91,6 +91,27 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_guide0');
 	}
 
+	function myGuestHome(){
+		$this->load->view('mypage/m_guest0');
+	}
+
+	function myGuestAdmin(){
+		$this->load->view('mypage/m_guest1');
+	}
+
+	function myGuestItemAdmin(){
+		$this->load->view('mypage/m_guest2');
+	}
+
+	function myGuestSalesAdmin(){
+		$this->load->view('mypage/m_guest3');
+	}
+
+	function myGuestCancelAdmin(){
+		$this->load->view('mypage/m_guest4');
+	}
+
+
 	function mailChange(){
 		$to = $_REQUEST['selnum'];
 		$update['mailUpdate'] = $this->myModify->updateMail($to, $this->session->userdata['email']);
