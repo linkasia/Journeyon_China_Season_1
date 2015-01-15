@@ -25,7 +25,7 @@
 					<span class="bandtitle" id="bandtitle" name="bandtitle">취소일자 : 2014-5-25</span>
 					<span class="bandtitle2" id="bandtitle2" name="bandtitle2">취소자 : 구매자</span>
 					<span class="bandtitle3" id="bandtitle3" name="bandtitle3">취소사유 : 구매변심</span>
-					<img src="/application/views/images/main/profile01.jpg" alt="profile_image" class="img-circle profile_image">
+					<img src="/application/views/images/main/profile02.jpg" alt="profile_image" class="img-circle profile_image">
 					<img src="/application/views/images/flag/01korea.png" alt="flag_image" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
@@ -43,7 +43,7 @@
 					<span class="bandtitle" id="bandtitle" name="bandtitle">취소일자 : 2014-5-25</span>
 					<span class="bandtitle2" id="bandtitle2" name="bandtitle2">취소자 : 구매자</span>
 					<span class="bandtitle3" id="bandtitle3" name="bandtitle3">취소사유 : 구매변심</span>
-					<img src="/application/views/images/main/profile01.jpg" alt="profile_image" class="img-circle profile_image">
+					<img src="/application/views/images/main/profile03.jpg" alt="profile_image" class="img-circle profile_image">
 					<img src="/application/views/images/flag/01korea.png" alt="flag_image" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
@@ -61,7 +61,7 @@
 					<span class="bandtitle" id="bandtitle" name="bandtitle">취소일자 : 2014-5-25</span>
 					<span class="bandtitle2" id="bandtitle2" name="bandtitle2">취소자 : 구매자</span>
 					<span class="bandtitle3" id="bandtitle3" name="bandtitle3">취소사유 : 판매변경</span>
-					<img src="/application/views/images/main/profile01.jpg" alt="profile_image" class="img-circle profile_image">
+					<img src="/application/views/images/main/profile04.jpg" alt="profile_image" class="img-circle profile_image">
 					<img src="/application/views/images/flag/01korea.png" alt="flag_image" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->

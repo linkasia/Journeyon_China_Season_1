@@ -83,7 +83,7 @@
 							</div>
 						</div>
 						<img src="/application/views/images/contents/img02.jpg" alt="" class="pic1_img" style="width: 100%; height: 100%;">
-						<img src="/application/views/images/main/profile02.jpg" alt="" class="img-circle profile_image">
+						<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
 						<img src="/application/views/images/flag/01korea.png" alt="" class="flag_image">
 						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 					</div><!-- list_image1 닫힘 -->
@@ -136,7 +136,7 @@
 							</div>
 						</div>
 						<img src="/application/views/images/contents/img03.jpg" alt="" class="pic1_img" style="width: 100%; height: 100%;">
-						<img src="/application/views/images/main/profile03.jpg" alt="" class="img-circle profile_image">
+						<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
 						<img src="/application/views/images/flag/01korea.png" alt="" class="flag_image">
 						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 					</div><!-- list_image1 닫힘 -->

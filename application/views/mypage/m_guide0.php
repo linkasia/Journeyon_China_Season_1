@@ -11,7 +11,6 @@
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 			<div id="guidehomeWrap">
-				<a href="/index.php/City/country/productUpload" class="btn btn-info product-upload" id='productUpload' name='productUpload'>Guide 상품 올리러가기</a>
 				<div class="guideimgDiv">
 					<img src="/application/views/images/mypage/img_guide2.png" alt="guide_image2">
 					<div class="guideimgBand2">

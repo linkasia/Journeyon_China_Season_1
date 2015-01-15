@@ -55,8 +55,8 @@
 									<input type="file" class="filestyle" id="fileUpload" name="fileUpload" data-icon="false">
 									<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
 									<input type='hidden' name="hiddenId" id="hiddenId" class="form-control" value="">
-									<input type='text' name="pictureTitle" id="pictureTitle" class="form-control">
-									<textarea name="pictureCaption" id="pictureCaption" rows="3"></textarea>
+									<input type='text' name="pictureTitle" id="pictureTitle" class="form-control" placeholder="Picture Title">
+									<textarea name="pictureCaption" id="pictureCaption" rows="3" class="form-control" placeholder="사진 설명"></textarea>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
 									<button type="submit" class="btn btn-info" id="imgUpload" name="imgUpload">Upload</button>

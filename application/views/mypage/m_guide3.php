@@ -21,7 +21,7 @@
 				</div><!-- titlediv 닫음 -->
 				<div class="banddiv whitegloss">
 					<span class="bandtitle" id="bandtitle" name="bandtitle">最近联系 : 2014. 6. 9</span><span class="bandtitle2" id="bandtitle2" name="bandtitle2">预约日期 : 2014. 12. 15,  2014. 12. 16,  2014. 12. 17</span>
-					<img src="/application/views/images/main/profile01.jpg" alt="profile_image" class="img-circle profile_image">
+					<img src="/application/views/images/main/profile02.jpg" alt="profile_image" class="img-circle profile_image">
 					<img src="/application/views/images/flag/01korea.png" alt="flag_image" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
@@ -100,7 +100,7 @@
 				</div><!-- titlediv 닫음 -->
 				<div class="banddiv whitegloss">
 					<span class="bandtitle" id="bandtitle" name="bandtitle">最近联系 : 2014. 6. 9</span><span class="bandtitle2" id="bandtitle2" name="bandtitle2">预约日期 : 2014. 12. 15,  2014. 12. 16,  2014. 12. 17</span>
-					<img src="/application/views/images/main/profile01.jpg" alt="profile_image" class="img-circle profile_image">
+					<img src="/application/views/images/main/profile03.jpg" alt="profile_image" class="img-circle profile_image">
 					<img src="/application/views/images/flag/01korea.png" alt="flag_image" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
@@ -147,7 +147,7 @@
 				</div><!-- titlediv 닫음 -->
 				<div class="banddiv whitegloss">
 					<span class="bandtitle" id="bandtitle" name="bandtitle">最近联系 : 2014. 6. 9</span><span class="bandtitle2" id="bandtitle2" name="bandtitle2">预约日期 : 2014. 12. 15,  2014. 12. 16,  2014. 12. 17</span>
-					<img src="/application/views/images/main/profile01.jpg" alt="profile_image" class="img-circle profile_image">
+					<img src="/application/views/images/main/profile04.jpg" alt="profile_image" class="img-circle profile_image">
 					<img src="/application/views/images/flag/01korea.png" alt="flag_image" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
@@ -194,7 +194,7 @@
 				</div><!-- titlediv 닫음 -->
 				<div class="banddiv whitegloss">
 					<span class="bandtitle" id="bandtitle" name="bandtitle">最近联系 : 2014. 6. 9</span><span class="bandtitle2" id="bandtitle2" name="bandtitle2">预约日期 : 2014. 12. 15,  2014. 12. 16,  2014. 12. 17</span>
-					<img src="/application/views/images/main/profile01.jpg" alt="profile_image" class="img-circle profile_image">
+					<img src="/application/views/images/main/profile05.jpg" alt="profile_image" class="img-circle profile_image">
 					<img src="/application/views/images/flag/01korea.png" alt="flag_image" class="flag_image">
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
