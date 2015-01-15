@@ -1295,7 +1295,7 @@
 		#guestWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
 
-		#guestWrap .profileWrap1 #guesthomeWrap{width: 100%; position: relative;}
+		#guestWrap .profileWrap1 #guesthomeWrap{width: 100%; position: relative; float: left;}
 		#guestWrap .profileWrap1 #guesthomeWrap .guestimgDiv{width: 680px; height: 397px; position: relative; background-color: #ddd; overflow: hidden; margin-bottom: 30px;}
 		#guestWrap .profileWrap1 #guesthomeWrap .guestimgDiv .guestBandDiv{width: 100%; height: 60px; background-color: rgba(0,0,0,0.6); filter:Alpha(opacity=75); position: absolute; top: 175px; color: #fff; font-size: 1em; line-height: 60px; text-align: center;}
 		#guestWrap .profileWrap1 #guesthomeWrap .guestimgDiv .guestBandDiv span{margin-left: 10px;}
@@ -1307,15 +1307,108 @@
 		#guestWrap .profileWrap1 #guesthomeWrap .colsP2{font-size: 1.125em; font-weight: 600; color: #1bbc9b; margin: 20px 0 10px 0;}
 		#guestWrap .profileWrap1 #guesthomeWrap .colsP3{font-size: 1.125em; font-weight: 600; color: #c377e4; margin: 20px 0 10px 0;}
 
-		/*  */
+		/* 게스트 두 번째 페이지 */
 		#guestWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
 
+		#selectDiv{width: 100%; position: relative; float: left; margin-bottom: 20px;}
+		#somenailwrapDiv{width: 78px; float: left; margin-right: 5px; margin-bottom: 5px; position: relative;}
+
+		#somenailwrapDiv .somenailDiv{width: 78px; height: 78px; position: relative; float: left;}
+		#somenailwrapDiv .somenailDiv #somenailImg:hover{
+									opacity: 0.8;
+									background: rgba(255, 255, 255,.8);
+									-webkit-transition: all ease .8s;
+									-moz-transition: all ease .8s;
+									transition: all ease .8s;
+									cursor: pointer;
+									}
+		#somenailwrapDiv .somenailDiv #somenailImg{width: 100%; height: 100%;}
+		#somenailwrapDiv .somenailDiv	.contentsNumber{width: 78px; height: 20px; text-align: center; position: absolute; top: 24px; color: #fff; font-size: 1.4em;}
+		#somenailwrapDiv .somenailText{width: 78px; height: 20px; text-align: center; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+
+		#listWrap{width: 100%; position: relative; margin-top: 30px; float: left; padding: 0px;}
+		#listWrap #sortTitle{line-height: 78px; font-size: 1.3em;}
+		#listWrap #removeIcon{position: absolute; top: 0px; right: 0px; color: #f45252; font-size: 2em; cursor: pointer;}
 
 
+			/*상품 LIST*/
+				#listWrap .contents_list1{width: 100%; border: solid #f0f1f5 1px; position: relative; cursor: pointer; float: left; background-color: #fff;}
+				#listWrap .contents_list1:after{clear: both; display: block; *zoom: 1;}
+				#listWrap .contents_list1 .list_image1{width: 270px; height: 180px; background-color: #eee; position: relative; float: left; cursor: pointer;}
+				#listWrap .contents_list1 .list_image1 .band{width: 270px; height: 30px; background-color: rgba(0, 0, 0, 0.8); position: absolute; top: 125px; line-height: 30px;}
+				#listWrap .contents_list1 .list_image1 .band .wishcount{width: 52px; height: 30px; margin-left: 70px; float: left; text-overflow: ellipsis;}
+				#listWrap .contents_list1 .list_image1 .band .reviewcount{width: 52px; height: 30px; float: left; text-overflow: ellipsis;}
+				#listWrap .contents_list1 .list_image1 .band .localcount{width: 69px; height: 30px; float: left; text-overflow: ellipsis;}
+				#listWrap .contents_list1 .list_image1 .band .localcount .navi_image{padding-bottom: 2px;}
 
+				#listWrap .contents_list1 .list_image1 .pic1_img{width: 270px; height: 180px;} /* 이미지 사이즈 고정 */
+				#listWrap .contents_list1 .list_image1 .profile_image{width: 60px; height: 60px; position: absolute; left: 20px; top:108px;}
+				#listWrap .contents_list1 .list_image1 .flag_image{width: 20px; height: 14px; left: 9px; top: 133px; position: absolute;}
+				#listWrap .contents_list1 .list_image1 .vmark_image{width: 18px; height: 18px; left: 65px; top: 151px; position: absolute;}
 
+				.span_e{width: 20px; text-overflow: ellipsis;}
+				#listWrap .contents_list1 .list_rightwrap{width: 406px; height: 45px; float: left;}
+				#listWrap .contents_list1 .list_rightwrap .right_title{width: 310px; height: 45px; line-height: 45px; margin-left: 10px; position: relative; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+				#listWrap .contents_list1 .list_rightwrap .money{
+					position: absolute;
+					width: 85px;
+					height: 45px;
+					text-align: center;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					top: 0px;
+					right: 0px;
+					color: #fff;
+					line-height: 45px;
+					float: right;
+					}
+				#listWrap .contents_list1 .list_rightwrap .right_text{width: 406px; height: 70px; overflow: hidden; text-overflow: ellipsis; display: block; padding-left: 8px; padding-top: 8px; margin-bottom: 10px; background-color: #fff;}
+				#listWrap .contents_list1 .list_rightwrap .bottom_text{width: 406px; height: 50px; display: block; padding-left: 8px;}
+				#listWrap .contents_list1 .list_rightwrap .bottom_text .line1{width: 406px; height: 25px;}
+				#listWrap .contents_list1 .list_rightwrap .bottom_text .line2{width: 406px; height: 25px;}
+				#listWrap .contents_list1 .list_rightwrap .bottom_text .line1 .tag{width: 120px; height: 22px; float: left; border: 1px solid #f0f1f5; border-radius: 20px; position: relative; text-indent: 30px; background-color: #f9fafc; margin-right: 5px; text-overflow: ellipsis;}
+				#listWrap .contents_list1 .list_rightwrap .bottom_text .line2 .tag2{width: 120px; height: 22px; float: left; border: 1px solid #f0f1f5; border-radius: 20px; position: relative; text-indent: 30px; background-color: #f9fafc; margin-right: 5px; text-overflow: ellipsis;}
+				#listWrap .contents_list1 .list_rightwrap .bottom_text .line1 .tag img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
+				#listWrap .contents_list1 .list_rightwrap .bottom_text .line2 .tag2 img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
 
+				#listWrap .contents_list1 .list_image1:hover{
+					opacity: 0.8;
+					background: rgba(255, 255, 255,.6);
+					-webkit-transition: all ease .8s;
+					-moz-transition: all ease .8s;
+					transition: all ease .8s;
+					cursor: pointer;
+					}
+
+				#listWrap .contents_list1 .list_image1:hover{
+					opacity: 0.8;
+					background: rgba(255, 255, 255,.6);
+					-webkit-transition: all ease .8s;
+					-moz-transition: all ease .8s;
+					transition: all ease .8s;
+					cursor: pointer;
+					}
+
+				#listWrap .contents_list1 .statusDiv{position: absolute; top: 0px; left: 0px; width: 270px; height: 180px; z-index: 100; opacity: 0.4;}
+				#listWrap .contents_list1 .statusDiv:hover{
+					opacity: 0.8;
+					-webkit-transition: all ease .8s;
+					-moz-transition: all ease .8s;
+					transition: all ease .8s;
+					cursor: pointer;
+					}
+
+				#listWrap .contents_list1 .statusDiv #statusP{
+					text-align: center;
+					vertical-align: middle;
+					color: #fff;
+					font-size: 2em;
+					padding-top: 70px;
+					}
+
+				#listWrap .listFooter2{height: 34px; float: left; position: relative; background-color: ;  margin-left: 407px; margin-top: 3px;}
+				#listWrap .listFooter2 button{display: block; float: left; width: 137px; height: 30px; padding-top: 0px; padding-bottom: 0px;}
 
 
 
@@ -1555,6 +1648,8 @@
 	#chatlistWrap .chatingFrame #meChat .mechatBox{width: 400px; min-height: 90px; margin-left: 150px; padding: 15px 20px; border-radius: 20px; background-color: #fffcd2; margin-bottom: 20px; margin-top: 20px;}
 	#chatlistWrap .chatingFrame #meChat .chatarrow2{position: absolute; top: 35px; right: 112px;}
 
+
+	
 	/* 채팅 입력란  */
 	#chatlistWrap #typingBox{width: 690px; height: 55px; position: absolute; top: 680px; background-color: #f9fafc;}
 	#chatlistWrap #typingBox #chatInput{width: 500px; margin: 10px 10px 0px 40px; height: 35px; float: left; background-color: #f0f1f5;}
