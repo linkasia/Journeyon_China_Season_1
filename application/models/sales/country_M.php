@@ -529,7 +529,7 @@
 			$query = $this->db->query($sql);
 		}
 
-		function chatList( $salesNum, $user_num )
+		function chatStartList( $salesNum, $user_num )
 		{
 			$sql ="SELECT a.*,
 											b.face_img_path,
@@ -542,6 +542,55 @@
 							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
 							WHERE a.user_num = '".$user_num."'
 							AND a.product_num = '".$salesNum."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function chatDetailList( $salesNum, $user_num )
+		{
+			$sql ="SELECT u.*
+								FROM(SELECT a.*,
+																b.face_img_path,
+																b.Name_cn_en,
+																b.v_get_code,
+																c.code_nm,
+																c.ref1
+																FROM chat a
+																LEFT JOIN USER b ON a.user_num = b.user_num
+																LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+																a.chat_num = ''
+																UNION ALL
+																SELECT d.*,
+																e.face_img_path,
+																e.Name_cn_en,
+																e.v_get_code,
+																f.code_nm,
+																f.ref1
+																FROM chat_reply d
+																LEFT JOIN USER e ON d.user_num = e.user_num
+																LEFT JOIN country_table f ON e.mother_area_code = f.class AND e.mother_country_code = f.code
+																d.chat_num = ''
+												) AS u
+								ORDER BY u.create_time ASC";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function ChatList()
+		{
+			$sql ="SELECT a.*,
+											b.face_img_path,
+											b.Name_cn_en,
+											b.v_get_code,
+											c.code_nm,
+											c.ref1
+							FROM chat a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+							GROUP BY a.chat_num
+							ORDER BY a.create_time";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

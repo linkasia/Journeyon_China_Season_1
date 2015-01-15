@@ -13,6 +13,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$this->load->database();
 		$this->load->model('main/main_i');
 		$this->load->model('member/membersJoin');
+		$this->load->model('sales/country_M');
 		$this->load->helper('url');
 		$this->load->helper('util_helper');
 
@@ -104,8 +105,10 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 	}
 
 	function chat_List(){
+		$data['chatList'] = $this->country_M->ChatList();
+		//$data ="";
 		$this->load->view('include/header');
-		$this->load->view('contents/chatlist');
+		$this->load->view('contents/chatlist',$data);
 		$this->load->view('include/footer');
 	}
 }
