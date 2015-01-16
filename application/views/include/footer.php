@@ -2,22 +2,22 @@
 		<div class="center_wrap">
 			<footer id="footer_top">
 				<div class="menu_container1">
-					<ul class="menu1">在线卓尼  
-						<li><span class="li_cursor">关于</span></li>
-						<li><span class="li_cursor">为什么</span></li>
-						<li><span class="li_cursor">招聘</span></li>
-						<li><span class="li_cursor">团队</span></li>
-						<li><span class="li_cursor">联系方式</span></li>
-					</ul>	
-					
+					<ul class="menu1">在线卓尼
+						<li><a href="/index.php/company/companyinfo/companyMain" class="li_cursor">关于</a></li>
+						<li><a href="" class="li_cursor">为什么</a></li>
+						<li><a href="" class="li_cursor">招聘</a></li>
+						<li><a href="" class="li_cursor">团队</a></li>
+						<li><a href="" class="li_cursor">联系方式</a></li>
+					</ul>
+
 					<ul class="menu2">信息
-						<li><span class="li_cursor">微旅行是什么？</span></li>
-						<li><span class="li_cursor">如何加入当地人?</span></li>
-						<li><span class="li_cursor">对旅游者使用方法？</span></li>
-						<li><span class="li_cursor">隐私权政策</span></li>
-						<li><span class="li_cursor">联系方式</span></li>
-						<li><span class="li_cursor">疑问解答</span></li>
-						<li><span class="li_cursor">合作伙伴</span></li>
+						<li><a href="/index.php/info/infomenu/infoMain" class="li_cursor">微旅行是什么？</a></li>
+						<li><a href="" class="li_cursor">如何加入当地人?</a></li>
+						<li><a href="" class="li_cursor">对旅游者使用方法？</a></li>
+						<li><a href="" class="li_cursor">隐私权政策</a></li>
+						<li><a href="" class="li_cursor">联系方式</a></li>
+						<li><a href="" class="li_cursor">疑问解答</a></li>
+						<li><a href="" class="li_cursor">合作伙伴</a></li>
 					</ul>
 				</div>
 				<div class="menu_container2">
