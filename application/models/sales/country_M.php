@@ -573,7 +573,6 @@
 																WHERE d.chat_num = '".$chatNum."'
 												) AS u
 								ORDER BY u.create_time ASC";
-								print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

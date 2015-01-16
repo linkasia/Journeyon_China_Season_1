@@ -26,7 +26,6 @@
 			data:{ chatNum : key},
 			url:"/index.php/city/country/startDeatilChating",
 			success: function (data){
-				alert(data);
 				document.getElementById('chatlistWrap').innerHTML = data;
 			}
 		});
