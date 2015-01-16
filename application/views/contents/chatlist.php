@@ -19,17 +19,16 @@
 <script type="text/javascript">
 	function detailChat(key)
 	{
-		/*
 		$.ajax({
-			type:"GET" ,
+			type:"POST" ,
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-			data:{ salesNum : _salesNum, user:_user},
-			url:"/index.php/city/country/detailCity3",
+			data:{ chatNum : key},
+			url:"/index.php/city/country/startDeatilChating",
 			success: function (data){
-				document.getElementById('viewContents').innerHTML = data;
+				alert(data);
+				document.getElementById('chatlistWrap').innerHTML = data;
 			}
 		});
-		*/
 	}
 </script>

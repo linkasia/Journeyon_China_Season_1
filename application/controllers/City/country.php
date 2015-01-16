@@ -261,5 +261,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$this->load->view("/contents/chating",$data);
 		$this->load->view('include/footer');
 	}
+
+	/*채팅 디테일*/
+	function startDeatilChating(){
+		$chatNum = $_REQUEST['chatNum'];
+		$data['SendList']= $this->country_M->chatDetailList($chatNum);
+		$this->load->view("/contents/chating",$data);
+	}
 }
 ?>

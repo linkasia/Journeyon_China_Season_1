@@ -547,7 +547,7 @@
 			return $result;
 		}
 
-		function chatDetailList( $salesNum, $user_num )
+		function chatDetailList($chatNum)
 		{
 			$sql ="SELECT u.*
 								FROM(SELECT a.*,
@@ -559,7 +559,7 @@
 																FROM chat a
 																LEFT JOIN USER b ON a.user_num = b.user_num
 																LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
-																a.chat_num = ''
+																WHERE a.chat_num = '".$chatNum."'
 																UNION ALL
 																SELECT d.*,
 																e.face_img_path,
@@ -570,9 +570,10 @@
 																FROM chat_reply d
 																LEFT JOIN USER e ON d.user_num = e.user_num
 																LEFT JOIN country_table f ON e.mother_area_code = f.class AND e.mother_country_code = f.code
-																d.chat_num = ''
+																WHERE d.chat_num = '".$chatNum."'
 												) AS u
 								ORDER BY u.create_time ASC";
+								print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

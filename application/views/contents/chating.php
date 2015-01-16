@@ -8,30 +8,36 @@
 	</div><!-- div.header end -->
 
 	<div class="chatingFrame">
-	<?foreach($SendList as $v){?>
+	<?foreach($SendList as $v){
+		if($v->user_num != $user_num = $this->session->userdata['num']) {?>
 		<div id="youChat">
 			<span id="youchatID"><?=$v->Name_cn_en?><span id="youchatDate"><?=$v->create_time?></span></span>
 			<div id="chatImg" class="chatImg">
 				<img src="<?=$v->face_img_path?>" alt="" class="profile_image img-circle">
 				<img src="<?=$v->ref1?>" alt="nation_flagImage" class="flag_image">
 				<?if($v->v_get_code == "0001"){?>
-				<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
+					<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
 				<?}?>
 			</div>
 			<img src="/application/views/images/contents/chatarrow_left.png" alt="" class="chatarrow1">
 			<div class="youchatBox"><p><?=$v->content?></p></div>
 		</div><!-- youChat end -->
-	<?}?>
-		<div id="meChat">
-			<span id="mechatID">Hyo-Sung <span id="mechatDate">2015年10月20日 18:12</span></span>
+	<?}else{?>
+			<div id="meChat">
+			<span id="mechatID"><?=$v->Name_cn_en?><span id="mechatDate"><?=$v->create_time?></span></span>
 			<div id="chatImg" class="chatImg">
-				<img src="/application/views/images/main/profile02.jpg" alt="" class="profile_image img-circle">
-				<img src="/application/views/images/flag/20american.png" alt="nation_flagImage" class="flag_image">
-				<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
+				<img src="<?=$v->face_img_path?>" alt="" class="profile_image img-circle">
+				<img src="<?=$v->ref1?>" alt="nation_flagImage" class="flag_image">
+				<?if($v->v_get_code == "0001"){?>
+					<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image">
+				<?}?>
 			</div>
 			<img src="/application/views/images/contents/chatarrow_right.png" alt="" class="chatarrow2">
-			<div class="mechatBox"><p>1月5日，在位于达州市达川区麻柳镇明月江的一条支流的河床上打捞起一根长22米、重超60吨、价值不菲的千年乌木。据在现场的专家介绍，该段乌木被深埋于数10米深的河床已有3000余年，</p></div>
+			<div class="mechatBox"><p><?=$v->content?></p></div>
 		</div>
+	<?	}
+	}?>
+
 
 
 	</div><!-- chatingFrame end -->
