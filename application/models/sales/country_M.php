@@ -603,22 +603,39 @@
 			return $result;
 		}
 
-		function ChatList()
+		function ChatList($userNum)
 		{
 			$sql ="SELECT *
-							FROM (SELECT a.*,
-															b.face_img_path,
-															b.Name_cn_en,
-															b.v_get_code,
-															c.code_nm,
-															c.ref1
-							FROM chat a
-							LEFT JOIN USER b ON a.user_num = b.user_num
-							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
-							ORDER BY a.create_time DESC
+							FROM(	SELECT *
+												FROM (SELECT a.*,
+																				b.face_img_path,
+																				b.Name_cn_en,
+																				b.v_get_code,
+																				c.code_nm,
+																				c.ref1
+																	FROM chat a
+																	LEFT JOIN USER b ON a.user_num = b.user_num
+																	LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+																	WHERE a.user_num ='".$userNum."'
+																	ORDER BY a.create_time DESC
+										) AS v
+										UNION ALL
+								SELECT *
+								FROM(SELECT d.*,
+															e.face_img_path,
+															e.Name_cn_en,
+															e.v_get_code,
+															f.code_nm,
+															f.ref1
+											FROM chat_reply d
+											LEFT JOIN USER e ON e.user_num = d.user_num
+											LEFT JOIN country_table f ON e.mother_area_code = f.class AND e.mother_country_code = f.code
+											WHERE d.user_num ='".$userNum."'
+											ORDER BY d.create_time
+										) AS k
 							) AS u
 							GROUP BY u.chat_num
-							ORDER BY u.create_time";
+							ORDER BY u.create_time DESC";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

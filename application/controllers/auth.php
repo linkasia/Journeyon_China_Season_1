@@ -105,8 +105,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 	}
 
 	function chat_List(){
-		$data['chatList'] = $this->country_M->ChatList();
-		//$data ="";
+		$data['chatList'] = $this->country_M->ChatList($this->session->userdata['num']);
 		$this->load->view('include/header');
 		$this->load->view('contents/chatlist',$data);
 		$this->load->view('include/footer');

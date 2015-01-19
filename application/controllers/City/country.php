@@ -277,7 +277,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	/*채팅 디테일*/
 	function startDeatilChating(){
 		$chatNum = $_REQUEST['chatNum'];
-		$productNum = $_REQUEST['salesNum'];
+		$productNum = $_REQUEST['productNum'];
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
 		$this->load->view("/contents/chating",$data);

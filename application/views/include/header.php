@@ -98,7 +98,6 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<!--li class="logout" name="logout" id="logout"></li-->
 						<li class="talkbox"><img src="/application/views/images/main/icon_talkboxN.png" alt="icon_talkboxN" id="chatList" name="chatList"></li>
 						<li class="profilePic">
-
 							<div class="dropdown">
 								<img src="/application/views/images/main/profile01.jpg" alt="myprofile_Picture" class="img-circle dropdown-toggle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block" data-toggle="dropdown" aria-expanded="true"></span>
 								<!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"></button> -->
