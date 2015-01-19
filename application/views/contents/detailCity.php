@@ -279,6 +279,7 @@ $mode = $_REQUEST['mode'];
 					data:{ salesNum: _salesNum,  contents:_contents},
 					url:"/index.php/city/country/insertChating",
 					success: function (data){
+						alert(data);
 						document.getElementById('detailCity_wrap').innerHTML = data;
 					}
 				});

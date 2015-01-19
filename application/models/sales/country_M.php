@@ -524,6 +524,7 @@
 													'".$salesNum."',
 													'".$contents."',
 													SYSDATE())";
+													print_r($sql);
 			$query = $this->db->query($sql);
 		}
 
@@ -605,17 +606,20 @@
 
 		function ChatList()
 		{
-			$sql ="SELECT a.*,
-											b.face_img_path,
-											b.Name_cn_en,
-											b.v_get_code,
-											c.code_nm,
-											c.ref1
+			$sql ="SELECT *
+							FROM (SELECT a.*,
+															b.face_img_path,
+															b.Name_cn_en,
+															b.v_get_code,
+															c.code_nm,
+															c.ref1
 							FROM chat a
 							LEFT JOIN USER b ON a.user_num = b.user_num
 							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
-							GROUP BY a.chat_num
-							ORDER BY a.create_time";
+							ORDER BY a.create_time DESC
+							) AS u
+							GROUP BY u.chat_num
+							ORDER BY u.create_time";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

@@ -40,7 +40,7 @@
 		var _productNum = $('#hiddenProductNum').val();
 		var _contents = $('#chatInput').val();
 		var _userNum = $('#hiddenUserNum').val();
-		var _loginNum = $('#hiddenUserNum').val();
+		var _loginNum = $('#hiddenLoginNum').val();
 		var _url = "";
 		if(_userNum != _loginNum)
 		{
