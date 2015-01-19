@@ -1812,6 +1812,40 @@
 	
 
 
+
+
+/* 여기서부터 Company info */
+
+	
+#rightWrap .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title0 .underline{border-bottom: 2px #f3c807 solid; width: 42px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+#rightWrap .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title1 .underline{border-bottom: 2px #f3c807 solid; width: 59px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+#rightWrap .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title2 .underline{border-bottom: 2px #f3c807 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+#rightWrap .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title3 .underline{border-bottom: 2px #f3c807 solid; width: 133px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+#rightWrap .title4{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title4 .underline{border-bottom: 2px #f3c807 solid; width: 153px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+#rightWrap .title5{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title5 .underline{border-bottom: 2px #f3c807 solid; width: 153px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+#rightWrap .title6{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title6 .underline{border-bottom: 2px #f3c807 solid; width: 97px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+#rightWrap .title7{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
+#rightWrap .title7 .underline{border-bottom: 2px #f3c807 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+
 /* 부트스트랩  form-control2 */
 	.form-control2 {
 		display: block;

@@ -2,11 +2,11 @@
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active">Company Menu</span></span>
 		<span class="list-group-item" id='companyAbout'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;关于</span>
-		<span class="list-group-item" id='companyWhy'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;为什么</span>
-		<span class="list-group-item" id='companyRecruit'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;招聘</span>
-		<span class="list-group-item" id='companyOurteam'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;团队</span>
-		<span class="list-group-item" id='companyContact'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;联系方式</span>
-		<span class="list-group-item" id='companyPartner'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;合作伙伴</span>
+		<span class="list-group-item" id='companyWhy'><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;&nbsp;为什么</span>
+		<span class="list-group-item" id='companyRecruit'><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>&nbsp;&nbsp;招聘</span>
+		<span class="list-group-item" id='companyOurteam'><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;团队</span>
+		<span class="list-group-item" id='companyContact'><span class="glyphicon glyphicon-share" aria-hidden="true"></span>&nbsp;&nbsp;联系方式</span>
+		<span class="list-group-item" id='companyPartner'><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;&nbsp;合作伙伴</span>
 	</aside><!-- leftmenuWrap end -->
 
 
