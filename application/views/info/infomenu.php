@@ -1,4 +1,4 @@
-<div id="guestWrap">
+<div id="companyInfoWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active">Information</span></span>
 		<span class="list-group-item" id='infoMicrotravel'><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>&nbsp;&nbsp;微旅行是什么？</span>
