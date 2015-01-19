@@ -1818,6 +1818,19 @@
 
 /* 여기서부터 Company info */
 
+		#companyInfoWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
+		#companyInfoWrap:after{clear: both; display: none; *zoom:1;}
+		
+		/* 왼쪽 메뉴 */
+		#companyInfoWrap #leftmenuWrap{width: 220px; float: left;}
+		#companyInfoWrap #leftmenuWrap{cursor: pointer;}
+
+
+		/* 오른쪽 메뉴 */
+		#companyInfoWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
+		#companyInfoWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
+
+		
 	
 #rightWrap .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
 #rightWrap .title0 .underline{border-bottom: 2px #f3c807 solid; width: 42px; height: 40px; line-height: 40px; font-size: 1.35em;}

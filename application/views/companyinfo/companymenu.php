@@ -1,4 +1,4 @@
-<div id="guestWrap">
+<div id="companyInfoWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active">Company Menu</span></span>
 		<span class="list-group-item" id='companyAbout'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;关于</span>
