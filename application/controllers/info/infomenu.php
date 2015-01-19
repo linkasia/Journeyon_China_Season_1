@@ -18,7 +18,27 @@ class infomenu extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('include/header');
 		$this->load->view('info/infomenu');
 		$this->load->view('include/footer');
-
 	}
+
+	function infoMicrotravel(){
+		$this->load->view('info/01microtravel');
+	}
+
+	function infoHowhost(){
+		$this->load->view('info/02howhost');
+	}
+
+	function infoHowTraveler(){
+		$this->load->view('info/03howtraveler');
+	}
+
+	function infoPrivacy(){
+		$this->load->view('info/04privacy');
+	}
+
+	function infoFaq(){
+		$this->load->view('info/05faq');
+	}
+
 }
 ?>

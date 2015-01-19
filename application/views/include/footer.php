@@ -8,6 +8,7 @@
 						<li><a href="" class="li_cursor">招聘</a></li>
 						<li><a href="" class="li_cursor">团队</a></li>
 						<li><a href="" class="li_cursor">联系方式</a></li>
+						<li><a href="" class="li_cursor">合作伙伴</a></li>
 					</ul>
 
 					<ul class="menu2">信息
@@ -15,9 +16,7 @@
 						<li><a href="" class="li_cursor">如何加入当地人?</a></li>
 						<li><a href="" class="li_cursor">对旅游者使用方法？</a></li>
 						<li><a href="" class="li_cursor">隐私权政策</a></li>
-						<li><a href="" class="li_cursor">联系方式</a></li>
 						<li><a href="" class="li_cursor">疑问解答</a></li>
-						<li><a href="" class="li_cursor">合作伙伴</a></li>
 					</ul>
 				</div>
 				<div class="menu_container2">

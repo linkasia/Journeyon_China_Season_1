@@ -18,8 +18,8 @@ class companyinfo extends CI_Controller { // controller 파일이름이 곧 clas
 		$this->load->view('include/header');
 		$this->load->view('companyinfo/companymenu');
 		$this->load->view('include/footer');
-
 	}
+
 
 	/*도시상세이동*/
 	function Detailcity_search(){
@@ -27,5 +27,32 @@ class companyinfo extends CI_Controller { // controller 파일이름이 곧 clas
 		$this->load->view('contents/detailCity');
 		$this->load->view('include/footer');
 	}
+
+	function companyAbout(){
+		$this->load->view('companyinfo/01about');
+	}
+
+	function companyWhy(){
+		$this->load->view('companyinfo/02why');
+	}
+
+	function companyRecruit(){
+		$this->load->view('companyinfo/03recruit');
+	}
+
+	function companyOurteam(){
+		$this->load->view('companyinfo/04ourteam');
+	}
+
+	function companyContact(){
+		$this->load->view('companyinfo/05contact');
+	}
+
+	function companyPartner(){
+		$this->load->view('companyinfo/06becomepartner');
+	}
+
+
+
 }
 ?>

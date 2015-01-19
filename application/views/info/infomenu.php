@@ -1,19 +1,17 @@
 <div id="guestWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active">Information</span></span>
-		<span class="list-group-item" id='guestHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;1 Home</span>
-		<span class="list-group-item" id='guestBucket'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;2 List</span>
-		<span class="list-group-item" id='guestReservation'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;3 List&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='guestBuy'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;4 List&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='guestCancel'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;5 &nbsp;&nbsp;</span>
-		<span class="list-group-item" id='guestCancel'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;6 &nbsp;&nbsp;</span>
-		<span class="list-group-item" id='guestCancel'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;7 &nbsp;&nbsp;</span>
+		<span class="list-group-item" id='infoMicrotravel'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;微旅行是什么？</span>
+		<span class="list-group-item" id='infoHowhost'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;如何加入当地人?</span>
+		<span class="list-group-item" id='infoHowTraveler'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;对旅游者使用方法？</span>
+		<span class="list-group-item" id='infoPrivacy'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;隐私权政策</span>
+		<span class="list-group-item" id='infoFaq'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;疑问解答</span>
 	</aside><!-- leftmenuWrap end -->
 
 
 	<div id="rightWrap">
 		<? $data = "";
-			$this->load->view("/mypage/m_guest0",$data);
+			$this->load->view("/info/01microtravel",$data);
 		?>
 	</div><!-- rightWrap end -->
 </div><!-- guestWrap end -->
@@ -23,13 +21,13 @@
 <script type="text/javascript">
 	$(function(){
 
-			$('#guestHome').click( function(){
+			$('#infoMicrotravel').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestHome",
+					url:"/index.php/info/infomenu/infoMicrotravel",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -37,13 +35,13 @@
 				});
 			});
 
-			$('#guestBucket').click( function(){
+			$('#infoHowhost').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestAdmin",
+					url:"/index.php/info/infomenu/infoHowhost",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -51,13 +49,13 @@
 				});
 			});
 
-			$('#guestReservation').click( function(){
+			$('#infoHowTraveler').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestItemAdmin",
+					url:"/index.php/info/infomenu/infoHowTraveler",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -65,13 +63,13 @@
 				});
 			});
 
-			$('#guestBuy').click( function(){
+			$('#infoPrivacy').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestSalesAdmin",
+					url:"/index.php/info/infomenu/infoPrivacy",
 					success: function (data){
 						//alert(data);
 						document.getElementById('rightWrap').innerHTML =data;
@@ -79,13 +77,13 @@
 				});
 			});
 
-			$('#guestCancel').click( function(){
+			$('#infoFaq').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
 					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestCancelAdmin",
+					url:"/index.php/info/infomenu/infoFaq",
 					success: function (data){
 						document.getElementById('rightWrap').innerHTML =data;
 					}
