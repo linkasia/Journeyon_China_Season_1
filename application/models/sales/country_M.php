@@ -487,7 +487,6 @@
 										modified_date = SYSDATE()
 										WHERE
 										product_num = '".$product_num."' ";
-										print_r($sql );
 			$query = $this->db->query($sql);
 		}
 
@@ -511,7 +510,7 @@
 			$query = $this->db->query($sql);
 		}
 
-		function chatSend( $salesNum, $contents, $user_num)
+		function chatSend( $chat_num, $salesNum, $contents, $user_num)
 		{
 			$sql ="INSERT INTO chat
 													(chat_num,
@@ -520,13 +519,39 @@
 													content,
 													create_time
 													)VALUES(
-													0,
+													".$chat_num.",
 													'".$user_num."',
 													'".$salesNum."',
 													'".$contents."',
 													SYSDATE())";
-													print_r($sql);
 			$query = $this->db->query($sql);
+		}
+
+		function chatSubSend( $chat_num, $salesNum, $contents, $user_num)
+		{
+			$sql ="INSERT INTO chat_reply
+													(chat_num,
+													user_num,
+													product_num,
+													content,
+													create_time
+													)VALUES(
+													".$chat_num.",
+													'".$user_num."',
+													'".$salesNum."',
+													'".$contents."',
+													SYSDATE())";
+
+			$query = $this->db->query($sql);
+		}
+
+		function maxChatNum()
+		{
+			$sql ="SELECT MAX(chat_num) + 1 AS chat_num
+								FROM chat";
+			$query = $this->db->query($sql);
+			$query->num_rows();
+			return $query->row();
 		}
 
 		function chatStartList( $salesNum, $user_num )

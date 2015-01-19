@@ -9,7 +9,7 @@
 
 	<div class="chatingFrame">
 	<?foreach($SendList as $v){
-		if($v->user_num != $user_num = $this->session->userdata['num']) {?>
+		if($v->user_num != $this->session->userdata['num']) {?>
 		<div id="youChat">
 			<span id="youchatID"><?=$v->Name_cn_en?><span id="youchatDate"><?=$v->create_time?></span></span>
 			<div id="chatImg" class="chatImg">
@@ -35,8 +35,14 @@
 			<img src="/application/views/images/contents/chatarrow_right.png" alt="" class="chatarrow2">
 			<div class="mechatBox"><p><?=$v->content?></p></div>
 		</div>
-	<?	}
-	}?>
+	<?	}?>
+	<?foreach($salesCity as $k){ ?>
+		<input type='hidden' id='hiddenUserNum' name='hiddenUserNum' value='<?=$k->user_num?>'>
+		<input type='hidden' id='hiddenLoginNum' name='hiddenLoginNum' value='<?=$this->session->userdata['num']?>'>
+	<?}?>
+	<input type='hidden' id='hiddenChatNum' name='hiddenChatNum' value='<?=$v->chat_num?>'>
+	<input type='hidden' id='hiddenProductNum' name='hiddenProductNum' value='<?=$v->product_num?>'>
+	<?}?>
 
 
 
@@ -112,8 +118,9 @@
 	</div><!-- rightWrap end -->
 
 	<div id="typingBox">
-		<input type="text" name="" id="chatInput" class="form-control" cols="30" rows="10" placeholder="Write a message..."></input>
-		<span class="btn btn-primary" id="chatSend">Send</span>
+		<input type="text" name="chatInput" id="chatInput" class="form-control" cols="30" rows="10" placeholder="Write a message..."></input>
+		<span class="btn btn-primary" id="chatSend" onclick="sendChat()">Send</span>
 	</div>
 </div><!-- chatlistWrap -->
+
 

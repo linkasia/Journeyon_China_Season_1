@@ -246,7 +246,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$contents = $_REQUEST['contents'];
 		$user_num = $this->session->userdata['num'];
 
-		$insert['chatSend']= $this->country_M->chatSend( $salesNum, $contents, $user_num );
+		$result = $this->country_M->maxChatNum();
+
+		$insert['chatSend']= $this->country_M->chatSend($result->chat_num, $salesNum, $contents, $user_num );
+
+		$data['SendList']= $this->country_M->chatDetailList($result->chat_num);
+		$this->load->view("/contents/chating",$data);
 	}
 
 	/*채팅시작*/
@@ -265,7 +270,37 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	/*채팅 디테일*/
 	function startDeatilChating(){
 		$chatNum = $_REQUEST['chatNum'];
+		$productNum = $_REQUEST['productNum'];
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
+		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
+		$this->load->view("/contents/chating",$data);
+	}
+
+	//채팅저장
+	function insertMainChating(){
+		$productNum = $_REQUEST['productNum'];
+		$contents = $_REQUEST['contents'];
+		$user_num = $this->session->userdata['num'];
+		$chatNum = $_REQUEST['chatNum'];
+
+		$insert['chatSend']= $this->country_M->chatSend($chatNum, $productNum, $contents, $user_num );
+
+		$data['SendList']= $this->country_M->chatDetailList($chatNum);
+		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
+		$this->load->view("/contents/chating",$data);
+	}
+
+	//채팅저장
+	function insertSubChating(){
+		$productNum = $_REQUEST['productNum'];
+		$contents = $_REQUEST['contents'];
+		$user_num = $this->session->userdata['num'];
+		$chatNum = $_REQUEST['chatNum'];
+
+		$insert['chatSend']= $this->country_M->chatSubSend($chatNum, $productNum, $contents, $user_num );
+
+		$data['SendList']= $this->country_M->chatDetailList($chatNum);
+		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
 		$this->load->view("/contents/chating",$data);
 	}
 }
