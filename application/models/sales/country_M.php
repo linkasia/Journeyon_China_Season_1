@@ -524,7 +524,6 @@
 													'".$salesNum."',
 													'".$contents."',
 													SYSDATE())";
-													print_r($sql);
 			$query = $this->db->query($sql);
 		}
 

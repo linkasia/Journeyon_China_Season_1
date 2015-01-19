@@ -255,7 +255,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		}
 
 		$insert['chatSend']= $this->country_M->chatSend($maxNum, $salesNum, $contents, $user_num );
-
+		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($result->chat_num);
 		$this->load->view("/contents/chating",$data);
 	}
@@ -266,7 +266,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$user_num = $this->session->userdata['num'];
 
 		$data['SendList']= $this->country_M->chatStartList( $salesNum, $user_num );
-		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
+
 		//$data['salesCityQnA2']= $this->country_M->salesDetailCityQnA2($salesNum);
 
 		$this->load->view('include/header');
@@ -277,7 +277,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	/*채팅 디테일*/
 	function startDeatilChating(){
 		$chatNum = $_REQUEST['chatNum'];
-		$productNum = $_REQUEST['productNum'];
+		$productNum = $_REQUEST['salesNum'];
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
 		$this->load->view("/contents/chating",$data);
