@@ -66,13 +66,17 @@
 											b.face_img_path,
 											c.code_nm,
 											c.ref1,
-											a.*
-						FROM product a
-						LEFT JOIN USER b ON a.user_num = b.user_num
-						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
-						WHERE a.useYn='Y'
-						ORDER BY a.create_date DESC
-						LIMIT 3";
+											a.*,
+											(SELECT img_path
+											   FROM spot
+											   LIMIT 1
+											 ) AS image
+							FROM product a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+							WHERE a.useYn='Y'
+							ORDER BY a.create_date DESC
+							LIMIT 3";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -85,14 +89,18 @@
 											b.face_img_path,
 											c.code_nm,
 											c.ref1,
-											a.*
-						FROM product a
-						LEFT JOIN USER b ON a.user_num = b.user_num
-						LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
-						WHERE a.useYn='Y'
-						AND a.adminYn='Y'
-						ORDER BY a.create_date DESC
-						LIMIT 6";
+											a.*,
+											(SELECT img_path
+											   FROM spot
+											   LIMIT 1
+											 ) AS image
+							FROM product a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+							WHERE a.useYn='Y'
+							AND a.adminYn='Y'
+							ORDER BY a.create_date DESC
+							LIMIT 6";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

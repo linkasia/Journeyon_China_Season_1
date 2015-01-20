@@ -158,12 +158,12 @@
 				<? foreach($choice as $v){ ?>
 					<li class="somenail1">
 						<section class="somenail_bootstrap">
-							<div class="portfolio-item"  name='backpic' id='backpic' onclick="detailCity('<?=$v->num?>')">
+							<div class="portfolio-item"  name='backpic' id='backpic' onclick="detailCity('<?=$v->product_num?>')">
 								<div class="portfolio-link">
 										<div class="portfolio-hover">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
-										<img style="width: 300px; height: 240px;" src="" alt="">
+										<img style="width: 300px; height: 240px;" src="<?=$v->image?>" alt="">
 								</div>
 								<?if($i== 1){?>
 									<div class="somenail_transbox" style="background-color:rgba(59,183,202,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
@@ -180,12 +180,12 @@
 								<?}?>
 							</div>
 
-							<div class="somenail_transcity" onclick="detailCity('<?=$v->num?>')"><p><?=$v->code_nm?></p></div>
+							<div class="somenail_transcity" onclick="detailCity('<?=$v->product_num?>')"><p><?=$v->code_nm?></p></div>
 
 							<div class="somenail_caption">
 
 									<div class="circle-div">
-										<img name='profile' id='profile' src="<?=$v->face_img_path?>" alt="profile pic" class="img-circle somenail_profile" onclick="detailProfile('<?=$v->user_num?>')">
+										<img name='profile' id='profile' src="<?=$v->face_img_path?>" alt="" class="img-circle somenail_profile" onclick="detailProfile('<?=$v->product_num?>')">
 									</div>
 
 									<div class="back-line1">
@@ -230,7 +230,7 @@
 										<div class="portfolio-hover2">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
-										<img style="width: 300px; height: 240px" src="" alt="">
+										<img style="width: 300px; height: 240px" src="<?=$v->image?>" alt="">
 									</div>
 									<?if($k== 1){?>
 									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,0.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
