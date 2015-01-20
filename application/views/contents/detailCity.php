@@ -142,7 +142,7 @@ $mode = $_REQUEST['mode'];
 					<?}else{?>
 						<img src="/application/views/images/main/sns02.png" alt="" class="sns_icon2C">
 					<?}?>
-
+					<div id = "hiddenNum"></div>
 				</div><!-- sns_icon end -->
 			</div><!-- right_profile end -->
 		<?}?>
@@ -215,6 +215,7 @@ $mode = $_REQUEST['mode'];
 				insertBox += "</div>";
 				insertBox += "</li>";
 */
+				document.getElementById('hiddenNum').innerHTML = "<input type='hidden' value='"+i+"' id='hiddenValueNum'>";
 				_checkDate +="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
 
 				i++;
