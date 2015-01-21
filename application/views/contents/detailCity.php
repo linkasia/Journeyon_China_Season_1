@@ -53,7 +53,7 @@ $mode = $_REQUEST['mode'];
 					<div id='insetDiv' name='insetDiv' class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
 						<ul id='checkDate' name='checkDate'>	</ul>
 					</div>
-					<textarea name="recheckTextarea" id="recheckTextarea" cols="27" rows="10"></textarea>
+					<textarea name="recheckTextarea" id="recheckTextarea" cols="27" rows="5" placeholder="  Write a message"></textarea>
 				</div>
 				<div class="aside-menu">
 					<button type="button" class="btn btn-primary" id="calPop" name="calPop">定制游咨询</button>
