@@ -48,8 +48,8 @@ class companyinfo extends CI_Controller { // controller 파일이름이 곧 clas
 		$this->load->view('companyinfo/05contact');
 	}
 
-	function companyPartner(){
-		$this->load->view('companyinfo/06becomepartner');
+	function companyPrivacy(){
+		$this->load->view('companyinfo/06privacy');
 	}
 
 

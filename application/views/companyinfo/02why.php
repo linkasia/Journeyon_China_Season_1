@@ -14,3 +14,5 @@
 	<img src="/application/views/images/info/img02.jpg" alt="">
 	<p>从方法开始… 简单，道地，微旅行。</p>
 </div>
+
+
