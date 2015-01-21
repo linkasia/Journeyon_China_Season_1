@@ -1859,6 +1859,12 @@
 #rightWrap .title7 .underline{border-bottom: 2px #f3c807 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 
+/* Info */
+	#rightWrap .bs-example{border-radius: 0px; margin-top: 40px;}
+	#rightWrap .bs-example .panel{border-radius: 0px;}
+	#rightWrap .bs-example .panel h4{font-size: 1em; color: #545454;}
+
+
 /*---------------------------------------------------------------------------------------------------------------*/
 
 
