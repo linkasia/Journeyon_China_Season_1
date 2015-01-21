@@ -35,6 +35,7 @@ $mode = $_REQUEST['mode'];
 				<div class="price">
 					<p class="price_title">价格 :</p>
 						<p class="price_sub"><?=$v->fat_price?> 元<p>
+						<input type='hidden' id='fee' name='fee' value='<?=$v->fat_price?>'>
 				</div>
 				<div>
 					<p>选择行程</p>
@@ -147,6 +148,7 @@ $mode = $_REQUEST['mode'];
 			</div><!-- right_profile end -->
 		<?}?>
 	</aside>
+	<div id='test'></div>
 </div>
 
 
@@ -204,19 +206,12 @@ $mode = $_REQUEST['mode'];
 			if(_checkDate.indexOf(checkDay) > -1){
 				alert("이미선택된 날짜입니다");
 			}else{
-				/*
-				var insertBox = "<li class='checkdateLi'  id='li"+i+"'>";
-				insertBox += "<div id='modalDiv' name='modalDiv'>";
-				insertBox += "<input type='date' class='form-control' id='recheckDate' name='recheckDate' value='"+checkDay+"' readonly>";
-				insertBox += "<input type='text' class='form-control' id='recheckPerson' name='recheckPerson'>";
-				insertBox += "<span> 名</span>";
-				insertBox += "<img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'>";
-				insertBox += "<input type='hidden' value="+checkDay+" id='date"+i+"'>";
-				insertBox += "</div>";
-				insertBox += "</li>";
-*/
-				document.getElementById('hiddenNum').innerHTML = "<input type='hidden' value='"+i+"' id='hiddenValueNum'>";
-				_checkDate +="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'></li>";
+				if($('#hiddenValueNum').val()  == -1){
+					i	=	0;
+				}
+
+				document.getElementById('hiddenNum').innerHTML = "<input type='text' value='"+i+"' id='hiddenValueNum'>";
+				_checkDate +="<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+checkDay+"</div> <input type='text' class='checkdateInput'  id='personNum"+i+"' value='0'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+checkDay+" id='date"+i+"'><input type='hidden' value='"+i+"' id='hidden'"+i+"></li>";
 
 				i++;
 			}
@@ -268,7 +263,8 @@ $mode = $_REQUEST['mode'];
 		});
 
 		$('#calPop').click( function(){
-
+			var _user_num = $('#user_num').val();
+			var _fee = $('#fee').val();
 			if( $('#li0').html() == "" || $('#li0').html() == null ){
 				alert("날짜를 1개 이상 선택해주세요~!");
 			}else{
@@ -280,6 +276,23 @@ $mode = $_REQUEST['mode'];
 					data:{ salesNum: _salesNum,  contents:_contents},
 					url:"/index.php/city/country/insertChating",
 					success: function (data){
+						var hiddenValueNum = $('#hiddenValueNum').val();
+						for(var i =0 ;  i <= hiddenValueNum; i++){
+							var _date = $('#date'+i).val();
+							var _personNum = $('#personNum'+i).val();
+							if($('#date'+i).val() != null){
+								$.ajax({
+									type:"GET" ,
+									dataType:"text",
+									contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+									data:{ productNum: _salesNum, personNum:_personNum, date:_date, fee:_fee, user_num:_user_num},
+									url:"/index.php/city/country/insertBookingDate",
+									success: function (data){
+										//document.getElementById('test').innerHTML = data;
+									}
+								});
+							}
+						}
 						document.getElementById('detailCity_wrap').innerHTML = data;
 					}
 				});
@@ -302,7 +315,10 @@ $mode = $_REQUEST['mode'];
 				insertBox += "</div>";
 				insertBox += "</li>";
 */
-		var _tmpCheckDate =document.getElementById("li"+i).innerHTML= "<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'></li>";
+		var num = $('#hiddenValueNum').val();
+
+		document.getElementById('hiddenNum').innerHTML = "<input type='text' value='"+(num-1)+"' id='hiddenValueNum'>";
+		var _tmpCheckDate =document.getElementById("li"+i).innerHTML= "<li class='checkdateLi'  id='li"+i+"'><div class='checkdateDiv'>"+choiceDate+"</div> <input type='text' class='checkdateInput' id='personNum"+i+"' value='0'> 名 <img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'><input type='hidden' value="+choiceDate+" id='date"+i+"'><input type='hidden' value='"+i+"' id='hidden'"+i+"></li>";
 
 		_checkDate = _checkDate.replace(_tmpCheckDate,"");
 		document.getElementById("li"+i).innerHTML="";
@@ -338,7 +354,6 @@ $mode = $_REQUEST['mode'];
 	}
 
 	function insertAgency(){
-
 		var _salesNum= "<?=$salesNum?>";
 		var _content = document.getElementById('agencyArea').value;
 		var _qna_num =  document.getElementById('qna_num').value;

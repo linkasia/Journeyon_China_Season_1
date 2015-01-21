@@ -640,5 +640,43 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		function insertBooking($productNum, $personNum, $date, $fee, $user_num, $productUserNum )
+		{
+			$sql ="INSERT INTO user_order_product
+													(book_num,
+													product_num,
+													product_user_num,
+													user_num,
+													order_type_code,
+													book_date,
+													book_person,
+													fixed_fee,
+													complete_code,
+													complain_text,
+													deposited,
+													deposited_date,
+													modified_date,
+													create_date
+													)
+													VALUES
+													(0,
+													'".$productNum."',
+													'".$productUserNum."',
+													'".$user_num."',
+													'0004',
+													'". $date."',
+													'".$personNum."',
+													'".$fee."',
+													'',
+													'',
+													'',
+													0,
+													0,
+													SYSDATE());";
+													//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
 	}
 ?>

@@ -310,5 +310,18 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
 		$this->load->view("/contents/chating",$data);
 	}
+
+
+	//예약 날짜 저장
+	function insertBookingDate(){
+		$productNum = $_REQUEST['productNum'];
+		$personNum = $_REQUEST['personNum'];
+		$user_num = $_REQUEST['user_num'];
+		$date = $_REQUEST['date'];
+		$fee = $_REQUEST['fee'];
+		$productUserNum = $this->session->userdata['num'];
+
+		$insert['chatSend']= $this->country_M->insertBooking($productNum, $personNum, $date, $fee, $user_num, $productUserNum );
+	}
 }
 ?>
