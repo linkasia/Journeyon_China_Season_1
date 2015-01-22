@@ -6,6 +6,8 @@
 						<li><a href="/index.php/company/companyinfo/companyMain" class="li_cursor">关于</a></li>
 						<li><a href="" class="li_cursor">招聘</a></li>
 						<li><a href="" class="li_cursor">联系方式</a></li>
+						<li><a href="" class="li_cursor">	隐私权政策</a></li>
+
 					</ul>
 
 					<ul class="menu2">

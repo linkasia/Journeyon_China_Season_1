@@ -3,8 +3,8 @@
 		<span class="list-group-item active">Company Menu</span></span>
 		<span class="list-group-item" id='companyAbout'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;关于</span>
 		<!-- <span class="list-group-item" id='companyWhy'><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;&nbsp;为什么</span> -->
+		<!-- <span class="list-group-item" id='companyOurteam'><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;团队</span> -->
 		<span class="list-group-item" id='companyRecruit'><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>&nbsp;&nbsp;招聘</span>
-		<span class="list-group-item" id='companyOurteam'><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;团队</span>
 		<span class="list-group-item" id='companyContact'><span class="glyphicon glyphicon-share" aria-hidden="true"></span>&nbsp;&nbsp;联系方式</span>
 		<span class="list-group-item" id='companyPrivacy'><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;&nbsp;隐私权政策</span>
 	</aside><!-- leftmenuWrap end -->
