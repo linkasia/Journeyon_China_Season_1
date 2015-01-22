@@ -87,7 +87,7 @@
 			<div class="live5">
 				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
 				<div class="rightSection" id="choiceCity" name="choiceCity">
-					<?$city = $this->main_i->cityList($v->live_area_code,$v->live_country_code); ?>
+					<?$city = $this->main_i->choiceCityList($v->live_area_code,$v->live_country_code); ?>
 						<select class="form-control" data-style="" id="selectCity" name="selectCity">
 							<option value = "">-- Select --</option>
 							<?foreach($city as $k){?>
