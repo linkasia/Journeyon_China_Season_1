@@ -47,7 +47,6 @@
 		//도시
 		function choiceCityList($class ,$code)
 		{
-			echo $class .",".$code;
 			$sql ="SELECT *
 							FROM city_table
 							WHERE sclass = '".$class."'
@@ -74,7 +73,6 @@
 											LEFT JOIN USER b ON a.user_num = b.user_num
 											LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
 											WHERE a.useYn='Y'
-											AND a.adminYn='Y'
 											ORDER BY a.create_date DESC
 											LIMIT 3
 							) AS u

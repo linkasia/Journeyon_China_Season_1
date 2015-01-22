@@ -234,7 +234,7 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
-				alert(data);
+				alert("수정되었습니다.");
 			}
 		});
 	});
