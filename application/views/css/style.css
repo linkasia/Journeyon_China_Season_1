@@ -120,6 +120,7 @@
 
 	.input-lg{width: 280px; margin-top: 30px;}
 	#clause{cursor: pointer;}
+	#clause a {text-decoration: none; color: #fff;}
 	.form-group .btn-primary{width: 280px; height: 45px; margin-top: 40px; font-size: 1.125em;}
 	.form-group .sns_container:after{clear: both; display: block; *zoom: 1;}
 
@@ -135,9 +136,13 @@
 	.sns_container .sns_icon > img:first-child{margin-left: 4px;}
 	.sns_container .sns_icon > img:last-child{margin-right: 0;}
 	#ul_margin{margin: 0;}
-	#repeated_join{cursor: pointer;}
+	#repeated_join{cursor: pointer; text-decoration: none;}
 
 	.input_container #yourCountry{width: 150px;}
+
+	#member_container #myModal2 div.modal-dialog2{width: 800px;}
+	#member_container #myModal2 div.modal-dialog2 .modal-body2{overflow-y: scroll; height: 600px; padding: 20px;}
+	#member_container #myModal2 div.modal-dialog2 .modal-body2 #content{padding: 20px;}
 
 
 /* Contents 도시, 지도 선택 부분 main/contents.php */
