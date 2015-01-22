@@ -4,14 +4,23 @@
 		<span class="list-group-item" id='infoMicrotravel'><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>&nbsp;&nbsp;微旅行是什么？</span>
 		<span class="list-group-item" id='infoHowhost'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;如何加入当地人?</span>
 		<span class="list-group-item" id='infoHowTraveler'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;对旅游者使用方法？</span>
-		<span class="list-group-item" id='infoPrivacy'><span class="glyphicon glyphicon-compressed" aria-hidden="true"></span>&nbsp;&nbsp;隐私权政策</span>
 		<span class="list-group-item" id='infoFaq'><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;&nbsp;疑问解答</span>
 	</aside><!-- leftmenuWrap end -->
 
 
 	<div id="rightWrap">
-		<? $data = "";
-			$this->load->view("/info/01microtravel",$data);
+		<?
+			if($mode == "1"){
+				$this->load->view("/info/01microtravel");
+			}else if($mode == "2"){
+				$this->load->view("/info/02howhost");
+			}else if($mode == "3"){
+				$this->load->view("/info/03howtraveler");
+			}else if($mode == "4"){
+				$this->load->view("/info/05faq");
+			}else{
+				$this->load->view("/info/01microtravel");
+			}
 		?>
 	</div><!-- rightWrap end -->
 </div><!-- guestWrap end -->

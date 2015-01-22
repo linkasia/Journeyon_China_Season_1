@@ -685,6 +685,7 @@
 							FROM user_order_product
 							WHERE product_num ='".$salesNum."'
 							AND user_num ='".$user_num."'";
+							print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

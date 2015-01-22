@@ -195,7 +195,6 @@ $mode = $_REQUEST['mode'];
 
 		var i=0;
 		$('#calendarContent').click( function(){
-
 			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
 			if(checkDay.length == 9){
 				checkDay = $('#jqxWidget').val().getFullYear() + "-0" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
@@ -288,11 +287,12 @@ $mode = $_REQUEST['mode'];
 									data:{ productNum: _salesNum, personNum:_personNum, date:_date, fee:_fee, user_num:_user_num},
 									url:"/index.php/city/country/insertBookingDate",
 									success: function (data){
-										//document.getElementById('test').innerHTML = data;
+										//document.getElementById('detailCity_wrap').innerHTML = data;
 									}
 								});
 							}
 						}
+
 						document.getElementById('detailCity_wrap').innerHTML = data;
 					}
 				});

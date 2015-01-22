@@ -15,8 +15,11 @@ class companyinfo extends CI_Controller { // controller 파일이름이 곧 clas
 
 	/*도시이동*/
 	function companyMain(){
+		$mode = $_REQUEST['list'];
+		$data['mode'] = $mode;
+
 		$this->load->view('include/header');
-		$this->load->view('companyinfo/companymenu');
+		$this->load->view('companyinfo/companymenu',$data);
 		$this->load->view('include/footer');
 	}
 

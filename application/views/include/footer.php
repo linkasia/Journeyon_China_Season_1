@@ -3,19 +3,19 @@
 			<footer id="footer_top">
 				<div class="menu_container1">
 					<ul class="menu1">
-						<li><a href="/index.php/company/companyinfo/companyMain" class="li_cursor">关于</a></li>
-						<li><a href="" class="li_cursor">招聘</a></li>
-						<li><a href="" class="li_cursor">联系方式</a></li>
-						<li><a href="" class="li_cursor">	隐私权政策</a></li>
+						<li><a href="/index.php/company/companyinfo/companyMain?list=1" class="li_cursor">关于</a></li>
+						<li><a href="/index.php/company/companyinfo/companyMain?list=2" class="li_cursor">招聘</a></li>
+						<li><a href="/index.php/company/companyinfo/companyMain?list=3" class="li_cursor">联系方式</a></li>
+						<li><a href="/index.php/company/companyinfo/companyMain?list=4" class="li_cursor">	隐私权政策</a></li>
 
 					</ul>
 
 					<ul class="menu2">
-						<li><a href="/index.php/info/infomenu/infoMain" class="li_cursor">微旅行是什么？</a></li>
-						<li><a href="" class="li_cursor">如何加入当地人?</a></li>
-						<li><a href="" class="li_cursor">对旅游者使用方法？</a></li>
+						<li><a href="/index.php/info/infomenu/infoMain?list=1" class="li_cursor">微旅行是什么？</a></li>
+						<li><a href="/index.php/info/infomenu/infoMain?list=2" class="li_cursor">如何加入当地人?</a></li>
+						<li><a href="/index.php/info/infomenu/infoMain?list=3" class="li_cursor">对旅游者使用方法？</a></li>
 						<!-- <li><a href="" class="li_cursor">隐私权政策</a></li> -->
-						<li><a href="" class="li_cursor">疑问解答</a></li>
+						<li><a href="/index.php/info/infomenu/infoMain?list=4" class="li_cursor">疑问解答</a></li>
 					</ul>
 				</div>
 				<div class="menu_container2">

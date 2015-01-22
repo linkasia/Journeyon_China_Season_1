@@ -15,8 +15,11 @@ class infomenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 	/*도시이동*/
 	function infoMain(){
+		$mode = $_REQUEST['list'];
+		$data['mode'] = $mode;
+
 		$this->load->view('include/header');
-		$this->load->view('info/infomenu');
+		$this->load->view('info/infomenu',$data);
 		$this->load->view('include/footer');
 	}
 

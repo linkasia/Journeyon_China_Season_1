@@ -59,7 +59,10 @@
 				document.getElementById('chatlistWrap').innerHTML = data;
 			}
 		});
+	}
 
+	function dataAdd(nRow){
+		alert(nRow);
 	}
 
 </script>

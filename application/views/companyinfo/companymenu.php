@@ -11,8 +11,19 @@
 
 
 	<div id="rightWrap">
-		<? $data = "";
-			$this->load->view("/companyinfo/01about",$data);
+		<?
+			if($mode == "1"){
+				$this->load->view("/companyinfo/01about");
+			}else if($mode == "2"){
+				$this->load->view("/companyinfo/03recruit");
+			}else if($mode == "3"){
+				$this->load->view("/companyinfo/05contact");
+			}else if($mode == "4"){
+				$this->load->view("/companyinfo/06privacy");
+			}else{
+				$this->load->view("/companyinfo/01about");
+			}
+
 		?>
 	</div><!-- rightWrap end -->
 </div><!-- guestWrap end -->
