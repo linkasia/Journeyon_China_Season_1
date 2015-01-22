@@ -678,5 +678,17 @@
 			$query = $this->db->query($sql);
 		}
 
+		//선택한 도시 상세 상품
+		function bookinglList($salesNum,$user_num)
+		{
+			$sql ="SELECT *
+							FROM user_order_product
+							WHERE product_num ='".$salesNum."'
+							AND user_num ='".$user_num."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
 	}
 ?>

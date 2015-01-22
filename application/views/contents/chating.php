@@ -79,28 +79,14 @@
 		</div><!-- rightProfile end -->
 
 		<div class="bookedDay">
-			<div class="band">BookedDay</div>
-
-			<div id="reservationDay">
-				<span id="bookedDate">2015/01/08</span>
-				<input type="text" class="form-control" placeholder="" id="number">
-				<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
-			</div><!-- reservationDay 이게 반복되면서 늘어남 -->
-			<div id="reservationDay">
-				<span id="bookedDate">2015/01/08</span>
-				<input type="text" class="form-control" placeholder="" id="number">
-				<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
-			</div><!-- reservationDay 이게 반복되면서 늘어남 -->
-			<div id="reservationDay">
-				<span id="bookedDate">2015/01/08</span>
-				<input type="text" class="form-control" placeholder="" id="number">
-				<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
-			</div><!-- reservationDay 이게 반복되면서 늘어남 -->
-			<div id="reservationDay">
-				<span id="bookedDate">2015/01/08</span>
-				<input type="text" class="form-control" placeholder="" id="number">
-				<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
-			</div><!-- reservationDay 이게 반복되면서 늘어남 -->
+			<div class="band">BookedDay <span id='addDate' name='addDate' onclick='dataAdd()'><u>추가</u></span></div>
+			<?foreach($BookList as $v){?>
+				<div id="reservationDay" class="reservationDay">
+					<span id="bookedDate"><?=$v->book_date?></span>
+					<input type="text" class="form-control" placeholder="" id="number" value ='<?=$v->book_person?>'>
+					<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
+				</div><!-- reservationDay 이게 반복되면서 늘어남 -->
+			<?}?>
 
 		</div>
 
