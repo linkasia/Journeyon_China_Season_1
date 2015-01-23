@@ -65,4 +65,19 @@
 		alert(nRow);
 	}
 
+	function salesItem(){
+		var _chatNum = $('#hiddenChatNum').val();
+		var _productNum = $('#hiddenProductNum').val();
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ productNum:_productNum},
+			url: "/index.php/city/country/updateBookingDate",
+			success: function (data){
+				alert(data);
+				//document.getElementById('chatlistWrap').innerHTML = data;
+			}
+		});
+	}
 </script>

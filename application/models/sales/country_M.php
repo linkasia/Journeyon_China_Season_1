@@ -565,8 +565,9 @@
 							FROM chat a
 							LEFT JOIN USER b ON a.user_num = b.user_num
 							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
-							WHERE a.user_num = '".$user_num."'
-							AND a.product_num = '".$salesNum."'";
+							WHERE a.product_num = '".$salesNum."'
+							AND a.user_num = '".$user_num."'";
+							//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -616,7 +617,7 @@
 																	FROM chat a
 																	LEFT JOIN USER b ON a.user_num = b.user_num
 																	LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
-																	WHERE a.user_num ='".$userNum."'
+																--	WHERE a.user_num ='".$userNum."'
 																	ORDER BY a.create_time DESC
 										) AS v
 										UNION ALL
@@ -630,7 +631,7 @@
 											FROM chat_reply d
 											LEFT JOIN USER e ON e.user_num = d.user_num
 											LEFT JOIN country_table f ON e.mother_area_code = f.class AND e.mother_country_code = f.code
-											WHERE d.user_num ='".$userNum."'
+										--	WHERE d.user_num ='".$userNum."'
 											ORDER BY d.create_time
 										) AS k
 							) AS u
@@ -683,13 +684,26 @@
 		{
 			$sql ="SELECT *
 							FROM user_order_product
-							WHERE product_num ='".$salesNum."'
-							AND user_num ='".$user_num."'";
-							print_r($sql);
+							WHERE product_num =".$salesNum."
+							-- AND user_num ='".$user_num."'
+							ORDER BY book_date";
+							//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
 		}
 
+		function updateBooking($productNum, $user_num)
+		{
+			$sql ="UPDATE user_order_product
+								SET order_type_code = '0003' ,
+										modified_date = SYSDATE()
+							WHERE product_num = '".$productNum."'
+							AND user_num = '".$user_num."'";
+			print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
 	}
+
 ?>

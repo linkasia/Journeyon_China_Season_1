@@ -81,17 +81,22 @@
 		<div class="bookedDay">
 			<?
 			$i = 0;?>
-			<div class="band">BookedDay <span id='addDate' name='addDate' onclick="dataAdd(<?=$i?>)"><u>추가</u></span></div>
+			<div class="band">BookedDay <!--span id='addDate' name='addDate' onclick="dataAdd(<?=$i?>)"><u>추가</u></span--></div>
 			<?foreach($BookList as $v){?>
 				<div id="reservationDay<?=$i?>" class="reservationDay">
 					<span id="bookedDate"><?=$v->book_date?></span>
 					<input type="text" class="form-control" placeholder="" id="number" value ='<?=$v->book_person?>'>
 					<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
 				</div><!-- reservationDay 이게 반복되면서 늘어남 -->
-			<?
-			$i++;
+			<?$i++;
 			}?>
-
+			<?foreach($salesCity as $k){
+				if($this->session->userdata['num'] != $k->user_num){?>
+					<input type='button' id='salesBook' name='salesBook' class ='btn btn-info' value='예약하기' onclick="salesItem()">
+				<?}else{?>
+					<span>예약 확정 대기중 </span>
+				<?}
+			}?>
 		</div>
 
 		<div class="Add">
