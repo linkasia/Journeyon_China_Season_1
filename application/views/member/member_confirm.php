@@ -71,7 +71,8 @@ if($to == "" || $to == null){
 
 	<div class="form-group">
 		<div class="input_container">
-			<select class="selectpicker" data-style="btn-warning" id="yourCountry">
+			<select class="form-control" id="yourCountry" name="yourCountry">
+
 			<?foreach($countryList as $v){?>
 				<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
 			<?}?>

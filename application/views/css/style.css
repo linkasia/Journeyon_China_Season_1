@@ -139,7 +139,9 @@
 	#ul_margin{margin: 0;}
 	#repeated_join{cursor: pointer; text-decoration: none;}
 
-	.input_container #yourCountry{width: 150px;}
+	.input_container #yourCountry{width: 280px; height: 46px; border-radius: 0px; font-size: 1.125em;}
+	.input_container #password{margin-bottom: 10px; border-radius: 0px; font-size: 1.125em;}
+	.input_container #password_comfirm{margin-bottom: 10px; border-radius: 0px; font-size: 1.125em;}
 
 	#member_container #myModal2 div.modal-dialog2{width: 800px;}
 	#member_container #myModal2 div.modal-dialog2 .modal-body2{overflow-y: scroll; height: 600px; padding: 20px;}
