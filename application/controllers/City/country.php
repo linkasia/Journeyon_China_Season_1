@@ -333,5 +333,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$update['stateCode']= $this->country_M->updateBooking( $productNum, $user_num );
 	}
 
+	//예약 날짜 저장
+	function detailBooking(){
+		$this->load->view('include/header');
+		$this->load->view("/contents/detailBook");
+		$this->load->view('include/footer');
+	}
+
 }
 ?>

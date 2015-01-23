@@ -195,6 +195,7 @@ $mode = $_REQUEST['mode'];
 
 		var i=0;
 		$('#calendarContent').click( function(){
+			/*
 			var checkDay = $('#jqxWidget').val().getFullYear() + "-" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
 			if(checkDay.length == 9){
 				checkDay = $('#jqxWidget').val().getFullYear() + "-0" + ($('#jqxWidget').val().getMonth() + 1 ) + "-" + $('#jqxWidget').val().getDate();
@@ -216,6 +217,7 @@ $mode = $_REQUEST['mode'];
 			}
 
 			document.getElementById('checkDate').innerHTML = _checkDate;
+			*/
 		});
 
 		$('#city1').click( function(){
@@ -264,9 +266,9 @@ $mode = $_REQUEST['mode'];
 		$('#calPop').click( function(){
 			var _user_num = $('#user_num').val();
 			var _fee = $('#fee').val();
-			if( $('#li0').html() == "" || $('#li0').html() == null ){
-				alert("날짜를 1개 이상 선택해주세요~!");
-			}else{
+			//if( $('#li0').html() == "" || $('#li0').html() == null ){
+				//alert("날짜를 1개 이상 선택해주세요~!");
+			//}else{
 				var _contents = $('#recheckTextarea').val();
 				$.ajax({
 					type:"GET" ,
@@ -275,6 +277,8 @@ $mode = $_REQUEST['mode'];
 					data:{ salesNum: _salesNum,  contents:_contents},
 					url:"/index.php/city/country/insertChating",
 					success: function (data){
+						document.getElementById('detailCity_wrap').innerHTML = data;
+						/*
 						var hiddenValueNum = $('#hiddenValueNum').val();
 						for(var i =0 ;  i <= hiddenValueNum; i++){
 							var _date = $('#date'+i).val();
@@ -296,25 +300,17 @@ $mode = $_REQUEST['mode'];
 						document.getElementById('detailCity_wrap').innerHTML = data;
 					}
 				});
-			}
+				*/
+			//}
 		});
 	});
 
 
 	function checkCancel(i)
 	{
-		var choiceDate=document.getElementById('date'+i).value;
 		/*
-		var insertBox = "<li class='checkdateLi'  id='li"+i+"'>";
-				insertBox += "<div id='modalDiv' name='modalDiv'>";
-				insertBox += "<input type='date' class='form-control' id='recheckDate' name='recheckDate' value='"+choiceDate+"'>";
-				insertBox += "<input type='text' class='form-control' id='recheckPerson' name='recheckPerson'>";
-				insertBox += "<span> 名</span>";
-				insertBox += "<img src='/application/views/images/contents/icon_x.png' class='checkdateClosebtn' id='cancel' name='cancel' onclick='checkCancel("+i+")'>";
-				insertBox += "<input type='hidden' value="+choiceDate+" id='date"+i+"'>";
-				insertBox += "</div>";
-				insertBox += "</li>";
-*/
+		var choiceDate=document.getElementById('date'+i).value;
+
 		var num = $('#hiddenValueNum').val();
 
 		document.getElementById('hiddenNum').innerHTML = "<input type='text' value='"+(num-1)+"' id='hiddenValueNum'>";
@@ -322,6 +318,7 @@ $mode = $_REQUEST['mode'];
 
 		_checkDate = _checkDate.replace(_tmpCheckDate,"");
 		document.getElementById("li"+i).innerHTML="";
+		*/
 	}
 
 	function addReply(num)
