@@ -66,9 +66,9 @@
 			<form id="frm" name="frm" action="/index.php/member/memberJoin/login" method="post" style="margin-top: 50px;" role="form">
 			<div class="form-group">
 				<div class="input_container">
-					<input class="form-control input-lg" type="text" id="inputLarge"  name="inputLarge" placeholder="登录名有误">
-					<span id="e-mail2"><ins><font color='#3F7FCE'>已经被申请</font><ins></span>
-					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="登陆密码">
+					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="请输入帳戶电邮">
+					<span id="e-mail2"><font color='#fff'>马上加入</font></span>
+					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="密码">
 					<!--button class="btn-primary btn" id='login' name='login'>登陆</button-->
 					<button class="btn-primary btn" id='login' name='login'  onclick="id_save(); return false;">登陆</button>
 					<!-- <span>已注册？回到登陆页</span> -->

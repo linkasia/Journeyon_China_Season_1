@@ -113,11 +113,13 @@
 /* Member_Join /member/member_join.php */
 	#member_container{}
 	#member_container .form-group{width: 610px; height: 620px; margin: 230px auto 0 auto; background-color: rgba(0,0,0,0.55); border-radius: 5px;} 
+
+
 	
 	.form-group .member_container{width: 280px; height: auto; margin: 0 auto; padding-top: 110px;}
 	.form-group .member_container:after{clear: both; display: block; *zoom: 1;}
 	.form-group .member_container > span {color: white; font-weight: normal; display: block; float: right;}
-	.form-group .member_container input:first-child{margin-top: 40px;}
+	.form-group .member_container input:first-child{margin-top: 40px; border-radius: 0px; font-size: 1.125em;}
 
 	.input-lg{width: 280px;}
 	#clause{cursor: pointer;}
@@ -142,6 +144,8 @@
 	.input_container #yourCountry{width: 280px; height: 46px; border-radius: 0px; font-size: 1.125em;}
 	.input_container #password{margin-bottom: 10px; border-radius: 0px; font-size: 1.125em;}
 	.input_container #password_comfirm{margin-bottom: 10px; border-radius: 0px; font-size: 1.125em;}
+	.input_container .loginBox{border-radius: 0px; font-size: 1.125em;}
+
 
 	#member_container #myModal2 div.modal-dialog2{width: 800px;}
 	#member_container #myModal2 div.modal-dialog2 .modal-body2{overflow-y: scroll; height: 600px; padding: 20px;}
@@ -677,7 +681,7 @@
 
 	#right_aside .aside-menu{margin-top: 30px;}
 	#right_aside .aside-menu img{margin-left: 50px;}
-	#right_aside .aside-like{margin-left: 45px; cursor: pointer;}
+	#right_aside .aside-like{margin-left: 64px; cursor: pointer;}
 
 	#right_aside  .aside-menu .modal-dialog{width: 450px;}
 	#right_aside  .aside-menu .modal-body{height: 438px;}
