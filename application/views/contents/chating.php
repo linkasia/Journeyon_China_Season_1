@@ -78,37 +78,35 @@
 			</div><!-- sns_icon end -->
 		</div><!-- rightProfile end -->
 
-		<div class="bookedDay">
-			<?
-			$i = 0;?>
-			<div class="band">BookedDay <!--span id='addDate' name='addDate' onclick="dataAdd(<?=$i?>)"><u>추가</u></span--></div>
-			<?foreach($BookList as $v){?>
-				<div id="reservationDay<?=$i?>" class="reservationDay">
-					<span id="bookedDate"><?=$v->book_date?></span>
-					<input type="text" class="form-control" placeholder="" id="number" value ='<?=$v->book_person?>'>
-					<span>名   </span><span class="glyphicon glyphicon-remove" id="remove"></span>
-				</div><!-- reservationDay 이게 반복되면서 늘어남 -->
-			<?$i++;
-			}?>
-			<?foreach($salesCity as $k){
-				if($this->session->userdata['num'] != $k->user_num){?>
-					<input type='button' id='salesBook' name='salesBook' class ='btn btn-info' value='예약하기' onclick="salesItem()">
-				<?}else{?>
-					<span>예약 확정 대기중 </span>
-				<?}
-			}?>
-		</div>
+
 
 		<div class="Add">
-			<span id="fixedPrice">Fixed price From Guide</span>
-			<div class="statusDiv" id="statusDiv"><p>판매가격 입력 대기중...</p></div>
-		</div>
+			<button class="btn btn-warning" id="pricePay" data-toggle="modal" data-target="#myModal8">날짜 예약하기</button>
 
-		<div class="Add">
-			<span id="fixedPrice">Fixed price From Guide</span>
-			<input type="text" class="form-control" id="inputPrice"><span class="won">元</span>
-			<button class="btn btn-info" id="priceModify">가격수정</button>
-			<button class="btn btn-warning" id="pricePay">결제하기</button>
+			<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog2">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h4 class="modal-title" id="myModalLabel">날짜 예약하기</h4>
+						</div><!-- modal-header 닫힘 -->
+						<div class="modal-body2">
+							<div id='content'>
+								<span>기간</span><input class="form-control" type="text" id="startDate" name="startDate" readonly value="">  ~ 
+								<input class="form-control" type="text" id="endDate" name="endDate" readonly value=""> 
+								<div id='jqxWidget' style="height: 500px;"> </div>
+
+							</div>
+						</div><!-- modal-body 닫힘 -->
+						<div class="modal-footer">
+							<button type="button" class="btn btn-danger" id="saveDate" name="saveDate">확정</button>
+							<button type="button" class="btn btn-info" data-dismiss="modal">취소</button>
+						</div><!-- modal-footer 닫힘 -->
+					</div><!-- modal-content 닫힘 -->
+				</div><!-- modal-dialog 닫힘 -->
+			</div><!-- modal fade Overveiw 끝 -->		
+
+		
 		</div>
 	</div><!-- rightWrap end -->
 
