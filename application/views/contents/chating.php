@@ -85,17 +85,20 @@
 
 			<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog2">
-					<div class="modal-content">
+					<div class="modal-content">61
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 							<h4 class="modal-title" id="myModalLabel">날짜 예약하기</h4>
 						</div><!-- modal-header 닫힘 -->
 						<div class="modal-body2">
 							<div id='content'>
-								<span>기간</span><input class="form-control" type="text" id="startDate" name="startDate" readonly value="">  ~ 
-								<input class="form-control" type="text" id="endDate" name="endDate" readonly value=""> 
-								<div id='jqxWidget' style="height: 500px;"> </div>
 
+								<div id='jqxWidget'></div>
+								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
+
+								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
+								<span>기간</span><input class="form-control" type="text" id="startDate" name="startDate"  value="">  ~
+								<input class="form-control" type="text" id="endDate" name="endDate"  value="">
 							</div>
 						</div><!-- modal-body 닫힘 -->
 						<div class="modal-footer">
@@ -104,9 +107,7 @@
 						</div><!-- modal-footer 닫힘 -->
 					</div><!-- modal-content 닫힘 -->
 				</div><!-- modal-dialog 닫힘 -->
-			</div><!-- modal fade Overveiw 끝 -->		
-
-		
+			</div><!-- modal fade Overveiw 끝 -->
 		</div>
 	</div><!-- rightWrap end -->
 
@@ -115,5 +116,31 @@
 		<span class="btn btn-primary" id="chatSend" onclick="sendChat()">Send</span>
 	</div>
 </div><!-- chatlistWrap -->
+
+
+ <script type="text/javascript">
+	$(document).ready(function () {
+		// create jqxcalendar.
+		$("#jqxWidget").jqxCalendar({ width: 220, height: 220,  selectionMode: 'range' });
+		$("#jqxWidget").on('change', function (event) {
+			$('#startDate').val() = "";
+			$('#endDate').val() = "";
+			var selection = event.args.range;
+			$("#selection").html("<div>From: " + selection.from.toLocaleDateString() + " <br/>To: " + selection.to.toLocaleDateString() + "</div>");
+		});
+
+		var date1 = new Date();
+		date1.setFullYear(2015, 7, 7);
+
+		var date2 = new Date();
+		date2.setFullYear(2015, 7, 15);
+		$("#jqxWidget").jqxCalendar('setRange', date1, date2);
+	});
+</script>
+
+
+
+
+
 
 

@@ -13,11 +13,13 @@
 	</div><!-- chatlistDiv 이게 반복됨 -->
 	<input type="hidden" id="hiddenProduct" name="hiddenProduct" value='<?=$v->product_num?>' >
 	<?}?>
+
 	<button class="btn btn-info" id="selectAll">전체선택</button>
 	<button class="btn btn-warning" id="selectAll">선택삭제</button>
 </div><!-- chatlistWrap -->
 
 <script type="text/javascript">
+
 	//채팅 디테일
 	function detailChat(key)
 	{
@@ -29,7 +31,8 @@
 			data:{ chatNum : key, productNum:_productNum},
 			url:"/index.php/city/country/startDeatilChating",
 			success: function (data){
-				document.getElementById('chatlistWrap').innerHTML = data;
+				location.href = "/index.php/city/country/startDetailChating?key='"+key+"'&num='"+_productNum+"'";
+				//document.getElementById('chatlistWrap').innerHTML = data;
 			}
 		});
 	}
@@ -80,4 +83,5 @@
 			}
 		});
 	}
+
 </script>

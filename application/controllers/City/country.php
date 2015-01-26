@@ -236,7 +236,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 				die("file save fail");
 			}
 			$insert['insertProductImg'] = $this->country_M->insertImg($product_num,$pictureTitle,$pictureCaption,$filePath);
-			print_r($filePath);
+			//print_r($filePath);
 		}
 	}
 
@@ -257,8 +257,21 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$insert['chatSend']= $this->country_M->chatSend($maxNum, $salesNum, $contents, $user_num );
 		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($result->chat_num);
-		$data['BookList']= $this->country_M->bookinglList($salesNum,$user_num);
+		//$data['BookList']= $this->country_M->bookinglList($salesNum,$user_num);
 		$this->load->view("/contents/chating",$data);
+	}
+
+	/*채팅페이지 이동*/
+	function startDetailChating(){
+		$salesNum = $_REQUEST['num'];
+		$key =  $_REQUEST['key'];
+
+		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
+		$data['SendList']= $this->country_M->chatDetailList($key);
+
+		$this->load->view('include/header');
+		$this->load->view("/contents/chating",$data);
+		$this->load->view('include/footer');
 	}
 
 	/*채팅시작*/
@@ -277,12 +290,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*채팅 디테일*/
 	function startDeatilChating(){
-		$chatNum = $_REQUEST['chatNum'];
-		$productNum = $_REQUEST['productNum'];
-		$user_num = $this->session->userdata['num'];
+		$chatNum = $_REQUEST['key'];
+		$productNum = $_REQUEST['Num'];
+		print_r($chatNum);
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
-		$data['BookList']= $this->country_M->bookinglList($productNum,$user_num);
+		//$data['BookList']= $this->country_M->bookinglList($productNum,$user_num);
 		$this->load->view("/contents/chating",$data);
 	}
 

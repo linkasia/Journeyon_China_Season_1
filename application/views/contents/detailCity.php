@@ -266,9 +266,11 @@ $mode = $_REQUEST['mode'];
 		$('#calPop').click( function(){
 			var _user_num = $('#user_num').val();
 			var _fee = $('#fee').val();
-			//if( $('#li0').html() == "" || $('#li0').html() == null ){
-				//alert("날짜를 1개 이상 선택해주세요~!");
-			//}else{
+			/*
+			if( $('#li0').html() == "" || $('#li0').html() == null ){
+				alert("날짜를 1개 이상 선택해주세요~!");
+			}else{
+			*/
 				var _contents = $('#recheckTextarea').val();
 				$.ajax({
 					type:"GET" ,
@@ -278,30 +280,11 @@ $mode = $_REQUEST['mode'];
 					url:"/index.php/city/country/insertChating",
 					success: function (data){
 						document.getElementById('detailCity_wrap').innerHTML = data;
-						/*
-						var hiddenValueNum = $('#hiddenValueNum').val();
-						for(var i =0 ;  i <= hiddenValueNum; i++){
-							var _date = $('#date'+i).val();
-							var _personNum = $('#personNum'+i).val();
-							if($('#date'+i).val() != null){
-								$.ajax({
-									type:"GET" ,
-									dataType:"text",
-									contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-									data:{ productNum: _salesNum, personNum:_personNum, date:_date, fee:_fee, user_num:_user_num},
-									url:"/index.php/city/country/insertBookingDate",
-									success: function (data){
-										//document.getElementById('detailCity_wrap').innerHTML = data;
-									}
-								});
-							}
-						}
 
-						document.getElementById('detailCity_wrap').innerHTML = data;
+						//document.getElementById('detailCity_wrap').innerHTML = data;
 					}
 				});
-				*/
-			//}
+			//}  //end if
 		});
 	});
 
