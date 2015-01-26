@@ -448,6 +448,38 @@
 	.contents .contents_list1 .list_rightwrap .bottom_text .line2 .tag2 img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
 
 
+
+
+	#detailBookWrap{width: 940px; margin: 0 auto; position: relative; margin-top: 20px; background-color: #f9fafc; border: 1px solid #f0f1f5; padding: 20px;}
+	#detailBookWrap .titleDiv{float: left; width: 100%;}
+	#detailBookWrap .titleDiv .titleimgDiv{width: 200px; height: 130px; overflow: hidden; float: left; margin-right: 20px;}
+	#detailBookWrap .titleDiv .titleImg{width: 100%; vertical-align: middle;}
+	#detailBookWrap .titleDiv .productDiv{float: left;}
+	#detailBookWrap .titleDiv .productDiv #productTitle{float: left; display: block; height: 30px; font-size: 1.3em;}
+	.dateinputDiv{float: left; width: 500px; padding-top: 56px;}
+	.dateinputDiv input{float: left;}
+	.dateinputDiv p{float: left; line-height: 30px;}
+	#countryCode{width: 200px;}
+
+
+	#detailBookWrap .titleDiv .productDiv .productImg{position: relative; float: left;}
+	#detailBookWrap .titleDiv .productDiv .productImg .profile_image{width: 74px; height: 74px; position: absolute; left: 495px; top:30px;}
+	#detailBookWrap .titleDiv .productDiv .productImg .flag_image{width: 20px; height: 14px; left: 485px; top: 62px; position: absolute;}
+	#detailBookWrap .titleDiv .productDiv .productImg .vmark_image{width: 18px; height: 18px; left: 554px; top: 88px; position: absolute;}
+	#detailBookWrap .titleDiv .productDiv #guideName{position: absolute; width: 300px; top: 62px; left: 578px;}
+	
+	.infoDiv1{width: 100%; float: left; margin-top: 20px;}
+	#countryCode{float: left; margin-right: 10px;}
+	#detailBookWrap .infoDiv1 .phoneInput{width: 300px; float: left;}
+
+	.infoDiv2{width: 100%; float: left; margin-top: 20px;}
+	.infoDiv2 p{margin-bottom: 20px;}
+	.infoDiv2 textarea{margin-bottom: 20px;}
+	#infoDiv3{width: 100%; float: left;}
+	#productSave{margin-left: 821px;}
+
+
+
 /* detailCity.php */
 	#detailCity_wrap{width: 940px; height: 100%; margin: 50px auto 0 auto;} /* 전체 wrap */
 	#detailCity_wrap:after{clear: both; display: block; *zoom: 1;}
