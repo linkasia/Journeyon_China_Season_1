@@ -27,6 +27,8 @@
 	<?}?>
 	<div class="infoDiv1">
 		<p>여행자 정보</p>
+		<p>인원 수</p><input type="" class="form-control" id="personInput" name="personInput"><br>
+		<p>금액</p><input type="" class="form-control" id="moneyInput" name="moneyInput"><span> 元</span><br>
 		<p>휴대폰 정보<span class="s">예약 확정 후 가이드와 연락할 때 쓰일 예정입니다.</span></p>
 		<select class="form-control" id="countryCode" name="countryCode">
 			<option value="한국 +82">Korea +82</option>

@@ -448,7 +448,7 @@
 	.contents .contents_list1 .list_rightwrap .bottom_text .line2 .tag2 img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
 
 
-
+/* detailBook CSS */
 
 	#detailBookWrap{width: 940px; margin: 0 auto; position: relative; margin-top: 20px; background-color: #f9fafc; border: 1px solid #f0f1f5; padding: 20px;}
 	#detailBookWrap .titleDiv{float: left; width: 100%;}
@@ -460,6 +460,11 @@
 	.dateinputDiv input{float: left;}
 	.dateinputDiv p{float: left; line-height: 30px;}
 	#countryCode{width: 200px;}
+
+	#detailBookWrap .infoDiv1 #personInput{width: 50px; display: inline; margin-bottom: 15px;} 
+	#detailBookWrap .infoDiv1 #moneyInput{width: 100px; display: inline; margin-bottom: 15px;}
+
+
 
 
 	#detailBookWrap .titleDiv .productDiv .productImg{position: relative; float: left;}
