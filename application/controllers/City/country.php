@@ -341,6 +341,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['sDate'] = $_REQUEST['sDate'];
 		$data['eDate'] = $_REQUEST['eDate'];
 		$data['salesCity']= $this->country_M->salesDetailCountry($productNum);
+		$data['countryNum']= $this->tb_code->countryNumber();
+
 
 		$this->load->view('include/header');
 		$this->load->view("/contents/detailBook",$data);

@@ -89,6 +89,18 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		//나라별 국가 번호
+		function countryNumber()
+		{
+			$sql ="SELECT *
+							FROM code_table
+							WHERE class='0017'
+							AND useYn='Y'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 
 ?>
