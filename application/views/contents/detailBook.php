@@ -1,29 +1,30 @@
 <div id="detailBookWrap">
+	<?foreach($salesCity as $v){?>
 	<div class="titleDiv">
 		<div class="titleimgDiv">
-			<img src="/application/views/images/main/img14_some04.png" class="titleImg" alt="" id="productTitleImg" name="productTitleImg">
+			<img src="<?=$v->img_path?>" class="titleImg" alt="" id="productTitleImg" name="productTitleImg">
 		</div>
 		<div class="productDiv">
 			<div>
 				<div class="productImg">
-					<img src="/application/views/images/main/profile01.jpg" alt="" class="profile_image img-circle" id="productProfile" name="productProfile">
-					<img src="/application/views/images/flag/01korea.png" alt="nation_flagImage" class="flag_image" id="productFlag" name="productFlag">
-					<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image" id="vmark_image" name="vmark_image">
-					<span id="guideName" name="guideName">황현철 가이드</span>
+					<img src="<?=$v->face_img_path?>" alt="" class="profile_image img-circle" id="productProfile" name="productProfile">
+					<img src="<?=$v->country_img?>" alt="nation_flagImage" class="flag_image" id="productFlag" name="productFlag">
+					<?if($v->v_get_code == "0001"){?>
+						<img src="/application/views/images/main/img22_vmark.png" alt="" class="vmark_image" id="vmark_image" name="vmark_image">
+					<?}?>
+					<span id="guideName" name="guideName"><?=$v->Name_cn_en?> 가이드</span>
 				</div>
 			</div>
-			<p id="productTitle">영화 미드나잇 인 파리 투어</p><br>
+			<p id="productTitle"><?=$v->title?></p><br>
 			<div class="dateinputDiv">
 				<p>여행 희망일</p>
-				<input type="text" class="form-control2" id="yearInput" name="yearInput">
-				<p>년</p>
-				<input type="text" class="form-control2" id="monthInput" name="monthInput">
-				<p>월</p>
-				<input type="text" class="form-control2" id="dateInput" name="dateInput">
-				<p>일</p>
+				<input type="text" class="form-control2" id="startDate" name="startDate" value="<?=$sDate?>" readonly>
+				<p>~</p>
+				<input type="text" class="form-control2" id="endDate" name="endDate" value="<?=$eDate?>" readonly>
 			</div>
 		</div>
 	</div>
+	<?}?>
 	<div class="infoDiv1">
 		<p>여행자 정보</p>
 		<p>휴대폰 정보<span class="s">예약 확정 후 가이드와 연락할 때 쓰일 예정입니다.</span></p>
@@ -45,6 +46,4 @@
 		<span class="glyphicon glyphicon-bullhorn"></span>  24시간 내에 가이드가 진행 가능 여부를 알려드립니다. 진행 가능할 경우 즉시 예약이 확정되며, 불가능할 경우 예약취소 및 환불됩니다.
 	</div>
 	<button id="productSave" name="productSave" class="btn btn-info">저장하기</button>
-
-
 </div>

@@ -121,7 +121,9 @@
 		function salesDetailCountry($num)
 		{
 			$sql ="SELECT a.product_num,
+											a.title,
 											a.user_num,
+											b.Name_cn_en,
 											a.fat_price,
 											a.theme_num1_code,
 											f.code_nm AS theme_num1_nm,
@@ -158,23 +160,26 @@
 											b.g_get_code,
 											DATE_FORMAT(b.create_time,'%Y') AS YEAR,
 											DATE_FORMAT(b.create_time,'%m') AS mon,
-											DATE_FORMAT(b.create_time,'%d') AS DAY
-								FROM product a
-								LEFT JOIN USER b ON a.user_num = b.user_num
-								LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code=c.code
-								LEFT JOIN city_table d ON b.mother_area_code = d.sclass AND b.mother_country_code=d.class AND b.mother_city_code = d.code
-								LEFT JOIN city_table e ON b.live_area_code = e.sclass AND b.live_country_code=e.class AND b.live_city_code = e.code
-								LEFT JOIN code_table f ON a.theme_num1_code=f.code AND f.class='0012'
-								LEFT JOIN code_table g ON a.theme_num2_code=g.code AND g.class='0012'
-								LEFT JOIN code_table h ON a.theme_num3_code=h.code AND h.class='0012'
-								LEFT JOIN code_table i ON b.gender_code=i.code AND i.class='0002'
-								LEFT JOIN code_table j ON b.lang1_code=j.code AND j.class='0015'
-								LEFT JOIN code_table k ON b.lang2_code=k.code AND k.class='0015'
-								LEFT JOIN code_table l ON b.lang3_code=l.code AND l.class='0015'
-								LEFT JOIN code_table m ON b.lang1_skill=m.code AND m.class='0014'
-								LEFT JOIN code_table n ON b.lang2_skill=n.code AND n.class='0014'
-								LEFT JOIN code_table o ON b.lang3_skill=o.code AND o.class='0014'
-							WHERE a.product_num='".$num."'";
+											DATE_FORMAT(b.create_time,'%d') AS DAY,
+											p.img_path
+							FROM product a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code=c.code
+							LEFT JOIN city_table d ON b.mother_area_code = d.sclass AND b.mother_country_code=d.class AND b.mother_city_code = d.code
+							LEFT JOIN city_table e ON b.live_area_code = e.sclass AND b.live_country_code=e.class AND b.live_city_code = e.code
+							LEFT JOIN code_table f ON a.theme_num1_code=f.code AND f.class='0012'
+							LEFT JOIN code_table g ON a.theme_num2_code=g.code AND g.class='0012'
+							LEFT JOIN code_table h ON a.theme_num3_code=h.code AND h.class='0012'
+							LEFT JOIN code_table i ON b.gender_code=i.code AND i.class='0002'
+							LEFT JOIN code_table j ON b.lang1_code=j.code AND j.class='0015'
+							LEFT JOIN code_table k ON b.lang2_code=k.code AND k.class='0015'
+							LEFT JOIN code_table l ON b.lang3_code=l.code AND l.class='0015'
+							LEFT JOIN code_table m ON b.lang1_skill=m.code AND m.class='0014'
+							LEFT JOIN code_table n ON b.lang2_skill=n.code AND n.class='0014'
+							LEFT JOIN code_table o ON b.lang3_skill=o.code AND o.class='0014'
+							LEFT JOIN spot p ON a.product_num = p.product_num
+							WHERE a.product_num='".$num."'
+							LIMIT 1";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -599,6 +604,7 @@
 																WHERE d.chat_num = '".$chatNum."'
 												) AS u
 								ORDER BY u.create_time ASC";
+								//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -700,7 +706,7 @@
 										modified_date = SYSDATE()
 							WHERE product_num = '".$productNum."'
 							AND user_num = '".$user_num."'";
-			print_r($sql);
+			//print_r($sql);
 			$query = $this->db->query($sql);
 		}
 

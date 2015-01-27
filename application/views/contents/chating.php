@@ -85,7 +85,7 @@
 
 			<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog2">
-					<div class="modal-content">61
+					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 							<h4 class="modal-title" id="myModalLabel">날짜 예약하기</h4>
@@ -96,9 +96,9 @@
 								<div id='jqxWidget'></div>
 								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
 
-								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
-								<span>기간</span><input class="form-control" type="text" id="startDate" name="startDate"  value="">  ~
-								<input class="form-control" type="text" id="endDate" name="endDate"  value="">
+								<div style='font-size: 13px; font-family: Verdana;' id='selection'>
+
+								</div>
 							</div>
 						</div><!-- modal-body 닫힘 -->
 						<div class="modal-footer">
@@ -123,19 +123,73 @@
 		// create jqxcalendar.
 		$("#jqxWidget").jqxCalendar({ width: 220, height: 220,  selectionMode: 'range' });
 		$("#jqxWidget").on('change', function (event) {
-			$('#startDate').val() = "";
-			$('#endDate').val() = "";
 			var selection = event.args.range;
-			$("#selection").html("<div>From: " + selection.from.toLocaleDateString() + " <br/>To: " + selection.to.toLocaleDateString() + "</div>");
+			//$('#startDate').val() = selection.from.toLocaleDateString();
+			//$('#endDate').val() = selection.to.toLocaleDateString();
+			var staetDate = selection.from.toLocaleDateString().substring(0,selection.from.toLocaleDateString().length -1);
+			var endDate =selection.to.toLocaleDateString().substring(0,selection.to.toLocaleDateString().length -1);
+			var sDate = "<input class='form-control' type='hidden' id='startDate' name='startDate'  value='"+ staetDate +"'>";
+			var eDate = "<input class='form-control' type='hidden' id='endDate' name='endDate'  value='"+ endDate +"'>";
+			$("#selection").html("<div>From: " + selection.from.toLocaleDateString() + sDate +" <br/>To: " + selection.to.toLocaleDateString() + eDate+"</div>");
 		});
 
 		var date1 = new Date();
-		date1.setFullYear(2015, 7, 7);
+		date1.setFullYear(date1.getFullYear(), date1.getMonth(), date1.getDate());
 
 		var date2 = new Date();
-		date2.setFullYear(2015, 7, 15);
+		date2.setFullYear(date1.getFullYear(), date1.getMonth(), date1.getDate());
 		$("#jqxWidget").jqxCalendar('setRange', date1, date2);
 	});
+
+	$(function(){
+		$('#saveDate').click( function(){
+			var _sDate = $('#startDate').val();
+			var _eDate = $('#endDate').val();
+			var _productNum = $('#hiddenProductNum').val();
+			location.href = "/index.php/City/country/detailBooking?sDate="+_sDate+"&eDate="+_eDate+"&productNum="+_productNum+"";
+			/*
+
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ sDate : _sDate, eDate:_eDate, productNum:_productNum},
+				url: "/index.php/city/country/detailBooking",
+				success: function (data){
+					location.href = "/index.php/City/country/detailBooking?sDate="+_sDate+"&eDate="+_eDate+"&productNum="+_productNum+"";
+					//document.getElementById('chatlistWrap').innerHTML = data;
+				}
+			});
+			*/
+		});
+	});
+
+	//send 버튼 클릭시
+	function sendChat(){
+		var _chatNum = $('#hiddenChatNum').val();
+		var _productNum = $('#hiddenProductNum').val();
+		var _contents = $('#chatInput').val();
+		var _userNum = $('#hiddenUserNum').val();
+		var _loginNum = $('#hiddenLoginNum').val();
+		var _url = "";
+		if(_userNum != _loginNum)
+		{
+			_url ="/index.php/city/country/insertMainChating";
+		}else{
+			_url ="/index.php/city/country/insertSubChating";
+		}
+
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ chatNum : _chatNum, productNum:_productNum, contents:_contents},
+			url: _url,
+			success: function (data){
+				document.getElementById('chatlistWrap').innerHTML = data;
+			}
+		});
+	}
 </script>
 
 

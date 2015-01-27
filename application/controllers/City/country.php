@@ -288,17 +288,6 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$this->load->view('include/footer');
 	}
 
-	/*채팅 디테일*/
-	function startDeatilChating(){
-		$chatNum = $_REQUEST['key'];
-		$productNum = $_REQUEST['Num'];
-		print_r($chatNum);
-		$data['SendList']= $this->country_M->chatDetailList($chatNum);
-		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
-		//$data['BookList']= $this->country_M->bookinglList($productNum,$user_num);
-		$this->load->view("/contents/chating",$data);
-	}
-
 	//채팅저장
 	function insertMainChating(){
 		$productNum = $_REQUEST['productNum'];
@@ -348,8 +337,13 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	//예약 날짜 저장
 	function detailBooking(){
+		$productNum = $_REQUEST['productNum'];
+		$data['sDate'] = $_REQUEST['sDate'];
+		$data['eDate'] = $_REQUEST['eDate'];
+		$data['salesCity']= $this->country_M->salesDetailCountry($productNum);
+
 		$this->load->view('include/header');
-		$this->load->view("/contents/detailBook");
+		$this->load->view("/contents/detailBook",$data);
 		$this->load->view('include/footer');
 	}
 

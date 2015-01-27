@@ -280,8 +280,6 @@ $mode = $_REQUEST['mode'];
 					url:"/index.php/city/country/insertChating",
 					success: function (data){
 						document.getElementById('detailCity_wrap').innerHTML = data;
-
-						//document.getElementById('detailCity_wrap').innerHTML = data;
 					}
 				});
 			//}  //end if
