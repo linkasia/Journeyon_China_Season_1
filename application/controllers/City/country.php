@@ -317,14 +317,18 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	//예약 날짜 저장
 	function insertBookingDate(){
-		$productNum = $_REQUEST['productNum'];
-		$personNum = $_REQUEST['personNum'];
+		$productNum = $_REQUEST['hiddenProduct'];
+		$personNum = $_REQUEST['personInput'];
 		$user_num = $this->session->userdata['num'];
-		$date = $_REQUEST['date'];
-		$fee = $_REQUEST['fee'];
-		$productUserNum = $_REQUEST['user_num'];
+		$sdate = $_REQUEST['sDate'];
+		$edate = $_REQUEST['eDate'];
+		$productUserNum = $_REQUEST['hiddenRegisterNum'];
+		$personInput = $_REQUEST['personInput'];
+		$countryCode = $_REQUEST['countryCode'];
+		$phoneInput = $_REQUEST['phoneInput'];
+		$producttextArea = $_REQUEST['producttextArea'];
 
-		$insert['chatSend']= $this->country_M->insertBooking( $productNum, $personNum, $date, $fee, $user_num, $productUserNum );
+		$insert['chatSend']= $this->country_M->insertBooking( $productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea );
 	}
 
 	//예약 날짜 저장
@@ -340,6 +344,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$productNum = $_REQUEST['productNum'];
 		$data['sDate'] = $_REQUEST['sDate'];
 		$data['eDate'] = $_REQUEST['eDate'];
+		$data['loginUser'] = $this->session->userdata['num'];
 		$data['salesCity']= $this->country_M->salesDetailCountry($productNum);
 		$data['countryNum']= $this->tb_code->countryNumber();
 

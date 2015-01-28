@@ -648,17 +648,20 @@
 			return $result;
 		}
 
-		function insertBooking($productNum, $personNum, $date, $fee, $user_num, $productUserNum )
+		function insertBooking($productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea)
 		{
 			$sql ="INSERT INTO user_order_product
 													(book_num,
 													product_num,
 													product_user_num,
 													user_num,
+													contry_code,
+													phon_num,
 													order_type_code,
 													book_Start_date,
 													book_End_date,
 													book_person,
+													book_request,
 													fixed_fee,
 													complete_code,
 													complain_text,
@@ -672,18 +675,21 @@
 													'".$productNum."',
 													'".$productUserNum."',
 													'".$user_num."',
+													'".$countryCode."',
+													'".$phoneInput."',
 													'0004',
 													'". $sdate."',
 													'". $edate."',
 													'".$personNum."',
-													'".$fee."',
+													'".$producttextArea."',
+													'0',
 													'',
 													'',
 													'',
 													0,
 													0,
 													SYSDATE());";
-													//print_r($sql);
+													print_r($sql);
 			$query = $this->db->query($sql);
 		}
 

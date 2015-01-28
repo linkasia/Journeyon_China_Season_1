@@ -9,7 +9,7 @@
 	</aside><!-- leftmenuWrap end -->
 
 	<div id="rightWrap">
-		<? $data = "";
+		<? $data="";
 			$this->load->view("/mypage/m_guide0",$data);
 		?>
 	</div><!-- rightWrap end -->

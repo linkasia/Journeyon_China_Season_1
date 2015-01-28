@@ -10,8 +10,15 @@
 
 
 	<div id="rightWrap">
-		<? $data = "";
-			$this->load->view("/mypage/m_guest0",$data);
+		<?
+		$mode = $_REQUEST['mode'];
+
+		if($mode == 2){
+			$data['reservation'] = $this->myModify->myReservationPage($this->session->userdata['num']);
+			$this->load->view("/mypage/m_guest2",$data);
+		}else{
+			$this->load->view("/mypage/m_guest0");
+		}
 		?>
 	</div><!-- rightWrap end -->
 </div><!-- guestWrap end -->

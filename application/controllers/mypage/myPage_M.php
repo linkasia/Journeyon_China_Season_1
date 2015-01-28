@@ -100,7 +100,9 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function myGuestSalesAdmin(){
-		$this->load->view('mypage/m_guest3');
+
+		$data['buyList'] = $this->myModify->myBuyListPage($this->session->userdata['num']);
+		$this->load->view('mypage/m_guest3', $data);
 	}
 
 	function myGuestCancelAdmin(){

@@ -74,5 +74,38 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		function myReservationPage($num)
+		{
+			$sql ="SELECT a.*,
+											b.*,
+											c.*,
+											d.*,
+											CASE WHEN fixed_fee = 0 THEN '未确认' ELSE fixed_fee END fixed_fee
+							FROM user_order_product a
+							LEFT JOIN product b ON a.product_num = b.product_num
+							LEFT JOIN USER c ON b.user_num = c.user_num
+							LEFT JOIN country_table d ON c.live_area_code = d.class AND c.live_country_code = d.code
+							WHERE a.user_num = '".$num."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function myBuyListPage($num)
+		{
+			$sql ="SELECT COUNT(a.product_num) AS cnt,
+											a.product_num,
+											c.code_nm AS country_nm,
+											c.ref1
+							FROM user_order_product a
+							LEFT JOIN product b ON a.product_num = b.product_num
+							LEFT JOIN country_table c ON b.sortcountry = c.class AND b.country_code = c.code
+							WHERE a.user_num = '".$num."'
+							GROUP BY a.product_num, b.sortcountry, b.country_code";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 ?>
