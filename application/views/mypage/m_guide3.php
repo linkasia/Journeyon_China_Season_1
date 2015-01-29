@@ -1,5 +1,8 @@
 		<div class="profileWrap1">
-			<?php $this -> load ->view('/mypage/serviceWindow1'); ?>
+			<?
+				$data['date'] = $this->myModify->mySellPage($this->session->userdata['num']);
+				$this -> load ->view('/mypage/servicewindow1',$data);
+			?>
 
 			<div class="title1">
 				<div class="underline">판매관리</div>

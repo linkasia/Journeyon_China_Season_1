@@ -105,7 +105,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/mypublic">View on Public</a></li>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myaccountSetting">Account&Setting</a></li>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguide">Guide</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguest">Guest</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguest?mode=0">Guest</a></li>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/member/memberJoin/logout">Logout</a></li>
 								</ul>
 							</div>

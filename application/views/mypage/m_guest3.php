@@ -7,7 +7,7 @@
 			<?foreach($buyList as $v){?>
 				<div id="somenailwrapDiv">
 					<div class="somenailDiv">
-						<img src="<?=$v->ref1?>" alt="countryImg" id="somenailImg" name="somenailImg">
+						<img src="<?=$v->ref1?>" alt="countryImg" id="somenailImg" name="somenailImg" onclick="changeProduct('<?=$v->sortcountry?>','<?=$v->country_code?>')">
 						<p class="contentsNumber"><?=$v->cnt?></p>
 					</div><!-- somenailDiv end  -->
 					<div class="somenailText"><?=$v->country_nm?></div>
@@ -16,8 +16,9 @@
 			</div>
 
 			<div id="listWrap">
-
-				<?php $this -> load ->view('/mypage/productList'); ?>
-
+				<?
+					//$data['slaesBuyList'] = $this->country_M->salesCountry($scontry, $contry, null);
+					//$this -> load ->view('/mypage/productList', $data);
+				?>
 			</div>
 		</div><!-- profileWrap1 end -->

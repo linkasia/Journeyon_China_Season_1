@@ -15,6 +15,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->model('main/main_i');
 		$this->load->model('member/membersJoin');
 		$this->load->model('mypage/myModify');
+		$this->load->model('sales/country_M');
 		$this->load->helper('url');
 		$this->load->helper('util_helper');
 	}
@@ -92,11 +93,14 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function myGuestAdmin(){
-		$this->load->view('mypage/m_guest1');
+		$data['bucketList'] =  $this->myModify->myBucketListPage($this->session->userdata['num']);
+		$this->load->view('mypage/m_guest1' , $data);
 	}
 
 	function myGuestItemAdmin(){
-		$this->load->view('mypage/m_guest2');
+		$data['reservation'] = $this->myModify->myReservationPage($this->session->userdata['num']);
+		$data['mode']="";
+		$this->load->view('mypage/m_guest2', $data);
 	}
 
 	function myGuestSalesAdmin(){
@@ -109,9 +113,13 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_guest4');
 	}
 
+	function myBuyProduct(){
+		$scontry = $_REQUEST['sClass'];
+		$contry = $_REQUEST['code'];
 
-
-
+		$data['slaesBuyList'] = $this->myModify->myBucketList($scontry, $contry, $this->session->userdata['num']);
+		$this->load->view('mypage/productList', $data);
+	}
 
 	function mailChange(){
 		$to = $_REQUEST['selnum'];
@@ -161,5 +169,20 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		);
 
 		$update['userUpdate'] = $this->myModify->updateUser($newdata);
+	}
+
+	function salesPage(){
+		$data['salesProduct'] =$this->myModify->mySalesList($this->session->userdata['num'],'0001');
+		$this -> load ->view('/mypage/m_guide2_tab1', $data);
+	}
+
+	function registringPage(){
+		$data['salesProduct'] =$this->myModify->mySalesList($this->session->userdata['num'],'0002');
+		$this -> load ->view('/mypage/m_guide2_tab1', $data);
+	}
+
+	function stopPage(){
+		$data['salesProduct'] =$this->myModify->mySalesList($this->session->userdata['num'],'0003');
+		$this -> load ->view('/mypage/m_guide2_tab1', $data);
 	}
 }

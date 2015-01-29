@@ -17,8 +17,46 @@
 </div><!-- guideWrap end -->
 
 <script type="text/javascript">
-	$(function(){
+	function sales(){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ },
+			url:"/index.php/mypage/myPage_M/salesPage",
+			success: function (data){
+				document.getElementById('product_tab').innerHTML =data;
+			}
+		});
+	}
 
+	function registring(){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ },
+			url:"/index.php/mypage/myPage_M/registringPage",
+			success: function (data){
+				document.getElementById('product_tab').innerHTML =data;
+			}
+		});
+	}
+
+	function stop(){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ },
+			url:"/index.php/mypage/myPage_M/stopPage",
+			success: function (data){
+				document.getElementById('product_tab').innerHTML =data;
+			}
+		});
+	}
+
+	$(function(){
 			$('#guideHome').click( function(){
 				$.ajax({
 					type:"POST" ,

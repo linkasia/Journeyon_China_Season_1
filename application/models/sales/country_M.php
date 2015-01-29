@@ -420,6 +420,7 @@
 													`s_get`,
 													`useYn`,
 													`adminYn`,
+													`product_state`,
 													`create_date`,
 													`modified_date`
 													)
@@ -449,6 +450,7 @@
 													'',
 													'',
 													'',
+													'0002',
 													SYSDATE(),
 													SYSDATE());";
 			$query = $this->db->query($sql);

@@ -15,14 +15,17 @@
 			<div class="pmWrap">
 				<a href="/index.php/City/country/productUpload" class="btn btn-info product-upload" id='productUpload' name='productUpload'>Guide 상품 올리러가기</a>
 				<ul class="nav nav-tabs">
-				  <li role="presentation" class="active" id="nav-tab1"><a href="">판매중</a></li>
-				  <li role="presentation"id="nav-tab2"><a href="">등록중</a></li>
-				  <li role="presentation" id="nav-tab3"><a href="">판매중지</a></li>
+					<li role="presentation" class="active" id="nav-tab1" onclick="sales()"><a>판매중</a></li>
+					<li role="presentation"id="nav-tab2" onclick="registring()"><a>등록중</a></li>
+					<li role="presentation" id="nav-tab3" onclick="stop()"><a>판매중지</a></li>
 				</ul>
-				
-				<?php $this -> load ->view('/mypage/m_guide2_tab1'); ?><!-- Tab영역 불러오기 -->
-				<?php $this -> load ->view('/mypage/m_guide2_tab2'); ?><!-- Tab영역 불러오기 -->				
-				<?php $this -> load ->view('/mypage/m_guide2_tab3'); ?><!-- Tab영역 불러오기 -->	
-
+				<div id="product_tab">
+					<?
+						$data['salesProduct'] =$this->myModify->mySalesList($this->session->userdata['num'],'0001');
+						$this -> load ->view('/mypage/m_guide2_tab1', $data);
+					?><!-- Tab영역 불러오기 -->
+					<?// $this -> load ->view('/mypage/m_guide2_tab2'); ?><!-- Tab영역 불러오기 -->
+					<?// $this -> load ->view('/mypage/m_guide2_tab3'); ?><!-- Tab영역 불러오기 -->
+				</div>
 			</div><!-- pmWrap 끝 -->
 		</div><!-- profileWrap1 -->

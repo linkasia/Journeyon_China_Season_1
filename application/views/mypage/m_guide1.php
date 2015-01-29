@@ -8,7 +8,7 @@
 			<div class="title1">
 				<div class="underline">基本信息</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
-			
+
 			<div id="guideRequestWrap">
 				<div class="guideProcess">
 					<div class="processWrap">
@@ -36,9 +36,9 @@
 				<div id="guideData">
 					<p class="sub_title">Identify Verification Data</p>
 					<div class="dataView">
-						<p>Profile 작성 : 70%</p><span class="btn btn-info" id="profileModify">작성하러 가기</span>
+						<p>Profile 작성 : 70%</p><a href="/index.php/mypage/myPage_M/mypublic" class="btn btn-info">작성하러 가기</a>
 
-						<p>SNS 연동 : 미완료</p><span class="btn btn-info" id="snsModify">연동하러 가기</span>
+						<!--p>SNS 연동 : 미완료</p><span class="btn btn-info" id="snsModify">연동하러 가기</span-->
 					</div>
 					<span class="btn btn-primary" id="request">신청하기</span>
 				</div><!-- guideData end -->

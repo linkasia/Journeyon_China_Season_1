@@ -21,80 +21,112 @@
 		}
 		?>
 	</div><!-- rightWrap end -->
+	<div id='test'>
+	</div>
 </div><!-- guestWrap end -->
 
 
 
 <script type="text/javascript">
+
+	function myBucketList(a,b){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ sClass: a , code  : b},
+			url:"/index.php/mypage/myPage_M/myBuyProduct",
+			success: function (data){
+				document.getElementById('listWrap').innerHTML =data;
+			}
+		});
+	}
+
+	function changeProduct(a, b){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ sClass : a , code : b },
+			url:"/index.php/mypage/myPage_M/myBuyProduct",
+			success: function (data){
+				alert(data);
+				document.getElementById('listWrap').innerHTML =data;
+			}
+		});
+	}
+
 	$(function(){
 
-			$('#guestHome').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestHome",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#guestHome').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myGuestHome",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#guestBucket').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestAdmin",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#guestBucket').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myGuestAdmin",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#guestReservation').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestItemAdmin",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#guestReservation').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myGuestItemAdmin",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#guestBuy').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestSalesAdmin",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#guestBuy').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myGuestSalesAdmin",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#guestCancel').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuestCancelAdmin",
-					success: function (data){
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#guestCancel').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myGuestCancelAdmin",
+				success: function (data){
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 	});
+
+
 </script>
