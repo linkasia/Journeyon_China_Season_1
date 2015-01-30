@@ -21,6 +21,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 		$countrySelectClass = $_REQUEST["countrySelectClass"];
 		//$countrycode = $_REQUEST["code"];
 		//echo "--->".$_REQUEST["code"];
+		print_r($to .":::::::".$pw.":::::". $countrySelectClass);
 
 		$insert['inserMem'] = $this->membersJoin->insertMem($to,$pw, $countrySelectClass, $_REQUEST["code"]);
 

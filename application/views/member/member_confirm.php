@@ -87,13 +87,12 @@ if($to == "" || $to == null){
 		</div>
 	</div>
 
-
-
 	<script type="text/javascript">
 	var _selnum = "<?=$to?>";
 		$(function(){
 
 			$('#comfirm').click( function(){
+
 				if($('#password').val().length < 5 || $('#password').val().length >= 21){
 					alert("패스워드를 5자 이상 20자이내로 입력해주세요!");
 				}else{

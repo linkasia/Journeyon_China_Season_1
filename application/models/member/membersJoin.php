@@ -11,7 +11,7 @@
 		function insertMem($to,$pw,$countryClass,$code)
 		{
 			$sql ="INSERT INTO user
-						(num,
+						(user_num,
 						email,
 						password,
 						messenger_qq,
@@ -74,7 +74,7 @@
 						'',
 						SYSDATE()
 						);";
-
+						//print_r($sql);
 			$query = $this->db->query($sql);
 
 		}
