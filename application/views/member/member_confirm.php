@@ -78,7 +78,7 @@ if($to == "" || $to == null){
 			<?}?>
 			</select>
 
-			<input class="form-control input-lg" type="password" id="password" placeholder="您的密码">
+			<input class="form-control input-lg" type="password" id="password" placeholder="请输入最少5个字的密码">
 			<span></span>
 			<input class="form-control input-lg" type="password" id="password_comfirm" placeholder="确认密码">
 			<button class="btn-primary btn" id='comfirm' name='comfirm'>登陆</button>

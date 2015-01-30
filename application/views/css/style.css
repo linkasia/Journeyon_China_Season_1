@@ -253,6 +253,8 @@
 	#section5 .travelstory_wrap{width: 300px; height: 400px; margin-right: 20px; background-color: #fff;}
 	#section5 .news_wrap{width: 300px; height: 400px; background-color: #fff;}
 
+	.bbs{<bb></bb>}
+
 
 /* Footer 부분 스타일링 */
 	#footer_wrap{width: 100%; height: 320px; background-color: #62b8ef; display: block; float: left; margin-top: 50px;}

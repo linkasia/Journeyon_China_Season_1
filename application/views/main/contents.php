@@ -285,7 +285,13 @@
 			</div>
 			<div class="news_wrap">
 				<div class="title">卓尼在线 新闻</div>
-				<div></div>
+				<div>
+					<div class="bbs"><p>&middot;<span>  Sample Title1</span><span>2015-01-30</span></p></div>
+					<div class="bbs"><p>&middot;<span>  Sample Title2</span><span>2015-01-30</span></p></div>
+					<div class="bbs"><p>&middot;<span>  Sample Title3</span><span>2015-01-30</span></p></div>
+					<div class="bbs"><p>&middot;<span>  Sample Title4</span><span>2015-01-30</span></p></div>
+					<div class="bbs"><p>&middot;<span>  Sample Title5</span><span>2015-01-30</span></p></div>
+				</div>
 			</div>
 		</section>
 	</div>
