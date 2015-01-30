@@ -277,20 +277,20 @@
 		<section id="section5">
 			<div class="microstory_wrap">
 				<div class="title">微旅行故事</div>
-				<div></div>
+				<div>
+					<img src="/application/views/images/main/sns01.jpg" alt="" />
+				</div>
 			</div>
 			<div class="travelstory_wrap">
 				<div class="title">游记</div>
-				<div></div>
+				<div>
+					<img src="/application/views/images/main/sns02.jpg" alt="" />
+				</div>
 			</div>
 			<div class="news_wrap">
 				<div class="title">卓尼在线 新闻</div>
 				<div>
-					<div class="bbs"><p>&middot;<span>  Sample Title1</span><span>2015-01-30</span></p></div>
-					<div class="bbs"><p>&middot;<span>  Sample Title2</span><span>2015-01-30</span></p></div>
-					<div class="bbs"><p>&middot;<span>  Sample Title3</span><span>2015-01-30</span></p></div>
-					<div class="bbs"><p>&middot;<span>  Sample Title4</span><span>2015-01-30</span></p></div>
-					<div class="bbs"><p>&middot;<span>  Sample Title5</span><span>2015-01-30</span></p></div>
+					<img src="/application/views/images/main/sns03.jpg" alt="" />
 				</div>
 			</div>
 		</section>
