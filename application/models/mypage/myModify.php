@@ -30,7 +30,7 @@
 			$query = $this->db->query($sql);
 		}
 
-		function updateUser($dataList,$filePath)
+		function updateUser($dataList)
 		{
 			$sql ="UPDATE USER
 									SET
@@ -38,7 +38,7 @@
 											messenger_weixin = '".$dataList['publicWeixin']."' ,
 											phone_num_country = '".$dataList['countryNumber']."' ,
 											phone_num_user = '".$dataList['phoneNumber']."' ,
-											face_img_path = '".$filePath."' ,
+											face_img_path = '' ,
 											Name_cn_en = '".$dataList['inputName']."' ,
 											live_area_code = '".$dataList['hiddenClass']."' ,
 											live_country_code = '".$dataList['hiddenCode']."' ,
@@ -62,7 +62,6 @@
 											interesting1 = '".$dataList['inputInteresting']."' ,
 											interesting2 = ''
 									WHERE user_num = '".$dataList['user_num']."' ";
-									//print_r($sql);
 			$query = $this->db->query($sql);
 		}
 
