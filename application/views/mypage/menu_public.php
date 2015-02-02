@@ -1,12 +1,13 @@
 <div id="mypublicWrap">
-
+<form name="profileUploadfrm" id="profileUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/mypage/mypage_M/profileModify">
+	<?foreach($user as $v){?>
 	<!-- 왼쪽 프로필 사진 영역 -->
 	<aside id="leftAside">
 		<div class="profileImgDiv">
 			<div class="bandDiv">
 				<span>Jeon Hyo Sung</span>
 			</div>
-			<img src="/application/views/images/main/profile02.jpg" alt="profile" class="profileImg" id="profileImg">
+			<img src="<?=$v->face_img_path?>" alt="profile" class="profileImg" id="leftProfileImg">
 		</div>
 		<div class="profileTxt">
 			<p>From Korea</p>
@@ -16,11 +17,8 @@
 		</div>
 	</aside>
 
-
-
 	<!-- 여기서부터 오른쪽 박스 -->
-	<form name="profileUploadfrm" id="profileUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/mypage/mypage_M/profileModify">
-	<?foreach($user as $v){?>
+
 	<div id="rightDiv">
 		<div id="introduceSelf">
 			<p class="headline">Introduce Your Self</p>
@@ -32,8 +30,19 @@
 			<button class="btn btn-warning" id="cancelSave">Cancel</button>
 			<div class="profilepicAdd" id="profilepicAdd">
 				<span class="glyphicon glyphicon-plus plus"></span>
-				<img src="/application/views/images/main/profile02.jpg" alt="profile" class="uploadImg" id="profileImg">
+				<img src="<?=$v->face_img_path?>" alt="" class="uploadImg" id="profileImg">
 			</div>
+
+
+			<div class="name1">
+				<div class="leftSection">
+					<p class="rightAlign">What is your Name?</p>
+				</div>
+				<div class="rightSection">
+						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>">
+				</div>
+			</div>
+
 			<div class="name1">
 				<div class="leftSection">
 					<p class="rightAlign">What is your Name?</p>
@@ -194,6 +203,7 @@
 
 <script type="text/javascript">
 
+
 function comboChange(){
 	var _countrySelectClass = $('#inputCountry').val().substring(0,4);
 	var _code = $('#inputCountry').val().substring(5,9);
@@ -234,6 +244,9 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
+				$("#profileImg").attr("src",data);
+				$("#leftProfileImg").attr("src",data);
+
 				alert("수정되었습니다.");
 			}
 		});

@@ -143,6 +143,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	function profileModify(){
 		$newdata = array(
 			'user_num' =>$this->session->userdata['num'],
+			//'fileImage' =>$_REQUEST['inputImage'],
 			'inputName' =>$_REQUEST['inputName'],
 			'hiddenGerder' =>$_REQUEST['hiddenGerder'],
 			'birth' =>$_REQUEST['birth'],
@@ -169,7 +170,25 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			'publicWeixin'=>$_REQUEST['publicWeixin']
 		);
 
-		$update['userUpdate'] = $this->myModify->updateUser($newdata);
+		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/application/views/userImage/".$this->session->userdata['num']."/";
+		if(is_uploaded_file($_FILES["inputImage"]["tmp_name"]))
+		{
+			if(!is_dir($save_dir)){
+				umask(0);
+				@mkdir($save_dir, 0777);
+				chmod($save_dir, 0777);
+			}
+
+			$dest=$save_dir.$_FILES["inputImage"]["name"];
+			$filePath="/application/views/userImage/".$this->session->userdata['num']."/".$_FILES["inputImage"]["name"];
+			if(!move_uploaded_file($_FILES["inputImage"]["tmp_name"],$dest)){
+				die("file save fail");
+			}
+			print_r($filePath);
+			$update['userUpdate'] = $this->myModify->updateUser($newdata,$filePath);
+
+		}
+
 	}
 
 	function salesPage(){

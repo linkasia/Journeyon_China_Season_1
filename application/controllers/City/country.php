@@ -236,7 +236,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 				die("file save fail");
 			}
 			$insert['insertProductImg'] = $this->country_M->insertImg($product_num,$pictureTitle,$pictureCaption,$filePath);
-			//print_r($filePath);
+			print_r($filePath);
 		}
 	}
 
