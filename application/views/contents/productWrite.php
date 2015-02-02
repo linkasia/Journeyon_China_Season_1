@@ -129,7 +129,7 @@
 				</ul>
 			</div>
 		</div><!-- Div7 end -->
-
+		<input type='hidden' value='<?=$i?>' id='hiddenNum' name='hiddenNum' />
 		<div class="productDiv8">
 			<p class="productTitle">Time</p>
 			<input type="text" class="form-control2" id="timeSet" placeholder="시간">
@@ -178,6 +178,20 @@
 	var cnt = 0;
 	var priceCnt=0;
 	function lengCheck(i){
+		var cnt = 0;
+		for(var k = 0; $('#hiddenNum').val() > k; k++){
+			if( k <= 12){
+				if($('#checkboxG'+k).prop("checked") == true){
+					cnt++;
+				}
+			}
+		}
+		if(cnt > 3){
+			alert("3개 이상등록하실 수 없습니다.");
+			$('#checkboxG'+i).attr("checked",false);
+		}
+
+		/*
 		if(cnt >= 3){
 			alert("3개 이상등록하실 수 없습니다.");
 			$('#checkboxG'+i).attr("checked",false);
@@ -187,9 +201,23 @@
 		}else{
 			cnt++;
 		}
+		*/
 	}
 
 	function priceCheck(i){
+		var priceCnt=0;
+		for(var k = 13; $('#hiddenNum').val() > k; k++){
+			if($('#checkboxG'+k).prop("checked") == true){
+				priceCnt++;
+			}
+
+		}
+		if(priceCnt > 2){
+			alert("2개 이상등록하실 수 없습니다.");
+			$('#checkboxG'+i).attr("checked",false);
+		}
+
+		/*
 		if(priceCnt >= 2){
 			alert("2개 이상등록하실 수 없습니다.");
 			$('#checkboxG'+i).attr("checked",false);
@@ -199,6 +227,7 @@
 		}else{
 				priceCnt++;
 		}
+		*/
 	}
 
 	function addImgBox()
@@ -309,5 +338,24 @@ $(function(){
 	});
 });
 
+//새로 고침 키 막기
+document.onkeydown = function(e)
+{
+	key = (e) ? e.keyCode : event.keyCode;
+	ctrl = (e) ? e.ctrlKey  : event.ctrlKey;
+
+	if( (ctrl == true && (key == 78 || key == 82)) || key==116)
+	{
+		if(e)
+		{
+			e.preventDefault();
+		}
+		else
+		{
+			event.keyCode = 0;
+			event.returnValue = false;
+		}
+	}
+}
 
 </script>
