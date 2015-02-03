@@ -31,7 +31,7 @@
 			if( $i < 4){ ?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
 				<img src="" data-toggle="modal" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
-				<span class="glyphicon glyphicon-remove remove"></span>
+				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>
 			<?}else{?>
 			<div class="" id='addDiv<?=$i?>'>
@@ -175,8 +175,12 @@
 </div><!-- productWrap en -->
 
 <script type="text/javascript">
-	var cnt = 0;
-	var priceCnt=0;
+	function removeImg(key){
+		alert(key);
+	}
+
+	//var cnt = 0;
+	//var priceCnt=0;
 	function lengCheck(i){
 		var cnt = 0;
 		for(var k = 0; $('#hiddenNum').val() > k; k++){

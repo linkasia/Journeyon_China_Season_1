@@ -41,7 +41,12 @@
 					<p class="rightAlign">What is your Name?</p>
 				</div>
 				<div class="rightSection">
+<<<<<<< HEAD
 						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>" placeholder="选择">
+=======
+						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage">
+						<input type="text" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
+>>>>>>> origin/Development
 				</div>
 			</div>
 
@@ -76,7 +81,7 @@
 				<div class="leftSection"><p class="rightAlign">What is your Birthday?</p></div>
 				<div class="rightSection">
 					<label for="birth"></label>
-					<input type="date" value="1985-01-01" class="form-control2 text" id="birth" name="birth" value="<?=$v->birthday?>">
+					<input type="date" class="form-control2 text" id="birth" name="birth" value="<?=$v->birthday?>">
 				</div>
 			</div>
 
@@ -110,7 +115,7 @@
 
 			<div class="city5">
 				<div class="leftSection"><p class="rightAlign">Since, How long do you live in that City?</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="howlongCity"  name="howlongCity"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="howlongCity"  name="howlongCity" value="<?=$v->live_country_year?>"></div>
 			</div>
 			<div class="phone13">
 				<div class="leftSection"><p class="rightAlign">Phone Number</p></div>
@@ -127,7 +132,7 @@
 
 			<div class="detail8">
 				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
-				<div class="rightSection"><textarea class="form-control2 text" id="inputJobDetail" name="inputJobDetail" value="<?=$v->job_detail?>"></textarea></div>
+				<div class="rightSection"><textarea class="form-control2 text" id="inputJobDetail" name="inputJobDetail" ><?=$v->job_detail?></textarea></div>
 			</div>
 			<div class="education7">
 				<div class="leftSection"><p class="rightAlign">Education</p></div>
@@ -171,7 +176,7 @@
 
 			<div class="interesting11">
 				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
-				<div class="rightSection"><textarea class="form-control" name="inputInteresting" id="inputInteresting" cols="30" rows="10"  value="<?=$v->interesting1?>"></textarea></div>
+				<div class="rightSection"><textarea class="form-control" name="inputInteresting" id="inputInteresting" cols="30" rows="10"><?=$v->interesting1?></textarea></div>
 			</div>
 			<div class="keyword12">
 				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
@@ -246,9 +251,15 @@ $(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
 				alert(data);
-				$("#profileImg").attr("src",data);
-				$("#leftProfileImg").attr("src",data);
-				alert("수정되었습니다.");
+				//document.getElementById('test').innerHTML=data;
+				if(data == "" || data ==null){
+					alert("수정되었습니다.");
+				}else{
+					$("#profileImg").attr("src",data);
+					$("#leftProfileImg").attr("src",data);
+					$("#profileMenu").attr("src",data);
+					alert("수정되었습니다.");
+				}
 			}
 		});
 	});
