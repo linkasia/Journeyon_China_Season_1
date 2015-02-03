@@ -1,13 +1,13 @@
 <div id="chatlistWrap">
 	<div class="title2"> <!-- 라인 들어가는 타이틀 city부분 복제 -->
-		<div class="underline">Chatlist</div>
+		<div class="underline">留言记录</div>
 	</div>
 	<?foreach( $chatList as $v ) {?>
 	<div class="chatlistDiv">
 		<div class="chat1">
 			<input type="checkbox" id="chatCheckbox">
 			<div class="chatimgDiv"><img src="<?=$v->face_img_path?>" alt="" class="img-circle" id="chatImg"></div>
-			<p class="lastChat"><span class="txt_blue"><?=$v->Name_cn_en?></span>님과 마지막 상담 <span><?=$v->create_time?></span></p>
+			<p class="lastChat">与<span class="txt_blue"><?=$v->Name_cn_en?></span>的最后交谈记录<span>&nbsp;&nbsp;<?=$v->create_time?></span></p>
 			<p class="chatText" onclick="detailChat('<?=$v->chat_num?>')"><?=$v->content?></p>
 		</div>
 	</div><!-- chatlistDiv 이게 반복됨 -->

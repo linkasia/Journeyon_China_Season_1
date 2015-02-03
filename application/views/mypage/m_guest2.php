@@ -5,8 +5,8 @@
 				$this -> load ->view('/mypage/servicewindow1',$data);
 			?>
 
-			<div class="title1">
-				<div class="underline">예약현황</div>
+			<div class="title9">
+				<div class="underline">我的预约</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 		<!---------------- 상품 반복시작 ------------------->

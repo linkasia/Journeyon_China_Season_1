@@ -1,11 +1,11 @@
 <div id="guideWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">Guide Menu</span></span>
-		<span class="list-group-item" id='guideHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Guide Home</span>
-		<span class="list-group-item" id='guideR'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;Guide Request</span>
-		<span class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Product Management&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='salesAdmin'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;Sales Management&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='cancelAdmin'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;Cancel Management&nbsp;&nbsp;</span>
+		<span class="list-group-item active">微导游</span>
+		<span class="list-group-item" id='guideHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;微导游页面</span>
+		<span class="list-group-item" id='guideR'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;微导游认证申请</span>
+		<span class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;旅游信息管理&nbsp;&nbsp;</span>
+		<span class="list-group-item" id='salesAdmin'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;订单交易管理&nbsp;&nbsp;</span>
+		<span class="list-group-item" id='cancelAdmin'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;订单取消管理&nbsp;&nbsp;</span>
 	</aside><!-- leftmenuWrap end -->
 
 	<div id="rightWrap">

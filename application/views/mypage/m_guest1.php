@@ -1,7 +1,7 @@
 		<div class="profileWrap1">
 
-			<div class="title1">
-				<div class="underline">Bucket List</div>
+			<div class="title9">
+				<div class="underline">我的收藏</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 

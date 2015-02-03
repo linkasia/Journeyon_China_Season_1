@@ -10,10 +10,10 @@
 			<img src="<?=$v->face_img_path?>" alt="profile" class="profileImg" id="leftProfileImg">
 		</div>
 		<div class="profileTxt">
-			<p>From Korea</p>
-			<p>V certifi : Yes</p>
-			<p>Guide active : Yes</p>
-			<p>Member since 2014</p>
+			<p>来自 ________</p>
+			<p>V认证 : 有</p> <!-- Yes（有）/ No (没有) -->
+			<p>导游认证 : 没有</p>
+			<p>加入年份 : 2004</p>
 		</div>
 	</aside>
 
@@ -23,14 +23,14 @@
 
 	<div id="rightDiv">
 		<div id="introduceSelf">
-			<p class="headline">Introduce Your Self</p>
-			<p class="subheadline">This is pre-chat with your members</p>
+			<p class="headline">个人档案</p>
+			<p class="subheadline">让其他使用者更了解你，请填上你的详细资料。</p>
 			<!-- <button class="btn btn-primary" id="editProfile">Edit your profile</button> -->
 		</div>
 
 		<div id="profileQuestion">
-			<button type="submit" class="btn btn-info" id="saveProfile" name="saveProfile">Save</button>
-			<button class="btn btn-warning" id="cancelSave">Cancel</button>
+			<button type="submit" class="btn btn-info" id="saveProfile" name="saveProfile">保存更改</button>
+			<button class="btn btn-warning" id="cancelSave">取消</button>
 			<div class="profilepicAdd" id="profilepicAdd">
 				<span class="glyphicon glyphicon-plus plus"></span>
 				<img src="<?=$v->face_img_path?>" alt="" class="uploadImg" id="profileImg">
@@ -41,7 +41,7 @@
 					<p class="rightAlign">What is your Name?</p>
 				</div>
 				<div class="rightSection">
-						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>">
+						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>" placeholder="选择">
 				</div>
 			</div>
 

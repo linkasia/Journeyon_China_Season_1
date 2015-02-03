@@ -95,7 +95,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<div id="darken"></div>
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
-						<li class="become_host" name="become_host" id="become_host"><i>申请加入当地人</i></li>
+						<li class="become_host" name="become_host" id="become_host"><i>申请加入当地微导游</i></li>
 						<li class="how_works" name="how_works" id="how_works"><i>如何参与</i></li>
 
 
@@ -113,11 +113,11 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 								<img src="/application/views/images/main/profile01.jpg" alt="myprofile_Picture" class="img-circle dropdown-toggle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block" data-toggle="dropdown" aria-expanded="true"></span>
 								<!-- <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"></button> -->
 								<ul class="dropdown-menu" role="menu" aria-labelledby="profileMenu">
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/mypublic">View on Public</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myaccountSetting">Account&Setting</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguide">Guide</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguest?mode=0">Guest</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/member/memberJoin/logout">Logout</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/mypublic">个人页面</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myaccountSetting">编辑及设定</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguide">微导游</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguest?mode=0">旅行者</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/member/memberJoin/logout">登出</a></li>
 								</ul>
 							</div>
 						</li>

@@ -1,40 +1,43 @@
 		<div class="profileWrap1">
 			<img src="/application/views/images/mypage/img_guide1.png" alt="guide_image">
 			<div class="guideimgBand">
-				<span class="guide_txt">Local Guide가 되보세요~?</span>
+				<span class="guide_txt">马上成为微导游</span>
 				<span class="guide_next">
-				<span class="glyphicon glyphicon-chevron-right"></span>  로컬 가이드 알아보러가기</span>
+				<span class="glyphicon glyphicon-chevron-right"></span>  了解更多关于成为导游</span>
 			</div>
 
 			<div class="title0">
-				<div class="underline">Guide Home</div>
+				<div class="underline">微导游主页</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 			<div id="guidehomeWrap">
 				<div class="guideimgDiv">
 					<img src="/application/views/images/mypage/img_guide2.png" alt="guide_image2">
 					<div class="guideimgBand2">
-						<span>Journey On에서 Guide가 되어보세요</span>
+						<span>Journey On！卓尼邀请您加入成为微导游</span>
 					</div>
 				</div><!-- guideimgDiv end -->
 				<div class="guidetxtWrap">
 					<div class="cols1">
 						<img src="/application/views/images/mypage/col1.png" alt="guide_image2">
-						<p class="colsP1">Guide 활동 신청하기</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu condimentum dolor. Duis lacinia placerat risus vitae facilisis. Cras non nibh sit amet lectus cursus auctor sit amet ut sapien. Aliquam dignissim euismod risus, sit amet venenatis nunc sollicitudin sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-						<a href="#">더보기</a>
+						<p class="colsP1">海峡时报</p>
+						<p>马来西亚农业与农基工业部长依斯迈沙比利1日在社交媒体发文号召马来人抵制华人商家，以强迫后者降价。依斯迈沙比利称，“大多数消费者是马来人，华人只是少数，如果马来人一起抵制华人的生意，他们肯定别无选择，只能降价马来西亚农业与农基工业部长依斯迈沙比利1日在社交媒体发文号召马来人抵制华人商家，以强迫后者降价。依斯迈沙比利称，“大多数消费者是马来人，华人只是少数，如果马来人一起抵制华人的生意，他们肯定别无选择，只能降价马来西亚农业与农基工业部长依斯迈沙比利1日在社交媒体发文号召马来人抵制华人商家，以强迫后者降价。依斯迈沙比利称，“大多数消费者是马来人，华人只是少数，如果马来人一起抵制华人的生意，他们肯定别无选择，只能降价</p>
+						<a href="#">更多
+</a>
 					</div>
 					<div class="cols2">
 						<img src="/application/views/images/mypage/col2.png" alt="guide_image2">
-						<p class="colsP2">Guide 활동 신청하기</p>
-						<p>Nunc id pretium leo. Nulla elit risus, aliquam in dignissim eget, iaculis vitae nunc. Aliquam lacinia enim enim, vel euismod nisl viverra quis. Cras non ex sed nunc ultricies ullamcorper eget eu diam. Suspendisse fermentum, magna sed feugiat convallis, lorem mi facilisis nulla, nec luctus neque urna vel leo. Proin semper imperdiet nulla, </p>
-						<a href="#">더보기</a>
+						<p class="colsP2">东亚日报</p>
+						<p>据法国民意研究机构IFOP于19日公布的民意调查结果显示，巴黎恐怖袭击事件发生后，法国总统奥朗德的支持率直线上升，目前已达40%，而此前他的支持率仅为19%。报道称，调查结果充分证明，政治危机也可以是领导人的机会。法国民意研究机构IFOP于19日公布的民意调查结果显示，巴黎恐怖袭击事件发生后，法国总统奥朗德的支持率直线上升，目前已达40%，而此前他的支持率仅为19%。报道称，调查结果充分证明，政治危机也可以是领导人的机会。 </p>
+						<a href="#">更多
+</a>
 					</div>
 					<div class="cols3">
 						<img src="/application/views/images/mypage/col3.png" alt="guide_image2">
-						<p class="colsP3">Guide 활동 신청하기</p>
-						<p>Sed tincidunt feugiat interdum. Nunc vulputate feugiat mi, sit amet fringilla purus ornare sagittis. Vivamus eget sem lacus. Vestibulum tincidunt diam felis, et varius quam tempus a. Nullam gravida in tellus non ultricies. Nullam vel iaculis ex, sed consectetur orci. Nunc luctus nisi dolor, in maximus ipsum ultricies molestie. </p>
-						<a href="#">더보기</a>
+						<p class="colsP3">产经新闻</p>
+						<p>据美国疾病防治中心（CDC）表示，美国目前的麻疹病例急速增加。去年年末发生在加利福尼亚州迪士尼乐园的疫情正持续蔓延，截止当地时间2日，美国14个州已经确诊102例病例。为此，美国疾病防治中心也呼吁人们接种疫苗。据美国疾病防治中心（CDC）表示，美国目前的麻疹病例急速增加。去年年末发生在加利福尼亚州迪士尼乐园的疫情正持续蔓延，截止当地时间2日，美国14个州已经确诊102例病例。</p>
+						<a href="#">更多
+</a>
 					</div>
 				</div><!-- guidetxtWrap end -->
 			</div> <!-- guidehomeWrap -->

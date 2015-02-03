@@ -1,9 +1,9 @@
 		<div class="profileWrap1">
 			<img src="/application/views/images/mypage/img_guide1.png" alt="guide_image">
 				<div class="guideimgBand">
-					<span class="guide_txt">Local Guide가 되보세요~?</span>
+					<span class="guide_txt">马上成为微导游</span>
 					<span class="guide_next">
-					<span class="glyphicon glyphicon-chevron-right"></span>  로컬 가이드 알아보러가기</span>
+					<span class="glyphicon glyphicon-chevron-right"></span>  了解更多关于成为导游</span>
 				</div>
 			<div class="title1">
 				<div class="underline">基本信息</div>
@@ -12,11 +12,11 @@
 			<div id="guideRequestWrap">
 				<div class="guideProcess">
 					<div class="processWrap">
-						<p class="sub_title">Identify Verification Process</p>
-						<div class="circle whitegloss" style="margin-left: 60px;"><p>접수중</p></div>
-						<div class="circle whitegloss"><p>심사중</p></div>
-						<div class="circle whitegloss"><p>반려<br><span>2014-12-21</span></p></div>
-						<div class="circle whitegloss"><p>인증완료<br><span>2014-12-21</span></p></div>
+						<p class="sub_title">个人身份验证流程</p>
+						<div class="circle whitegloss" style="margin-left: 60px;"><p>申请接受中</p></div>
+						<div class="circle whitegloss"><p>确认中</p></div>
+						<div class="circle whitegloss"><p>资料不足<br><span>2014-12-21</span></p></div>
+						<div class="circle whitegloss"><p>认证完成<br><span>2014-12-21</span></p></div>
 						<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow1">
 						<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow2">
 						<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow3">
@@ -27,31 +27,31 @@
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
-						<strong>Warning!</strong> 반려일시 반려 사유가 나타납니다.
+						<strong>原因：</strong>所需资料未填妥。
 					</div>
 				</div><!-- guideProcess end -->
 
 				<hr>
 
 				<div id="guideData">
-					<p class="sub_title">Identify Verification Data</p>
+					<p class="sub_title">个人身份验证资料</p>
 					<div class="dataView">
-						<p>Profile 작성 : 70%</p><a href="/index.php/mypage/myPage_M/mypublic" class="btn btn-info">작성하러 가기</a>
+						<p>完成度 : 70%</p><a href="/index.php/mypage/myPage_M/mypublic" class="btn btn-info">前往个人页面编辑个人资料</a>
 
 						<!--p>SNS 연동 : 미완료</p><span class="btn btn-info" id="snsModify">연동하러 가기</span-->
 					</div>
-					<span class="btn btn-primary" id="request">신청하기</span>
+					<span class="btn btn-primary" id="request">申请认证</span>
 				</div><!-- guideData end -->
 
 				<hr>
 
 				<div class="guidePro">
 					<div class="processWrap">
-						<p class="sub_title">Pro Guide Card</p>
-						<div class="circle whitegloss" style="margin-left: 60px;"><p>접수중</p></div>
-						<div class="circle whitegloss"><p>심사중</p></div>
-						<div class="circle whitegloss"><p>반려<br><span>2014-12-21</span></p></div>
-						<div class="circle whitegloss"><p>등록 완료<br><span>2014-12-21</span></p></div>
+						<p class="sub_title">专业微导游认证</p>
+						<div class="circle whitegloss" style="margin-left: 60px;"><p>申请接受中</p></div>
+						<div class="circle whitegloss"><p>确认中</p></div>
+						<div class="circle whitegloss"><p>资料不足<br><span>2014-12-21</span></p></div>
+						<div class="circle whitegloss"><p>认证完成<br><span>2014-12-21</span></p></div>
 						<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow1">
 						<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow2">
 						<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow3">
@@ -62,7 +62,7 @@
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
-						<strong>Warning!</strong> 반려일 시 반려 사유가 나옵니다.
+						<strong>原因：</strong>所需资料未填妥。
 					</div>
 
 				</div><!-- guidePro end -->
@@ -71,7 +71,7 @@
 					<img src="">
 					<span class="glyphicon glyphicon-plus plus"></span>
 				</div>
-				<button class="btn btn-primary" id="Registration" name="Registration">등록하기</button>
+				<button class="btn btn-primary" id="Registration" name="Registration">申请认证</button>
 
 
 				<div class="" id='addDiv'>
