@@ -62,6 +62,7 @@
 											interesting1 = '".$dataList['inputInteresting']."' ,
 											interesting2 = ''
 									WHERE user_num = '".$dataList['user_num']."' ";
+									//print_r($sql);
 			$query = $this->db->query($sql);
 		}
 
