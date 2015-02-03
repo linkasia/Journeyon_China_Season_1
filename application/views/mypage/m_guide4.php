@@ -30,7 +30,7 @@
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
 				<textarea class="form-control" name="cancelReason" id="cancelReason"></textarea>
-				<div id="statusText"><p>협의취소</p></div>
+				<div id="statusText"><p>协议取消</p></div>
 			</div><!-- cancelList 닫음, 이 박스가 반복됨-->
 
 			<!---------------- 상품 반복시작 ------------------->
@@ -48,7 +48,7 @@
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
 				<textarea class="form-control" name="cancelReason" id="cancelReason"></textarea>
-				<div id="statusText"><p>일방취소</p></div>
+				<div id="statusText"><p>协议取消</p></div>
 			</div><!-- cancelList 닫음, 이 박스가 반복됨-->
 
 			<!---------------- 상품 반복시작 ------------------->
@@ -66,7 +66,7 @@
 					<img src="/application/views/images/main/img22_vmark.PNG" alt="vmark_image" class="vmark_image">
 				</div><!-- banddiv 닫음 -->
 				<textarea class="form-control" name="cancelReason" id="cancelReason"></textarea>
-				<div id="statusText"><p>일방취소</p></div>
+				<div id="statusText"><p>一般取消</p></div>
 			</div><!-- cancelList 닫음, 이 박스가 반복됨-->
 
 			<nav class="paginationNav">

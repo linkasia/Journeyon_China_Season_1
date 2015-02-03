@@ -119,7 +119,7 @@
 				</ul>
 			</nav-->
 
-			<button class="btn" id="allSelect" name="allSelect">전체선택</button>
-			<button class="btn" id="deleteSelect" name="deleteSelect">선택삭제</button>
+			<button class="btn" id="allSelect" name="allSelect">选择全部</button>
+			<button class="btn" id="deleteSelect" name="deleteSelect">删除</button>
 
 		</div><!-- profileWrap1 -->
