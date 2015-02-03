@@ -32,27 +32,26 @@
 			<button type="submit" class="btn btn-info" id="saveProfile" name="saveProfile">保存更改</button>
 			<button class="btn btn-warning" id="cancelSave">取消</button>
 			<div class="profilepicAdd" id="profilepicAdd">
-				<span class="glyphicon glyphicon-plus plus"></span>
+				<!-- <span class="glyphicon glyphicon-plus plus"></span> -->
 				<img src="<?=$v->face_img_path?>" alt="" class="uploadImg" id="profileImg">
 			</div>
 
-			<div class="name1">
+			<div class="fileupload">
 				<div class="leftSection">
-					<p class="rightAlign">What is your Name?</p>
+					<p class="rightAlign">已上传您的个人头像</p>
 				</div>
 				<div class="rightSection">
-<<<<<<< HEAD
+
 						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>" placeholder="选择">
-=======
-						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage">
-						<input type="text" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
->>>>>>> origin/Development
+
+						<input type="hidden" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
+
 				</div>
 			</div>
 
 			<div class="name1">
 				<div class="leftSection">
-					<p class="rightAlign">What is your Name?</p>
+					<p class="rightAlign">姓名</p>
 				</div>
 				<div class="rightSection">
 						<input type="text" class="form-control2 text" id="inputName"  name="inputName" value="<?=$v->Name_cn_en?>">
@@ -60,17 +59,17 @@
 			</div>
 
 			<div class="gender2">
-				<div class="leftSection"><p class="rightAlign">What is your Gender?</p></div>
+				<div class="leftSection"><p class="rightAlign">性别</p></div>
 				<div class="rightSection">
 					<!-- <input type="text" class="form-control2" id="inputGender"> -->
 					<div class="male">
 						<label>
-							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="0001" onclick="radioMaleChang()" <?if($v->gender_code == "0001"){?>checked <?}?>> Male
+							<input type="radio" name="optionsRadios1" id="optionsRadios1" value="0001" onclick="radioMaleChang()" <?if($v->gender_code == "0001"){?>checked <?}?>> 男
 						</label>
 					</div>
 					<div class="female">
 						<label>
-							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="0002" onclick="radioFemaleChang()" <?if($v->gender_code == "0002"){?>checked <?}?>>	Female
+							<input type="radio" name="optionsRadios2" id="optionsRadios2" value="0002" onclick="radioFemaleChang()" <?if($v->gender_code == "0002"){?>checked <?}?>>	女
 						</label>
 					</div>
 					<input type="hidden" id="hiddenGerder"  name="hiddenGerder" value="0001">
@@ -78,15 +77,16 @@
 				</div><!-- gender2 end -->
 			</div>
 			<div class="birthday3">
-				<div class="leftSection"><p class="rightAlign">What is your Birthday?</p></div>
+				<div class="leftSection"><p class="rightAlign">生日</p></div>
 				<div class="rightSection">
 					<label for="birth"></label>
-					<input type="date" class="form-control2 text" id="birth" name="birth" value="<?=$v->birthday?>">
+					<input type="date" class="form-control2 text" id="birth" name="birth" value="<?=$v->birthday?>" data-date='{"openOnFocus": true}'>
+
 				</div>
 			</div>
 
 			<div class="live4">
-				<div class="leftSection"><p class="rightAlign">What is your country?</p></div>
+				<div class="leftSection"><p class="rightAlign">所在国家</p></div>
 				<div class="rightSection">
 
 					<select class="form-control" id="inputCountry" name="inputCountry" onChange="comboChange()">
@@ -101,7 +101,7 @@
 			</div>
 
 			<div class="live5">
-				<div class="leftSection"><p class="rightAlign">Now, where do you live?</p></div>
+				<div class="leftSection"><p class="rightAlign">所在城市</p></div>
 				<div class="rightSection" id="choiceCity" name="choiceCity">
 					<?$city = $this->main_i->choiceCityList($v->live_area_code,$v->live_country_code); ?>
 						<select class="form-control" data-style="" id="selectCity" name="selectCity">
@@ -114,11 +114,11 @@
 			</div>
 
 			<div class="city5">
-				<div class="leftSection"><p class="rightAlign">Since, How long do you live in that City?</p></div>
+				<div class="leftSection"><p class="rightAlign">在现在的国家有多久？</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="howlongCity"  name="howlongCity" value="<?=$v->live_country_year?>"></div>
 			</div>
 			<div class="phone13">
-				<div class="leftSection"><p class="rightAlign">Phone Number</p></div>
+				<div class="leftSection"><p class="rightAlign">联络电话</p></div>
 				<div class="rightSection">
 					<input type="text" class="form-control2 text" id="countryNumber"  name="countryNumber" placeholder="Country Number" value="<?=$v->phone_num_country?>">
 					<input type="text" class="form-control2 text" id="phoneNumber"  name="phoneNumber" placeholder="Phone Number" value="<?=$v->phone_num_user?>">
@@ -126,20 +126,20 @@
 			</div>
 
 			<div class="occupation6">
-				<div class="leftSection"><p class="rightAlign">What is your Occupation</p></div>
+				<div class="leftSection"><p class="rightAlign">职业</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="inputOccupation" name="inputOccupation" value="<?=$v->job?>"></div>
 			</div>
 
 			<div class="detail8">
-				<div class="leftSection"><p class="rightAlign">Would you tell me more detail about your occupatin active or education active?</p></div>
+				<div class="leftSection"><p class="rightAlign">添加工作经验和学历</p></div>
 				<div class="rightSection"><textarea class="form-control2 text" id="inputJobDetail" name="inputJobDetail" ><?=$v->job_detail?></textarea></div>
 			</div>
 			<div class="education7">
-				<div class="leftSection"><p class="rightAlign">Education</p></div>
+				<div class="leftSection"><p class="rightAlign">教育程度</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="textEducation"  name="textEducation"  value="<?=$v->education?>"></div>
 			</div>
 			<div class="fluent9">
-				<div class="leftSection"><p class="rightAlign">What is your Fluent in</p></div>
+				<div class="leftSection"><p class="rightAlign">使用语言</p></div>
 				<div class="rightSection">
 					<select class="form-control languageSelect" id="Language1" name="Language1">
 					<?foreach($langList as $k){?>
@@ -175,11 +175,11 @@
 			</div>
 
 			<div class="interesting11">
-				<div class="leftSection"><p class="rightAlign">What is your interesting in thes days?</p></div>
+				<div class="leftSection"><p class="rightAlign">兴趣和喜好</p></div>
 				<div class="rightSection"><textarea class="form-control" name="inputInteresting" id="inputInteresting" cols="30" rows="10"><?=$v->interesting1?></textarea></div>
 			</div>
 			<div class="keyword12">
-				<div class="leftSection"><p class="rightAlign">Please let me know you keyword</p></div>
+				<div class="leftSection"><p class="rightAlign">关联词</p></div>
 				<div class="rightSection">
 					<select class="form-control languageSelect keyword" id="keyword1" name="keyword1">
 						<option value=""></option>
@@ -193,17 +193,18 @@
 				</div>
 			</div>
 			<div class="QQ14">
-				<div class="leftSection"><p class="rightAlign">QQ ID</p></div>
+				<div class="leftSection"><p class="rightAlign">QQ 账户</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="publicQQ" name="publicQQ" value="<?=$v->messenger_qq?>"></div>
 			</div>
 			<div class="Weixin15">
-				<div class="leftSection"><p class="rightAlign">Weixing ID</p></div>
+				<div class="leftSection"><p class="rightAlign">微信账户</p></div>
 				<div class="rightSection"><input type="text" class="form-control2 text" id="publicWeixin" name="publicWeixin"  value="<?=$v->messenger_weixin?>"></div>
 			</div>
-			<button class="btn btn-info" id="saveProfileBottom">Save</button>
-			<button class="btn btn-warning" id="cancelSaveBottom">Cancel</button>
+			<button class="btn btn-info" id="saveProfileBottom">保存更改</button>
+			<button class="btn btn-warning" id="cancelSaveBottom">取消</button>
 		</div>
 	</div>
+
 </div><!-- mypublicWrap -->
 <?}?>
 </form>
@@ -267,3 +268,17 @@ $(function(){
 });
 
 </script>
+
+
+
+
+<!-- cdn for modernizr, if you haven't included it already -->
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+<!-- polyfiller file to detect and load polyfills -->
+<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+<script>
+  webshims.setOptions('waitReady', false);
+  webshims.setOptions('forms-ext', {types: 'date'});
+  webshims.polyfill('forms forms-ext');
+</script>
+
