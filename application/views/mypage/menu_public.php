@@ -42,7 +42,7 @@
 				</div>
 				<div class="rightSection">
 						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage">
-						<input type="hidden" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
+						<input type="text" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
 				</div>
 			</div>
 
@@ -246,13 +246,14 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
-				//alert(data);
+				alert(data);
 				//document.getElementById('test').innerHTML=data;
 				if(data == "" || data ==null){
 					alert("수정되었습니다.");
 				}else{
 					$("#profileImg").attr("src",data);
 					$("#leftProfileImg").attr("src",data);
+					$("#profileMenu").attr("src",data);
 					alert("수정되었습니다.");
 				}
 			}
