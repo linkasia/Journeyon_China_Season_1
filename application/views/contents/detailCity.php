@@ -1,11 +1,10 @@
 <?
-$salesNum = $_REQUEST['salesNum'];
-$mode = $_REQUEST['mode'];
+	$salesNum = $_REQUEST['salesNum'];
+	$mode = $_REQUEST['mode'];
 ?>
 
-
-<div id="detailCity_wrap">
-	<section id="left_section">
+<div id="detailCity_wrap" style="position: relative; display: block;">
+	<section id="left_section" style="position: relative; display: block;">
 		<div class="4menu">
 			<button class="btn btn-danger" id = 'city1' name='city1' >微旅行</button>
 			<button class="btn btn-danger" id = 'city2' name='city2'>疑问解答</button>
@@ -16,16 +15,17 @@ $mode = $_REQUEST['mode'];
 		<div id='viewContents' name='viewContents' class="contents_wrap">
 			<!-- include 한 부분 -->
 			<?
-			/*
+
 			if($mode == "P"){
 
 			}else{
 				$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
-
-				$this->load->view("/contents/salesCity1",$data);
+				$data['ImageCity']= $this->country_M->salesImageCity($salesNum);
+				$this->load->view("/contents/salesCity1", $data);
 			}
-			*/
+
 			?>
+
 		</div>
 	</section>
 
@@ -155,11 +155,6 @@ $mode = $_REQUEST['mode'];
 <script type="text/javascript">
 	var _checkDate="";
 	var _tmpCheckDate = "";
-	//달력제어
-	$(document).ready(function () {
-		var today = new Date();
-		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
-	 });
 
 	$(function(){
 		var _salesNum= "<?=$salesNum?>";
@@ -353,3 +348,5 @@ $mode = $_REQUEST['mode'];
 		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"&mode='); ?>";
 	}
 </script>
+
+

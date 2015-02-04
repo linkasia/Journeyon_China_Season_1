@@ -497,7 +497,9 @@
 	#left_section .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
 	#left_section .contents_wrap .title .underline{border-bottom: 2px #f3c807 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	#left_section .contents_wrap .contents_text1{width: 660px; height: auto; margin: 0 auto 20px auto;}
+
 	#left_section .contents_wrap .contents_img{width: 660px; height: 576px; margin: 0 auto;}
+	
 	#left_section .contents_wrap .contents_img .img_big{width: 100%; height: 440px; background-color: #eee; float: left; margin-bottom: 10px; overflow: hidden;}
 	#left_section .contents_wrap .contents_img div{width: 157px; height: 105px; background-color: #eee; float: left; margin-right: 10px; overflow: hidden; cursor: pointer;}
 	#left_section .contents_wrap .contents_img div:last-child{width: 157px; height: 105px; background-color: #eee; float: left; overflow: hidden; cursor: pointer; margin-right: 0px;}
@@ -505,7 +507,7 @@
 	#left_section .contents_wrap .contents_img .img3{width: 157px; height: 105px; background-color: #eee; float: left; margin-right: 11px; overflow: hidden; cursor: pointer;}
 	#left_section .contents_wrap .contents_img .img4{width: 157px; height: 105px; background-color: #eee; float: left; overflow: hidden; cursor: pointer;}
 
-	#left_section .contents_wrap .contents_text2{width: 660px; height: auto; margin: 0 auto;}
+	#left_section .contents_wrap .contents_text2{width: 660px; height: auto; margin-top: 500px;}
 	
 	#left_section .contents_wrap .information_wrap{width: 690px; float: left;}
 	#left_section .contents_wrap .information dt{text-indent: 10pt; margin-top: 10px;}
@@ -2134,6 +2136,13 @@
 .txt_blue{font-weight: 600; color: #62b8ef;}
 .sub_title{margin-bottom: 20px; font-size: 1.2em; margin-top: 40px;}
 
+
+
+
+
+
+
+
 /*BG 색상정렬 */
 
 .whitegloss{
@@ -2279,3 +2288,109 @@ background: -ms-linear-gradient(top,  #f9fafc 0%,#ffffff 100%); /* IE10+ */
 background: linear-gradient(to bottom,  #f9fafc 0%,#ffffff 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
 }
+
+
+
+
+
+
+                /* jssor slider thumbnail navigator skin 07 css */
+                /*
+                .jssort07 .p            (normal)
+                .jssort07 .p:hover      (normal mouseover)
+                .jssort07 .pav          (active)
+                .jssort07 .pav:hover    (active mouseover)
+                .jssort07 .pdn          (mousedown)
+                */
+                .jssort07 .i {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 99px;
+                    height: 66px;
+                    filter: alpha(opacity=80);
+                    opacity: .8;
+                }
+
+                .jssort07 .p:hover .i, .jssort07 .pav .i {
+                    filter: alpha(opacity=100);
+                    opacity: 1;
+                }
+
+                .jssort07 .o {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 97px;
+                    height: 64px;
+                    transition: border-color .6s;
+                    -moz-transition: border-color .6s;
+                    -webkit-transition: border-color .6s;
+                    -o-transition: border-color .6s;
+                }
+
+                * html .jssort07 .o {
+                    /* ie quirks mode adjust */
+                    width /**/: 99px;
+                    height /**/: 66px;
+                }
+
+                .jssort07 .pav .o, .jssort07 .p:hover .o {
+                    border-color: #fff;
+                }
+
+                .jssort07 .pav:hover .o {
+                    border-color: #0099FF;
+                }
+
+                .jssort07 .p:hover .o {
+                    transition: none;
+                    -moz-transition: none;
+                    -webkit-transition: none;
+                    -o-transition: none;
+                }
+
+
+
+
+
+           /* jssor slider arrow navigator skin 11 css */
+                    /*
+                .jssora11l              (normal)
+                .jssora11r              (normal)
+                .jssora11l:hover        (normal mouseover)
+                .jssora11r:hover        (normal mouseover)
+                .jssora11ldn            (mousedown)
+                .jssora11rdn            (mousedown)
+                */
+                    .jssora11l, .jssora11r, .jssora11ldn, .jssora11rdn {
+                        position: absolute;
+                        cursor: pointer;
+                        display: block;
+                        background: url(/application/views/images/a11.png) no-repeat;
+                        overflow: hidden;
+                    }
+
+                    .jssora11l {
+                        background-position: -11px -41px;
+                    }
+
+                    .jssora11r {
+                        background-position: -71px -41px;
+                    }
+
+                    .jssora11l:hover {
+                        background-position: -131px -41px;
+                    }
+
+                    .jssora11r:hover {
+                        background-position: -191px -41px;
+                    }
+
+                    .jssora11ldn {
+                        background-position: -251px -41px;
+                    }
+
+                    .jssora11rdn {
+                        background-position: -311px -41px;
+                    }

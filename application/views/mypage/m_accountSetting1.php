@@ -26,7 +26,7 @@
 									  </div>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" id="Email" name="Email">确定变更电邮</button>
+									<button type="button" class="btn btn-primary" id="Email" name="Email">确定</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
@@ -53,7 +53,7 @@
 									  </div>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" id='changePass' placeholder="">重新输入新密码</button>
+									<button type="button" class="btn btn-primary" id='changePass' placeholder=""> 确定</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
@@ -105,7 +105,7 @@
 								</div>
 							</div><!-- modal-body 닫힘 -->
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" id='changeCountry'>确定变更</button>
+								<button type="button" class="btn btn-primary" id='changeCountry'>确定</button>
 								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 							</div><!-- modal-footer 닫힘 -->
 						</div><!-- modal-content 닫힘 -->
