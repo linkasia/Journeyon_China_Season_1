@@ -215,11 +215,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$update['updateproduct'] = $this->country_M->updateProduct($product_num, $productTitle ,$productContents ,$onePrice ,$timeSet ,$meetPlace ,$include ,$notinclude ,$etc ,$theme1 ,$theme2 ,$theme3 ,$priceMember1 ,$priceMember2, $selectClassCountry, $selectCodeCountry, $selectCity);
 	}
 
-	/*상품저장*/
+	/*이미지저장*/
 	function imgUpload(){
 		$product_num = $_REQUEST['hiddenProductNum'];
 		$pictureCaption = $_REQUEST['pictureCaption'];
 		$pictureTitle = $_REQUEST['pictureTitle'];
+		$pictureSeq = $_REQUEST['hiddenId'];
 
 		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/application/productImages/".$product_num."/";
 
@@ -235,9 +236,20 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 			if(!move_uploaded_file($_FILES["fileUpload"]["tmp_name"],$dest)){
 				die("file save fail");
 			}
-			$insert['insertProductImg'] = $this->country_M->insertImg($product_num,$pictureTitle,$pictureCaption,$filePath);
+			$insert['insertProductImg'] = $this->country_M->insertImg($product_num,$pictureTitle,$pictureCaption,$pictureSeq ,$filePath);
 			print_r($filePath);
 		}
+	}
+
+	/*이미지 삭제*/
+	function imgDelete(){
+		$imgPath = $_REQUEST['imgPath'];
+		$product_num = $_REQUEST['product_num'];
+		$hiddenId = $_REQUEST['hiddenId'];
+
+		@unlink($imgPath);
+
+		$Delete['deleteProductImg'] = $this->country_M->deleteImg($product_num,$hiddenId);
 	}
 
 	/*채팅저장*/

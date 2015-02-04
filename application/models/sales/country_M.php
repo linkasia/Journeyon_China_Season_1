@@ -497,7 +497,7 @@
 			$query = $this->db->query($sql);
 		}
 
-		function insertImg($product_num,$pictureTitle,$pictureCaption,$filePath)
+		function insertImg($product_num,$pictureTitle,$pictureCaption,$pictureSeq,$filePath)
 		{
 			$sql ="INSERT INTO spot
 						(product_num,
@@ -509,11 +509,19 @@
 						)
 						VALUES
 						('".$product_num."',
-						0,
+						'".$pictureSeq."',
 						'".$pictureTitle."',
 						'".$filePath."',
 						'".$pictureCaption."',
 						SYSDATE())";
+			$query = $this->db->query($sql);
+		}
+
+		function deleteImg($product_num,$hiddenId)
+		{
+			$sql ="DELETE FROM spot
+										WHERE product_num = '".$product_num."'
+										AND product_seq ='".$hiddenId."'";
 			$query = $this->db->query($sql);
 		}
 

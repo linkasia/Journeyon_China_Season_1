@@ -176,7 +176,19 @@
 
 <script type="text/javascript">
 	function removeImg(key){
-		alert(key);
+		var _imgPath = document.getElementById('pic'+key).src;
+		var _product_num =  $('#hiddenProductNum').val();
+		var _hiddenId =  $('hiddenId').val();
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ imgPath: _imgPath, product_num:_product_num,hiddenId:_hiddenId},
+			url:"/index.php/city/country/imgDelete",
+			success: function (data){
+				$("#pic"+key).attr("src","");
+			}
+		});
 	}
 
 	//var cnt = 0;
@@ -248,6 +260,9 @@
 	function valChange(i)
 	{
 		document.getElementById('hiddenId').value=i;
+		document.getElementById('fileUpload').value= "";
+		document.getElementById('pictureTitle').value= "";
+		document.getElementById('pictureCaption').value= "";
 	}
 
 	function choiceCountry(){
@@ -341,6 +356,7 @@ $(function(){
 		});
 	});
 });
+
 
 //새로 고침 키 막기
 document.onkeydown = function(e)
