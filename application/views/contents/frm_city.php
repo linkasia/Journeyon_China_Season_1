@@ -34,7 +34,7 @@
 								</div>
 						</div>
 
-							<img src="" alt="" class="pic1_img">
+							<img src="<?=$v->img_path?>" alt="" class="pic1_img">
 							<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
 							<img src="<?=$v->countryimg?>" alt="" class="flag_image">
 							<?if($v->v_get_code == "0001"){?>
