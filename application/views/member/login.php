@@ -63,8 +63,18 @@
 					</ul>
 				</header>
 			</header>
+
 			<!--form id="frm" name="frm" action="/index.php/member/memberJoin/login" method="post" style="margin-top: 50px;" role="form"-->
 			<div class="form-group">
+
+				<!-- bootstrap alert dismissing -->
+				<div id="alertDiv" class="alert alert-danger alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<strong>登入失败。请再尝试。</strong>
+				</div>
+
 				<div class="input_container">
 					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="请输入帳戶电邮">
 					<span id="e-mail2"><font color='#fff'>马上加入</font></span>
