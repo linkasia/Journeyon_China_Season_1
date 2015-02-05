@@ -63,7 +63,7 @@
 					</ul>
 				</header>
 			</header>
-			<form id="frm" name="frm" action="/index.php/member/memberJoin/login" method="post" style="margin-top: 50px;" role="form">
+			<!--form id="frm" name="frm" action="/index.php/member/memberJoin/login" method="post" style="margin-top: 50px;" role="form"-->
 			<div class="form-group">
 				<div class="input_container">
 					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="请输入帳戶电邮">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</div>
-		</form>
+		<!--/form-->
 		<script type="text/javascript">
 			$(function(){
 				//로고 클릭시 메인페이지 이동
@@ -134,8 +134,27 @@
 				}else if(document.getElementById('password').value == ""  || document.getElementById('password').value == null){
 					alert("패스워드를 입력해 주세요")
 				}else{
+					var _email = $('#inputLarge').val();
+					var _password = $('#password').val();
 					saveLogin("");
-					document.frm.submit();
+
+					$.ajax({
+						type:"POST" ,
+						dataType:"text",
+						contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+						data:{ email:_email, password:_password},
+						url:"/index.php/member/memberJoin/login",
+						success: function (data){
+							if(data == "succes"){
+								location.href ="<?=site_url('auth/index'); ?>";
+							}else if(data == "fail"){
+
+							}
+
+							//alert("패스워드가 발송되었습니다.");
+						}
+					});
+					//document.frm.submit();
 				}
 			}
 

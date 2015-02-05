@@ -55,9 +55,11 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
     {
 		if($_POST)
 		{
+			$email = $_REQUEST['email'];
+			$password = $_REQUEST['password'];
 			//echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
-			 $email = $_POST['inputLarge'];
-			$password = $_POST['password'];
+			//$email = $_POST['inputLarge'];
+			//$password = $_POST['password'];
 			/*
 			$auth_data = array(
 				'inputLarge' => $this->input->post('inputLarge',TRUE),
@@ -100,7 +102,8 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 				//데이터 이동
 				if($this->session->userdata['num']!=0){
 					//echo "<script>alert('로그인 되었습니다.')</script>";
-
+					print_r("succes");
+/*
 					$data['country'] = $this->main_i->Country();
 					$data['Travel'] = $this->main_i->Travel();
 					$data['choice'] = $this->main_i->Admin_choice();
@@ -110,7 +113,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 					$this->load->view('include/header');
 					$this->load->view('main/contents' ,$data);
 					$this->load->view('include/footer');
-
+*/
 					//exit;
 				}else{
 					$this->session->sess_destroy();
@@ -122,14 +125,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 			}
 			else
 			{
-				$data['country'] = $this->main_i->Country();
-				$data['Travel'] = $this->main_i->Travel();
-				$data['choice'] = $this->main_i->Admin_choice();
-				$data['city'] = $this->main_i->cityList();
-
-				$this->load->view('include/header');
-				$this->load->view('main/contents' ,$data);
-				$this->load->view('include/footer');
+				print_r("fail");
 			}
 		}
 		else
