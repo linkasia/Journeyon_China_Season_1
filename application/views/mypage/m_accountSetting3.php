@@ -19,10 +19,10 @@
 
 			<div class="vcertiWrap3">
 				<p class="vtitle">个人身份验证资料</p>
-				<p class="phone_t">电话</p>
+				<p class="phone_t">电话号码</p>
 					<!-- Split button -->
 					<div class="btn-group countryCode">
-						<input type="button" class="btn dropdown-toggle countryInput" value="国籍区号" data-toggle="dropdown" aria-expanded="false">
+						<input type="button" class="btn dropdown-toggle countryInput" value="国家区号" data-toggle="dropdown" aria-expanded="false">
 						<button type="button" class="btn dropdown-toggle countryInput" data-toggle="dropdown" aria-expanded="false">
 						<span class="caret"></span>
 						<span class="sr-only">Toggle Dropdown</span>
@@ -34,6 +34,7 @@
 						</ul>
 					</div><!-- Split button -->
 					<input type="text" class="phoneNumber">
+
 
 				<p class="ID_t">身份证</p>
 				<div class="ID_imgdiv">

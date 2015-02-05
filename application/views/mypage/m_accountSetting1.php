@@ -53,7 +53,7 @@
 									  </div>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" id='changePass' placeholder=""> 确定</button>
+									<button type="button" class="btn btn-primary" id='changePass'> 确定</button>
 									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->

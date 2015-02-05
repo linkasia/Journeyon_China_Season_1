@@ -14,8 +14,8 @@
 	<input type="hidden" id="hiddenProduct" name="hiddenProduct" value='<?=$v->product_num?>' >
 	<?}?>
 
-	<button class="btn btn-info" id="selectAll">전체선택</button>
-	<button class="btn btn-warning" id="selectAll">선택삭제</button>
+	<button class="btn btn-info" id="selectAll">全部选择</button>
+	<button class="btn btn-warning" id="selectAll">删除</button>
 </div><!-- chatlistWrap -->
 
 <script type="text/javascript">

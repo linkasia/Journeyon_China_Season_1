@@ -120,8 +120,8 @@
 			<div class="phone13">
 				<div class="leftSection"><p class="rightAlign">联络电话</p></div>
 				<div class="rightSection">
-					<input type="text" class="form-control2 text" id="countryNumber"  name="countryNumber" placeholder="Country Number" value="<?=$v->phone_num_country?>">
-					<input type="text" class="form-control2 text" id="phoneNumber"  name="phoneNumber" placeholder="Phone Number" value="<?=$v->phone_num_user?>">
+					<input type="text" class="form-control2 text" id="countryNumber"  name="countryNumber" placeholder="国家区号" value="<?=$v->phone_num_country?>">
+					<input type="text" class="form-control2 text" id="phoneNumber"  name="phoneNumber" placeholder="电话号码" value="<?=$v->phone_num_user?>">
 				</div>
 			</div>
 
