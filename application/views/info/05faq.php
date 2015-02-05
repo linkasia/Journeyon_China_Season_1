@@ -5,10 +5,11 @@
 <div class="bs-example">
     <div class="panel-group" id="accordion">
 
-		<div class="panel panel-default">
-            <div class="panel-heading">
+		<div class="list-group-item"><div class="titleBand menu-black"> 一般事项</div>
+		<div class="panel panel-info">
+            <div class="panel-heading greybluegloss">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. V认证是什么？</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="">1. V认证是什么？</a>
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
@@ -18,7 +19,7 @@
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. 为什么需要V认证？</a>
@@ -31,7 +32,7 @@
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. V认证的标准是什么？</a>
@@ -39,12 +40,12 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. </p>
+                    <p>Create</p>
                 </div>
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">4. 修改头像/个人资料会导致认证消失吗？ </a>
@@ -60,7 +61,7 @@
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">5. 认证的身份是永久的吗？</a>
@@ -68,12 +69,12 @@
             </div>
             <div id="collapseFive" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>...</p>
+                    <p>Create</p>
                 </div>
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">6. 如何同步卓尼JOURNEY ON!到其他社交网站？</a>
@@ -86,7 +87,7 @@
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">7. 卓尼JOURNEY ON!服务会否收费？</a>
@@ -98,11 +99,14 @@
                 </div>
             </div>
         </div>
+	</div>
 
-		<div class="panel panel-default">
+
+	<div class="list-group-item"><div class="titleBand menu-black">旅行者</div>
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">8.（Guest）如何预订导游或个性化旅行服务?</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">8. 如何预订导游或个性化旅行服务?</a>
                 </h4>
             </div>
             <div id="collapseEight" class="panel-collapse collapse">
@@ -116,10 +120,10 @@
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">9. 在行程中遇上问题（旅客/导游不出现；发生争执该怎么办？</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">9. 在行程中遇上问题（旅客/导游不出现；发生争执该怎么办？）</a>
                 </h4>
             </div>
             <div id="collapseNine" class="panel-collapse collapse">
@@ -129,7 +133,7 @@
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">10. 如何对微导游的服务作评价？</a>
@@ -141,21 +145,25 @@
                 </div>
             </div>
         </div>
+	</div>
 
-		<div class="panel panel-default">
+
+	<div class="list-group-item"><div class="titleBand menu-black">微导游</div>
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">11. (Guide)如何发布导游、租车、旅行线路等服务?</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">11. 导游认证是什么？</a>
                 </h4>
             </div>
             <div id="collapseEleven" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>每次行程结束后，你可以发布对服务导游的评价、上传您的旅行日志。让其他的旅行者日后能做更明智的选择。</p>
+                    <p>导游认证是发于申请成为微导游用户的认证。以对用户的身份进行确认。 此认证并不需要与我们进行通话联络。</p>
                 </div>
             </div>
         </div>
 
-		<div class="panel panel-default">
+
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">12. 保证金退还规则：</a>
@@ -163,12 +171,12 @@
             </div>
             <div id="collapseTwelve" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>...</p>
+                    <p>得到认证需要满足以下条件：绑定SNS， 有头像</p>
                 </div>
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen">13. 如何删除我撰写的服务/发表内容？</a>
@@ -176,23 +184,51 @@
             </div>
             <div id="collapseThirteen" class="panel-collapse collapse">
                 <div class="panel-body">
+                    <p>您注册成为会员，并完善您的个人资料，就可以发布服务了。得到V认证使你更有公信力。 在你的发表公开前，我们的客服人员会审核您的服务，如果没有问题，很快就能出现在 卓尼JOURNEY ON!上。</p>
+                </div>
+            </div>
+        </div>
+
+		<div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen">14. 保证金退还规则：如何删除我撰写的服务/发表内容？</a>
+                </h4>
+            </div>
+            <div id="collapseFourteen" class="panel-collapse collapse">
+                <div class="panel-body">
                     <p>前往您想删除的内容，点击编辑，然后点击删除。请紧记，删除后，该执行动作将无法还原。（您只可删除自己建立的内容。）</p>
                 </div>
             </div>
         </div>
 
-		<div class="panel panel-default">
+		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen">14. 什么情况会导致账号被封锁？</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen">15. 什么情况会导致账号被封锁？</a>
                 </h4>
             </div>
-            <div id="collapseFourteen" class="panel-collapse collapse">
+            <div id="collapseFifteen" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>我们将禁止任何人士进行可能会令人感到厌恶或滥用的行为，例如：上载/发放不当的内容，包括色情，暴力等等；发放垃圾讯息或对别人构成骚扰。 如帐户被停用/封锁，您仍可登入至</p>
+                    <p>我们将禁止任何人士进行可能会令人感到厌恶或滥用的行为，例如：上载/发放不当的内容，包括色情，暴力等等；发放垃圾讯息或对别人构成骚扰。 如帐户被停用/封锁，您仍可登入至Facebook，但可能未能使用功能。）</p>
                 </div>
             </div>
         </div>
+
+		<div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen">16. 账户被盗用该怎么办？</a>
+                </h4>
+            </div>
+            <div id="collapseSixteen" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>如果你怀疑自己的账户被盗用时，请跟我们联络。我们会停用你的账户，直到我们重新认证你的身份，你的账户会被重新开通。</p>
+                </div>
+            </div>
+        </div>
+
+	</div>
 
     </div>
 </div>

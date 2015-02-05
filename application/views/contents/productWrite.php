@@ -3,7 +3,7 @@
 		<div class="productDiv1">
 			<p class="productTitle">国家 & 城市</p>
 			<select class="form-control" data-style="" data-size="6" id="selectCountry" onChange="choiceCountry()">
-				<option value = "">-- Select --</option>
+				<option value = "">-- 选择 --</option>
 				<?foreach($country as $v){?>
 					<option onclick="" value = "<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
 				<?}?>
@@ -17,10 +17,10 @@
 		</div><!-- Div1 end -->
 
 		<div class="productDiv2">
-			<p class="productTitle">个性题目 - <span>Please Introduce Unique travel plan what you have</span></p>
+			<p class="productTitle">个性题目></p>
 			<form>
 				<div class="productTitleDiv">
-					<input type="text" class="form-control2" id="productTitle" placeholder="Title">
+					<input type="text" class="form-control2" id="productTitle" placeholder="">
 				</div>
 			</form>
 		</div><!-- Div2 end -->
@@ -75,12 +75,12 @@
 		</div><!-- Div3 end -->
 
 		<div class="productDiv4">
-			<p class="productTitle">详细内容 - <span>（请详细介绍并超过300自以上）</span></p>
+			<p class="productTitle">详细内容 - <span>（请填写300字以上的详细介绍）</span></p>
 			<textarea class="productTextarea" id='productContents' rows="3"></textarea>
 		</div><!-- Div4 end -->
 
 		<div class="productDiv5">
-			<p class="productTitle">Price</p>
+			<p class="productTitle">价格</p><!-- 가격 -->
 			<div class="form-group2">
 				<span class="ml">1人</span>
 				<input type="text" class="form-control2" id="1Price" placeholder="">
@@ -131,8 +131,8 @@
 		</div><!-- Div7 end -->
 		<input type='hidden' value='<?=$i?>' id='hiddenNum' name='hiddenNum' />
 		<div class="productDiv8">
-			<p class="productTitle">Time</p>
-			<input type="text" class="form-control2" id="timeSet" placeholder="시간">
+			<p class="productTitle">时间</p><!-- 시간 -->
+			<input type="text" class="form-control2" id="timeSet" placeholder="小时">
 <!--
 			<select class="selectpicker" data-style="btn-info" data-size="6" id="selectTime">
 				<option value="1">1</option>
@@ -146,7 +146,7 @@
 		<div class="productDiv9">
 			<p class="productTitle">见面地点</p>
 			<img src="/application/views/images/contents/map.png" alt="">
-			<input type="text" class="form-control2" id="meetPlace" placeholder="만날 장소를 구체적으로 써 주세요">
+			<input type="text" class="form-control2" id="meetPlace" placeholder="请列明见面地点和位置">
 		</div><!-- Div9 end -->
 
 		<div class="productDiv10">
@@ -160,17 +160,17 @@
 		</div><!-- Div11 end -->
 
 		<div class="productDiv12">
-			<p class="productTitle">E.T.C</p>
+			<p class="productTitle">其他事項</p>
 			<textarea name="etc" id="etc"></textarea>
 		</div><!-- Div12 end -->
 
-		<input type="button" id="saveProduct" name="saveProduct" value="Save" class="btn btn-primary">
-		<input type="button" id="cancelProduct" name="cancelProduct" value="Cancel" class="btn btn-warning">
+		<input type="button" id="saveProduct" name="saveProduct" value="确定" class="btn btn-primary">
+		<input type="button" id="cancelProduct" name="cancelProduct" value="取消" class="btn btn-warning">
 
 	</div><!-- productWrap -->
 
 	<div class="productInfo">
-		<span class="txt_blue">Information</span>
+		<span class="txt_blue">注意事项</span>
 	</div>
 </div><!-- productWrap en -->
 
