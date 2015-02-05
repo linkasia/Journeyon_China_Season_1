@@ -10,7 +10,7 @@
 			<img src="<?=$v->face_img_path?>" alt="profile" class="profileImg" id="leftProfileImg">
 		</div>
 		<div class="profileTxt">
-			<p>来自 ________</p>
+
 			<p>V认证 : 有</p> <!-- Yes（有）/ No (没有) -->
 			<p>导游认证 : 没有</p>
 			<p>加入年份 : 2004</p>

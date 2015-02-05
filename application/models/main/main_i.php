@@ -71,7 +71,7 @@
 															a.*
 											FROM product a
 											LEFT JOIN USER b ON a.user_num = b.user_num
-											LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
 											WHERE a.useYn='Y'
 											ORDER BY a.create_date DESC
 											LIMIT 3
@@ -96,7 +96,7 @@
 															a.*
 											FROM product a
 											LEFT JOIN USER b ON a.user_num = b.user_num
-											LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
 											WHERE a.useYn='Y'
 											AND a.adminYn='Y'
 											ORDER BY a.create_date DESC
