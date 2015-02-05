@@ -68,7 +68,7 @@
 			<div class="form-group">
 
 				<!-- bootstrap alert dismissing -->
-				<div id="alertDiv" class="alert alert-danger alert-dismissible" role="alert">
+				<div id="alertDiv" class="alert alert-danger alert-dismissible" style="display:none" role="alert">
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -158,7 +158,11 @@
 							if(data == "succes"){
 								location.href ="<?=site_url('auth/index'); ?>";
 							}else if(data == "fail"){
-
+								//var failMessge = "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
+								//failMessge += "<span aria-hidden='true'>&times;</span>";
+								//failMessge += "</button>";
+								//failMessge += "<strong>登入失败。请再尝试。</strong>";
+								document.getElementById('alertDiv').style.display = "block";
 							}
 
 							//alert("패스워드가 발송되었습니다.");
