@@ -1625,7 +1625,7 @@
 	#mypublicWrap #rightDiv #introduceSelf{width: 660px; background-color: #f9fafc; margin-bottom: 30px; padding: 30px;}
 	#mypublicWrap #rightDiv #introduceSelf .headline{font-size: 1.3em; color: #62b8ef;}
 	#mypublicWrap #rightDiv #profileQuestion{width: 660px; background-color: #f9fafc; position: relative; float: left; padding: 30px;}
-	#mypublicWrap #rightDiv #profileQuestion #saveProfile{margin-left: 454px; float: left;}
+	#mypublicWrap #rightDiv #profileQuestion #saveProfile{margin-left: 450px; float: left;}
 	#mypublicWrap #rightDiv #profileQuestion #cancelSave{margin-left: 10px; float: left;}
 	#mypublicWrap #rightDiv #profileQuestion #saveProfileBottom{margin-top: 20px; margin-left: 445px;}
 	#mypublicWrap #rightDiv #profileQuestion #cancelSaveBottom{margin-top: 20px; margin-left: 10px;}
