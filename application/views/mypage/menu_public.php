@@ -251,9 +251,7 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
-				//alert(data);
-				//document.getElementById('test').innerHTML=data;
-				if(data == "" || data ==null){
+				if(data.indexOf("Error") > -1){
 					alert("수정되었습니다.");
 				}else{
 					$("#profileImg").attr("src",data);

@@ -169,7 +169,6 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			'publicWeixin'=>$_REQUEST['publicWeixin']
 		);
 
-
 		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/application/views/userImage/".$this->session->userdata['num']."/";
 		if(is_uploaded_file($_FILES["inputImage"]["tmp_name"]))
 		{
