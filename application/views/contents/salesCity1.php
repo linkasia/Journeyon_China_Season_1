@@ -1,61 +1,72 @@
+<!-- slider pro script-->
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example3' ).sliderPro({
+			width: 960,
+			height: 500,
+			fade: true,
+			arrows: true,
+			buttons: false,
+			fullScreen: true,
+			shuffle: true,
+			smallSize: 500,
+			mediumSize: 1000,
+			largeSize: 3000,
+			thumbnailArrows: true,
+			autoplay: false
+		});
+
+
+	});
+
+	$( document ).ready(function( $ ) {
+		var today = new Date();
+		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
+	});
+
+</script>
+
+
+
 
 <div class="title"><div class="underline">微旅行</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 	<?foreach($salesCity as $v){?>
 		<div class="contents_text1"><?=$v->title?></div>
 
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles to css file or css block. -->
-    <div id="slider1_container" style="position: relative; width: 660px; height: auto; float: left;">
+		<!-- 사진 슬라이더 시작 -->
+		<div id="example3" class="slider-pro">
+			<div class="sp-slides">
+	
+				<!-- 여기서부터 반복 -->
+				<div class="sp-slide">
+					<img class="sp-image" src="/application/views/images/contents/img_big.JPG" 
+						/>
 
-        <!-- Loading Screen -->
-        <div u="loading" style="position: relative; width: 660px; height: 440px; display: block;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: relative; display: block;  background-color: #000; top: 0px; left: 0px; width: 100%; height:100%;"></div>
-            <div style="position: absolute; display: block; background: url(/application/images/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height:100%;"></div>
-        </div>
+					<!-- 사진 제목 올라가는 부분 -->
+					<p class="sp-layer sp-black sp-padding" 
+						data-horizontal="50" data-vertical="50"
+						data-show-transition="down" data-show-delay="500">
+						Lorem ipsum dolor sit amet 한글이 들어가면 어떻게 되지
+					</p>
 
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 660px; height: 440px; overflow: hidden;">
-			<?foreach($ImageCity as $k){?>
-            <div>
-              <img u="image" src="<?=$k->img_path?>" />
-               <img u="thumb" src="<?=$k->img_path?>" />
-            </div>
-            <?}?>
-        </div>
+					<!--  사진 설명 올라가는 부분 -->
+					<p class="sp-layer sp-white sp-padding" 
+						data-horizontal="50" data-vertical="100"
+						data-show-transition="up" data-show-delay="500">
+						consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 한글이 들어가면 어떻게 되지
+					</p>
+				</div><!-- sp-slide end -->
 
-        <!-- Thumbnail Navigator Skin Begin -->
-<!-- Thumbnail Navigator Skin Begin -->
+			</div>
 
-        <div u="thumbnavigator" class="jssort07" style="position: absolute; width: 660px; height: 100px; left: 0px; top: 340px; overflow: hidden; ">
-            <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
-            <!-- Thumbnail Item Skin Begin -->
+			<div class="sp-thumbnails">
+				<img class="sp-thumbnail" src="/application/views/images/contents/img_big.JPG"/>
+			</div>
 
-            <div u="slides" style="cursor: move;">
-                <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 99px; HEIGHT: 66px; TOP: 0; LEFT: 0;">
-                    <div u="thumbnailtemplate" class="i" style="position:absolute;"></div>
-                    <div class="o">
-                    </div>
-                </div>
-            </div>
-            <!-- Thumbnail Item Skin End -->
-            <!-- Arrow Navigator Skin Begin -->
-
-            <!-- Arrow Left -->
-            <span u="arrowleft" class="jssora11l" style="width: 37px; height: 37px; top: 123px; left: 8px; display: block;"></span>
-            <!-- Arrow Right -->
-            <span u="arrowright" class="jssora11r" style="width: 37px; height: 37px; top: 123px; right: 8px">
-            </span>
-            <!-- Arrow Navigator Skin End -->
-        </div>
-        <!-- ThumbnailNavigator Skin End -->
-        <!-- Trigger -->
-    </div>
-    <!-- Jssor Slider End -->
-
-
-
-<div class="contents_text2"><p><?=$v->describe_contents?></p>
 		</div>
+
+
+		<div class="contents_text2"><p><?=$v->describe_contents?></p></div>
 		<div class="information_wrap">
 			<dl class="information">
 				<dt><span><img src="/application/views/images/contents/icon30_micro.PNG" alt=""></span>微旅行时间</dt>

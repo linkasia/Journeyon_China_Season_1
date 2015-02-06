@@ -34,9 +34,13 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 
-		<script src="/application/views/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="/application/views/js/jquery-1.11.0.min.js" type="text/javascript"></script>
 		<script src="/application/views/js/bootstrap.js" type="text/javascript"></script>
 		<script type="text/javascript" src = "https://maps.googleapis.com/maps/api/js?sensor=false&language=kr"></script>
+
+		<!-- slider pro plugin install -->
+		<script type="text/javascript" src="/application/views/js/jquery.sliderPro.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/application/views/css/slider-pro.css" media="screen"/>
 
 		<!-- startbootstrap -->
 		<!-- <script src="/application/views/js/jquery.js" type="text/javascript"></script> -->
@@ -66,8 +70,6 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
 		<!-- script src="/application/views/js/demo.js" type="text/javascript" charset="utf-8"></script -->
 
-	    <script type="text/javascript" src="/application/views/js/jssor.js"></script>
-	    <script type="text/javascript" src="/application/views/js/jssor.slider.js"></script>
 
 		<!-- 1/30 추가 스크립트 -->
 		<script>
@@ -170,5 +172,8 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 			});
 
 		</script>
+
+
+
 	</body>
 </html>
