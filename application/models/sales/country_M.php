@@ -43,8 +43,8 @@
 													LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
 													LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 													LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
-													WHERE sortcountry='0001'
-													AND country_code='0002'
+													WHERE sortcountry='".$co."'
+													AND country_code='".$ci."'
 													".$cityChoice."
 								) AS u
 								LEFT JOIN spot z ON u.product_num = z.product_num

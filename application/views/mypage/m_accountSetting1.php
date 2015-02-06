@@ -168,6 +168,7 @@
 							data:{selnum: _selnum,  mode:_mode,ran:_ran},
 							url:"/index.php/auth/sendmail",
 							success: function (data){
+								alert(data);
 								alert("认证号码已发送至新电邮"); // 인증메일을 전송하였습니다.
 							}
 						});

@@ -76,15 +76,22 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$mode = $_REQUEST['mode'];
 		$random = $_REQUEST['ran'];
 		$date=date("Y-m-d H:i:s",time());
+		$message = "";
+		$mailTitle = "";
 		if($mode == "password"){
 			$result = $this->membersJoin->searchEmail($mail);
 			$password = $result->password;
+			$mailTitle = "패스워드 확인";
 			$message="password : $password  <br />관리자문의 : admin@linkasia.co.kr<br>卓尼制作 : $date";
 		}else if($mode == "mailChange"){
+			$mailTitle = "인증번호 전송";
 			$message="인증번호 : $random  <br />관리자문의 : admin@linkasia.co.kr<br>卓尼制作 : $date";
+			print_r($mail);
 		}else{
-			$message="<a href='http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail' > 인증확인  </a>  admin@linkasia.co.kr<br>卓尼制作 : $date";
+			$mailTitle = "화원가입 확인";
+			$message="<a href='http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail' > 인증확인  </a>  <br /> <br /> admin@linkasia.co.kr<br>卓尼制作 : $date";
 		}
+
 		$config['mailtype']  = "html";
 		$config['charset']   = "utf-8";
 		$config['protocol']  = "smtp";
@@ -98,7 +105,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$this->email->clear();
 		$this->email->from("admin@linkasia.co.kr", "Linkasia");
 		$this->email->to($mail);
-		$this->email->subject("test");//이메일 제목
+		$this->email->subject($mailTitle);//이메일 제목
 		$this->email->message($message);
 
 		$data = $this->email->send();
