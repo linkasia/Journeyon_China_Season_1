@@ -66,6 +66,7 @@
 							FROM(
 											SELECT b.email,
 															b.face_img_path,
+															b.Name_cn_en,
 															c.code_nm,
 															c.ref1,
 															a.*
@@ -91,6 +92,7 @@
 							FROM(
 											SELECT b.email,
 															b.face_img_path,
+															b.Name_cn_en,
 															c.code_nm,
 															c.ref1,
 															a.*
