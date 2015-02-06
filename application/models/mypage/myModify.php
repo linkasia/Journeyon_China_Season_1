@@ -68,9 +68,10 @@
 
 		function myProfilePage($num)
 		{
-			$sql ="SELECT *
-					FROM user
-					WHERE user_num = '".$num."'";
+			$sql ="SELECT *,
+											DATE_FORMAT(create_time,'%Y-%m-%d') AS joindate
+							FROM user
+							WHERE user_num = '".$num."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

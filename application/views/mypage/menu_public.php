@@ -5,15 +5,15 @@
 	<aside id="leftAside">
 		<div class="profileImgDiv">
 			<div class="bandDiv">
-				<span>Jeon Hyo Sung</span>
+				<span id='Name_en_cn'> <?=$v->Name_cn_en?></span>
 			</div>
 			<img src="<?=$v->face_img_path?>" alt="profile" class="profileImg" id="leftProfileImg">
 		</div>
 		<div class="profileTxt">
 
-			<p>V认证 : 有</p> <!-- Yes（有）/ No (没有) -->
-			<p>导游认证 : 没有</p>
-			<p>加入年份 : 2004</p>
+			<p>V认证 : <?if($v->v_get_code == "0001"){ ?>有 <?}else{?>没有<?}?></p> <!-- Yes（有）/ No (没有) -->
+			<p>导游认证 : <?if($v->g_get_code == "0001"){ ?>有 <?}else{?>没有<?}?></p>
+			<p>加入年份 : <?=$v->joindate?></p>
 		</div>
 	</aside>
 
@@ -259,6 +259,8 @@ $(function(){
 					$("#profileImg").attr("src",data);
 					$("#leftProfileImg").attr("src",data);
 					$("#profileMenu").attr("src",data);
+					document.getElementById('Name_en_cn').innerHTML=$("#inputName").val();
+
 					alert("수정되었습니다.");
 				}
 			}
