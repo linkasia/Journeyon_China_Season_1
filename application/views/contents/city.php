@@ -285,7 +285,8 @@ $cityList = $_REQUEST['cityList'];
 
 
 		</section> <!-- 우측 감싸는 section 닫음 -->
-
+<div id='test'>
+</div>
 	</div> <!-- contents_wrap center 주는거 닫음 -->
 </div> <!-- contents_wrap1 닫음  -->
 
@@ -381,7 +382,7 @@ $cityList = $_REQUEST['cityList'];
 				data:{scountry: _co , countryList:_ci, guideType:_guideType, genderCode:_genderCode, temCode:_temCode, recommend:_recommend,guide:_guide, selectCityList: null },
 				url:"/index.php/city/country/searchCountry",
 				success: function (data){
-					//alert(data);
+					//document.getElementById('test').innerHTML = data;
 					document.getElementById('viewContents').innerHTML =data;
 				}
 			});
