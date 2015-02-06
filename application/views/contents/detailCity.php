@@ -156,6 +156,12 @@
 	var _checkDate="";
 	var _tmpCheckDate = "";
 
+	$( document ).ready(function( $ ) {
+		var today = new Date();
+		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
+	});
+	}
+
 	$(function(){
 		var _salesNum= "<?=$salesNum?>";
 		var mode= "<?=$mode?>";

@@ -1,15 +1,15 @@
 				<!-- 여기서부터 탭 영역 시작 Page -->
 				<div id="tabplace">
 				<div class="btn-group sortGroup" role="group" aria-label="" id="sortGroup">
-					<button type="button" class="btn btn-info" id="sort1" name="sort1">등록순</button>
-					<button type="button" class="btn btn-info" id="sort2" name="sort2">후기순</button>
-					<button type="button" class="btn btn-info" id="sort3" name="sort3">판매순</button>
-					<button type="button" class="btn btn-info" id="sort4" name="sort4">좋아요순</button>
+					<button type="button" class="btn btn-info" id="sort1" name="sort1">按日期</button><!-- 등록순 -->
+					<button type="button" class="btn btn-info" id="sort2" name="sort2">按留言</button><!-- 후기순 -->
+					<button type="button" class="btn btn-info" id="sort3" name="sort3">按出发数</button><!-- 판매순 -->
+					<button type="button" class="btn btn-info" id="sort4" name="sort4">按最爱</button><!-- 좋아요순 -->
 				</div>
 
 				<!-- 여기서부터 섬네일 시작 -->
 				<div class="contents_list1">
-					<div class="statusDiv greengloss"><p id="statusP">작성중</p></div>
+					<div class="statusDiv greengloss"><p id="statusP">创建中</p></div><!-- 작성중 -->
 					<div class="list_image1">
 						<div class="band">
 							<div class="wishcount">
@@ -50,8 +50,8 @@
 					</div> <!-- list_rightwrap 닫음 -->
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter2" role="group" aria-label="" id="b-group">
-					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">Modify</button>
-					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">Delete</button>
+					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">编辑</button><!-- 수정 -->
+					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">删除</button><!-- 지우기 -->
 				</div>
 				<!-- 섬네일 끝 -->
 
@@ -146,8 +146,8 @@
 					</div> <!-- list_rightwrap 닫음 -->
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter2" role="group" aria-label="" id="b-group">
-					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">Modify</button>
-					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">Delete</button>
+					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">编辑</button>
+					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">删除</button>
 				</div>
 				<!-- 섬네일 끝 -->
 

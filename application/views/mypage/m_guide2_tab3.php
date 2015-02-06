@@ -148,9 +148,9 @@
 					</div> <!-- list_rightwrap 닫음 -->
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter" role="group" aria-label="" id="b-group">
-					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">Modify</button>
-					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">Restart</button>
-					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">Delete</button>
+					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify">编辑</button>
+					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop">停止发放</button>
+					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete">删除</button>
 				</div>
 				<!-- 섬네일 끝 -->
 			</div><!-- 탭영역 끝 -->

@@ -1,9 +1,9 @@
 <div id="companyInfoWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active">Information</span></span>
-		<span class="list-group-item" id='infoMicrotravel'><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>&nbsp;&nbsp;微旅行是什么？</span>
-		<span class="list-group-item" id='infoHowhost'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;如何加入当地人?</span>
-		<span class="list-group-item" id='infoHowTraveler'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;对旅游者使用方法？</span>
+		<span class="list-group-item" id='infoMicrotravel'><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>&nbsp;&nbsp;微旅行的意义</span>
+		<span class="list-group-item" id='infoHowhost'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;微导是什么？</span>
+		<span class="list-group-item" id='infoHowTraveler'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;给旅行者的信息</span>
 		<span class="list-group-item" id='infoFaq'><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;&nbsp;疑问解答</span>
 	</aside><!-- leftmenuWrap end -->
 

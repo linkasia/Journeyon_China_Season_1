@@ -15,14 +15,9 @@
 			thumbnailArrows: true,
 			autoplay: false
 		});
-
-
 	});
 
-	$( document ).ready(function( $ ) {
-		var today = new Date();
-		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
-	});
+
 
 </script>
 

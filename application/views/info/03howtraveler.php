@@ -1,5 +1,5 @@
 <div class="title5">
-	<div class="underline">对旅游者使用方法</div>
+	<div class="underline">给旅行者的信息</div>
 </div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 <p>旅行团行程乏味无趣，在空档中想找乐子的你； <br>或是旅游书本本如一，想试试另类玩意的你； <br>或是好奇一切新事物，正在背包旅行中的你… <br><br>

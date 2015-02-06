@@ -11,9 +11,9 @@
 					</ul>
 
 					<ul class="menu2">
-						<li><a href="/index.php/info/infomenu/infoMain?list=1" class="li_cursor">微旅行是什么？</a></li>
-						<li><a href="/index.php/info/infomenu/infoMain?list=2" class="li_cursor">如何加入当地人?</a></li>
-						<li><a href="/index.php/info/infomenu/infoMain?list=3" class="li_cursor">对旅游者使用方法？</a></li>
+						<li><a href="/index.php/info/infomenu/infoMain?list=1" class="li_cursor">微旅行的意义</a></li>
+						<li><a href="/index.php/info/infomenu/infoMain?list=2" class="li_cursor">微导是什么？</a></li>
+						<li><a href="/index.php/info/infomenu/infoMain?list=3" class="li_cursor">给旅行者的信息</a></li>
 						<!-- <li><a href="" class="li_cursor">隐私权政策</a></li> -->
 						<li><a href="/index.php/info/infomenu/infoMain?list=4" class="li_cursor">疑问解答</a></li>
 					</ul>

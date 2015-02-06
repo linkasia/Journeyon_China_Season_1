@@ -1,5 +1,5 @@
 <div class="title4">
-	<div class="underline">如何加入当地人?</div>
+	<div class="underline">微导是什么？</div>
 </div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 <p>只要注册/登录卓尼JOURNEY ON!，你就可以宣介自己的旅游资源，让自己成为当地的微导游。<br>

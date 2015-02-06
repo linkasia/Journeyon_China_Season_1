@@ -72,13 +72,14 @@
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<strong>登入失败。请再尝试。</strong>
+					<strong>密码错误。请在尝试。</strong>
 				</div>
 
 				<div class="input_container">
-					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="请输入帳戶电邮">
-					<span id="e-mail2"><font color='#fff'>马上加入</font></span>
+					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="账户邮箱">
+					<span id="e-mail2"><font color='#fff'>马上注册</font></span>
 					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="密码">
+					<span id="passwordLose"><font color='#fff'>忘记密码</font></span>
 					<!--button class="btn-primary btn" id='login' name='login'>登陆</button-->
 					<button class="btn-primary btn" id='login' name='login'  onclick="id_save(); return false;">登陆</button>
 					<!-- <span>已注册？回到登陆页</span> -->
@@ -120,7 +121,7 @@
 					var _mode = "password";
 
 					if(_selnum == "" || _selnum == null){
-						alert("insert Email!");
+						alert("请输入邮箱"); // Insert Email !!
 					}else{
 						$.ajax({
 							type:"POST" ,
@@ -140,9 +141,9 @@
 			function id_save()
 			{
 				if(document.getElementById('inputLarge').value == ""  || document.getElementById('inputLarge').value == null){
-					alert("아이디를 입력해주세요");
+					alert("请输入邮箱"); //ID를 입력해주세요
 				}else if(document.getElementById('password').value == ""  || document.getElementById('password').value == null){
-					alert("패스워드를 입력해 주세요")
+					alert("请输入密码") // 패스워드를 입력해주세요
 				}else{
 					var _email = $('#inputLarge').val();
 					var _password = $('#password').val();
