@@ -251,7 +251,7 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
-				alert(data);
+				//alert(data);
 				//document.getElementById('test').innerHTML=data;
 				if(data == "" || data ==null){
 					alert("수정되었습니다.");
