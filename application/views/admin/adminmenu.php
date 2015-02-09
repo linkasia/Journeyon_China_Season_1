@@ -4,8 +4,8 @@
 		<span class="list-group-item" id='adminMember'>Member</span>
 		<span class="list-group-item" id='adminProduct'>Product</span>
 		<span class="list-group-item" id='adminBook'>Book</span>
-		<span class="list-group-item" id='adminBook'>Notice</span>
-		<span class="list-group-item" id='adminBook'>Board</span>
+		<span class="list-group-item" id='adminNotice'>Notice</span>
+		<span class="list-group-item" id='adminBoard'>Board</span>
 	</aside><!-- leftmenuWrap end -->
 </div>
 
