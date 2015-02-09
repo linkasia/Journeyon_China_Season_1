@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <!-- slider pro script-->
 <script type="text/javascript">
 	$( document ).ready(function( $ ) {
@@ -23,10 +22,6 @@
 
 </script>
 
-
-
-
->>>>>>> origin/Development
 <div class="title"><div class="underline">微旅行</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 	<?foreach($salesCity as $v){?>
 		<div class="contents_text1"><?=$v->title?></div>

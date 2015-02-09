@@ -163,7 +163,6 @@
 	$( document ).ready(function( $ ) {
 		var today = new Date();
 		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
-<<<<<<< HEAD
 
 		$( '#example3' ).sliderPro({
 			width: 960,
@@ -181,10 +180,6 @@
 		});
 
 	});
-=======
-	});
-	}
->>>>>>> origin/Development
 
 	$(function(){
 		var _salesNum= "<?=$salesNum?>";
