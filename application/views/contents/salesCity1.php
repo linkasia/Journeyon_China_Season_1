@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+=======
+<!-- slider pro script-->
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example3' ).sliderPro({
+			width: 960,
+			height: 500,
+			fade: true,
+			arrows: true,
+			buttons: false,
+			fullScreen: true,
+			shuffle: true,
+			smallSize: 500,
+			mediumSize: 1000,
+			largeSize: 3000,
+			thumbnailArrows: true,
+			autoplay: false
+		});
+	});
+
+
+
+</script>
+
+
+
+
+>>>>>>> origin/Development
 <div class="title"><div class="underline">微旅行</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 	<?foreach($salesCity as $v){?>
 		<div class="contents_text1"><?=$v->title?></div>

@@ -252,14 +252,14 @@ $(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
 				if(data.indexOf("Error") > -1){
-					alert("수정되었습니다.");
+					alert("个人资料已变更。"); // 수정되었습니다.
 				}else{
 					$("#profileImg").attr("src",data);
 					$("#leftProfileImg").attr("src",data);
 					$("#profileMenu").attr("src",data);
 					document.getElementById('Name_en_cn').innerHTML=$("#inputName").val();
 
-					alert("수정되었습니다.");
+					alert("个人资料已变更。"); // 수정되었습니다.
 				}
 			}
 		});

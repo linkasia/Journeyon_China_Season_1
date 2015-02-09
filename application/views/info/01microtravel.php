@@ -1,5 +1,5 @@
 <div class="title3">
-	<div class="underline">微旅行是什么？</div>
+	<div class="underline">微旅行的意义</div>
 </div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 <div id="aboutJourneyon">

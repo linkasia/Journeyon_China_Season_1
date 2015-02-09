@@ -59,7 +59,7 @@
 			<section id="member_container">
 				<div class="form-group">
 					<div class="member_container">
-							<input class="form-control input-lg" type="text" id="inputLarge" placeholder="请输入你的电邮">
+							<input class="form-control input-lg" type="text" id="inputLarge" placeholder="您的邮箱">
 							<input  type="hidden" id="hidden_mail" placeholder="">
 							<!-- <span id="imi_id">已经被申请</span> -->
 							<ul id="ul_margin">
