@@ -57,15 +57,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 		{
 			$email = $_REQUEST['email'];
 			$password = $_REQUEST['password'];
-			//echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
-			//$email = $_POST['inputLarge'];
-			//$password = $_POST['password'];
-			/*
-			$auth_data = array(
-				'inputLarge' => $this->input->post('inputLarge',TRUE),
-				'password' => $this->input->post('password',TRUE),
-			);
-			*/
+
 			$result = $this->membersJoin->loginMember($email,$password);
 			//echo "->".count($result);
 			if($result)

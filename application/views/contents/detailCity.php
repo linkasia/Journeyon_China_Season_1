@@ -105,7 +105,16 @@
 				</div>
 				<div class="aside-like">
 					<hr>
-					<img src="/application/views/images/contents/heart.PNG" alt="heart">
+					<div id='likeUp'>
+					<?foreach($bucketList as $c){
+						if($c->cnt == 0){?>
+							<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
+					<?}else{?>
+							<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
+
+					<?}
+				}?>
+				</div>
 					<span>&nbsp;想去</span>
 				</div>
 			</div>
@@ -184,6 +193,23 @@
 	$(function(){
 		var _salesNum= "<?=$salesNum?>";
 		var mode= "<?=$mode?>";
+/*
+		$('#likeProduct').click( function(){
+			alert($("#likeProduct").attr('src'));
+
+			$.ajax({
+				type:"GET" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ salesNum : _salesNum},
+				url:"/index.php/city/country/procuctLike",
+				success: function (data){
+					$("#likeProduct").attr("src","/application/views/images/contents/heart_g.PNG");
+				}
+			});
+
+		});
+		*/
 /*
 		if(mode =="P")
 		{
@@ -320,6 +346,35 @@
 
 	}
 */
+	function likeChoice(key){
+		var _salesNum= "<?=$salesNum?>";
+
+		if(key == 'g'){
+			$.ajax({
+				type:"GET" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ salesNum : _salesNum},
+				url:"/index.php/city/country/procuctLike",
+				success: function (data){
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('d')\">";
+				}
+			});
+		}else{
+			$.ajax({
+				type:"GET" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ salesNum : _salesNum},
+				url:"/index.php/city/country/procuctLikeDown",
+				success: function (data){
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('g')\">";
+				}
+			});
+		}
+
+	}
+
 	function addReply(num)
 	{
 		var insertBox ="<div class='typingBox2'>"

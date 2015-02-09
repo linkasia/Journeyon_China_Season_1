@@ -38,7 +38,9 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	function Detailcity_search(){
 
 		$salesNum = $_REQUEST['salesNum'];
+		$user_num = $this->session->userdata['num'];
 		$data['salesBasic']= $this->country_M->salesDetailCountry($salesNum);
+		$data['bucketList']= $this->country_M->bucketLikeList($salesNum,$user_num);
 
 		$this->load->view('include/header');
 		$this->load->view('contents/detailCity',$data);
@@ -353,7 +355,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$update['stateCode']= $this->country_M->updateBooking( $productNum, $user_num );
 	}
 
-	//예약 날짜 저장
+
 	function detailBooking(){
 		$productNum = $_REQUEST['productNum'];
 		$data['sDate'] = $_REQUEST['sDate'];
@@ -368,5 +370,20 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$this->load->view('include/footer');
 	}
 
+	//좋아요 저장
+	function procuctLike(){
+		$salesNum = $_REQUEST['salesNum'];
+		$user_num = $this->session->userdata['num'];
+
+		$update['like']= $this->country_M->insertLike( $salesNum, $user_num );
+	}
+
+	//좋아요 삭제
+	function procuctLikeDown(){
+		$salesNum = $_REQUEST['salesNum'];
+		$user_num = $this->session->userdata['num'];
+
+		$delete['like']= $this->country_M->deleteLike( $salesNum, $user_num );
+	}
 }
 ?>

@@ -735,6 +735,43 @@
 			$query = $this->db->query($sql);
 		}
 
+		//좋아요 저장
+		function insertLike($productNum, $user_num)
+		{
+			$sql ="INSERT INTO user_has_bucket_list
+													(bucket_num,
+													product_num,
+													user_num
+													)VALUES(
+													0,
+													'".$productNum."',
+													'".$user_num."')";
+
+			$query = $this->db->query($sql);
+		}
+
+		//좋아요 삭제
+		function deleteLike($productNum, $user_num)
+		{
+			$sql ="DELETE FROM user_has_bucket_list
+											WHERE product_num = '".$productNum."'
+											AND user_num = '".$user_num."'";
+			print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		//선택한 도시 상세 상품
+		function bucketLikeList($salesNum,$user_num)
+		{
+			$sql ="SELECT count(*) as cnt
+							FROM user_has_bucket_list
+							WHERE product_num ='".$salesNum."'
+							AND user_num ='".$user_num."'";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 
 ?>
