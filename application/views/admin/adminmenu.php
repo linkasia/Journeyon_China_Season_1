@@ -8,79 +8,94 @@
 		<span class="list-group-item" id='adminBoard'>Board</span>
 	</aside><!-- leftmenuWrap end -->
 </div>
+<div id='rightWrap'>
+</div>
 
 
-<!--
 <script type="text/javascript">
 	$(function(){
-
-			$('#infoMicrotravel').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/info/infomenu/infoMicrotravel",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#adminMain').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/admin/adminMenu/mainMenu",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#infoHowhost').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/info/infomenu/infoHowhost",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#adminMember').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/admin/adminMenu/mainMember",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#infoHowTraveler').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/info/infomenu/infoHowTraveler",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#adminProduct').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/admin/adminMenu/mainProduct",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#infoPrivacy').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/info/infomenu/infoPrivacy",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#adminBook').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/admin/adminMenu/mainBook",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#infoFaq').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/info/infomenu/infoFaq",
-					success: function (data){
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#adminNotice').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/admin/adminMenu/mainNotice",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
+
+		$('#adminBoard').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/admin/adminMenu/mainBoard",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
+			});
+		});
 	});
-</script> -->
+</script>
