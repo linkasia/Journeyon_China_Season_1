@@ -6,9 +6,9 @@
 <div id="detailCity_wrap" style="position: relative; display: block;">
 	<section id="left_section" style="position: relative; display: block;">
 		<div class="4menu">
-			<button class="btn btn-danger" id = 'city1' name='city1'  onclick="porductPage('1')">微旅行</button>
-			<button class="btn btn-danger" id = 'city2' name='city2' onclick="porductPage('2')">疑问解答</button>
-			<button class="btn btn-danger" id = 'city3' name='city3' onclick="porductPage('3')">介绍</button>
+			<button class="btn btn-danger" id = 'city1' name='city1'>微旅行</button>
+			<button class="btn btn-danger" id = 'city2' name='city2'>疑问解答</button>
+			<button class="btn btn-danger" id = 'city3' name='city3'>介绍</button>
 		</div>
 
 		<!-- salesCity1.php 로 뺀 부분 CI로딩 -->
@@ -17,7 +17,11 @@
 			<?
 
 			if($mode == "P"){
-
+				foreach($salesBasic as $v){
+					$data['userInfo']= $this->country_M->detailUser($v->user_num);
+					$data['userSales']= $this->country_M->userSales($v->user_num);
+				}
+				$this->load->view("/contents/salesCity3", $data);
 			}else{
 				$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 				$data['ImageCity']= $this->country_M->salesImageCity($salesNum);
@@ -56,7 +60,7 @@
 					<textarea name="recheckTextarea" id="recheckTextarea" cols="27" rows="5" placeholder=" "></textarea>
 				</div>
 				<div class="aside-menu">
-					<button type="button" class="btn btn-primary" id="calPop" name="calPop">定制游咨询</button>
+					<button type="button" class="btn btn-primary" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
 					<!-- Modal 여기서부터 Overview 박스 시작 -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
@@ -156,10 +160,31 @@
 	var _checkDate="";
 	var _tmpCheckDate = "";
 
+	$( document ).ready(function( $ ) {
+		var today = new Date();
+		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
+
+		$( '#example3' ).sliderPro({
+			width: 960,
+			height: 500,
+			fade: true,
+			arrows: true,
+			buttons: false,
+			fullScreen: true,
+			shuffle: true,
+			smallSize: 500,
+			mediumSize: 1000,
+			largeSize: 3000,
+			thumbnailArrows: true,
+			autoplay: false
+		});
+
+	});
+
 	$(function(){
 		var _salesNum= "<?=$salesNum?>";
 		var mode= "<?=$mode?>";
-
+/*
 		if(mode =="P")
 		{
 			var _user=document.getElementById('user_num').value;
@@ -187,7 +212,7 @@
 				}
 			});
 		}
-/*
+
 		var i=0;
 
 		$('#calendarContent').click( function(){
@@ -217,6 +242,8 @@
 		});
 */
 		$('#city1').click( function(){
+			location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+_salesNum+"&mode='); ?>";
+			/*
 			$.ajax({
 				type:"GET" ,
 				dataType:"text",
@@ -228,6 +255,7 @@
 
 				}
 			});
+			*/
 		});
 
 		$('#city2').click( function(){
@@ -258,34 +286,28 @@
 				}
 			});
 		});
-
-		$('#calPop').click( function(){
-			var _user_num = $('#user_num').val();
-			var _fee = $('#fee').val();
-			/*
-			if( $('#li0').html() == "" || $('#li0').html() == null ){
-				alert("날짜를 1개 이상 선택해주세요~!");
-			}else{
-			*/
-				var _contents = $('#recheckTextarea').val();
-				$.ajax({
-					type:"GET" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ salesNum: _salesNum,  contents:_contents},
-					url:"/index.php/city/country/insertChating",
-					success: function (data){
-						document.getElementById('detailCity_wrap').innerHTML = data;
-					}
-				});
-			//}  //end if
-		});
 	});
 
-
+	function goChat(){
+		var _salesNum= "<?=$salesNum?>";
+		var _user_num = $('#user_num').val();
+		var _fee = $('#fee').val();
+		var _contents = $('#recheckTextarea').val();
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ salesNum: _salesNum,  contents:_contents},
+			url:"/index.php/city/country/insertChating",
+			success: function (data){
+				document.getElementById('detailCity_wrap').innerHTML = data;
+			}
+		});
+	}
+/*
 	function checkCancel(i)
 	{
-		/*
+
 		var choiceDate=document.getElementById('date'+i).value;
 
 		var num = $('#hiddenValueNum').val();
@@ -295,9 +317,9 @@
 
 		_checkDate = _checkDate.replace(_tmpCheckDate,"");
 		document.getElementById("li"+i).innerHTML="";
-		*/
-	}
 
+	}
+*/
 	function addReply(num)
 	{
 		var insertBox ="<div class='typingBox2'>"
