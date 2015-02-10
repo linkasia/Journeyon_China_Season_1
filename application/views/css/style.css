@@ -1074,9 +1074,9 @@
 
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2{width: 100%; height: 250px; position: relative;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .circle{width: 96px; height: 96px; border-radius: 50%; background-color: #f0f1f5; line-height: 96px; text-align: center; float: left; margin-right: 50px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow1{position: absolute; top: 80px; left: 160px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow2{position: absolute; top: 80px; left: 306px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow3{position: absolute; top: 80px; left: 452px;}
+		#accountWrap #rightWrap .profileWraertiWrap2 .arrow1{position: absolute; top: 80px; left: 160px;}
+		#accountWrap #rightWrap .profileWrap1 .vcp1 .vcertiWrap2 .arrow3{position: absolute; top: 80px; left: 452px;}
 
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3{width: 640px; height: 400px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .countryCode{margin-left: 70px; height: 30px;}
@@ -2169,10 +2169,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	margin: 0 auto;
 }
 
+
 #leftmenuWrap{
 	width: 180px;
 	float: left;
-	margin-right: 20px;
 }
 
 #adminrightWrap{
@@ -2181,6 +2181,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	height: 1000px;
 	background-color: #f9fafc;
 }
+
+
 
 #statusBox ul li{
 	width: 200px;
@@ -2205,26 +2207,83 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	margin-left: 410px;
 }
 
+#statusBox{
+	width: 100%;
+	float: left;
+}
+
+#sortBox{
+	width: 100%;
+	float: left;
+}
+
+#sortBox h6{
+	float: left;
+}
+
+
+
+#sortBox .btn-group{
+	float: left;
+}
+
+#startendBox{
+	float: left;
+	width: 500px;
+}
+
+#searchBox{
+	width: 100%;
+	float: left;
+}
+
+#adminbookCity{
+	width: 180px;
+}
+
+
+
 /*modal 내부디자인*/
 #membermodalPic{
-	width: 560px;
+	width: 568px;
 	height: 270px;
 	display: block;
 	float: left;
 }
 
-#memberModal #membermodalBody{
-	height: inherit;
+#membermodalPic  img{
+	width: 100%;
+	height: 100%;
 }
 
-#membermodalPic  img{width: 100%; height: 100%;}
+#banTextarea{
+	width: 568px;
+	height: 100px;
+}
 
+
+#productModal .modal-dialog{
+	width: 1000px;
+}
+
+#productModal .modal-body{
+	overflow-y: scroll;
+}
+
+#productmodalBody{
+	width: 1000px;
+}
+
+#memberModal1 .modal-body{
+	height: auto;
+}
 
 .mb10{margin-bottom: 10px;}
 .mb20{margin-bottom: 20px;}
 .mb40{margin-bottom: 40px;}
 .mr10{margin-right: 10px;}
 .mr20{margin-right: 20px;}
+.mt20{margin-top: 20px;}
 
 /* 관리자 페이지 CSS끝 */
 
