@@ -1941,6 +1941,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 
 
 
+
+
+
+
+
+
+
 /*---------------------------------------------------------------------------------------------------------------*/
 
 
@@ -2156,6 +2163,74 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 
 
 
+/* 관리자 페이지 CSS시작 */
+#adminWrap{
+	width: 1280px;
+	margin: 0 auto;
+}
+
+#leftmenuWrap{
+	width: 180px;
+	float: left;
+	margin-right: 20px;
+}
+
+#adminrightWrap{
+	float: left;
+	width: 1080px;
+	height: 1000px;
+	background-color: #f9fafc;
+}
+
+#statusBox ul li{
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+#memberTable th{
+	text-align: center;
+}
+
+#memberTable tbody{
+	text-align: center;
+}
+
+#pageNumber{
+	width: 1280px;
+	height: 50px;
+}
+
+#pageNumber ul.pagination{
+	display: block;
+	margin-left: 410px;
+}
+
+/*modal 내부디자인*/
+#membermodalPic{
+	width: 560px;
+	height: 270px;
+	display: block;
+	float: left;
+}
+
+#memberModal #membermodalBody{
+	height: inherit;
+}
+
+#membermodalPic  img{width: 100%; height: 100%;}
+
+
+.mb10{margin-bottom: 10px;}
+.mb20{margin-bottom: 20px;}
+.mb40{margin-bottom: 40px;}
+.mr10{margin-right: 10px;}
+.mr20{margin-right: 20px;}
+
+/* 관리자 페이지 CSS끝 */
+
+
+
+
 
 
 
@@ -2308,17 +2383,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 
 
 
-
-
-
-
-
-
-/* .slider-pro {
-    font-family: 'Open Sans', Arial;
-} */
-
-/* Example 1 */
+/* 슬라이더 프로 Example 1 */
 
 #example1 .sp-thumbnail {
 	width: 100%;
