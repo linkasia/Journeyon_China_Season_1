@@ -40,12 +40,6 @@
 		*/
 	}
 
-
-
-	function dataAdd(nRow){
-		alert(nRow);
-	}
-
 	function salesItem(){
 		/*
 		var _chatNum = $('#hiddenChatNum').val();

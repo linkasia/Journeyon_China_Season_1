@@ -34,7 +34,7 @@
 				<div class="stepdiv">
 					<div class="stepImage">
 						<?if($v->order_type_code == "0004"){?>
-							<img src="/application/views/images/mypage/icon_sale01.png" alt="sale_icon_image" class="icon_sale01" id="icon_sale01">
+							<img src="/application/views/images/mypage/icon_sale01.png" alt="sale_icon_image" class="icon_sale01" id="icon_sale01" onClick="goChatList()">
 							<img src="/application/views/images/mypage/icon_arrow01.png" alt="sale_icon_image" class="icon_arrow01" id="icon_arrow01">
 							<img src="/application/views/images/mypage/icon_sale02g.png" alt="sale_icon_image" class="icon_sale02g" id="icon_sale02g">
 							<img src="/application/views/images/mypage/icon_arrow01g.png" alt="sale_icon_image" class="icon_arrow02g" id="icon_arrow02g">
@@ -106,8 +106,8 @@
 							취소샤유가 불분명할 경우 계정 정지 패널티가 부여됩니다.<br>
 							취소 하기 전 고객과 채팅을 통해서 취소 사유에 대해서 설명 하셔야합니다.<br>
 							그렇지 않고 취소하게 되면 패널티를 받습니다. -->
-							
-							
+
+
 							<textarea class="form-control" name="cancelComment" id="cancelComment" cols="30" rows="10" placeholder="请说明取消订单的原因"></textarea>
 
 						</div><!-- modal-body 닫힘 -->

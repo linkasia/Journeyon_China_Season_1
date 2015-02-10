@@ -34,6 +34,8 @@
 	</section>
 
 	<aside id="right_aside">
+	<form name="frmBooking" id="frmBooking" method='post' enctype="multipart/form-data" action="/index.php/city/country/insertChating">
+	<input type='hidden' id='hiddenProduct' name='hiddenProduct' value='<?=$salesNum?>' >
 		<?foreach($salesBasic as $v){?>
 			<div class="right_reservation">
 				<div class="price">
@@ -60,7 +62,7 @@
 					<textarea name="recheckTextarea" id="recheckTextarea" cols="27" rows="5" placeholder=" "></textarea>
 				</div>
 				<div class="aside-menu">
-					<button type="button" class="btn btn-primary" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
+					<button type="submit" class="btn btn-primary" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
 					<!-- Modal 여기서부터 Overview 박스 시작 -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
@@ -111,7 +113,6 @@
 							<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
 					<?}else{?>
 							<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
-
 					<?}
 				}?>
 				</div>
@@ -119,7 +120,7 @@
 				</div>
 			</div>
 		<?}?>
-
+	</form>
 		<?foreach($salesBasic as $v){?>
 			<input type='hidden' id='user_num' name='user_num' value='<?=$v->user_num?>' >
 			<div class="right_profile">
@@ -313,14 +314,14 @@
 			});
 		});
 	});
-
+/*
 	function goChat(){
 		var _salesNum= "<?=$salesNum?>";
 		var _user_num = $('#user_num').val();
 		var _fee = $('#fee').val();
 		var _contents = $('#recheckTextarea').val();
 		$.ajax({
-			type:"GET" ,
+			type:"POST" ,
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
 			data:{ salesNum: _salesNum,  contents:_contents},
@@ -330,6 +331,7 @@
 			}
 		});
 	}
+	*/
 /*
 	function checkCancel(i)
 	{

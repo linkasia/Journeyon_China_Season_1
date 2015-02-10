@@ -29,6 +29,10 @@
 
 <script type="text/javascript">
 
+	function goChatList(){
+		location.href = "<?=site_url('auth/chat_List'); ?>";
+	}
+
 	function myBucketList(a,b){
 		$.ajax({
 			type:"POST" ,

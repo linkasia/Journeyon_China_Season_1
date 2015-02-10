@@ -43,6 +43,10 @@
 		});
 	}
 
+	function goChatList(){
+		location.href = "<?=site_url('auth/chat_List'); ?>";
+	}
+
 	function stop(){
 		$.ajax({
 			type:"POST" ,

@@ -27,7 +27,7 @@
 				<div class="stepdiv">
 					<div class="stepImage">
 						<?if($v->order_type_code == "0004"){?>
-							<img src="/application/views/images/mypage/icon_sale01.png" alt="sale_icon_image" class="icon_sale01" id="icon_sale01">
+							<img src="/application/views/images/mypage/icon_sale01.png" alt="sale_icon_image" class="icon_sale01" id="icon_sale01" onclick="goChatList()">
 							<img src="/application/views/images/mypage/icon_arrow01.png" alt="sale_icon_image" class="icon_arrow01" id="icon_arrow01">
 							<img src="/application/views/images/mypage/icon_sale02g.png" alt="sale_icon_image" class="icon_sale02g" id="icon_sale02g">
 							<img src="/application/views/images/mypage/icon_arrow01g.png" alt="sale_icon_image" class="icon_arrow02g" id="icon_arrow02g">
@@ -123,3 +123,10 @@
 			<button class="btn" id="deleteSelect" name="deleteSelect">删除</button>
 
 		</div><!-- profileWrap1 -->
+
+
+		<script type="text/javascript">
+			function goChatList(){
+				alert("AA");
+			}
+		</script>

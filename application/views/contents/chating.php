@@ -119,7 +119,9 @@
 
 
  <script type="text/javascript">
+
 	$(document).ready(function () {
+		//alert("AA");
 		// create jqxcalendar.
 		$("#jqxWidget").jqxCalendar({ width: 220, height: 220,  selectionMode: 'range' });
 		$("#jqxWidget").on('change', function (event) {

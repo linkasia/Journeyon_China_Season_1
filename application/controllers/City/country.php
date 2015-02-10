@@ -258,8 +258,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 	/*채팅저장*/
 	function insertChating(){
-		$salesNum = $_REQUEST['salesNum'];
-		$contents = $_REQUEST['contents'];
+		$salesNum = $_REQUEST['hiddenProduct'];
+		$contents = $_REQUEST['recheckTextarea'];
 		$user_num = $this->session->userdata['num'];
 
 		$result = $this->country_M->maxChatNum();
@@ -274,7 +274,11 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($result->chat_num);
 		//$data['BookList']= $this->country_M->bookinglList($salesNum,$user_num);
+
+		$this->load->view('include/header');
 		$this->load->view("/contents/chating",$data);
+		$this->load->view('include/footer');
+
 	}
 
 	/*채팅페이지 이동*/
