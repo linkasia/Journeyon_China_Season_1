@@ -17,7 +17,7 @@
 	</ul>
 </div>
 
-	
+
 	<div class="col-lg-6">
 		<div class="input-group">
 			<span class="input-group-btn">
@@ -52,7 +52,7 @@
 				<td>
 					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo">신청</a>
 					<!-- 맨 아래 memberModal과 연결되서 팝업창 띄움 -->
-				</td>	
+				</td>
 				<td>
 					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@fat">신청</a>
 				</td>
