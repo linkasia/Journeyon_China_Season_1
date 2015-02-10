@@ -2258,7 +2258,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 
 #banTextarea{
 	width: 568px;
+	max-width: 568px;
 	height: 100px;
+
 }
 
 
@@ -2278,11 +2280,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	height: auto;
 }
 
+#memberModal2 .modal-body{
+	height: auto;
+}
+
+#memberModal3 .modal-body{
+	height: auto;
+}
+
 .mb10{margin-bottom: 10px;}
 .mb20{margin-bottom: 20px;}
 .mb40{margin-bottom: 40px;}
 .mr10{margin-right: 10px;}
 .mr20{margin-right: 20px;}
+.mt10{margin-top: 10px;}
 .mt20{margin-top: 20px;}
 
 /* 관리자 페이지 CSS끝 */
