@@ -1,5 +1,5 @@
 <div id="adminWrap">
-	<aside id="leftmenuWrap">
+	<aside id="leftmenuWrap" class="mt20 mr20">
 		<span class="list-group-item active" id='admin'>Admin Menu</span>
 		<span class="list-group-item" id='adminMain'>Main</span>
 		<span class="list-group-item" id='adminMember'>Member</span>

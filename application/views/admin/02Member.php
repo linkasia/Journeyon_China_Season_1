@@ -1,6 +1,4 @@
-<h1>Member</h1>
-<h6><span class="glyphicon glyphicon-user"></span>Our People</h6>
-
+<h1 class="mb40">Member</h1>
 <div id="statusBox">
 	<ul class="nav nav-pills" role="tablist">
 		<li role="presentation" class="active mr10"><a href="#">총 회원수<span class="badge">100,000</span></a></li>
@@ -50,14 +48,14 @@
 			<tr>
 				<td>1000</td>
 				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo">신청</a>
+					<a href="" data-toggle="modal" data-target="#memberModal1" data-whatever="@mdo">신청</a>
 					<!-- 맨 아래 memberModal과 연결되서 팝업창 띄움 -->
 				</td>
 				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@fat">신청</a>
+					<a href="" data-toggle="modal" data-target="#memberModal2" data-whatever="@fat">신청</a>
 				</td>
 				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@getbootstrap">신청</a>
+					<a href="" data-toggle="modal" data-target="#memberModal3" data-whatever="@getbootstrap">신청</a>
 				</td>
 				<td>2132165456@qq.com</td>
 				<td>6</td>
@@ -109,45 +107,67 @@
 </div>
 
 
-<!-- 실험용으로 써 볼 수 있는 테스트 버튼 -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
 
 
-
-<!-- modal 시작 -->
-<div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- modal1 시작 -->
+<div class="modal fade" id="memberModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="exampleModalLabel">New message</h4>
+				<h4 class="modal-title" id="exampleModalLabel">V 인증</h4>
 			</div>
-			<div id="membermodalBody" class="modal-body">
+			<div class="modal-body">
 				<!-- php로 뺄 부분 시작 -->
-				<? $this -> load ->view('/admin/modal') ?>
+				<? $this -> load ->view('/admin/02member_modal1') ?>
 				<!-- php로 뺄 부분 끝 -->
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Send message</button>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- modal 끝 -->
 
+<!-- modal2 시작 -->
+<div class="modal fade" id="memberModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="exampleModalLabel">G 인증</h4>
+			</div>
+			<div class="modal-body">
+				<!-- php로 뺄 부분 시작 -->
+				<? $this -> load ->view('/admin/02member_modal2') ?>
+				<!-- php로 뺄 부분 끝 -->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- modal 끝 -->
 
-<!-- 특정 문구를 찾아서 맞는 팝업으로 띄우는 스크립트 -->
-<script>
-	$('#memberModal').on('show.bs.modal', function (event) {
-	  var button = $(event.relatedTarget) // Button that triggered the modal
-	  var recipient = button.data('whatever') // Extract info from data-* attributes
-	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-	  var modal = $(this)
-	  modal.find('.modal-title').text('New message to ' + recipient)
-	  modal.find('.modal-body input').val(recipient)
-	})
-</script>
+<!-- modal3시작 -->
+<div class="modal fade" id="memberModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="exampleModalLabel">PG 인증</h4>
+			</div>
+			<div class="modal-body">
+				<!-- php로 뺄 부분 시작 -->
+				<? $this -> load ->view('/admin/02member_modal3') ?>
+				<!-- php로 뺄 부분 끝 -->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- modal 끝 -->

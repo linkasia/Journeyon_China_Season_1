@@ -50,34 +50,29 @@
 			<!-- Tr 반복 시작 -->
 			<tr>
 				<td>1000</td>
-				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo">신청</a>
-					<!-- 맨 아래 memberModal과 연결되서 팝업창 띄움 -->
-				</td>	
-				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@fat">신청</a>
-				</td>
-				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@getbootstrap">신청</a>
-				</td>
-				<td>2132165456@qq.com</td>
-				<td>6</td>
 				<td>China</td>
-				<td>None</td>
-				<td>활동중</td>
+				<td>Shanghai</td>
+				<td><a href="" data-toggle="modal" data-target="#productModal" data-whatever="@mdo">와우 놀라워라 상해</a></td>
+				<td>james@linkasia.co.kr</td>
+				<td>23</td>
+				<td>5</td>
+				<td>6</td>
+				<td>2015-02-10</td>
+				<td>판매중</td>
 			</tr>
 			<!-- Tr 반복 끝 -->
 
 			<tr>
 				<td>1000</td>
-				<td>미신청</td>
-				<td>미신청</td>
-				<td>미신청</td>
-				<td>2132165456@qq.com</td>
-				<td>6</td>
 				<td>China</td>
-				<td>None</td>
-				<td>활동중</td>
+				<td>Shanghai</td>
+				<td>와우 놀라워라 상해</td>
+				<td>james@linkasia.co.kr</td>
+				<td>23</td>
+				<td>5</td>
+				<td>6</td>
+				<td>2015-02-10</td>
+				<td>판매중</td>
 			</tr>
 
 		</tbody>
@@ -118,16 +113,16 @@
 
 
 <!-- modal 시작 -->
-<div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="exampleModalLabel">New message</h4>
 			</div>
-			<div id="membermodalBody" class="modal-body">
+			<div id="productmodalBody" class="modal-body">
 				<!-- php로 뺄 부분 시작 -->
-				<? $this -> load ->view('/admin/modal') ?>
+				<? $this -> load ->view('/contents/salesCity1') ?>
 				<!-- php로 뺄 부분 끝 -->
 			</div>
 			<div class="modal-footer">
