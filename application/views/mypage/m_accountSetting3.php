@@ -6,41 +6,72 @@
 				<p class="vtitle">个人资料验证</p>
 				<iframe class="company_intro" width="620" height="360" src="//www.youtube.com/embed/JbGvVyCJCSM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 			</div>
-			<div class="vcertiWrap2">
-				<p class="vtitle">个人身份验证流程</p>
-				<div class="circle" style="margin-left: 50px;"><span>申请接受中</span></div>
-				<div class="circle"><span>确认中 </span></div>
-				<div class="circle"><span>资料不足</span></div>
-				<div class="circle"><span>认证完成</span></div>
-				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow1">
-				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow2">
-				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow3">
-			</div>
-
-			<div class="vcertiWrap3">
-				<p class="vtitle">个人身份验证资料</p>
-				<p class="phone_t">电话号码</p>
-					<!-- Split button -->
-					<div class="btn-group countryCode">
-						<input type="button" class="btn dropdown-toggle countryInput" value="国家区号" data-toggle="dropdown" aria-expanded="false">
-						<button type="button" class="btn dropdown-toggle countryInput" data-toggle="dropdown" aria-expanded="false">
-						<span class="caret"></span>
-						<span class="sr-only">Toggle Dropdown</span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">+81</a></li>
-							<li><a href="#">+82</a></li>
-							<li><a href="#">+83</a></li>
-						</ul>
-					</div><!-- Split button -->
-					<input type="text" class="phoneNumber">
-
-
-				<p class="ID_t">身份证</p>
-				<div class="ID_imgdiv">
-					<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span>
-					<span class="id_s">上传身份证</span>
-					
+			<?if(count($certicification) == 0){?>
+				<div class="vcertiWrap2">
+					<p class="vtitle">个人身份验证流程</p>
+					<div class="circle bluegloss" style="margin-left: 50px;"><span>申请接受中</span></div>
+					<div class="circle"><span>确认中 </span></div>
+					<div class="circle"><span>资料不足</span></div>
+					<div class="circle"><span>认证完成</span></div>
+					<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow1">
+					<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow2">
+					<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow3">
 				</div>
-			</div>
+
+				<form name="frmVCertification" id="frmVCertification" method='post' enctype="multipart/form-data" action="/index.php/mypage/myPage_M/vCertification">
+					<div class="vcertiWrap3">
+						<p class="vtitle">个人身份验证资料</p>
+						<p class="ID_t">身份证</p>
+						<div class="ID_imgdiv">
+							<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span>
+							<span class="id_s">上传身份证</span>
+						</div>
+						<input type='file' id='vCertification' name='vCertification'>
+						<input type='submit' id='vUpload' name='vUpload' value='인증 신청'>
+					</div>
+				</form>
+
+			<?}else{
+				foreach($certicification as $v){?>
+				<div class="vcertiWrap2">
+					<p class="vtitle">个人身份验证流程</p>
+					<div class="circle bluegloss" style="margin-left: 50px;"><span>申请接受中</span></div>
+					<?if($v->certicifi_type_code == "0006"){?>
+						<div class="circle bluegloss"><span>确认中 </span></div>
+					<?}else{?>
+						<div class="circle"><span>确认中 </span></div>
+					<?}?>
+					<?if($v->certicifi_type_code == "0004"){?>
+						<div class="circle bluegloss"><span>资料不足</span></div>
+					<?}else{?>
+						<div class="circle"><span>资料不足</span></div>
+					<?}?>
+					<?if($v->certicifi_type_code == "0001"){?>
+						<div class="circle bluegloss"><span>认证完成</span></div>
+					<?}else{?>
+						<div class="circle"><span>认证完成</span></div>
+					<?}?>
+
+					<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow1">
+					<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow2">
+					<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow3">
+				</div>
+
+				<form name="frmVCertification" id="frmVCertification" method='post' enctype="multipart/form-data" action="/index.php/mypage/myPage_M/vCertification">
+					<div class="vcertiWrap3">
+						<p class="vtitle">个人身份验证资料</p>
+						<p class="ID_t">身份证</p>
+						<div class="ID_imgdiv">
+							<img src='<?=$v->img_path?>' id='vGet' id='vGet' />
+							<!--span class="glyphicon  glyphicon-plus" aria-hidden="true"></span-->
+							<span class="id_s">上传身份证</span>
+						</div>
+						<input type='file' id='vCertification' name='vCertification'>
+						<?if($v->certicifi_type_code != "0001"){?>
+							<input type='submit' id='vUpload' name='vUpload' value='인증 신청'>
+						<?}?>
+					</div>
+				</form>
+				<?}
+			}?>
 		</div><!-- profileWrap1 -->

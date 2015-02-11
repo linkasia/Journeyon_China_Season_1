@@ -229,5 +229,40 @@
 			return $result;
 		}
 
+		function insertCerticification($user_num,$img_path)
+		{
+			$sql ="INSERT INTO certicification
+													(certicification_seq,
+													user_num,
+													certicifi_type_code,
+													img_path,
+													excuse,
+													modify_date,
+													creat_date
+													)VALUES(
+													0,
+													'".$user_num."',
+													'0005',
+													'".$img_path."',
+													'',
+													SYSDATE(),
+													SYSDATE()
+													)";
+			$query = $this->db->query($sql);
+		}
+
+		function myCerticificationState($num)
+		{
+			$sql ="SELECT *
+							FROM certicification
+							WHERE certicifi_type_code = '0006'
+							AND user_num = '".$num."'
+							ORDER BY modify_date
+							LIMIT 1";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 ?>

@@ -7,8 +7,15 @@
 	</aside><!-- leftmenuWrap end -->
 
 	<div id="rightWrap">
-		<? $data['countryList'] = $this->main_i->country();
-			$this->load->view("/mypage/m_accountSetting1",$data);
+		<?
+		echo ":::>".$mode;
+			if($mode == "0"){
+				$data['countryList'] = $this->main_i->country();
+				$this->load->view("/mypage/m_accountSetting1",$data);
+			}else if($mode == "2"){
+				$data['certicification'] =  $this->myModify->myCerticificationState($this->session->userdata['num']);
+				$this->load->view('mypage/m_accountSetting3');
+			}
 		?>
 	</div><!-- rightWrap end -->
 

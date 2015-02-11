@@ -45,38 +45,39 @@
 
 		<tbody>
 			<!-- Tr 반복 시작 -->
-			<tr>
-				<td>1000</td>
-				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal1" data-whatever="@mdo">신청</a>
-					<!-- 맨 아래 memberModal과 연결되서 팝업창 띄움 -->
-				</td>
-				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal2" data-whatever="@fat">신청</a>
-				</td>
-				<td>
-					<a href="" data-toggle="modal" data-target="#memberModal3" data-whatever="@getbootstrap">신청</a>
-				</td>
-				<td>2132165456@qq.com</td>
-				<td>6</td>
-				<td>China</td>
-				<td>None</td>
-				<td>활동중</td>
-			</tr>
-			<!-- Tr 반복 끝 -->
-
-			<tr>
-				<td>1000</td>
-				<td>미신청</td>
-				<td>미신청</td>
-				<td>미신청</td>
-				<td>2132165456@qq.com</td>
-				<td>6</td>
-				<td>China</td>
-				<td>None</td>
-				<td>활동중</td>
-			</tr>
-
+			<?foreach($member as $v){?>
+				<tr>
+					<td><?=$v->user_num?></td>
+					<?if($v->v_get_code == "0001"){?>
+						<td><?=$v->V_get?></td>
+					<?}else{?>
+						<td>
+							<a href="" data-toggle="modal" data-target="#memberModal1" data-whatever="@mdo"><?=$v->V_get?></a>
+							<!-- 맨 아래 memberModal과 연결되서 팝업창 띄움 -->
+						</td>
+					<?}?>
+					<?if($v->g_get_code == "0002"){?>
+						<td><?=$v->G_get?></td>
+					<?}else{?>
+						<td>
+						<a href="" data-toggle="modal" data-target="#memberModal2" data-whatever="@fat"><?=$v->G_get?></a>
+					</td>
+					<?}?>
+					<?if($v->pg_get_code == "0003"){?>
+						<td><?=$v->PG_get?></td>
+					<?}else{?>
+						<td>
+							<a href="" data-toggle="modal" data-target="#memberModal3" data-whatever="@getbootstrap"><?=$v->PG_get?></a>
+						</td>
+					<?}?>
+					<td><?=$v->email?></td>
+					<td><?=$v->product_cnt?></td>
+					<td><?=$v->M_country?></td>
+					<td><?=$v->L_country?></td>
+					<td>활동중</td>
+				</tr>
+				<!-- Tr 반복 끝 -->
+			<?}?>
 		</tbody>
 	</table>
 	<!-- 테이블 끝 -->

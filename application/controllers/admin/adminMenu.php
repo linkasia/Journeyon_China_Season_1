@@ -9,6 +9,7 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->model('code/tb_code');
 		$this->load->model('main/main_i');
 		$this->load->model('sales/country_M');
+		$this->load->model('admin/adminProcess');
 		$this->load->helper('url');
 		$this->load->helper('util_helper');
 	}
@@ -27,7 +28,8 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 	/*관리자 회원정보*/
 	function mainMember(){
-		$this->load->view('admin/02Member');
+		$data['member']=$data['countryCityList'] = $this->adminProcess->memberList();
+		$this->load->view('admin/02Member',$data);
 	}
 
 	/*관리자 상품정보*/

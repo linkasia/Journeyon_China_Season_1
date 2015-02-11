@@ -40,6 +40,7 @@
 						special3_code,
 						v_get_code,
 						g_get_code,
+						pg_get_code,
 						create_time
 						)
 						VALUES
@@ -54,6 +55,7 @@
 						'',
 						'".$countryClass."',
 						'".$code."',
+						'',
 						'',
 						'',
 						'',

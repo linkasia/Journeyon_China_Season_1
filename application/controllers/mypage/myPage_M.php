@@ -48,8 +48,9 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function myaccountSetting(){
+		$data['mode'] = "0";
 		$this->load->view('include/header');
-		$this->load->view('mypage/menu_account');
+		$this->load->view('mypage/menu_account',$data);
 		$this->load->view('include/footer');
 	}
 
@@ -69,7 +70,8 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function myV_Certicification(){
-		$this->load->view('mypage/m_accountSetting3');
+		$data['certicification'] =  $this->myModify->myCerticificationState($this->session->userdata['num']);
+		$this->load->view('mypage/m_accountSetting3',$data);
 	}
 
 	function myGuideAdmin(){
@@ -191,35 +193,32 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			$update['userUpdate'] = $this->myModify->updateUser($newdata,$filePath);
 
 		}
+	}
 
-
-/*
-		if( $_REQUEST['inputImage'] == "" || $_REQUEST['inputImage'] == null ){
-			$filePath =$_REQUEST['hiddenImagePath'];
-			$update['userUpdate'] = $this->myModify->updateUser($newdata,$filePath);
-		}else{
-			$save_dir = $_SERVER["DOCUMENT_ROOT"]."/application/views/userImage/".$this->session->userdata['num']."/";
-			if(is_uploaded_file($_FILES["inputImage"]["tmp_name"]))
-			{
-				if(!is_dir($save_dir)){
-					umask(0);
-					@mkdir($save_dir, 0777);
-					chmod($save_dir, 0777);
-				}
-
-				$dest=$save_dir.$_FILES["inputImage"]["name"];
-				$filePath="/application/views/userImage/".$this->session->userdata['num']."/".$_FILES["inputImage"]["name"];
-				if(!move_uploaded_file($_FILES["inputImage"]["tmp_name"],$dest)){
-					die("file save fail");
-				}
-				//print_r($filePath);
-				$update['userUpdate'] = $this->myModify->updateUser($newdata,$filePath);
-
+	function vCertification(){
+		$user_num = $this->session->userdata['num'];
+		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/application/views/userImage/".$this->session->userdata['num']."/VCertification/";
+		if(is_uploaded_file($_FILES["vCertification"]["tmp_name"]))
+		{
+			if(!is_dir($save_dir)){
+				umask(0);
+				@mkdir($save_dir, 0777);
+				chmod($save_dir, 0777);
 			}
-		}
-		*/
 
-	//	$update['userUpdate'] = $this->myModify->updateUser($newdata);
+			$dest=$save_dir.$_FILES["vCertification"]["name"];
+			$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".$_FILES["vCertification"]["name"];
+			if(!move_uploaded_file($_FILES["vCertification"]["tmp_name"],$dest)){
+				die("file save fail");
+			}
+			//print_r($filePath);
+			$update['userUpdate'] = $this->myModify->insertCerticification($user_num,$filePath);
+			$data['certicification'] =  $this->myModify->myCerticificationState($user_num);
+			$data['mode'] = "2";
+			$this->load->view('include/header');
+			$this->load->view('mypage/menu_account',$data);
+			$this->load->view('include/footer');
+		}
 	}
 
 	function salesPage(){
