@@ -1,4 +1,8 @@
 		<div class="profileWrap1">
+			<div class="title0">
+				<div class="underline">关于微导</div>
+			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
+			
 			<img src="/application/views/images/mypage/img_guide1.png" alt="guide_image" class="mb40">
 			<div class="guideimgBand">
 				<span class="guide_txt">马上成为微导游</span>
@@ -9,17 +13,9 @@
 			</div>
 			
 
-			<div class="title0">
-				<div class="underline">关于微导</div>
-			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
+
 
 			<div id="guidehomeWrap">
-				<div class="guideimgDiv">
-					<img src="/application/views/images/mypage/img_guide2.png" alt="guide_image2">
-					<div class="guideimgBand2">
-						<span>Journey On！卓尼邀请您加入成为微导游</span>
-					</div>
-				</div><!-- guideimgDiv end -->
 				<div class="guidetxtWrap">
 					<div class="cols1">
 						<img src="/application/views/images/mypage/col1.png" alt="guide_image2">

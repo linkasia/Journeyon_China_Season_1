@@ -1,4 +1,7 @@
 		<div class="profileWrap1">
+			<div class="title1">
+				<div class="underline">使用方法</div>
+			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 			<img src="/application/views/images/mypage/guest_home.JPG" alt="guest_image" id="guestImg1">
 			<div class="band">
 				<p>微旅行新体验尽在 Journey On!</p>
@@ -7,9 +10,7 @@
 				<p  data-toggle="modal" data-target="#guestModal">>> 微旅行预约前注意事项</p>
 			</div>
 
-			<div class="title1">
-				<div class="underline">使用方法</div>
-			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
+
 			
 			<div id="guesthomeWrap">
 				<div class="guesttxtWrap">
