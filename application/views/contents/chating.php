@@ -81,14 +81,14 @@
 
 
 		<div class="Add">
-			<button class="btn btn-warning" id="pricePay" data-toggle="modal" data-target="#myModal8">날짜 예약하기</button>
+			<button class="btn btn-warning" id="pricePay" data-toggle="modal" data-target="#myModal8">预约</button><!-- 날짜 예약하기 -->
 
 			<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog2">
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-							<h4 class="modal-title" id="myModalLabel">날짜 예약하기</h4>
+							<h4 class="modal-title" id="myModalLabel">预约微旅程</h4><!-- 날짜 예약하기 -->
 						</div><!-- modal-header 닫힘 -->
 						<div class="modal-body2">
 							<div id='content'>
@@ -102,8 +102,8 @@
 							</div>
 						</div><!-- modal-body 닫힘 -->
 						<div class="modal-footer">
-							<button type="button" class="btn btn-danger" id="saveDate" name="saveDate">확정</button>
-							<button type="button" class="btn btn-info" data-dismiss="modal">취소</button>
+							<button type="button" class="btn btn-danger" id="saveDate" name="saveDate">确认</button>
+							<button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
 						</div><!-- modal-footer 닫힘 -->
 					</div><!-- modal-content 닫힘 -->
 				</div><!-- modal-dialog 닫힘 -->
@@ -112,8 +112,8 @@
 	</div><!-- rightWrap end -->
 
 	<div id="typingBox">
-		<input type="text" name="chatInput" id="chatInput" class="form-control" cols="30" rows="10" placeholder="Write a message..."></input>
-		<span class="btn btn-primary" id="chatSend" onclick="sendChat()">Send</span>
+		<input type="text" name="chatInput" id="chatInput" class="form-control" cols="30" rows="10" placeholder="您想说什么？"></input>
+		<span class="btn btn-primary" id="chatSend" onclick="sendChat()">发送</span>
 	</div>
 </div><!-- chatlistWrap -->
 

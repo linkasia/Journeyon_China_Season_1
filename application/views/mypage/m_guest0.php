@@ -56,7 +56,7 @@
 在您预订微旅程之前，请仔细阅读以下事项:<br><br><br><br>
 							<ul class="nav nav-tabs">
 							  <li role="presentation" class="active"><a href="#">浏览/预约微旅程</a></li>
-							  <li role="presentation"><a href="#">微旅程管理</a></li>
+							  <li role="presentation"><a href="#b">微旅程管理</a></li>
 							  <li role="presentation"><a href="#">微旅程咨询记录</a></li>
 							  <li role="presentation"><a href="#">其他事项</a></li>
 							</ul>
@@ -67,7 +67,7 @@
 预约微旅程前，请清楚阅读条款。<br><br><br><br>
 							<ul class="nav nav-tabs">
 							  <li role="presentation"><a href="#">浏览/预约微旅程</a></li>
-							  <li role="presentation" class="active"><a href="#">微旅程管理</a></li>
+							  <li role="presentation" class="active" name=""><a href="#">微旅程管理</a></li>
 							  <li role="presentation"><a href="#">微旅程咨询记录</a></li>
 							  <li role="presentation"><a href="#">其他事项</a></li>
 							</ul>
@@ -84,7 +84,7 @@
 注意：切勿告知任何人您的密码/银行账户或其他私隐资料。<br><br><br><br>
 
 							<ul class="nav nav-tabs">
-							  <li role="presentation"><a href="#">浏览/预约微旅程</a></li>
+							  <li role="presentation"><a href="#" name="b">浏览/预约微旅程</a></li>
 							  <li role="presentation"><a href="#">微旅程管理</a></li>
 							  <li role="presentation"><a href="#">微旅程咨询记录</a></li>
 							  <li role="presentation" class="active"><a href="#">其他事项</a></li>
