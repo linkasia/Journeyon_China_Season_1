@@ -170,7 +170,16 @@
 	</div><!-- productWrap -->
 
 	<div class="productInfo">
-		<span class="txt_blue">注意事项</span>
+		<p class="txt_blue">注意事项</p>
+		<p>Journey On!卓尼致力营造安全和谐的平台，与大家一起推广微旅游文化。<br><br>
+			我们支持独特性高的旅游信息，不鼓励侵权行为。<br>
+			发布违规内容和照片的用户可能会被限制使用权限。<br>
+			禁止发布以下类型的内容（部分）：<br>
+			含有裸露或色情元素的内容<br>
+			含有违法活动的内容<br>
+			含有宣传组织/个人企业的内容<br>
+			含有侵犯他人知识产权的内容<br>
+		</p>
 	</div>
 </div><!-- productWrap en -->
 

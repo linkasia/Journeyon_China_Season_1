@@ -93,6 +93,10 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$this->load->view('mypage/m_guide0');
 	}
 
+	function myGuestHome(){
+		$this->load->view('mypage/m_guest0');
+	}
+
 	function myGuestAdmin(){
 		$data['bucketList'] =  $this->myModify->myBucketListPage($this->session->userdata['num']);
 		$this->load->view('mypage/m_guest1' , $data);

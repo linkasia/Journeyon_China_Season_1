@@ -5,7 +5,7 @@
 			?>
 
 			<div class="title1">
-				<div class="underline">订单管理</div>
+				<div class="underline">订单交易管理</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 			<!--div class="btn-group sortGroup" role="group" aria-label="" id="salessortGroup">
 				<button type="button" class="btn btn-info" id="salessort1" name="salessort1">전체보기<span id="sortNumber1" name="sortNumber1">(42)</span></button>
@@ -78,6 +78,7 @@
 						<span>价格</span><br>
 						<span class="font_blue"> <?=$v->fixed_fee?>元</span><br>
 						<span class="btn btn-info" data-toggle="modal" data-target="#myModal">取消交易</span>
+						<div id="cancelAlertBox" class="alert alert-danger mt20">취소 승인 대기중</div>
 					</div>
 				</div><!-- stepdiv 닫음 -->
 			</div><!-- salesList 닫음, 이 박스가 반복됨-->
@@ -112,9 +113,9 @@
 
 						</div><!-- modal-body 닫힘 -->
 						<div class="modal-footer">
-							<button class="btn btn-warning" id="cancelChat" name="cancelChat">发送订单取消信息</button>
+							<button class="btn btn-warning" id="cancelChat" name="cancelChat">취소하기</button>
 							<!-- <button type="button" class="btn btn-danger">确定</button> -->
-							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
 						</div><!-- modal-footer 닫힘 -->
 					</div><!-- modal-content 닫힘 -->
 				</div><!-- modal-dialog 닫힘 -->

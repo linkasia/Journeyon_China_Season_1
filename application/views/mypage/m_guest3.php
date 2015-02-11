@@ -1,6 +1,6 @@
 		<div class="profileWrap1">
 			<div class="title10">
-				<div class="underline">已预约行程状态</div>
+				<div class="underline">我的记录</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 			<div id="selectDiv">

@@ -1113,13 +1113,13 @@
 		
 		/* 타이틀 줄 모아서 관리 */
 		#guideWrap .profileWrap1 .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #f3c807 solid; width: 98px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #f3a46b solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 		#guideWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 78px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3a46b solid; width: 116px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 		#guideWrap .profileWrap1 .title1_2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #f3c807 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #f3a46b solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 		#guideWrap .profileWrap1 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title2 .underline{border-bottom: 2px #f3c807 solid; width: 119px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 50px 0 20px 0;}
+		#guideWrap .profileWrap1 .title2 .underline{border-bottom: 2px #f3a46b solid; width: 98px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 
 		#guideWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
 		#guideWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
@@ -1134,13 +1134,34 @@
 			filter:Alpha(opacity=75); /* For IE8 and earlier */
 			position: absolute; top: 400px;
 			}
-		#guideWrap .profileWrap1 .guideimgBand .guide_txt{color: #fff; line-height: 40px; font-size: 1.3em; margin-left: 10px; margin-right: 315px;}
-		#guideWrap .profileWrap1 .guideimgBand .guide_next{color: #fff; line-height: 40px; font-size: 1.3em; margin-left: 10px; cursor: pointer;}
+		#guideWrap .profileWrap1 .guideimgBand .guide_txt{color: #fff; line-height: 40px; margin-left: 10px; margin-right: 315px;}
+		#guideWrap .profileWrap1 .guideimgBand .guide_next{color: #fff; line-height: 40px; margin-left: 10px; cursor: pointer;}
 		#guideWrap .profileWrap1 .guideimgBand .guide_next:hover{color: #ddd;}
+		#guideWrap .profileWrap1 .guideimgBand3{
+			position: absolute;
+			width: 210px;
+			height: 42px;
+			background-color: rgba(0,0,0,.6);
+			top: 197px;
+			right: 0px;
+			line-height: 42px;
+			color: #fff;
+			text-align: center;
+			}
+
+		#guideWrap .profileWrap1 .guideimgBand3:hover{
+				opacity: 0.8;
+				background: rgba(0, 0, 0,.9);
+				-webkit-transition: all ease .8s;
+				-moz-transition: all ease .8s;
+				transition: all ease .8s;
+				cursor: pointer;
+			}
+
 
 		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; position: relative;}
 		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv{width: 680px; height: 397px; position: relative; background-color: #ddd; overflow: hidden; margin-bottom: 30px;}
-		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv .guideimgBand2{width: 100%; height: 40px; background-color: rgba(0,0,0,0.75); filter:Alpha(opacity=75); position: absolute; top: 357px; color: #fff; font-size: 1.35em; line-height: 40px;}
+		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv .guideimgBand2{width: 100%; height: 40px; background-color: rgba(0,0,0,0.75); filter:Alpha(opacity=75); position: absolute; top: 357px; color: #fff; line-height: 40px;}
 		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv .guideimgBand2 span{margin-left: 10px;}
 
 		#guideWrap .profileWrap1 #guidehomeWrap .guidetxtWrap{width: 680px; height: 500px;}
@@ -1153,6 +1174,11 @@
 		#guideWrap .profileWrap1 #guidehomeWrap .colsP2{font-size: 1.125em; font-weight: 600; color: #1bbc9b; margin: 20px 0 10px 0;}
 		#guideWrap .profileWrap1 #guidehomeWrap .colsP3{font-size: 1.125em; font-weight: 600; color: #3bb7ca; margin: 20px 0 10px 0;}
 		
+		/*가이드 내부 모달 페이지 CSS*/
+		#guidemodal-dialog{width: 800px;}
+		#guidemodal-dialog	.modal-body{height: 600px; overflow-y: scroll;}
+		/*가이드 내부 모달 페이지 CSS*/
+
 
 		/* Guide Request (m_guide1.php)*/
 		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
@@ -1298,7 +1324,7 @@
 				.profileWrap1 #serviceStatus p.title{color: #fff; padding-left: 10px; line-height: 39px;}
 				.profileWrap1 #serviceStatus .serviceWindow{padding: 10px; height: 200px; max-height: 200px; overflow-y: scroll;}
 
-				.profileWrap1 .salesList{width: 100%; position: relative; border-bottom: 1px solid #f0f1f5; padding-bottom: 15px; margin-top: 15px;}
+				.profileWrap1 .salesList{width: 100%; height: 210px; position: relative; border-bottom: 1px solid #f0f1f5; padding-bottom: 15px; margin-top: 15px;}
 				.profileWrap1 .salesList .titlediv{height: 30px; line-height: 30px; text-indent: 80pt; margin-top: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 				.profileWrap1 .banddiv{width: 100%; height: 30px; line-height: 30px; background-color: #f0f1f5; overflow: hidden;}	
 				.profileWrap1 .salesList .absoluteDiv{position: absolute; top: 74px; right: 10px; text-align: right;}
@@ -1322,6 +1348,8 @@
 				.paginationNav{margin-left: 260px;}
 				.profileWrap1 .modal .modal-body #cancelChat{width: 200px; margin: 10px 0px 10px 186px;}
 
+				#cancelAlertBox{padding: 6px; height: 33px; width: 636px; text-align: center; margin-top: 10px; margin-bottom: 20px;}
+
 
 				/* 여기서부터 Guide 취소관리 CSS */
 
@@ -1339,7 +1367,6 @@
 				.profileWrap1 .cancelList #statusText p{cursor: pointer;}
 				.profileWrap1 .cancelList #cancelCheckbox{width: 16px; height: 16px; position: absolute; top: 69px; left: 0px;}
 				#cancelsortGroup1{margin-right:  52px;}
-
 				#cancel_p{margin-top: 30px; margin-bottom: 40px;}
 				#cancelComment{height: 150px;}
 				#cancelTextareaModalBody{height: 370px;}
@@ -1364,8 +1391,8 @@
 
 		/* 이미지 관련 부분 */
 		#guestWrap .profileWrap1 #guestImg1{margin-bottom: 50px;}
-		#guestWrap .profileWrap1 .band{position: absolute; width: 680px; height: 42px; background-color: rgba(0,0,0,.6); top: 0px; line-height: 42px; padding-left: 20px;}
-		#guestWrap .profileWrap1 .band2{position: absolute; width: 210px; height: 42px; background-color: rgba(0,0,0,.6); top: 108px; right: 10px; line-height: 42px; color: #fff; text-align: center;}
+		#guestWrap .profileWrap1 .band{position: absolute; width: 680px; height: 42px; background-color: rgba(0,0,0,.6); top: 398px; line-height: 42px; padding-left: 20px; color: #fff;}
+		#guestWrap .profileWrap1 .band2{position: absolute; width: 210px; height: 42px; background-color: rgba(0,0,0,.6); top: 184px; right: 10px; line-height: 42px; color: #fff; text-align: center;}
 		#guestWrap .profileWrap1 .band2:hover{
 					opacity: 0.8;
 					background: rgba(0, 0, 0,.9);
@@ -1393,11 +1420,11 @@
 
 		/* 게스트 두 번째 페이지 */
 		#guestWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 98px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
-		#guestWrap .profileWrap1 .title9 .underline{border-bottom: 2px #f3c807 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #14b9d5 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+		#guestWrap .profileWrap1 .title9 .underline{border-bottom: 2px #14b9d5 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
 		#guestWrap .profileWrap1 .title9{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guestWrap .profileWrap1 .title10{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guestWrap .profileWrap1 .title10 .underline{border-bottom: 2px #f3c807 solid; width: 137px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+		#guestWrap .profileWrap1 .title10 .underline{border-bottom: 2px #14b9d5 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
 
 		#selectDiv{width: 100%; position: relative; float: left; margin-top: 40px; margin-bottom: 20px; padding-left: 30px;}
 		#somenailwrapDiv{width: 78px; float: left; margin-right: 10px; margin-bottom: 20px; position: relative;}
@@ -1587,7 +1614,7 @@
 	#productWrapAll .productDiv12 #etc{width: 650px; max-width: 650px; height: 120px; max-height: 120px; margin-left: 20px; margin-bottom: 20px;}
 
 	#productWrapAll #saveProduct{margin-left: 280px; margin-right: 5px;}
-	#productWrapAll .productInfo{width: 230px; height: 350px; border: 1px solid #f0f1f5; float: left; padding: 10px; background-color: #f9fafc;}
+	#productWrapAll .productInfo{width: 230px; border: 1px solid #f0f1f5; float: left; padding: 10px; background-color: #f9fafc;}
 
 
 

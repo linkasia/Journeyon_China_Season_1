@@ -2,7 +2,7 @@
 			<?php $this -> load ->view('/mypage/serviceWindow2'); ?>
 			
 			<div class="title1">
-				<div class="underline">取消行程</div>
+				<div class="underline">订单取消管理</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 			<div class="btn-group sortGroup" role="group" aria-label="" id="cancelsortGroup1">
 				<button type="button" class="btn btn-info" id="cancelsort1" name="cancelsort1">全部</span></button>

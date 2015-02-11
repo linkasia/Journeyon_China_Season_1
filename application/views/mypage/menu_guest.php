@@ -1,10 +1,10 @@
 <div id="guestWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">旅行者</span></span>
-		<span class="list-group-item" id='guestHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;旅行者页面</span>
+		<span class="list-group-item active">旅行者主页</span></span>
+		<span class="list-group-item" id='guestHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;使用方法</span>
 		<span class="list-group-item" id='guestBucket'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;我的收藏</span>
 		<span class="list-group-item" id='guestReservation'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;我的预约&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='guestBuy'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;我的行程&nbsp;&nbsp;</span>
+		<span class="list-group-item" id='guestBuy'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;我的记录&nbsp;&nbsp;</span>
 		<span class="list-group-item" id='guestCancel'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;取消行程 &nbsp;&nbsp;</span>
 	</aside><!-- leftmenuWrap end -->
 

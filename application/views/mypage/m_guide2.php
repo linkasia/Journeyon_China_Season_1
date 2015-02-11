@@ -1,14 +1,6 @@
 		<div class="profileWrap1">
-			<img src="/application/views/images/mypage/img_guide1.png" alt="guide_image">
-			<div class="guideimgBand">
-				<span class="guide_txt" id="guide_txt" name="guide_txt">分享您的经验和旅游心得</span>
-				<span class="guide_next" id="guide_next" name="guide_next">
-					<span class="glyphicon glyphicon-chevron-right"></span>  了解更多关于成为导游
-				</span>
-			</div>
-
 			<div class="title2">
-				<div class="underline">旅游信息管理</div>
+				<div class="underline">微旅程管理</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 
