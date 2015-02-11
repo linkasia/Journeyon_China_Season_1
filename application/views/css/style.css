@@ -1393,7 +1393,7 @@
 		/* 이미지 관련 부분 */
 		#guestWrap .profileWrap1 #guestImg1{margin-bottom: 50px;}
 		#guestWrap .profileWrap1 .band{position: absolute; width: 680px; height: 42px; background-color: rgba(0,0,0,.6); top: 458px; line-height: 42px; padding-left: 20px; color: #fff;}
-		#guestWrap .profileWrap1 .band2{position: absolute; width: 210px; height: 42px; background-color: rgba(0,0,0,.6); top: 234px; right: 10px; line-height: 42px; color: #fff; text-align: center;}
+		#guestWrap .profileWrap1 .band2{position: absolute; width: 210px; height: 42px; background-color: rgba(0,0,0,.6); top: 254px; right: 10px; line-height: 42px; color: #fff; text-align: center;}
 		#guestWrap .profileWrap1 .band2:hover{
 					opacity: 0.8;
 					background: rgba(0, 0, 0,.9);
