@@ -30,11 +30,13 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 
 	function mypublic(){
 
+		$userNum = $_REQUEST['userNum'];
+
 		$data['langList'] = $this->tb_code->langList();
 		$data['learnList'] = $this->tb_code->learnList();
 		$data['countryList'] = $this->main_i->Country();
 
-		$data['user'] = $this->myModify->myProfilePage($this->session->userdata['num']);
+		$data['user'] = $this->myModify->myProfilePage($userNum);
 
 		$this->load->view('include/header');
 		$this->load->view('mypage/menu_public',$data);

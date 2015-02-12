@@ -28,7 +28,8 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 	/*관리자 회원정보*/
 	function mainMember(){
-		$data['member']=$data['countryCityList'] = $this->adminProcess->memberList();
+		$data['member']=$this->adminProcess->memberList();
+		//$data['userInfo']=$this->adminProcess->VList();
 		$this->load->view('admin/02Member',$data);
 	}
 
@@ -51,6 +52,81 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 	/*관리자 공지2*/
 	function mainBoard(){
 		$this->load->view('admin/06Board');
+	}
+
+	/*멤버 팝업*/
+	function memberVget(){
+		$user_num = $_REQUEST['user_num'];
+		$data['vInfo']= $this->adminProcess->appovList($user_num,'0001');
+		$this -> load ->view('/admin/02member_modal1',$data);
+	}
+
+	/*멤버 팝업*/
+	function memberPget(){
+		$user_num = $_REQUEST['user_num'];
+		$data['pInfo']= $this->adminProcess->appovList($user_num,'0002');
+		$this -> load ->view('/admin/02member_modal2',$data);
+	}
+
+	/*멤버 팝업*/
+	function memberPGget(){
+		$user_num = $_REQUEST['user_num'];
+		$data['pgInfo']= $this->adminProcess->appovList($user_num,'0003');
+		$this -> load ->view('/admin/02member_modal3',$data);
+	}
+
+	/*V인증 승인*/
+	function memberVgetAppove(){
+		$user_num = $_REQUEST['user_num'];
+		$appovekey = $_REQUEST['appovekey'];
+		$banTextarea = $_REQUEST['banTextarea'];
+		$update['updateCerticification'] = $this->adminProcess->updateVCerticification($user_num,$appovekey,'0001',$banTextarea);
+		$update['updateUserVget'] = $this->adminProcess->updateUserVget($user_num,'0001');
+	}
+
+	/*V인증 반려*/
+	function memberVgetUnAppove(){
+		$user_num = $_REQUEST['user_num'];
+		$appovekey = $_REQUEST['appovekey'];
+		$banTextarea = $_REQUEST['banTextarea'];
+		$update['updateCerticification'] = $this->adminProcess->updateVCerticification($user_num,$appovekey,'0004',$banTextarea);
+		$update['updateUserVget'] = $this->adminProcess->updateUserVget($user_num,'0004');
+	}
+
+	/*P인증 승인*/
+	function memberPgetAppove(){
+		$user_num = $_REQUEST['user_num'];
+		$appovekey = $_REQUEST['appovekey'];
+		$banTextarea = $_REQUEST['banTextarea'];
+		$update['updateCerticification'] = $this->adminProcess->updateVCerticification($user_num,$appovekey,'0001',$banTextarea);
+		$update['updateUserVget'] = $this->adminProcess->updateUserPget($user_num,'0001');
+	}
+
+	/*P인증 반려*/
+	function memberPgetUnAppove(){
+		$user_num = $_REQUEST['user_num'];
+		$appovekey = $_REQUEST['appovekey'];
+		$banTextarea = $_REQUEST['banTextarea'];
+		$update['updateCerticification'] = $this->adminProcess->updateVCerticification($user_num,$appovekey,'0004',$banTextarea);
+		$update['updateUserVget'] = $this->adminProcess->updateUserPget($user_num,'0004');
+	}
+
+	/*PG인증 승인*/
+	function memberPggetAppove(){
+		$user_num = $_REQUEST['user_num'];
+		$appovekey = $_REQUEST['appovekey'];
+		$banTextarea = $_REQUEST['banTextarea'];
+		$update['updateCerticification'] = $this->adminProcess->updateVCerticification($user_num,$appovekey,'0001',$banTextarea);
+		$update['updateUserVget'] = $this->adminProcess->updateUserPgget($user_num,'0001');
+	}
+
+	/*PG인증 반려*/
+	function memberPggetUnAppove(){
+		$user_num = $_REQUEST['user_num'];
+		$appovekey = $_REQUEST['appovekey'];
+		$banTextarea = $_REQUEST['banTextarea'];
+		$update['updateCerticification'] = $this->adminProcess->updateVCerticification($user_num,$appovekey,'0004',$banTextarea);
+		$update['updateUserVget'] = $this->adminProcess->updateUserPgget($user_num,'0004');
 	}
 
 }

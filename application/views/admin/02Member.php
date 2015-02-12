@@ -51,7 +51,7 @@
 					<?if($v->v_get_code == "0001"){?>
 						<td><?=$v->V_get?></td>
 					<?}else{?>
-						<td>
+						<td onclick="Vget('<?=$v->user_num?>')">
 							<a href="" data-toggle="modal" data-target="#memberModal1" data-whatever="@mdo"><?=$v->V_get?></a>
 							<!-- 맨 아래 memberModal과 연결되서 팝업창 띄움 -->
 						</td>
@@ -59,14 +59,14 @@
 					<?if($v->g_get_code == "0002"){?>
 						<td><?=$v->G_get?></td>
 					<?}else{?>
-						<td>
+						<td onclick="Pget('<?=$v->user_num?>')">
 						<a href="" data-toggle="modal" data-target="#memberModal2" data-whatever="@fat"><?=$v->G_get?></a>
 					</td>
 					<?}?>
 					<?if($v->pg_get_code == "0003"){?>
 						<td><?=$v->PG_get?></td>
 					<?}else{?>
-						<td>
+						<td onclick="PGget('<?=$v->user_num?>')">
 							<a href="" data-toggle="modal" data-target="#memberModal3" data-whatever="@getbootstrap"><?=$v->PG_get?></a>
 						</td>
 					<?}?>
@@ -118,9 +118,9 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="exampleModalLabel">V 인증</h4>
 			</div>
-			<div class="modal-body">
+			<div class="modal-body" id='modalVget' name='modalVget'>
 				<!-- php로 뺄 부분 시작 -->
-				<? $this -> load ->view('/admin/02member_modal1') ?>
+
 				<!-- php로 뺄 부분 끝 -->
 			</div>
 			<div class="modal-footer">
@@ -139,10 +139,8 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="exampleModalLabel">G 인증</h4>
 			</div>
-			<div class="modal-body">
-				<!-- php로 뺄 부분 시작 -->
-				<? $this -> load ->view('/admin/02member_modal2') ?>
-				<!-- php로 뺄 부분 끝 -->
+			<div class="modal-body" id="modalPget" name="modalPget">
+
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -160,9 +158,9 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="exampleModalLabel">PG 인증</h4>
 			</div>
-			<div class="modal-body">
+			<div class="modal-body"  id="modalPGget" name="modalPGget">
 				<!-- php로 뺄 부분 시작 -->
-				<? $this -> load ->view('/admin/02member_modal3') ?>
+
 				<!-- php로 뺄 부분 끝 -->
 			</div>
 			<div class="modal-footer">

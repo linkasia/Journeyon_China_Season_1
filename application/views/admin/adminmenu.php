@@ -1,7 +1,7 @@
 <div id="adminWrap">
 	<aside id="leftmenuWrap" class="mt20 mr20">
 		<span class="list-group-item active" id='admin'>Admin Menu</span>
-		<span class="list-group-item" id='adminMain'>Main</span>
+		<!--span class="list-group-item" id='adminMain'>Main</span-->
 		<span class="list-group-item" id='adminMember'>Member</span>
 		<span class="list-group-item" id='adminProduct'>Product</span>
 		<span class="list-group-item" id='adminBook'>Book</span>
@@ -9,6 +9,11 @@
 		<span class="list-group-item" id='adminBoard'>Board</span>
 	</aside><!-- leftmenuWrap end -->
 	<div id='adminrightWrap'>
+	<?
+		$data['member']=$this->adminProcess->memberList();
+
+		$this->load->view('admin/02Member',$data);
+	?>
 	</div>
 </div>
 
@@ -100,4 +105,139 @@
 			});
 		});
 	});
+
+	function Vget(key){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:key },
+			url:"/index.php/admin/adminMenu/memberVget",
+			success: function (data){
+				document.getElementById('modalVget').innerHTML =data;
+			}
+		});
+	}
+
+	//V인증승인
+	function vAppove(key,userNum){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:userNum, appovekey : key, banTextarea:null },
+			url:"/index.php/admin/adminMenu/memberVgetAppove",
+			success: function (data){
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+			}
+		});
+	}
+
+	//V인증반려
+	function vUnAppove(key,userNum){
+		var _banTextarea = $('#banTextarea').val();
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:userNum, appovekey : key, banTextarea:_banTextarea },
+			url:"/index.php/admin/adminMenu/memberVgetUnAppove",
+			success: function (data){
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+			}
+		});
+	}
+
+	function Pget(key){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:key },
+			url:"/index.php/admin/adminMenu/memberPget",
+			success: function (data){
+
+				document.getElementById('modalPget').innerHTML =data;
+			}
+		});
+	}
+
+	function profileChk(num)
+	{
+		window.open("/index.php/mypage/myPage_M/mypublic?userNum="+num+"",'', '');
+	}
+
+	//P인증승인
+	function gAppove(key,userNum){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:userNum, appovekey : key, banTextarea:null },
+			url:"/index.php/admin/adminMenu/memberPgetAppove",
+			success: function (data){
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+			}
+		});
+	}
+
+	//V인증반려
+	function gUnAppove(key,userNum){
+		var _banTextarea = $('#banTextarea').val();
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:userNum, appovekey : key, banTextarea:_banTextarea },
+			url:"/index.php/admin/adminMenu/memberPgetUnAppove",
+			success: function (data){
+				//alert(data);
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+			}
+		});
+	}
+
+	function PGget(key){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:key },
+			url:"/index.php/admin/adminMenu/memberPGget",
+			success: function (data){
+
+				document.getElementById('modalPGget').innerHTML =data;
+			}
+		});
+	}
+
+	//PG인증승인
+	function pgAppove(key,userNum){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:userNum, appovekey : key, banTextarea:null },
+			url:"/index.php/admin/adminMenu/memberPggetAppove",
+			success: function (data){
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+			}
+		});
+	}
+
+	//PG인증반려
+	function pgUnAppove(key,userNum){
+		var _banTextarea = $('#banTextarea').val();
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ user_num:userNum, appovekey : key, banTextarea:_banTextarea },
+			url:"/index.php/admin/adminMenu/memberPggetUnAppove",
+			success: function (data){
+				//alert(data);
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+			}
+		});
+	}
 </script>

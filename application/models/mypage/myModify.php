@@ -235,6 +235,7 @@
 													(certicification_seq,
 													user_num,
 													certicifi_type_code,
+													certicifi_state_code,
 													img_path,
 													excuse,
 													modify_date,
@@ -243,6 +244,7 @@
 													0,
 													'".$user_num."',
 													'0005',
+													'0001',
 													'".$img_path."',
 													'',
 													SYSDATE(),
@@ -256,6 +258,7 @@
 			$sql ="SELECT *
 							FROM certicification
 							WHERE certicifi_type_code = '0006'
+							AND certicifi_state_code = '0001'
 							AND user_num = '".$num."'
 							ORDER BY modify_date
 							LIMIT 1";
