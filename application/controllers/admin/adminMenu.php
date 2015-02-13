@@ -35,7 +35,8 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 	/*관리자 상품정보*/
 	function mainProduct(){
-		$this->load->view('admin/03Product');
+		$data['productList']=$this->adminProcess->productAppovList();
+		$this->load->view('admin/03Product',$data);
 	}
 
 	/*관리자 예약정보*/
@@ -93,7 +94,7 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 		$update['updateUserVget'] = $this->adminProcess->updateUserVget($user_num,'0004');
 	}
 
-	/*P인증 승인*/
+	/*g인증 승인*/
 	function memberPgetAppove(){
 		$user_num = $_REQUEST['user_num'];
 		$appovekey = $_REQUEST['appovekey'];
@@ -102,7 +103,7 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 		$update['updateUserVget'] = $this->adminProcess->updateUserPget($user_num,'0001');
 	}
 
-	/*P인증 반려*/
+	/*g인증 반려*/
 	function memberPgetUnAppove(){
 		$user_num = $_REQUEST['user_num'];
 		$appovekey = $_REQUEST['appovekey'];
@@ -129,5 +130,20 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 		$update['updateUserVget'] = $this->adminProcess->updateUserPgget($user_num,'0004');
 	}
 
+	/*상품승인*/
+	function productAppove(){
+		//$user_num = $_REQUEST['user_num'];
+		$product_num = $_REQUEST['product_num'];
+
+		$update['updateProduct'] = $this->adminProcess->productState($product_num,'0001');
+	}
+
+	/*상품반려*/
+	function productUnAppove(){
+		$user_num = $_REQUEST['user_num'];
+		$product_num = $_REQUEST['product_num'];
+
+		$update['updateProduct'] = $this->adminProcess->productState($product_num,'0005');
+	}
 }
 ?>

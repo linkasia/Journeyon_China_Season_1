@@ -85,5 +85,34 @@
 			$query = $this->db->query($sql);
 		}
 
+		function productAppovList()
+		{
+			$sql ="SELECT a.*,
+											b.code_nm AS country,
+											c.code_nm AS city,
+											d.email,
+											e.code_nm AS state
+							FROM product a
+							LEFT JOIN country_table b ON a.sortcountry = b.class AND a.country_code = b.code
+							LEFT JOIN city_table c ON a.sortcountry = c.sclass AND a.country_code = c.class AND a.city_code = c.code
+							LEFT JOIN USER d ON a.user_num = d.user_num
+							LEFT JOIN code_table e ON a.product_state = e.code AND e.class='0018'
+							WHERE a.useYn = 'Y'
+							AND a.product_state in ('0002','0005')";
+								//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function productState($product_num, $code)
+		{
+			$sql ="UPDATE product
+								SET product_state = '".$code."'
+							WHERE product_num = '".$product_num."' ";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+		}
 	}
 ?>
+

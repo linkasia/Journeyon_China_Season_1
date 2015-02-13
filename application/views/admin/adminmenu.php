@@ -10,9 +10,16 @@
 	</aside><!-- leftmenuWrap end -->
 	<div id='adminrightWrap'>
 	<?
-		$data['member']=$this->adminProcess->memberList();
 
-		$this->load->view('admin/02Member',$data);
+		$mode = $_REQUEST['mode'];
+
+		if($mode==2){
+			$data['productList']=$this->adminProcess->productAppovList();
+			$this->load->view('admin/03Product',$data);
+		}else{
+			$data['member']=$this->adminProcess->memberList();
+			$this->load->view('admin/02Member',$data);
+		}
 	?>
 	</div>
 </div>
@@ -128,7 +135,7 @@
 			data:{ user_num:userNum, appovekey : key, banTextarea:null },
 			url:"/index.php/admin/adminMenu/memberVgetAppove",
 			success: function (data){
-				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=";
 			}
 		});
 	}
@@ -143,7 +150,7 @@
 			data:{ user_num:userNum, appovekey : key, banTextarea:_banTextarea },
 			url:"/index.php/admin/adminMenu/memberVgetUnAppove",
 			success: function (data){
-				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=";
 			}
 		});
 	}
@@ -176,7 +183,7 @@
 			data:{ user_num:userNum, appovekey : key, banTextarea:null },
 			url:"/index.php/admin/adminMenu/memberPgetAppove",
 			success: function (data){
-				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=";
 			}
 		});
 	}
@@ -192,7 +199,7 @@
 			url:"/index.php/admin/adminMenu/memberPgetUnAppove",
 			success: function (data){
 				//alert(data);
-				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=";
 			}
 		});
 	}
@@ -220,7 +227,7 @@
 			data:{ user_num:userNum, appovekey : key, banTextarea:null },
 			url:"/index.php/admin/adminMenu/memberPggetAppove",
 			success: function (data){
-				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=";
 			}
 		});
 	}
@@ -236,7 +243,33 @@
 			url:"/index.php/admin/adminMenu/memberPggetUnAppove",
 			success: function (data){
 				//alert(data);
-				location.href = "/index.php/admin/adminMenu/mainTotalMenu";
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=";
+			}
+		});
+	}
+
+	function productAppov(productKey){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ product_num:productKey },
+			url:"/index.php/admin/adminMenu/productAppove",
+			success: function (data){
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=2";
+			}
+		});
+	}
+
+	function productUnAppov(productKey,userNum){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ product_num:productKey,user_num : userNum },
+			url:"/index.php/admin/adminMenu/productUnAppove",
+			success: function (data){
+				location.href = "/index.php/admin/adminMenu/mainTotalMenu?mode=2";
 			}
 		});
 	}

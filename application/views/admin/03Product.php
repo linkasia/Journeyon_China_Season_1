@@ -17,7 +17,7 @@
 	</ul>
 </div>
 
-	
+
 	<div class="col-lg-6">
 		<div class="input-group">
 			<span class="input-group-btn">
@@ -38,42 +38,30 @@
 				<th>City</th>
 				<th>Product Name</th>
 				<th>ID</th>
-				<th>Sales</th>
-				<th>Like</th>
-				<th>Review</th>
 				<th>Update Date</th>
 				<th>Status</th>
+				<th> </th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<!-- Tr 반복 시작 -->
-			<tr>
-				<td>1000</td>
-				<td>China</td>
-				<td>Shanghai</td>
-				<td><a href="" data-toggle="modal" data-target="#productModal" data-whatever="@mdo">와우 놀라워라 상해</a></td>
-				<td>james@linkasia.co.kr</td>
-				<td>23</td>
-				<td>5</td>
-				<td>6</td>
-				<td>2015-02-10</td>
-				<td>판매중</td>
-			</tr>
-			<!-- Tr 반복 끝 -->
 
-			<tr>
-				<td>1000</td>
-				<td>China</td>
-				<td>Shanghai</td>
-				<td>와우 놀라워라 상해</td>
-				<td>james@linkasia.co.kr</td>
-				<td>23</td>
-				<td>5</td>
-				<td>6</td>
-				<td>2015-02-10</td>
-				<td>판매중</td>
-			</tr>
+			<?foreach($productList as $v){?>
+				<tr>
+					<td><?=$v->product_num?></td>
+					<td><?=$v->country?></td>
+					<td><?=$v->city?></td>
+					<td><?=$v->title?></td>
+					<td><?=$v->email?></td>
+					<td><?=$v->create_date?></td>
+					<td><?=$v->state?></td>
+					<td>
+						<button class="btn btn-warning" onclick="productUnAppov('<?=$v->product_num?>','<?=$v->user_num?>')">반려</button>
+						<button class="btn btn-info" onclick="productAppov('<?=$v->product_num?>')">승인</button>
+					</td>
+				</tr>
+			<?}?>
+			<!-- Tr 반복 끝 -->
 
 		</tbody>
 	</table>
@@ -81,7 +69,7 @@
 
 
 	<!-- 페이지 넘버링 시작 -->
-	<nav id="pageNumber">
+	<!--nav id="pageNumber">
 	  <ul class="pagination">
 		<li>
 		  <a href="#" aria-label="Previous">
@@ -104,16 +92,8 @@
 
 </div>
 
-
-<!-- 실험용으로 써 볼 수 있는 테스트 버튼 -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-
-
 <!-- modal 시작 -->
-<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 			<div class="modal-header">
@@ -121,29 +101,13 @@
 				<h4 class="modal-title" id="exampleModalLabel">New message</h4>
 			</div>
 			<div id="productmodalBody" class="modal-body">
-				<!-- php로 뺄 부분 시작 -->
-				<? $this -> load ->view('/contents/salesCity1') ?>
-				<!-- php로 뺄 부분 끝 -->
+				<textarea name="" id="productConfirmtextarea" name="productConfirmtextarea" cols="30" rows="10"></textarea>
+				<button class="btn btn-primary" id="productConfirmBtn" name="productConfirmBtn">승인</button>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Send message</button>
 			</div>
 		</div>
 	</div>
-</div>
+</div-->
 <!-- modal 끝 -->
-
-
-<!-- 특정 문구를 찾아서 맞는 팝업으로 띄우는 스크립트 -->
-<script>
-	$('#memberModal').on('show.bs.modal', function (event) {
-	  var button = $(event.relatedTarget) // Button that triggered the modal
-	  var recipient = button.data('whatever') // Extract info from data-* attributes
-	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-	  var modal = $(this)
-	  modal.find('.modal-title').text('New message to ' + recipient)
-	  modal.find('.modal-body input').val(recipient)
-	})
-</script>
