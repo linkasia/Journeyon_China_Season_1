@@ -41,7 +41,8 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 	/*관리자 예약정보*/
 	function mainBook(){
-		$this->load->view('admin/04Book');
+		$data['bookList']=$this->adminProcess->bookList();
+		$this->load->view('admin/04Book',$data);
 	}
 
 

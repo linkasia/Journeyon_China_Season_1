@@ -113,6 +113,28 @@
 			//print_r($sql);
 			$query = $this->db->query($sql);
 		}
+
+		function bookList()
+		{
+			$sql ="SELECT a.*,
+											b.email AS saler,
+											d.email AS buyer,
+											c.title,
+											e.code_nm AS country,
+											f.code_nm AS city,
+											g.code_nm AS order_state
+							FROM user_order_product a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN product c ON a.product_num = c.product_num
+							LEFT JOIN USER d ON c.user_num = d.user_num
+							LEFT JOIN country_table e ON c.sortcountry = e.class AND c.country_code = e.code
+							LEFT JOIN city_table f ON c.sortcountry = f.sclass AND c.country_code = f.class AND  c.city_code = f.code
+							LEFT JOIN code_table g ON a.order_type_code = g.code AND g.class='0006'";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 ?>
 

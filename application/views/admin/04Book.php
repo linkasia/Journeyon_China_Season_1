@@ -7,7 +7,7 @@
 		<option value="">Shanghai</option>
 		<option value="">Beijing</option>
 	</select>
-	
+
 	<div id="startendBox">
 	<h6>Start</h6>
 	<label for="START"></label>
@@ -50,7 +50,7 @@
 		</div><!-- /input-group -->
 	</div><!-- /.col-lg-6 -->
 	<button class="btn btn-info mb20">상세 검색</button>
-</div>	
+</div>
 
 	<!-- 테이블 시작 -->
 	<table id="memberTable" class="table">
@@ -68,47 +68,18 @@
 
 		<tbody>
 			<!-- Tr 반복 시작 -->
-			<tr>
-				<td>1</td>
-				<td>China</td>
-				<td>shanghai</td>
-				<td>와우 놀라워라 상해~!</td>
-				<td>james@linkasia.co.kr</td>
-				<td>james@linkasia.co.kr</td>
-				<td><a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo">상담중</a>	</td>	
-			</tr>
+			<?foreach($bookList as $v){?>
+				<tr>
+					<td><?=$v->book_num?></td>
+					<td><?=$v->country?></td>
+					<td><?=$v->city?></td>
+					<td><?=$v->title?></td>
+					<td><?=$v->saler?></td>
+					<td><?=$v->buyer?></td>
+					<td><a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo"><?=$v->order_state?></a>	</td>
+				</tr>
+			<?}?>
 			<!-- Tr 반복 끝 -->
-
-			<tr>
-				<td>2</td>
-				<td>China</td>
-				<td>shanghai</td>
-				<td>와우 놀라워라 상해~!</td>
-				<td>james@linkasia.co.kr</td>
-				<td>james@linkasia.co.kr</td>
-				<td><a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo">구매확정</a>	</td>	
-			</tr>
-
-			<tr>
-				<td>3</td>
-				<td>China</td>
-				<td>shanghai</td>
-				<td>와우 놀라워라 상해~!</td>
-				<td>james@linkasia.co.kr</td>
-				<td>james@linkasia.co.kr</td>
-				<td><a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo">결제완료</a>	</td>	
-			</tr>
-
-			<tr>
-				<td>4</td>
-				<td>China</td>
-				<td>shanghai</td>
-				<td>와우 놀라워라 상해~!</td>
-				<td>james@linkasia.co.kr</td>
-				<td>james@linkasia.co.kr</td>
-				<td><a href="" data-toggle="modal" data-target="#memberModal" data-whatever="@mdo">서비스완료</a>	</td>	
-			</tr>
-
 		</tbody>
 	</table>
 	<!-- 테이블 끝 -->
@@ -140,15 +111,15 @@
 
 
 <!-- modal 시작 -->
-<div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h4 class="modal-title" id="exampleModalLabel">Status History</h4>
 			</div>
-			<div id="membermodalBody" class="modal-body">
-				<!-- php로 뺄 부분 시작 -->
+			<div id="membermodalBody" class="modal-body" >
+
 				<h5>Title : 와우 놀라워라 상해~!!!</h5>
 				<h5>Seller : james@linkasialco.kr</h5>
 				<h5>Buyer : james@linkasia.co.kr</h5>
@@ -162,13 +133,13 @@
 						</thead>
 
 						<tbody>
-							<!-- Tr 반복 시작 -->
+
 							<tr>
 								<td>상담시작</td>
 								<td>2015-02-10</td>
 							</tr>
-							<!-- Tr 반복 끝 -->
-							
+
+
 							<tr>
 								<td>구매확정</td>
 								<td>2015-02-11</td>
@@ -188,27 +159,9 @@
 						</tbody>
 					</table>
 				</div>
-				<!-- php로 뺄 부분 끝 -->
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Send message</button>
+
 			</div>
 		</div>
 	</div>
-</div>
+</div -->
 <!-- modal 끝 -->
-
-
-<!-- 특정 문구를 찾아서 맞는 팝업으로 띄우는 스크립트 -->
-<script>
-	$('#memberModal').on('show.bs.modal', function (event) {
-	  var button = $(event.relatedTarget) // Button that triggered the modal
-	  var recipient = button.data('whatever') // Extract info from data-* attributes
-	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-	  var modal = $(this)
-	  modal.find('.modal-title').text('New message to ' + recipient)
-	  modal.find('.modal-body input').val(recipient)
-	})
-</script>
