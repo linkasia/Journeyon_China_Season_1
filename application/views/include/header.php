@@ -101,7 +101,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
 						<li class="become_host" name="become_host" id="become_host"><i>申请加入当地微导游</i></li>
-						<li class="how_works" name="how_works" id="how_works"><i>如何参与</i></li>
+						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal"><i>如何参与</i></li>
 
 
 						<?
@@ -143,6 +143,29 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 				</div>
 			</header>
 		</div>
+
+<!-- modal1 시작 -->
+<div class="modal fade" id="how_worksmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title txt_blue" id="exampleModalLabel">如何参与</h4>
+			</div>
+			<div class="modal-body">
+				<p class="how_works_p">在Journey On! 卓尼上，您会找到旅行的新体验，新乐趣。
+					在这里您会发现很多没有在旅游书上出现的景点和地道活动；更没有广告宣传和强制消费的束缚，您可以放心的去享受与别不同的旅游；尽情的感受当地的文化；拥抱您旅途上的人和事。
+					登录后，您可以收藏您感兴趣的微旅程和挑选您的微旅行导游；也可以一尝当导游的体验，带世界各地的朋友们去看您住的地方的好风光。
+				您也可以使用其他社区平台的账号来使用Journey On!卓尼，把微旅行文化分享到每个角落。
+					</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- modal 끝 -->
 
 
 		<script type="text/javascript">
