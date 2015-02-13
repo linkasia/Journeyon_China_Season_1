@@ -54,7 +54,7 @@
             <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>得到认证需要满足以下条件：<br>
-							绑定手机， 有头像。。。<br>
+							绑定手机， 有头像<br>
 							申请认证填写资料时，如果实际生日跟身份证生日不一致，以身份证号码为准。<br>
 					</p>
                 </div>
@@ -90,7 +90,7 @@
 		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">7. 卓尼JOURNEY ON!服务会否收费？</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">7. JOURNEY ON!卓尼服务会否收费？</a>
                 </h4>
             </div>
             <div id="collapseSeven" class="panel-collapse collapse">
@@ -106,15 +106,15 @@
 		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">8. 如何预订导游或个性化旅行服务?</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">8. 如何预订微导和微旅行程服务?</a>
                 </h4>
             </div>
             <div id="collapseEight" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>1）卓尼JOURNEY ON!上的导游都按照兴趣和专业分了类，旅行者根据自己的需要找到适合自己的导游。<br>
+                    <p>1）卓尼JOURNEY ON!上的导游都按照兴趣和微旅程类别分类，旅行者根据自己的需要找到适合自己的微游。<br>
 						2）以网站直接对话、微信、微博、手机客户端、电子邮件等5种通讯方式，联系并确认导游的档期。<br>
 						3）确认行程单和需要支付的金额，回复确认。<br>
-						4）支付相关费用，支付成功后，你的卓尼JOURNEY ON!个人页面的选栏上，找到并可以查询到您当前的账单和支付状态。<br>
+						4）支付相关费用，支付成功后，您的JOURNEY ON!卓尼个人页面的选栏上，可以找到并查询您当前的账单和支付状态。<br>
 					</p>
                 </div>
             </div>
@@ -123,7 +123,7 @@
 		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">9. 在行程中遇上问题（旅客/导游不出现；发生争执该怎么办？）</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">9. 在行程中遇上问题（旅客/微导不出现；发生争执该怎么办？）</a>
                 </h4>
             </div>
             <div id="collapseNine" class="panel-collapse collapse">
@@ -136,12 +136,12 @@
 		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">10. 如何对微导游的服务作评价？</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTen">10. 如何对微导的服务作评价？</a>
                 </h4>
             </div>
             <div id="collapseTen" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>每次行程结束后，你可以发布对服务导游的评价、上传您的旅行日志。让其他的旅行者日后能做更明智的选择。</p>
+                    <p>每次行程结束后，您可以发布对服务导游的评价。让其他的旅行者日后能做更明智的选择。</p>
                 </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
             </div>
             <div id="collapseThirteen" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>您注册成为会员，并完善您的个人资料，就可以发布服务了。得到V认证使你更有公信力。 在你的发表公开前，我们的客服人员会审核您的服务，如果没有问题，很快就能出现在 卓尼JOURNEY ON!上。</p>
+                    <p>您注册成为会员，并完善您的个人资料，就可以发布服务了。得到V认证使您更有公信力。 在您的发表公开前，我们的客服人员会审核您的服务，如果没有问题，很快就能出现在JOURNEY ON! 卓尼上。</p>
                 </div>
             </div>
         </div>
@@ -210,7 +210,7 @@
             </div>
             <div id="collapseFifteen" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>我们将禁止任何人士进行可能会令人感到厌恶或滥用的行为，例如：上载/发放不当的内容，包括色情，暴力等等；发放垃圾讯息或对别人构成骚扰。 如帐户被停用/封锁，您仍可登入至Facebook，但可能未能使用功能。）</p>
+                    <p>我们将禁止任何人士进行可能会令人感到厌恶或滥用的行为，例如：上载/发放不当的内容，包括色情，暴力等等；发放垃圾讯息或对别人构成骚扰。 如帐号被停用/封锁，您仍可登入，但可能未能使用功能。）</p>
                 </div>
             </div>
         </div>
@@ -218,12 +218,12 @@
 		<div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen">16. 账户被盗用该怎么办？</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen">16. 账号被盗用该怎么办？</a>
                 </h4>
             </div>
             <div id="collapseSixteen" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>如果你怀疑自己的账户被盗用时，请跟我们联络。我们会停用你的账户，直到我们重新认证你的身份，你的账户会被重新开通。</p>
+                    <p>如果您怀疑自己的账号被盗用时，请跟我们联络。我们会停用您的账号，直到我们重新认证您的身份，您的账号会被重新开通。</p>
                 </div>
             </div>
         </div>

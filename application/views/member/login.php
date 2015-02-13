@@ -72,11 +72,11 @@
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<strong>密码错误。请在尝试。</strong>
+					<strong>密码错误。</strong>
 				</div>
 
 				<div class="input_container">
-					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="账户邮箱">
+					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="您的邮箱">
 					<span id="e-mail2"><font color='#fff'>马上注册</font></span>
 					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="密码">
 					<span id="passwordLose"><font color='#fff'>忘记密码</font></span>
@@ -88,7 +88,7 @@
 				</div>
 				<div class="sns_container">
 					<div class="div1"></div>
-					<div class="div2"><span>其它账号登陆</span></div>
+					<div class="div2"><span>以其它账号登陆</span></div>
 					<div class="div3"></div>
 					<div class="sns_icon">
 						<img src="/application/views/images/main/sns01.png" alt="taobao">
@@ -130,7 +130,7 @@
 							data:{selnum: _selnum, mode:_mode},
 							url:"/index.php/auth/sendmail",
 							success: function (data){
-								alert("패스워드가 발송되었습니다.");
+								alert("已发送密码至您的邮箱.");
 							}
 						});
 					}
@@ -162,11 +162,11 @@
 								//var failMessge = "<button type='button' class='close' data-dismiss='alert' aria-label='Close'>";
 								//failMessge += "<span aria-hidden='true'>&times;</span>";
 								//failMessge += "</button>";
-								//failMessge += "<strong>登入失败。请再尝试。</strong>";
+								//failMessge += "<strong>登录失败。请再尝试。</strong>";
 								document.getElementById('alertDiv').style.display = "block";
 							}
 
-							//alert("패스워드가 발송되었습니다.");
+							//alert("已发送密码至您的邮箱.");
 						}
 					});
 					//document.frm.submit();
