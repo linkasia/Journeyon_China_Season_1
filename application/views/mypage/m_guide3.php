@@ -77,8 +77,10 @@
 					<div class="absoluteDiv">
 						<span>价格</span><br>
 						<span class="font_blue"> <?=$v->fixed_fee?>元</span><br>
-						<span class="btn btn-info" data-toggle="modal" data-target="#myModal">取消交易</span>
-						<div id="cancelAlertBox" class="alert alert-danger mt20">취소 승인 대기중</div>
+						<span class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="insertBookNum('<?=$v->book_num?>','<?=$v->cancel_text?>')">取消交易</span>
+						<?if($v->order_type_code == "0005"){?>
+							<div id="cancelAlertBox" class="alert alert-danger mt20">취소 승인 대기중</div>
+						<?}?>
 					</div>
 				</div><!-- stepdiv 닫음 -->
 			</div><!-- salesList 닫음, 이 박스가 반복됨-->
@@ -110,10 +112,10 @@
 
 
 							<textarea class="form-control" name="cancelComment" id="cancelComment" cols="30" rows="10" placeholder="请说明取消订单的原因"></textarea>
-
+							<input type='hidden' id='hiddenBookNum' name='hiddenBookNum' value="">
 						</div><!-- modal-body 닫힘 -->
 						<div class="modal-footer">
-							<button class="btn btn-warning" id="cancelChat" name="cancelChat">취소하기</button>
+							<button class="btn btn-warning" id="cancelBook" name="cancelBook" onclick="cancelBook()">취소하기</button>
 							<!-- <button type="button" class="btn btn-danger">确定</button> -->
 							<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
 						</div><!-- modal-footer 닫힘 -->

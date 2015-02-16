@@ -675,7 +675,17 @@
 			return $result;
 		}
 
-		function insertBooking($productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea)
+		function maxBookNum()
+		{
+			$sql ="SELECT MAX(book_num) + 1 AS book_num
+								FROM user_order_product";
+			$query = $this->db->query($sql);
+			$query->num_rows();
+			return $query->row();
+		}
+
+		//예약저장
+		function insertBooking($maxNum,$productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea)
 		{
 			$sql ="INSERT INTO user_order_product
 													(book_num,
@@ -692,13 +702,14 @@
 													fixed_fee,
 													complete_code,
 													complain_text,
+													cancel_text,
 													deposited,
 													deposited_date,
 													modified_date,
 													create_date
 													)
 													VALUES
-													(0,
+													('".$maxNum."',
 													'".$productNum."',
 													'".$productUserNum."',
 													'".$user_num."',
@@ -713,8 +724,58 @@
 													'',
 													'',
 													'',
+													'',
 													0,
+													SYSDATE(),
+													SYSDATE();
+													'Y')";
+													//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		//예약히스토리 저장
+		function insertBookedHis($maxNum,$productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea)
+		{
+			$sql ="INSERT INTO booked_history
+													(book_num,
+													product_num,
+													product_user_num,
+													user_num,
+													contry_code,
+													phon_num,
+													order_type_code,
+													book_Start_date,
+													book_End_date,
+													book_person,
+													book_request,
+													fixed_fee,
+													complete_code,
+													complain_text,
+													cancel_text,
+													deposited,
+													deposited_date,
+													modified_date,
+													create_date
+													)
+													VALUES
+													('".$maxNum."',
+													'".$productNum."',
+													'".$productUserNum."',
+													'".$user_num."',
+													'".$countryCode."',
+													'".$phoneInput."',
+													'0004',
+													'". $sdate."',
+													'". $edate."',
+													'".$personNum."',
+													'".$producttextArea."',
+													'0',
+													'',
+													'',
+													'',
+													'',
 													0,
+													SYSDATE(),
 													SYSDATE());";
 													//print_r($sql);
 			$query = $this->db->query($sql);

@@ -29,7 +29,6 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function mypublic(){
-
 		$userNum = $_REQUEST['userNum'];
 
 		$data['langList'] = $this->tb_code->langList();
@@ -236,5 +235,14 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	function stopPage(){
 		$data['salesProduct'] =$this->myModify->mySalesList($this->session->userdata['num'],'0003');
 		$this -> load ->view('/mypage/m_guide2_tab1', $data);
+	}
+
+	//예약취소
+	function cancelBook(){
+		$booknum = $_REQUEST['hiddenBookNum'];
+		$cancelBookText = $_REQUEST['cancelBookText'];
+
+		$update['BookCancelUpdate'] = $this->myModify->cancelBook($booknum,$cancelBookText);
+		$update['BookCancelUpdateHis'] = $this->myModify->cancelBookHis($booknum);
 	}
 }

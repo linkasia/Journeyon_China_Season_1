@@ -9,8 +9,14 @@
 	</aside><!-- leftmenuWrap end -->
 
 	<div id="rightWrap">
-		<? $data="";
-			$this->load->view("/mypage/m_guide0",$data);
+		<?
+			$mode = $_REQUEST['mode'];
+			if($mode == "3"){
+				$data['reservation'] = $this->myModify->mySellPage($this->session->userdata['num']);
+				$this->load->view('mypage/m_guide3', $data);
+			}else{
+				$this->load->view("/mypage/m_guide0");
+			}
 		?>
 	</div><!-- rightWrap end -->
 
@@ -60,74 +66,97 @@
 		});
 	}
 
+	//예약 키생성
+	function insertBookNum(num,contents){
+		document.getElementById('hiddenBookNum').value=num;
+		document.getElementById('cancelComment').value=contents;
+	}
+
+	function cancelBook(){
+		var _hiddenBookNum = $('#hiddenBookNum').val();
+		var _cancelBookText = $('#cancelComment').val();
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ hiddenBookNum:_hiddenBookNum, cancelBookText:_cancelBookText },
+			url:"/index.php/mypage/myPage_M/cancelBook",
+			success: function (data){
+				//alert(data);
+				location.href = "/index.php/mypage/myPage_M/myguide?mode=3";
+			}
+		});
+	}
+
 	$(function(){
-			$('#guideHome').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuideHome",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#guideHome').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myGuideHome",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#guideR').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myGuideAdmin",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#guideR').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myGuideAdmin",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#itemAdmin').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myItemAdmin",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#itemAdmin').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myItemAdmin",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#salesAdmin').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/mySalesAdmin",
-					success: function (data){
-						//alert(data);
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#salesAdmin').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/mySalesAdmin",
+				success: function (data){
+					//alert(data);
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
 
-			$('#cancelAdmin').click( function(){
-				$.ajax({
-					type:"POST" ,
-					dataType:"text",
-					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-					data:{ },
-					url:"/index.php/mypage/myPage_M/myCancelAdmin",
-					success: function (data){
-						document.getElementById('rightWrap').innerHTML =data;
-					}
-				});
+		$('#cancelAdmin').click( function(){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ },
+				url:"/index.php/mypage/myPage_M/myCancelAdmin",
+				success: function (data){
+					document.getElementById('rightWrap').innerHTML =data;
+				}
 			});
+		});
+
 	});
 </script>

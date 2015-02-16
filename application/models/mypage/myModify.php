@@ -267,5 +267,46 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		function cancelBook($booknum, $cancelBookText)
+		{
+			$sql ="UPDATE user_order_product
+									SET order_type_code = '0005',
+											cancel_text = '".$cancelBookText."',
+											modified_date = SYSDATE()
+							WHERE book_num = '".$booknum."'";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		function cancelBookHis($booknum)
+		{
+			$sql ="INSERT INTO booked_history
+									SELECT book_num,
+													product_num,
+													product_user_num,
+													user_num,
+													contry_code,
+													phon_num,
+													'0005',
+													book_Start_date,
+													book_End_date,
+													book_person,
+													book_request,
+													fixed_fee,
+													complete_code,
+													complain_text,
+													cancel_text,
+													deposited,
+													deposited_date,
+													modified_date,
+													create_date
+									FROM user_order_product
+									WHERE book_num = '0000000054'
+									ORDER BY modified_date DESC
+									LIMIT 1";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+		}
 	}
 ?>

@@ -348,7 +348,16 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$phoneInput = $_REQUEST['phoneInput'];
 		$producttextArea = $_REQUEST['producttextArea'];
 
-		$insert['chatSend']= $this->country_M->insertBooking( $productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea );
+		$result = $this->country_M->maxBookNum();
+		$maxNum="";
+		if($result->chat_num == null){
+			$maxNum= 0;
+		}else{
+			$maxNum = $result->book_num;
+		}
+
+		$insert['bookInsert']= $this->country_M->insertBooking( $maxNum,$productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea );
+		$insert['bookedHis']= $this->country_M->insertBookedHis( $maxNum,$productNum, $personNum, $user_num, $sdate, $edate, $productUserNum, $personInput, $countryCode, $phoneInput, $producttextArea );
 	}
 
 	//예약 날짜 저장

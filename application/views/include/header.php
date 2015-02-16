@@ -120,7 +120,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 								<ul class="dropdown-menu" role="menu" aria-labelledby="profileMenu">
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/mypublic?userNum=<?=$this->session->userdata['num']?>">个人页面</a></li>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myaccountSetting">编辑及设定</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguide">微导游</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguide?mode=0">微导游</a></li>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/mypage/myPage_M/myguest?mode=0">旅行者</a></li>
 									<?if($this->session->userdata['email'] == "admin@linkasia.co.kr"){?>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/admin/adminMenu/mainTotalMenu?mode=">admin</a></li>
