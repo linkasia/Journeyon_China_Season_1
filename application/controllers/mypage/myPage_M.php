@@ -245,4 +245,11 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$update['BookCancelUpdate'] = $this->myModify->cancelBook($booknum,$cancelBookText);
 		$update['BookCancelUpdateHis'] = $this->myModify->cancelBookHis($booknum);
 	}
+
+	//상품정지
+	function salesStop(){
+		$productNum = $_REQUEST['productNum'];
+		//print_r($procustNum);
+		$update['salesStop'] = $this->myModify->productStop($productNum);
+	}
 }

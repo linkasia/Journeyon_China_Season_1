@@ -308,5 +308,14 @@
 			//print_r($sql);
 			$query = $this->db->query($sql);
 		}
+
+		function productStop($productNum)
+		{
+			$sql ="UPDATE product
+									SET product_state = '0003'
+							WHERE product_num = '".$productNum."' ";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+		}
 	}
 ?>

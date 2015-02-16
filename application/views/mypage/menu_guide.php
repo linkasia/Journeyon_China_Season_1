@@ -11,7 +11,11 @@
 	<div id="rightWrap">
 		<?
 			$mode = $_REQUEST['mode'];
-			if($mode == "3"){
+			if($mode == "2"){
+				$data['reservation'] = $this->myModify->myReservationPage($this->session->userdata['num']);
+				$data['mode']="";
+				$this->load->view('mypage/m_guest2', $data);
+			}else if($mode == "3"){
 				$data['reservation'] = $this->myModify->mySellPage($this->session->userdata['num']);
 				$this->load->view('mypage/m_guide3', $data);
 			}else{
@@ -67,6 +71,24 @@
 	}
 
 	function productModify(key){
+		//location.href = "/index.php/City/country/productUpdate?maxProduct="+key+"";
+	}
+
+	function productStop(key){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ productNum:key },
+			url:"/index.php/mypage/myPage_M/salesStop",
+			success: function (data){
+				//alert(data);
+				location.href = "/index.php/mypage/myPage_M/myguide?mode=3";
+			}
+		});
+	}
+
+	function productDelete(key){
 		//location.href = "/index.php/City/country/productUpdate?maxProduct="+key+"";
 	}
 
