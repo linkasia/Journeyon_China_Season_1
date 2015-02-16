@@ -65,13 +65,18 @@
 			}
 		});
 	}
-
+/*
+	function productModify(key){
+		alert("A");
+	}
+*/
 	//예약 키생성
 	function insertBookNum(num,contents){
 		document.getElementById('hiddenBookNum').value=num;
 		document.getElementById('cancelComment').value=contents;
 	}
 
+	//예약취소
 	function cancelBook(){
 		var _hiddenBookNum = $('#hiddenBookNum').val();
 		var _cancelBookText = $('#cancelComment').val();

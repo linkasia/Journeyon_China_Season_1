@@ -344,7 +344,7 @@ $(function(){
 			url:"/index.php/city/country/updateProduct",
 			success: function (data){
 				//document.getElementById('test').innerHTML=data;
-				location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
+				location.href = "/index.php/mypage/myPage_M/myguide?mode=0";
 			}
 		});
 	});
@@ -360,7 +360,7 @@ $(function(){
 			data:{ product_num: _product_num},
 			url:"/index.php/city/country/deleteProduct",
 			success: function (data){
-				location.href = "<?=site_url('/mypage/myPage_M/myguide'); ?>";
+				location.href = "/index.php/mypage/myPage_M/myguide?mode=0";
 			}
 		});
 	});

@@ -33,6 +33,29 @@
 		location.href = "<?=site_url('auth/chat_List'); ?>";
 	}
 
+	//예약 키생성
+	function insertBookNum(num,contents){
+		document.getElementById('hiddenBookNum').value=num;
+		document.getElementById('cancelComment').value=contents;
+	}
+
+	//예약취소
+	function cancelBook(){
+		var _hiddenBookNum = $('#hiddenBookNum').val();
+		var _cancelBookText = $('#cancelComment').val();
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ hiddenBookNum:_hiddenBookNum, cancelBookText:_cancelBookText },
+			url:"/index.php/mypage/myPage_M/cancelBook",
+			success: function (data){
+				//alert(data);
+				location.href = "/index.php/mypage/myPage_M/myguest?mode=2";
+			}
+		});
+	}
+
 	function myBucketList(a,b){
 		$.ajax({
 			type:"POST" ,
