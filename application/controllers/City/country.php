@@ -167,14 +167,30 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	}
 
 
-	/*상품 업로드 입력*/
+	/*상품 저장*/
 	function productUpload(){
 		$insert['insertproduct'] = $this->country_M->insertproduct($this->session->userdata['num']);
 		$data['country'] = $this->main_i->Country();
 		//내가 저장한 값을 가져오기 위한 쿼리
-		$data['maxProduct'] = $this->country_M->maxProduct();
+		$result = $this->country_M->maxProduct();
+		$data['maxProduct'] = $result->product_num;
+
 		$data['theme'] = $this->tb_code->theme();
 		$data['recommend'] = $this->tb_code->recommend();
+
+		$data['recommend'] = $this->country_M->salesDetailCity();
+
+		$this->load->view('include/header');
+		$this->load->view('contents/productWrite',$data);
+		$this->load->view('include/footer');
+	}
+
+	/*상품 업데이트*/
+	function productUpdate(){
+		$data['country'] = $this->main_i->Country();
+		$data['theme'] = $this->tb_code->theme();
+		$data['recommend'] = $this->tb_code->recommend();
+		$data['maxProduct'] = $_REQUEST['maxProduct'];
 
 		$this->load->view('include/header');
 		$this->load->view('contents/productWrite',$data);

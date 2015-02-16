@@ -1,4 +1,5 @@
 <div id="productWrapAll">
+
 	<div class="productWrap">
 		<div class="productDiv1">
 			<p class="productTitle">国家 & 城市</p>
@@ -40,9 +41,8 @@
 			<?}
 			}?>
 				<form name="imgUploadfrm" id="imgUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/city/country/imgUpload">
-				<?foreach($maxProduct as $v){?>
-					<input type="hidden" id="hiddenProductNum" name="hiddenProductNum" value="<?=$v->product_num?>" >
-				<?}?>
+
+					<input type="text" id="hiddenProductNum" name="hiddenProductNum" value="<?=$maxProduct?>" >
 					<!-- 위에 사진을 누르면 여기서부터 overview가 시작됨 data-toggle 과 id로 연동 작동 -->
 					<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog2">

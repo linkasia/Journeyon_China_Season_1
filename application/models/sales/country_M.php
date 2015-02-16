@@ -45,7 +45,7 @@
 													LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
 													WHERE sortcountry='".$co."'
 													AND country_code='".$ci."'
-													AND useYn = 'Y'
+													AND a.useYn = 'Y'
 													AND product_state = '0001'
 													".$cityChoice."
 								) AS u
@@ -480,8 +480,15 @@
 							ORDER BY product_num DESC
 							LIMIT 1";
 			$query = $this->db->query($sql);
-			$result = $query->result();
-			return $result;
+
+			if($query->num_rows() > 0)
+			{
+				return $query->row();
+			}
+			else
+			{
+				return false;
+			}
 		}
 
 		function updateProduct($product_num, $productTitle ,$productContents ,$onePrice ,$timeSet ,$meetPlace ,$include ,$notinclude ,$etc ,$theme1 ,$theme2 ,$theme3 ,$priceMember1 ,$priceMember2, $selectClassCountry, $selectCodeCountry, $selectCity)

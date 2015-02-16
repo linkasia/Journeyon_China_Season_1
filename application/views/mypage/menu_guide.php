@@ -65,11 +65,11 @@
 			}
 		});
 	}
-/*
+
 	function productModify(key){
-		alert("A");
+		//location.href = "/index.php/City/country/productUpdate?maxProduct="+key+"";
 	}
-*/
+
 	//예약 키생성
 	function insertBookNum(num,contents){
 		document.getElementById('hiddenBookNum').value=num;
@@ -87,7 +87,6 @@
 			data:{ hiddenBookNum:_hiddenBookNum, cancelBookText:_cancelBookText },
 			url:"/index.php/mypage/myPage_M/cancelBook",
 			success: function (data){
-				//alert(data);
 				location.href = "/index.php/mypage/myPage_M/myguide?mode=3";
 			}
 		});
