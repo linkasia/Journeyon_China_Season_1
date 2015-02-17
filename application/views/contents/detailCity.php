@@ -108,12 +108,14 @@
 				<div class="aside-like">
 					<hr>
 					<div id='likeUp'>
-					<?foreach($bucketList as $c){
-						if($c->cnt == 0){?>
-							<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
-					<?}else{?>
-							<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
-					<?}
+					<?if($bucketList != null){?>
+						<?foreach($bucketList as $c){
+							if($c->cnt == 0){?>
+								<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
+						<?}else{?>
+								<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
+						<?}
+					}
 				}?>
 				</div>
 					<span>&nbsp;想去</span>
@@ -269,7 +271,7 @@
 		});
 */
 		$('#city1').click( function(){
-			location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+_salesNum+"&mode='); ?>";
+			location.href = "/index.php/City/country/Detailcity_search?salesNum="+_salesNum+"&mode=";
 			/*
 			$.ajax({
 				type:"GET" ,

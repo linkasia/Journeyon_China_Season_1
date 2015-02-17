@@ -83,13 +83,23 @@
 			url:"/index.php/mypage/myPage_M/salesStop",
 			success: function (data){
 				//alert(data);
-				location.href = "/index.php/mypage/myPage_M/myguide?mode=3";
+				location.href = "/index.php/mypage/myPage_M/myguide?mode=2";
 			}
 		});
 	}
 
 	function productDelete(key){
-		//location.href = "/index.php/City/country/productUpdate?maxProduct="+key+"";
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ productNum:key },
+			url:"/index.php/mypage/myPage_M/salesDelete",
+			success: function (data){
+				alert(data);
+				//location.href = "/index.php/mypage/myPage_M/myguide?mode=2";
+			}
+		});
 	}
 
 	//예약 키생성

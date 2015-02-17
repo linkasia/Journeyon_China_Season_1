@@ -317,5 +317,28 @@
 							//print_r($sql);
 			$query = $this->db->query($sql);
 		}
+
+		function productDelete($productNum)
+		{
+			$sql ="UPDATE product
+									SET product_state = '0004',
+											useYn = 'N'
+							WHERE product_num = '".$productNum."' ";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		function comfirmDate($productNum)
+		{
+			$sql ="SELECT MAX(DATE_FORMAT(book_End_date,'%Y-%m-%d')) AS book_End_date
+							FROM user_order_product
+							WHERE product_num = '".$productNum."'";
+			$query = $this->db->query($sql);
+			if($query->num_rows() > 0){
+				return $query->row();
+			}else{
+				return FALSE;
+			}
+		}
 	}
 ?>

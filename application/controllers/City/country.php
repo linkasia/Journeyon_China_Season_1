@@ -38,9 +38,15 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	function Detailcity_search(){
 
 		$salesNum = $_REQUEST['salesNum'];
-		$user_num = $this->session->userdata['num'];
+		if(@$this->session->userdata['logged_in'] == TRUE){
+			$user_num = $this->session->userdata['num'];
+			$data['bucketList']= $this->country_M->bucketLikeList($salesNum,$user_num);
+		}else{
+			$data['bucketList']= null;
+		}
+
 		$data['salesBasic']= $this->country_M->salesDetailCountry($salesNum);
-		$data['bucketList']= $this->country_M->bucketLikeList($salesNum,$user_num);
+
 
 		$this->load->view('include/header');
 		$this->load->view('contents/detailCity',$data);

@@ -252,4 +252,15 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		//print_r($procustNum);
 		$update['salesStop'] = $this->myModify->productStop($productNum);
 	}
+
+	//상품삭제
+	function salesDelete(){
+		$productNum = $_REQUEST['productNum'];
+		$result =  $this->myModify->comfirmDate($productNum);
+		if($result->book_End_date > date("Y-m-d")){
+			print_r("fail");
+		}else{
+			//$update['salesStop'] = $this->myModify->productDelete($productNum);
+		}
+	}
 }

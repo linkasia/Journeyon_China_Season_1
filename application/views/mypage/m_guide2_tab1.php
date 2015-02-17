@@ -55,7 +55,7 @@
 					</div> <!-- list_rightwrap 닫음 -->
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter" role="group" aria-label="" id="b-group">
-					<button type="button" class="btn whitegloss bd" id="productModify" name="productModify" onclick="productModify('<?=$v->product_num?>')">编辑</button>
+					<!--button type="button" class="btn whitegloss bd" id="productModify" name="productModify" onclick="productModify('<?=$v->product_num?>')">编辑</button-->
 					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop" onclick="productStop('<?=$v->product_num?>')">停止发放</button>
 					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete" onclick="productDelete('<?=$v->product_num?>')">删除</button>
 				</div>
