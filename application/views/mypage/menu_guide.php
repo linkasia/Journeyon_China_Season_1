@@ -96,8 +96,11 @@
 			data:{ productNum:key },
 			url:"/index.php/mypage/myPage_M/salesDelete",
 			success: function (data){
-				alert(data);
-				//location.href = "/index.php/mypage/myPage_M/myguide?mode=2";
+				if(data =="fail"){
+					alert("가이드 예약이 있는 상품입니다. 삭제 실패");
+				}else{
+					location.href = "/index.php/mypage/myPage_M/myguide?mode=2";
+				}
 			}
 		});
 	}

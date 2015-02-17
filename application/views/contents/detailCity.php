@@ -15,11 +15,11 @@
 		<div id='viewContents' name='viewContents' class="contents_wrap">
 			<!-- include 한 부분 -->
 			<?
-
 			if($mode == "P"){
 				foreach($salesBasic as $v){
 					$data['userInfo']= $this->country_M->detailUser($v->user_num);
 					$data['userSales']= $this->country_M->userSales($v->user_num);
+					$data['ImageCity']= $this->country_M->salesImageCity($v->product_num);
 				}
 				$this->load->view("/contents/salesCity3", $data);
 			}else{

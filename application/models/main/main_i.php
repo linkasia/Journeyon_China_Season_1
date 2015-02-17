@@ -74,6 +74,7 @@
 											LEFT JOIN USER b ON a.user_num = b.user_num
 											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
 											WHERE a.useYn='Y'
+											AND a.product_state = '0001'
 											ORDER BY a.create_date DESC
 											LIMIT 3
 							) AS u
@@ -101,6 +102,7 @@
 											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
 											WHERE a.useYn='Y'
 											AND a.adminYn='Y'
+											AND a.product_state = '0001'
 											ORDER BY a.create_date DESC
 											LIMIT 6
 							) AS u

@@ -260,7 +260,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		if($result->book_End_date > date("Y-m-d")){
 			print_r("fail");
 		}else{
-			//$update['salesStop'] = $this->myModify->productDelete($productNum);
+			$update['salesStop'] = $this->myModify->productDelete($productNum);
 		}
 	}
 }
