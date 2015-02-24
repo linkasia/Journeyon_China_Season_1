@@ -1,6 +1,9 @@
 <?
 foreach($salesCityQnA as $v){
 ?>
+
+
+
 			<div class="reply"><!-- 질문 부분 -->
 				<div class="profile_pic">
 					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">

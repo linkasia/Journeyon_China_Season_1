@@ -6,9 +6,9 @@
 <div id="detailCity_wrap" style="position: relative; display: block;">
 	<section id="left_section" style="position: relative; display: block;">
 		<div class="menuTab">
-			<button class="btn btn-default mr10" id = 'city1' name='city1'>微旅行</button>
-			<button class="btn btn-default mr10" id = 'city2' name='city2'>疑问解答</button>
-			<button class="btn btn-default" id = 'city3' name='city3'>介绍</button>
+			<button class="btn btn-default mr10" id = 'city1' name='city1'><span class="glyphicon glyphicon-tag"></span>  微旅行</button>
+			<button class="btn btn-default mr10" id = 'city2' name='city2'><span class="glyphicon glyphicon-comment"></span>   疑问解答</button>
+			<button class="btn btn-default" id = 'city3' name='city3'><span class="glyphicon glyphicon-user"></span>   介绍</button>
 		</div>
 
 		<!-- salesCity1.php 로 뺀 부분 CI로딩 -->
