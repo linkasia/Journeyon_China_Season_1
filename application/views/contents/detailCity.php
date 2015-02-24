@@ -5,9 +5,9 @@
 
 <div id="detailCity_wrap" style="position: relative; display: block;">
 	<section id="left_section" style="position: relative; display: block;">
-		<div class="4menu">
-			<button class="btn btn-default" id = 'city1' name='city1'>微旅行</button>
-			<button class="btn btn-default" id = 'city2' name='city2'>疑问解答</button>
+		<div class="menuTab">
+			<button class="btn btn-default mr10" id = 'city1' name='city1'>微旅行</button>
+			<button class="btn btn-default mr10" id = 'city2' name='city2'>疑问解答</button>
 			<button class="btn btn-default" id = 'city3' name='city3'>介绍</button>
 		</div>
 
