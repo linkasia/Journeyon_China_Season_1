@@ -34,6 +34,7 @@
 	</section>
 
 	<aside id="right_aside">
+	<div class="menuband jblack"></div>
 	<form name="frmBooking" id="frmBooking" method='post' enctype="multipart/form-data" action="/index.php/city/country/insertChating">
 	<input type='hidden' id='hiddenProduct' name='hiddenProduct' value='<?=$salesNum?>' >
 		<?foreach($salesBasic as $v){?>
@@ -49,20 +50,20 @@
 				</div>
 
 				<div class="calandar">
-					<div class="select">
-					</div>
-
+					<div class="select"></div>
 					<!--div id='divCal' name='divCal'> <?//$this->load->view("/include/calendar");?> </div-->
-					<div id='jqxWidget'> </div>
+					<div id='jqxWidget'></div>
 
 					<!-- <img src="/application/views/images/contents/calandar.png" alt=""> --> <!-- 캘린더 들어가는 칸 -->
 					<div id='insetDiv' name='insetDiv' class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
 						<ul id='checkDate' name='checkDate'>	</ul>
 					</div>
-					<textarea name="recheckTextarea" id="recheckTextarea" cols="27" rows="5" placeholder=" "></textarea>
+					<textarea class="mt20" name="recheckTextarea" id="recheckTextarea" placeholder=" "></textarea>
 				</div>
 				<div class="aside-menu">
-					<button type="submit" class="btn btn-primary" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
+					<button type="submit" class="btn btn-info mb20" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
+
+					
 					<!-- Modal 여기서부터 Overview 박스 시작 -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
@@ -105,8 +106,9 @@
 					</div><!-- modal fade Overveiw 끝 -->
 
 				</div>
+
+
 				<div class="aside-like">
-					<hr>
 					<div id='likeUp'>
 					<?if($bucketList != null){?>
 						<?foreach($bucketList as $c){

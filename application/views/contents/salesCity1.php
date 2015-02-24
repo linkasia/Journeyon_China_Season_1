@@ -3,8 +3,8 @@
 <script type="text/javascript">
 	$( document ).ready(function( $ ) {
 		$( '#example3' ).sliderPro({
-			width: 960,
-			height: 500,
+			width: 660,
+			height: 400,
 			fade: true,
 			arrows: true,
 			buttons: false,
@@ -17,7 +17,6 @@
 			autoplay: false
 		});
 	});
-
 
 
 </script>
