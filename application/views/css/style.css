@@ -516,7 +516,7 @@
 
 	#left_section .contents_wrap .contents_text2{width: 690px; height: auto; margin-top: 50px;}
 	
-	#left_section .contents_wrap .information_wrap{width: 690px; float: left;}
+	#left_section .contents_wrap .information_wrap{width: 690px; float: left; border-bottom: 1px solid #a9a9a9; margin-bottom: 20px;}
 	#left_section .contents_wrap .information dt{margin-top: 10px;}
 	#left_section .contents_wrap .information dt img{margin-right: 5px;}
 	#left_section .contents_wrap .information dd{text-indent: 16pt; margin-bottom: 30px;}
@@ -545,7 +545,7 @@
 	#left_section .addReply{float: right; cursor: pointer; color: #f3a46b; font-weight: 1000;}
 
 		/* salescity2 qna 텍스트 입력 박스 */
-		#left_section .typingBox{width: 100%; background-color: #f0f1f5; padding: 14px; float: left; position: relative;}
+		#left_section .typingBox{width: 100%; background-color: #f0f1f5; padding: 14px; float: left; position: relative; margin-top: 60px;}
 		#left_section .typingBox .profile_pic{width: 110px; height: 90px; position: relative; background-color: ; float: left;}
 		#left_section .typingBox .profile_pic:after{clear: both; display: block; *zoom: 1;}
 		#left_section .typingBox .profile_pic .profile_image{width: 74px; height: 74px; position: absolute; left: 20px; top:10px;}
@@ -564,7 +564,7 @@
 
 		/* salesCity1.php 전체 감싸는 wrap은 공유 */
 		#left_section .contents_wrap .profileWrap1{width: 690px; height: ; float: left; margin-bottom: 20px;}
-		#left_section .contents_wrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
+		#left_section .contents_wrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 20px;}
 		#left_section .contents_wrap .profileWrap1 .title1 .underline{border-bottom: 2px #f3c807 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#left_section .contents_wrap .profileWrap1 .profile_text1{width: 190px; height: auto; text-align: right; float: left; margin-left: 40px;}
 		#left_section .contents_wrap .profileWrap1 .profile_text2{width: 220px; height: 200px; text-align: left; float: left; margin-left: 10px;}
@@ -640,7 +640,7 @@
 
 
 	/*오른쪽 예약박스 detailCity.php */
-	#right_aside{width: 230px; height: auto; margin-left: 20px; margin-top: 112px; float: left;}
+	#right_aside{width: 230px; height: auto; margin-left: 20px; margin-top: 120px; float: left;}
 	#right_aside .right_reservation{
 		width: 230px; margin-bottom: 20px; padding: 10px 10px 0 10px;
 		border-radius: 8px; padding-bottom: 30px; border: 1px solid #fdc066;

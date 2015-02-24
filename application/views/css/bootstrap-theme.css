@@ -133,7 +133,7 @@
 
 .btn-info:hover,
 .btn-info:focus {
-  background-color: #2aabd2;
+  background-color: #52a0d2;
   background-position: 0 -15px;
 }
 .btn-info:active,
@@ -141,9 +141,10 @@
   /*background-color: #2aabd2;
   border-color: #28a4c9;*/
 }
+
 .btn-info:disabled,
 .btn-info[disabled] {
-  background-color: #2aabd2;
+  background-color: #52a0d2;
   background-image: none;
 }
 .btn-warning {
