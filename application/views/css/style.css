@@ -640,16 +640,19 @@
 
 
 	/*오른쪽 예약박스 detailCity.php */
-	#right_aside{width: 230px; height: auto; margin-left: 20px; float: left;}
-	#right_aside .right_reservation{width: 230px; margin-bottom: 20px; padding: 10px 10px 0 10px; border-radius: 8px; padding-bottom: 30px; border: 1px solid #eee;}
+	#right_aside{width: 230px; height: auto; margin-left: 20px; margin-top: 112px; float: left;}
+	#right_aside .right_reservation{width: 230px; margin-bottom: 20px; padding: 10px 10px 0 10px; border-radius: 8px; padding-bottom: 30px; border: 1px solid #fdc066;}
 
 	#right_aside .right_reservation .price{margin-bottom: 30px;}
 	#right_aside .right_reservation .price .price_title{margin-top: 10px;}
-	#right_aside .right_reservation .price .price_sub{text-align: right; font-size: 1.3em; font-weight: 700;}
+	#right_aside .right_reservation .price .price_sub{text-align: right; font-size: 1.3em; font-weight: 700; color: #62b8ef;}
 	#right_aside .right_reservation .calandar img{margin-left: 5px; margin-top: 10px;}
 	#right_aside .right_reservation .calandar .select{}
 	#right_aside .right_reservation .calandar{margin-top: 10px;}
 
+	#right_aside{
+	
+	}
 
 	.reply_id{font-weight: 700; color: #3f7fce;}
 	.typingArea{width: 520px; height: 100px; margin-left: 20px; margin-top: 10px; border-radius: 5px; max-width: 520px;}
@@ -709,7 +712,7 @@
 	.checkdateClosebtn{position: absolute; top: -7px; right: 3px; cursor: pointer;}
 
 	/*오른쪽 프로필*/
-	#right_aside	.right_profile{width: 230px; border: 1px solid #f0f1f5; border-radius: 12px; position: relative; padding-bottom: 10px;}
+	#right_aside	.right_profile{width: 230px; border: 1px solid #fdc066; border-radius: 12px; position: relative; padding-bottom: 10px;}
 	#right_aside .right_profile .gray_box{width: 100%; height: 30px; top: 46px; position: absolute; text-indent: 120pt; line-height: 30px; color: #fff;
 		background: rgb(252,234,187); /* Old browsers */
 		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -748,7 +751,8 @@
 	
 	#recheckTextarea{
 		width: 210px; max-width: 210px; height: 90px; max-height: 90px; 
-		background-color: #f9fafc;
+		background-color: #ffffdb;
+		border: 1px solid #fdc066;
 	}
 
 	#right_aside .right_profile .text p{margin-left: 10px; margin-top: 30px; margin-bottom: 20px;}
@@ -759,7 +763,7 @@
 
 	#right_aside .profile-btn{display: block; bottom: 20px; margin-left: 50px;} /*버튼*/
 
-	#right_aside .aside-menu{margin-top: 30px;}
+	#right_aside .aside-menu{margin-top: 5px;}
 	#right_aside .aside-menu img{margin-left: 50px;}
 	#right_aside .aside-like{margin-left: 64px; cursor: pointer;}
 	#right_aside .aside-like span{

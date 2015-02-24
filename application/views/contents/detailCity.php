@@ -6,9 +6,9 @@
 <div id="detailCity_wrap" style="position: relative; display: block;">
 	<section id="left_section" style="position: relative; display: block;">
 		<div class="4menu">
-			<button class="btn btn-danger" id = 'city1' name='city1'>微旅行</button>
-			<button class="btn btn-danger" id = 'city2' name='city2'>疑问解答</button>
-			<button class="btn btn-danger" id = 'city3' name='city3'>介绍</button>
+			<button class="btn btn-default" id = 'city1' name='city1'>微旅行</button>
+			<button class="btn btn-default" id = 'city2' name='city2'>疑问解答</button>
+			<button class="btn btn-default" id = 'city3' name='city3'>介绍</button>
 		</div>
 
 		<!-- salesCity1.php 로 뺀 부분 CI로딩 -->
@@ -34,97 +34,98 @@
 	</section>
 
 	<aside id="right_aside">
-	<div class="menuband jblack"></div>
-	<form name="frmBooking" id="frmBooking" method='post' enctype="multipart/form-data" action="/index.php/city/country/insertChating">
-	<input type='hidden' id='hiddenProduct' name='hiddenProduct' value='<?=$salesNum?>' >
-		<?foreach($salesBasic as $v){?>
-			<div class="right_reservation">
-				<div class="price">
-					<p class="price_title">价格 :</p>
-						<p class="price_sub"><?=$v->fat_price?> 元<p>
-						<input type='hidden' id='fee' name='fee' value='<?=$v->fat_price?>'>
-				</div>
-				<div>
-					<p>选择行程</p>
-					<span>可选</span><span>已选</span>
-				</div>
-
-				<div class="calandar">
-					<div class="select"></div>
-					<!--div id='divCal' name='divCal'> <?//$this->load->view("/include/calendar");?> </div-->
-					<div id='jqxWidget'></div>
-
-					<!-- <img src="/application/views/images/contents/calandar.png" alt=""> --> <!-- 캘린더 들어가는 칸 -->
-					<div id='insetDiv' name='insetDiv' class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
-						<ul id='checkDate' name='checkDate'>	</ul>
+		<div class="menuband jblack"></div>
+		<form name="frmBooking" id="frmBooking" method='post' enctype="multipart/form-data" action="/index.php/city/country/insertChating">
+		<input type='hidden' id='hiddenProduct' name='hiddenProduct' value='<?=$salesNum?>' >
+			<?foreach($salesBasic as $v){?>
+				<div class="right_reservation">
+					<div class="price">
+						<p class="price_title">价格 :</p>
+							<p class="price_sub"><?=$v->fat_price?> 元<p>
+							<input type='hidden' id='fee' name='fee' value='<?=$v->fat_price?>'>
 					</div>
-					<textarea class="mt20" name="recheckTextarea" id="recheckTextarea" placeholder=" "></textarea>
+					<div>
+						<p>选择行程</p>
+						<span>可选</span><span>已选</span>
+					</div>
+
+					<div class="calandar">
+						<div class="select"></div>
+						<!--div id='divCal' name='divCal'> <?//$this->load->view("/include/calendar");?> </div-->
+						<div id='jqxWidget'></div>
+
+						<!-- <img src="/application/views/images/contents/calandar.png" alt=""> --> <!-- 캘린더 들어가는 칸 -->
+						<div id='insetDiv' name='insetDiv' class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
+							<ul id='checkDate' name='checkDate'>	</ul>
+						</div>
+						<textarea class="mt20" name="recheckTextarea" id="recheckTextarea" placeholder=" "></textarea>
+					</div>
+					<div class="aside-menu">
+						<button type="submit" class="btn btn-info mb20" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
+
+						
+						<!-- Modal 여기서부터 Overview 박스 시작 -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title" id="myModalLabel">예약 일정을 선택하세요</h4>
+									</div><!-- modal-header 닫힘 -->
+									<div class="modal-body">
+										<div id='content'><!--div id='jqxWidget'> </div--></div>
+										<div class="modalFix" id='dateDiv' name='dateDiv'>
+	<!--
+											<div id="modalDiv" name="modalDiv">
+												<input type="date" class="form-control" id="recheckDate" name="recheckDate">
+												<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
+												<span> 名</span>
+											</div>
+											<div id="modalDiv" name="modalDiv">
+												<input type="date" class="form-control" id="recheckDate" name="recheckDate">
+												<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
+												<span> 名</span>
+											</div>
+											<div id="modalDiv" name="modalDiv">
+												<input type="date" class="form-control" id="recheckDate" name="recheckDate">
+												<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
+												<span> 名</span>
+											</div>
+	-->
+										</div><!-- modalFix 고정 끝 -->
+
+										  <div id="emptyDiv" name="emptyDiv"></div>
+										  <!--textarea name="recheckTextarea" id="recheckTextarea" cols="30" rows="10"></textarea-->
+									</div><!-- modal-body 닫힘 -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary">Chat start</button>
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div><!-- modal-footer 닫힘 -->
+								</div><!-- modal-content 닫힘 -->
+							</div><!-- modal-dialog 닫힘 -->
+						</div><!-- modal fade Overveiw 끝 -->
+
+					</div>
+
+
+					<div class="aside-like">
+						<div id='likeUp'>
+						<?if($bucketList != null){?>
+							<?foreach($bucketList as $c){
+								if($c->cnt == 0){?>
+									<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
+							<?}else{?>
+									<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
+							<?}
+						}
+					}?>
+					</div>
+						<span>&nbsp;想去</span>
+					</div>
 				</div>
-				<div class="aside-menu">
-					<button type="submit" class="btn btn-info mb20" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
+			<?}?>
+		</form>
 
-					
-					<!-- Modal 여기서부터 Overview 박스 시작 -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-									<h4 class="modal-title" id="myModalLabel">예약 일정을 선택하세요</h4>
-								</div><!-- modal-header 닫힘 -->
-								<div class="modal-body">
-									<div id='content'><!--div id='jqxWidget'> </div--></div>
-									<div class="modalFix" id='dateDiv' name='dateDiv'>
-<!--
-										<div id="modalDiv" name="modalDiv">
-											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
-											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
-											<span> 名</span>
-										</div>
-										<div id="modalDiv" name="modalDiv">
-											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
-											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
-											<span> 名</span>
-										</div>
-										<div id="modalDiv" name="modalDiv">
-											<input type="date" class="form-control" id="recheckDate" name="recheckDate">
-											<input type="text" class="form-control" id="recheckPerson" name="recheckPerson">
-											<span> 名</span>
-										</div>
--->
-									</div><!-- modalFix 고정 끝 -->
-
-									  <div id="emptyDiv" name="emptyDiv"></div>
-									  <!--textarea name="recheckTextarea" id="recheckTextarea" cols="30" rows="10"></textarea-->
-								</div><!-- modal-body 닫힘 -->
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary">Chat start</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div><!-- modal-footer 닫힘 -->
-							</div><!-- modal-content 닫힘 -->
-						</div><!-- modal-dialog 닫힘 -->
-					</div><!-- modal fade Overveiw 끝 -->
-
-				</div>
-
-
-				<div class="aside-like">
-					<div id='likeUp'>
-					<?if($bucketList != null){?>
-						<?foreach($bucketList as $c){
-							if($c->cnt == 0){?>
-								<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
-						<?}else{?>
-								<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
-						<?}
-					}
-				}?>
-				</div>
-					<span>&nbsp;想去</span>
-				</div>
-			</div>
-		<?}?>
-	</form>
 		<?foreach($salesBasic as $v){?>
 			<input type='hidden' id='user_num' name='user_num' value='<?=$v->user_num?>' >
 			<div class="right_profile">
