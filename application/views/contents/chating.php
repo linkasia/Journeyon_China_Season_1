@@ -140,7 +140,7 @@
 			data:{ chatNum : _chatNum, productNum:_productNum},
 			url: "/index.php/city/country/dpTimeChating",
 			success: function (data){
-				document.getElementById('chatlistWrap').innerHTML = data;
+				document.getElementById('chatingFrame').innerHTML = data;
 			}
 		});
 	}
