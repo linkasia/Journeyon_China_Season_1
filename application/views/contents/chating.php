@@ -141,6 +141,8 @@
 		var date2 = new Date();
 		date2.setFullYear(date1.getFullYear(), date1.getMonth(), date1.getDate());
 		$("#jqxWidget").jqxCalendar('setRange', date1, date2);
+
+		setInterval("dpTime()",2000);
 	});
 
 	$(function(){
@@ -165,6 +167,22 @@
 			*/
 		});
 	});
+
+	function dpTime(){
+		var _chatNum = $('#hiddenChatNum').val();
+		var _productNum = $('#hiddenProductNum').val();
+
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ chatNum : _chatNum, productNum:_productNum},
+			url: "/index.php/city/country/dpTimeChating",
+			success: function (data){
+				document.getElementById('chatlistWrap').innerHTML = data;
+			}
+		});
+	}
 
 	//send 버튼 클릭시
 	function sendChat(){

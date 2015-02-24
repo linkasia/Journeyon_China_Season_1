@@ -357,6 +357,18 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$this->load->view("/contents/chating",$data);
 	}
 
+	//채팅실시간 로딩
+	function dpTimeChating(){
+		$productNum = $_REQUEST['productNum'];
+		$user_num = $this->session->userdata['num'];
+		$chatNum = $_REQUEST['chatNum'];
+
+		$data['SendList']= $this->country_M->chatDetailList($chatNum);
+		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
+		$this->load->view("/contents/chating",$data);
+	}
+
+
 	//예약 날짜 저장
 	function insertBookingDate(){
 		$productNum = $_REQUEST['hiddenProduct'];
