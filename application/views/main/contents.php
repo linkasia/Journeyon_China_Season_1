@@ -198,7 +198,7 @@
 									</div>
 
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>个</span>&nbsp;&nbsp;
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span><?=$v->likeCnt?>个</span>&nbsp;&nbsp;
 										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_" class="icon_t">&nbsp;<span>游记 0个</span>
 									</div>
 
@@ -255,7 +255,7 @@
 										<p><?=$v->Name_cn_en?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
 									</div>
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 0个</span>&nbsp;&nbsp;
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 <?=$v->likeCnt?>个</span>&nbsp;&nbsp;
 										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>0个</span>
 									</div>
 									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>

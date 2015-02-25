@@ -69,12 +69,15 @@
 															b.Name_cn_en,
 															c.code_nm,
 															c.ref1,
+															COUNT(d.product_num) AS likeCnt,
 															a.*
 											FROM product a
 											LEFT JOIN USER b ON a.user_num = b.user_num
 											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
+											LEFT JOIN user_has_bucket_list d ON a.product_num = d.product_num
 											WHERE a.useYn='Y'
 											AND a.product_state = '0001'
+											GROUP BY a.product_num
 											ORDER BY a.create_date DESC
 											LIMIT 3
 							) AS u
@@ -96,13 +99,16 @@
 															b.Name_cn_en,
 															c.code_nm,
 															c.ref1,
+															COUNT(d.product_num) AS likeCnt,
 															a.*
 											FROM product a
 											LEFT JOIN USER b ON a.user_num = b.user_num
 											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
+											LEFT JOIN user_has_bucket_list d ON a.product_num = d.product_num
 											WHERE a.useYn='Y'
 											AND a.adminYn='Y'
 											AND a.product_state = '0001'
+											GROUP BY a.product_num
 											ORDER BY a.create_date DESC
 											LIMIT 6
 							) AS u
