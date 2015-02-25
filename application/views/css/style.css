@@ -717,7 +717,7 @@
 	.checkdateClosebtn{position: absolute; top: -7px; right: 3px; cursor: pointer;}
 
 	/*오른쪽 프로필*/
-	#right_aside	.right_profile{width: 230px; border: 1px solid #fdc066; border-radius: 12px; position: relative; padding-bottom: 10px;}
+	#right_aside	.right_profile{width: 230px; border: 1px solid #fdc066; border-radius: 12px; position: relative; padding-bottom: 10px; padding-top: 10px;}
 	#right_aside .right_profile .gray_box{width: 100%; height: 30px; top: 46px; position: absolute; text-indent: 120pt; line-height: 30px; color: #fff;
 		background: rgb(252,234,187); /* Old browsers */
 		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -730,7 +730,7 @@
 		background: linear-gradient(45deg,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 	}
-	#right_aside .right_profile .gray_box .profile_image{width: 72px; height: 72px; position: absolute; left: 11px; top:-22px;}
+	#right_aside .right_profile .gray_box .profile_image{width: 72px; height: 72px; position: absolute; left: 1px; top:-22px;}
 	#right_aside .right_profile .gray_box .flag_image{width: 20px; height: 14px; left: 2px; top: 10px; position: absolute;}
 	#right_aside .right_profile .gray_box .vmark_image{width: 18px; height: 18px; left: 66px; top: 34px; position: absolute;}
 	#right_aside .right_profile .gray_box .btn{display: block; position: absolute; top: 20px; width: 150px;}
