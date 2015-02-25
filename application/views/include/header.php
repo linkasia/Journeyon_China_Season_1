@@ -100,7 +100,6 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<div id="darken"></div>
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
-						<li class="become_host" name="become_host" id="become_host"><i>申请加入当地微导游</i></li>
 						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal"><i>如何参与</i></li>
 
 
@@ -109,6 +108,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 						{
 							if($this->session->userdata['email']!=null){
 							?>
+							<li class="become_host" name="become_host" id="become_host"><i>申请加入当地微导游</i></li>
 							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 -->
 							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
 							<!--li class="logout" name="logout" id="logout"></li-->
@@ -180,8 +180,8 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 				});
 
 				$('#become_host').click( function(){
-					alert("become_host");
-					//location.href = "http://127.0.0.1/"
+
+					location.href = "/index.php/mypage/myPage_M/myguide?mode=1";
 				});
 
 				$('#how_works').click( function(){

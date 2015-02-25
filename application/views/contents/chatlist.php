@@ -3,7 +3,7 @@
 		<div class="underline">留言记录</div>
 	</div>
 	<?foreach( $chatList as $v ) {?>
-	<?if($v->create_time > $v->create_time){?>
+	<?if($v->create_time > $v->dateSet){?>
 		<div class="chatlistDiv">
 			<div class="chat1">
 				<input type="checkbox" id="chatCheckbox" name="chatCheckbox" value="<?=$v->product_num?>">

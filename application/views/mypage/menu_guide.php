@@ -11,7 +11,9 @@
 	<div id="rightWrap">
 		<?
 			$mode = $_REQUEST['mode'];
-			if($mode == "2"){
+			if($mode == "1"){
+				$this->load->view('mypage/m_guide1');
+			}else if($mode == "2"){
 				$data['reservation'] = $this->myModify->myReservationPage($this->session->userdata['num']);
 				$data['mode']="";
 				$this->load->view('mypage/m_guest2', $data);
