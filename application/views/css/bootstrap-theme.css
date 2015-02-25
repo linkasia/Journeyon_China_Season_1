@@ -57,6 +57,7 @@
 .btn-default:focus {
   background-color: #ffffdb;
   background-position: 0 -15px;
+  border-color: #fdc066;
 }
 .btn-default:active,
 .btn-default.active {
