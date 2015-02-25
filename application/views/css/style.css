@@ -250,7 +250,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 	#section3 .somenail_bootstrap{position: relative;}
 	#section3 .somenail_bootstrap:after{clear: both; display: block; *zoom: 1;}
 	#section3 .somenail_transbox{width: 300px; height: 40px; top: 200px; position: absolute; cursor: pointer;}
-	#section3 .somenail_transcity{width: 90px; height: 35px; background-color: rgba(255,255,255,.6); right: 10px; top: 10px; position: absolute; cursor: pointer; border: 1px solid #ffffff; line-height: 35px; text-align: center; color: #fff; font-size: 1.125em;}
+	#section3 .somenail_transcity{width: 90px; height: 35px; background-color: rgba(0,0,0,.6); right: 10px; top: 10px; position: absolute; cursor: pointer; border: 1px solid #ffffff; line-height: 35px; text-align: center; color: #fff; font-size: 1.125em;}
 	#section3 .somenail_title{color: #fff; font-weight: 400; line-height: 40px; text-indent: 10px ;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-size: 1.125em;}
 
 	#section3 .somenail_profile{}
@@ -279,7 +279,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 	#section4 .somenail_bootstrap2{position: relative;}
 	#section4 .somenail_bootstrap2:after{clear: both; display: block; *zoom: 1;}
 	#section4 .somenail_transbox2{width: 300px; height: 40px; top: 200px; position: absolute; cursor: pointer; }
-	#section4 .somenail_transcity2{width: 90px; height: 35px; background-color: rgba(255,255,255,.6); right: 10px; top: 10px; position: absolute; cursor: pointer; border: 1px solid #ffffff; line-height: 35px; text-align: center; color: #fff; font-size: 1.125em;}
+	#section4 .somenail_transcity2{width: 90px; height: 35px; background-color: rgba(0,0,0,.6); right: 10px; top: 10px; position: absolute; cursor: pointer; border: 1px solid #ffffff; line-height: 35px; text-align: center; color: #fff; font-size: 1.125em;}
 	#section4 .somenail_title{color: #fff; font-weight: 400; line-height: 40px; text-indent: 10px ;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-size: 1.125em;}
 	
 	#contents_wrap5{width: 100%; height: auto; background-color: #f9fafc; }
