@@ -58,12 +58,24 @@
 						<div id='insetDiv' name='insetDiv' class="selectParent2"> <!-- 날짜 선택하면 등장하는 option 박스 -->
 							<ul id='checkDate' name='checkDate'>	</ul>
 						</div>
-						<textarea class="mt20" name="recheckTextarea" id="recheckTextarea" placeholder=" "></textarea>
+						<?
+						if(@$this->session->userdata['logged_in'] == TRUE)
+						{
+							if($this->session->userdata['email']!=null){
+							?>
+								<textarea class="mt20" name="recheckTextarea" id="recheckTextarea" placeholder="채팅 내용을 입력해주세요"></textarea>
+							<?}
+						}?>
 					</div>
 					<div class="aside-menu">
-						<button type="submit" class="btn btn-info mb20" id="calPop" name="calPop" onclick='goChat()'>定制游咨询</button>
+					<?if(@$this->session->userdata['logged_in'] == TRUE)
+						{
+							if($this->session->userdata['email']!=null){
+							?>
+						<button type="submit" class="btn btn-info mb20" id="calPop" name="calPop">定制游咨询</button>
+						<?}
+						}?>
 
-						
 						<!-- Modal 여기서부터 Overview 박스 시작 -->
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
@@ -116,11 +128,12 @@
 									<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
 							<?}else{?>
 									<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
-							<?}
-						}
+							<?}?>
+							<span>&nbsp;想去</span>
+						<?}
 					}?>
 					</div>
-						<span>&nbsp;想去</span>
+
 					</div>
 				</div>
 			<?}?>
@@ -167,7 +180,6 @@
 			</div><!-- right_profile end -->
 		<?}?>
 	</aside>
-	<div id='test'></div>
 </div>
 
 
@@ -284,7 +296,6 @@
 				url:"/index.php/city/country/detailCity1",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
-
 				}
 			});
 			*/
@@ -299,7 +310,6 @@
 				url:"/index.php/city/country/detailCity2",
 				success: function (data){
 					document.getElementById('viewContents').innerHTML = data;
-
 				}
 			});
 		});
