@@ -167,17 +167,17 @@
 										<img style="width: 300px; height: 240px;" src="<?=$v->image?>" alt="">
 								</div>
 								<?if($i== 1){?>
-									<div class="somenail_transbox" style="background-color:rgba(59,183,202,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 2){ ?>
-									<div class="somenail_transbox" style="background-color:rgba(195,119,228,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 3){?>
-									<div class="somenail_transbox" style="background-color:rgba(63,127,206,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 4){?>
-									<div class="somenail_transbox" style="background-color:rgba(255,210,5,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 5){?>
-									<div class="somenail_transbox" style="background-color:rgba(243,164,107,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 6){?>
-									<div class="somenail_transbox" style="background-color:rgba(48,59,76,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}?>
 							</div>
 
@@ -234,11 +234,11 @@
 										<img style="width: 300px; height: 240px" src="<?=$v->image?>" alt="">
 									</div>
 									<?if($k== 1){?>
-									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,0.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox2" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}else if($k== 2){ ?>
-									<div class="somenail_transbox2" style="background-color:rgba(195,119,228,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox2" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}else if($k== 3){?>
-									<div class="somenail_transbox2" style="background-color:rgba(27,188,155 ,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox2" style="background-color:rgba(0,0,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}?>
 								</div>
 								<div class="somenail_transcity2" onclick="detailCity('<?=$v->product_num?>')">
