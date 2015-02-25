@@ -63,25 +63,25 @@
 		<div class="contents_text2"><p><?=$v->describe_contents?></p></div>
 		<div class="information_wrap">
 			<dl class="information">
-				<dt class="txt_blue"><span><img src="/application/views/images/contents/icon30_micro.PNG" alt=""></span>微旅行时间</dt>
+				<dt><span><img src="/application/views/images/contents/icon30_micro.PNG" alt=""></span>微旅行时间</dt>
 				<dd><?=$v->travel_time?>小时</dd>
 
-				<dt class="txt_blue"><span><img src="/application/views/images/contents/icon31_included.PNG" alt=""></span>费用包括</dt>
+				<dt><span><img src="/application/views/images/contents/icon31_included.PNG" alt=""></span>费用包括</dt>
 				<dd><?=$v->include?></dd>
 
 
-				<dt class="txt_blue"><span><img src="/application/views/images/contents/icon32_notincluded.PNG" alt="">费用不包括</dt>
+				<dt><span><img src="/application/views/images/contents/icon32_notincluded.PNG" alt="">费用不包括</dt>
 				<dd><?=$v->not_include?></dd>
 
 
-				<dt class="txt_blue"><span><img src="/application/views/images/contents/icon33_first.PNG" alt="">见面地点</dt>
+				<dt><span><img src="/application/views/images/contents/icon33_first.PNG" alt="">见面地点</dt>
 				<dd><?=$v->meeting_place_describe?></dd>
 				<div id='map' name='map'><?$this->load->view("/include/google_map");?></div>
 
-				<dt class="txt_blue"><span><img src="/application/views/images/contents/icon34_cancel.PNG" alt="">取消规定</dt>
+				<dt><span><img src="/application/views/images/contents/icon34_cancel.PNG" alt="">取消规定</dt>
 				<dd>24小时内取消</dd>
 
-				<dt class="txt_blue"><span><img src="/application/views/images/contents/icon35_info.PNG" alt="">其他</dt>
+				<dt><span><img src="/application/views/images/contents/icon35_info.PNG" alt="">其他</dt>
 				<dd><?=$v->etc?></dd>
 			</dl>
 		</div>
