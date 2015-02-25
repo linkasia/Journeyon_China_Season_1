@@ -647,6 +647,36 @@
 		function ChatList($userNum)
 		{
 			$sql ="SELECT *
+							FROM ( SELECT a.*,
+															b.face_img_path,
+															b.Name_cn_en,
+															b.v_get_code,
+															c.code_nm,
+															c.ref1,
+															k.content AS reply,
+															k.create_time AS dateSet,
+															k.user_num AS order_num,
+															k.Name_cn_en AS order_Name_cn_en,
+															k.face_img_path AS order_face
+												FROM chat a
+												LEFT JOIN USER b ON a.user_num = b.user_num
+												LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
+												LEFT JOIN (SELECT d.*,
+																						e.face_img_path,
+																						e.Name_cn_en,
+																						e.v_get_code,
+																						f.code_nm,
+																						f.ref1
+																			FROM chat_reply d
+																			LEFT JOIN USER e ON e.user_num = d.user_num
+																			LEFT JOIN country_table f ON e.mother_area_code = f.class AND e.mother_country_code = f.code
+																			ORDER BY d.create_time DESC
+											) AS k ON a.chat_num = k.chat_num AND a.product_num = k.product_num
+									) AS u
+									WHERE u.user_num = '".$userNum."' OR u.order_num = '".$userNum."'
+									GROUP BY chat_num";
+			/*
+			$sql ="SELECT *
 							FROM(	SELECT *
 												FROM (SELECT a.*,
 																				b.face_img_path,
@@ -677,6 +707,7 @@
 							) AS u
 							GROUP BY u.chat_num
 							ORDER BY u.create_time DESC";
+			*/
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
