@@ -2,7 +2,7 @@
 	<div id="contents_wrap1"> <!-- 컨텐츠 영역 나중에 include -->
 		<section id="section1">
 			<div class="city_title">
-				<h3 class="city_text">目前有<span class="font_blue">2万多</span>人访问了<span class="font_blue">200多</span>个不同的国家</h3>
+				<h3 class="city_text">目前有<span class="font_orange">2万多</span>人访问了<span class="font_orange">200多</span>个不同的国家</h3>
 			</div>
 
 			<div class="city_icon">
@@ -16,9 +16,10 @@
 		</section>
 
 		<section id="section2">
-			<div class="s_button"><img src="/application/views/images/main/button01_travel.png" alt="scroll_button" onclick="pushEvent()" name="btnImg" id="btnImg">
+			<div class="s_button">
+			<div onclick="pushEvent()" name="btnImg" id="btnImg">全部地区  <span class="glyphicon glyphicon-chevron-down"></span></div>
+			<!-- <img src="/application/views/images/main/button01_travel.png" alt="scroll_button" onclick="pushEvent()" name="btnImg" id="btnImg"> -->
 				 <div class="nation_list" name="nation_list" id="nation_list">
-
 							<?foreach($country as $v){
 								if($v->class == "0001" && $v->CODE == "0001"){?>
 									<div class="menu-column1">
