@@ -674,6 +674,7 @@
 											) AS k ON a.chat_num = k.chat_num AND a.product_num = k.product_num
 									) AS u
 									WHERE u.user_num = '".$userNum."' OR u.order_num = '".$userNum."'
+									AND u.useYn = 'Y'
 									GROUP BY chat_num";
 			/*
 			$sql ="SELECT *
@@ -880,6 +881,21 @@
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
+		}
+
+		function deleteChat()
+		{
+			$sql ="UPDATE chat SET useYn='N'
+							WHERE DATE_ADD(create_time,INTERVAL 90 DAY) < create_time";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+		function deleteReplyChat()
+		{
+			$sql ="UPDATE chat_reply SET useYn='N'
+							WHERE DATE_ADD(create_time,INTERVAL 90 DAY) < create_time";
+			//print_r($sql);
+			$query = $this->db->query($sql);
 		}
 	}
 

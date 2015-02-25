@@ -432,5 +432,11 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$delete['like']= $this->country_M->deleteLike( $salesNum, $user_num );
 	}
+
+	//채팅삭제
+	function deleteChat(){
+		$delete['chat']= $this->country_M->deleteChat();
+		$delete['chatReply']= $this->country_M->deleteReplyChat();
+	}
 }
 ?>
