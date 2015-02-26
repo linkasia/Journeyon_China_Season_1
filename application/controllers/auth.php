@@ -88,7 +88,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 			$message="인증번호 : $random  <br />관리자문의 : admin@linkasia.co.kr<br>卓尼制作 : $date";
 			print_r($mail);
 		}else{
-			$mailTitle = "회원가입 확인";
+			$mailTitle = "感谢您注册，请验证您的邮箱！";
 			$message="<div style='width: 100%; padding: 20px; background-color: #f0f1f5; color: #666;'>";
 			$message.="<div style='width: 800px; background-color: #fff; margin: 20px; border: 1px solid #f0f1f5; padding: 20px; font-size: 1.2em;'>";
 		
@@ -116,7 +116,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 		$this->load->library('email',$config);
 		$this->email->set_newline("\r\n");
 		$this->email->clear();
-		$this->email->from("admin@linkasia.co.kr", "Linkasia");
+		$this->email->from("admin@linkasia.co.kr", "journeyon");
 		$this->email->to($mail);
 		$this->email->subject($mailTitle);//이메일 제목
 		$this->email->message($message);

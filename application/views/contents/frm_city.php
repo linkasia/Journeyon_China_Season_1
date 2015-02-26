@@ -7,9 +7,9 @@
 
 			<div class="sort">
 				<div class="flr">
-					<button class="btn btn-info">按人气</button>
-					<button class="btn btn-info">按游记</button>
-					<button class="btn btn-info">按最新</button>
+					<button class="btn btn-default">按人气</button>
+					<button class="btn btn-default">按游记</button>
+					<button class="btn btn-default">按最新</button>
 				</div>
 			</div>
 

@@ -15,7 +15,7 @@
 		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">	
 
 		<!-- Bootstrap Theme -->
-		<link href="/application/views/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+		<!-- <link href="/application/views/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"> -->
 		
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
@@ -36,7 +36,7 @@
 		<![endif]-->
 
 		<script src="/application/views/js/jquery-1.8.3.min.js" type="text/javascript"></script>
-		<script src="/application/views/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="/application/views/js/bootstrap.js" type="text/javascript"></script>
 
 		<!-- startbootstrap -->
 		<script src="/application/views/js/jquery.js" type="text/javascript"></script>
