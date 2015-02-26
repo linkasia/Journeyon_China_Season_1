@@ -34,7 +34,8 @@
 																g.ref1 AS refrecom1,
 																h.code_nm AS recom2,
 																h.ref1 AS refrecom2,
-																a.*
+																a.*,
+																COUNT(i.product_num) AS cnt
 													FROM product a
 													LEFT JOIN USER b ON a.user_num=b.user_num
 													LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
@@ -43,11 +44,13 @@
 													LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
 													LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 													LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
+													LEFT JOIN user_has_bucket_list i ON a.product_num = i.product_num
 													WHERE sortcountry='".$co."'
 													AND country_code='".$ci."'
 													AND a.useYn = 'Y'
 													AND product_state = '0001'
 													".$cityChoice."
+													GROUP BY a.product_num
 								) AS u
 								LEFT JOIN spot z ON u.product_num = z.product_num
 								GROUP BY product_num";
@@ -104,7 +107,8 @@
 															g.ref1 AS refrecom1,
 															h.code_nm AS recom2,
 															h.ref1 AS refrecom2,
-															a.*
+															a.*,
+															COUNT(i.product_num) AS cnt
 												FROM product a
 												LEFT JOIN USER b ON a.user_num=b.user_num
 												LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
@@ -113,11 +117,13 @@
 												LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
 												LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 												LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
+												LEFT JOIN user_has_bucket_list i ON a.product_num = i.product_num
 											WHERE sortcountry='".$scountry."'
 											AND a.country_code='".$countryList."'
 											AND a.useYn = 'Y'
 											AND a.product_state = '0001'
 											".$sqlplus."
+											GROUP BY a.product_num
 									) as u
 						LEFT JOIN spot z ON u.product_num = z.product_num
 						GROUP BY u.product_num";
@@ -362,18 +368,21 @@
 											g.ref1 AS refrecom1,
 											h.code_nm AS recom2,
 											h.ref1 AS refrecom2,
-											a.*
-								FROM product a
-								LEFT JOIN USER b ON a.user_num=b.user_num
-								LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
-								LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
-								LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
-								LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
-								LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
-								LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
+											a.*,
+											COUNT(i.product_num) AS cnt
+							FROM product a
+							LEFT JOIN USER b ON a.user_num=b.user_num
+							LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
+							LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
+							LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
+							LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
+							LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
+							LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
+							LEFT JOIN user_has_bucket_list i ON a.product_num = i.product_num
 							WHERE b.user_num='".$userNum."'
 							AND a.useYn = 'Y'
-							AND a.product_state = '0001'";
+							AND a.product_state = '0001'
+							GROUP BY a.product_num";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

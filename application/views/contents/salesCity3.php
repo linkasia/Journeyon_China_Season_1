@@ -48,7 +48,7 @@
 						<div class="list_image1">
 							<div class="band">
 								<div class="wishcount">
-									<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image">15
+									<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image"><?=$v->cnt?>
 								</div>
 								<div class="reviewcount">
 									<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image">11
