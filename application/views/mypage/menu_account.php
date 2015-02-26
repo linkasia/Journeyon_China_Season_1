@@ -8,7 +8,6 @@
 
 	<div id="rightWrap">
 		<?
-		echo ":::>".$mode;
 			if($mode == "0"){
 				$data['countryList'] = $this->main_i->country();
 				$this->load->view("/mypage/m_accountSetting1",$data);

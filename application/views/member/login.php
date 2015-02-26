@@ -124,6 +124,10 @@
 				});
 
 				$('#e-mail2').click( function(){
+					location.href = "<?=site_url('auth/member_join'); ?>";
+				});
+
+				$('#passwordLose').click( function(){
 					var _selnum = $('#inputLarge').val();
 					var _mode = "password";
 
