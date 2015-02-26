@@ -190,16 +190,16 @@
 									</div>
 
 									<div class="back-line1">
-										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span><?=$v->fat_price?> 元</span>
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span class="posa_price"><?=$v->fat_price?> 元</span>
 									</div>
 
 									<div class="back-line2">
-										<p><?=$v->Name_cn_en?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
+										<span class="posa_name"><?=$v->Name_cn_en?></span><span class="posa_local">当地人</span>
 									</div>
 
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span><?=$v->likeCnt?>个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_" class="icon_t">&nbsp;<span>游记 0个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like"><?=$v->likeCnt?>个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
 									</div>
 
 									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>
@@ -225,39 +225,45 @@
 				<div class="somenail_wrap">
 					<ul class="somenail_list">
 						<li class="somenail2_1">
-							<section class="somenail_bootstrap2">
+							<section class="somenail_bootstrap">
 								<div class="portfolio-item2" onclick="detailCity('<?=$v->product_num?>')">
-									<div class="portfolio-link2">
-										<div class="portfolio-hover2">
+									<div class="portfolio-link">
+										<div class="portfolio-hover">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
 										<img style="width: 300px; height: 240px" src="<?=$v->image?>" alt="">
 									</div>
 									<?if($k== 1){?>
-									<div class="somenail_transbox2" style="background-color:rgba(237,28,36,0.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(237,28,36,0.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}else if($k== 2){ ?>
-									<div class="somenail_transbox2" style="background-color:rgba(195,119,228,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(195,119,228,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}else if($k== 3){?>
-									<div class="somenail_transbox2" style="background-color:rgba(27,188,155 ,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(27,188,155 ,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}?>
 								</div>
-								<div class="somenail_transcity2" onclick="detailCity('<?=$v->product_num?>')">
+								<div class="somenail_transcity" onclick="detailCity('<?=$v->product_num?>')">
 									<p><?=$v->code_nm?></p>
 								</div>
+
 								<div class="somenail_caption">
-									<div class="circle-div2">
-										<img src="<?=$v->face_img_path?>" class="img-circle2 somenail_profile"onclick="detailProfile('<?=$v->product_num?>')" >
+
+									<div class="circle-div">
+										<img name='profile' id='profile' src="<?=$v->face_img_path?>" alt="" class="img-circle somenail_profile" onclick="detailProfile('<?=$v->product_num?>')">
 									</div>
+
 									<div class="back-line1">
-										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span><?=$v->fat_price?> 元</span>
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span class="posa_price"><?=$v->fat_price?> 元</span>
 									</div>
+
 									<div class="back-line2">
-										<p><?=$v->Name_cn_en?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
+										<span class="posa_name"><?=$v->Name_cn_en?></span><span class="posa_local">当地人</span>
 									</div>
+
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 <?=$v->likeCnt?>个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>0个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like"><?=$v->likeCnt?>个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
 									</div>
+
 									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
 									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
