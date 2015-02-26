@@ -53,8 +53,10 @@
 						</div><!-- modal-header 닫힘 -->
 						<div class="modal-body2">
 							<div id='content'>
+								start Date : <input type="date" id='startDate' name='startDate' value=<?=date('Y-m-d')?>><br />
+								end Date : <input type="date" id='endDate' name='endDate' value=<?=date('Y-m-d')?>>
 
-								<div id='jqxWidget'></div>
+
 								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
 
 								<div style='font-size: 13px; font-family: Verdana;' id='selection'>
@@ -82,27 +84,6 @@
  <script type="text/javascript">
 
 	$(document).ready(function () {
-		//alert("AA");
-		// create jqxcalendar.
-		$("#jqxWidget").jqxCalendar({ width: 220, height: 220,  selectionMode: 'range' });
-		$("#jqxWidget").on('change', function (event) {
-			var selection = event.args.range;
-			//$('#startDate').val() = selection.from.toLocaleDateString();
-			//$('#endDate').val() = selection.to.toLocaleDateString();
-			var staetDate = selection.from.toLocaleDateString().substring(0,selection.from.toLocaleDateString().length -1);
-			var endDate =selection.to.toLocaleDateString().substring(0,selection.to.toLocaleDateString().length -1);
-			var sDate = "<input class='form-control' type='hidden' id='startDate' name='startDate'  value='"+ staetDate +"'>";
-			var eDate = "<input class='form-control' type='hidden' id='endDate' name='endDate'  value='"+ endDate +"'>";
-			$("#selection").html("<div>From: " + selection.from.toLocaleDateString() + sDate +" <br/>To: " + selection.to.toLocaleDateString() + eDate+"</div>");
-		});
-
-		var date1 = new Date();
-		date1.setFullYear(date1.getFullYear(), date1.getMonth(), date1.getDate());
-
-		var date2 = new Date();
-		date2.setFullYear(date1.getFullYear(), date1.getMonth(), date1.getDate());
-		$("#jqxWidget").jqxCalendar('setRange', date1, date2);
-
 		setInterval("dpTime()",2000);
 	});
 
