@@ -30,7 +30,7 @@
 				<div id="guideData">
 					<p class="sub_title">个人身份验证资料</p>
 					<div class="dataView">
-						<p>完成度 : 70%</p><a href="/index.php/mypage/myPage_M/mypublic" class="btn btn-info">前往个人页面编辑个人资料</a>
+						<p>完成度 : 70%</p><a href="/index.php/mypage/myPage_M/mypublic?userNum=<?=$this->session->userdata['num']?>" class="btn btn-info">前往个人页面编辑个人资料</a>
 
 						<!--p>SNS 연동 : 미완료</p><span class="btn btn-info" id="snsModify">연동하러 가기</span-->
 					</div>
