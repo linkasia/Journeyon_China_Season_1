@@ -88,9 +88,22 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 			$message="인증번호 : $random  <br />관리자문의 : admin@linkasia.co.kr<br>卓尼制作 : $date";
 			print_r($mail);
 		}else{
-			$mailTitle = "화원가입 확인";
-			$message="<a href='http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail' > 인증확인  </a>  <br /> <br /> admin@linkasia.co.kr<br>卓尼制作 : $date";
+			$mailTitle = "회원가입 확인";
+			$message="<div style='width: 100%; padding: 20px; background-color: #f0f1f5; color: #666;'>";
+			$message.="<div style='width: 800px; background-color: #fff; margin: 20px; border: 1px solid #f0f1f5; padding: 20px; font-size: 1.2em;'>";
+		
+			$message.="<h1 style='text-align:center;'>感谢您注册Journey on！</h1><br>";
+			$message.="<p>您的登陆名为：<span style='color:navy';>$mail</span><br>	点击以下链接，开始创造旅游新文化吧！</p><br>";
+			$message.="<a href='http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail' style='color:navy';>http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail</a><br><br><br><br>
+				
+					<p>如果以上链接无法访问，请将该网址复制并粘贴至新的浏览器窗口中。<br>如果你错误地收到了此电子邮件，你无需执行任何操作来取消帐号！此帐号将不会启动。</p>
+					<hr style='border:none; color:red; background-color:red; height: 1px; width: 99%;'>
+					<p>我是系统自动发送的邮件，请不要直接回复哦。</p>
+				</div>";
+			$message.="</div>";
 		}
+
+		
 
 		$config['mailtype']  = "html";
 		$config['charset']   = "utf-8";

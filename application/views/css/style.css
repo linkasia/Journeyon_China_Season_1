@@ -302,7 +302,16 @@
 	.somenail_bootstrap{position: relative;}
 	.somenail_bootstrap:after{clear: both; display: block; *zoom: 1;}
 	.somenail_transbox{width: 300px; height: 40px; top: 200px; position: absolute; cursor: pointer;}
-	.somenail_transcity{width: 90px; height: 35px; background-color: rgba(0,0,0,.6); right: 10px; top: 10px; position: absolute; cursor: pointer; border: 1px solid #ffffff; line-height: 35px; text-align: center; color: #fff; font-size: 1.125em;}
+	.somenail_transcity{
+		width: 90px; height: 35px;
+		background-color: rgba(0,0,0,.6); right: 10px; top: 10px;
+		position: absolute; cursor: pointer; border: 1px solid #ffffff;
+		line-height: 35px; text-align: center;
+		color: #fff; font-size: 1.125em;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		}
 	.somenail_title{color: #fff; font-weight: 400; line-height: 40px; text-indent: 10px ;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-size: 1.125em;}
 	/* 섬네일 스타일링 끝 */
 
