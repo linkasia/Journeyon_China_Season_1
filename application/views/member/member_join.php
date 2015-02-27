@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
-
 		<meta charset="UTF-8">
 		<meta name="Generator" content="EditPlus®">
 		<meta name="Author" content="">
@@ -15,11 +14,12 @@
 		<link href="/application/views/css/bootstrap.css" rel="stylesheet" type="text/css">
 
 		<!-- Bootstrap Theme -->
-		<link href="/application/views/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+		<link href="/application/views/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="/application/views/css/bootstrap-select.css">
 
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
-		<link href="/application/views/css/agency.css" rel="stylesheet">
+		<!-- <link href="/application/views/css/agency2.css" rel="stylesheet"> -->
 
 
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -31,16 +31,32 @@
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 
-		<script src="/application/views/js/jquery-1.8.3.min.js" type="text/javascript"></script>
-		<script src="/application/views/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="/application/views/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="/application/views/js/bootstrap.js" type="text/javascript"></script>
+		<script type="text/javascript" src = "https://maps.googleapis.com/maps/api/js?sensor=false&language=kr"></script>
 
+		<!-- slider pro plugin install -->
+		<script type="text/javascript" src="/application/views/js/jquery.sliderPro.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/application/views/css/slider-pro.css" media="screen"/>
 
 		<!-- startbootstrap -->
-		<script src="/application/views/js/jquery.js" type="text/javascript"></script>
+		<!-- <script src="/application/views/js/jquery.js" type="text/javascript"></script> -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 		<script src="/application/views/js/classie.js"></script>
 		<script src="/application/views/js/cbpAnimatedHeader.js"></script>
 		<script src="/application/views/js/agency.js"></script>
+		<script src="/application/views/js/jquery.form.min.js"></script>
+
+		<script type="text/javascript" src="/application/views/js/bootstrap-select.js"></script>
+
+
+
+		<!-- simple modal plugin -->
+		<link rel="stylesheet" href="/application/views/css/simplemodal.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="/application/views/js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/application/views/js/mootools-more-1.3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
+		<!-- script src="/application/views/js/demo.js" type="text/javascript" charset="utf-8"></script -->
 
 	</head>
 
