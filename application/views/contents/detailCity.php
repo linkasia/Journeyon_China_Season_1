@@ -125,11 +125,11 @@
 						<?if($bucketList != null){?>
 							<?foreach($bucketList as $c){
 								if($c->cnt == 0){?>
-									<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')">
+									<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')"> <span>&nbsp;想去</span>
 							<?}else{?>
-									<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
+									<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')"> <span>&nbsp;想去</span>
 							<?}?>
-							<span>&nbsp;想去</span>
+
 						<?}
 					}?>
 					</div>

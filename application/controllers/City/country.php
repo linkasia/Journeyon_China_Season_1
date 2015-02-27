@@ -184,7 +184,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$data['theme'] = $this->tb_code->theme();
 		$data['recommend'] = $this->tb_code->recommend();
 
-		$data['recommend'] = $this->country_M->salesDetailCity();
+		//$data['recommend'] = $this->country_M->salesDetailCity();
 
 		$this->load->view('include/header');
 		$this->load->view('contents/productWrite',$data);
