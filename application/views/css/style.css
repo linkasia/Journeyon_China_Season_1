@@ -1756,7 +1756,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 	#productWrapAll .productDiv3 .picUpload span.remove{position: absolute; top: 2%; right: 2%; font-size: 18pt; color: white;}
 
 	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 #fileUpload{
-		width: 109px;
+		width: 73px;
 		height: 42px;
 		margin-left: 130px;
 		margin-top: -42px;
@@ -1775,7 +1775,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 	#posa_imagecheckbtn{
 		position: absolute;
 		top: 57px;
-		left: 265px;
+		left: 227px;
 	}
 
 	#UploadPreviewDiv{
