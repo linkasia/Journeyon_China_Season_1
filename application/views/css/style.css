@@ -605,7 +605,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	#left_section .contents_wrap .contents_text2{width: 690px; height: auto; margin-top: 50px;}
 	
 	#left_section .contents_wrap .information_wrap{width: 690px; float: left; border-bottom: 1px solid #a9a9a9; margin-bottom: 20px;}
-	#left_section .contents_wrap .information dt{margin-top: 10px;}
+	#left_section .contents_wrap .information dt{margin-top: 10px; color: #0699D3;}
 	#left_section .contents_wrap .information dt img{margin-right: 5px;}
 	#left_section .contents_wrap .information dd{text-indent: 16pt; margin-bottom: 30px;}
 
@@ -747,7 +747,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	
 	}
 
-	.reply_id{font-weight: 700; color: #FF7D26;}
+	.reply_id{font-weight: 700; color: #0699D3;}
 	.typingArea{width: 520px; height: 100px; margin-left: 20px; margin-top: 10px; border-radius: 5px; max-width: 520px;}
 	.btnQna{margin-left: 568px; padding: 8px 25px 8px 25px;}
 	.btnQna2{margin-left: 458px; padding: 8px 25px 8px 25px; border-radius: 5px;}
@@ -804,30 +804,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	.checkdateInput{background-color: #fff; width: 30px; height: 20px; margin-left: 15px;}
 	.checkdateClosebtn{position: absolute; top: -7px; right: 3px; cursor: pointer;}
 
-	/*오른쪽 프로필*/
-	#right_aside	.right_profile{width: 230px; border: 1px solid #FF7D26; border-radius: 12px; position: relative; padding-bottom: 10px; padding-top: 10px;}
-	#right_aside .right_profile .gray_box{width: 100%; height: 30px; top: 46px; position: absolute; text-indent: 120pt; line-height: 30px; color: #fff;
-background: rgb(255,125,38); /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY3ZDI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjZmY3ZDI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzElIiBzdG9wLWNvbG9yPSIjZmY5ZTQyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmOWU0MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-background: -moz-linear-gradient(45deg,  rgba(255,125,38,1) 0%, rgba(255,125,38,1) 70%, rgba(255,158,66,1) 71%, rgba(255,158,66,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(255,125,38,1)), color-stop(70%,rgba(255,125,38,1)), color-stop(71%,rgba(255,158,66,1)), color-stop(100%,rgba(255,158,66,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* IE10+ */
-background: linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', endColorstr='#ff9e42',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-
+	/*오른쪽 프로필 chating과 스타일링 공유 중 */
+	.right_profile{width: 230px; border: 1px solid #FF7D26; border-radius: 12px; position: relative; padding-bottom: 10px; padding-top: 10px;}
+	.right_profile .gray_box{width: 100%; height: 30px; top: 46px; position: absolute; text-indent: 120pt; line-height: 30px; color: #fff;
+		background: rgb(255,125,38); /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY3ZDI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjZmY3ZDI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzElIiBzdG9wLWNvbG9yPSIjZmY5ZTQyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmOWU0MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+		background: -moz-linear-gradient(45deg,  rgba(255,125,38,1) 0%, rgba(255,125,38,1) 70%, rgba(255,158,66,1) 71%, rgba(255,158,66,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(255,125,38,1)), color-stop(70%,rgba(255,125,38,1)), color-stop(71%,rgba(255,158,66,1)), color-stop(100%,rgba(255,158,66,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* IE10+ */
+		background: linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', endColorstr='#ff9e42',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 	}
-	#right_aside .right_profile .gray_box .profile_image{width: 74px; height: 74px; position: absolute; left: 10px; top:-20px;}
-	#right_aside .right_profile .gray_box .flag_image{width: 20px; height: 14px; left: 0px; top: 10px; position: absolute;}
-	#right_aside .right_profile .gray_box .vmark_image{width: 18px; height: 18px; left: 68px; top: 40px; position: absolute;}
-	#right_aside .right_profile .gray_box .btn{display: block; position: absolute; top: 20px; width: 150px;}
-	#right_aside .right_profile .name_tag{margin-left: 90px; margin-top: 100px;}
-	#right_aside .right_profile .name_tag div{border-radius: 10px; text-indent: 10pt; margin-right: 10px;}
-	#right_aside .right_profile .name_tag .tag1,
-	#right_aside .right_profile .name_tag .tag2,
-	#right_aside .right_profile .name_tag .tag3{
+	.right_profile .gray_box .profile_image{width: 74px; height: 74px; position: absolute; left: 10px; top:-20px;}
+	.right_profile .gray_box .flag_image{width: 20px; height: 14px; left: 0px; top: 10px; position: absolute;}
+	.right_profile .gray_box .vmark_image{width: 18px; height: 18px; left: 68px; top: 40px; position: absolute;}
+	.right_profile .gray_box .btn{display: block; position: absolute; top: 20px; width: 150px;}
+	.right_profile .name_tag{margin-left: 90px; margin-top: 100px;}
+	.right_profile .name_tag div{border-radius: 10px; text-indent: 10pt; margin-right: 10px;}
+	.right_profile .name_tag .tag1,
+	.right_profile .name_tag .tag2,
+	.right_profile .name_tag .tag3{
 		margin-top: 10px;
 		color: #fff;
 		background: rgb(222,225,226); /* Old browsers */
@@ -848,13 +847,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 		border: 1px solid #dbdbdb;
 	}
 
-	#right_aside .right_profile .text p{margin-left: 10px; margin-top: 30px; margin-bottom: 20px;}
-	#right_aside .right_profile .sns_icon img{width: 24px; height: 24px; margin-bottom: 30px;}
-	#right_aside .right_profile .sns_icon img:first-child{margin-left: 10px;}
-	#right_aside .right_profile .sns_icon .sns_icon1G{display: hidden;}
-	#right_aside .right_profile .sns_icon .sns_icon2G{display: hidden;}
+	.right_profile .text p{margin-left: 10px; margin-top: 30px; margin-bottom: 20px;}
+	.right_profile .sns_icon img{width: 24px; height: 24px; margin-bottom: 30px;}
+	.right_profile .sns_icon img:first-child{margin-left: 10px;}
+	.right_profile .sns_icon .sns_icon1G{display: hidden;}
+	.right_profile .sns_icon .sns_icon2G{display: hidden;}
 
-	#right_aside .profile-btn{display: block; bottom: 20px; margin-left: 50px;} /*버튼*/
+	.profile-btn{display: block; bottom: 20px; margin-left: 50px;} /*버튼*/
 
 	#right_aside .aside-menu{margin-top: 5px;}
 	#right_aside .aside-like img{
@@ -1229,7 +1228,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow2{position: absolute; top: 80px; left: 306px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow3{position: absolute; top: 80px; left: 452px;}
 
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3{width: 640px; height: 400px;}
+		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3{width: 640px; height: 400px; position: relative;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .countryCode{margin-left: 70px; height: 30px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .countryInput{padding-top: 3px; padding-bottom: 3px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .phoneNumber{margin-left: 20px;}
@@ -1237,14 +1236,79 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .ID_t{margin-left: 50px; margin-top: 30px;}
 		#accountWrap #rightWrap .profileWrap1 .vtitle{margin-bottom: 30px;}
 
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{width: 310px; height: 200px; border-radius: 15px; background-color: #f0f1f5; margin-left: 70px; position: relative; cursor: pointer;}
+		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{
+			width: 310px; height: 200px;
+			border-radius: 15px;
+			background-color: #f0f1f5;
+			margin-left: 70px;
+			position: relative;
+			cursor: pointer;
+			float: left;
+			}
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv:hover{background-color: #eee;}
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.glyphicon-plus{font-size: 5em; line-height: 200px; margin-left: 120px;}
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.id_s{position: absolute; top: 140px; left: 117px;}
 
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
+		#vUpload{
+			width: 140px;
+			height: 42px;
+			color:#fff;
+			background-color: #53CBF1;
+			display: inline-block;
+			padding: 6px 12px;
+			margin-bottom: 0;
+			margin-top: 58px;
+			margin-left: 473px;
+			font-size: 14px;
+			font-weight: normal;
+			line-height: 1.42857143;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+			cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			background-image: none;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			}
 
+	#vUpload:focus{
+		outline: thin dotted;
+		outline: 5px auto -webkit-focus-ring-color;
+		outline-offset: -2px;
+		}
 
+	#vUpload :active{
+		  background-image: none;
+		  outline: 0;
+		  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+		   box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+		}
+
+	#vCertification{
+			width: 73px;
+			height: 42px;
+			margin-left: 395px;
+			margin-top: 168px;
+			text-indent: -9999pt;
+			border-radius: 5px;
+			color:#53CBF1;
+			background-color: #53CBF1;
+			cursor: pointer;
+		}
+
+	.posa_text3{
+		top: 1058px;
+		left: 656px;
+		color: #fff;
+		position: absolute;
+	}
 		
 		/* ------------------------------------------------- 마이페이지 가이드 menu ------------------------------------------------- */
 
@@ -1959,6 +2023,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 
 	/* ----------------- chating page ---------------------- */
 
+
+	#chatlistWrap .rightWrap{width: 230px; float: left; position: relative;}
+
 	#chatlistWrap .header{width: 100%; float: left; position: relative; display: block;}
 	#chatlistWrap .header .chatingTitle{font-size: 1.5em; font-weight: 550;}
 	#chatlistWrap .chatingFrame{width: 690px; height: 620px; float: left; margin-right: 20px;  position: relative; overflow-y: scroll; border: 1px solid #f0f1f5; padding-top: 20px;}
@@ -1993,74 +2060,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 
 
 	/*오른쪽 프로필*/
-	#chatlistWrap .rightWrap{width: 230px; float: left; position: relative;}
-	#chatlistWrap .rightWrap .rightProfile{width: 230px; border: 1px solid #fdc066; border-radius: 10px; position: relative; padding-bottom: 10px;}
-	#chatlistWrap .rightWrap .rightProfile .guideTalk{font-size: 1.2em; font-weight: 600; position: absolute; top: 10px; right: 10px;}
-	#chatlistWrap .rightWrap .gray_box{width: 100%; height: 30px; top: 46px; position: absolute; text-indent: 120pt; line-height: 30px; color: #fff;
-		background: rgb(252,234,187); /* Old browsers */
-		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmNlYWJiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmNjZDRkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTElIiBzdG9wLWNvbG9yPSIjZjhiNTAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZiZGY5MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-		background: -moz-linear-gradient(45deg,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(45deg,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(45deg,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(45deg,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* IE10+ */
-		background: linear-gradient(45deg,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-		}
-	#chatlistWrap .rightWrap .gray_box .profile_image{width: 74px; height: 74px; position: absolute; left: 10px; top:-20px;}
-	#chatlistWrap .rightWrap .gray_box .flag_image{width: 20px; height: 14px; left: 0px; top: 10px; position: absolute;}
-	#chatlistWrap .rightWrap .gray_box .vmark_image{width: 18px; height: 18px; left: 68px; top: 40px; position: absolute;}
-	#chatlistWrap .rightWrap .gray_box .btn{display: block; position: absolute; top: 20px; width: 150px;}
-	#chatlistWrap .rightWrap .name_tag{margin-left: 90px; margin-top: 100px;}
-	#chatlistWrap .rightWrap .name_tag div{border-radius: 10px; text-indent: 10pt; margin-right: 10px;}
-	#chatlistWrap .rightWrap .name_tag .tag1{margin-top: 10px;
-		color: #fff;
-		background: rgb(212,228,239); /* Old browsers */
-		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZDRlNGVmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg2YWVjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-		background: -moz-linear-gradient(45deg,  rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(212,228,239,1)), color-stop(100%,rgba(134,174,204,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* IE10+ */
-		background: linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-		}
-	#chatlistWrap .rightWrap .name_tag .tag2{
-		margin-top: 10px;
-		color: #fff;
-		background: rgb(212,228,239); /* Old browsers */
-		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZDRlNGVmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg2YWVjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-		background: -moz-linear-gradient(45deg,  rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(212,228,239,1)), color-stop(100%,rgba(134,174,204,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* IE10+ */
-		background: linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */	
-		}
-	#chatlistWrap .rightWrap .name_tag .tag3{margin-top: 10px;
-		color: #fff;
-		background: rgb(212,228,239); /* Old browsers */
-		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZDRlNGVmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzg2YWVjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-		background: -moz-linear-gradient(45deg,  rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(212,228,239,1)), color-stop(100%,rgba(134,174,204,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* IE10+ */
-		background: linear-gradient(45deg,  rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */	
-	}
 
-	#chatlistWrap .rightWrap .text p{margin-left: 10px; margin-top: 30px; margin-bottom: 20px;}
-	#chatlistWrap .rightWrap .sns_icon img{width: 24px; height: 24px; margin-bottom: 30px;}
-	#chatlistWrap .rightWrap .sns_icon img:first-child{margin-left: 10px;}
-	#chatlistWrap .rightWrap .sns_icon .sns_icon1G{display: hidden;}
-	#chatlistWrap .rightWrap .sns_icon .sns_icon2G{display: hidden;}
+	/* Guidetalk 부분은 디테일 프로필과 동일하므로 뺌 */
 	
+	.guideTalk{margin-left: 130px; margin-top: 10px;}
 	#chatlistWrap .rightWrap .bookedDay{width: 100%; min-height: 150px; margin-top: 20px; background-color: #f9fafc; float: left;  padding-bottom: 20px; border: 1px solid #f0f1f5; }
 	#chatlistWrap .rightWrap .bookedDay .band{width: 100%; height: 28px; color: #fff; line-height: 28px; padding-left: 10px; margin-bottom: 20px;
 		background: rgb(224,224,224); /* Old browsers */
@@ -2082,8 +2085,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 	#chatlistWrap .rightWrap .Add{
 		width: 100%;
 		height: 150px;
-		background-color: #f9fafc;
-		border: 1px solid #f0f1f5;
+		/*background-color: #f9fafc;
+		border: 1px solid #f0f1f5;*/
 		float: left;
 		margin-top: 10px;
 		padding: 5px 10px 10px 10px;
@@ -2115,9 +2118,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 	#chatlistWrap .rightWrap .Add #inputPrice{width: 180px; height: 30px; float: left; margin-bottom: 10px;}
 	#chatlistWrap .rightWrap .Add span.won{float: left; line-height: 30px; margin-left: 10px;}
 	#chatlistWrap .rightWrap .Add #priceModify{width: 210px; margin: 0 auto; margin-bottom: 10px;}
-	#chatlistWrap .rightWrap .Add #pricePay{width: 210px; margin: 0 auto; margin-bottom: 10px;}
-	
+	#chatlistWrap .rightWrap .Add #pricePay{
+		width: 210px;
+		margin-bottom: 10px;
+		float: left;
+		}
 
+	.seDateDiv{
+		width: 259px;
+		height: 34px;
+		float: left;
+		}
+
+	#startDate,
+	#endDate{
+		line-height: inherit;
+	}
+
+	.Add .modal-dialog2 .modal-content .modal-body2{
+		height: 200px;
+		margin-top: 117px;
+	}
+
+	.Add .modal-dialog2{width: 550px;}
 
 
 

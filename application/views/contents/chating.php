@@ -11,8 +11,8 @@
 	<!-- chatingFrame.php로 빼냄 -->
 
 	<div class="rightWrap">
-		<div class="rightProfile">
-			<p class="guideTalk"><span class="glyphicon glyphicon-comment"></span> Guide Talk</p>
+		<div class="right_profile">
+			<p class="guideTalk font_orange"><span class="glyphicon glyphicon-comment font_orange"></span> Guide Talk</p>
 			<div class="gray_box"><span><img src="/application/views/images/main/img29_navi.PNG" alt="">  当地人</span>
 				<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
 				<img src="/application/views/images/flag/01korea.png" alt="" class="flag_image">
@@ -53,20 +53,18 @@
 						</div><!-- modal-header 닫힘 -->
 						<div class="modal-body2">
 							<div id='content'>
-								start Date : <input type="date" id='startDate' name='startDate' value=<?=date('Y-m-d')?>><br />
-								end Date : <input type="date" id='endDate' name='endDate' value=<?=date('Y-m-d')?>>
+								<div class="seDateDiv">Start Date : <input type="date" id='startDate' class="btn-default" name='startDate' value=<?=date('Y-m-d')?>></div>
+								<div class="seDateDiv">End Date : <input type="date" id='endDate' class="btn-default" name='endDate' value=<?=date('Y-m-d')?>></div>
 
+								
 
-								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
-
-								<div style='font-size: 13px; font-family: Verdana;' id='selection'>
-
-								</div>
+								<!-- <div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
+								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div> -->
 							</div>
-						</div><!-- modal-body 닫힘 -->
+						</div><!-- modal-body2 닫힘 -->
 						<div class="modal-footer">
-							<button type="button" class="btn btn-danger" id="saveDate" name="saveDate">确认</button>
-							<button type="button" class="btn btn-info" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-info" id="saveDate" name="saveDate">确认</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
 						</div><!-- modal-footer 닫힘 -->
 					</div><!-- modal-content 닫힘 -->
 				</div><!-- modal-dialog 닫힘 -->
@@ -76,7 +74,7 @@
 
 	<div id="typingBox">
 		<input type="text" name="chatInput" id="chatInput" class="form-control" cols="30" rows="10" placeholder="您想说什么？"></input>
-		<span class="btn btn-primary" id="chatSend" onclick="sendChat()">发送</span>
+		<span class="btn btn-info" id="chatSend" onclick="sendChat()">发送</span>
 	</div>
 </div><!-- chatlistWrap -->
 

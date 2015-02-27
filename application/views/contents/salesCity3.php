@@ -136,60 +136,77 @@
 				<div class="somenail_wrap">
 					<ul class="somenail_list">
 						<li class="somenail1">
-						<section class="somenail_bootstrap">
-							<div class="portfolio-item"  name='backpic' id='backpic' onclick="detailCity('<?=$v->product_num?>')">
-								<div class="portfolio-link">
+							<section class="somenail_bootstrap">
+								<div class="portfolio-item">
+									<div class="portfolio-link">
 										<div class="portfolio-hover">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
-										<img style="width: 300px; height: 240px;" src="<?=$v->image?>" alt="">
+										<img src="/application/views/images/main/img15_some05.png" alt="">
+									</div>
+									<div class="somenail_transbox" style="background-color:rgba(237,28,36,.6)">
+										<p class="somenail_title">首尔地铁沿线游之3号线</p>
+									</div>
 								</div>
-								<?if($i== 1){?>
-									<div class="somenail_transbox" style="background-color:rgba(59,183,202,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
-								<?}else if($i== 2){ ?>
-									<div class="somenail_transbox" style="background-color:rgba(195,119,228,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
-								<?}else if($i== 3){?>
-									<div class="somenail_transbox" style="background-color:rgba(63,127,206,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
-								<?}else if($i== 4){?>
-									<div class="somenail_transbox" style="background-color:rgba(255,210,5,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
-								<?}else if($i== 5){?>
-									<div class="somenail_transbox" style="background-color:rgba(243,164,107,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
-								<?}else if($i== 6){?>
-									<div class="somenail_transbox" style="background-color:rgba(48,59,76,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
-								<?}?>
-							</div>
-
-							<div class="somenail_transcity" onclick="detailCity('<?=$v->product_num?>')"><p><?=$v->code_nm?></p></div>
-
-							<div class="somenail_caption">
-
+								<div class="somenail_transcity">
+									<p>纽约</p>
+								</div>
+								<div class="somenail_caption">
 									<div class="circle-div">
-										<img name='profile' id='profile' src="<?=$v->face_img_path?>" alt="" class="img-circle somenail_profile" onclick="detailProfile('<?=$v->product_num?>')">
+										<img src="/application/views/images/main/profile01.jpg" alt="profile pic" class="img-circle2 somenail_profile");'>
 									</div>
-
 									<div class="back-line1">
-										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span class="posa_price"><?=$v->fat_price?> 元</span>
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span>600 元</span>
 									</div>
-
 									<div class="back-line2">
-										<span class="posa_name"><?=$v->Name_cn_en?></span><span class="posa_local">当地人</span>
+										<p>赵涧楠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
 									</div>
-
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like"><?=$v->likeCnt?>个</span>
-										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 20个</span>&nbsp;&nbsp;
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>15个</span>
 									</div>
-
-									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>
+									<div class="flagbox"><img src="/application/views/images/flag/21canada.png" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
 									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
-
-							</div>
-						</section>
-					</li>
-
-
-
+								</div>
+							</section>
+						</li>
+						<li class="somenail2_2">
+							<section class="somenail_bootstrap2">
+								<div class="portfolio-item2">
+									<div class="portfolio-link2">
+										<div class="portfolio-hover2">
+											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+										</div>
+										<img src="/application/views/images/main/img16_some06.png" alt="">
+									</div>
+									<div class="somenail_transbox2" style="background-color:rgba(195,119,228,.6)">
+										<p class="somenail_title">来首尔林荫道, 玩一把小清新</p>
+									</div>
+								</div>
+								<div class="somenail_transcity2">
+									<p>纽约</p>
+								</div>
+								<div class="somenail_caption">
+									<div class="circle-div2">
+										<img src="/application/views/images/main/profile03.jpg" alt="profile pic" class="img-circle2 somenail_profile");'>
+									</div>
+									<div class="back-line1">
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span>600 元</span>
+									</div>
+									<div class="back-line2">
+										<p>赵涧楠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
+									</div>
+									<div class="back-line3">
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 20个</span>&nbsp;&nbsp;
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>15个</span>
+									</div>
+									<div class="flagbox"><img src="/application/views/images/flag/46uk.png" alt=""></div>
+									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
+									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
+								</div>
+							</section>
+						</li>
 
 						<li class="somenail2_3">
 							<section class="somenail_bootstrap2">

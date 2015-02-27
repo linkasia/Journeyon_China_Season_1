@@ -74,4 +74,5 @@
 				</form>
 				<?}
 			}?>
+			<p class="posa_text3">Upload</p>
 		</div><!-- profileWrap1 -->
