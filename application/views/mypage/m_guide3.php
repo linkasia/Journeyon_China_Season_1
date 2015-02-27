@@ -23,7 +23,7 @@
 				<div class="titlediv">
 					<span class="salestitle" id="salestitle" name="salestitle"><?=$v->title?></span>
 				</div><!-- titlediv 닫음 -->
-				<div class="banddiv whitegloss">
+				<div class="banddiv bgf9fafc">
 					<span class="bandtitle" id="bandtitle" name="bandtitle"><!--最近联系 : 2014. 6. 9--></span><span class="bandtitle2" id="bandtitle2" name="bandtitle2">预约日期 : <?=$v->book_Start_date?> ~ <?=$v->book_End_date?></span>
 					<img src="<?=$v->face_img_path?>" alt="profile_image" class="img-circle profile_image">
 					<img src="<?=$v->ref1?>" alt="flag_image" class="flag_image">
@@ -137,7 +137,7 @@
 				</ul>
 			</nav-->
 
-			<button class="btn" id="allSelect" name="allSelect">选择全部</button>
-			<button class="btn" id="deleteSelect" name="deleteSelect">删除</button>
+			<button class="btn btn-info" id="allSelect" name="allSelect">选择全部</button>
+			<button class="btn btn-danger" id="deleteSelect" name="deleteSelect">删除</button>
 
 		</div><!-- profileWrap1 -->

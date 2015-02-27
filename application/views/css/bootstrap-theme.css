@@ -185,7 +185,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffeb9316', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #e38d13;
+  /*border-color: #e38d13;*/
 }
 .btn-warning:hover,
 .btn-warning:focus {

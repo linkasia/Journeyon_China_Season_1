@@ -32,6 +32,7 @@
 			if( $i < 4){ ?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
 				<img src="" data-toggle="modal" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
+				<span class="glyphicon glyphicon-picture" id="picupload_icon"></span>
 				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>
 			<?}else{?>
@@ -52,14 +53,18 @@
 									<h4 class="modal-title" id="myModalLabel">Picture Upload</h4>
 								</div><!-- modal-header 닫힘 -->
 								<div class="modal-body2">
-									<input type="file" class="filestyle" id="fileUpload" name="fileUpload" data-icon="false">
+									<div id="UploadPreviewDiv"><img src="/application/views/images/contents/img_d.jpg" alt="previewImg" id="UploadPreviewImg"></div>
+									<input type="file" class="filestyle btn btn-info" id="fileUpload" name="fileUpload" data-icon="false" placeholder="파일 업로드">
+									<span id="posa_pictureupload" name="fileUpload">Upload</span>
+									<button class="btn btn-default" id="posa_imagecheckbtn">Image Check</button>
+									
 									<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
 									<input type='hidden' name="hiddenId" id="hiddenId" class="form-control" value="">
 									<input type='text' name="pictureTitle" id="pictureTitle" class="form-control" placeholder="Picture Title">
 									<textarea name="pictureCaption" id="pictureCaption" rows="3" class="form-control" placeholder="사진 설명"></textarea>
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
-									<button type="submit" class="btn btn-info" id="imgUpload" name="imgUpload">Upload</button>
+									<button type="submit" class="btn btn-info" id="imgUpload" name="imgUpload">Save</button>
 									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->

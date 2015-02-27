@@ -5,14 +5,14 @@
 				<div class="underline">订单取消管理</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 			<div class="btn-group sortGroup" role="group" aria-label="" id="cancelsortGroup1">
-				<button type="button" class="btn btn-info" id="cancelsort1" name="cancelsort1">全部</span></button>
-				<button type="button" class="btn btn-info" id="cancelsort2" name="cancelsort2">您已取消的行程<span id="sortNumber1" name="sortNumber1">(40)</span></button>
-				<button type="button" class="btn btn-info" id="cancelsort3" name="cancelsort3">微导游已取消的行程<span id="sortNumber2" name="sortNumber2">(20)</span></button>
+				<button type="button" class="btn btn-default" id="cancelsort1" name="cancelsort1">全部</span></button>
+				<button type="button" class="btn btn-default" id="cancelsort2" name="cancelsort2">您已取消的行程<span id="sortNumber1" name="sortNumber1">(40)</span></button>
+				<button type="button" class="btn btn-default" id="cancelsort3" name="cancelsort3">微导游已取消的行程<span id="sortNumber2" name="sortNumber2">(20)</span></button>
 			</div>
 			<div class="btn-group sortGroup" role="group" aria-label="" id="cancelsortGroup2">
-				<button type="button" class="btn btn-info" id="cancelsort1" name="cancelsort1">最近搜寻</button>
-				<button type="button" class="btn btn-info" id="cancelsort1" name="cancelsort2">过往搜寻</button>
-				<button type="button" class="btn btn-info" id="cancelsort1" name="cancelsort3">日期搜寻</button>
+				<button type="button" class="btn btn-default" id="cancelsort1" name="cancelsort1">最近搜寻</button>
+				<button type="button" class="btn btn-default" id="cancelsort1" name="cancelsort2">过往搜寻</button>
+				<button type="button" class="btn btn-default" id="cancelsort1" name="cancelsort3">日期搜寻</button>
 			</div>
 
 			<!---------------- 상품 반복시작 ------------------->

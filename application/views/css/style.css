@@ -699,7 +699,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		#left_section .contents_wrap .profileWrap4 .somenail_wrap{margin-left: 35px;}
 
 		/*섬네일 끌어온 부분 CSS*/
-		#left_section ul:after{clear: both; display: block; *zoom: 1;}
+		/*#left_section ul:after{clear: both; display: block; *zoom: 1;}
 		#left_section ul > li{float: left; margin-right: 13px; margin-bottom: 20px;}
 
 		#left_section .sub_title{height: 80px; padding-top: 20px;}
@@ -723,7 +723,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 		#left_section .contents_wrap .profileWrap5{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#left_section .contents_wrap .profileWrap5 .title5{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#left_section .contents_wrap .profileWrap5 .title5 .underline{border-bottom: 2px #FF7D26 solid; width: 195px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#left_section .contents_wrap .profileWrap5 .title5 .underline{border-bottom: 2px #FF7D26 solid; width: 195px; height: 40px; line-height: 40px; font-size: 1.35em;}*/
 
 
 
@@ -1345,12 +1345,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 
 		#guideWrap .profileWrap1 #guideRequestWrap .alert{width: 530px; margin-left: 60px; margin-bottom: 40px; margin-top: 40px;}
 
-		#guideWrap .profileWrap1 #guideData{height: 200px; position: relative;}
+		#guideWrap .profileWrap1 #guideData{height: 250px; position: relative;}
 		#guideWrap .profileWrap1 #guideData .dataView{padding-left: 60px; position: relative;}
 		#guideWrap .profileWrap1 #guideData .dataView p{margin-top: 20px;}
 		#guideWrap .profileWrap1 #guideData .dataView #profileModify{position: absolute; top: -3px; left: 200px; padding: 1px 8px 1px 8px;}
 		#guideWrap .profileWrap1 #guideData .dataView #snsModify{position: absolute; top: 39px; left: 200px; padding: 1px 8px 1px 8px;}
-		#guideWrap .profileWrap1 #guideData #request{position: absolute; right: 88px; bottom: 10px;}
+		#guideWrap .profileWrap1 #guideData #request{
+			position: absolute; right: 88px; bottom: 20px;
+			width: 120px;
+			}
 
 		#guideWrap .profileWrap1 #guideData{position: relative;}
 
@@ -1374,7 +1377,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 		#guideWrap .profileWrap1 .picUpload:hover{background-color: #0699D3; opacity: 1;}
 		#guideWrap .profileWrap1 .picUpload span.plus{position: absolute; top: 35%; left: 40%; font-size: 50pt; color: white;}
 
-		#guideWrap .profileWrap1 #Registration{margin-top: 178px; margin-left: 155px;}
+		#guideWrap .profileWrap1 #Registration{
+			margin-top: 178px; margin-left: 115px;
+			width: 120px;
+			}
 
 		#map{
 			width: 670px;
@@ -1525,7 +1531,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 				.profileWrap1 .cancelList #statusText{position: absolute; width: 100px; height: 20px; top: 120px; left: 32px; text-align: center;}
 				.profileWrap1 .cancelList #statusText p{cursor: pointer;}
 				.profileWrap1 .cancelList #cancelCheckbox{width: 16px; height: 16px; position: absolute; top: 69px; left: 0px;}
-				#cancelsortGroup1{margin-right:  52px;}
+				#cancelsortGroup1{
+					margin-right:  52px;
+					margin-left: 10px;
+					}
 				#cancel_p{margin-top: 30px; margin-bottom: 40px;}
 				#cancelComment{height: 150px;}
 				#cancelTextareaModalBody{height: 370px;}
@@ -1727,6 +1736,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 		cursor: pointer;
 		display: block;
 		}
+	#picupload_icon{
+		position: absolute;
+		font-size: 60px;
+		top: 76px;
+		left: 120px;
+		color: #fff;
+	}
+
+
 
 	#productWrapAll .productDiv3 .picUpload:hover{background-color: #0699D3; opacity: 1;}
 
@@ -1737,9 +1755,47 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', end
 	#productWrapAll .productDiv3 .picUpload span.plus{position: absolute; top: 35%; left: 40%; font-size: 50pt; color: white;}
 	#productWrapAll .productDiv3 .picUpload span.remove{position: absolute; top: 2%; right: 2%; font-size: 18pt; color: white;}
 
-	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 #fileUpload{margin: 60px auto;}
-	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 .captionTitle{margin-top: 50px;}
-	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 #pictureCaption{width: 468px; max-width: 468px; height: 80px; max-height: 80px; margin-top: 5px;}
+	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 #fileUpload{
+		width: 109px;
+		height: 42px;
+		margin-left: 130px;
+		margin-top: -42px;
+		text-indent: -9999pt;
+		border-radius: 5px;
+		color:#53CBF1;
+		}
+
+	#posa_pictureupload{
+		position: absolute;
+		top: 69px;
+		left: 155px;
+		color: #fff;
+		}
+
+	#posa_imagecheckbtn{
+		position: absolute;
+		top: 57px;
+		left: 265px;
+	}
+
+	#UploadPreviewDiv{
+		width: 120px;
+		height: 84px;
+		background-color: red;
+		}
+
+
+
+	#UploadPreviewDiv #UploadPreviewImg{
+		float: left;
+		width: 100%;
+		height: 100%;
+		}
+
+
+	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 .captionTitle{margin-top: 30px;}
+	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 #pictureCaption{
+		width: 468px; max-width: 468px; height: 80px; max-height: 80px; margin-top: 10px;}
 
 	#productWrapAll .productDiv4{width: 100%; height: 480px; position: relative; float: left;}
 	#productWrapAll .productDiv4 .productTextarea{width: 650px; max-width: 650px; height: 380px; max-height: 380px; margin-left: 20px;}
@@ -2643,7 +2699,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 		position: relative; float: left; margin-right: 30px; border: 1px solid #f0f1f5;
 }
 
-.font_blue{color: #3f7fce;}
+.font_blue{color: #53CBF1;}
 .font_orange{color: #0699D3;}
 
 
@@ -2831,3 +2887,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 		display: none;
 	}
 }
+

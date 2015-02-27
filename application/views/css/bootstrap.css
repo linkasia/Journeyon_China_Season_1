@@ -915,7 +915,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
+  color: #53CBF1;
   text-decoration: none;
 }
 a:hover,
@@ -2977,7 +2977,7 @@ fieldset[disabled] .btn-success.active {
 
 .btn-info{
 color:#fff;
-background-color: #62b8ef;
+background-color: #53CBF1;
 }
 
 /*.btn-info {
