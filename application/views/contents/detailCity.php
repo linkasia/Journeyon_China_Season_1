@@ -374,7 +374,7 @@
 				data:{ salesNum : _salesNum},
 				url:"/index.php/city/country/procuctLike",
 				success: function (data){
-					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('d')\">";
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('d')\"><span>&nbsp;想去</span>";
 				}
 			});
 		}else{
@@ -385,7 +385,7 @@
 				data:{ salesNum : _salesNum},
 				url:"/index.php/city/country/procuctLikeDown",
 				success: function (data){
-					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('g')\">";
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('g')\"><span>&nbsp;想去</span>";
 				}
 			});
 		}
