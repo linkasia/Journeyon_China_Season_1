@@ -124,7 +124,8 @@
 				});
 
 				$('#e-mail2').click( function(){
-					location.href = "<?=site_url('auth/member_join'); ?>";
+					var _selnum = $('#inputLarge').val();
+					location.href = "/index.php/auth/member_join?id="+_selnum;
 				});
 
 				$('#passwordLose').click( function(){

@@ -197,7 +197,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 				});
 
 				$('#signup').click( function(){
-					location.href = "<?=site_url('auth/member_join'); ?>";
+					location.href = "/index.php/auth/member_join?id=";
 				});
 			});
 

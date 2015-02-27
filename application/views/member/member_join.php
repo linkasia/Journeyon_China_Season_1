@@ -59,7 +59,7 @@
 			<section id="member_container">
 				<div class="form-group">
 					<div class="member_container">
-							<input class="form-control input-lg" type="text" id="inputLarge" placeholder="您的邮箱">
+							<input class="form-control input-lg" type="text" id="inputLarge" placeholder="您的邮箱" value=<?=$_REQUEST['id'];?>>
 							<input  type="hidden" id="hidden_mail" placeholder="">
 							<!-- <span id="imi_id">已经被申请</span> -->
 							<ul id="ul_margin">
@@ -79,7 +79,7 @@
 													<div class="modal-body2">
 														  <div id='content'>
 																<p>
-															
+
 		<h4 class="title">1. 特别提示</h3><br>
   		欢迎您来到卓尼旅行。请您仔细阅读以下条款，如果您对本协议的任何条款表示异议，您可以选择不进入卓尼旅行。当您注册成功，无论是进入卓尼旅行，还是在卓尼旅行上发布任何内容（即“内容”），均意味着您（即“用户”）完全接受本协议项下的全部条款。<br><br><br>
 
@@ -135,7 +135,7 @@
 		<h4 class="title">7.  协议修改</h4><br>
 		7.1 卓尼旅行将有权随时修改本协议的有关条款，一旦本协议的内容发生变动，卓尼旅行将会通过适当方式在网站上提示。<br>
 		7.2 如果不同意卓尼旅行对本协议相关条款所做的修改，用户有权停止使用本服务。如果用户继续使用本服务，则视为用户接受卓尼旅行对本协议相关条款所做的修改。<br>
-															
+
 																</p>
 														  </div>
 													</div><!-- modal-body 닫힘 -->
