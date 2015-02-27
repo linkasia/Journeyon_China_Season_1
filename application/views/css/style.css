@@ -693,15 +693,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		#left_section .contents_wrap .profileWrap3 .list_rightwrap .bottom_text .line1 .tag img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
 		#left_section .contents_wrap .profileWrap3 .list_rightwrap .bottom_text .line2 .tag2 img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
 
-		#left_section .contents_wrap .profileWrap4{width: 690px; height: ; float: left; margin-bottom: 20px;}
-		#left_section .contents_wrap .profileWrap4 .title4{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
+		#left_section .contents_wrap .profileWrap4,
+		#left_section .contents_wrap .profileWrap5
+		{width: 690px; height: ; float: left; margin-bottom: 20px;}
+		#left_section .contents_wrap .profileWrap4 .title4,
+		#left_section .contents_wrap .profileWrap5 .title5
+		{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
 		#left_section .contents_wrap .profileWrap4 .title4 .underline{border-bottom: 2px #FF7D26 solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
 		#left_section .contents_wrap .profileWrap4 .somenail_wrap{margin-left: 35px;}
 
-		/*섬네일 끌어온 부분 CSS*/
-		/*#left_section ul:after{clear: both; display: block; *zoom: 1;}
+
+		#left_section .contents_wrap .profileWrap5 .title5 .underline{border-bottom: 2px #FF7D26 solid; width: 201px; height: 40px; line-height: 40px; font-size: 1.35em;}
+
+		#left_section ul:after{clear: both; display: block; *zoom: 1;}
 		#left_section ul > li{float: left; margin-right: 13px; margin-bottom: 20px;}
 
+		
+		/*섬네일 끌어온 부분 CSS*/
+
+		/*
 		#left_section .sub_title{height: 80px; padding-top: 20px;}
 		#left_section .somenail_caption{width: 300px; height: 118px; border: 1px solid #f0f1f5; position: relative;}
 		#left_section .somenail_caption:after{clear: both;display: block; *zoom: 1;}
@@ -847,7 +858,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		border: 1px solid #dbdbdb;
 	}
 
-	.right_profile .text p{margin-left: 10px; margin-top: 30px; margin-bottom: 20px;}
+	.right_profile .text p{margin-left: 10px; margin-top: 30px; margin-bottom: 20px; margin-right: 20px;}
 	.right_profile .sns_icon img{width: 24px; height: 24px; margin-bottom: 30px;}
 	.right_profile .sns_icon img:first-child{margin-left: 10px;}
 	.right_profile .sns_icon .sns_icon1G{display: hidden;}
@@ -855,6 +866,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 	.profile-btn{display: block; bottom: 20px; margin-left: 50px;} /*버튼*/
 
+	#right_aside #pls_login{margin-left: 37px;}
 	#right_aside .aside-menu{margin-top: 5px;}
 	#right_aside .aside-like img{
 		position: absolute;

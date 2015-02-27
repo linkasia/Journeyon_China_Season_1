@@ -119,7 +119,7 @@
 
 					</div>
 
-
+				<button class="btn btn-default" id="pls_login" name="pls_login">马上去登陆或注册</button>
 					<div class="aside-like">
 						<div id='likeUp'>
 						<?if($bucketList != null){?>
@@ -131,13 +131,13 @@
 							<?}?>
 
 						<?}
-					}?>
-					</div>
-
+						}?>
+						</div>
 					</div>
 				</div>
 			<?}?>
 		</form>
+
 
 		<?foreach($salesBasic as $v){?>
 			<input type='hidden' id='user_num' name='user_num' value='<?=$v->user_num?>' >

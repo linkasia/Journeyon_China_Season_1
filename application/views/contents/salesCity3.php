@@ -156,14 +156,14 @@
 										<img src="/application/views/images/main/profile01.jpg" alt="profile pic" class="img-circle2 somenail_profile");'>
 									</div>
 									<div class="back-line1">
-										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span>600 元</span>
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span class="posa_price">600 元</span>
 									</div>
 									<div class="back-line2">
-										<p>赵涧楠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
+										<span class="posa_name">赵涧楠</span><span class="posa_local">当地人</span>
 									</div>
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 20个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>15个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like">20个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
 									</div>
 									<div class="flagbox"><img src="/application/views/images/flag/21canada.png" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
@@ -171,72 +171,36 @@
 								</div>
 							</section>
 						</li>
-						<li class="somenail2_2">
-							<section class="somenail_bootstrap2">
-								<div class="portfolio-item2">
-									<div class="portfolio-link2">
-										<div class="portfolio-hover2">
+
+					<li class="somenail1">
+							<section class="somenail_bootstrap">
+								<div class="portfolio-item">
+									<div class="portfolio-link">
+										<div class="portfolio-hover">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
 										<img src="/application/views/images/main/img16_some06.png" alt="">
 									</div>
-									<div class="somenail_transbox2" style="background-color:rgba(195,119,228,.6)">
-										<p class="somenail_title">来首尔林荫道, 玩一把小清新</p>
-									</div>
-								</div>
-								<div class="somenail_transcity2">
-									<p>纽约</p>
-								</div>
-								<div class="somenail_caption">
-									<div class="circle-div2">
-										<img src="/application/views/images/main/profile03.jpg" alt="profile pic" class="img-circle2 somenail_profile");'>
-									</div>
-									<div class="back-line1">
-										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span>600 元</span>
-									</div>
-									<div class="back-line2">
-										<p>赵涧楠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
-									</div>
-									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 20个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>15个</span>
-									</div>
-									<div class="flagbox"><img src="/application/views/images/flag/46uk.png" alt=""></div>
-									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
-									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
-								</div>
-							</section>
-						</li>
-
-						<li class="somenail2_3">
-							<section class="somenail_bootstrap2">
-								<div class="portfolio-item2">
-									<div class="portfolio-link2">
-										<div class="portfolio-hover2">
-											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
-										</div>
-										<img src="/application/views/images/main/img13_some03.png" alt="">
-									</div>
-									<div class="somenail_transbox2" style="background-color:rgba(63,127,206,.6)">
+									<div class="somenail_transbox" style="background-color:rgba(63,127,206,.6)">
 										<p class="somenail_title">搜寻那些首尔的人气美甲店</p>
 									</div>
 								</div>
-								<div class="somenail_transcity2">
+								<div class="somenail_transcity">
 									<p>纽约</p>
 								</div>
 								<div class="somenail_caption">
-									<div class="circle-div2">
+									<div class="circle-div">
 										<img src="/application/views/images/main/profile04.jpg" alt="profile pic" class="img-circle2 somenail_profile");'>
 									</div>
 									<div class="back-line1">
-										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span>600 元</span>
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span class="posa_price">600 元</span>
 									</div>
 									<div class="back-line2">
-										<p>赵涧楠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
+										<span class="posa_name">赵涧楠</span><span class="posa_local">当地人</span>
 									</div>
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 20个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>15个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like">40个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
 									</div>
 									<div class="flagbox"><img src="/application/views/images/flag/39austria.png" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
@@ -244,48 +208,90 @@
 								</div>
 							</section>
 						</li>
-						<li class="somenail2_4">
-							<section class="somenail_bootstrap2">
-								<div class="portfolio-item2">
-									<div class="portfolio-link2">
-										<div class="portfolio-hover2">
+
+					<li class="somenail1">
+							<section class="somenail_bootstrap">
+								<div class="portfolio-item">
+									<div class="portfolio-link">
+										<div class="portfolio-hover">
 											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
 										</div>
-										<img src="/application/views/images/main/img17_some07.png" alt="">
+										<img src="/application/views/images/main/img13_some03.png" alt="">
 									</div>
-									<div class="somenail_transbox2" style="background-color:rgba(243,164,107,.6)">
-										<p class="somenail_title">热辣旅游主题NBA, 纽约麦迪逊现场为...</p>
+									<div class="somenail_transbox" style="background-color:rgba(63,127,206,.6)">
+										<p class="somenail_title">搜寻那些首尔的人气美甲店</p>
 									</div>
 								</div>
-								<div class="somenail_transcity2">
+								<div class="somenail_transcity">
 									<p>纽约</p>
 								</div>
 								<div class="somenail_caption">
-									<div class="circle-div2">
+									<div class="circle-div">
 										<img src="/application/views/images/main/profile05.jpg" alt="profile pic" class="img-circle2 somenail_profile");'>
 									</div>
 									<div class="back-line1">
-										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span>600 元</span>
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span class="posa_price">600 元</span>
 									</div>
 									<div class="back-line2">
-										<p>赵涧楠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当地人</p>
+										<span class="posa_name">赵涧楠</span><span class="posa_local">当地人</span>
 									</div>
 									<div class="back-line3">
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart">&nbsp;<span>游记 20个</span>&nbsp;&nbsp;
-										<img src="/application/views/images/main/img23_heart.png" alt="icon_" class="icon_t">&nbsp;<span>15个</span>
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like">40个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
 									</div>
-									<div class="flagbox"><img src="/application/views/images/flag/40columbia.png" alt=""></div>
+									<div class="flagbox"><img src="/application/views/images/flag/39austria.png" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
 									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
 								</div>
 							</section>
 						</li>
+
+						<li class="somenail1">
+							<section class="somenail_bootstrap">
+								<div class="portfolio-item">
+									<div class="portfolio-link">
+										<div class="portfolio-hover">
+											<div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
+										</div>
+										<img src="/application/views/images/main/img17_some07.png" alt="">
+									</div>
+									<div class="somenail_transbox" style="background-color:rgba(63,127,206,.6)">
+										<p class="somenail_title">搜寻那些首尔的人气美甲店</p>
+									</div>
+								</div>
+								<div class="somenail_transcity">
+									<p>纽约</p>
+								</div>
+								<div class="somenail_caption">
+									<div class="circle-div">
+										<img src="/application/views/images/main/profile03.jpg" alt="profile pic" class="img-circle2 somenail_profile");'>
+									</div>
+									<div class="back-line1">
+										<img src="/application/views/images/main/img25_coin.png" alt="icon_coin" class="icon_coin"><span class="posa_price">600 元</span>
+									</div>
+									<div class="back-line2">
+										<span class="posa_name">赵涧楠</span><span class="posa_local">当地人</span>
+									</div>
+									<div class="back-line3">
+										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like">40个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
+									</div>
+									<div class="flagbox"><img src="/application/views/images/flag/39austria.png" alt=""></div>
+									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
+									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
+								</div>
+							</section>
+						</li>
+						
+
+					
 					</ul>
 				</div> <!-- somenail_wrap 닫음 -->
 			</div><!-- profileWrap4 -->
 
 			<div class="profileWrap5">
-				<div class="title5"><div class="underline">Host References (10)</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
+				<div class="title5"><div class="underline">Host References (10)</div></div>
+				<!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 				<div class="reply"><!-- 질문 부분 -->
 					<div class="profile_pic">
