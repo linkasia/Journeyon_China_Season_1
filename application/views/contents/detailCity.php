@@ -74,8 +74,9 @@
 							?>
 						<button type="submit" class="btn btn-info mb20" id="calPop" name="calPop">定制游咨询</button>
 						<?}
-						}?>
-
+						}else{?>
+							<input type='button' class="btn btn-default" id="pls_login" name="pls_login" value="马上去登陆或注册">
+						<?}?>
 						<!-- Modal 여기서부터 Overview 박스 시작 -->
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
@@ -119,7 +120,6 @@
 
 					</div>
 
-				<button class="btn btn-default" id="pls_login" name="pls_login">马上去登陆或注册</button>
 					<div class="aside-like">
 						<div id='likeUp'>
 						<?if($bucketList != null){?>
