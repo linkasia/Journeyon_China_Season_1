@@ -53,11 +53,17 @@
 									<h4 class="modal-title" id="myModalLabel">Picture Upload</h4>
 								</div><!-- modal-header 닫힘 -->
 								<div class="modal-body2">
-									<div id="UploadPreviewDiv"><img src="/application/views/images/contents/img_d.jpg" alt="previewImg" id="UploadPreviewImg"></div>
-									<input type="file" class="filestyle btn btn-info" id="fileUpload" name="fileUpload" data-icon="false" placeholder="파일 업로드">
-									<span id="posa_pictureupload" name="fileUpload">Upload</span>
-									<button class="btn btn-default" id="posa_imagecheckbtn">Image Check</button>
-									
+								<div class="fileinput fileinput-new" data-provides="fileinput">
+									<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+									<div>
+										<span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+										<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+									</div>
+								</div>
+									<!--div id="UploadPreviewDiv"><img src="" alt="" id="UploadPreviewImg"></div>
+									<input type="file" class="filestyle btn btn-info" id="fileUpload" name="fileUpload" data-icon="false" placeholder="파일 업로드" onchange="tmp_imgUpload()" -->
+									<!--span id="posa_pictureupload" name="fileUpload">Upload</span -->
+									<!-- button class="btn btn-default" id="posa_imagecheckbtn" >Image Check</button -->
 									<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
 									<input type='hidden' name="hiddenId" id="hiddenId" class="form-control" value="">
 									<input type='text' name="pictureTitle" id="pictureTitle" class="form-control" placeholder="Picture Title">
@@ -189,6 +195,11 @@
 </div><!-- productWrap en -->
 
 <script type="text/javascript">
+
+	function tmp_imgUpload(){
+
+	}
+
 	function removeImg(key){
 		var _imgPath = document.getElementById('pic'+key).src;
 		var _product_num =  $('#hiddenProductNum').val();

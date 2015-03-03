@@ -67,6 +67,9 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script type="text/javascript" src="/application/views/jqwidgets/jqxdropdownlist.js"></script>
 		<script type="text/javascript" src="/application/views/jqwidgets/globalization/globalize.js"></script>
 
+		<!-- 사진 js 불러온 부분 -->
+		<script type="text/javascript" src="/application/views/scripts/jasny-bootstrap.js"></script>
+
 		<!-- simple modal plugin -->
 		<link rel="stylesheet" href="/application/views/css/simplemodal.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="/application/views/js/mootools-core-1.3.1.js" type="text/javascript" charset="utf-8"></script>
@@ -74,6 +77,8 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 		<script src="/application/views/js/simple-modal.js" type="text/javascript" charset="utf-8"></script>
 		<!-- script src="/application/views/js/demo.js" type="text/javascript" charset="utf-8"></script -->
 
+		<!-- 사진 css 불러온 부분 -->
+		<link rel="stylesheet" href="/application/views/css/jasny-bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
 		<!-- 1/30 추가 스크립트 -->
 		<!-- <script>
