@@ -1859,7 +1859,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	#UploadPreviewDiv{
 		width: 120px;
 		height: 84px;
-		background-color: red;
+		background-color: #f0f1f5;
 		}
 
 
