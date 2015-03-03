@@ -189,41 +189,48 @@
 
 		function mySalesList($user_num, $state)
 		{
-			$sql ="SELECT b.mother_area_code,
-											b.mother_country_code,
-											b.v_get_code,
-											b.face_img_path,
-											c.code_nm AS country_nm,
-											c.ref1 AS countryimg,
-											d.code_nm AS tem1,
-											d.ref1 AS refrem1,
-											e.code_nm AS tem2,
-											e.ref1 AS refrem2,
-											f.code_nm AS tem3,
-											f.ref1 AS refrem3,
-											g.code_nm AS recom1,
-											g.ref1 AS refrecom1,
-											h.code_nm AS recom2,
-											h.ref1 AS refrecom2,
-											a.*,
-											DATE_FORMAT(a.modified_date,'%Y.%m.%d') AS regdate,
-											i.cnt,
-											CASE WHEN a.product_state ='0001' THEN 'sales' WHEN a.product_state ='0002' THEN 'registring' ELSE 'stop' END state
-							FROM product a
-							LEFT JOIN USER b ON a.user_num=b.user_num
-							LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
-							LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
-							LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
-							LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
-							LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
-							LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
-							LEFT JOIN (SELECT COUNT(*) AS cnt, x.product_num
-														FROM product X
-														LEFT JOIN user_order_product z ON x.product_num = z.product_num
-														GROUP BY x.product_num
-													) AS i ON a.product_num = i.product_num
-							WHERE a.user_num = '".$user_num."'
-							AND a.product_state = '".$state."'";
+			$sql ="SELECT u.*,
+											z.img_path AS image
+							FROM(
+											SELECT b.mother_area_code,
+															b.mother_country_code,
+															b.v_get_code,
+															b.face_img_path,
+															c.code_nm AS country_nm,
+															c.ref1 AS countryimg,
+															d.code_nm AS tem1,
+															d.ref1 AS refrem1,
+															e.code_nm AS tem2,
+															e.ref1 AS refrem2,
+															f.code_nm AS tem3,
+															f.ref1 AS refrem3,
+															g.code_nm AS recom1,
+															g.ref1 AS refrecom1,
+															h.code_nm AS recom2,
+															h.ref1 AS refrecom2,
+															a.*,
+															DATE_FORMAT(a.modified_date,'%Y.%m.%d') AS regdate,
+															i.cnt,
+															CASE WHEN a.product_state ='0001' THEN 'sales' WHEN a.product_state ='0002' THEN 'registring' ELSE 'stop' END state
+											FROM product a
+											LEFT JOIN USER b ON a.user_num=b.user_num
+											LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
+											LEFT JOIN code_table d ON a.theme_num1_code=d.code AND d.class = '0012'
+											LEFT JOIN code_table e ON a.theme_num2_code=e.code AND e.class = '0012'
+											LEFT JOIN code_table f ON a.theme_num3_code=f.code AND f.class = '0012'
+											LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
+											LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
+											LEFT JOIN (SELECT COUNT(*) AS cnt, x.product_num
+																	FROM product X
+																	LEFT JOIN user_order_product z ON x.product_num = z.product_num
+																	GROUP BY x.product_num
+											) AS i ON a.product_num = i.product_num
+											WHERE a.user_num = '".$user_num."'
+											AND a.product_state = '".$state."'
+										) AS u
+										LEFT JOIN spot z ON u.product_num = z.product_num
+										GROUP BY product_num";
+
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

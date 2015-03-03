@@ -30,10 +30,12 @@
 								<span id="talkbox" name="talkbox"> 当地人</span>
 							</div>
 						</div>
-						<img src="/application/views/images/contents/img01.jpg" alt="" class="pic1_img" style="width: 100%; height: 100%;">
-						<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
-						<img src="/application/views/images/flag/01korea.png" alt="" class="flag_image">
-						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
+						<img src="<?=$v->image?>" alt="" class="pic1_img" style="width: 100%; height: 100%;">
+						<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
+						<img src="<?=$v->countryimg?>" alt="" class="flag_image">
+						<?if($v->v_get_code == "0001"){?>
+							<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
+						<?}?>
 					</div><!-- list_image1 닫힘 -->
 					<div class="list_rightwrap whitegloss">
 						<div class="right_title"><span><?=$v->title?></span>
