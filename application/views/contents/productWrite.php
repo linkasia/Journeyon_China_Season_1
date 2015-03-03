@@ -234,7 +234,7 @@
 	function removeImg(key){
 		var _imgPath = document.getElementById('pic'+key).src;
 		var _product_num =  $('#hiddenProductNum').val();
-		var _hiddenId =  $('hiddenId').val();
+		var _hiddenId =  $('#hiddenId').val();
 		$.ajax({
 			type:"GET" ,
 			dataType:"text",
