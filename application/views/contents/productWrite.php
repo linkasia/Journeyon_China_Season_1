@@ -33,7 +33,7 @@
 			if( $i <= 3){?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
 				<img src="" data-toggle="modal" data-backdrop="static" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
-				<span class="glyphicon glyphicon-picture pic_icon_img" id='picImg<?=$i?>' name='picImg<?=$i?>'></span>
+				<span class="glyphicon glyphicon-picture" id='picImg<?=$i?>' name='picImg<?=$i?>'></span>
 				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>
 			<?}else{?>
@@ -68,7 +68,7 @@
 								</div-->
 									<div id="UploadPreviewDiv"><img src="" alt="" id="UploadPreviewImg"></div>
 									<input type="file" class="filestyle btn btn-info" id="fileUpload" name="fileUpload" data-icon="false" placeholder="파일 업로드">
-									<span id="posa_pictureupload" name="fileUpload">Upload</span>
+									<!--span id="posa_pictureupload" name="fileUpload">Upload</span -->
 									<!-- button class="btn btn-default" id="posa_imagecheckbtn" >Image Check</button -->
 									<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
 									<input type='hidden' name="hiddenId" id="hiddenId" class="form-control" value="">
@@ -222,8 +222,7 @@
         $(this).parent().slideUp(); //미리 보기 영역 감춤
         return false; //기본 이벤트 막음
     });
-*/
-/*
+
 	function resetFormElement(e) {
         e.wrap('<form>').closest('form').get(0).reset();
         //리셋하려는 폼양식 요소를 폼(<form>) 으로 감싸고 (wrap()) ,
@@ -340,12 +339,11 @@
 		});
 	}
 
-
 $(function(){
-	
+
 	$('#imgUploadfrm').ajaxForm();
 	$(function(){
-		
+
 		$('#imgUploadfrm').ajaxForm({
 			success: function(data){
 				var key=$('#hiddenId').val();
