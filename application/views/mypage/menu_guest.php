@@ -83,6 +83,11 @@
 		});
 	}
 
+	function detail_page(num)
+	{
+		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"&mode='); ?>";
+	}
+
 	$(function(){
 
 		$('#guestHome').click( function(){
