@@ -67,7 +67,7 @@
 									</div>
 								</div-->
 									<div id="UploadPreviewDiv"><img src="" alt="" id="UploadPreviewImg"></div>
-									<input type="file" class="filestyle btn btn-info" id="fileUpload" name="fileUpload" data-icon="false" placeholder="파일 업로드" onchange="tmp_imgUpload()">
+									<input type="file" class="filestyle btn btn-info" id="fileUpload" name="fileUpload" data-icon="false" placeholder="파일 업로드">
 									<!--span id="posa_pictureupload" name="fileUpload">Upload</span -->
 									<!-- button class="btn btn-default" id="posa_imagecheckbtn" >Image Check</button -->
 									<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
@@ -202,10 +202,36 @@
 
 <script type="text/javascript">
 
-	function tmp_imgUpload(){
-
-	}
-
+	$('#fileUpload').on('change', function() {
+		ext = $(this).val().split('.').pop().toLowerCase(); //확장자
+		if($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+            resetFormElement($(this)); //폼 초기화
+            window.alert('이미지 파일이 아닙니다! (gif, png, jpg, jpeg 만 업로드 가능)');
+        } else {
+            file = $('#fileUpload').prop("files")[0];
+            blobURL = window.URL.createObjectURL(file);
+            $('#UploadPreviewImg').attr('src', blobURL);
+            $('#image_preview').slideDown(); //업로드한 이미지 미리보기
+           // $(this).slideUp(); //파일 양식 감춤
+        }
+	});
+/*
+	$('#image_preview a').bind('click', function() {
+        //resetFormElement($('#fileUpload')); //전달한 양식 초기화
+        $('#fileUpload').slideDown(); //파일 양식 보여줌
+        $(this).parent().slideUp(); //미리 보기 영역 감춤
+        return false; //기본 이벤트 막음
+    });
+*/
+/*
+	function resetFormElement(e) {
+        e.wrap('<form>').closest('form').get(0).reset();
+        //리셋하려는 폼양식 요소를 폼(<form>) 으로 감싸고 (wrap()) ,
+        //요소를 감싸고 있는 가장 가까운 폼( closest('form')) 에서 Dom요소를 반환받고 ( get(0) ),
+        //DOM에서 제공하는 초기화 메서드 reset()을 호출
+        e.unwrap(); //감싼 <form> 태그를 제거
+    }
+*/
 	function removeImg(key){
 		var _imgPath = document.getElementById('pic'+key).src;
 		var _product_num =  $('#hiddenProductNum').val();
@@ -295,6 +321,7 @@
 		document.getElementById('fileUpload').value= "";
 		document.getElementById('pictureTitle').value= "";
 		document.getElementById('pictureCaption').value= "";
+		$('#UploadPreviewImg').attr('src', '');
 	}
 
 	function choiceCountry(){
@@ -315,7 +342,6 @@
 $(function(){
 
 	$('#imgUploadfrm').ajaxForm();
-	$('.fileinput').fileinput();
 	$(function(){
 
 		$('#imgUploadfrm').ajaxForm({
