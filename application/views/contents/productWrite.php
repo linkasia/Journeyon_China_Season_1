@@ -33,7 +33,7 @@
 			if( $i <= 3){?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
 				<img src="" data-toggle="modal" data-backdrop="static" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
-				<span class="glyphicon glyphicon-picture" id="picupload_icon"></span>
+				<span class="glyphicon glyphicon-picture" id='picImg<?=$i?>' name='picImg<?=$i?>'></span>
 				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>
 			<?}else{?>
@@ -244,6 +244,7 @@
 			url:"/index.php/city/country/imgDelete",
 			success: function (data){
 				$("#pic"+key).attr("src","");
+				document.getElementById("picImg"+key).style.display= "block";
 			}
 		});
 	}
@@ -348,6 +349,8 @@ $(function(){
 			success: function(data){
 				var key=$('#hiddenId').val();
 				$("#pic"+key).attr("src",data);
+//				alert(document.getElementById("picImg"+key));
+				document.getElementById("picImg"+key).style.display= none;
 			}
 		});
 	});
