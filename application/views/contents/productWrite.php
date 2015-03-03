@@ -308,7 +308,7 @@
 		var divHtml = "";
 		divHtml +="<div class='picUpload' id='addDiv4'>";
 		divHtml +="<img src='' data-toggle='modal' data-target='#myModal5' id='pic4' name='pic4' onclick='valChange(4)'>";
-		divHtml +="<span class='glyphicon glyphicon-picture' id='picupload_icon'></span>";
+		divHtml +="<span class='glyphicon glyphicon-picture pic_icon_img' id='picImg4'></span>";
 		divHtml += "<span class='glyphicon glyphicon-remove remove'></span>";
 		divHtml +="</div>";
 
