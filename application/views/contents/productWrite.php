@@ -32,7 +32,7 @@
 			for($i=0; $i < 5; $i++){
 			if( $i <= 3){?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
-				<img src="" data-toggle="modal" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
+				<img src="" data-toggle="modal" data-backdrop="static" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
 				<span class="glyphicon glyphicon-picture" id="picupload_icon"></span>
 				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>

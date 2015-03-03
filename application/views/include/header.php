@@ -109,7 +109,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<div id="darken"></div>
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
-						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal"><i>如何参与</i></li>
+						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static"><i>如何参与</i></li>
 
 
 						<?

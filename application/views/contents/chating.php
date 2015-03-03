@@ -42,7 +42,7 @@
 
 
 		<div class="Add">
-			<button class="btn btn-warning" id="pricePay" data-toggle="modal" data-target="#myModal8">预约</button><!-- 날짜 예약하기 -->
+			<button class="btn btn-warning" id="pricePay" data-toggle="modal" data-target="#myModal8" data-backdrop="static">预约</button><!-- 날짜 예약하기 -->
 
 			<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog2">

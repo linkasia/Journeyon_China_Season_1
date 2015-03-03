@@ -61,7 +61,7 @@
 
 				</div><!-- guidePro end -->
 
-				<div class="picUpload" id='addDiv' data-toggle="modal" data-target="#myModal6" id='#myModal6' name='#myModal6'>
+				<div class="picUpload" id='addDiv' data-toggle="modal" data-backdrop="static" data-target="#myModal6" id='#myModal6' name='#myModal6'>
 					<img src="">
 					<span class="glyphicon glyphicon-plus plus"></span>
 				</div>

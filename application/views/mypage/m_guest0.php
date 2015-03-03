@@ -7,7 +7,7 @@
 				<p>微旅行新体验尽在 Journey On!</p>
 			</div>
 			<div class="band2">
-				<p  data-toggle="modal" data-target="#guestModal">>> 微旅行预约前注意事项</p>
+				<p  data-toggle="modal" data-target="#guestModal" data-backdrop="static">>> 微旅行预约前注意事项</p>
 			</div>
 
 

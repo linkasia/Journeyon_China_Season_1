@@ -5,7 +5,7 @@
 			<div class="email">
 				<span class="email-f1">电邮</span>
 				<span class="email-f2"><?=$this->session->userdata['email']?></span>
-				<span class="email-f3"><a href="#" data-toggle="modal" data-target="#myModal1">更改注册电邮</a></span>
+				<span class="email-f3"><a href="#" data-toggle="modal" data-target="#myModal1" data-backdrop="static">更改注册电邮</a></span>
 
 					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog2">
@@ -36,7 +36,7 @@
 			</div><!-- email end -->
 			<div class="password">
 				<span class="password-f1">密码</span>
-				<span class="password-f2"><a href="#" data-toggle="modal" data-target="#myModal2">更改密码</a></span>
+				<span class="password-f2"><a href="#" data-toggle="modal" data-target="#myModal2" data-backdrop="static">更改密码</a></span>
 
 					<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog2">
@@ -72,7 +72,7 @@
 			</div>
 			<div class="grew">
 				<span class="grewup">国籍</span><span><?=$this->session->userdata['country_nm']?> </span><!--span>/City</span--><br>
-				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4">更改国籍 <!-- & City --> </a></span>
+				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4" data-backdrop="static">更改国籍 <!-- & City --> </a></span>
 				<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog2">
 						<div class="modal-content">
