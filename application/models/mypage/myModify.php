@@ -211,7 +211,8 @@
 															a.*,
 															DATE_FORMAT(a.modified_date,'%Y.%m.%d') AS regdate,
 															i.cnt,
-															CASE WHEN a.product_state ='0001' THEN 'sales' WHEN a.product_state ='0002' THEN 'registring' ELSE 'stop' END state
+															CASE WHEN a.product_state ='0001' THEN 'sales' WHEN a.product_state ='0002' THEN 'registring' ELSE 'stop' END state,
+															COUNT(j.product_num) AS likeCnt
 											FROM product a
 											LEFT JOIN USER b ON a.user_num=b.user_num
 											LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
@@ -225,8 +226,10 @@
 																	LEFT JOIN user_order_product z ON x.product_num = z.product_num
 																	GROUP BY x.product_num
 											) AS i ON a.product_num = i.product_num
+											LEFT JOIN user_has_bucket_list j ON a.product_num = j.product_num
 											WHERE a.user_num = '".$user_num."'
 											AND a.product_state = '".$state."'
+											GROUP BY a.product_num
 										) AS u
 										LEFT JOIN spot z ON u.product_num = z.product_num
 										GROUP BY product_num";

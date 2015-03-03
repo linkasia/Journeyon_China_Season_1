@@ -19,7 +19,7 @@
 						<div class="band">
 							<div class="wishcount">
 								<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image">
-								<span id="heart" name="heart"> 15</span>
+								<span id="heart" name="heart"><?=$v->likeCnt?></span>
 							</div>
 							<div class="reviewcount">
 								<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image">
