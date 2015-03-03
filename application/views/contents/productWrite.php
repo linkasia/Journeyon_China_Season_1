@@ -348,6 +348,7 @@ $(function(){
 			success: function(data){
 				var key=$('#hiddenId').val();
 				$("#pic"+key).attr("src",data);
+				$('#myModal5').modal('toggle');
 				document.getElementById("picImg"+key).style.display= "none";
 			}
 		});
