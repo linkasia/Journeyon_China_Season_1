@@ -28,16 +28,21 @@
 
 		<div class="productDiv3">
 			<p class="productTitle">Picture</p>
-			<?for($i=0; $i < 10; $i++){
-			if( $i < 4){ ?>
+			<?
+			for($i=0; $i < 5; $i++){
+			if( $i <= 3){?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
 				<img src="" data-toggle="modal" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
 				<span class="glyphicon glyphicon-picture" id="picupload_icon"></span>
 				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>
 			<?}else{?>
-			<div class="" id='addDiv<?=$i?>'>
-			<input type='hidden' name="hiddenDivId" id="hiddenDivId" class="form-control" value="addDiv<?=$i?>">
+			<div class="" id='addDiv<?=$i?>' onclick="addImgBox('<?=$i?>')">
+				<div class="picUpload" onclick="addImgBox('<?=$i?>')">
+					<span class="glyphicon glyphicon-plus plus"></span>
+					<img src="" alt="">
+				</div>
+				<input type='hidden' name="hiddenDivId" id="hiddenDivId" class="form-control" value="addDiv<?=$i?>">
 			</div>
 			<?}
 			}?>
@@ -78,10 +83,10 @@
 					</div><!-- modal fade Overveiw 끝 -->
 				</form>
 
-			<div class="picUpload" onclick="addImgBox()">
+			<!--div class="picUpload" onclick="addImgBox('<?=$k?>')">
 				<span class="glyphicon glyphicon-plus plus"></span>
 				<img src="" alt="">
-			</div>
+			</div-->
 
 		</div><!-- Div3 end -->
 
@@ -271,11 +276,12 @@
 		*/
 	}
 
-	function addImgBox()
+	function addImgBox(key)
 	{
 		var divHtml = "";
 		divHtml +="<div class='picUpload' id='addDiv4'>";
 		divHtml +="<img src='' data-toggle='modal' data-target='#myModal5' id='pic4' name='pic4' onclick='valChange(4)'>";
+		divHtml +="<span class='glyphicon glyphicon-picture' id='picupload_icon'></span>";
 		divHtml += "<span class='glyphicon glyphicon-remove remove'></span>";
 		divHtml +="</div>";
 
