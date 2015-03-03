@@ -33,12 +33,7 @@
 			if( $i <= 3){?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
 				<img src="" data-toggle="modal" data-backdrop="static" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
-<<<<<<< HEAD
-				<span class="glyphicon glyphicon-picture" id='picImg<?=$i?>' name='picImg<?=$i?>'></span>
-=======
 				<span class="glyphicon glyphicon-picture pic_icon_img" id='picImg<?=$i?>' name='picImg<?=$i?>'></span>
-				<!-- 테스트 -->
->>>>>>> origin/Development
 				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>
 			<?}else{?>
@@ -353,8 +348,7 @@ $(function(){
 			success: function(data){
 				var key=$('#hiddenId').val();
 				$("#pic"+key).attr("src",data);
-//				alert(document.getElementById("picImg"+key));
-				document.getElementById("picImg"+key).style.display= none;
+				document.getElementById("picImg"+key).style.display= "none";
 			}
 		});
 	});
