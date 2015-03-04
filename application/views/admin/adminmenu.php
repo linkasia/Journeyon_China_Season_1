@@ -273,4 +273,13 @@
 			}
 		});
 	}
+
+
+	//상품미리보기
+	function proviewSales(salesNum){
+		var popUrl = "/index.php/city/country/proviewSales?salesNum="+salesNum;
+		var popOption = "width=680, height=900, resizable=no, scrollbars=no, status=no;";
+		window.open(popUrl,"",popOption);
+
+	}
 </script>

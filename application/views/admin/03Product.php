@@ -51,7 +51,7 @@
 					<td><?=$v->product_num?></td>
 					<td><?=$v->country?></td>
 					<td><?=$v->city?></td>
-					<td><?=$v->title?></td>
+					<td style="cursor:pointer" onclick="proviewSales('<?=$v->product_num?>')"><font color="62b8ef"><u><?=$v->title?></u></td>
 					<td><?=$v->email?></td>
 					<td><?=$v->create_date?></td>
 					<td><?=$v->state?></td>
