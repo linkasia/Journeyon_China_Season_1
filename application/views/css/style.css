@@ -1384,13 +1384,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 		#guideWrap .profileWrap1{width: 100%; position: relative;}
 		#guideWrap .profileWrap1 .product-upload{
-			width: 640px;
-			border-radius: 40px;
+			width: 250px;
+			border-radius: 0px;
 			padding-top: 15px;
 			padding-bottom: 15px;
-			padding-left: 100px;
-			padding-right: 100px;
-			margin: 0 0 20px 20px;
+			margin: 30px 0 40px 205px;
 			}
 		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; height: 900px;}
 		#guideWrap .profileWrap1 .guideimgBand{
@@ -1597,6 +1595,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 				.pmWrap .listFooter2{height: 34px; float: left; position: relative; background-color: ;  margin-left: 407px; margin-top: 3px;}
 				.pmWrap .listFooter2 button{display: block; float: left; width: 137px; height: 30px; padding-top: 0px; padding-bottom: 0px;}
 
+
+				#btnBox{
+					margin-top: 10px;
+					width: 100%;
+					height: 40px;
+					padding-left: 528px;
+					overflow: hidden;
+				}
 
 				/* 여기서부터 Guide 판매관리 CSS  */
 				#serviceStatus .serviceWindow p{cursor: pointer;}

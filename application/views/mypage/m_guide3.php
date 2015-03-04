@@ -137,8 +137,9 @@
 				</ul>
 			</nav-->
 			
-			div#
-			<button class="btn btn-info" id="allSelect" name="allSelect">选择全部</button>
-			<button class="btn btn-danger" id="deleteSelect" name="deleteSelect">删除</button>
+			<div id="btnBox">
+				<button class="btn btn-info" id="allSelect" name="allSelect">选择全部</button>
+				<button class="btn btn-danger" id="deleteSelect" name="deleteSelect">删除</button>
+			</div>
 
 		</div><!-- profileWrap1 -->
