@@ -513,7 +513,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 	/*타이틀, 아래 버튼*/
 	.title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px;} /*주의*/
-	.title .underline{border-bottom: 2px #f3c807 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
+	.title .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	.sort{width: 100%; height: 40px;}
 	.flr{float: right;}
 
@@ -591,7 +591,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	#left_section .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative;} /* 메뉴 아래로 contents 싸는 랩 */
 	#left_section .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
 	#left_section .contents_wrap .title .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
-	#left_section .contents_wrap .contents_text1{width: 690px; height: auto; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
+	.contents_text1{width: 690px; height: auto; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
 
 	#left_section .contents_wrap .contents_img{width: 660px; height: 576px; margin: 0 auto;}
 	
@@ -602,12 +602,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	#left_section .contents_wrap .contents_img .img3{width: 157px; height: 105px; background-color: #eee; float: left; margin-right: 11px; overflow: hidden; cursor: pointer;}
 	#left_section .contents_wrap .contents_img .img4{width: 157px; height: 105px; background-color: #eee; float: left; overflow: hidden; cursor: pointer;}
 
-	#left_section .contents_wrap .contents_text2{width: 690px; height: auto; margin-top: 50px;}
 	
-	#left_section .contents_wrap .information_wrap{width: 690px; float: left; border-bottom: 1px solid #a9a9a9; margin-bottom: 20px;}
-	#left_section .contents_wrap .information dt{margin-top: 10px; color: #0699D3;}
-	#left_section .contents_wrap .information dt img{margin-right: 5px;}
-	#left_section .contents_wrap .information dd{text-indent: 16pt; margin-bottom: 30px;}
+	div.information_wrap{width: 690px; border-bottom: 1px solid #a9a9a9; margin-bottom: 20px;}
+	div.information_wrap dl.information dt{margin-top: 10px; color: #0699D3;}
+	div.information_wrap dl.information dt img{margin-right: 5px;}
+	div.information_wrap dl.information dd{text-indent: 16pt; margin-bottom: 30px;}
+	.contents_text2{width: 690px; height: auto; margin-top: 50px;}
+
+	#previewWrap{
+		width: 720px; margin: 20px auto 20px auto;
+		border: 1px solid #FF7D26;
+		padding: 10px;
+		border-radius: 8px;
+		}
+	#previewPrice{
+		width: 100%;
+		height: 30px;
+		font-size: 1.5em;
+		text-align: right;
+		color: orange;
+	}
+	 .menuTab button{width: 120px;}
+	 .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative;} /* 메뉴 아래로 contents 싸는 랩 */
+	 .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
+	 .contents_wrap .title .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
+	 .contents_wrap .contents_text1{width: 690px; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
+
+	 .contents_wrap .contents_img{width: 660px; height: 576px; margin: 0 auto;}
+	
+	 .contents_wrap .contents_img .img_big{width: 100%; height: 440px; background-color: #eee; float: left; margin-bottom: 10px; overflow: hidden;}
+	 .contents_wrap .contents_img div{width: 157px; height: 105px; background-color: #eee; float: left; margin-right: 10px; overflow: hidden; cursor: pointer;}
+	 .contents_wrap .contents_img div:last-child{width: 157px; height: 105px; background-color: #eee; float: left; overflow: hidden; cursor: pointer; margin-right: 0px;}
+	 .contents_wrap .contents_img .img2{width: 157px; height: 105px; background-color: #eee; float: left; margin-right: 11px; overflow: hidden; cursor: pointer;}
+	 .contents_wrap .contents_img .img3{width: 157px; height: 105px; background-color: #eee; float: left; margin-right: 11px; overflow: hidden; cursor: pointer;}
+	 .contents_wrap .contents_img .img4{width: 157px; height: 105px; background-color: #eee; float: left; overflow: hidden; cursor: pointer;}
+
+
+	
 
 
 	/* reply, answer 페이지 2개가(city, qna) 공유함 salesCity2 */

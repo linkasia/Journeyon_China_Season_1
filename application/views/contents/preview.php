@@ -20,7 +20,6 @@
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
 		<!-- <link href="/application/views/css/agency2.css" rel="stylesheet"> -->
 
-
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
 		<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -86,35 +85,41 @@
 		  ga('create', 'UA-59164921-1', 'auto');
 		  ga('send', 'pageview');
 		</script> -->
+
+	<!-- slider pro script-->
+	<script type="text/javascript">
+		$( document ).ready(function( $ ) {
+			$( '#example3' ).sliderPro({
+				width: 660,
+				height: 400,
+				fade: true,
+				arrows: true,
+				buttons: false,
+				fullScreen: true,
+				shuffle: true,
+				smallSize: 500,
+				mediumSize: 1000,
+				largeSize: 3000,
+				thumbnailArrows: true,
+				autoplay: false
+			});
+		});
+	</script>
+
 	</head>
 
 
+
 <body id="page-top" class="index">
-
-
-<!-- slider pro script-->
-<script type="text/javascript">
-	$( document ).ready(function( $ ) {
-		$( '#example3' ).sliderPro({
-			width: 660,
-			height: 400,
-			fade: true,
-			arrows: true,
-			buttons: false,
-			fullScreen: true,
-			shuffle: true,
-			smallSize: 500,
-			mediumSize: 1000,
-			largeSize: 3000,
-			thumbnailArrows: true,
-			autoplay: false
-		});
-	});
-</script>
-
+<div id="previewWrap">
 	<div class="title"><div class="underline">微旅行</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 		<?foreach($salesCity as $v){?>
-			<div class="contents_text1"><span class="glyphicon glyphicon-leaf"></span>  <?=$v->title?></div>
+			
+			<div class="contents_text1"><p class="title"><span class="glyphicon glyphicon-leaf"></span>  <?=$v->title?>
+			<br><p id="previewPrice">Price : <?=$v->fat_price?>元</p>
+			</p>
+			
+			</div>
 
 			<!-- 사진 슬라이더 시작 -->
 			<div id="example3" class="slider-pro">
@@ -148,7 +153,7 @@
 					<?}?>
 					</div>
 
-			</div>
+			</div><!--example3 end -->
 
 
 			<div class="contents_text2"><p><?=$v->describe_contents?></p></div>
@@ -167,7 +172,6 @@
 
 					<dt><span><img src="/application/views/images/contents/icon33_first.PNG" alt="">见面地点</dt>
 					<dd><?=$v->meeting_place_describe?></dd>
-					<div id='map' name='map'><?$this->load->view("/include/google_map");?></div>
 
 					<dt><span><img src="/application/views/images/contents/icon34_cancel.PNG" alt="">取消规定</dt>
 					<dd>24小时内取消</dd>
@@ -176,28 +180,11 @@
 					<dd><?=$v->etc?></dd>
 				</dl>
 			</div>
-
-
-			<div class="reply">
-				<div class="profile_pic">
-					<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
-					<img src="/application/views/images/left_menu/flag03_usa.png" alt="" class="flag_image">
-					<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
-				</div>
-				<div class="reply_text"><span class="reply_id">From Regina Paul : </span>世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0 世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0
-				</div>
-			</div>
-
-			<div class="reply">
-				<img src="/application/views/images/contents/reply.png" alt="" class="reply_arrow">
-				<div class="profile_pic_answer">
-					<img src="/application/views/images/main/profile02.jpg" alt="" class="img-circle profile_image">
-					<img src="/application/views/images/left_menu/flag03_usa.png" alt="" class="flag_image">
-					<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
-				</div>
-				<div class="reply_text_answer"><span class="reply_id">From xiangyu19880319 : </span>世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0 世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0 世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，
-				</div>
 			<?}?>
 	</div>
-	</body>
+</div>
+
+
+
+</body>
 </html>
