@@ -53,10 +53,10 @@
 						</div><!-- modal-header 닫힘 -->
 						<div class="modal-body2">
 							<div id='content'>
-								<div class="seDateDiv">Start Date : <input type="date" id='startDate' class="btn-default" name='startDate' value=<?=date('Y-m-d')?>></div>
-								<div class="seDateDiv">End Date : <input type="date" id='endDate' class="btn-default" name='endDate' value=<?=date('Y-m-d')?>></div>
+								<div class="seDateDiv">Start Date : <input type="date" id='startDate' class="btn-default" name='startDate' value=<?=date('Y-m-d')?> onchange="checkStartValue();"></div>
+								<div class="seDateDiv">End Date : <input type="date" id='endDate' class="btn-default" name='endDate' value=<?=date('Y-m-d')?> onchange="checkEndValue();"></div>
 
-								
+
 
 								<!-- <div style='font-size: 13px; font-family: Verdana;' id='selection'></div>
 								<div style='font-size: 13px; font-family: Verdana;' id='selection'></div> -->
@@ -107,6 +107,36 @@
 			*/
 		});
 	});
+
+	//날짜 체크
+	function checkStartValue(){
+		var date=new Date();
+		var year = date.getFullYear();
+		var mon = date.getMonth()+1;
+		var day = date.getDate();
+		if(mon <= 9){
+			mon = "0"+mon;
+		}
+		if(day <= 9){
+			day = "0"+day;
+		}
+		var today = year+"-"+mon+"-"+day;
+		var sDay = $('#startDate').val();
+		if(today >= sDay){
+			alert("현재 날짜 이후로만 선택할 수 있습니다.");
+			document.getElementById('startDate').value = today;
+		}
+	}
+
+	function checkEndValue(){
+		var sDay = $('#startDate').val();
+		var eDay = $('#endDate').val();
+
+		if(sDay > eDay){
+			alert("시작일 이후를 선택해주세요");
+			document.getElementById('endDate').value = sDay;
+		}
+	}
 
 	function dpTime(){
 		var _chatNum = $('#hiddenChatNum').val();
