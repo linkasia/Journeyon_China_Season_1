@@ -69,18 +69,20 @@
 									</div>
 								</div-->
 
-<!-- <div class="file-upload">
-	<label for="file-upload">Upload file</label>
-	<input id="file-upload" type="file" name="uploaded" />
-</div> -->
+								<!-- <div class="file-upload">
+									<label for="file-upload">Upload file</label>
+									<input id="file-upload" type="file" name="uploaded" />
+								</div> -->
 
 									<div id="UploadPreviewDiv"><img src="" alt="" id="UploadPreviewImg"></div>
 									<div class="file-upload">
-										<label for="file-upload">Upload file</label><!-- fileUpload -->
+										<label for="file-upload" class="file-uploadLabel">Upload file</label><!-- fileUpload -->
 										<input type="file" class="filestyle btn btn-info" id="file-upload" name="file-upload" data-icon="false">
 									</div>
-									<span id="posa_pictureupload" name="fileUpload">Upload</span>
+									<!-- <span id="posa_pictureupload" name="fileUpload">Upload</span> -->
+
 									<!-- button class="btn btn-default" id="posa_imagecheckbtn" >Image Check</button -->
+
 									<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
 									<input type='hidden' name="hiddenId" id="hiddenId" class="form-control" value="">
 									<input type='text' name="pictureTitle" id="pictureTitle" class="form-control" placeholder="Picture Title">
@@ -213,13 +215,13 @@
 
 <script type="text/javascript">
 
-	$('#fileUpload').on('change', function() {
+	$('#file-upload').on('change', function() {
 		ext = $(this).val().split('.').pop().toLowerCase(); //확장자
 		if($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
             resetFormElement($(this)); //폼 초기화
             window.alert('이미지 파일이 아닙니다! (gif, png, jpg, jpeg 만 업로드 가능)');
         } else {
-            file = $('#fileUpload').prop("files")[0];
+            file = $('#file-upload').prop("files")[0];
             blobURL = window.URL.createObjectURL(file);
             $('#UploadPreviewImg').attr('src', blobURL);
             $('#image_preview').slideDown(); //업로드한 이미지 미리보기
@@ -329,7 +331,7 @@
 	function valChange(i)
 	{
 		document.getElementById('hiddenId').value=i;
-		document.getElementById('fileUpload').value= "";
+		document.getElementById('file-upload').value= "";
 		document.getElementById('pictureTitle').value= "";
 		document.getElementById('pictureCaption').value= "";
 		$('#UploadPreviewImg').attr('src', '');

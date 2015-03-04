@@ -1383,7 +1383,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		#guideWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
 
 		#guideWrap .profileWrap1{width: 100%; position: relative;}
-		#guideWrap .profileWrap1 .product-upload{width: 680px; padding: 10px 200px 10px 200px; margin: 0 0 20px 0px;}
+		#guideWrap .profileWrap1 .product-upload{
+			width: 640px;
+			border-radius: 40px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 100px;
+			padding-right: 100px;
+			margin: 0 0 20px 20px;
+			}
 		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; height: 900px;}
 		#guideWrap .profileWrap1 .guideimgBand{
 			width: 680px;
@@ -1901,7 +1909,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		}
 
 
-	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 .captionTitle{margin-top: 30px;}
+	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 .captionTitle{margin-top: 0px;}
 	#productWrapAll .productDiv3 .modal-dialog2 .modal-body2 #pictureCaption{
 		width: 468px; max-width: 468px; height: 80px; max-height: 80px; margin-top: 10px;}
 
@@ -2963,22 +2971,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 
 
 .file-upload {
-	overflow: hidden;
 	display: inline-block;
-	position: relative;	
+	position: relative;
+	top: -34px;
+	left: 125px;
 	vertical-align: middle;
 	text-align: center;
+	line-height: 36px;
+	cursor: pointer;
+	width: 120px;
+	height: 34px;
 
 	/* Cosmetics */
 	color: #fff;
-	border: 2px solid #2FA2FF;
 	background: #6FBEFF;
 
 	/* Nice if your browser can do it */
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
-	text-shadow: #000 1px 1px 4px;
+	/*text-shadow: #000 1px 1px 4px;*/
     }
 	
 .file-upload:hover { 
@@ -2990,11 +3002,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 	}
 
 .file-upload input {
-	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0px;
+	left: 0px;
+	width: 120px;
+	height: 34px;
 	margin: 0;
-	font-size: 70px;
+	font-size: 10px;
 
 	/* Loses tab index in webkit if width is set to 0 */
 	opacity: 0;
@@ -3016,9 +3029,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 	}
 
 /* Adjust the button size */	
-.file-upload { height: 3em; }
+.file-upload label{
+	cursor: pointer;
+	position: absolute;
+	top:0px;
+	left: 23px;
+	}
 .file-upload,
-.file-upload span {	width: 14em; }	
+.file-upload span {
+	width: 120px;
+	}	
 
 .file-upload-status {
 	margin-left: 10px;

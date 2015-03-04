@@ -250,16 +250,16 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/application/productImages/".$product_num."/";
 
-		if(is_uploaded_file($_FILES["fileUpload"]["tmp_name"]))
+		if(is_uploaded_file($_FILES["file-upload"]["tmp_name"]))
 		{
 			if(!is_dir($save_dir)){
 				umask(0);
 				@mkdir($save_dir, 0777);
 				chmod($save_dir, 0777);
 			}
-			$dest=$save_dir.$_FILES["fileUpload"]["name"];
-			$filePath="/application/productImages/".$product_num."/".$_FILES["fileUpload"]["name"];
-			if(!move_uploaded_file($_FILES["fileUpload"]["tmp_name"],$dest)){
+			$dest=$save_dir.$_FILES["file-upload"]["name"];
+			$filePath="/application/productImages/".$product_num."/".$_FILES["file-upload"]["name"];
+			if(!move_uploaded_file($_FILES["file-upload"]["tmp_name"],$dest)){
 				die("file save fail");
 			}
 			$insert['insertProductImg'] = $this->country_M->insertImg($product_num,$pictureTitle,$pictureCaption,$pictureSeq ,$filePath);

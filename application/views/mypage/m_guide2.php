@@ -5,7 +5,7 @@
 
 
 			<div class="pmWrap">
-				<a href="/index.php/City/country/productUpload" class="btn btn-info product-upload" id='productUpload' name='productUpload'><span class=""></span>上传旅游信息</a>
+				<a href="/index.php/City/country/productUpload" class="btn btn-warning product-upload" id='productUpload' name='productUpload'><span class="glyphicon glyphicon-pencil"></span>  上传旅游信息</a>
 				<ul class="nav nav-tabs">
 					<li role="presentation" class="active" id="nav-tab1" onclick="sales()"><a>发放中</a></li>
 					<li role="presentation"id="nav-tab2" onclick="registring()"><a>登录中</a></li>
