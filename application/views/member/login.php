@@ -85,10 +85,10 @@
 				<div class="input_container">
 					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="您的邮箱">
 					<span id="e-mail2"><font color='#fff'>马上注册</font></span>
-					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="密码">
+					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="密码" onKeypress="userKeyLogin()">
 					<span id="passwordLose"><font color='#fff'>忘记密码</font></span>
 					<!--button class="btn-primary btn" id='login' name='login'>登陆</button-->
-					<button class="btn-primary btn" id='login' name='login'  onclick="id_save(); return false;">登陆</button>
+					<button class="btn-primary btn" id='login' name='login'  onclick="userLogin()">登陆</button>
 					<!-- <span>已注册？回到登陆页</span> -->
 					<input type='button' class="btn-danger btn"  id='LoginCancel' name='LoginCancel' value='取消'>
 					<!--button class="btn-danger btn" id='LoginCancel' name='LoginCancel'>取消</button -->
@@ -149,6 +149,18 @@
 				});
 
 			});
+
+			function userLogin(){
+				id_save();
+				return false;
+			}
+
+			function userKeyLogin(){
+				if(event.keyCode == 13){
+					id_save();
+					return false;
+				}
+			}
 
 			function id_save()
 			{
