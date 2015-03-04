@@ -90,7 +90,7 @@
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
 									<button type="submit" class="btn btn-info" id="imgUpload" name="imgUpload">Save</button>
-									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+									<!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
 						</div><!-- modal-dialog 닫힘 -->
@@ -106,7 +106,7 @@
 
 		<div class="productDiv4">
 			<p class="productTitle">详细内容 - <span>（请填写300字以上的详细介绍）</span></p>
-			<textarea class="productTextarea" id='productContents' rows="3"></textarea>
+			<textarea class="productTextarea form-control2" id='productContents' rows="3"></textarea>
 		</div><!-- Div4 end -->
 
 		<div class="productDiv5">
@@ -181,17 +181,17 @@
 
 		<div class="productDiv10">
 			<p class="productTitle">费用包括</p>
-			<textarea name="include" id="include"></textarea>
+			<textarea class="form-control2" name="include" id="include"></textarea>
 		</div><!-- Div10 end -->
 
 		<div class="productDiv11">
 			<p class="productTitle">费用不包括</p>
-			<textarea name="notinclude" id="notinclude"></textarea>
+			<textarea class="form-control2" name="notinclude" id="notinclude"></textarea>
 		</div><!-- Div11 end -->
 
 		<div class="productDiv12">
 			<p class="productTitle">其他事項</p>
-			<textarea name="etc" id="etc"></textarea>
+			<textarea class="form-control2" name="etc" id="etc"></textarea>
 		</div><!-- Div12 end -->
 
 		<input type="button" id="saveProduct" name="saveProduct" value="确定" class="btn btn-primary">

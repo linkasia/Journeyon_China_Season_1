@@ -37,7 +37,7 @@
 							<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 						<?}?>
 					</div><!-- list_image1 닫힘 -->
-					<div class="list_rightwrap whitegloss">
+					<div class="list_rightwrap bgf9fafc">
 						<div class="right_title"><span><?=$v->title?></span>
 						</div>
 						<div class="money bluegloss"><span><?=$v->fat_price?>元</span></div>
