@@ -30,7 +30,7 @@
 
 <script type="text/javascript">
 	function proviewSales(salesNum){
-		var popUrl = "/index.php/city/country/salesPage";
+		var popUrl = "/index.php/city/country/proviewSales?salesNum="+salesNum;
 		var popOption = "width=370, height=360, resizable=no, scrollbars=no, status=no;";
 		window.open(popUrl,"",popOption);
 
