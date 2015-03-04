@@ -109,6 +109,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<div id="darken"></div>
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
+							<?$this -> load ->view('/include/realtimechat');?>
 						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static"><i>如何参与</i></li>
 
 
@@ -145,6 +146,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<li class="signup" name="signup" id="signup"><i>注册</i></li>
 						<?}?>
 					</ul>
+
 				</header>
 				<div id="headerTitle">
 					<h2 id="headerText"><img src="/application/views/images/main/headerText.png" alt=""></h2>

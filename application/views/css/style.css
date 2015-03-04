@@ -71,6 +71,17 @@
 	font-size: 1.2em;
 	}
 
+	#alertM{
+		top: 23px;
+		left: 946px;
+		background-color: #black;
+		z-index: 100;
+		width: 168px;
+		height: 36px;
+		position: absolute;
+		color: #fff;
+		overflow: hidden;
+	}
 
 /* Header2 부분 */
 	#header_wrap3{width: 100%; height: auto; z-index: 10;}
@@ -1449,7 +1460,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap{width: 100%; height: 180px; position: relative;}
 
-		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle{width: 96px; height: 96px; border-radius: 50%; background-color: #f0f1f5; text-align: center; float: left; margin-right: 50px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle{
+			width: 96px; height: 96px; border-radius: 18%; background-color: #f0f1f5; text-align: center; float: left; margin-right: 50px;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow1{position: absolute; top: 132px; left: 170px;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow2{position: absolute; top: 132px; left: 316px;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow3{position: absolute; top: 132px; left: 462px;}
@@ -2192,6 +2204,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 	#startDate,
 	#endDate{
+		width: 106px;
 		line-height: inherit;
 	}
 
