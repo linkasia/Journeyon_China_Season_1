@@ -591,7 +591,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	#left_section .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative;} /* 메뉴 아래로 contents 싸는 랩 */
 	#left_section .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
 	#left_section .contents_wrap .title .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
-	#left_section .contents_wrap .contents_text1{width: 690px; height: auto; margin: 0 auto 20px auto;}
+	#left_section .contents_wrap .contents_text1{width: 690px; height: auto; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
 
 	#left_section .contents_wrap .contents_img{width: 660px; height: 576px; margin: 0 auto;}
 	
@@ -2926,11 +2926,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 
 
 
-/* 
 
-	As this stylesheet is lazy loaded these styles only apply if JavaScript is enabled
 
-*/	
+
+
+
 .file-upload {
 	overflow: hidden;
 	display: inline-block;

@@ -17,6 +17,8 @@
 			</div>
 		</div><!-- Div1 end -->
 
+
+
 		<div class="productDiv2">
 			<p class="productTitle">个性题目></p>
 			<form>
@@ -66,8 +68,17 @@
 										<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 									</div>
 								</div-->
+
+<!-- <div class="file-upload">
+	<label for="file-upload">Upload file</label>
+	<input id="file-upload" type="file" name="uploaded" />
+</div> -->
+
 									<div id="UploadPreviewDiv"><img src="" alt="" id="UploadPreviewImg"></div>
-									<input type="file" class="filestyle btn btn-info" id="fileUpload" name="fileUpload" data-icon="false" placeholder="파일 업로드">
+									<div class="file-upload">
+										<label for="file-upload">Upload file</label><!-- fileUpload -->
+										<input type="file" class="filestyle btn btn-info" id="file-upload" name="file-upload" data-icon="false">
+									</div>
 									<span id="posa_pictureupload" name="fileUpload">Upload</span>
 									<!-- button class="btn btn-default" id="posa_imagecheckbtn" >Image Check</button -->
 									<p class="txt_blue captionTitle">Picture Caption - Please introduce your picture</p>
