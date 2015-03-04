@@ -7,37 +7,42 @@
 		<p class="chatingTitle">《老友记》咖啡馆纽约开张免费迎客</p>
 	</div><!-- div.header end -->
 
-	<?$this -> load ->view('/contents/chatingFrame');?>
+	<?
+		$this -> load ->view('/contents/chatingFrame');
+	?>
 	<!-- chatingFrame.php로 빼냄 -->
-
-	<div class="rightWrap">
-		<div class="right_profile">
-			<p class="guideTalk font_orange"><span class="glyphicon glyphicon-comment font_orange"></span> Guide Talk</p>
-			<div class="gray_box"><span><img src="/application/views/images/main/img29_navi.PNG" alt="">  当地人</span>
-				<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
-				<img src="/application/views/images/flag/01korea.png" alt="" class="flag_image">
-				<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
-			</div>
-			<div class="name_tag">
-				<div class="tag1">Advanced</div>
-				<div class="tag2">Funny</div>
-				<div class="tag3">History</div>
-			</div>
-			<div class="text">
-				<p>
-					生活在 : Seoul <br>
-					现居住在纽约 : 2015年 <br>
-					性别 : 女<br>
-					语言 : Korean, English, Chinese<br>
-				</p>
-			</div>
-			<div class="sns_icon">
-				<!-- <img src="/application/views/images/main/sns03G.png" alt="" class="sns_icon1G"> -->
-				<img src="/application/views/images/main/sns03.png" alt="" class="sns_icon1C">
-				<img src="/application/views/images/main/sns02G.png" alt="" class="sns_icon2C">
-				<!-- <img src="/application/views/images/main/sns02.png" alt="" class="sns_icon2G"> -->
-			</div><!-- sns_icon end -->
-		</div><!-- rightProfile end -->
+	<?foreach($orderUser as $v){?>
+		<div class="rightWrap">
+			<div class="right_profile">
+				<p class="guideTalk font_orange"><span class="glyphicon glyphicon-comment font_orange"></span> Guide Talk</p>
+				<div class="gray_box"><span><img src="/application/views/images/main/img29_navi.PNG" alt="">  当地人</span>
+					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
+					<img src="<?=$v->mother_country_img?>" alt="" class="flag_image">
+					<?if($v->v_get_code == "0001"){?>
+						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
+					<?}?>
+				</div>
+				<div class="name_tag">
+					<div class="tag1">Advanced</div>
+					<div class="tag2">Funny</div>
+					<div class="tag3">History</div>
+				</div>
+				<div class="text">
+					<p>
+						生活在 : <?=$v->live_city?> <br>
+						现居住在纽约 : <?=$v->create_day?> <br>
+						性别 : <?=$v->gender?><br>
+						语言 : <?=$v->lang1?>, <?=$v->lang2?>, <?=$v->lang3?><br>
+					</p>
+				</div>
+				<div class="sns_icon">
+					<!-- <img src="/application/views/images/main/sns03G.png" alt="" class="sns_icon1G"> -->
+					<!-- img src="/application/views/images/main/sns03.png" alt="" class="sns_icon1C">
+					<img src="/application/views/images/main/sns02G.png" alt="" class="sns_icon2C" -->
+					<!-- <img src="/application/views/images/main/sns02.png" alt="" class="sns_icon2G"> -->
+				</div><!-- sns_icon end -->
+			</div><!-- rightProfile end -->
+		<?}?>
 
 
 

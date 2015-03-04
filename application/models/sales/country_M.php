@@ -229,6 +229,24 @@
 			return $result;
 		}
 
+		//상품 미리보기 페이지2
+		function salesPre($num)
+		{
+			$sql ="SELECT *
+							FROM product
+							WHERE product_num='".$num."'";
+			$query = $this->db->query($sql);
+
+			if($query->num_rows() > 0)
+			{
+				return $query->row();
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 		//선택한 도시 상세 상품
 		function salesImageCity($num)
 		{
@@ -334,6 +352,8 @@
 		{
 			$sql ="SELECT a.*,
 											b.code_nm AS live_country,
+											n.code_nm AS live_city,
+											b.ref1 AS live_country_img,
 											c.code_nm AS gender,
 											DATE_FORMAT(SYSDATE(),'%Y')-DATE_FORMAT(a.birthday,'%Y') AS age,
 											d.code_nm AS lang1,
@@ -342,7 +362,9 @@
 											g.code_nm AS langSkill2,
 											h.code_nm AS lang3,
 											i.code_nm AS langSkill3,
-											DATE_FORMAT(a.create_time,'%Y-%m-%d') AS create_day
+											DATE_FORMAT(a.create_time,'%Y-%m-%d') AS create_day,
+											m.code_nm AS mother_country,
+											m.ref1 AS mother_country_img
 							FROM USER a
 							LEFT JOIN country_table b ON a.live_area_code = b.class AND a.live_country_code = b.code
 							LEFT JOIN code_table c ON a.gender_code = c.code AND c.class='0002'
@@ -355,6 +377,8 @@
 							LEFT JOIN code_table j ON a.special1_code = j.code AND j.class='0011'
 							LEFT JOIN code_table k ON a.special2_code = k.code AND k.class='0011'
 							LEFT JOIN code_table l ON a.special3_code = l.code AND l.class='0011'
+							LEFT JOIN country_table m ON a.mother_area_code = m.class AND a.mother_country_code = m.code
+							LEFT JOIN city_table n ON a.live_area_code = n.sclass AND a.live_country_code = n.class AND a.live_city_code = n.code
 							WHERE a.user_num='".$userNum."'";
 			$query = $this->db->query($sql);
 			$result = $query->result();

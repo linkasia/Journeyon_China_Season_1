@@ -308,6 +308,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$salesNum = $_REQUEST['num'];
 		$key =  $_REQUEST['key'];
 
+		$result= $this->country_M->salesPre($salesNum);
+		if($result->user_num == $this->session->userdata['num']){
+			$data['orderUser']= $this->country_M->detailUser($this->session->userdata['num']);
+		}else{
+			$data['orderUser']= $this->country_M->detailUser($result->user_num);
+		}
 		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($key);
 
