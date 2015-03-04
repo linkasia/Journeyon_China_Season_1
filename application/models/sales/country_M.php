@@ -218,6 +218,17 @@
 			return $result;
 		}
 
+		//상품 미리보기 페이지
+		function salesPreview($num)
+		{
+			$sql ="SELECT *
+							FROM product
+							WHERE product_num='".$num."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
 		//선택한 도시 상세 상품
 		function salesImageCity($num)
 		{
