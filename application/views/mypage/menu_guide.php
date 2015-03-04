@@ -29,6 +29,13 @@
 </div><!-- guideWrap end -->
 
 <script type="text/javascript">
+	function proviewSales(salesNum){
+		var popUrl = "/index.php/city/country/salesPage";
+		var popOption = "width=370, height=360, resizable=no, scrollbars=no, status=no;";
+		window.open(popUrl,"",popOption);
+
+	}
+
 	function sales(){
 		$.ajax({
 			type:"POST" ,

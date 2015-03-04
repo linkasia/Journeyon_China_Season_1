@@ -438,5 +438,12 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$delete['chat']= $this->country_M->deleteChat();
 		$delete['chatReply']= $this->country_M->deleteReplyChat();
 	}
+
+	function proviewSales(){
+		$salesNum = $_REQUEST['salesNum'];
+
+		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
+		$this->load->view('contents/proview',$data);
+	}
 }
 ?>

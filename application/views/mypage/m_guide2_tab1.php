@@ -8,7 +8,7 @@
 				</div-->
 				<?foreach($salesProduct as $v){?>
 				<!-- 여기서부터 섬네일 시작 -->
-				<div class="contents_list1">
+				<div class="contents_list1" onclick="proviewSales('<?=$v->product_num?>')">
 				<div class="statusDiv bluegloss2"><p id="statusP"><?=$v->state?></p></div>
 					<div class="list_image1">
 						<div class="statusBand transblack">
@@ -45,13 +45,23 @@
 						</div>
 						<div class="bottom_text">
 							<div class="line1">
+							<?if($v->tem1 != ""){?>
 								<div class="tag"><img src="<?=$v->refrem1?>" alt=""><?=$v->tem1?></div>
+							<?}?>
+							<?if($v->tem2 != ""){?>
 								<div class="tag"><img src="<?=$v->refrem2?>" alt=""><?=$v->tem2?></div>
+							<?}?>
+							<?if($v->tem3 != ""){?>
 								<div class="tag"><img src="<?=$v->refrem3?>" alt=""><?=$v->tem3?></div>
+							<?}?>
 							</div>
 							<div class="line2">
+							<?if($v->recom1 != ""){?>
 								<div class="tag2"><img src="<?=$v->refrecom1?>" alt=""><?=$v->recom1?></div>
-								<div class="tag2"><img src="<?=$v->refrecom2?>" alt=""><?=$v->tem2?></div>
+							<?}?>
+							<?if($v->recom2 != ""){?>
+								<div class="tag2"><img src="<?=$v->refrecom2?>" alt=""><?=$v->recom2?></div>
+							<?}?>
 							</div>
 						</div> <!-- bottom_text 닫음 -->
 					</div> <!-- list_rightwrap 닫음 -->
