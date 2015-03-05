@@ -316,6 +316,8 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		}
 		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($key);
+		$update['chatReView']= $this->country_M->updateReChatView($key);
+		$update['chatView']= $this->country_M->updateChatView($key);
 
 		$this->load->view('include/header');
 		$this->load->view("/contents/chating",$data);
@@ -454,5 +456,14 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$this->load->view('contents/preview',$data);
 	}
+
+	//채팅실시간 로딩
+	function realTimeMsg(){
+		$user_num = $this->session->userdata['num'];
+
+		$data['msgCount']= $this->country_M->realChat($user_num);
+		$this->load->view("/contents/realtimechat",$data);
+	}
+
 }
 ?>

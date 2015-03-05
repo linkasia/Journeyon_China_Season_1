@@ -109,7 +109,9 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<div id="darken"></div>
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
-							<?$this -> load ->view('/include/realtimechat');?>
+							<?
+
+							?>
 						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static"><i>如何参与</i></li>
 
 
@@ -117,6 +119,8 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 						if(@$this->session->userdata['logged_in'] == TRUE)
 						{
 							if($this->session->userdata['email']!=null){
+								$data['msgCount']= $this->country_M->realChat( $this->session->userdata['num']);
+								$this -> load ->view('/include/realtimechat',$data);
 							?>
 							<li class="become_host" name="become_host" id="become_host"><i>申请加入当地微导游</i></li>
 							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 -->

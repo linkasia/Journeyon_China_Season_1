@@ -600,12 +600,14 @@
 													user_num,
 													product_num,
 													content,
+													viewYn,
 													create_time
 													)VALUES(
 													".$chat_num.",
 													'".$user_num."',
 													'".$salesNum."',
 													'".$contents."',
+													'Y',
 													SYSDATE())";
 			$query = $this->db->query($sql);
 		}
@@ -617,14 +619,15 @@
 													user_num,
 													product_num,
 													content,
+													viewYn,
 													create_time
 													)VALUES(
 													".$chat_num.",
 													'".$user_num."',
 													'".$salesNum."',
 													'".$contents."',
+													'Y',
 													SYSDATE())";
-
 			$query = $this->db->query($sql);
 		}
 
@@ -934,12 +937,52 @@
 			//print_r($sql);
 			$query = $this->db->query($sql);
 		}
+
 		function deleteReplyChat()
 		{
 			$sql ="UPDATE chat_reply SET useYn='N'
 							WHERE DATE_ADD(create_time,INTERVAL 90 DAY) < create_time";
 			//print_r($sql);
 			$query = $this->db->query($sql);
+		}
+
+		//쳇 뷰 확인
+		function updateReChatView($chatNum)
+		{
+			$sql ="UPDATE chat_reply SET viewYn='Y'
+							WHERE chat_num = '".$chatNum."'";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		//쳇 뷰 확인2
+		function updateChatView($chatNum)
+		{
+			$sql ="UPDATE chat SET viewYn='Y'
+							WHERE chat_num = '".$chatNum."'";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		//쳇 카운터
+		function realChat($user_num)
+		{
+			$sql ="SELECT COUNT(*) AS chat_cnt
+								FROM(
+												SELECT a.chat_num, a.product_num, a.user_num, a.viewYn
+												FROM chat a
+												WHERE a.viewYn = 'N'
+												AND a.user_num ='".$user_num."'
+												UNION ALL
+												SELECT d.chat_num, d.product_num, d.user_num, d.viewYn
+												FROM chat_reply d
+												WHERE d.viewYn = 'N'
+												AND d.user_num ='".$user_num."'
+								) AS u
+								GROUP BY u.viewYn";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
 		}
 	}
 

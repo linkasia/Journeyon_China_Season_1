@@ -6,7 +6,7 @@
 		<?if($v->create_time > $v->dateSet){?>
 			<div class="chatlistDiv">
 				<div class="chat1">
-					<input type="checkbox" id="chatCheckbox" name="chatCheckbox" value="<?=$v->chat_num?>">
+					<!-- input type="checkbox" id="chatCheckbox" name="chatCheckbox" value="<?=$v->chat_num?>" -->
 					<div class="chatimgDiv"><img src="<?=$v->face_img_path?>" alt="" class="img-circle" id="chatImg"></div>
 					<p class="lastChat">与<span class="txt_blue"><?=$v->Name_cn_en?></span>的最后交谈记录<span>&nbsp;&nbsp;<?=$v->create_time?></span></p>
 					<p class="chatText" onclick="detailChat('<?=$v->chat_num?>')"><?=$v->content?></p>
@@ -16,7 +16,7 @@
 		<?}else{?>
 			<div class="chatlistDiv">
 				<div class="chat1">
-					<input type="checkbox" id="chatCheckbox" name="chatCheckbox" value="<?=$v->chat_num?>">
+					<!-- input type="checkbox" id="chatCheckbox" name="chatCheckbox" value="<?=$v->chat_num?>" -->
 					<div class="chatimgDiv"><img src="<?=$v->order_face?>" alt="" class="img-circle" id="chatImg"></div>
 					<p class="lastChat">与<span class="txt_blue"><?=$v->order_Name_cn_en?></span>的最后交谈记录<span>&nbsp;&nbsp;<?=$v->dateSet?></span></p>
 					<p class="chatText" onclick="detailChat('<?=$v->chat_num?>')"><?=$v->reply?></p>
