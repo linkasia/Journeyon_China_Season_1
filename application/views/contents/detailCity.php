@@ -144,7 +144,7 @@
 			<div class="right_profile">
 				<div class="gray_box gray_boxbg"><span><img src="/application/views/images/main/img29_navi.PNG" alt="">  当地人</span>
 					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
-					<img src="<?=$v->country_img?>" alt="" class="flag_image">
+					<img src="<?=$v->guide_country?>" alt="" class="flag_image">
 					<?if ( $v->v_get_code == "0001"){ ?>
 						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 					<?}?>

@@ -178,7 +178,8 @@
 											DATE_FORMAT(b.create_time,'%Y') AS YEAR,
 											DATE_FORMAT(b.create_time,'%m') AS mon,
 											DATE_FORMAT(b.create_time,'%d') AS DAY,
-											p.img_path
+											p.img_path,
+											q.ref1 AS guide_country
 							FROM product a
 							LEFT JOIN USER b ON a.user_num = b.user_num
 							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code=c.code
@@ -195,6 +196,7 @@
 							LEFT JOIN code_table n ON b.lang2_skill=n.code AND n.class='0014'
 							LEFT JOIN code_table o ON b.lang3_skill=o.code AND o.class='0014'
 							LEFT JOIN spot p ON a.product_num = p.product_num
+							LEFT JOIN country_table q ON a.sortcountry = q.class AND a.country_code=q.code
 							WHERE a.product_num='".$num."'
 							AND a.useYn = 'Y'
 							AND a.product_state = '0001'
