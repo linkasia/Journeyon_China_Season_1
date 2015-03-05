@@ -354,6 +354,13 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$insert['chatSend']= $this->country_M->chatSend($chatNum, $productNum, $contents, $user_num );
 
+		$salesResult= $this->country_M->salesPre($productNum);
+		if($salesResult->user_num == $this->session->userdata['num']){
+			$data['orderUser']= $this->country_M->detailUser($this->session->userdata['num']);
+		}else{
+			$data['orderUser']= $this->country_M->detailUser($salesResult->user_num);
+		}
+
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
 		$this->load->view("/contents/chating",$data);
@@ -369,6 +376,14 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$insert['chatSend']= $this->country_M->chatSubSend($chatNum, $productNum, $contents, $user_num );
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
+
+		$salesResult= $this->country_M->salesPre($productNum);
+		if($salesResult->user_num == $this->session->userdata['num']){
+			$data['orderUser']= $this->country_M->detailUser($this->session->userdata['num']);
+		}else{
+			$data['orderUser']= $this->country_M->detailUser($salesResult->user_num);
+		}
+
 		$this->load->view("/contents/chating",$data);
 	}
 
