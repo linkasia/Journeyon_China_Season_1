@@ -27,7 +27,7 @@
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
 									<button type="button" class="btn btn-primary" id="Email" name="Email">确定</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
 						</div><!-- modal-dialog 닫힘 -->
@@ -54,7 +54,7 @@
 								</div><!-- modal-body 닫힘 -->
 								<div class="modal-footer">
 									<button type="button" class="btn btn-primary" id='changePass'> 确定</button>
-									<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
 								</div><!-- modal-footer 닫힘 -->
 							</div><!-- modal-content 닫힘 -->
 						</div><!-- modal-dialog 닫힘 -->
@@ -83,7 +83,7 @@
 							<div class="modal-body2" id="body-height">
 								<div id='content'>
 
-									<div class="selectParent countrySelect">
+									<div class="selectParent countrySelect" id="mypageCountrySelect">
 										<select class="select_option form-control" id='countrySelect' name='countrySelect'>
 										<?foreach($countryList as $v){?>
 											<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
@@ -106,7 +106,7 @@
 							</div><!-- modal-body 닫힘 -->
 							<div class="modal-footer">
 								<button type="button" class="btn btn-primary" id='changeCountry'>确定</button>
-								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
 							</div><!-- modal-footer 닫힘 -->
 						</div><!-- modal-content 닫힘 -->
 					</div><!-- modal-dialog 닫힘 -->

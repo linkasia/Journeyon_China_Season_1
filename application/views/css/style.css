@@ -68,7 +68,7 @@
 		height: 250px;
 	}
 	.how_works_p{
-	font-size: 1.2em;
+	font-size: 1.0125em;
 	}
 
 	#alertM{
@@ -1223,6 +1223,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 		#accountWrap #rightWrap .basicInformation .grew .grewup{float: left; position: relative; margin-right: 95px;}
 		#accountWrap #rightWrap .basicInformation .grew .grewup-f1{margin-left: 123px;}
+		#mypageCountrySelect{margin-left: 112px;}
 
 
 		/*버튼 관련해서 만든 CSS*/
@@ -1520,6 +1521,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		/* Guide Product Management */
 		.pmWrap{width: 100%; position: relative;}
 		.pmWrap #sortGroup{margin-left: 410px; margin-top: 20px; margin-bottom: 20px;}
+		.pmWrap .tabbable ul li a{
+			color: dimgrey;
+		}
+		
+		.pmWrap .tabbable ul li a:hover,
+		.pmWrap .tabbable ul li a:focus,
+		.pmWrap .tabbable ul li a:active{
+			color: #53CBF1;
+		}
 
 				/*상품 LIST*/
 				.pmWrap .contents_list1{width: 100%; border: solid #f0f1f5 1px; position: relative; cursor: pointer; float: left;}
@@ -1541,7 +1551,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 				.pmWrap .contents_list1 .list_image1 .vmark_image{width: 18px; height: 18px; left: 65px; top: 151px; position: absolute;}
 
 				.span_e{width: 20px; text-overflow: ellipsis;}
-				.pmWrap .contents_list1 .list_rightwrap{width: 406px; height: 45px; float: left;}
+				.pmWrap .contents_list1 .list_rightwrap{
+					width: 406px;
+					height: 45px;
+					float: left;
+					border-bottom: 1px solid #f0f1f5;
+					background-color: #f9fafc;
+					}
 				.pmWrap .contents_list1 .list_rightwrap .right_title{width: 310px; height: 45px; line-height: 45px; margin-left: 10px; position: relative; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
 				.pmWrap .contents_list1 .list_rightwrap .money{
 					position: absolute;
@@ -1565,8 +1581,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line1 .tag img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
 				.pmWrap .contents_list1 .list_rightwrap .bottom_text .line2 .tag2 img{display: block; position: absolute; top: -4px; float: left; margin-left: 5px;}
 
-				.pmWrap .listFooter{height: 34px; float: left; position: relative; background-color: ;  margin-left: 271px; margin-top: 3px;}
-				.pmWrap .listFooter button{display: block; float: left; width: 205px; height: 30px; padding-top: 0px; padding-bottom: 0px;}
+				.pmWrap .listFooter{height: 34px; float: left; position: relative; background-color: ;  margin-left: 481px; margin-top: 3px; overflow: hidden;}
+				.pmWrap .listFooter button{display: block; float: left; width: 100px; height: 30px; padding-top: 0px; padding-bottom: 0px;}
 				.pmWrap #b-group{margin-bottom: 20px;}
 
 				.pmWrap .contents_list1 .list_image1:hover{
@@ -1589,11 +1605,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 				.pmWrap .contents_list1 .statusDiv{position: absolute; top: 0px; left: 0px; width: 270px; height: 180px; z-index: 100; opacity: 0.4;}
 				.pmWrap .contents_list1 .statusDiv:hover{
-					opacity: 0.8;
+					opacity: 0.9;
 					-webkit-transition: all ease .8s;
 					-moz-transition: all ease .8s;
 					transition: all ease .8s;
 					cursor: pointer;
+					background: rgba(0, 0, 0,.6);
 					}
 
 				.pmWrap .contents_list1 .statusDiv #statusP{
@@ -1646,7 +1663,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 				.paginationNav{margin-left: 260px;}
 				.profileWrap1 .modal .modal-body #cancelChat{width: 200px; margin: 10px 0px 10px 186px;}
 
-				#cancelAlertBox{padding: 6px; height: 33px; width: 636px; text-align: center; margin-top: 10px; margin-bottom: 20px;}
+				#cancelAlertBox{padding: 6px; height: 33px; width: 520px; text-align: center; margin-top: 10px; margin-bottom: 20px;}
 
 
 				/* 여기서부터 Guide 취소관리 CSS */

@@ -9,7 +9,7 @@
 				<?foreach($salesProduct as $v){?>
 				<!-- 여기서부터 섬네일 시작 -->
 				<div class="contents_list1" onclick="proviewSales('<?=$v->product_num?>')">
-				<div class="statusDiv bluegloss2"><p id="statusP"><?=$v->state?></p></div>
+				<div class="statusDiv"><p id="statusP"><?=$v->state?></p></div>
 					<div class="list_image1">
 						<div class="statusBand transblack">
 							<p id="status" name="status">发放日期 <?=$v->regdate?><br>
@@ -37,10 +37,10 @@
 							<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 						<?}?>
 					</div><!-- list_image1 닫힘 -->
-					<div class="list_rightwrap bgf9fafc">
+					<div class="list_rightwrap">
 						<div class="right_title"><span><?=$v->title?></span>
 						</div>
-						<div class="money bluegloss"><span><?=$v->fat_price?>元</span></div>
+						<div class="money btn-info"><span><?=$v->fat_price?>元</span></div>
 						<div class="right_text"><?=$v->describe_contents?>
 						</div>
 						<div class="bottom_text">
@@ -68,8 +68,8 @@
 				</div><!-- contents_list1 닫음 -->
 				<div class="btn-group listFooter" role="group" aria-label="" id="b-group">
 					<!--button type="button" class="btn whitegloss bd" id="productModify" name="productModify" onclick="productModify('<?=$v->product_num?>')">编辑</button-->
-					<button type="button" class="btn whitegloss bd" id="productStop" name="productStop" onclick="productStop('<?=$v->product_num?>')">停止发放</button>
-					<button type="button" class="btn whitegloss bd" id="productDelete" name="productDelete" onclick="productDelete('<?=$v->product_num?>')">删除</button>
+					<button type="button" class="btn btn-info" id="productStop" name="productStop" onclick="productStop('<?=$v->product_num?>')">停止发放</button>
+					<button type="button" class="btn btn-danger" id="productDelete" name="productDelete" onclick="productDelete('<?=$v->product_num?>')">删除</button>
 				</div>
 				<!-- 섬네일 끝 -->
 				<?}?>
