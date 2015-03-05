@@ -202,7 +202,7 @@
 										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
 									</div>
 
-									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>
+									<div class="flagbox"><img src="<?=$v->monther_img?>" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
 									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
 
@@ -264,7 +264,7 @@
 										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
 									</div>
 
-									<div class="flagbox"><img src="<?=$v->ref1?>" alt=""></div>
+									<div class="flagbox"><img src="<?=$v->monther_img?>" alt=""></div>
 									<div class="vbox"><img src="/application/views/images/main/img22_vmark.png" alt=""></div>
 									<div class="navibox"><img src="/application/views/images/main/img26_navi.png" alt=""></div>
 								</div>

@@ -70,11 +70,13 @@
 															c.code_nm,
 															c.ref1,
 															COUNT(d.product_num) AS likeCnt,
-															a.*
+															a.*,
+															e.ref1 AS monther_img
 											FROM product a
 											LEFT JOIN USER b ON a.user_num = b.user_num
 											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
 											LEFT JOIN user_has_bucket_list d ON a.product_num = d.product_num
+											LEFT JOIN country_table e ON b.mother_area_code = e.class AND b.mother_country_code = e.code
 											WHERE a.useYn='Y'
 											AND a.product_state = '0001'
 											GROUP BY a.product_num
@@ -100,11 +102,13 @@
 															c.code_nm,
 															c.ref1,
 															COUNT(d.product_num) AS likeCnt,
-															a.*
+															a.*,
+															e.ref1 AS monther_img
 											FROM product a
 											LEFT JOIN USER b ON a.user_num = b.user_num
 											LEFT JOIN country_table c ON a.sortcountry = c.class AND a.country_code = c.code
 											LEFT JOIN user_has_bucket_list d ON a.product_num = d.product_num
+											LEFT JOIN country_table e ON b.mother_area_code = e.class AND b.mother_country_code = e.code
 											WHERE a.useYn='Y'
 											AND a.adminYn='Y'
 											AND a.product_state = '0001'
