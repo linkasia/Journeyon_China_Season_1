@@ -5029,7 +5029,7 @@ span.list-group-item:focus {
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  z-index: 2;
+  /*z-index: 2;*/
   color: #fff;
   background-color: #434a54;
   border-color: #434a54;

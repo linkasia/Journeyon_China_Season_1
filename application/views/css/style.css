@@ -1277,7 +1277,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		/* V certicification */
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap1{width: 640px; height: 500px; background-color: #;}
 
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2{width: 100%; height: 250px; position: relative;}
+		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2{
+			width: 100%; height: 250px; position: relative;
+			-webkit-border-radius: 20%;
+			-moz-border-radius: 20%;
+			border-radius: 20%;
+		}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .circle{width: 96px; height: 96px; border-radius: 50%; background-color: #f0f1f5; line-height: 96px; text-align: center; float: left; margin-right: 50px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow1{position: absolute; top: 80px; left: 160px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2 .arrow2{position: absolute; top: 80px; left: 306px;}
@@ -1640,13 +1645,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 				.profileWrap1 #serviceStatus .serviceWindow{padding: 10px; height: 200px; max-height: 200px; overflow-y: scroll;}
 
 				.profileWrap1 .salesList{width: 100%; height: 210px; position: relative; border-bottom: 1px solid #f0f1f5; padding-bottom: 15px; margin-top: 15px;}
-				.profileWrap1 .salesList .titlediv{height: 30px; line-height: 30px; text-indent: 80pt; margin-top: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+				.profileWrap1 .salesList .titlediv{height: 30px; line-height: 30px; text-indent: 113pt; margin-top: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 				.profileWrap1 .banddiv{width: 100%; height: 30px; line-height: 30px; background-color: #f0f1f5; overflow: hidden;}	
 				.profileWrap1 .salesList .absoluteDiv{position: absolute; top: 74px; right: 10px; text-align: right;}
 				.profileWrap1 .salesList .absoluteDiv .font_blue{font-size: 1.5em;}
 				.profileWrap1 .salesList .banddiv .bandtitle{margin-left: 150px;}
-				.profileWrap1 .salesList .banddiv .bandtitle2{margin-left: 10px; text-overflow: ellipsis; overflow: hidden;}
-				.profileWrap1 .salesList .stepdiv .stepImage{padding-left: 150px; padding-top: 15px;}
+				.profileWrap1 .salesList .banddiv .bandtitle2{text-overflow: ellipsis; overflow: hidden;}
+				.profileWrap1 .salesList .stepdiv .stepImage{padding-left: 150px; padding-top: 28px;}
 				.profileWrap1 .salesList .stepdiv .stepImage img{margin-right: 8px;}
 				.profileWrap1 .salesList .stepdiv .stepText{position: relative;}
 				.profileWrap1 .salesList .stepdiv .stepText .step1{margin-left: 162px;}
@@ -1664,13 +1669,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 				.profileWrap1 .modal .modal-body #cancelChat{width: 200px; margin: 10px 0px 10px 186px;}
 
 				#cancelAlertBox{padding: 6px; height: 33px; width: 520px; text-align: center; margin-top: 10px; margin-bottom: 20px;}
-
+				#guidePruductCancelBtn{
+					-webkit-border-radius: 6px;
+					-moz-border-radius: 6px;
+					border-radius: 6px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					}
 
 				/* 여기서부터 Guide 취소관리 CSS */
 
 				.profileWrap1 .cancelList{width: 100%; position: relative; border-bottom: 1px solid #f0f1f5; padding-bottom: 15px; margin-top: 15px;}
 				.profileWrap1 .cancelList .titlediv{height: 30px; line-height: 30px; text-indent: 80pt; margin-top: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-				.profileWrap1 .banddiv{width: 100%; height: 30px; line-height: 30px; background-color: #f0f1f5; overflow: hidden;}	
+				.profileWrap1 .banddiv{width: 88%; height: 30px; line-height: 30px; background-color: #f0f1f5; overflow: hidden;}	
 				.profileWrap1 .cancelList .banddiv .bandtitle{margin-left: 140px;}
 				.profileWrap1 .cancelList .banddiv .bandtitle2{margin-left: 10px; text-overflow: ellipsis; overflow: hidden;}
 				.profileWrap1 .cancelList .banddiv .bandtitle3{margin-left: 10px; text-overflow: ellipsis; overflow: hidden;}
@@ -1688,6 +1699,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 				#cancel_p{margin-top: 30px; margin-bottom: 40px;}
 				#cancelComment{height: 150px;}
 				#cancelTextareaModalBody{height: 370px;}
+				#guidePriceBtn{
+					position: absolute;
+					top: -54px;
+					right: 0px;
+					}
 
 				#product_tab{margin-top: 20px;}
 

@@ -75,9 +75,9 @@
 					</div>
 
 					<div class="absoluteDiv">
-						<span>价格</span><br>
-						<span class="font_blue"> <?=$v->fixed_fee?>元</span><br>
-						<span class="btn btn-info" data-toggle="modal" data-backdrop="static" data-target="#myModal" onclick="insertBookNum('<?=$v->book_num?>','<?=$v->cancel_text?>')">取消交易</span>
+						<!-- <span class="font_blue"></span><br> -->
+						<span class="btn btn-default mt10" id="guidePriceBtn" name="guidePriceBtn">价格 : <?=$v->fixed_fee?>元</span><br>
+						<span class="btn btn-danger mt10" id="guidePruductCancelBtn" data-toggle="modal" data-backdrop="static" data-target="#myModal" onclick="insertBookNum('<?=$v->book_num?>','<?=$v->cancel_text?>')">取消交易</span>
 						<?if($v->order_type_code == "0005"){?>
 							<div id="cancelAlertBox" class="alert alert-danger mt20">취소 승인 대기중</div>
 						<?}?>
@@ -115,9 +115,9 @@
 							<input type='hidden' id='hiddenBookNum' name='hiddenBookNum' value="">
 						</div><!-- modal-body 닫힘 -->
 						<div class="modal-footer">
-							<button class="btn btn-warning" id="cancelBook" name="cancelBook" onclick="cancelBook()">취소하기</button>
+							<button class="btn btn-danger" id="cancelBook" name="cancelBook" onclick="cancelBook()">Cancel</button>
 							<!-- <button type="button" class="btn btn-danger">确定</button> -->
-							<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Close Window</button>
 						</div><!-- modal-footer 닫힘 -->
 					</div><!-- modal-content 닫힘 -->
 				</div><!-- modal-dialog 닫힘 -->
