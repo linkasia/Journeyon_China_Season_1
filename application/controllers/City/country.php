@@ -432,6 +432,22 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$this->load->view('include/footer');
 	}
 
+	//예약금액입력
+	function preBooking(){
+		$productNum = $_REQUEST['productNum'];
+		$bookNum = $_REQUEST['num'];
+
+		$data['loginUser'] = $this->session->userdata['num'];
+		$data['salesCity']= $this->country_M->salesDetailCountry($productNum);
+		$data['countryNum']= $this->tb_code->countryNumber();
+		$data['bookData'] = $this->country_M->bookPre($bookNum);
+
+
+		$this->load->view('include/header');
+		$this->load->view("/contents/preBook",$data);
+		$this->load->view('include/footer');
+	}
+
 	//좋아요 저장
 	function procuctLike(){
 		$salesNum = $_REQUEST['salesNum'];
@@ -470,6 +486,14 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$data['msgCount']= $this->country_M->realChat($user_num);
 		$this->load->view("/contents/realtimechat",$data);
+	}
+
+	//예약금액 저장
+	function updateBookingFix(){
+		$bookNum = $_REQUEST['bookNum'];
+		$fix = $_REQUEST['fix'];
+
+		$update['like']= $this->country_M->updateBookPre( $bookNum, $fix );
 	}
 
 }

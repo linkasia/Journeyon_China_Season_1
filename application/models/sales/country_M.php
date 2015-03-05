@@ -983,6 +983,28 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		//예약
+		function bookPre($num)
+		{
+			$sql ="SELECT *
+							FROM user_order_product
+							WHERE book_num='".$num."'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		//금액 입력
+		function updateBookPre( $bookNum, $fix)
+		{
+			$sql ="UPDATE user_order_product
+									SET fixed_fee='".$fix."',
+									order_type_code='0003'
+									WHERE book_num = '".$bookNum."'";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+		}
 	}
 
 ?>

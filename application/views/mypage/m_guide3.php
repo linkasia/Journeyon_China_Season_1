@@ -76,7 +76,7 @@
 
 					<div class="absoluteDiv">
 						<!-- <span class="font_blue"></span><br> -->
-						<span class="btn btn-default mt10" id="guidePriceBtn" name="guidePriceBtn">价格 : <?=$v->fixed_fee?>元</span><br>
+						<a href="/index.php/city/country/preBooking?num=<?=$v->book_num?>&productNum=<?=$v->product_num?>" class="btn btn-default mt10" id="guidePriceBtn" name="guidePriceBtn">价格 : <?=$v->fixed_fee?>元</a><br>
 						<span class="btn btn-danger mt10" id="guidePruductCancelBtn" data-toggle="modal" data-backdrop="static" data-target="#myModal" onclick="insertBookNum('<?=$v->book_num?>','<?=$v->cancel_text?>')">取消交易</span>
 						<?if($v->order_type_code == "0005"){?>
 							<div id="cancelAlertBox" class="alert alert-danger mt20">취소 승인 대기중</div>
@@ -136,7 +136,7 @@
 					</li>
 				</ul>
 			</nav-->
-			
+
 			<div id="btnBox">
 				<button class="btn btn-info" id="allSelect" name="allSelect">选择全部</button>
 				<button class="btn btn-danger" id="deleteSelect" name="deleteSelect">删除</button>
