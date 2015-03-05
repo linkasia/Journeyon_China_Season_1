@@ -57,6 +57,9 @@
 	</div>
 	<button id="productSave" name="productSave" class="btn btn-info" onclick="productSave()">确认预约</button>
 </div>
+<div id = 'test'>
+</div>
+
 
 <script type="text/javascript">
 	//상품저장
@@ -77,6 +80,8 @@
 			data:{ hiddenProduct :_hiddenProduct, hiddenRegisterNum:_hiddenRegisterNum, sDate : _sDate, eDate:_eDate, personInput:_personInput, countryCode:_countryCode, phoneInput:_phoneInput, producttextArea:_producttextArea},
 			url:"/index.php/city/country/insertBookingDate",
 			success: function (data){
+				//alert(data);
+				//document.getElementById('test').innerHTML = data;
 				location.href = "/index.php/mypage/myPage_M/myguest?mode=2";
 			}
 		});

@@ -19,7 +19,7 @@
 			data:{ chatNum : _chatNum, productNum:_productNum},
 			url: "/index.php/city/country/realTimeMsg",
 			success: function (data){
-				alert(data);
+				//alert(data);
 				document.getElementById('alertM').innerHTML = data;
 			}
 		});

@@ -813,8 +813,7 @@
 													'',
 													0,
 													SYSDATE(),
-													SYSDATE();
-													'Y')";
+													SYSDATE())";
 													//print_r($sql);
 			$query = $this->db->query($sql);
 		}

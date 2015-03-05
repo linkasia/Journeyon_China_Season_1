@@ -292,6 +292,13 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 			$maxNum = $result->chat_num;
 		}
 
+		$salesResult= $this->country_M->salesPre($salesNum);
+		if($salesResult->user_num == $this->session->userdata['num']){
+			$data['orderUser']= $this->country_M->detailUser($this->session->userdata['num']);
+		}else{
+			$data['orderUser']= $this->country_M->detailUser($salesResult->user_num);
+		}
+
 		$insert['chatSend']= $this->country_M->chatSend($maxNum, $salesNum, $contents, $user_num );
 		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($result->chat_num);
@@ -392,7 +399,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$result = $this->country_M->maxBookNum();
 		$maxNum="";
-		if($result->chat_num == null){
+		if($result->book_num == null){
 			$maxNum= 0;
 		}else{
 			$maxNum = $result->book_num;
