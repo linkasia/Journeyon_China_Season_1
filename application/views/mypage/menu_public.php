@@ -42,10 +42,9 @@
 				</div>
 				<div class="rightSection">
 
-						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>" placeholder="选择">
-
+						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>" placeholder="选择" onchange="imgChang();">
 						<input type="hidden" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
-
+						<input type="hidden" class="form-control2 text" id="hiddenMode"  name="hiddenMode" value="">
 				</div>
 			</div>
 
@@ -211,6 +210,10 @@
 
 <script type="text/javascript">
 
+function imgChang(){
+	document.getElementById('hiddenMode').value="change";
+}
+
 function comboChange(){
 	var _countrySelectClass = $('#inputCountry').val().substring(0,4);
 	var _code = $('#inputCountry').val().substring(5,9);
@@ -251,14 +254,17 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
+
 				if(data.indexOf("Error") > -1){
 					alert("个人资料已变更。"); // 수정되었습니다.
 				}else{
-					$("#profileImg").attr("src",data);
-					$("#leftProfileImg").attr("src",data);
-					$("#profileMenu").attr("src",data);
-					document.getElementById('Name_en_cn').innerHTML=$("#inputName").val();
+					if(data != ""){
+						$("#profileImg").attr("src",data);
+						$("#leftProfileImg").attr("src",data);
+						$("#profileMenu").attr("src",data);
 
+					}
+					document.getElementById('Name_en_cn').innerHTML=$("#inputName").val();
 					alert("个人资料已变更。"); // 수정되었습니다.
 				}
 			}
