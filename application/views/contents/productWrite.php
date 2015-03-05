@@ -194,7 +194,7 @@
 			<textarea class="form-control2" name="etc" id="etc"></textarea>
 		</div><!-- Div12 end -->
 
-		<input type="button" id="saveProduct" name="saveProduct" value="确定" class="btn btn-primary">
+		<input type="button" id="saveProduct" name="saveProduct" value="确定" class="btn btn-info">
 		<input type="button" id="cancelProduct" name="cancelProduct" value="取消" class="btn btn-warning">
 
 	</div><!-- productWrap -->
