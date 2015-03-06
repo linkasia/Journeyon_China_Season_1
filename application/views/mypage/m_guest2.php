@@ -68,9 +68,9 @@
 					</div>
 
 					<div class="absoluteDiv">
-						<span>价格</span><br>
-						<span class="font_blue"> <?=$v->fixed_fee?>元</span><br>
-						<span class="btn btn-info" data-toggle="modal" data-target="#myModal" onclick="insertBookNum('<?=$v->book_num?>','<?=$v->cancel_text?>')">取消交易</span>
+						<!-- <span>价格</span><br> -->
+						<a href="#" class="btn btn-default mt10" id="guidePriceBtn" name="guidePriceBtn">价格 : <?=$v->fixed_fee?>元</a><br>
+						<span class="btn btn-danger mt10" id="guidePruductCancelBtn" data-toggle="modal" data-backdrop="static" data-target="#myModal" onclick="insertBookNum('<?=$v->book_num?>','<?=$v->cancel_text?>')">取消交易</span>
 						<?if($v->order_type_code == "0005"){?>
 							<div id="cancelAlertBox" class="alert alert-danger mt20">취소 승인 대기중</div>
 						<?}?>
