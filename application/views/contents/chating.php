@@ -1,15 +1,16 @@
 <div id="chatlistWrap">
 
 	<div class="header">
-		<img src="/application/views/images/flag/20american.png" alt="nation_flagImage" class="flag">
+		<!--img src="/application/views/images/flag/20american.png" alt="nation_flagImage" class="flag">
 		<span class="glyphicon glyphicon-chevron-right"></span>
-		<button class="btn btn-start">Newyork</button>
+		<button class="btn btn-start">Newyork</button -->
 		<p class="chatingTitle">《老友记》咖啡馆纽约开张免费迎客</p>
 	</div><!-- div.header end -->
-
+	<div class="chatingFrame" id ='realCht'>
 	<?
 		$this -> load ->view('/contents/chatingFrame');
 	?>
+	</div><!-- chatingFrame end -->
 	<!-- chatingFrame.php로 빼냄 -->
 	<?foreach($orderUser as $v){?>
 		<div class="rightWrap">
@@ -82,6 +83,7 @@
 		<span class="btn btn-info" id="chatSend" onclick="sendChat()">发送</span>
 	</div>
 </div><!-- chatlistWrap -->
+<div id='test'></div>
 
 
  <script type="text/javascript">
@@ -155,7 +157,8 @@
 			data:{ chatNum : _chatNum, productNum:_productNum},
 			url: "/index.php/city/country/dpTimeChating",
 			success: function (data){
-				document.getElementById('chatingFrame').innerHTML = data;
+				//alert(data);
+				document.getElementById('realCht').innerHTML = data;
 			}
 		});
 	}

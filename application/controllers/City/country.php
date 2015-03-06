@@ -395,7 +395,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
-		$this->load->view("/contents/chating",$data);
+		$this->load->view("/contents/chatingFrame",$data);
 	}
 
 

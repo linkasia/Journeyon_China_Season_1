@@ -1,4 +1,3 @@
-	<div class="chatingFrame">
 	<?foreach($SendList as $v){
 		if($v->user_num != $this->session->userdata['num']) {?>
 		<div id="youChat">
@@ -35,4 +34,3 @@
 	<input type='hidden' id='hiddenProductNum' name='hiddenProductNum' value='<?=$v->product_num?>'>
 	<?}?>
 
-	</div><!-- chatingFrame end -->
