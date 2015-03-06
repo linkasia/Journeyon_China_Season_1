@@ -2134,7 +2134,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 	#chatlistWrap .header{width: 100%; float: left; position: relative; display: block;}
 	#chatlistWrap .header .chatingTitle{font-size: 1.5em; font-weight: 550;}
-	#chatlistWrap .chatingFrame{width: 690px; height: 620px; float: left; margin-right: 20px;  position: relative; overflow-y: scroll; border: 1px solid #f0f1f5; padding-top: 20px;}
+	#chatlistWrap .chatingFrame{width: 690px; height: 620px; float: left; margin-right: 20px;  margin-bottom: 90px;position: relative; overflow-y: scroll; border: 1px solid #f0f1f5; padding-top: 20px;}
 	#chatlistWrap .chatingFrame #youChat{width: 100%; position: relative; float: left; background-color: ; }
 
 	#chatlistWrap .chatingFrame #youChat #youchatID{position: absolute; left: 136px; font-size: 1em; color: #0699D3;}
