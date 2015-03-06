@@ -87,11 +87,11 @@
 
 
  <script type="text/javascript">
-
+/*
 	$(document).ready(function () {
 		setInterval("dpTime()",2000);
 	});
-
+*/
 	$(function(){
 		$('#saveDate').click( function(){
 			var _sDate = $('#startDate').val();
@@ -144,7 +144,7 @@
 			document.getElementById('endDate').value = sDay;
 		}
 	}
-
+/*
 	function dpTime(){
 
 		var _chatNum = $('#hiddenChatNum').val();
@@ -162,7 +162,7 @@
 			}
 		});
 	}
-
+*/
 	//send 버튼 클릭시
 	function sendChat(){
 		var _chatNum = $('#hiddenChatNum').val();

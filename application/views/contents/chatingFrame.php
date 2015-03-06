@@ -34,3 +34,28 @@
 	<input type='hidden' id='hiddenProductNum' name='hiddenProductNum' value='<?=$v->product_num?>'>
 	<?}?>
 
+
+ <script type="text/javascript">
+
+	$(document).ready(function () {
+		setInterval("dpTime()",2000);
+	});
+
+	function dpTime(){
+
+		var _chatNum = $('#hiddenChatNum').val();
+		var _productNum = $('#hiddenProductNum').val();
+
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ chatNum : _chatNum, productNum:_productNum},
+			url: "/index.php/city/country/dpTimeChating",
+			success: function (data){
+				//alert(data);
+				document.getElementById('realCht').innerHTML = data;
+			}
+		});
+	}
+</script>

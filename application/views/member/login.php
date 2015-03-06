@@ -201,8 +201,8 @@
 			{
 				if(id != "")
 				{
-					// userid 쿠키에 id 값을5일간 저장
-					setsave("com_id", id, 5);
+					// userid 쿠키에 id 값을6일간 저장
+					setsave("com_id", id, 6);
 				}else{
 				// userid 쿠키 삭제
 				setsave("com_id", id, -1);

@@ -609,7 +609,7 @@
 													'".$user_num."',
 													'".$salesNum."',
 													'".$contents."',
-													'Y',
+													'N',
 													SYSDATE())";
 			$query = $this->db->query($sql);
 		}
@@ -628,7 +628,7 @@
 													'".$user_num."',
 													'".$salesNum."',
 													'".$contents."',
-													'Y',
+													'N',
 													SYSDATE())";
 			$query = $this->db->query($sql);
 		}
@@ -984,6 +984,7 @@
 												AND d.user_num ='".$user_num."'
 								) AS u
 								GROUP BY u.viewYn";
+								//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
