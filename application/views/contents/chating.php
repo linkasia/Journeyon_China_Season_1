@@ -144,6 +144,7 @@
 	}
 
 	function dpTime(){
+		alert("A");
 		var _chatNum = $('#hiddenChatNum').val();
 		var _productNum = $('#hiddenProductNum').val();
 

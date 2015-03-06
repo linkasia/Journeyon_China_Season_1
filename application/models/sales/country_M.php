@@ -723,6 +723,7 @@
 																			ORDER BY d.create_time DESC
 											) AS k ON a.chat_num = k.chat_num AND a.product_num = k.product_num
 											LEFT JOIN product j ON a.product_num = j.product_num
+											ORDER BY a.create_time DESC
 									) AS u
 									WHERE (u.user_num = '".$userNum."' OR u.order_num = '".$userNum."' OR u.product_user_num='".$userNum."')
 									AND u.useYn = 'Y'
