@@ -706,7 +706,8 @@
 															k.create_time AS dateSet,
 															k.user_num AS order_num,
 															k.Name_cn_en AS order_Name_cn_en,
-															k.face_img_path AS order_face
+															k.face_img_path AS order_face,
+															j.user_num AS product_user_num
 												FROM chat a
 												LEFT JOIN USER b ON a.user_num = b.user_num
 												LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code = c.code
@@ -721,8 +722,9 @@
 																			LEFT JOIN country_table f ON e.mother_area_code = f.class AND e.mother_country_code = f.code
 																			ORDER BY d.create_time DESC
 											) AS k ON a.chat_num = k.chat_num AND a.product_num = k.product_num
+											LEFT JOIN product j ON a.product_num = j.product_num
 									) AS u
-									WHERE u.user_num = '".$userNum."' OR u.order_num = '".$userNum."'
+									WHERE (u.user_num = '".$userNum."' OR u.order_num = '".$userNum."' OR u.product_user_num='".$userNum."')
 									AND u.useYn = 'Y'
 									GROUP BY chat_num";
 			/*
