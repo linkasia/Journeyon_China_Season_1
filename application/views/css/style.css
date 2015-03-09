@@ -566,7 +566,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	#detailBookWrap .titleDiv .titleimgDiv{width: 200px; height: 130px; overflow: hidden; float: left; margin-right: 20px;}
 	#detailBookWrap .titleDiv .titleImg{width: 100%; vertical-align: middle;}
 	#detailBookWrap .titleDiv .productDiv{float: left;}
-	#detailBookWrap .titleDiv .productDiv #productTitle{float: left; display: block; height: 30px; font-size: 1.3em;}
+	#detailBookWrap .titleDiv .productDiv #productTitle{
+		top:17px;
+		left: 239px;
+		position: absolute;
+		display: block;
+		height: 30px;
+		font-size: 1.3em;
+		}
 	.dateinputDiv{float: left; width: 500px; padding-top: 56px;}
 	.dateinputDiv input{float: left;}
 	.dateinputDiv p{float: left; line-height: 30px;}
@@ -1293,14 +1300,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .countryInput{padding-top: 3px; padding-bottom: 3px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .phoneNumber{margin-left: 20px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .phone_t{margin-left: 50px;}
-		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .ID_t{margin-left: 70px; margin-top: 30px;}
+		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .ID_t{margin-left: 50px; margin-top: 30px;}
 		#accountWrap #rightWrap .profileWrap1 .vtitle{margin-bottom: 30px;}
 
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{
 			width: 310px; height: 200px;
 			border-radius: 15px;
 			background-color: #f0f1f5;
-			margin-left: 70px;
+			margin-left: 50px;
 			position: relative;
 			cursor: pointer;
 			}
@@ -1317,8 +1324,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 			display: inline-block;
 			padding: 6px 12px;
 			margin-bottom: 0;
-			margin-top: 58px;
-			margin-left: 473px;
+			margin-top: -67px;
+			margin-left: 400px;
 			font-size: 14px;
 			font-weight: normal;
 			line-height: 1.42857143;
@@ -1362,8 +1369,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 
 			display: inline-block;
 			position: absolute;
-			top: 70px;
-			left: 70px;
+			top: 80px;
+			left: 50px;
 			vertical-align: middle;
 			text-align: center;
 			line-height: 34px;
