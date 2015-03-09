@@ -282,6 +282,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	function insertChating(){
 		$salesNum = $_REQUEST['hiddenProduct'];
 		$contents = $_REQUEST['recheckTextarea'];
+		$order_user_num = $_REQUEST['hiddenUser'];
 		$user_num = $this->session->userdata['num'];
 
 		$result = $this->country_M->maxChatNum();
@@ -299,7 +300,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 			$data['orderUser']= $this->country_M->detailUser($salesResult->user_num);
 		}
 
-		$insert['chatSend']= $this->country_M->chatSend($maxNum, $salesNum, $contents, $user_num );
+		$insert['chatSend']= $this->country_M->chatSend($maxNum, $salesNum, $contents, $user_num, $order_user_num );
 		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($result->chat_num);
 		//$data['BookList']= $this->country_M->bookinglList($salesNum,$user_num);
@@ -353,8 +354,9 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$contents = $_REQUEST['contents'];
 		$user_num = $this->session->userdata['num'];
 		$chatNum = $_REQUEST['chatNum'];
+		$order_user_num = $_REQUEST['userNum'];
 
-		$insert['chatSend']= $this->country_M->chatSend($chatNum, $productNum, $contents, $user_num );
+		$insert['chatSend']= $this->country_M->chatSend($chatNum, $productNum, $contents, $user_num, $order_user_num );
 
 		$salesResult= $this->country_M->salesPre($productNum);
 		if($salesResult->user_num == $this->session->userdata['num']){
@@ -374,8 +376,9 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$contents = $_REQUEST['contents'];
 		$user_num = $this->session->userdata['num'];
 		$chatNum = $_REQUEST['chatNum'];
+		$order_user_num = $_REQUEST['userNum'];
 
-		$insert['chatSend']= $this->country_M->chatSubSend($chatNum, $productNum, $contents, $user_num );
+		$insert['chatSend']= $this->country_M->chatSubSend($chatNum, $productNum, $contents, $user_num, $order_user_num );
 		$data['SendList']= $this->country_M->chatDetailList($chatNum);
 		$data['salesCity']= $this->country_M->salesDetailCity($productNum);
 

@@ -38,6 +38,7 @@
 		<form name="frmBooking" id="frmBooking" method='post' enctype="multipart/form-data" action="/index.php/city/country/insertChating">
 		<input type='hidden' id='hiddenProduct' name='hiddenProduct' value='<?=$salesNum?>' >
 			<?foreach($salesBasic as $v){?>
+				<input type='hidden' id='hiddenUser' name='hiddenUser' value='<?=$v->user_num?>' >
 				<div class="right_reservation">
 					<div class="price">
 						<p class="price_title">价格 :</p>

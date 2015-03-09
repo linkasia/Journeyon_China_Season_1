@@ -595,11 +595,12 @@
 			$query = $this->db->query($sql);
 		}
 
-		function chatSend( $chat_num, $salesNum, $contents, $user_num)
+		function chatSend( $chat_num, $salesNum, $contents, $user_num, $order_user_num)
 		{
 			$sql ="INSERT INTO chat
 													(chat_num,
 													user_num,
+													order_user_num,
 													product_num,
 													content,
 													viewYn,
@@ -607,6 +608,7 @@
 													)VALUES(
 													".$chat_num.",
 													'".$user_num."',
+													'".$order_user_num."',
 													'".$salesNum."',
 													'".$contents."',
 													'N',
@@ -614,11 +616,12 @@
 			$query = $this->db->query($sql);
 		}
 
-		function chatSubSend( $chat_num, $salesNum, $contents, $user_num)
+		function chatSubSend( $chat_num, $salesNum, $contents, $user_num, $order_user_num)
 		{
 			$sql ="INSERT INTO chat_reply
 													(chat_num,
 													user_num,
+													order_user_num,
 													product_num,
 													content,
 													viewYn,
@@ -626,6 +629,7 @@
 													)VALUES(
 													".$chat_num.",
 													'".$user_num."',
+													'".$order_user_num."',
 													'".$salesNum."',
 													'".$contents."',
 													'N',
@@ -971,16 +975,16 @@
 		//쳇 카운터
 		function realChat($user_num)
 		{
-			$sql ="SELECT COUNT(*) AS cnt, user_num,
-											(SELECT COUNT(*)
-												FROM chat_reply
-												WHERE viewYn='N'
-												AND user_num='".$user_num."'
-											) AS reView
+			$sql ="SELECT COUNT(*) AS cnt, order_user_num
 							FROM chat
-							WHERE viewYn='N'
-							AND user_num='".$user_num."'";
-								//print_r($sql);
+							WHERE order_user_num='".$user_num."'
+							AND viewYn='N'
+							UNION ALL
+							SELECT COUNT(*) AS cnt, order_user_num
+							FROM chat_reply
+							WHERE order_user_num='".$user_num."'
+							AND viewYn='N'";
+							//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

@@ -170,11 +170,14 @@
 		var _contents = $('#chatInput').val();
 		var _userNum = $('#hiddenUserNum').val();
 		var _loginNum = $('#hiddenLoginNum').val();
+
 		var _url = "";
 		if(_userNum != _loginNum)
 		{
+			_userNum = $('#hiddenUserNum').val();
 			_url ="/index.php/city/country/insertMainChating";
 		}else{
+			_userNum = $('#hiddenNum').val();
 			_url ="/index.php/city/country/insertSubChating";
 		}
 
@@ -182,7 +185,7 @@
 			type:"POST" ,
 			dataType:"text",
 			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-			data:{ chatNum : _chatNum, productNum:_productNum, contents:_contents},
+			data:{ chatNum : _chatNum, productNum:_productNum, contents:_contents, userNum:_userNum},
 			url: _url,
 			success: function (data){
 				document.getElementById('chatlistWrap').innerHTML = data;
