@@ -1,6 +1,9 @@
-<?echo ":::::::::::>>>".count($msgCount);
-foreach($msgCount as $v){?>
-	<div id="alertM"><i>您有<?=$v->chat_cnt?>条新短消息！.</i></div>
+<?foreach($msgCount as $v){
+	if($v->user_num == $this->session->userdata['num']){?>
+		<div id="alertM"><i>您有<?=$v->cnt?>条新短消息！.  </i></div>
+	<?}else{?>
+		<div id="alertM"><i>您有<?=$v->reView?>条新短消息！.</i></div>
+	<?}?>
 <?}?>
 
  <script type="text/javascript">

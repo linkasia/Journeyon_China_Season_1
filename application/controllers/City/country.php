@@ -318,13 +318,15 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$result= $this->country_M->salesPre($salesNum);
 		if($result->user_num == $this->session->userdata['num']){
 			$data['orderUser']= $this->country_M->detailUser($this->session->userdata['num']);
+			$update['chatView']= $this->country_M->updateChatView($key);
 		}else{
 			$data['orderUser']= $this->country_M->detailUser($result->user_num);
+			$update['chatReView']= $this->country_M->updateReChatView($key);
 		}
 		$data['salesCity']= $this->country_M->salesDetailCity($salesNum);
 		$data['SendList']= $this->country_M->chatDetailList($key);
-		$update['chatReView']= $this->country_M->updateReChatView($key);
-		$update['chatView']= $this->country_M->updateChatView($key);
+
+
 
 		$this->load->view('include/header');
 		$this->load->view("/contents/chating",$data);

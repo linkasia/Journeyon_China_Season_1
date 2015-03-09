@@ -87,7 +87,7 @@
 							FROM user_order_product a
 							LEFT JOIN product b ON a.product_num = b.product_num
 							LEFT JOIN USER c ON b.user_num = c.user_num
-							LEFT JOIN country_table d ON c.live_area_code = d.class AND c.live_country_code = d.code
+							LEFT JOIN country_table d ON c.mother_area_code = d.class AND c.mother_country_code = d.code
 							WHERE a.user_num = '".$num."'";
 							//print_r($sql);
 			$query = $this->db->query($sql);
@@ -105,7 +105,7 @@
 							FROM user_order_product a
 							LEFT JOIN product b ON a.product_num = b.product_num
 							LEFT JOIN USER c ON b.user_num = c.user_num
-							LEFT JOIN country_table d ON c.live_area_code = d.class AND c.live_country_code = d.code
+							LEFT JOIN country_table d ON c.mother_area_code = d.class AND c.mother_country_code = d.code
 							WHERE a.product_user_num = '".$num."'";
 							//print_r($sql);
 			$query = $this->db->query($sql);

@@ -971,19 +971,15 @@
 		//쳇 카운터
 		function realChat($user_num)
 		{
-			$sql ="SELECT COUNT(*) AS chat_cnt
-								FROM(
-												SELECT a.chat_num, a.product_num, a.user_num, a.viewYn
-												FROM chat a
-												WHERE a.viewYn = 'N'
-												AND a.user_num ='".$user_num."'
-												UNION ALL
-												SELECT d.chat_num, d.product_num, d.user_num, d.viewYn
-												FROM chat_reply d
-												WHERE d.viewYn = 'N'
-												AND d.user_num ='".$user_num."'
-								) AS u
-								GROUP BY u.viewYn";
+			$sql ="SELECT COUNT(*) AS cnt, user_num,
+											(SELECT COUNT(*)
+												FROM chat_reply
+												WHERE viewYn='N'
+												AND user_num='".$user_num."'
+											) AS reView
+							FROM chat
+							WHERE viewYn='N'
+							AND user_num='".$user_num."'";
 								//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
