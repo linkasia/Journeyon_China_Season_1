@@ -21,7 +21,7 @@
 			<div class="salesList">
 				<input type="checkbox" id="salesCheckbox" name="salesCheckbox">
 				<div class="titlediv">
-					<span class="salestitle" id="salestitle" name="salestitle"><?=$v->title?></span>
+					<span class="salestitle" id="salestitle" name="salestitle"><a href='/index.php/City/country/Detailcity_search?salesNum=<?=$v->product_num?>&mode='><?=$v->title?></a></span>
 				</div><!-- titlediv 닫음 -->
 				<div class="banddiv bgf9fafc">
 					<span class="bandtitle" id="bandtitle" name="bandtitle"><!--最近联系 : 2014. 6. 9--></span><span class="bandtitle2" id="bandtitle2" name="bandtitle2">预约日期 : <?=$v->book_Start_date?> ~ <?=$v->book_End_date?></span>
