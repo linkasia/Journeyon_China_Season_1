@@ -68,10 +68,11 @@
 							<span class="id_s">上传身份证</span>
 						</div>
 
-						<div class="file-upload">
+						<input type='file' id='vCertification' name='vCertification'>
+						<!-- <div class="file-upload">
 							<label for="file-upload" class="file-uploadLabel">Upload file</label><!-- fileUpload -->
 							<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false">
-						</div>
+						</div> -->
 						<!-- <input type='file' id='vCertification' name='vCertification'> -->
 						
 						<?if($v->certicifi_type_code != "0001"){?>
@@ -81,11 +82,10 @@
 				</form>
 				<?}
 			}?>
-			<!-- <p class="posa_text3">Upload</p> -->
+			 <p class="posa_text3">Upload</p>
 
-			<div class="file-upload">
-				<label for="file-upload" class="file-uploadLabel">Upload file</label><!-- fileUpload -->
-				<input type="file" class="filestyle btn btn-info" id="file-upload" name="file-upload" data-icon="false">
-			</div>
+			<!-- <div class="file-upload">
+				<label for="file-upload" class="file-uploadLabel">Upload file</label>fileUpload				<input type="file" class="filestyle btn btn-info" id="file-upload" name="file-upload" data-icon="false">
+			</div> -->
 
 		</div><!-- profileWrap1 -->
