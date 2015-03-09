@@ -35,7 +35,7 @@
 			if( $i <= 3){?>
 			<div class="picUpload" id='addDiv<?=$i?>'>
 				<img src="" data-toggle="modal" data-backdrop="static" data-target="#myModal5" id='pic<?=$i?>' name='pic<?=$i?>' onclick="valChange('<?=$i?>')">
-				<span class="glyphicon glyphicon-picture pic_icon_img" id='picImg<?=$i?>' name='picImg<?=$i?>'></span>
+				<span class="glyphicon glyphicon-picture pic_icon_img" id='picImg<?=$i?>' name='picImg<?=$i?>' data-toggle="modal" data-backdrop="static" data-target="#myModal5"></span>
 				<span class="glyphicon glyphicon-remove remove" onclick="removeImg('<?=$i?>')"></span>
 			</div>
 			<?}else{?>

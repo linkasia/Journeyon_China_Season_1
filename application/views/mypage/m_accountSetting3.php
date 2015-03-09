@@ -31,6 +31,7 @@
 					</div>
 				</form>
 
+
 			<?}else{
 				foreach($certicification as $v){?>
 				<div class="vcertiWrap2">
@@ -66,7 +67,13 @@
 							<!--span class="glyphicon  glyphicon-plus" aria-hidden="true"></span-->
 							<span class="id_s">上传身份证</span>
 						</div>
-						<input type='file' id='vCertification' name='vCertification'>
+
+						<div class="file-upload">
+							<label for="file-upload" class="file-uploadLabel">Upload file</label><!-- fileUpload -->
+							<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false">
+						</div>
+						<!-- <input type='file' id='vCertification' name='vCertification'> -->
+						
 						<?if($v->certicifi_type_code != "0001"){?>
 							<input type='submit' id='vUpload' name='vUpload' value='인증 신청'>
 						<?}?>
@@ -74,5 +81,11 @@
 				</form>
 				<?}
 			}?>
-			<p class="posa_text3">Upload</p>
+			<!-- <p class="posa_text3">Upload</p> -->
+
+			<div class="file-upload">
+				<label for="file-upload" class="file-uploadLabel">Upload file</label><!-- fileUpload -->
+				<input type="file" class="filestyle btn btn-info" id="file-upload" name="file-upload" data-icon="false">
+			</div>
+
 		</div><!-- profileWrap1 -->
