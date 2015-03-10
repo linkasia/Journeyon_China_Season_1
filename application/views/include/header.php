@@ -126,7 +126,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 -->
 							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
 							<!--li class="logout" name="logout" id="logout"></li-->
-						<?$this -> load ->view('/include/talkbox')?>
+						<?$this -> load ->view('/include/talkbox',$data)?>
 						
 						
 						<li class="profilePic">

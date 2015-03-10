@@ -31,14 +31,36 @@
 	#header_top>ul>li{display: block; float: left; cursor: pointer; color:#fff; font-size: 1.25em;}
 	#header_top>ul>li.logo{width: 173px; height: 55px; background-image: url(/application/views/images/main/img01_logo.png); position: absolute; left: 0px; top: 0px;}
 	#header_top>ul>li.become_host{width: 195px; height: 22px; /*background-image: url(/application/views/images/main/img02_text.png);*/ position: absolute; left: 183px; top: 20px;}
-	#header_top>ul>li.how_works{width: 88px; height: 22px; /*background-image: url(/application/views/images/main/img03_text.png);*/ position: absolute; left: 708px; top: 20px;}
+	#header_top>ul>li.how_works{
+		width: 88px; height: 22px; 
+		/*background-image: url(/application/views/images/main/img03_text.png);*/
+		position: absolute; left: 686px;
+		top: 20px;
+		}
+	#boxcount{
+		color: red;
+		position: absolute;
+		left: 833px;
+		top: 22px;
+		font-size: 0.8em;
+		font-weight: 800;
+		width: 31px;
+		overflow: hidden;
+		text-align: center;
+	}
 	#header_top>ul>li.login{width: 64px; height: 22px; /*background-image: url(/application/views/images/main/img04_text.png);*/ position: absolute; left: 832px; top: 20px;}
 	#header_top>ul>li.login_email{position: absolute; right: 230px; top: 22px; width: 150px;}
 	.email_txt{width: 5em; font-size: 0.75em; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; font-size: 1.3em; color: #fff;}
 	#header_top>ul> a.logout{color: #fff; font-size: 1.25em; text-decoration: none;}
 
-	#header_top>ul>li.talkbox{width: 40px; height: 40px; position: absolute; left: 810px; top: 20px;}
-	#header_top>ul>li.profilePic{width: 40px; height: 40px; position: absolute; left: 860px; top: 10px; cursor: pointer;}
+	#header_top>ul>li.talkbox{
+		width: 40px; height: 40px; position: absolute; left: 828px; top: 11px;
+		}
+	#header_top>ul>li.noticebox{
+		width: 40px; height: 40px; position: absolute; left: 778px; top: 11px;
+		}
+
+	#header_top>ul>li.profilePic{width: 40px; height: 40px; position: absolute; left: 880px; top: 10px; cursor: pointer;}
 	
 	#header_top>ul>li>div.dropdown{position: relative;}
 	#header_top>ul>li>div.dropdown>#profileMenu{width: 40px; height: 40px; float: left;}
