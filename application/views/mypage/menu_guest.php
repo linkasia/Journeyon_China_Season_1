@@ -36,7 +36,18 @@
 	//예약 키생성
 	function insertBookNum(num,contents){
 		document.getElementById('hiddenBookNum').value=num;
-		document.getElementById('cancelComment').value=contents;
+		//document.getElementById('cancelComment').value=contents;
+
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ hiddenBookNum:num },
+			url:"/index.php/mypage/myPage_M/cancelDetailBook",
+			success: function (data){
+				document.getElementById('cancelDetail').innerHTML = data;
+			}
+		});
 	}
 
 	//예약취소

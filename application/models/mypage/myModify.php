@@ -133,6 +133,18 @@
 			return $result;
 		}
 
+		//취소내용 확인
+		function cancelBookDetail($num)
+		{
+			$sql ="SELECT *
+								FROM user_order_product
+								WHERE book_num='".$num."'";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
 		function myBuyListPage($num)
 		{
 			$sql ="SELECT COUNT(a.product_num) AS cnt,
