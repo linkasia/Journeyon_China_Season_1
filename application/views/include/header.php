@@ -120,13 +120,15 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 						{
 							if($this->session->userdata['email']!=null){
 								$data['msgCount']= $this->country_M->realChat( $this->session->userdata['num']);
-								$this -> load ->view('/include/realtimechat',$data);
+							// $this -> load ->view('/include/realtimechat',$data);
 							?>
 							<li class="become_host" name="become_host" id="become_host"><i>申请加入当地微导游</i></li>
 							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 -->
 							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
 							<!--li class="logout" name="logout" id="logout"></li-->
-						<li class="talkbox"><img src="/application/views/images/main/icon_talkboxN.png" alt="icon_talkboxN" id="chatList" name="chatList"></li>
+						<?$this -> load ->view('/include/talkbox')?>
+						
+						
 						<li class="profilePic">
 							<div class="dropdown">
 								<img src="<?=$this->session->userdata['face_img_path']?>" alt="myprofile_Picture" class="img-circle dropdown-toggle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block" data-toggle="dropdown" aria-expanded="true"></span>
