@@ -113,6 +113,26 @@
 			return $result;
 		}
 
+		function myGuideSellPage($num)
+		{
+			$sql ="SELECT a.*,
+											b.*,
+											c.*,
+											d.*,
+											e.Name_cn_en AS order_user,
+											CASE WHEN fixed_fee = 0 THEN '未确认' ELSE fixed_fee END fixed_fee
+							FROM user_order_product a
+							LEFT JOIN product b ON a.product_num = b.product_num
+							LEFT JOIN USER c ON b.user_num = c.user_num
+							LEFT JOIN country_table d ON c.mother_area_code = d.class AND c.mother_country_code = d.code
+							LEFT JOIN USER e ON a.user_num = e.user_num
+							WHERE a.product_user_num = '".$num."'";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
 		function myBuyListPage($num)
 		{
 			$sql ="SELECT COUNT(a.product_num) AS cnt,

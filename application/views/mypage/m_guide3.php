@@ -1,7 +1,7 @@
 		<div class="profileWrap1">
 			<?
-				$data['date'] = $this->myModify->mySellPage($this->session->userdata['num']);
-				$this -> load ->view('/mypage/servicewindow1',$data);
+				$data['date'] = $this->myModify->myGuideSellPage($this->session->userdata['num']);
+				$this -> load ->view('/mypage/servicewindow2',$data);
 			?>
 
 			<div class="title1">
