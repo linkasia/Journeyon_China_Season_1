@@ -85,26 +85,9 @@
 				<dd><?=$v->etc?></dd>
 			</dl>
 		</div>
-
-
-		<div class="reply">
-			<div class="profile_pic">
-				<img src="/application/views/images/main/profile01.jpg" alt="" class="img-circle profile_image">
-				<img src="/application/views/images/left_menu/flag03_usa.png" alt="" class="flag_image">
-				<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
-			</div>
-			<div class="reply_text"><span class="reply_id">From Regina Paul : </span>世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0 世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0
-			</div>
-		</div>
-
-		<div class="reply">
-			<img src="/application/views/images/contents/reply.png" alt="" class="reply_arrow">
-			<div class="profile_pic_answer">
-				<img src="/application/views/images/main/profile02.jpg" alt="" class="img-circle profile_image">
-				<img src="/application/views/images/left_menu/flag03_usa.png" alt="" class="flag_image">
-				<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
-			</div>
-			<div class="reply_text_answer"><span class="reply_id">From xiangyu19880319 : </span>世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0 世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0 世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，拍了美美的照片，下次还想来呢回复有用 0世界的瑰宝呀，逛了一天都没看完，太漂亮了，
-			</div>
 		<?}?>
+		<!-- Reply 달리는 부분 php로 뺌 -->
+		<div id="salescityreplyDiv">
+			<?$this->load->view('/contents/salescityReply')?>
+		</div>
 </div>
