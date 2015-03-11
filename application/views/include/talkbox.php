@@ -1,14 +1,19 @@
 <li class="talkbox"><img src="/application/views/images/main/t01.png" alt="icon_talkboxN" id="chatList" name="chatList">
 </li>
 
-<li class="noticebox"><img src="/application/views/images/main/n01n.png" alt="icon_talkboxN" id="noticeList" name="noticeList"></li>
+<?foreach($bookCount as $k){
+		if($k->bookCnt > 0){?>
+			<li class="noticebox"><img src="/application/views/images/main/n01n.png" alt="icon_talkboxN" id="noticeList" name="noticeList" onclick='orderBook()'></li>
+		<?}else{?>
+			<li class="noticebox"><img src="/application/views/images/main/n01.png" alt="icon_talkboxN" id="noticeList" name="noticeList" onclick='orderBook()'></li>
+	<?}
+}?>
 <!-- <li class="noticebox"><img src="/application/views/images/main/n01n.png" alt="icon_talkboxN" id="noticeList" name="noticeList"></li> -->
 <?foreach($msgCount as $v){
-	if($v->order_user_num != null){?>
-<p id="boxcount"><?=$v->cnt?></p>
+		if($v->order_user_num != null){?>
+			<p id="boxcount"><div id='msgCnt'><?=$v->cnt?></div></p>
 	<?}?>
 <?}?>
-
 <script type="text/javascript">
 
 	$(document).ready(function () {
@@ -23,8 +28,7 @@
 			data:{ },
 			url: "/index.php/city/country/realTimeMsg",
 			success: function (data){
-				document.getElementById('test').innerHTML = data;
-				document.getElementById('alertM').innerHTML = data;
+				document.getElementById('msgCnt').innerHTML = data;
 			}
 		});
 	}

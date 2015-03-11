@@ -84,6 +84,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function mySalesAdmin(){
+		$update['stateCode'] = $this->myModify->updateBookView($this->session->userdata['num']);
 		$data['reservation'] = $this->myModify->mySellPage($this->session->userdata['num']);
 		$this->load->view('mypage/m_guide3', $data);
 	}

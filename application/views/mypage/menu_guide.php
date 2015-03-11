@@ -18,6 +18,7 @@
 				$data['mode']="";
 				$this->load->view('mypage/m_guest2', $data);
 			}else if($mode == "3"){
+				$update['stateCode'] = $this->myModify->updateBookView($this->session->userdata['num']);
 				$data['reservation'] = $this->myModify->mySellPage($this->session->userdata['num']);
 				$this->load->view('mypage/m_guide3', $data);
 			}else{

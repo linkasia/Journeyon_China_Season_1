@@ -390,5 +390,14 @@
 				return FALSE;
 			}
 		}
+
+		//예약 카운터 확인
+		function updateBookView($num)
+		{
+			$sql ="UPDATE user_order_product
+									SET viewYn = 'Y'
+							WHERE product_user_num = '".$num."'";
+			$query = $this->db->query($sql);
+		}
 	}
 ?>

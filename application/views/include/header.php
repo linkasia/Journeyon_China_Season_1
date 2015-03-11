@@ -119,6 +119,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 						if(@$this->session->userdata['logged_in'] == TRUE)
 						{
 							if($this->session->userdata['email']!=null){
+								$data['bookCount']= $this->country_M->bookCount($this->session->userdata['num']);
 								$data['msgCount']= $this->country_M->realChat( $this->session->userdata['num']);
 							// $this -> load ->view('/include/realtimechat',$data);
 							?>
@@ -127,8 +128,8 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
 							<!--li class="logout" name="logout" id="logout"></li-->
 						<?$this -> load ->view('/include/talkbox',$data)?>
-						
-						
+
+
 						<li class="profilePic">
 							<div class="dropdown">
 								<img src="<?=$this->session->userdata['face_img_path']?>" alt="myprofile_Picture" class="img-circle dropdown-toggle" type="button" id="profileMenu" data-toggle="dropdown" aria-expanded="true"><span class="caret caret-block" data-toggle="dropdown" aria-expanded="true"></span>
@@ -186,8 +187,11 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 
 		<script type="text/javascript">
-			$(function(){
+			function orderBook(){
+				location.href = "/index.php/mypage/myPage_M/myguide?mode=3";
+			}
 
+			$(function(){
 				$('#chatList').click( function(){
 					location.href = "<?=site_url('auth/chat_List'); ?>";
 				});

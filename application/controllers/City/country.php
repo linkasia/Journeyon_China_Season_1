@@ -503,7 +503,7 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 	//채팅실시간 로딩
 	function realTimeMsg(){
 		$user_num = $this->session->userdata['num'];
-
+		$data['bookCount']= $this->country_M->bookCount($user_num);
 		$data['msgCount']= $this->country_M->realChat($user_num);
 		$this->load->view("/contents/realtimechat",$data);
 	}

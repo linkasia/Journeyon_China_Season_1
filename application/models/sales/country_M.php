@@ -1011,6 +1011,19 @@
 			//print_r($sql);
 			$query = $this->db->query($sql);
 		}
+
+		//예약 확인 카운터
+		function bookCount( $userNum)
+		{
+			$sql ="SELECT COUNT(*) AS bookCnt
+								FROM user_order_product
+								WHERE viewYn='N'
+								AND product_user_num = '". $userNum."'";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 
 ?>
