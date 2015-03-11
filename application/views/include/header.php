@@ -112,7 +112,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<?
 
 							?>
-						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static"><i>如何参与</i></li>
+						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static">如何参与</li>
 
 
 						<?
@@ -123,7 +123,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 								$data['msgCount']= $this->country_M->realChat( $this->session->userdata['num']);
 							// $this -> load ->view('/include/realtimechat',$data);
 							?>
-							<li class="become_host" name="become_host" id="become_host"><i>申请加入当地微导游</i></li>
+							<li class="become_host" name="become_host" id="become_host">申请加入当地微导游</li>
 							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 -->
 							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
 							<!--li class="logout" name="logout" id="logout"></li-->
@@ -149,8 +149,8 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 						<?}?>
 
 						<?}else{?>
-							<li class="login" name="login" id="login"><i>登陆&nbsp;&nbsp;|</i></li>
-							<li class="signup" name="signup" id="signup"><i>注册</i></li>
+							<li class="login" name="login" id="login">登陆&nbsp;&nbsp;|</li>
+							<li class="signup" name="signup" id="signup">注册</li>
 						<?}?>
 					</ul>
 

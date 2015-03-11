@@ -11,7 +11,7 @@
 <!-- <li class="noticebox"><img src="/application/views/images/main/n01n.png" alt="icon_talkboxN" id="noticeList" name="noticeList"></li> -->
 <?foreach($msgCount as $v){
 		if($v->order_user_num != null){?>
-			<p id="boxcount"><div id='msgCnt'><?=$v->cnt?></div></p>
+			<div id='msgCnt'><?=$v->cnt?></div>
 	<?}?>
 <?}?>
 <script type="text/javascript">
