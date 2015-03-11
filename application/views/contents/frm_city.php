@@ -26,7 +26,7 @@
 								</div>
 								<div class="reviewcount">
 									<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image">
-
+									<?=$v->reviewCnt?>
 								</div>
 								<div class="localcount">
 									<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">

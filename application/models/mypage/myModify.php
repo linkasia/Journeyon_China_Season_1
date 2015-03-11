@@ -167,6 +167,7 @@
 		function myBucketListPage($num)
 		{
 			$sql ="SELECT COUNT(a.product_num) AS cnt,
+											COUNT(d.product_num) AS reviewCnt,
 											a.product_num,
 											b.sortcountry,
 											b.country_code,
@@ -175,6 +176,7 @@
 								FROM user_has_bucket_list a
 								LEFT JOIN product b ON a.product_num = b.product_num
 								LEFT JOIN country_table c ON b.sortcountry = c.class AND b.country_code = c.code
+								LEFT JOIN review d ON a.product_num = d.product_num
 								WHERE a.user_num = '".$num."'
 								GROUP BY b.sortcountry, b.country_code";
 								//print_r($sql);
@@ -204,6 +206,7 @@
 															h.code_nm AS recom2,
 															h.ref1 AS refrecom2,
 															a.*,
+															COUNT(j.product_num) AS reviewCnt,
 															COUNT(j.product_num) AS likeCnt
 											FROM product a
 											LEFT JOIN USER b ON a.user_num=b.user_num
@@ -214,7 +217,7 @@
 											LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 											LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
 											LEFT JOIN user_has_bucket_list i ON a.product_num = i.product_num
-											LEFT JOIN user_has_bucket_list j ON a.product_num = j.product_num
+											LEFT JOIN review j ON a.product_num = j.product_num
 											WHERE a.sortcountry='".$area."'
 											AND a.country_code='".$country."'
 											AND i.user_num = '".$num."'
@@ -252,6 +255,7 @@
 															DATE_FORMAT(a.modified_date,'%Y.%m.%d') AS regdate,
 															i.cnt,
 															CASE WHEN a.product_state ='0001' THEN 'sales' WHEN a.product_state ='0002' THEN 'registring' ELSE 'stop' END state,
+															COUNT(k.product_num) AS reviewCnt,
 															COUNT(j.product_num) AS likeCnt
 											FROM product a
 											LEFT JOIN USER b ON a.user_num=b.user_num
@@ -267,6 +271,7 @@
 																	GROUP BY x.product_num
 											) AS i ON a.product_num = i.product_num
 											LEFT JOIN user_has_bucket_list j ON a.product_num = j.product_num
+											LEFT JOIN review k ON a.product_num = k.product_num
 											WHERE a.user_num = '".$user_num."'
 											AND a.product_state = '".$state."'
 											GROUP BY a.product_num

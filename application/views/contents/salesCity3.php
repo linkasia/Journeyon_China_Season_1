@@ -51,7 +51,7 @@
 									<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image"><?=$v->cnt?>
 								</div>
 								<div class="reviewcount">
-									<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image">11
+									<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image"><?=$v->reviewCnt?>
 								</div>
 								<div class="localcount">
 									<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">	当地人

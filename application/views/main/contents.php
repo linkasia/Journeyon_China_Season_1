@@ -199,7 +199,7 @@
 
 									<div class="back-line3">
 										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like"><?=$v->likeCnt?>个</span>
-										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 <?=$v->reviewCnt?>个</span>
 									</div>
 
 									<div class="flagbox"><img src="<?=$v->monther_img?>" alt=""></div>
@@ -261,7 +261,7 @@
 
 									<div class="back-line3">
 										<img src="/application/views/images/main/img23_heart.png" alt="icon_heart" class="icon_heart"><span class="posa_like"><?=$v->likeCnt?>个</span>
-										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记 0个</span>
+										<img src="/application/views/images/main/img24_talkbox.png" alt="icon_t" class="icon_t">&nbsp;<span class="posa_reply">游记  <?=$v->reviewCnt?>个</span>
 									</div>
 
 									<div class="flagbox"><img src="<?=$v->monther_img?>" alt=""></div>

@@ -35,6 +35,7 @@
 																h.code_nm AS recom2,
 																h.ref1 AS refrecom2,
 																a.*,
+																COUNT(j.product_num) AS reviewCnt,
 																COUNT(i.product_num) AS cnt
 													FROM product a
 													LEFT JOIN USER b ON a.user_num=b.user_num
@@ -45,6 +46,7 @@
 													LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 													LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
 													LEFT JOIN user_has_bucket_list i ON a.product_num = i.product_num
+													LEFT JOIN review j ON a.product_num = j.product_num
 													WHERE sortcountry='".$co."'
 													AND country_code='".$ci."'
 													AND a.useYn = 'Y'
@@ -508,6 +510,7 @@
 											h.code_nm AS recom2,
 											h.ref1 AS refrecom2,
 											a.*,
+											COUNT(j.product_num) AS reviewCnt,
 											COUNT(i.product_num) AS cnt
 							FROM product a
 							LEFT JOIN USER b ON a.user_num=b.user_num
@@ -518,6 +521,7 @@
 							LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 							LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
 							LEFT JOIN user_has_bucket_list i ON a.product_num = i.product_num
+							LEFT JOIN review j ON a.product_num = j.product_num
 							WHERE b.user_num='".$userNum."'
 							AND a.useYn = 'Y'
 							AND a.product_state = '0001'
