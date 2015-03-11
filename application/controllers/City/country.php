@@ -172,6 +172,51 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 		$this->load->view("/contents/salesCity2",$data);
 	}
 
+	/*review 입력*/
+	function insertReview(){
+		$salesNum = $_REQUEST['salesNum'];
+		$content = $_REQUEST['content'];
+		$userNum = $_REQUEST['userNum'];
+
+		$insert['insertReview'] = $this->country_M->insertReview($salesNum,$content,$userNum);
+
+		$data['review']= $this->country_M->salesDetailCityReview($salesNum);
+		$data['reviewAnswer']= $this->country_M->salesDetailCityReview2($salesNum);
+
+		$data['orderBook'] = "";
+		if(@$this->session->userdata['logged_in'] == TRUE)
+		{
+			if($this->session->userdata['email']!=null){
+				$data['orderBook'] = $this->country_M->orderBookUser($salesNum,$this->session->userdata['num']);
+			}
+		}
+
+		$this->load->view("/contents/salescityReply",$data);
+	}
+
+	/*reviewAnswer 입력*/
+	function insertReviewAnswer(){
+		$salesNum = $_REQUEST['salesNum'];
+		$content = $_REQUEST['content'];
+		$review_num = $_REQUEST['review_num'];
+		$userNum = $this->session->userdata['num'];
+
+		$insert['insertReviewAnswer'] = $this->country_M->insertReviewAnsWer($salesNum, $content, $review_num, $userNum);
+
+		$data['review']= $this->country_M->salesDetailCityReview($salesNum);
+		$data['reviewAnswer']= $this->country_M->salesDetailCityReview2($salesNum);
+
+		$data['orderBook'] = "";
+		if(@$this->session->userdata['logged_in'] == TRUE)
+		{
+			if($this->session->userdata['email']!=null){
+				$data['orderBook'] = $this->country_M->orderBookUser($salesNum,$this->session->userdata['num']);
+			}
+		}
+
+		$this->load->view("/contents/salescityReply",$data);
+	}
+
 
 	/*상품 저장*/
 	function productUpload(){

@@ -287,7 +287,7 @@
 			return $result;
 		}
 
-		//선택한 도시 상세 QnA
+		//도시 QnA
 		function salesDetailCityQnA2($num)
 		{
 			$sql ="SELECT a.qna_num,
@@ -312,6 +312,68 @@
 			return $result;
 		}
 
+		function salesDetailCityReview($num)
+		{
+			$sql ="SELECT a.review_num,
+											a.user_num,
+											a.product_num,
+											a.content,
+											DATE_FORMAT(a.create_date,'%Y-%m-%d %H:%i') AS create_date,
+											b.Name_cn_en,
+											b.face_img_path,
+											b.v_get_code,
+											b.mother_area_code,
+											b.mother_country_code,
+											c.code_nm AS country_nm,
+											c.ref1 AS country_flog
+							FROM review a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
+							WHERE a.product_num='".$num."'
+							ORDER BY a.create_date ASC";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function salesDetailCityReview2($num)
+		{
+			$sql ="SELECT a.review_num,
+											a.user_num,
+											a.product_num,
+											a.content,
+											DATE_FORMAT(a.create_date,'%Y-%m-%d %H:%i') AS create_date,
+											b.Name_cn_en,
+											b.face_img_path,
+											b.v_get_code,
+											b.mother_area_code,
+											b.mother_country_code,
+											c.code_nm AS country_nm,
+											c.ref1 AS country_flog
+							FROM review_answer a
+							LEFT JOIN USER b ON a.user_num = b.user_num
+							LEFT JOIN country_table c ON b. mother_area_code = c.class AND b.mother_country_code=c.code
+							WHERE a.product_num='".$num."'
+							ORDER BY a.create_date ASC";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function orderBookUser($salesNum,$num)
+		{
+			$sql ="SELECT *
+							FROM user_order_product
+							WHERE product_num = '".$salesNum."'
+							AND user_num = '".$num."'
+							AND order_type_code = '0001'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+
+		//도시 Qna
 		function insertQuestion($productNum,$content,$userNum)
 		{
 			$sql ="INSERT INTO user_question_product
@@ -335,6 +397,46 @@
 		{
 			$sql ="INSERT INTO answer
 						(qna_num,
+						user_num,
+						product_num,
+						content,
+						create_date
+						)
+						VALUES
+						('".$qna_num."',
+						'".$userNum."',
+						'".$productNum."',
+						'".$content."',
+						SYSDATE()
+						);";
+			$query = $this->db->query($sql);
+		}
+
+		//도시 리뷰
+		function insertReview($productNum,$content,$userNum)
+		{
+			$sql ="INSERT INTO review
+						(review_num,
+						user_num,
+						product_num,
+						content,
+						create_date
+						)
+						VALUES
+						(0,
+						'".$userNum."',
+						'".$productNum."',
+						'".$content."',
+						SYSDATE()
+						);";
+						//print_r($sql);
+			$query = $this->db->query($sql);
+		}
+
+		function insertReviewAnsWer($productNum,$content,$qna_num,$userNum)
+		{
+			$sql ="INSERT INTO review_answer
+						(review_num,
 						user_num,
 						product_num,
 						content,

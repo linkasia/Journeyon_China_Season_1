@@ -1,9 +1,6 @@
 <?
 foreach($salesCityQnA as $v){
 ?>
-
-
-
 			<div class="reply"><!-- 질문 부분 -->
 				<div class="profile_pic">
 					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
@@ -40,8 +37,8 @@ foreach($salesCityQnA as $v){
 			<?}
 			}
 			?>
-				
-<?}?>		
+
+<?}?>
 <?
 		if(@$this->session->userdata['logged_in'] == TRUE)
 		{
@@ -55,8 +52,8 @@ foreach($salesCityQnA as $v){
 						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 					<?}?>
 				</div>
-					<textarea name="typingArea" id="quetionArea" cols="30" rows="10" class="typingArea"></textarea>
-					<button class="btn btnQna" id="quetion"name="quetion" onclick="insertQuetion('<?=$this->session->userdata['num']?>')">上传</button>
+					<textarea name="reviewArea" id="reviewArea" cols="30" rows="10" class="typingArea"></textarea>
+					<button class="btn btnQna" id="review"name="review" onclick="insertReview('<?=$this->session->userdata['num']?>')">上传</button>
 			</div>
 		<?}
 		}?>

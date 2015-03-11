@@ -88,6 +88,18 @@
 		<?}?>
 		<!-- Reply 달리는 부분 php로 뺌 -->
 		<div id="salescityreplyDiv">
-			<?$this->load->view('/contents/salescityReply')?>
+			<?
+			$salesNum = $_REQUEST['salesNum'];
+
+			$data['review']= $this->country_M->salesDetailCityReview($salesNum);
+			$data['reviewAnswer']= $this->country_M->salesDetailCityReview2($salesNum);
+			$data['orderBook'] = "";
+			if(@$this->session->userdata['logged_in'] == TRUE)
+			{
+				if($this->session->userdata['email']!=null){
+					$data['orderBook'] = $this->country_M->orderBookUser($salesNum,$this->session->userdata['num']);
+				}
+			}
+			$this->load->view('/contents/salescityReply',$data)?>
 		</div>
 </div>

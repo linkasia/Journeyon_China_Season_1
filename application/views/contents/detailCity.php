@@ -182,7 +182,7 @@
 		<?}?>
 	</aside>
 </div>
-
+<div id='test'></div>
 
 <script type="text/javascript">
 	var _checkDate="";
@@ -409,6 +409,18 @@
 			document.getElementById('addReply'+num).innerHTML = insertBox;
 	}
 
+	function addReviewReply(num)
+	{
+		var insertBox ="<div class='typingBox2'>"
+									+"<img src='/application/views/images/contents/reply.png' class='reply_arrow2'>"
+									+"<textarea name='reviewAnswerArea' id='reviewAnswerArea' cols='20' rows='20' class='typingArea'></textarea>"
+									+"<input type='hidden' value='"+num+"' name='review_num' id='review_num' >"
+									+"<button class='btn btnQna2' id='ReviewAnswer' name='ReviewAnswer' onclick='insertReviewAnswer()'>上传</button>"
+									+"</div>";
+
+			document.getElementById('addReviewReply'+num).innerHTML = insertBox;
+	}
+
 	function insertQuetion(userNum){
 		var _salesNum= "<?=$salesNum?>";
 		var _content = document.getElementById('quetionArea').value;
@@ -438,6 +450,39 @@
 			url:"/index.php/city/country/Agency",
 			success: function (data){
 				document.getElementById('viewContents').innerHTML = data;
+			}
+		});
+	}
+
+	function insertReview(userNum){
+		var _salesNum= "<?=$salesNum?>";
+		var _content = document.getElementById('reviewArea').value;
+		var _userNum= userNum;
+
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ salesNum: _salesNum,  content:_content, userNum:_userNum},
+			url:"/index.php/city/country/insertReview",
+			success: function (data){
+				document.getElementById('salescityreplyDiv').innerHTML = data;
+			}
+		});
+	}
+
+	function insertReviewAnswer(){
+		var _salesNum= "<?=$salesNum?>";
+		var _content = document.getElementById('reviewAnswerArea').value;
+		var _review_num =  document.getElementById('review_num').value;
+		$.ajax({
+			type:"GET" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ salesNum: _salesNum,  content:_content,  review_num:_review_num},
+			url:"/index.php/city/country/insertReviewAnswer",
+			success: function (data){
+				document.getElementById('salescityreplyDiv').innerHTML = data;
 			}
 		});
 	}
