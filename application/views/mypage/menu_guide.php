@@ -5,7 +5,7 @@
 		<span class="list-group-item" id='guideR'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;微导认证申请</span>
 		<span class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;微旅程管理&nbsp;&nbsp;</span>
 		<span class="list-group-item" id='salesAdmin'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;订单交易管理&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='cancelAdmin'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;订单取消管理&nbsp;&nbsp;</span>
+		<!--span class="list-group-item" id='cancelAdmin'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;订单取消管理&nbsp;&nbsp;</span-->
 	</aside><!-- leftmenuWrap end -->
 
 	<div id="rightWrap">
