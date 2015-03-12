@@ -1,5 +1,4 @@
-<li class="talkbox"><img src="/application/views/images/main/t01.png" alt="icon_talkboxN" id="chatList" name="chatList">
-</li>
+<li class="talkbox"><img src="/application/views/images/main/t01.png" alt="icon_talkboxN" id="chatList" name="chatList" onclick="goChat();"></li>
 
 <?foreach($bookCount as $k){
 		if($k->bookCnt > 0){?>
@@ -11,7 +10,7 @@
 <!-- <li class="noticebox"><img src="/application/views/images/main/n01n.png" alt="icon_talkboxN" id="noticeList" name="noticeList"></li> -->
 <?foreach($msgCount as $v){
 		if($v->order_user_num != null){?>
-			<div id='msgCnt'><?=$v->cnt?></div>
+			<div id='msgCnt'  onclick="goChat();"><?=$v->cnt?></div>
 	<?}?>
 <?}?>
 <script type="text/javascript">
