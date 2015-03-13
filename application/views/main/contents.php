@@ -296,7 +296,7 @@
 			</div>
 			<div class="news_wrap">
 				<div class="title">卓尼在线 新闻</div>
-				<div>
+				<div onclick="notice()">
 					<img src="/application/views/images/main/sns03.jpg" alt="" />
 				</div>
 			</div>
@@ -305,6 +305,10 @@
 
 
 	<script type="text/javascript">
+
+		function notice(){
+			location.href = "/index.php/admin/adminMenu/adminNotice";
+		}
 
 		function pushEvent(){
 			if(document.getElementById('section2').style.height == "0px"){

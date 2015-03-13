@@ -146,5 +146,12 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 		$update['updateProduct'] = $this->adminProcess->productState($product_num,'0005');
 	}
+
+	/*관리자 회원정보*/
+	function adminNotice(){
+		$this->load->view('include/header');
+		$this->load->view('admin/adminNotice');
+		$this->load->view('include/footer');
+	}
 }
 ?>
