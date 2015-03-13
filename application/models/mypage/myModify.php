@@ -312,9 +312,9 @@
 		{
 			$sql ="SELECT *
 							FROM certicification
-							WHERE certicifi_type_code = '0006'
+							WHERE user_num = '".$num."'
 							AND certicifi_state_code = '0001'
-							AND user_num = '".$num."'
+							-- AND certicifi_type_code = '0006'
 							ORDER BY modify_date
 							LIMIT 1";
 							//print_r($sql);

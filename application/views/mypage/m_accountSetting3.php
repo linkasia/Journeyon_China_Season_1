@@ -9,7 +9,8 @@
 		<iframe class="company_intro" width="620" height="360" src="//www.youtube.com/embed/JbGvVyCJCSM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 
-	<?if(count($certicification) == 0){?>
+	<? echo ":::::::::>>".count($certicification);
+	if(count($certicification) == 0){?>
 		<div class="vcertiWrap2">
 			<p class="vtitle">个人身份验证流程</p>
 			<div class="circle bluegloss" style="margin-left: 50px;"><span>申请接受中</span></div>
@@ -31,12 +32,12 @@
 
 				<div class="ID_imgdiv">
 					<span class="id_s">上传身份证</span>
-					<!-- <img src='/application/views/userImage/0000000024/cat.jpg' id='vGet' /> -->
+					<img src='' id='vGet' />
 					<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span>
 				</div>
 				<div class="file-upload2">
 					<label for="vCertification" class="file-uploadLabel">Upload file<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
-					<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false">
+					<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false" onchange='ImgReview()'>
 				</div>
 
 				<!-- <input type='file' id='vCertification' name='vCertification'> -->
@@ -82,7 +83,7 @@
 			<form name="frmVCertification" id="frmVCertification" method='post' enctype="multipart/form-data" action="/index.php/mypage/myPage_M/vCertification">
 
 				<div class="ID_imgdiv">
-					<img src='/application/views/userImage/0000000024/cat.jpg' id='vGet' id='vGet' />
+					<img src='<?=$v->img_path?>' id='vGet' id='vGet' />
 					<!--span class="glyphicon  glyphicon-plus" aria-hidden="true"></span-->
 					<span class="id_s">上传身份证</span>
 				</div>
