@@ -92,9 +92,9 @@ if($to == "" || $to == null){
 			<?}?>
 			</select>
 
-			<input class="form-control input-lg" type="password" id="password" placeholder="请输入最少5个字的密码">
+			<input class="form-control input-lg" type="password" id="password" placeholder="请输入5个以上字母或数字">
 			<span></span>
-			<input class="form-control input-lg" type="password" id="password_comfirm" placeholder="确认密码">
+			<input class="form-control input-lg" type="password" id="password_comfirm" placeholder="请再次输入密码">
 			<button class="btn-primary btn" id='comfirm' name='comfirm'>登陆</button>
 			<!-- <span>已注册？回到登陆页</span> -->
 			<button class="btn-danger btn" id='cancel' name='cancel'>取消</button>
@@ -108,7 +108,7 @@ if($to == "" || $to == null){
 			$('#comfirm').click( function(){
 
 				if($('#password').val().length < 5 || $('#password').val().length >= 21){
-					alert("패스워드를 5자 이상 20자이내로 입력해주세요!");
+					alert("请输入5-20字以内字母或数字");
 				}else{
 					if($('#password').val() == $('#password_comfirm').val())
 					{
@@ -123,12 +123,12 @@ if($to == "" || $to == null){
 							data:{ selnum: _selnum, password:pw, countrySelectClass:_countrySelectClass, code:_code },
 							url: "/index.php/member/memberJoin/insertMember",
 							success: function (data){
-								alert("가입되었습니다.");
+								alert("恭喜您已成功注册。");
 								location.href = "<?=site_url('auth/index'); ?>";
 							}
 						});
 					}else{
-						alert('패스워드가 다릅니다!');
+						alert('您输入的密码有误');
 					}
 				}
 			});
@@ -142,8 +142,6 @@ if($to == "" || $to == null){
 			});
 
 		});
-
-
 	</script>
 
 </body>

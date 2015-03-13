@@ -206,7 +206,7 @@
 					else if(_selnum.search(format) == -1)
 					{
 						// 형식에 어긋남
-						alert("이메일 형식에 맞게 입력해 주세요");
+						alert("您填写的邮箱格式有误,请重新输入。");
 						$("#inputLarge").focus(); //해당 input으로 포커스 이동
 						return;
 					}else{
@@ -225,7 +225,7 @@
 								url:"/index.php/member/memberJoin/searchMem",
 								success: function (data){
 									if(data =="fail"){
-										alert("이미가입되어있습니다.");
+										alert("该邮箱已被注册。");
 									}else{
 										$.ajax({
 											type:"POST" ,
@@ -243,7 +243,7 @@
 								}
 							});
 						}else{
-							alert("전송된 메일을 확인하세요");
+							alert("请确认注册邮箱。");
 						}
 					}
 				});
