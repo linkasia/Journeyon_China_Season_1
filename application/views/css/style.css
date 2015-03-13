@@ -176,9 +176,9 @@
 	.form-group .sns_container:after{clear: both; display: block; *zoom: 1;}
 
 	.sns_container{width: 290px; height: 120px; margin: 0 auto; margin-top: 45px;}
-	.sns_container > div{width: 90px; height: 30px;float: left;}
+	.sns_container > div{width: 77px; height: 30px;float: left;}
 	.sns_container > .div1{border-top: 1px solid white; margin-top: 10px;}
-	.sns_container > .div2{width: 110px; text-align: center;}
+	.sns_container > .div2{width: 130px; text-align: center;}
 	.sns_container > .div2 > span{color: white; font-size: 1.1em;}
 	.sns_container > .div3{border-top: 1px solid white; margin-top: 10px;}
 	.sns_container .sns_icon{width: 100%; height: 100px;}
@@ -197,6 +197,25 @@
 	#member_container #myModal2 div.modal-dialog2{width: 800px;}
 	#member_container #myModal2 div.modal-dialog2 .modal-body2{overflow-y: scroll; height: 600px; padding: 20px;}
 	#member_container #myModal2 div.modal-dialog2 .modal-body2 #content{padding: 20px;}
+
+
+/* 공지사항 Admin Notice 페이지 추가 */
+	#titleBox{margin-top: 20px;}
+
+	#boardTable thead tr th.th1{	width: 10%}
+	#boardTable thead tr th.th2{	width: 10%}
+	#boardTable thead tr th.th3{	width: 45%}
+	#boardTable thead tr th.th4{	width: 10%}
+	#boardTable thead tr th.th5{	width: 15%}
+
+	#noticeboardWrap{
+		margin: 40px auto;
+		width: 980px;
+	}
+
+
+
+
 
 
 /* Contents 도시, 지도 선택 부분 main/contents.php */
@@ -2220,7 +2239,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	}
 
 
-
 	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd .uploadImg{width: 100%; height: 100%;}
 
 	#mypublicWrap #rightDiv #profileQuestion .name1{width: 100%; float: left; margin-top: 20px; }
@@ -3031,6 +3049,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 .pt20{padding-top: 20px;}
 .pb10{padding-bottom: 10px;}
 .pb20{padding-bottom: 20px;}
+.tac{text-align: center;}
 
 .textend{
 	text-overflow: ellipsis;

@@ -149,7 +149,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 						<?}?>
 
 						<?}else{?>
-							<li class="login" name="login" id="login">登陆&nbsp;&nbsp;|</li>
+							<li class="login" name="login" id="login">登录&nbsp;&nbsp;|</li>
 							<li class="signup" name="signup" id="signup">注册</li>
 						<?}?>
 					</ul>

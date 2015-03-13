@@ -84,18 +84,19 @@
 
 				<div class="input_container">
 					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="您的邮箱">
-					<span id="e-mail2"><font color='#fff'>马上注册</font></span>
-					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="密码" onKeypress="userKeyLogin()">
-					<span id="passwordLose"><font color='#fff'>忘记密码</font></span>
+					<span id="e-mail2"><font color='#fff'>还没有注册？立即注册>></font></span>
+					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="您的密码
+" onKeypress="userKeyLogin()">
+					<span id="passwordLose"><font color='#fff'>忘记密码？</font></span>
 					<!--button class="btn-primary btn" id='login' name='login'>登陆</button-->
-					<button class="btn-primary btn" id='login' name='login'  onclick="userLogin()">登陆</button>
+					<button class="btn-primary btn" id='login' name='login'  onclick="userLogin()">登录</button>
 					<!-- <span>已注册？回到登陆页</span> -->
 					<input type='button' class="btn-danger btn"  id='LoginCancel' name='LoginCancel' value='取消'>
 					<!--button class="btn-danger btn" id='LoginCancel' name='LoginCancel'>取消</button -->
 				</div>
 				<div class="sns_container">
 					<div class="div1"></div>
-					<div class="div2"><span>以其它账号登陆</span></div>
+					<div class="div2"><span>使用其他账号登录</span></div>
 					<div class="div3"></div>
 					<div class="sns_icon">
 						<img src="/application/views/images/main/sns01.png" alt="taobao">
