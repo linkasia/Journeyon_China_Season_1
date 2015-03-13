@@ -25,7 +25,7 @@
 		<div class="vcertiWrap3">
 			<p class="vtitle">个人身份验证资料</p>
 			<p class="ID_t">身份证</p>
-			
+
 
 			<form name="frmVCertification" id="frmVCertification" method='post' enctype="multipart/form-data" action="/index.php/mypage/myPage_M/vCertification">
 
@@ -76,12 +76,12 @@
 
 			<p class="vtitle">个人身份验证资料</p>
 			<p class="ID_t">身份证</p>
-			
+
 
 			<form name="frmVCertification" id="frmVCertification" method='post' enctype="multipart/form-data" action="/index.php/mypage/myPage_M/vCertification">
 
 				<div class="ID_imgdiv">
-					<img src='<?=$v->img_path?>' id='vGet' id='vGet' />
+					<img src='/application/views/userImage/0000000024/cat.jpg' id='vGet' id='vGet' />
 					<!--span class="glyphicon  glyphicon-plus" aria-hidden="true"></span-->
 					<span class="id_s">上传身份证</span>
 				</div>
@@ -90,7 +90,7 @@
 					<label for="vCertification" class="file-uploadLabel">Upload file</label>
 					<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false">
 				</div>
-				
+
 				<?if($v->certicifi_type_code != "0001"){?>
 					<input type='submit' id='vUpload' name='vUpload' value='인증 신청'>
 				<?}?>
@@ -98,6 +98,6 @@
 		</div>
 		<?}
 	}?>
-	
+
 </div>
 <!-- profileWrap1 END -->
