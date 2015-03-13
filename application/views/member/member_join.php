@@ -81,9 +81,9 @@
 							<ul id="ul_margin">
 								<li id='ul'><input type='button' class="btn-primary btn" id='send' name='send' value='免费注册'></li>
 							</ul>
-							<span id="repeated_join" name="repeated_join">《已注册？回到登陆页》</span>
+							<span id="repeated_join" name="repeated_join">已注册？回到登录页</span>
 							<button class="btn-danger btn" id='cancel' name='cancel'>取消</button>
-							<span id="clause" name="clause"><a href="#" data-toggle="modal" data-target="#myModal2">《隐私权政策》</a></span>
+							<span id="clause" name="clause"><a href="#" data-toggle="modal" data-target="#myModal2">隐私权政策</a></span>
 
 										<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 											<div class="modal-dialog2">
@@ -234,7 +234,9 @@
 											data:{selnum: _selnum,mode: null, ran: null},
 											url:"/index.php/auth/sendmail",
 											success: function (data){
-												alert("인증메일을 전송하였습니다!");
+
+
+												alert("邮件已发送到您的邮箱！");
 											}
 										});
 									}
@@ -263,4 +265,15 @@
 </script>
 
 	</body>
+	<!-- 
+	나중에 인증메일 보낼 때 바꿀 내용
+	邮件已发送到您的邮箱
+（가입이메일주소)
+	请点击邮箱中的验证链接设置密码
+	前往邮箱
+	------------没有收到邮件？------------
+	❶ 确认邮箱地址有没有写错
+	❷ 看看是否在垃圾邮箱里
+	❸ 客服邮箱或QQ：admin@journeyon.cn (2330290196)
+	 -->
 </html>
