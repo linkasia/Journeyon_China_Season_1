@@ -70,10 +70,14 @@
 
 		//언어
 		function langList(){
-			$sql ="SELECT *
-							FROM code_table
-							WHERE class='0015'
-							AND useYn='Y'";
+			$sql ="SELECT '0015' AS class,'' AS CODE,'--select--' AS code_nm,code_description, 'Y' AS useYn
+								FROM code_table
+								WHERE class = '0015'
+								LIMIT 1
+								UNION ALL
+								SELECT class,CODE,code_nm,code_description,useYn
+								FROM code_table
+								WHERE class='0015'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -81,10 +85,14 @@
 
 		//습특
 		function learnList(){
-			$sql ="SELECT *
-							FROM code_table
-							WHERE class='0014'
-							AND useYn='Y'";
+			$sql ="SELECT '0014' AS class,'' AS CODE,'--select--' AS code_nm,code_description, 'Y' AS useYn
+								FROM code_table
+								WHERE class = '0014'
+								LIMIT 1
+								UNION ALL
+								SELECT class,CODE,code_nm,code_description,useYn
+								FROM code_table
+								WHERE class='0014'";
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

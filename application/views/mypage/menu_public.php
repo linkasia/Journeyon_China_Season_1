@@ -151,32 +151,32 @@
 				<div class="rightSection">
 					<select class="form-control languageSelect" id="Language1" name="Language1">
 					<?foreach($langList as $k){?>
-						<option value="<?=$k->code?>" <?if($k->code == $v->lang1_code){?> selected <?}?> ><?=$k->code_nm?></option>
+						<option value="<?=$k->CODE?>" <?if($k->CODE == $v->lang1_code){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language2"  name="Language2">
 					<?foreach($learnList as $k){?>
-						<option value="<?=$k->code?>" <?if($k->code == $v->lang1_skill){?> selected <?}?> ><?=$k->code_nm?></option>
+						<option value="<?=$k->CODE?>" <?if($k->CODE == $v->lang1_skill){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>>
 					</select>
 					<select class="form-control languageSelect" id="Language3"  name="Language3">
 						<?foreach($langList as $k){?>
-						<option value="<?=$k->code?>" <?if($k->code == $v->lang2_code){?> selected <?}?> ><?=$k->code_nm?></option>
+						<option value="<?=$k->CODE?>" <?if($k->CODE == $v->lang2_code){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language4"  name="Language4">
 						<?foreach($learnList as $k){?>
-						<option value="<?=$k->code?>" <?if($k->code == $v->lang2_skill){?> selected <?}?> ><?=$k->code_nm?></option>
+						<option value="<?=$k->CODE?>" <?if($k->CODE == $v->lang2_skill){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>>
 					</select>
 					<select class="form-control languageSelect" id="Language5"  name="Language5">
 						<?foreach($langList as $k){?>
-						<option value="<?=$k->code?>" <?if($k->code == $v->lang3_code){?> selected <?}?> ><?=$k->code_nm?></option>
+						<option value="<?=$k->CODE?>" <?if($k->CODE == $v->lang3_code){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>
 					</select>
 					<select class="form-control languageSelect" id="Language6"  name="Language6">
 						<?foreach($learnList as $k){?>
-						<option value="<?=$k->code?>"  <?if($k->code == $v->lang3_skill){?> selected <?}?> ><?=$k->code_nm?></option>
+						<option value="<?=$k->CODE?>"  <?if($k->CODE == $v->lang3_skill){?> selected <?}?> ><?=$k->code_nm?></option>
 					<?}?>>
 					</select>
 				</div>
