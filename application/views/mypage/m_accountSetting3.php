@@ -9,8 +9,7 @@
 		<iframe class="company_intro" width="620" height="360" src="//www.youtube.com/embed/JbGvVyCJCSM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 
-	<? echo ":::::::::>>".count($certicification);
-	if(count($certicification) == 0){?>
+	<?if(count($certicification) == 0){?>
 		<div class="vcertiWrap2">
 			<p class="vtitle">个人身份验证流程</p>
 			<div class="circle bluegloss" style="margin-left: 50px;"><span>申请接受中</span></div>
