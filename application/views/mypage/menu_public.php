@@ -33,20 +33,29 @@
 			<button class="btn btn-warning" id="cancelSave">取消</button>
 			<div class="profilepicAdd" id="profilepicAdd">
 				<!-- <span class="glyphicon glyphicon-plus plus"></span> -->
-				<img src="<?=$v->face_img_path?>" alt="" class="uploadImg" id="profileImg">
+				 <img src="<?=$v->face_img_path?>" alt="" class="uploadImg" id="profileImg">
 			</div>
 
-			<div class="fileupload">
+			<div class="file-upload3">
+				<label for="inputImage" class="file-uploadLabel"><span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
+				<input type="file" class="filestyle btn btn-info" id="inputImage" name="inputImage" data-icon="false" onchange="imgChang();">
+
+				<!-- <input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="" placeholder="选择" onchange="imgChang();"> -->
+				<input type="hidden" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
+				<input type="hidden" class="form-control2 text" id="hiddenMode"  name="hiddenMode" value="">
+			</div>
+
+
+			<!-- <div class="fileupload">
 				<div class="leftSection">
 					<p class="rightAlign">已上传您的个人头像</p>
 				</div>
 				<div class="rightSection">
-
 						<input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="<?=$v->face_img_path?>" placeholder="选择" onchange="imgChang();">
 						<input type="hidden" class="form-control2 text" id="hiddenImagePath"  name="hiddenImagePath" value="<?=$v->face_img_path?>">
 						<input type="hidden" class="form-control2 text" id="hiddenMode"  name="hiddenMode" value="">
 				</div>
-			</div>
+			</div> -->
 
 			<div class="name1">
 				<div class="leftSection">

@@ -30,8 +30,9 @@
 			<form name="frmVCertification" id="frmVCertification" method='post' enctype="multipart/form-data" action="/index.php/mypage/myPage_M/vCertification">
 
 				<div class="ID_imgdiv">
-					<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span>
 					<span class="id_s">上传身份证</span>
+					<!-- <img src='/application/views/userImage/0000000024/cat.jpg' id='vGet' /> -->
+					<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span>
 				</div>
 				<div class="file-upload2">
 					<label for="vCertification" class="file-uploadLabel">Upload file<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
