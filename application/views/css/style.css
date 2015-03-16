@@ -129,13 +129,15 @@
 		  z-index: -1;
 	}
 
+
+
 	.form-group{width: 610px; height: 620px; background-color: rgba(0,0,0,0.55); border-radius: 5px; margin: 120px auto 0 auto; position: relative;}
 	.form-group .input_container{width: 280px; height: auto; padding-top: 130px; margin: 0 auto;}
 	.form-group .input_container:after{clear: both; display: block; *zoom: 1;}
 	.form-group .input_container > span {color: white; font-weight: normal; display: block; float: right;}
 	.input-lg{width: 280px;}
-	#e-mail2{cursor: pointer;}
-	#passwordLose{cursor: pointer;}
+	#e-mail2{cursor: pointer; color: #fff;}
+	#passwordLose{cursor: pointer; color: #fff;}
 	#password{margin-top: 30px;}
 	.form-group .btn-primary{width: 280px; height: 45px; margin-top: 10px; font-size: 1.125em;}
 	.form-group .btn-danger{width: 280px; height: 45px; margin-top: 20px; font-size: 1.125em;}
