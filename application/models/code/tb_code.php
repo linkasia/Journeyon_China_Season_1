@@ -109,6 +109,18 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		//공지사항
+		function headList()
+		{
+			$sql ="SELECT *
+							FROM code_table
+							WHERE class='0020'
+							AND useYn='Y'";
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 
 ?>

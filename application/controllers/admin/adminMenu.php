@@ -157,16 +157,63 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 	/*공고쓰기*/
 	function adminNotice_write(){
+		$data['headList'] = $this->tb_code->headList();
 		$this->load->view('include/header');
-		$this->load->view('admin/adminNotice_write');
+		$this->load->view('admin/adminNotice_write',$data);
 		$this->load->view('include/footer');
 	}
 
 	/*공고상세*/
 	function adminNotice_review(){
+		$num = $_REQUEST['num'];
+		$insert['insertNotice'] = $this->adminProcess->noticeHitUpdate($num);
+		$data['noticeDetail'] = $this->adminProcess->noticeDetail($num);
 		$this->load->view('include/header');
-		$this->load->view('admin/adminNotice_review');
+		$this->load->view('admin/adminNotice_review',$data);
 		$this->load->view('include/footer');
+	}
+
+	/*공고저장*/
+	function adminInsertNotice(){
+
+		$head = $_REQUEST['head'];
+		$subject = $_REQUEST['subject'];
+		$contents = $_REQUEST['contents'];
+		$num = $this->session->userdata['num'];
+
+		$insert['insertNotice'] = $this->adminProcess->noticeWrite($head, $subject,$contents, $num);
+		$data['noticeList'] = $this->adminProcess->noticeList();
+		$this->load->view('admin/adminNotice',$data);
+	}
+
+	/*공고삭제*/
+	function adminDeleteNotice(){
+		$num = $_REQUEST['num'];
+		$delete['delete'] = $this->adminProcess->noticeDelete($num);
+		$data['noticeList'] = $this->adminProcess->noticeList();
+		$this->load->view('admin/adminNotice',$data);
+	}
+
+	//공고 수정 페이지
+	function adminNoticeUpdateReview(){
+		$num = $_REQUEST['num'];
+		$data['headList'] = $this->tb_code->headList();
+		$data['noticeDetail'] = $this->adminProcess->noticeDetail($num);
+		$this->load->view('include/header');
+		$this->load->view('admin/adminNotice_update',$data);
+		$this->load->view('include/footer');
+	}
+
+	/*공고수정*/
+	function adminNoticeUpdate(){
+		$head = $_REQUEST['head'];
+		$subject = $_REQUEST['subject'];
+		$contents = $_REQUEST['contents'];
+		$num = $_REQUEST['num'];
+
+		$insert['insertNotice'] = $this->adminProcess->noticeUpdate($head, $subject,$contents,$num);
+		$data['noticeList'] = $this->adminProcess->noticeList();
+		$this->load->view('admin/adminNotice',$data);
 	}
 }
 ?>

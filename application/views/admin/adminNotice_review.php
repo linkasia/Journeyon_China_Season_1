@@ -6,21 +6,22 @@
 	</div>
 
 	<div id="writeForm">
+	<?foreach($noticeDetail as $v){?>
 		<table id="boardTable" cellspaCodeigniter="0" cellpadding="0" class="table success">
 	<!--  cellspaCodeigniter="0" cellpadding="0" -->
 		<thead>
 			<tr class="bgf9fafc">
-				<th class="th1">번호 : 305</th>
-				<th class="th2">[가이드]</th>
-				<th class="th3">편리한 항공편 이용 안내를 해 드립니다.</th>
-				<th class="th4">조회수 : 6000</th>
-				<th class="th5">날짜 : 2015-03-16</th>
+				<th class="th1">번호 : <?=$v->board_num?></th>
+				<th class="th2">[<?=$v->board_title?>]</th>
+				<th class="th3"><?=$v->board_subject?></th>
+				<th class="th4">조회수 : <?=$v->board_hit?></th>
+				<th class="th5">날짜 : <?=$v->board_reg_date?></th>
 			</tr>
 		</thead>
 		<tbody class="">
 			<tr>
 				<td colspan="5" id="viewContents">
-					<p>편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내편리한 항공편 이용 안내</p>
+					<p><?=$v->board_contents?></p>
 				</td>
 			</tr>
 		</tbody>
@@ -29,14 +30,44 @@
 				<td colspan="5">
 					<div class="btnGroup" id="btnDiv2">
 						<button class="btn btn-info" id="write_btn3" name="write_btn3">목록</button>
-						<button class="btn btn-warning" id="write_btn4" name="write_btn4">수정</button>
-						<button class="btn btn-danger" id="write_btn5" name="write_btn5">삭제</button>
+						<?if($this->session->userdata['email'] == "admin@linkasia.co.kr"){?>
+						<button class="btn btn-warning" id="write_btn4" name="write_btn4" onclick="updateNotice(<?=$v->board_num?>)">수정</button>
+						<button class="btn btn-danger" id="write_btn5" name="write_btn5" onclick="deleteNotice(<?=$v->board_num?>)">삭제</button>
+						<?}?>
 					</div>
 				</td>
 			</tr>
 		</tfoot>
 	</table>
+	<?}?>
 	</div>
 </div>
+
+<script type="text/javascript">
+	//삭제
+	function deleteNotice(key){
+		$.ajax({
+			type:"POST" ,
+			dataType:"text",
+			contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+			data:{ num:key },
+			url:"/index.php/admin/adminMenu/adminDeleteNotice",
+			success: function (data){
+				document.getElementById('noticeboardWrap').innerHTML =data;
+			}
+		});
+	}
+	//수정
+	function updateNotice(key){
+		location.href = "/index.php/admin/adminMenu/adminNoticeUpdateReview?num="+key;
+	}
+
+	$(function(){
+		//목록
+		$('#write_btn3').click( function(){
+			location.href = "/index.php/admin/adminMenu/adminNotice";
+		});
+	});
+</script>
 
 

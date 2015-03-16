@@ -154,7 +154,7 @@
 			return $result;
 		}
 
-		function noticeWrite()
+		function noticeWrite($head, $subject,$contents, $num)
 		{
 			$sql ="INSERT INTO notice
 													(board_num,
@@ -173,10 +173,52 @@
 													'0',
 													SYSDATE()
 													)";
+			$query = $this->db->query($sql);
+		}
+
+		function noticeDetail($num)
+		{
+			$sql ="SELECT a.board_num,
+											a.board_head,
+											b.code_nm AS board_title,
+											a.board_subject,
+											a.board_contents,
+											a.board_id,
+											a.board_hit,
+											DATE_FORMAT(a.board_reg_date,'%Y-%m-%d') AS board_reg_date
+							FROM notice a
+							LEFT JOIN code_table b ON a.board_head = b.code AND class='0020'
+							WHERE a.board_num='".$num."'";
 			//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
+		}
+
+		function noticeHitUpdate($num)
+		{
+			$sql ="UPDATE notice a,notice b
+							SET a.board_hit = b.board_hit + 1
+							WHERE a.board_num = '".$num."'
+							AND b.board_num = '".$num."'";
+			$query = $this->db->query($sql);
+		}
+
+		function noticeDelete($num)
+		{
+			$sql ="DELETE FROM notice
+							WHERE board_num = '".$num."'";
+			$query = $this->db->query($sql);
+		}
+
+		function noticeUpdate($head, $subject,$contents,$num)
+		{
+			$sql ="UPDATE notice
+							SET board_head = '".$head."',
+									board_subject = '".$subject."',
+									board_contents = '".$contents."'
+							WHERE board_num = '".$num."'";
+			$query = $this->db->query($sql);
 		}
 	}
 ?>

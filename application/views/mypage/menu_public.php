@@ -280,10 +280,10 @@ $(function(){
 					alert("个人资料已变更。"); // 수정되었습니다.
 				}else{
 					if(data != ""){
+						var faceImg = "<?=$this->session->userdata['face_img_path']?>";
 						$("#profileImg").attr("src",data);
 						$("#leftProfileImg").attr("src",data);
 						$("#profileMenu").attr("src",data);
-
 					}
 					document.getElementById('Name_en_cn').innerHTML=$("#inputName").val();
 					alert("个人资料已变更。"); // 수정되었습니다.
