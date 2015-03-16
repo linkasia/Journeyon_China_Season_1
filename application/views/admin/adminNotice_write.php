@@ -9,14 +9,14 @@
 		<form class="form-horizontal" method="post" action="" id="write_action">
 			<fieldset>
 				<div class="controls1 mb20">
-					<div id="leftDiv">
+					<div id="leftDiv2">
 						<select class="form-control" id="inputHeader" name="inputHeader">
 							<option value="">[가이드]</option>
 							<option value="">[가이드]</option>
 							<option value="">[가이드]</option>
 						</select>
 					</div>
-					<div id="rightDiv">
+					<div id="rightDiv2">
 						<input type="text" class="form-control input-xlarge" id="input01" name="subject" placeholder="게시물 제목을 써주세요.">
 					</div>
 				</div>
