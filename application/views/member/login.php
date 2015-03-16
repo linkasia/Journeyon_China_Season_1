@@ -84,7 +84,7 @@
 
 				<div class="input_container">
 					<input class="form-control input-lg loginBox" type="text" id="inputLarge"  name="inputLarge" placeholder="您的邮箱">
-					<span id="e-mail2">还没有注册？立即注册>></span>
+					<span id="e-mail2">还没有注册？立即注册</span>
 					<input class="form-control input-lg" type="password" id="password" name="password" placeholder="您的密码
 " onKeypress="userKeyLogin()">
 					<span id="passwordLose">忘记密码？</span>
