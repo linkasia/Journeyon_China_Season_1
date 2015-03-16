@@ -27,7 +27,7 @@
 		<tfoot>
 			<tr>
 				<td colspan="5">
-					<div class="btnGroup">
+					<div class="btnGroup" id="btnDiv2">
 						<button class="btn btn-info" id="write_btn3" name="write_btn3">목록</button>
 						<button class="btn btn-warning" id="write_btn4" name="write_btn4">수정</button>
 						<button class="btn btn-danger" id="write_btn5" name="write_btn5">삭제</button>

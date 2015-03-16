@@ -222,6 +222,9 @@
 
 	#btnDiv button{padding-left: 30px; padding-right: 30px; margin-right: 10px;}
 
+	#btnDiv2{padding-left: 657px; margin-top: 20px;}
+	#btnDiv2 button{padding-left: 30px; padding-right: 30px; margin-right: 5px;}
+
 	#leftDiv2{width: 140px; float: left; margin-right: 20px;}
 	#rightDiv2{width: 820px; float: left;}
 
