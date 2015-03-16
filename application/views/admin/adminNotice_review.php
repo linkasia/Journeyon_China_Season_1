@@ -9,7 +9,7 @@
 	<?foreach($noticeDetail as $v){?>
 		<table id="boardTable" cellspaCodeigniter="0" cellpadding="0" class="table success">
 	<!--  cellspaCodeigniter="0" cellpadding="0" -->
-		<thead>
+		<thead id="thead">
 			<tr class="bgf9fafc">
 				<th class="th1">번호 : <?=$v->board_num?></th>
 				<th class="th2">[<?=$v->board_title?>]</th>
@@ -18,16 +18,12 @@
 				<th class="th5">날짜 : <?=$v->board_reg_date?></th>
 			</tr>
 		</thead>
-		<tbody class="">
-			<tr>
-				<td colspan="5" id="viewContents">
-					<p><?=$v->board_contents?></p>
-				</td>
-			</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td colspan="5">
+		</table>
+			<div id="tableinDiv">
+				<?=$v->board_contents?>23194872908239482390875203984750923875902837450923847509238745092384750923874509w384750923 8745293087529308475239084592830
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+			</div>
+
 					<div class="btnGroup" id="btnDiv2">
 						<button class="btn btn-info" id="write_btn3" name="write_btn3">목록</button>
 						<?if($this->session->userdata['email'] == "admin@linkasia.co.kr"){?>
@@ -35,10 +31,7 @@
 						<button class="btn btn-danger" id="write_btn5" name="write_btn5" onclick="deleteNotice(<?=$v->board_num?>)">삭제</button>
 						<?}?>
 					</div>
-				</td>
-			</tr>
-		</tfoot>
-	</table>
+
 	<?}?>
 	</div>
 </div>

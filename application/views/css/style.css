@@ -202,13 +202,28 @@
 
 
 /* 공지사항 Admin Notice 페이지 추가 */
+
+	#contentsDiv{width: 900px; height: 800px; display: block;}
+	#viewContents{width: 900px; height: 800px; }
+	#tbodyTd{width: 980px; height: 100px; word-wrap: break-word;}
+	#tbodyTr{width: 980px;}
+
+	#writeForm{width: 980px;}
+
+
 	#titleBox{margin-top: 20px;}
 
-	#boardTable thead tr th.th1{	width: 10%}
-	#boardTable thead tr th.th2{	width: 10%}
-	#boardTable thead tr th.th3{	width: 45%}
-	#boardTable thead tr th.th4{	width: 10%}
-	#boardTable thead tr th.th5{	width: 15%}
+	#boardTable thead tr th.th1{	width: 15%;}
+	#boardTable thead tr th.th2{	width: 10%;}
+	#boardTable thead tr th.th3{	width: 45%;}
+	#boardTable thead tr th.th4{	width: 15%;}
+	#boardTable thead tr th.th5{	width: 15%;}
+
+	 #boardTable{width: 980px;}
+	 #thead{width: 980px;}
+	#boardTable tbody{width: 980px; height: 500px;}
+	#boardTable tr{width: 980px;}
+	
 
 	#noticeboardWrap{
 		margin: 40px auto;
@@ -220,13 +235,16 @@
 		margin-top: 20px;
 	}
 
+	#tableinDiv{width: 980px; float: left; text-overflow: ellipsis; overflow: hidden; padding: 10px;}
+
 	#btnDiv button{padding-left: 30px; padding-right: 30px; margin-right: 10px;}
 
 	#btnDiv2{padding-left: 657px; margin-top: 20px;}
-	#btnDiv2 button{padding-left: 30px; padding-right: 30px; margin-right: 5px;}
+	#btnDiv2 button{padding-left: 30px; padding-right: 30px; float: right; margin-top: 10px;}
 
 	#leftDiv2{width: 140px; float: left; margin-right: 20px;}
 	#rightDiv2{width: 820px; float: left;}
+
 
 
 	.controls1{margin-bottom: 30px; float: left;}
@@ -587,6 +605,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	.flr{float: right;}
 
 	.contents{width: 100%; height: 100%; z-index: 1000;}
+
+	
 	
 	/* list 상품 스타일링 */
 	.contents .contents_list1{width: 100%; height: 180px; border: solid #f0f1f5 1px; margin-top: 15px; position: relative; cursor: pointer;}
