@@ -215,7 +215,18 @@
 		width: 980px;
 	}
 
+	#btnDiv{
+		padding-left: 770px;
+		margin-top: 20px;
+	}
 
+	#btnDiv button{padding-left: 30px; padding-right: 30px; margin-right: 10px;}
+
+	#leftDiv{width: 140px; float: left; margin-right: 20px;}
+	#rightDiv{width: 820px; float: left;}
+
+
+	.controls1{margin-bottom: 30px; float: left;}
 
 
 

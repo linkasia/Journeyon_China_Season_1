@@ -38,6 +38,6 @@
 
 	</table>
 	<!-- 테이블 끝 -->
-	<a href ="/index.php/admin/adminMenu/adminNotice_write" button class="btn btn-primary mb80" style="float: right; width: 130px;">글 쓰기</a>
+	<a href ="/index.php/admin/adminMenu/adminNotice_write" button class="btn btn-info mb80" style="float: right; width: 130px;">글 쓰기</a>
 
 </div>
