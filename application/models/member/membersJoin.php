@@ -51,7 +51,7 @@
 						'',
 						'',
 						'',
-						'',
+						'/application/images/mypage/p01.png',
 						'',
 						'".$countryClass."',
 						'".$code."',
