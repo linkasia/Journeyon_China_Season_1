@@ -135,6 +135,49 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		function noticeList()
+		{
+			$sql ="SELECT a.board_num,
+											a.board_head,
+											b.code_nm AS board_title,
+											a.board_subject,
+											a.board_contents,
+											a.board_id,
+											a.board_hit,
+											DATE_FORMAT(a.board_reg_date,'%Y-%m-%d') AS board_reg_date
+							FROM notice a
+							LEFT JOIN code_table b ON a.board_head = b.code AND class='0020'";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function noticeWrite()
+		{
+			$sql ="INSERT INTO notice
+													(board_num,
+													board_head,
+													board_subject,
+													board_contents,
+													board_id,
+													board_hit,
+													board_reg_date
+													) VALUES (
+													0,
+													'".$head."',
+													'".$subject."',
+													'".$contents."',
+													'".$num."',
+													'0',
+													SYSDATE()
+													)";
+			//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 ?>
 
