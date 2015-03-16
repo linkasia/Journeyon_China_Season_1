@@ -147,7 +147,8 @@
 											a.board_hit,
 											DATE_FORMAT(a.board_reg_date,'%Y-%m-%d') AS board_reg_date
 							FROM notice a
-							LEFT JOIN code_table b ON a.board_head = b.code AND class='0020'";
+							LEFT JOIN code_table b ON a.board_head = b.code AND class='0020'
+							ORDER BY a.board_num DESC";
 			//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
