@@ -25,7 +25,13 @@
 				</div>
 
 				<div id="btnDiv">
+				<?
+					if(@$this->session->userdata['logged_in'] == TRUE)
+					{
+						if($this->session->userdata['email'] == "admin@linkasia.co.kr"){?>
 					<button class="btn btn-info" id="write_btn1" name="write_btn1">저장</button>
+						<?}
+					}?>
 					<button class="btn btn-danger" id="write_btn2" name="write_btn2">취소</button>
 				</div>
 			</fieldset>

@@ -172,7 +172,7 @@
 				}else{
 					var _email = $('#inputLarge').val();
 					var _password = $('#password').val();
-					saveLogin("");
+					saveLogin("com_id");
 
 					$.ajax({
 						type:"POST" ,

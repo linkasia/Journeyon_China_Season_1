@@ -26,10 +26,14 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 
 					<div class="btnGroup" id="btnDiv2">
 						<button class="btn btn-info" id="write_btn3" name="write_btn3">목록</button>
-						<?if($this->session->userdata['email'] == "admin@linkasia.co.kr"){?>
+						<?
+						if(@$this->session->userdata['logged_in'] == TRUE)
+						{
+							if($this->session->userdata['email'] == "admin@linkasia.co.kr"){?>
 						<button class="btn btn-warning" id="write_btn4" name="write_btn4" onclick="updateNotice(<?=$v->board_num?>)">수정</button>
 						<button class="btn btn-danger" id="write_btn5" name="write_btn5" onclick="deleteNotice(<?=$v->board_num?>)">삭제</button>
-						<?}?>
+						<?}
+						}?>
 					</div>
 
 	<?}?>

@@ -190,11 +190,11 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 			function orderBook(){
 				location.href = "/index.php/mypage/myPage_M/myguide?mode=3";
 			}
-				
+
 			function goChat(){
-				location.href = "<?=site_url('auth/chat_List'); ?>";
+				location.href = "/index.php/auth/chat_List";
 			}
-			
+
 			$(function(){
 				/*
 				$('#chatList').click( function(){
@@ -202,11 +202,10 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 				});
 				*/
 				$('#logo').click( function(){
-					location.href ="http://www.linkasia.co.kr/";
+					location.href ="/index.php";
 				});
 
 				$('#become_host').click( function(){
-
 					location.href = "/index.php/mypage/myPage_M/myguide?mode=1";
 				});
 
@@ -215,7 +214,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 				});
 
 				$('#login').click( function(){
-					location.href = "<?=site_url('auth/Login_view'); ?>";
+					location.href = "/index.php/auth/Login_view";
 				});
 
 				$('#signup').click( function(){
