@@ -307,6 +307,14 @@
 			$query = $this->db->query($sql);
 		}
 
+		function updateUserCerticification($user_num)
+		{
+			$sql ="UPDATE USER
+							SET v_get_code = '0005'
+							WHERE user_num = '".$user_num."'";
+			$query = $this->db->query($sql);
+		}
+
 		function myCerticificationState($num)
 		{
 			$sql ="SELECT *

@@ -243,7 +243,8 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 				die("file save fail");
 			}
 			//print_r($filePath);
-			$update['userUpdate'] = $this->myModify->insertCerticification($user_num,$filePath);
+			$update['userUpdate'] = $this->myModify->updateUserCerticification($user_num);
+			$insert['certicificationInsert'] = $this->myModify->insertCerticification($user_num,$filePath);
 			$data['certicification'] =  $this->myModify->myCerticificationState($user_num);
 			$data['mode'] = "2";
 			$this->load->view('include/header');
