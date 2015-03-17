@@ -1,12 +1,14 @@
 <div id="guideWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">微导主页</span>
-		<span class="list-group-item" id='guideHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;关于微导</span>
-		<span class="list-group-item" id='guideR'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;微导认证申请</span>
-		<span class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;微旅程管理&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='salesAdmin'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;订单交易管理&nbsp;&nbsp;</span>
+		<span class="list-group-item active2">微导主页</span>
+		<span role="presentation" class="list-group-item" id='guideHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;<a href="#guideHome" data-toggle="tab">关于微导</a></span>
+		<span role="presentation" class="list-group-item" id='guideR'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;<a href="#guideR" data-toggle="tab">微导认证申请</a></span>
+		<span role="presentation" class="list-group-item" id='itemAdmin'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;<a href="#itemAdmin" data-toggle="tab">微旅程管理</a>&nbsp;&nbsp;</span>
+		<span role="presentation" class="list-group-item" id='salesAdmin'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;<a href="#salesAdmin" data-toggle="tab">订单交易管理&nbsp;&nbsp;</a></span>
 		<!--span class="list-group-item" id='cancelAdmin'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;订单取消管理&nbsp;&nbsp;</span-->
 	</aside><!-- leftmenuWrap end -->
+
+
 
 	<div id="rightWrap">
 		<?

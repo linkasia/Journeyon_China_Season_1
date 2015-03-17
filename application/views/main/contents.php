@@ -296,8 +296,34 @@
 			</div>
 			<div class="news_wrap">
 				<div class="title">卓尼在线 新闻</div>
-				<div onclick="notice()">
-					<img src="/application/views/images/main/sns03.jpg" alt="" />
+				<div id="noticeTablediv"onclick="notice()">
+					<!-- <img src="/application/views/images/main/sns03.jpg" alt="" /> -->
+					<table id="noticeTable" class="table">
+						<thead class="tac">
+							<tr class="bgf9fafc tac">
+								<th class="nth1 tac">말머리</th>
+								<th class="nth2 tac">제목</th>
+								<th class="nth3 tac">날짜</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ntd1">[가이드]</td>
+								<td class="ntd2">어디 놀러갔다왔어요어디 놀러갔다왔어요어디 놀러 갔다 왔어요</td>
+								<td class="ntd3">2015-03-17</td>
+							</tr>
+							<tr>
+								<td class="ntd1">[가이드]</td>
+								<td class="ntd2">어디 놀러갔다왔어요어디 놀러갔다왔어요어디 놀러 갔다 왔어요</td>
+								<td class="ntd3">2015-03-17</td>
+							</tr>
+							<tr>
+								<td class="ntd1">[가이드]</td>
+								<td class="ntd2">어디 놀러갔다왔어요어디 놀러갔다왔어요어디 놀러 갔다 왔어요</td>
+								<td class="ntd3">2015-03-17</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</section>

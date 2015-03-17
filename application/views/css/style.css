@@ -200,12 +200,29 @@
 	#member_container #myModal2 div.modal-dialog2 .modal-body2{overflow-y: scroll; height: 600px; padding: 20px;}
 	#member_container #myModal2 div.modal-dialog2 .modal-body2 #content{padding: 20px;}
 
+	#noticeTablediv{width: 100%; height: 365px;}
+	#noticeTable{width: 100%; font-size: 0.9em; table-layout:fixed;}
+
+	#noticeTable .nth1{width: 23%;}
+	#noticeTable .nth2{width: 47%;}
+	#noticeTable .nth3{width: 30%;}
+
+	#noticeTable td{
+		word-break:break-all;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		}
+	#noticeTable .ntd1{}
+	#noticeTable .ntd2{height: 20px; cursor: pointer;}
+	#noticeTable .ntd3{}
+
 
 /* 공지사항 Admin Notice 페이지 추가 */
 
 	#contentsDiv{width: 900px; height: 800px; display: block;}
 	#viewContents{width: 900px; height: 800px; }
-	#tbodyTd{width: 980px; height: 100px; word-wrap: break-word;}
+	#tbodyTd{width: 980px;}
 	#tbodyTr{width: 980px;}
 
 	#writeForm{width: 980px;}
@@ -219,7 +236,12 @@
 	#boardTable thead tr th.th4{	width: 15%;}
 	#boardTable thead tr th.th5{	width: 15%;}
 
-	 #boardTable{width: 980px;}
+	 #boardTable{width: 980px; table-layout:fixed;}
+	 #boardTable td{
+		word-break:break-all;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;}
 	 #thead{width: 980px;}
 	#boardTable tbody{width: 980px; height: 500px;}
 	#boardTable tr{width: 980px;}
