@@ -92,7 +92,7 @@
 					<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false">
 				</div>
 
-				<?if($v->certicifi_type_code != "0001"){?>
+				<?if($v->certicifi_type_code != "0001" && $v->certicifi_type_code != "0005") {?>
 					<input type='submit' id='vUpload' name='vUpload' value='인증 신청'>
 				<?}?>
 			</form>

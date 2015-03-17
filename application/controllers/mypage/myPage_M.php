@@ -212,9 +212,12 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 				@mkdir($save_dir, 0777);
 				chmod($save_dir, 0777);
 			}
+			$fileDes = strripos($_FILES["vCertification"]["name"],'.');
+			$fileName= substr($_FILES["vCertification"]["name"],$fileDes,4);
 
-			$dest=$save_dir.$_FILES["vCertification"]["name"];
-			$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".$_FILES["vCertification"]["name"];
+			$dest=$save_dir.time().$fileName;//$_FILES["vCertification"]["name"].time();
+			//$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".$_FILES["vCertification"]["name"];
+			$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".time().$fileName;;
 			if(!move_uploaded_file($_FILES["vCertification"]["tmp_name"],$dest)){
 				die("file save fail");
 			}
