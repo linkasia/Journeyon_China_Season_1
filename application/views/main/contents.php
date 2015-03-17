@@ -284,14 +284,35 @@
 		<section id="section5">
 			<div class="microstory_wrap">
 				<div class="title">微旅行故事</div>
-				<div>
-					<img src="/application/views/images/main/sns01.jpg" alt="" />
+				<div class="microstoryDiv"><a href="http://weibo.com/3599379572/profile?topnav=1&wvr=5" target="_blank">
+					<!-- <img src="/application/views/images/main/sns01.jpg" alt="" /> -->
+					<p class="microstoryP"><span class="blit"></span>16 august 2015</p>
+					<p>更新了个人头像</p>
+					<p class="microstoryP"><span class="blit"></span>Post a new photo</p>
+					<p>BabyG 上传了新游记</p>
+					<p class="microstoryP"><span class="blit"></span>Post a new photo</p>
+					<p>BabyG 上传了新游记</p>
+					<div class="microstoryImg">
+						<img class="" src="/application/views/images/main/02.png" alt="">
+					</div>
+					<p class="microstoryP"><span class="blit"></span>Post a new photo</p>
+					<p>BabyG 上传了新游记</p></a>
 				</div>
 			</div>
 			<div class="travelstory_wrap">
 				<div class="title">游记</div>
 				<div>
 					<img src="/application/views/images/main/sns02.jpg" alt="" />
+				</div>
+				<div class="travelstoryDiv">
+					<div>
+						<p>港式游香港</p>
+						<p>69 想去  13 留言</p>
+					</div>
+					<div>
+						<button class="btn btn-info">想去</button>
+						<button class="btn btn-warning">留言</button>
+					</div>
 				</div>
 			</div>
 			<div class="news_wrap">

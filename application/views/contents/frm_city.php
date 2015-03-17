@@ -73,6 +73,9 @@
 				</div> <!-- contents_list1 닫음  -->
 				<?}
 				}else{?>
-					<p><b>최초의 가이드가 되어주세요.!</b></p>
+					<div class="firstGuideDiv">	
+						<div class="firstGuideband"><p class="firstGuideP tac">최초의 가이드가 되어주세요</p></div>
+						<img src="/application/views/images/contents/guide.jpg" alt="">
+					</div>
 				<?}?>
 			</div> <!-- contents 닫음 -->
