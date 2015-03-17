@@ -284,7 +284,7 @@
 		<section id="section5">
 			<div class="microstory_wrap">
 				<div class="title">微旅行故事</div>
-				<div class="microstoryDiv"><a href="http://weibo.com/3599379572/profile?topnav=1&wvr=5" target="_blank">
+				<div class="microstoryDiv"><a href="http://weibo.com/3599379572/" target="_blank">
 					<!-- <img src="/application/views/images/main/sns01.jpg" alt="" /> -->
 					<p class="microstoryP"><span class="blit"></span>16 august 2015</p>
 					<p>更新了个人头像</p>
