@@ -151,6 +151,27 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	function profileModify(){
 		$hiddenPath = $_REQUEST['hiddenImagePath'];
 		$hiddenMode = $_REQUEST['hiddenMode'];
+
+		if(strlen($_REQUEST['inputJobDetail']) <= 15){
+			print_r("inputJobDetail");
+			return;
+		}
+
+		if(strlen($_REQUEST['inputInteresting']) <= 15){
+			print_r("inputInteresting");
+			return;
+		}
+
+		if(strripos($_REQUEST['publicWeixin'],"@") == null){
+			print_r("publicWeixin");
+			return;
+		}else if(strripos($_REQUEST['publicWeixin'],".") == null){
+			print_r("publicWeixin");
+			return;
+		}
+
+
+
 		$newdata = array(
 			'user_num' =>$this->session->userdata['num'],
 			'inputName' =>$_REQUEST['inputName'],

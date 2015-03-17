@@ -202,7 +202,7 @@
 			</div>
 			<div class="QQ14">
 				<div class="leftSection"><p class="rightAlign">QQ 账户</p></div>
-				<div class="rightSection"><input type="text" class="form-control2 text" id="publicQQ" name="publicQQ" value="<?=$v->messenger_qq?>"></div>
+				<div class="rightSection"><input type="text" class="form-control2 text" id="publicQQ" name="publicQQ" value="<?=$v->messenger_qq?>" onkeydown="return onlyNumber(event)">​ </div>
 			</div>
 			<div class="Weixin15">
 				<div class="leftSection"><p class="rightAlign">微信账户</p></div>
@@ -216,7 +216,7 @@
 </div><!-- mypublicWrap -->
 <?}?>
 </form>
-
+<div id='test'></div>
 <script type="text/javascript">
 
 function imgChang(){
@@ -275,12 +275,14 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
-
-				if(data.indexOf("Error") > -1){
-					alert("个人资料已变更。"); // 수정되었습니다.
+				if(data == "inputJobDetail"){
+					alert("添加工作经验和学历 최소 15자 이상입력해주세요");
+				}else if(data == "inputInteresting") {
+					alert("兴趣和喜好 최소 15자 이상입력해주세요");
+				}else if( data == "publicWeixin" ){
+					alert("微信账户 메일 형식이 아닙니다.");
 				}else{
 					if(data != ""){
-						var faceImg = "<?=$this->session->userdata['face_img_path']?>";
 						$("#profileImg").attr("src",data);
 						$("#leftProfileImg").attr("src",data);
 						$("#profileMenu").attr("src",data);
@@ -293,6 +295,17 @@ $(function(){
 	});
 
 });
+
+function onlyNumber(event) {
+	var key = window.event ? event.keyCode : event.which;
+	if ((event.shiftKey == false) && ((key  > 47 && key  < 58) || (key  > 95 && key  < 106)
+	|| key  == 35 || key  == 36 || key  == 37 || key  == 39  // 방향키 좌우,home,end
+	|| key  == 8  || key  == 46 ) ) {
+		return true;
+	}else {
+		return false;
+	}
+}
 
 </script>
 
