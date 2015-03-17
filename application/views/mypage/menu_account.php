@@ -1,9 +1,9 @@
 <div id="accountWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">编辑及设定&nbsp;&nbsp;<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></span>
-		<span class="list-group-item" id='Account'><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;账户变更</span>
-		<span class="list-group-item" id='Payment'><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>&nbsp;&nbsp;订单及交易记录&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='V_Certicification'><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>&nbsp;&nbsp;V认证设定&nbsp;&nbsp;</span>
+		<span class="list-group-item active2">编辑及设定&nbsp;&nbsp;<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></span>
+		<span role="presentation" class="list-group-item active" id='Account'><a href="#Account" class="Account" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;账户变更</span></a>
+		<span role="presentation" class="list-group-item" id='Payment'><a href="#Payment" class="Payment" data-toggle="tab"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>&nbsp;&nbsp;订单及交易记录&nbsp;&nbsp;</span></a>
+		<span role="presentation" class="list-group-item" id='V_Certicification'><a href="#V_Certicification" class="V_Certicification" data-toggle="tab"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>&nbsp;&nbsp;V认证设定&nbsp;&nbsp;</span></a>
 	</aside><!-- leftmenuWrap end -->
 
 	<div id="rightWrap">
@@ -52,7 +52,7 @@
 */
 	$(function(){
 
-			$('#Account').click( function(){
+			$('.Account').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -66,7 +66,7 @@
 				});
 			});
 
-			$('#Payment').click( function(){
+			$('.Payment').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -80,7 +80,7 @@
 				});
 			});
 
-			$('#V_Certicification').click( function(){
+			$('.V_Certicification').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",

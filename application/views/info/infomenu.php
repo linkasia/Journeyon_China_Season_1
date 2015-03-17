@@ -1,10 +1,10 @@
 <div id="companyInfoWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">Information</span></span>
-		<span class="list-group-item" id='infoMicrotravel'><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>&nbsp;&nbsp;微旅行的意义</span>
-		<span class="list-group-item" id='infoHowhost'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;微导是什么？</span>
-		<span class="list-group-item" id='infoHowTraveler'><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;给旅行者的信息</span>
-		<span class="list-group-item" id='infoFaq'><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;&nbsp;疑问解答</span>
+		<span class="list-group-item active2">Information</span></span>
+		<span class="list-group-item" id='infoMicrotravel'><a href="#infoMicrotravel" class="infoMicrotravel" data-toggle="tab"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>&nbsp;&nbsp;微旅行的意义</span></a>
+		<span class="list-group-item" id='infoHowhost'><a href="#infoHowhost" class="infoHowhost" data-toggle="tab"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;微导是什么？</span></a>
+		<span class="list-group-item" id='infoHowTraveler'><a href="#infoHowTraveler" class="infoHowTraveler" data-toggle="tab"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;&nbsp;给旅行者的信息</span></a>
+		<span class="list-group-item" id='infoFaq'><a href="#infoFaq" class="infoFaq" data-toggle="tab"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;&nbsp;疑问解答</span></a>
 	</aside><!-- leftmenuWrap end -->
 
 
@@ -30,7 +30,7 @@
 <script type="text/javascript">
 	$(function(){
 
-			$('#infoMicrotravel').click( function(){
+			$('.infoMicrotravel').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -44,7 +44,7 @@
 				});
 			});
 
-			$('#infoHowhost').click( function(){
+			$('.infoHowhost').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -58,7 +58,7 @@
 				});
 			});
 
-			$('#infoHowTraveler').click( function(){
+			$('.infoHowTraveler').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -72,7 +72,7 @@
 				});
 			});
 
-			$('#infoPrivacy').click( function(){
+			$('.infoPrivacy').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -86,7 +86,7 @@
 				});
 			});
 
-			$('#infoFaq').click( function(){
+			$('.infoFaq').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",

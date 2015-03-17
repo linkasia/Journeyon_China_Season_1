@@ -1,11 +1,11 @@
 <div id="guestWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">旅行者主页</span></span>
-		<span class="list-group-item" id='guestHome'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;使用方法</span>
-		<span class="list-group-item" id='guestBucket'><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;我的收藏</span>
-		<span class="list-group-item" id='guestReservation'><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;我的预约&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='guestBuy'><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;我的记录&nbsp;&nbsp;</span>
-		<span class="list-group-item" id='guestCancel'><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;取消行程 &nbsp;&nbsp;</span>
+		<span class="list-group-item active2">旅行者主页</span></span>
+		<span role="presentation" class="list-group-item active" id='guestHome'><a href="#guestHome" data-toggle="tab" class="guestHome"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;使用方法</span></a>
+		<span role="presentation" class="list-group-item" id='guestBucket'><a href="#guestBucket" data-toggle="tab" class="guestBucket"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;我的收藏</span></a>
+		<span role="presentation" class="list-group-item" id='guestReservation'><a href="#guestReservation" data-toggle="tab" class="guestReservation"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;我的预约&nbsp;&nbsp;</span></a>
+		<span role="presentation" class="list-group-item" id='guestBuy'><a href="#guestBuy" data-toggle="tab" class="guestBuy"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;我的记录&nbsp;&nbsp;</span></a>
+		<span role="presentation" class="list-group-item" id='guestCancel'><a href="#guestCancel" data-toggle="tab" class="guestCancel"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;取消行程 &nbsp;&nbsp;</span></a>
 	</aside><!-- leftmenuWrap end -->
 
 
@@ -101,7 +101,7 @@
 
 	$(function(){
 
-		$('#guestHome').click( function(){
+		$('.guestHome').click( function(){
 			$.ajax({
 				type:"POST" ,
 				dataType:"text",
@@ -115,7 +115,7 @@
 			});
 		});
 
-		$('#guestBucket').click( function(){
+		$('.guestBucket').click( function(){
 			$.ajax({
 				type:"POST" ,
 				dataType:"text",
@@ -129,7 +129,7 @@
 			});
 		});
 
-		$('#guestReservation').click( function(){
+		$('.guestReservation').click( function(){
 			$.ajax({
 				type:"POST" ,
 				dataType:"text",
@@ -143,7 +143,7 @@
 			});
 		});
 
-		$('#guestBuy').click( function(){
+		$('.guestBuy').click( function(){
 			$.ajax({
 				type:"POST" ,
 				dataType:"text",
@@ -157,7 +157,7 @@
 			});
 		});
 
-		$('#guestCancel').click( function(){
+		$('.guestCancel').click( function(){
 			$.ajax({
 				type:"POST" ,
 				dataType:"text",

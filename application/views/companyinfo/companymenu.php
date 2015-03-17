@@ -1,12 +1,12 @@
 <div id="companyInfoWrap">
 	<aside id="leftmenuWrap">
-		<span class="list-group-item active">Company Menu</span></span>
-		<span class="list-group-item" id='companyAbout'><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;关于</span>
+		<span class="list-group-item active2">Company Menu</span></span>
+		<span role="presentation" class="list-group-item" id='companyAbout'><a href="#companyAbout" class="companyAbout" data-toggle="tab"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;关于</span></a>
 		<!-- <span class="list-group-item" id='companyWhy'><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;&nbsp;为什么</span> -->
 		<!-- <span class="list-group-item" id='companyOurteam'><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;团队</span> -->
-		<span class="list-group-item" id='companyRecruit'><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>&nbsp;&nbsp;招聘</span>
-		<span class="list-group-item" id='companyContact'><span class="glyphicon glyphicon-share" aria-hidden="true"></span>&nbsp;&nbsp;联系方式</span>
-		<span class="list-group-item" id='companyPrivacy'><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;&nbsp;隐私权政策</span>
+		<span role="presentation" class="list-group-item" id='companyRecruit'><a href="#companyRecruit" class="companyRecruit" data-toggle="tab"><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>&nbsp;&nbsp;招聘</span></a>
+		<span role="presentation" class="list-group-item" id='companyContact'><a href="#companyContact" class="companyContact" data-toggle="tab"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>&nbsp;&nbsp;联系方式</span></a>
+		<span role="presentation" class="list-group-item" id='companyPrivacy'><a href="#companyPrivacy" class="companyPrivacy" data-toggle="tab"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;&nbsp;隐私权政策</span></a>
 	</aside><!-- leftmenuWrap end -->
 
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
 	$(function(){
 
-			$('#companyAbout').click( function(){
+			$('.companyAbout').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -47,7 +47,7 @@
 				});
 			});
 
-			$('#companyWhy').click( function(){
+			$('.companyWhy').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -61,7 +61,7 @@
 				});
 			});
 
-			$('#companyRecruit').click( function(){
+			$('.companyRecruit').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -76,7 +76,7 @@
 			});
 
 
-			$('#companyOurteam').click( function(){
+			$('.companyOurteam').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -90,7 +90,7 @@
 				});
 			});
 
-			$('#companyContact').click( function(){
+			$('.companyContact').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -104,7 +104,7 @@
 				});
 			});
 
-			$('#companyPrivacy').click( function(){
+			$('.companyPrivacy').click( function(){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
