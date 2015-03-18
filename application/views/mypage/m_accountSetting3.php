@@ -34,7 +34,7 @@
 				</div>
 				<div class="file-upload2">
 					<label for="vCertification" class="file-uploadLabel"><span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
-					<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false" onchange='ImgReview()'>
+					<input type="file" class="" id="vCertification" name="vCertification" data-icon="false" onchange='ImgReview()'>
 				</div>
 				<!-- <input type='file' id='vCertification' name='vCertification'> -->
 				<input type='submit' id='vUpload' name='vUpload' value='인증 신청'>

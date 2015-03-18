@@ -1467,23 +1467,32 @@
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{
 			width: 300px; height: 210px;
 			/* border-radius: 15px;*/ 
-			background-color: #f0f1f5;
+			background-color: darkgrey;
 			margin-left: 50px;
 			position: relative;
 			cursor: pointer;
 			overflow: hidden;
+			border: 0px solid #fff;
+			opacity: 0.6;
 			}
 
-	#vGet{
-		width: 100%;
-		height:100%;
-		border-radius: 15px;
-		z-index: 100;
+		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv:hover{
+			opacity: 1;
+			background: rgba(83, 203, 241,1);
+			-webkit-transition: all ease .6s;
+			-moz-transition: all ease .6s;
+			transition: all ease .6s;
 		}
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv:hover{background-color: #eee;}
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.glyphicon-plus{font-size: 5em; line-height: 200px; margin-left: 120px;}
 
-		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.id_s{position: absolute; top: 140px; left: 117px; z-index: 10;}
+		#vGet{
+			width: 100%;
+			height:100%;
+			z-index: 100;
+			}
+
+
+		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.glyphicon-plus{font-size: 5em; line-height: 200px; margin-left: 120px; color: #fff;}
+		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.id_s{position: absolute; top: 140px; left: 117px; z-index: 10; color:#fff;}
 
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
 		#vUpload{
@@ -1528,7 +1537,6 @@
 		}
 
 
-
 	#vCertification{
 			/*width: 73px;
 			height: 42px;
@@ -1550,6 +1558,8 @@
 			width: 300px;
 			height: 210px;
 		}
+
+	#vCertification:hover{display: none;}
 
 	.posa_text3{
 		top: 1058px;
