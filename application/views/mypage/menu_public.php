@@ -279,8 +279,6 @@ $(function(){
 					alert("添加工作经验和学历 최소 15자 이상입력해주세요");
 				}else if(data == "inputInteresting") {
 					alert("兴趣和喜好 최소 15자 이상입력해주세요");
-				}else if( data == "publicWeixin" ){
-					alert("微信账户 메일 형식이 아닙니다.");
 				}else{
 					if(data != ""){
 						$("#profileImg").attr("src",data);

@@ -411,5 +411,41 @@
 							WHERE product_user_num = '".$num."'";
 			$query = $this->db->query($sql);
 		}
+
+		function myProfileCnt($num)
+		{
+			$sql ="SELECT ROUND(((messenger_qq + phone_num_country + phone_num_user + face_img_path + Name_cn_en + mother_area_code + mother_country_code + mother_city_code
+												+ live_area_code + live_country_code + live_city_code + live_country_year + birthday + gender_code + job + job_detail + education + lang_code
+												+ lang_code + lang_skill + special_code + interesting)/21)*100) AS cnt
+							FROM (
+							SELECT CASE WHEN messenger_qq != '' THEN '1' ELSE '0' END messenger_qq,
+											CASE WHEN phone_num_country != '' THEN '1' ELSE '0' END phone_num_country,
+											CASE WHEN phone_num_user != '' THEN '1' ELSE '0' END phone_num_user,
+											CASE WHEN face_img_path != '' THEN '1' ELSE '0' END face_img_path,
+											CASE WHEN Name_cn_en != '' THEN '1' ELSE '0' END Name_cn_en,
+											CASE WHEN mother_area_code != '' THEN '1' ELSE '0' END mother_area_code,
+											CASE WHEN mother_country_code != '' THEN '1' ELSE '0' END mother_country_code,
+											CASE WHEN mother_city_code != '' THEN '1' ELSE '0' END mother_city_code,
+											CASE WHEN live_area_code != '' THEN '1' ELSE '0' END live_area_code,
+											CASE WHEN live_country_code != '' THEN '1' ELSE '0' END live_country_code,
+											CASE WHEN live_city_code != '' THEN '1' ELSE '0' END live_city_code,
+											CASE WHEN live_country_year != '' THEN '1' ELSE '0' END live_country_year,
+											CASE WHEN birthday != '' THEN '1' ELSE '0' END birthday,
+											CASE WHEN gender_code != '' THEN '1' ELSE '0' END gender_code,
+											CASE WHEN job != '' THEN '1' ELSE '0' END job,
+											CASE WHEN job_detail != '' THEN '1' ELSE '0' END job_detail,
+											CASE WHEN education != '' THEN '1' ELSE '0' END education,
+											CASE WHEN lang1_code != '' THEN '1' WHEN lang2_code != '' THEN '1' WHEN lang3_code != '' THEN '1' ELSE '0' END lang_code,
+											CASE WHEN lang1_skill != '' THEN '1' WHEN lang2_skill != '' THEN '1' WHEN lang3_skill != '' THEN '1' ELSE '0' END lang_skill,
+											CASE WHEN special1_code != '' THEN '1' WHEN special2_code != '' THEN '1' WHEN special3_code != '' THEN '1' ELSE '0' END special_code,
+											CASE WHEN interesting1 != '' THEN '1' ELSE '0' END interesting
+							FROM USER
+							WHERE user_num = '0000000024'
+					) AS u";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
 	}
 ?>

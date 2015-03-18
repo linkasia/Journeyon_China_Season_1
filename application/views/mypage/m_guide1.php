@@ -30,11 +30,13 @@
 				<div id="guideData">
 					<p class="sub_title">个人身份验证资料</p>
 					<div class="dataView">
-						<p>完成度 : 70%</p><a href="/index.php/mypage/myPage_M/mypublic?userNum=<?=$this->session->userdata['num']?>" class="btn btn-default">前往个人页面编辑个人资料</a>
+					<?foreach($profileCnt as $v){?>
+						<p>完成度 : <?=$v->cnt?>%</p><a href="/index.php/mypage/myPage_M/mypublic?userNum=<?=$this->session->userdata['num']?>" class="btn btn-default">前往个人页面编辑个人资料</a>
+						<?}?>
 
 						<!--p>SNS 연동 : 미완료</p><span class="btn btn-info" id="snsModify">연동하러 가기</span-->
 					</div>
-					<span class="btn btn-info" id="request">申请认证</span>
+					<span class="btn btn-info" id="request" onclick="InsertGuide()">申请认证</span>
 				</div><!-- guideData end -->
 
 				<hr>

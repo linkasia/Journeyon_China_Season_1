@@ -76,7 +76,8 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	}
 
 	function myGuideAdmin(){
-		$this->load->view('mypage/m_guide1');
+		$data['profileCnt'] = $this->myModify->myProfileCnt($this->session->userdata['num']);
+		$this->load->view('mypage/m_guide1',$data);
 	}
 
 	function myItemAdmin(){
@@ -161,16 +162,6 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			print_r("inputInteresting");
 			return;
 		}
-
-		if(strripos($_REQUEST['publicWeixin'],"@") == null){
-			print_r("publicWeixin");
-			return;
-		}else if(strripos($_REQUEST['publicWeixin'],".") == null){
-			print_r("publicWeixin");
-			return;
-		}
-
-
 
 		$newdata = array(
 			'user_num' =>$this->session->userdata['num'],
