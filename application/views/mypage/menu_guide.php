@@ -9,12 +9,14 @@
 	</aside><!-- leftmenuWrap end -->
 
 
-
+	<input type='hidden' id='hiddenGuide' name='hiddenGuide' value='<?=$this->session->userdata['g_get_code']?>'>
 	<div id="rightWrap">
 		<?
 			$mode = $_REQUEST['mode'];
 			if($mode == "1"){
-				$this->load->view('mypage/m_guide1');
+				$data['profileCnt'] = $this->myModify->myProfileCnt($this->session->userdata['num']);
+				$data['gGuide'] = $this->myModify->myCerticificationG($this->session->userdata['num']);
+				$this->load->view('mypage/m_guide1',$data);
 			}else if($mode == "2"){
 				$data['reservation'] = $this->myModify->myReservationPage($this->session->userdata['num']);
 				$data['mode']="";
@@ -96,8 +98,7 @@
 				data:{ Num:par },
 				url:"/index.php/mypage/myPage_M/regGcerticification",
 				success: function (data){
-					//document.getElementById('test').innerHTML = data;
-					//location.href = "/index.php/mypage/myPage_M/myguide?mode=2";
+					location.href = "/index.php/mypage/myPage_M/myguide?mode=1";
 				}
 			});
 		}else{
@@ -199,31 +200,41 @@
 		});
 
 		$('.itemAdmin').click( function(){
-			$.ajax({
-				type:"POST" ,
-				dataType:"text",
-				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-				data:{ },
-				url:"/index.php/mypage/myPage_M/myItemAdmin",
-				success: function (data){
-					//alert(data);
-					document.getElementById('rightWrap').innerHTML =data;
-				}
-			});
+			var gGet = $('#hiddenGuide').val();
+			if(gGet == "0001"){
+				$.ajax({
+					type:"POST" ,
+					dataType:"text",
+					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+					data:{ },
+					url:"/index.php/mypage/myPage_M/myItemAdmin",
+					success: function (data){
+						//alert(data);
+						document.getElementById('rightWrap').innerHTML =data;
+					}
+				});
+			}else{
+				alert("가이드 인증 후 사용할 수 있는 메뉴입니다.");
+			}
 		});
 
 		$('.salesAdmin').click( function(){
-			$.ajax({
-				type:"POST" ,
-				dataType:"text",
-				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
-				data:{ },
-				url:"/index.php/mypage/myPage_M/mySalesAdmin",
-				success: function (data){
-					//alert(data);
-					document.getElementById('rightWrap').innerHTML =data;
-				}
-			});
+			var gGet = $('#hiddenGuide').val();
+			if(gGet == "0001"){
+				$.ajax({
+					type:"POST" ,
+					dataType:"text",
+					contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+					data:{ },
+					url:"/index.php/mypage/myPage_M/mySalesAdmin",
+					success: function (data){
+						//alert(data);
+						document.getElementById('rightWrap').innerHTML =data;
+					}
+				});
+			}else{
+				alert("가이드 인증 후 사용할 수 있는 메뉴입니다.");
+			}
 		});
 
 		$('.cancelAdmin').click( function(){

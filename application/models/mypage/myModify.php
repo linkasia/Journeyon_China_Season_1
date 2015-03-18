@@ -304,7 +304,7 @@
 													SYSDATE(),
 													SYSDATE()
 													)";
-													print_r($sql);
+													//print_r($sql);
 			$query = $this->db->query($sql);
 		}
 
