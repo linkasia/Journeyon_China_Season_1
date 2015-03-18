@@ -202,8 +202,11 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 					chmod($save_dir, 0777);
 				}
 
-				$dest=$save_dir.$_FILES["inputImage"]["name"];
-				$filePath="/application/views/userImage/".$this->session->userdata['num']."/".$_FILES["inputImage"]["name"];
+				$fileDes = strripos($_FILES["inputImage"]["name"],'.');
+				$fileName= substr($_FILES["inputImage"]["name"],$fileDes,4);
+
+				$dest=$save_dir.time().$fileName;//$_FILES["inputImage"]["name"];
+				$filePath="/application/views/userImage/".$this->session->userdata['num']."/".time().$fileName; //$_FILES["inputImage"]["name"];
 				if(!move_uploaded_file($_FILES["inputImage"]["tmp_name"],$dest)){
 					die("file save fail");
 				}
@@ -230,7 +233,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 
 			$dest=$save_dir.time().$fileName;//$_FILES["vCertification"]["name"].time();
 			//$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".$_FILES["vCertification"]["name"];
-			$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".time().$fileName;;
+			$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".time().$fileName;
 			if(!move_uploaded_file($_FILES["vCertification"]["tmp_name"],$dest)){
 				die("file save fail");
 			}
