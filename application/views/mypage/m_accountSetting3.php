@@ -26,22 +26,18 @@
 			<p class="vtitle">个人身份验证资料</p>
 			<p class="ID_t">身份证</p>
 
-
 			<form name="frmVCertification" id="frmVCertification" method='post' enctype="multipart/form-data" action="/index.php/mypage/myPage_M/vCertification">
-
 				<div class="ID_imgdiv">
 					<span class="id_s">上传身份证</span>
 					<img src='' id='vGet' />
 					<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span>
 				</div>
 				<div class="file-upload2">
-					<label for="vCertification" class="file-uploadLabel">Upload file<span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
+					<label for="vCertification" class="file-uploadLabel"><span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
 					<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false" onchange='ImgReview()'>
 				</div>
-
 				<!-- <input type='file' id='vCertification' name='vCertification'> -->
 				<input type='submit' id='vUpload' name='vUpload' value='인증 신청'>
-
 			</form>
 			<!-- FORM END -->
 		</div>
@@ -88,7 +84,7 @@
 				</div>
 
 				<div class="file-upload2">
-					<label for="vCertification" class="file-uploadLabel">Upload file</label>
+					<label for="vCertification" class="file-uploadLabel"><span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
 					<input type="file" class="filestyle btn btn-info" id="vCertification" name="vCertification" data-icon="false">
 				</div>
 

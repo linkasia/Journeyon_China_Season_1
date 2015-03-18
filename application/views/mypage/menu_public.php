@@ -32,12 +32,12 @@
 			<button type="submit" class="btn btn-info" id="saveProfile" name="saveProfile">保存更改</button>
 			<button class="btn btn-warning" id="cancelSave">取消</button>
 			<div class="profilepicAdd" id="profilepicAdd">
-				<!-- <span class="glyphicon glyphicon-plus plus"></span> -->
+				 <span class="glyphicon glyphicon-plus plus"></span>
 				 <img src="<?=$v->face_img_path?>" alt="" class="uploadImg" id="profileImg">
 			</div>
 
 			<div class="file-upload3">
-				<label for="inputImage" class="file-uploadLabel"><span class="glyphicon  glyphicon-plus" aria-hidden="true"></span></label>
+				<label for="inputImage" class="file-uploadLabel"></label>
 				<input type="file" class="filestyle btn btn-info" id="inputImage" name="inputImage" data-icon="false" onchange="imgChang();">
 
 				<!-- <input type="file" class="form-control2 text" id="inputImage"  name="inputImage" value="" placeholder="选择" onchange="imgChang();"> -->

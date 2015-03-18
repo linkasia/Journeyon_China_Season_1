@@ -1133,7 +1133,7 @@
 		#mypage_wrap #mypage_rightWrap ul:after{clear: both; display: block; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap ul > li{float: left; margin-right: 20px; margin-bottom: 20px; display: block;}
 
-		#mypage_wrap #mypage_rightWrap .sub_title{height: 80px; padding-top: 20px;}
+		#mypage_wrap #mypage_rightWrap .sub_title{height: 80px; padding-top: 20px; color: #53CBF1;}
 		#mypage_wrap #mypage_rightWrap .somenail_caption{width: 300px; height: 118px; border: 1px solid #f0f1f5; position: relative; background-color: #fff;}
 		#mypage_wrap #mypage_rightWrap .somenail_caption:after{clear: both;display: block; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap .somenail_caption .circle-div2{width: 82px; height: 82px; margin: 18px 0 0 13px; position: absolute;}
@@ -1392,7 +1392,7 @@
 
 
 		/* 페이먼트 */
-		#accountWrap #rightWrap .profileWrap1 .paymentWrap{width: 640px; height: 800px; background-color: #f0f1f5;}
+		#accountWrap #rightWrap .profileWrap1 .paymentWrap{width: 640px; height: 600px;}
 
 		/* V certicification */
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap1{width: 640px; height: 500px; background-color: #;}
@@ -1417,7 +1417,7 @@
 		#accountWrap #rightWrap .profileWrap1 .vtitle{margin-bottom: 30px;}
 
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{
-			width: 310px; height: 200px;
+			width: 300px; height: 210px;
 			/* border-radius: 15px;*/ 
 			background-color: #f0f1f5;
 			margin-left: 50px;
@@ -1434,6 +1434,7 @@
 		}
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv:hover{background-color: #eee;}
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.glyphicon-plus{font-size: 5em; line-height: 200px; margin-left: 120px;}
+
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv span.id_s{position: absolute; top: 140px; left: 117px; z-index: 10;}
 
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap4{width: 640px; height: 400px; background-color: #f0f1f5;}
@@ -1498,8 +1499,8 @@
 			text-align: center;
 			line-height: 34px;
 			cursor: pointer;
-			width: 310px;
-			height: 200px;
+			width: 300px;
+			height: 210px;
 		}
 
 	.posa_text3{
@@ -1510,10 +1511,10 @@
 	}
 
 
-.file-upload2 {
-	display: inline-block;
-	vertical-align: middle;
-	cursor: pointer;
+	.file-upload2 {
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
 		
 
 	/* Cosmetics */
@@ -1687,19 +1688,21 @@
 
 		/* Guide Request (m_guide1.php)*/
 		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
-		#guideWrap .profileWrap1 #guideRequestWrap .processWrap{width: 100%; height: 180px; position: relative;}
+		.guideRequestWrapinner{width: 100%; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border-radius: 10px; border: 1px solid #53cbf1; position: relative;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap{width: 100%; height: 260px; position: relative;}
 
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle{
 			width: 96px; height: 96px; border-radius: 18%; background-color: #f0f1f5; text-align: center; float: left; margin-right: 50px;}
-		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow1{position: absolute; top: 132px; left: 170px;}
-		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow2{position: absolute; top: 132px; left: 316px;}
-		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow3{position: absolute; top: 132px; left: 462px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow1{position: absolute; top: 132px; left: 160px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow2{position: absolute; top: 132px; left: 306px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .arrow3{position: absolute; top: 132px; left: 452px;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle p{margin-top: 36px;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle p span{font-size:0.8em;}
 
-		#guideWrap .profileWrap1 #guideRequestWrap .alert{width: 530px; margin-left: 60px; margin-bottom: 40px; margin-top: 40px;}
+		#guideWrap .profileWrap1 #guideRequestWrap .alert{width: 530px; margin-left: 50px; margin-bottom: 40px; margin-top: 40px;}
 
 		#guideWrap .profileWrap1 #guideData{height: 250px; position: relative;}
+		.guidePro{position: relative;}
 		#guideWrap .profileWrap1 #guideData .dataView{padding-left: 60px; position: relative;}
 		#guideWrap .profileWrap1 #guideData .dataView p{margin-top: 20px;}
 		#guideWrap .profileWrap1 #guideData .dataView #profileModify{position: absolute; top: -3px; left: 200px; padding: 1px 8px 1px 8px;}
@@ -1715,7 +1718,7 @@
 			width: 300px;
 			height: 210px;
 			overflow: hidden;
-			margin-left: 60px;
+			margin-left: 50px;
 			margin-bottom: 20px;
 			position: relative;
 			float: left;
@@ -1728,12 +1731,39 @@
 			display: block;
 			}
 
+		#guideWrap .profileWrap1 .picUpload img{width: 100%; height: 100%;}
+
+		#guideWrap #inputProguide{
+			position: absolute;
+			display: inline-block;
+			top: 432px;
+			left: 70px;
+			line-height: 34px;
+			cursor: pointer;
+			width: 300px;
+			height: 210px;
+			opacity: 0;
+		}
+
+		#guideWrap #inputProguide:hover{
+			opacity: 1;
+			background: rgba(0, 0, 0,.2);
+			-webkit-transition: all ease .6s;
+			-moz-transition: all ease .6s;
+			transition: all ease .6s;
+			font-size: 0px;
+			display: none;
+		}
+		
+
+
 		#guideWrap .profileWrap1 .picUpload:hover{background-color: #0699D3; opacity: 1;}
 		#guideWrap .profileWrap1 .picUpload span.plus{position: absolute; top: 35%; left: 40%; font-size: 50pt; color: white;}
 
 		#guideWrap .profileWrap1 #Registration{
 			margin-top: 178px; margin-left: 115px;
 			width: 120px;
+			margin-bottom: 40px;
 			}
 
 		#map{
@@ -2265,7 +2295,14 @@
 	#mypublicWrap #rightDiv #profileQuestion #saveProfileBottom{margin-top: 20px; margin-left: 445px;}
 	#mypublicWrap #rightDiv #profileQuestion #cancelSaveBottom{margin-top: 20px; margin-left: 10px;}
 	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd{width: 230px; height: 230px; position: absolute; top:30px; background-color: #000;}
-	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd .plus{position: absolute; color: #fff; top:35%; left: 35%; font-size: 50pt; opacity: 0.5;}
+	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd .plus{
+		position: absolute;
+		color: black;
+		top:35%;
+		left: 35%;
+		font-size: 50pt;
+		opacity: 0.8;
+		}
 
 	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd{
 	    position: absolute;
@@ -2293,9 +2330,17 @@
 
 	#mypublicWrap #rightDiv #profileQuestion .file-upload3 span.glyphicon-plus{
 		font-size: 6em; line-height: 120px; margin-left: 62px;
-		color: black;
-		opacity: 0.4;
+		color: #fff;
+		opacity: 0.9;
+		cursor: pointer;
 		}
+	.ID_imgdiv span.glyphicon-plus{
+		font-size: 6em; position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+	}
+
 
 	#mypublicWrap #rightDiv #profileQuestion #inputImage{
 			position: absolute;
@@ -2310,6 +2355,17 @@
 			height: 200px;
 			opacity: 0;
 	}
+
+
+		#mypublicWrap #rightDiv #profileQuestion #inputImage:hover{
+			opacity: 1;
+			background: rgba(0, 0, 0,.2);
+			-webkit-transition: all ease .6s;
+			-moz-transition: all ease .6s;
+			transition: all ease .6s;
+			font-size: 0px;
+			display: none;
+		}
 
 
 	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd .uploadImg{width: 100%; height: 100%;}
@@ -3119,7 +3175,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fafc', end
 		position: relative; float: left; margin-right: 30px; border: 1px solid #f0f1f5;
 }
 
-.font_blue{color: #53CBF1;}
+.fb, .font_blue{color: #53CBF1;}
+
 .font_orange{color: #0699D3;}
 
 
