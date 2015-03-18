@@ -11,7 +11,7 @@
 				<div class="guideProcess">
 					<div class="processWrap">
 						<p class="sub_title">个人身份验证流程</p>
-						<div class="circle whitegloss" style="margin-left: 60px;"><p>申请接受中</p></div>
+						<div class="circle whitegloss" style="margin-left: 50px;"><p>申请接受中</p></div>
 						<div class="circle whitegloss"><p>确认中</p></div>
 						<div class="circle whitegloss"><p>资料不足<br><span>2014-12-21</span></p></div>
 						<div class="circle whitegloss"><p>认证完成<br><span>2014-12-21</span></p></div>
