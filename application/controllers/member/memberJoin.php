@@ -143,5 +143,11 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 		$this->load->view('main/contents' ,$data);
 		$this->load->view('include/footer');
 	}
+
+	//페이스북 로그인
+	function facebookLogin()
+	{
+		$this->load->view('member/facebooklogin' );
+	}
 }
 ?>

@@ -105,7 +105,8 @@
 						<img src="/application/views/images/main/sns04.png" alt="instagram">
 						<img src="/application/views/images/main/sns05.png" alt="baidu">
 						<img src="/application/views/images/main/sns06.png" alt="rinrin">
-						<img src="/application/views/images/main/sns07.png" alt="facebook">
+						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+						<!-- img src="/application/views/images/main/sns07.png" alt="facebook" onclick="checkLoginState()"-->
 						<img src="/application/views/images/main/sns08.png" alt="alipay">
 					</div>
 				</div>
@@ -113,6 +114,42 @@
 		</div>
 		<!--/form-->
 		<script type="text/javascript">
+			function checkLoginState() {
+				FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});
+			}
+
+			window.fbAsyncInit = function() {
+				FB.init({
+						appId      : '456909761123705',
+						cookie     : true,  // enable cookies to allow the server to access
+						// the session
+						xfbml      : true,  // parse social plugins on this page
+						version    : 'v2.2' // use version 2.2
+					});
+					FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});
+			};
+
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+			function testAPI() {
+				console.log('Welcome!  Fetching your information.... ');
+				FB.api('/me', function(response) {
+					console.log('Successful login for: ' + response.name);
+					document.getElementById('status').innerHTML =
+					'Thanks for logging in, ' + response.name + '!';
+				});
+			}
+
 			$(function(){
 				//로고 클릭시 메인페이지 이동
 				$('#logo').click( function(){
