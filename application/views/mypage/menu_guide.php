@@ -86,6 +86,25 @@
 		//location.href = "/index.php/City/country/productUpdate?maxProduct="+key+"";
 	}
 
+	function InsertGuide(){
+		var par = $('#hiddenPer').val();
+		if(par == "100"){
+			$.ajax({
+				type:"POST" ,
+				dataType:"text",
+				contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+				data:{ Num:par },
+				url:"/index.php/mypage/myPage_M/regGcerticification",
+				success: function (data){
+					//document.getElementById('test').innerHTML = data;
+					//location.href = "/index.php/mypage/myPage_M/myguide?mode=2";
+				}
+			});
+		}else{
+			alert("프로필 완료 후 신청 할 수 있습니다.");
+		}
+	}
+
 	function productStop(key){
 		$.ajax({
 			type:"POST" ,

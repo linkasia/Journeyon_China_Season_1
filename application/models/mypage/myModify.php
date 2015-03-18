@@ -283,7 +283,7 @@
 			return $result;
 		}
 
-		function insertCerticification($user_num,$img_path)
+		function insertCerticification($user_num,$img_path,$type)
 		{
 			$sql ="INSERT INTO certicification
 													(certicification_seq,
@@ -298,19 +298,28 @@
 													0,
 													'".$user_num."',
 													'0005',
-													'0001',
+													'".$type."',
 													'".$img_path."',
 													'',
 													SYSDATE(),
 													SYSDATE()
 													)";
+													print_r($sql);
 			$query = $this->db->query($sql);
 		}
 
-		function updateUserCerticification($user_num)
+		function updateUserVCerticification($user_num)
 		{
 			$sql ="UPDATE USER
 							SET v_get_code = '0005'
+							WHERE user_num = '".$user_num."'";
+			$query = $this->db->query($sql);
+		}
+
+		function updateUserGCerticification($user_num)
+		{
+			$sql ="UPDATE USER
+							SET g_get_code = '0005'
 							WHERE user_num = '".$user_num."'";
 			$query = $this->db->query($sql);
 		}
@@ -414,7 +423,7 @@
 
 		function myProfileCnt($num)
 		{
-			$sql ="SELECT ROUND(((messenger_qq + phone_num_country + phone_num_user + face_img_path + Name_cn_en + mother_area_code + mother_country_code + mother_city_code
+			$sql ="SELECT ROUND(((messenger_qq + phone_num_country + phone_num_user + face_img_path + Name_cn_en + mother_area_code + mother_country_code
 												+ live_area_code + live_country_code + live_city_code + live_country_year + birthday + gender_code + job + job_detail + education + lang_code
 												+ lang_code + lang_skill + special_code + interesting)/21)*100) AS cnt
 							FROM (
@@ -425,7 +434,6 @@
 											CASE WHEN Name_cn_en != '' THEN '1' ELSE '0' END Name_cn_en,
 											CASE WHEN mother_area_code != '' THEN '1' ELSE '0' END mother_area_code,
 											CASE WHEN mother_country_code != '' THEN '1' ELSE '0' END mother_country_code,
-											CASE WHEN mother_city_code != '' THEN '1' ELSE '0' END mother_city_code,
 											CASE WHEN live_area_code != '' THEN '1' ELSE '0' END live_area_code,
 											CASE WHEN live_country_code != '' THEN '1' ELSE '0' END live_country_code,
 											CASE WHEN live_city_code != '' THEN '1' ELSE '0' END live_city_code,
@@ -440,8 +448,20 @@
 											CASE WHEN special1_code != '' THEN '1' WHEN special2_code != '' THEN '1' WHEN special3_code != '' THEN '1' ELSE '0' END special_code,
 											CASE WHEN interesting1 != '' THEN '1' ELSE '0' END interesting
 							FROM USER
-							WHERE user_num = '0000000024'
+							WHERE user_num = '".$num."'
 					) AS u";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function myCerticificationG($num)
+		{
+			$sql ="SELECT *
+							FROM certicification
+							WHERE certicifi_state_code = '0002'
+							AND user_num ='".$num."'";
 							//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();

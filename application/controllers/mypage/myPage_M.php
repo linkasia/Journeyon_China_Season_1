@@ -77,6 +77,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 
 	function myGuideAdmin(){
 		$data['profileCnt'] = $this->myModify->myProfileCnt($this->session->userdata['num']);
+		$data['gGuide'] = $this->myModify->myCerticificationG($this->session->userdata['num']);
 		$this->load->view('mypage/m_guide1',$data);
 	}
 
@@ -153,12 +154,12 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		$hiddenPath = $_REQUEST['hiddenImagePath'];
 		$hiddenMode = $_REQUEST['hiddenMode'];
 
-		if(strlen($_REQUEST['inputJobDetail']) <= 15){
+		if(strlen($_REQUEST['inputJobDetail']) <= 14){
 			print_r("inputJobDetail");
 			return;
 		}
 
-		if(strlen($_REQUEST['inputInteresting']) <= 15){
+		if(strlen($_REQUEST['inputInteresting']) <= 14){
 			print_r("inputInteresting");
 			return;
 		}
@@ -234,8 +235,8 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 				die("file save fail");
 			}
 			//print_r($filePath);
-			$update['userUpdate'] = $this->myModify->updateUserCerticification($user_num);
-			$insert['certicificationInsert'] = $this->myModify->insertCerticification($user_num,$filePath);
+			$update['userUpdate'] = $this->myModify->updateUserVCerticification($user_num);
+			$insert['certicificationInsert'] = $this->myModify->insertCerticification($user_num,$filePath,'0001');
 			$data['certicification'] =  $this->myModify->myCerticificationState($user_num);
 			$data['mode'] = "2";
 			$this->load->view('include/header');
@@ -291,5 +292,11 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 		}else{
 			$update['salesStop'] = $this->myModify->productDelete($productNum);
 		}
+	}
+
+	function regGcerticification(){
+		$user_num = $this->session->userdata['num'];
+		$update['userUpdate'] = $this->myModify->updateUserGCerticification($user_num);
+		$insert['certicificationInsert'] = $this->myModify->insertCerticification($user_num,null,'0002');
 	}
 }

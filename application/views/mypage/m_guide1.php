@@ -4,6 +4,7 @@
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 
 			<div id="guideRequestWrap">
+			<?if(count($gGuide) == 0) {?>
 				<div class="guideProcess">
 					<div class="processWrap">
 						<p class="sub_title">个人身份验证流程</p>
@@ -16,15 +17,6 @@
 						<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow3">
 					</div><!-- processWrap end -->
 
-					<!-- bootstrap alert dismissing -->
-					<div class="alert alert-warning alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						<strong>原因：</strong>所需资料未填妥。
-					</div>
-				</div><!-- guideProcess end -->
-
 				<hr>
 
 				<div id="guideData">
@@ -32,13 +24,54 @@
 					<div class="dataView">
 					<?foreach($profileCnt as $v){?>
 						<p>完成度 : <?=$v->cnt?>%</p><a href="/index.php/mypage/myPage_M/mypublic?userNum=<?=$this->session->userdata['num']?>" class="btn btn-default">前往个人页面编辑个人资料</a>
-						<?}?>
+						<input type='hidden' id='hiddenPer' name='hiddenPer' value='<?=$v->cnt?>'>
+					<?}?>
 
 						<!--p>SNS 연동 : 미완료</p><span class="btn btn-info" id="snsModify">연동하러 가기</span-->
 					</div>
 					<span class="btn btn-info" id="request" onclick="InsertGuide()">申请认证</span>
 				</div><!-- guideData end -->
+			<?}else{
+				foreach($gGuide as $k){?>
+					<div class="guideProcess">
+						<div class="processWrap">
+							<p class="sub_title">个人身份验证流程</p>
+							<div class="circle whitegloss" style="margin-left: 60px;"><p>申请接受中</p></div>
+							<div class="circle whitegloss"><p>确认中</p></div>
+							<div class="circle whitegloss"><p>资料不足<br><span>2014-12-21</span></p></div>
+							<div class="circle whitegloss"><p>认证完成<br><span>2014-12-21</span></p></div>
+							<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow1">
+							<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow2">
+							<img src="/application/views/images/mypage/icon_arrow01.png" alt="arrow" class="arrow3">
+						</div><!-- processWrap end -->
+						<?if($k->certicifi_type_code == "0004"){?>
+						<!-- bootstrap alert dismissing -->
+						<div class="alert alert-warning alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<strong>原因：</strong><?=$k->excuse?>
+						</div>
+					</div><!-- guideProcess end -->
+					<?}?>
 
+					<hr>
+
+					<div id="guideData">
+						<p class="sub_title">个人身份验证资料</p>
+						<div class="dataView">
+						<?foreach($profileCnt as $v){?>
+							<p>完成度 : <?=$v->cnt?>%</p><a href="/index.php/mypage/myPage_M/mypublic?userNum=<?=$this->session->userdata['num']?>" class="btn btn-default">前往个人页面编辑个人资料</a>
+							<input type='hidden' id='hiddenPer' name='hiddenPer' value='<?=$v->cnt?>'>
+						<?}?>
+
+							<!--p>SNS 연동 : 미완료</p><span class="btn btn-info" id="snsModify">연동하러 가기</span-->
+						</div>
+						<?if($k->certicifi_type_code == "0004"){?>
+							<span class="btn btn-info" id="request" onclick="InsertGuide()">申请认证</span>
+						<?}?>
+					</div><!-- guideData end -->
+				<?if($k->certicifi_type_code == "0001"){?>
 				<hr>
 
 				<div class="guidePro">
@@ -104,6 +137,9 @@
 				</form>
 
 			</div><!-- guideRequestWrap end -->
+			<?}?>
 		</div><!-- profileWrap1 -->
+<?}
+}?>
 
-
+<div id='test'></div>
