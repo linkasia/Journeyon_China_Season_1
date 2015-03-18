@@ -74,8 +74,16 @@
 				<?}
 				}else{?>
 					<div class="firstGuideDiv">	
-						<div class="firstGuideband"><p class="firstGuideP tac">최초의 가이드가 되어주세요</p></div>
-						<img src="/application/views/images/contents/guide.jpg" alt="">
+						<div class="firstGuideband">
+							<p class="firstGuideP tac">최초의 가이드가 되어주세요</p>
+						</div>
+						<div class="fgimg1"><img src="/application/views/images/contents/guide.jpg" alt=""></div>
+						<div class="fgimg2"><img src="/application/views/images/contents/img13.jpg" alt=""></div>
+						<div class="fgimg3"><img src="/application/views/images/contents/pic1.jpg" alt=""></div>
+						<div class="fgimg4"><img src="/application/views/images/contents/pic2.jpg" alt=""></div>
+						<div class="fgimg5"><img src="/application/views/images/contents/img10.jpg" alt=""></div>
+						<div class="fgimg6"><img src="/application/views/images/contents/img14.jpg" alt=""></div>
+						<!-- <img src="/application/views/images/contents/guide.jpg" alt=""> -->
 					</div>
 				<?}?>
 			</div> <!-- contents 닫음 -->
