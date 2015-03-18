@@ -1418,7 +1418,7 @@
 
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{
 			width: 310px; height: 200px;
-			border-radius: 15px;
+			/* border-radius: 15px;*/ 
 			background-color: #f0f1f5;
 			margin-left: 50px;
 			position: relative;
@@ -1561,7 +1561,6 @@
 	left: 0;
 	display: inline-block;
 	width: 120px;
-
 	/* Adjust button text vertical alignment */
 	padding-top: .45em;
 	}
@@ -2293,9 +2292,9 @@
 		}
 
 	#mypublicWrap #rightDiv #profileQuestion .file-upload3 span.glyphicon-plus{
-		font-size: 5em; line-height: 120px; margin-left: 69px;
-		color: #fff;
-		opacity: 0.3;
+		font-size: 6em; line-height: 120px; margin-left: 62px;
+		color: black;
+		opacity: 0.4;
 		}
 
 	#mypublicWrap #rightDiv #profileQuestion #inputImage{

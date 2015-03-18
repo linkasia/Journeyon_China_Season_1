@@ -5,7 +5,7 @@
 		<span role="presentation" class="list-group-item" id='guestBucket'><a href="#guestBucket" data-toggle="tab" class="guestBucket"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>&nbsp;&nbsp;我的收藏</span></a>
 		<span role="presentation" class="list-group-item" id='guestReservation'><a href="#guestReservation" data-toggle="tab" class="guestReservation"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;我的预约&nbsp;&nbsp;</span></a>
 		<span role="presentation" class="list-group-item" id='guestBuy'><a href="#guestBuy" data-toggle="tab" class="guestBuy"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;&nbsp;我的记录&nbsp;&nbsp;</span></a>
-		<span role="presentation" class="list-group-item" id='guestCancel'><a href="#guestCancel" data-toggle="tab" class="guestCancel"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;取消行程 &nbsp;&nbsp;</span></a>
+		<!-- <span role="presentation" class="list-group-item" id='guestCancel'><a href="#guestCancel" data-toggle="tab" class="guestCancel"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;&nbsp;取消行程 &nbsp;&nbsp;</span></a> -->
 	</aside><!-- leftmenuWrap end -->
 
 
