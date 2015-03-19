@@ -163,7 +163,6 @@
 			data:{ user_num:key },
 			url:"/index.php/admin/adminMenu/memberPget",
 			success: function (data){
-
 				document.getElementById('modalPget').innerHTML =data;
 			}
 		});

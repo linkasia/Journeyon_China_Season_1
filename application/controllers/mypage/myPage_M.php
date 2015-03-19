@@ -78,6 +78,7 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 	function myGuideAdmin(){
 		$data['profileCnt'] = $this->myModify->myProfileCnt($this->session->userdata['num']);
 		$data['gGuide'] = $this->myModify->myCerticificationG($this->session->userdata['num']);
+		$data['pgGuide'] = $this->myModify->myCerticificationPG($this->session->userdata['num']);
 		$this->load->view('mypage/m_guide1',$data);
 	}
 
@@ -244,6 +245,38 @@ class myPage_M extends CI_Controller { // controller 파일이름이 곧 class�
 			$data['mode'] = "2";
 			$this->load->view('include/header');
 			$this->load->view('mypage/menu_account',$data);
+			$this->load->view('include/footer');
+		}
+	}
+
+	function pgCertification(){
+		$user_num = $this->session->userdata['num'];
+		$save_dir = $_SERVER["DOCUMENT_ROOT"]."/application/views/userImage/".$this->session->userdata['num']."/pgCertification/";
+		if(is_uploaded_file($_FILES["inputProguide"]["tmp_name"]))
+		{
+			if(!is_dir($save_dir)){
+				umask(0);
+				@mkdir($save_dir, 0777);
+				chmod($save_dir, 0777);
+			}
+			$fileDes = strripos($_FILES["inputProguide"]["name"],'.');
+			$fileName= substr($_FILES["inputProguide"]["name"],$fileDes,4);
+
+			$dest=$save_dir.time().$fileName;//$_FILES["vCertification"]["name"].time();
+			//$filePath="/application/views/userImage/".$this->session->userdata['num']."/VCertification/".$_FILES["vCertification"]["name"];
+			$filePath="/application/views/userImage/".$this->session->userdata['num']."/pgCertification/".time().$fileName;
+			if(!move_uploaded_file($_FILES["inputProguide"]["tmp_name"],$dest)){
+				die("file save fail");
+			}
+			//print_r($filePath);
+			$update['userUpdate'] = $this->myModify->updateUserPGCerticification($user_num);
+			$insert['certicificationInsert'] = $this->myModify->insertCerticification($user_num,$filePath,'0003');
+			$data['profileCnt'] = $this->myModify->myProfileCnt($this->session->userdata['num']);
+			$data['gGuide'] = $this->myModify->myCerticificationG($this->session->userdata['num']);
+			$data['pgGuide'] = $this->myModify->myCerticificationPG($this->session->userdata['num']);
+
+			$this->load->view('include/header');
+			$this->load->view('mypage/m_guide1',$data);
 			$this->load->view('include/footer');
 		}
 	}

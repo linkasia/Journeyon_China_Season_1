@@ -324,6 +324,14 @@
 			$query = $this->db->query($sql);
 		}
 
+		function updateUserPGCerticification($user_num)
+		{
+			$sql ="UPDATE USER
+							SET pg_get_code = '0005'
+							WHERE user_num = '".$user_num."'";
+			$query = $this->db->query($sql);
+		}
+
 		function myCerticificationState($num)
 		{
 			$sql ="SELECT *
@@ -458,10 +466,40 @@
 
 		function myCerticificationG($num)
 		{
-			$sql ="SELECT *
+			$sql ="SELECT certicification_seq,
+											user_num,
+											certicifi_type_code,
+											certicifi_state_code,
+											img_path,
+											excuse,
+											DATE_FORMAT(modify_date,'%Y-%m-%d') AS modify_date,
+											DATE_FORMAT(creat_date,'%Y-%m-%d') AS creat_date
 							FROM certicification
 							WHERE certicifi_state_code = '0002'
-							AND user_num ='".$num."'";
+							AND user_num ='".$num."'
+							ORDER BY modify_date DESC
+							LIMIT 1";
+							//print_r($sql);
+			$query = $this->db->query($sql);
+			$result = $query->result();
+			return $result;
+		}
+
+		function myCerticificationPG($num)
+		{
+			$sql ="SELECT certicification_seq,
+											user_num,
+											certicifi_type_code,
+											certicifi_state_code,
+											img_path,
+											excuse,
+											DATE_FORMAT(modify_date,'%Y-%m-%d') AS modify_date,
+											DATE_FORMAT(creat_date,'%Y-%m-%d') AS creat_date
+							FROM certicification
+							WHERE certicifi_state_code = '0003'
+							AND user_num ='".$num."'
+							ORDER BY modify_date DESC
+							LIMIT 1";
 							//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
