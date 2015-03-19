@@ -1552,6 +1552,8 @@
 			opacity: 0.6;
 			}
 
+		.bluegloss > span{color: #fff;}
+
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv:hover{
 			opacity: 1;
 			background: rgba(83, 203, 241,1);
