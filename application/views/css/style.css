@@ -1827,7 +1827,7 @@
 
 		/* Guide Request (m_guide1.php)*/
 		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
-		.guideRequestWrapinner{width: 100%; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border-radius: 10px; border: 1px solid #53cbf1; position: relative;}
+		.guideRequestWrapinner{width: 100%; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border-radius: 10px; border: 1px solid #53cbf1; position: relative; float: left;}
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap{width: 100%; height: 260px; position: relative;}
 
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle{
@@ -1841,7 +1841,7 @@
 		#guideWrap .profileWrap1 #guideRequestWrap .alert{width: 530px; margin-left: 50px; margin-bottom: 40px; margin-top: 40px;}
 
 		#guideWrap .profileWrap1 #guideData{height: 250px; position: relative;}
-		.guidePro{position: relative;}
+		.guidePro{position: relative; float: left;}
 		#guideWrap .profileWrap1 #guideData .dataView{padding-left: 60px; position: relative;}
 		#guideWrap .profileWrap1 #guideData .dataView p{margin-top: 20px;}
 		#guideWrap .profileWrap1 #guideData .dataView #profileModify{position: absolute; top: -3px; left: 200px; padding: 1px 8px 1px 8px;}
