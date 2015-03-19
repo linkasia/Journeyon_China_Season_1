@@ -112,7 +112,9 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<?
 
 							?>
-						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static">如何参与</li>
+						<!-- <li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static">如何参与</li> -->
+						<li class="how_works" name="how_works" id="how_works"><a href="/index.php/City/country/productUpload" class="product-upload" id='productUpload' name='productUpload'><span class="glyphicon glyphicon-pencil"></span>  我要参与</a></li>
+
 
 
 						<?
@@ -142,7 +144,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 									<?if($this->session->userdata['email'] == "admin@linkasia.co.kr"){?>
 									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/admin/adminMenu/mainTotalMenu?mode=">admin</a></li>
 									<?}?>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/member/memberJoin/logout">登出</a></li>
+									<li role="presentation"><a role="menuitem" tabindex="-1" href="/index.php/member/memberJoin/logout">退出</a></li>
 								</ul>
 							</div>
 						</li>

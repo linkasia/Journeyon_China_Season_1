@@ -65,11 +65,15 @@
 	#header_top>ul>li.logo{width: 173px; height: 55px; background-image: url(/application/views/images/main/img01_logo.png); position: absolute; left: 0px; top: 0px;}
 	#header_top>ul>li.become_host{width: 195px; height: 22px; /*background-image: url(/application/views/images/main/img02_text.png);*/ position: absolute; left: 183px; top: 20px;}
 	#header_top>ul>li.how_works{
-		width: 88px; height: 22px; 
+		width: 110px; height: 22px; 
 		/*background-image: url(/application/views/images/main/img03_text.png);*/
-		position: absolute; left: 686px;
+		position: absolute; left: 664px;
 		top: 20px;
 		}
+	#header_top>ul>li.how_works a{
+		color: #fff;
+		text-decoration: none;
+	}
 	#msgCnt{
 		color: red;
 		position: absolute;
