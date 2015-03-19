@@ -670,6 +670,7 @@
 										modified_date = SYSDATE()
 										WHERE
 										product_num = '".$product_num."' ";
+									//	print_r($sql);
 			$query = $this->db->query($sql);
 		}
 

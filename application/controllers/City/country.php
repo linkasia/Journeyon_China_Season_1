@@ -302,8 +302,13 @@ class country extends CI_Controller { // controller 파일이름이 곧 class파
 				@mkdir($save_dir, 0777);
 				chmod($save_dir, 0777);
 			}
-			$dest=$save_dir.$_FILES["file-upload"]["name"];
-			$filePath="/application/productImages/".$product_num."/".$_FILES["file-upload"]["name"];
+
+			$fileDes = strripos($_FILES["file-upload"]["name"],'.');
+			$fileName= substr($_FILES["file-upload"]["name"],$fileDes,4);
+
+			$dest=$save_dir.time().$fileName;//$_FILES["file-upload"]["name"];
+			//$filePath="/application/productImages/".$product_num."/".$_FILES["file-upload"]["name"];
+			$filePath="/application/productImages/".$product_num."/".time().$fileName;
 			if(!move_uploaded_file($_FILES["file-upload"]["tmp_name"],$dest)){
 				die("file save fail");
 			}

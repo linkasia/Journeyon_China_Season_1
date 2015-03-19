@@ -212,7 +212,7 @@
 		</p>
 	</div>
 </div><!-- productWrap en -->
-
+<div id='test'></div>
 <script type="text/javascript">
 
 	$('#file-upload').on('change', function() {
