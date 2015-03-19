@@ -22,7 +22,7 @@
 	<!-- 여기서부터 오른쪽 박스 -->
 
 	<div id="rightDiv">
-		<div id="introduceSelf">
+		<div id="introduceSelf" class="">
 			<p class="headline">个人档案</p>
 			<p class="subheadline">让其他使用者更了解你，请填上你的详细资料。</p>
 			<!-- <button class="btn btn-primary" id="editProfile">Edit your profile</button> -->

@@ -2,65 +2,67 @@
 			<div class="title2"> <!-- 라인 들어가는 타이틀 city부분 복제 -->
 				<div class="underline">账户变更</div>
 			</div>
-			<div class="email">
-				<span class="email-f1">电邮</span>
-				<span class="email-f2"><?=$this->session->userdata['email']?></span>
-				<span class="email-f3"><a href="#" data-toggle="modal" data-target="#myModal1" data-backdrop="static">更改注册电邮</a></span>
+			
+			<div class="blueborder">
+				<div class="email">
+					<span class="email-f1">电邮</span>
+					<span class="email-f2"><?=$this->session->userdata['email']?></span>
+					<span class="email-f3"><a href="#" data-toggle="modal" data-target="#myModal1" data-backdrop="static">更改注册电邮</a></span>
 
-					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog2">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-									<h4 class="modal-title" id="myModalLabel">变更电邮</h4>
-								</div><!-- modal-header 닫힘 -->
-								<div class="modal-body2">
-									  <div id='content'>
-											<span class="presentemail1">注册电邮</span><span class="presentemail2"><?=$this->session->userdata['email']?></span><br>
-											<span class="presentemail3">新电邮</span><input type="textbox" class="presentemail4 form-control" id='newMail' name='newMail'><br>
-											<span id='sendMail' name='sendMail' style='cursor:pointer'><ins><font color='#62b8ef'>发送电邮</font></ins></span>
-											<span class="presentemail5">密码</span><input type="password" class="presentemail6 form-control" id='mailPass' name='mailPass'><br>
-											<span class="presentemail7">重新输入新密码</span><input type="text" class="presentemail8 form-control" id='confirmNum' name='confirmNum'><br>
-											<input type="hidden" id='hiddenNum' name='hiddenNum'>
+						<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog2">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title" id="myModalLabel">变更电邮</h4>
+									</div><!-- modal-header 닫힘 -->
+									<div class="modal-body2">
+										  <div id='content'>
+												<span class="presentemail1">注册电邮</span><span class="presentemail2"><?=$this->session->userdata['email']?></span><br>
+												<span class="presentemail3">新电邮</span><input type="textbox" class="presentemail4 form-control" id='newMail' name='newMail'><br>
+												<span id='sendMail' name='sendMail' style='cursor:pointer'><ins><font color='#62b8ef'>发送电邮</font></ins></span>
+												<span class="presentemail5">密码</span><input type="password" class="presentemail6 form-control" id='mailPass' name='mailPass'><br>
+												<span class="presentemail7">重新输入新密码</span><input type="text" class="presentemail8 form-control" id='confirmNum' name='confirmNum'><br>
+												<input type="hidden" id='hiddenNum' name='hiddenNum'>
+										  </div>
+									</div><!-- modal-body 닫힘 -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" id="Email" name="Email">确定</button>
+										<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+									</div><!-- modal-footer 닫힘 -->
+								</div><!-- modal-content 닫힘 -->
+							</div><!-- modal-dialog 닫힘 -->
+						</div><!-- modal fade Overveiw 끝 -->
+				</div><!-- email end -->
 
-									  </div>
-								</div><!-- modal-body 닫힘 -->
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" id="Email" name="Email">确定</button>
-									<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
-								</div><!-- modal-footer 닫힘 -->
-							</div><!-- modal-content 닫힘 -->
-						</div><!-- modal-dialog 닫힘 -->
-					</div><!-- modal fade Overveiw 끝 -->
+				<div class="password">
+					<span class="password-f1">密码</span>
+					<span class="password-f2"><a href="#" data-toggle="modal" data-target="#myModal2" data-backdrop="static">更改密码</a></span>
 
-			</div><!-- email end -->
-			<div class="password">
-				<span class="password-f1">密码</span>
-				<span class="password-f2"><a href="#" data-toggle="modal" data-target="#myModal2" data-backdrop="static">更改密码</a></span>
+						<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog2">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
+										<h4 class="modal-title" id="myModalLabel">更改密码</h4>
+									</div><!-- modal-header 닫힘 -->
+									<div class="modal-body2">
+										  <div id='content'>
+												<span class="overviewpw-f1">目前的密码</span><input type="password" class="overviewpw-f2 form-control" id='oldPass' name='oldPass'><br>
+												<span class="overviewpw-f3">新密码</span><input type="password" class="overviewpw-f4 form-control" id='newPass' name='newPass'><br>
+												<span class="overviewpw-f5">密码</span><input type="password" class="overviewpw-f6 form-control" id='againPass' name='againPass'>
+										  </div>
+									</div><!-- modal-body 닫힘 -->
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" id='changePass'> 确定</button>
+										<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+									</div><!-- modal-footer 닫힘 -->
+								</div><!-- modal-content 닫힘 -->
+							</div><!-- modal-dialog 닫힘 -->
+						</div><!-- modal fade Overveiw 끝 -->
 
-					<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog2">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
-									<h4 class="modal-title" id="myModalLabel">更改密码</h4>
-								</div><!-- modal-header 닫힘 -->
-								<div class="modal-body2">
-									  <div id='content'>
-											<span class="overviewpw-f1">目前的密码</span><input type="password" class="overviewpw-f2 form-control" id='oldPass' name='oldPass'><br>
-											<span class="overviewpw-f3">新密码</span><input type="password" class="overviewpw-f4 form-control" id='newPass' name='newPass'><br>
-											<span class="overviewpw-f5">密码</span><input type="password" class="overviewpw-f6 form-control" id='againPass' name='againPass'>
-									  </div>
-								</div><!-- modal-body 닫힘 -->
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" id='changePass'> 确定</button>
-									<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
-								</div><!-- modal-footer 닫힘 -->
-							</div><!-- modal-content 닫힘 -->
-						</div><!-- modal-dialog 닫힘 -->
-					</div><!-- modal fade Overveiw 끝 -->
-
-			</div><!-- password end -->
+				</div><!-- password end -->
+			</div>
 		</div><!-- accountDetail end -->
 
 
@@ -70,48 +72,51 @@
 			<div class="title2"> <!-- 라인 들어가는 타이틀 city부분 복제 -->
 				<div class="underline">基本资料</div>
 			</div>
-			<div class="grew">
-				<span class="grewup">国籍</span><span><?=$this->session->userdata['country_nm']?> </span><!--span>/City</span--><br>
-				<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4" data-backdrop="static">更改国籍 <!-- & City --> </a></span>
-				<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog2">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
-								<h4 class="modal-title" id="myModalLabel">个人资料变更</h4>
-							</div><!-- modal-header 닫힘 -->
-							<div class="modal-body2" id="body-height">
-								<div id='content'>
 
-									<div class="selectParent countrySelect" id="mypageCountrySelect">
-										<select class="select_option form-control" id='countrySelect' name='countrySelect'>
-										<?foreach($countryList as $v){?>
-											<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
-										<?}?>
-										</select>
+			<div class="blueborder">
+				<div class="grew">
+					<span class="grewup">国籍</span><span><?=$this->session->userdata['country_nm']?> </span><!--span>/City</span--><br>
+					<span class="grewup-f1"><a href="#" data-toggle="modal" data-target="#myModal4" data-backdrop="static">更改国籍 <!-- & City --> </a></span>
+					<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog2">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">取消</span></button>
+									<h4 class="modal-title" id="myModalLabel">个人资料变更</h4>
+								</div><!-- modal-header 닫힘 -->
+								<div class="modal-body2" id="body-height">
+									<div id='content'>
+
+										<div class="selectParent countrySelect" id="mypageCountrySelect">
+											<select class="select_option form-control" id='countrySelect' name='countrySelect'>
+											<?foreach($countryList as $v){?>
+												<option value="<?=$v->class?>,<?=$v->CODE?>"><?=$v->code_nm?></option>
+											<?}?>
+											</select>
+										</div>
+
+										<!--div class="selectParent citySelect">
+											<select class="select_option" id='citySelect' name='citySelect'>
+												<option value="Beijing">Beijing</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+												<option value="volvo">volvo</option>
+											</select>
+										</div-->
+
 									</div>
-
-									<!--div class="selectParent citySelect">
-										<select class="select_option" id='citySelect' name='citySelect'>
-											<option value="Beijing">Beijing</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
-											<option value="volvo">volvo</option>
-										</select>
-									</div-->
-
-								</div>
-							</div><!-- modal-body 닫힘 -->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" id='changeCountry'>确定</button>
-								<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
-							</div><!-- modal-footer 닫힘 -->
-						</div><!-- modal-content 닫힘 -->
-					</div><!-- modal-dialog 닫힘 -->
-				</div><!-- modal fade Overveiw 끝 -->
-			</div><!-- div.grew end -->
+								</div><!-- modal-body 닫힘 -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" id='changeCountry'>确定</button>
+									<button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+								</div><!-- modal-footer 닫힘 -->
+							</div><!-- modal-content 닫힘 -->
+						</div><!-- modal-dialog 닫힘 -->
+					</div><!-- modal fade Overveiw 끝 -->
+				</div><!-- div.grew end -->
+			</div>
 		</div><!-- basic information end -->
 
 
