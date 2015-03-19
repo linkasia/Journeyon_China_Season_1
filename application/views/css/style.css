@@ -1457,9 +1457,9 @@
 		#accountWrap #rightWrap .accountDetail .password .password-f2{top:50px;  left:170px; position: absolute;}
 
 
-		#accountWrap #rightWrap .basicInformation{width: 100%;  height: 160px; margin-top: 80px; margin-bottom: 20px; border-bottom: 1px solid #f0f1f5; position: relative; float: left;}
+		#accountWrap #rightWrap .basicInformation{width: 100%;  height: 160px; margin-top: 80px; margin-bottom: 20px; position: relative; float: left;}
 		#accountWrap #rightWrap .basicInformation:after{clear: both; display: none; *zoom:1;}
-		#accountWrap #rightWrap .basicInformation .grew{width: 500px; margin-left: 50px; position: relative; padding-top: 20px;}
+		#accountWrap #rightWrap .basicInformation .grew{width: 500px; margin-left: 50px; position: relative; padding-top: 20px; padding-bottom: 20px;}
 		#accountWrap #rightWrap .basicInformation .grew:after{clear: both; display: none; *zoom:1;}
 
 		#accountWrap #rightWrap .basicInformation .grew .grewup{float: left; position: relative; margin-right: 95px;}
@@ -1519,7 +1519,7 @@
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap1{width: 640px; height: 460px;}
 
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap2{
-			width: 100%; height: 250px; position: relative;
+			width: 100%; height: 190px; position: relative;
 			-webkit-border-radius: 20%;
 			-moz-border-radius: 20%;
 			border-radius: 20%;
@@ -1537,6 +1537,8 @@
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .phone_t{margin-left: 50px;}
 		#accountWrap #rightWrap .profileWrap1 .vcertiWrap3 .ID_t{margin-left: 50px; margin-top: 30px;}
 		#accountWrap #rightWrap .profileWrap1 .vtitle{margin-bottom: 30px; margin-top: 20px;}
+
+		#dismissingM{width: 100%;}
 
 		#accountWrap #rightWrap .profileWrap1 .ID_imgdiv{
 			width: 300px; height: 210px;

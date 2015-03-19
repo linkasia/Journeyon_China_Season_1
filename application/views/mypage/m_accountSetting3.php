@@ -23,6 +23,7 @@
 				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow3">
 			</div>
 
+
 			<hr>
 			<div class="vcertiWrap3">
 				<p class="vtitle">个人身份验证资料</p>
@@ -70,7 +71,15 @@
 				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow2">
 				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow3">
 			</div>
+			<!-- bootstrap alert dismissing -->
+			<div class="alert alert-danger alert-dismissible" role="alert" id="dismissingM">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>原因：</strong> 경고 메세지 들어갈 부분
+			</div>
 
+<hr>
 			<div class="vcertiWrap3">
 
 				<p class="vtitle">个人身份验证资料</p>
