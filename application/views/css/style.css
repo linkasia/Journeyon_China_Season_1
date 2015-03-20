@@ -139,8 +139,10 @@
 	#header_top2{
 		width: 100%;
 		height: auto;
-		/*background-color: rgba(0, 0, 0, 0.55);*/
-		background-position:center 0;
+		background-color: rgba(0, 0, 0, 0.55);
+		}
+
+	#abcd{		background-position:center 0;
 		 /*text-shadow: 0 -1px 0 #000;*/
 		background: rgb(135,224,253); /* Old browsers */
 		 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -152,8 +154,7 @@
 		 background: -ms-linear-gradient(45deg,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* IE10+ */
 		 background: linear-gradient(45deg,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* W3C */
 		 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-		 opacity: 0.8;
-		}
+		 opacity: 0.8;}
 	#header_top2>ul{width: 940px; height: 55px; position: relative; margin: 0 auto;}
 	#header_top2>ul>li{display: block; float: left; cursor: pointer;}
 	#header_top2>ul>li.logo{width: 173px; height: 55px; background-image: url(/application/views/images/main/img01_logo.png); position: absolute; left: -9px;}
