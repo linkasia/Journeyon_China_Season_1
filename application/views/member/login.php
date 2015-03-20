@@ -117,6 +117,7 @@
 		<script type="text/javascript">
 			function checkLoginState() {
 				FB.getLoginStatus(function(response) {
+					document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
 					statusChangeCallback(response);
 					document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
 
@@ -132,7 +133,9 @@
 						version    : 'v2.2' // use version 2.2
 					});
 					FB.getLoginStatus(function(response) {
+						document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
 					statusChangeCallback(response);
+					document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
 				});
 			};
 
@@ -141,7 +144,7 @@
 				if (d.getElementById(id)) return;
 				js = d.createElement(s); js.id = id;
 				js.src = "//connect.facebook.net/en_US/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
+				fjs.parentNode.insertBefore(js, fjs);http://www.linkasia.co.kr/application/views/images/main/bg03.jpg
 			}(document, 'script', 'facebook-jssdk'));
 
 			function testAPI() {
