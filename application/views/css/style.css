@@ -1,7 +1,9 @@
 /* CSS 스타일링 초기화 */
 	*{margin: 0; padding: 0;}
 	body{
-		font-family: "华文黑体", "Microsoft YaHei", Georgia, "Times New Roman", "나눔고딕", "微软雅黑", STXihei, "华文细黑", serif; color: #a9a9a9; width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden;
+		font-family: "华文黑体", "Microsoft YaHei", Georgia, "Times New Roman", "나눔고딕", "微软雅黑", STXihei, "华文细黑", serif;
+		/*font-family:"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","华文细黑","STHeiti","微软雅黑","Microsoft YaHei",SimHei,sans-serif ;*/
+		color: #a9a9a9; width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden;
 		font-size: 14px;
 		font-weight: normal;
 		color: #666;
@@ -12,14 +14,8 @@
 	a{text-decoration: none;}
 	img{border: 0;}
 
-
-	
-
-
-
 /* 전체를 감싸는 wrap */
 	#wrap{width: 100%; height: auto; margin: 0 auto;}
-
 
 /* Header 부분 스타일링 */
 	#header_wrap{width: 100%; height: 450px; background-size: 1920px 450px; background-attachment: fixed; background-position: center 0; position: relative; z-index: 100; overflow: hidden;}
@@ -34,7 +30,7 @@
 		}
 
 	#abc{
-			 /*text-shadow: 0 -1px 0 #000;*/
+		 /*text-shadow: 0 -1px 0 #000;*/
 		background: rgb(135,224,253); /* Old browsers */
 		 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 		 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjODdlMGZkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDAlIiBzdG9wLWNvbG9yPSIjNTNjYmYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA1YWJlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
@@ -118,6 +114,7 @@
 	#how_worksmodal .modal-body{
 		height: 250px;
 	}
+
 	.how_works_p{
 	font-size: 1.0125em;
 	}
@@ -214,8 +211,6 @@
 		width: 610px; height: 620px; margin: 120px auto 0 auto;
 		background-color: rgba(0,0,0,0.55);
 		border-radius: 5px;
-		
-		
 		}
 	
 	.form-group .member_container{width: 280px; height: auto; margin: 0 auto; padding-top: 110px;}
@@ -279,9 +274,7 @@
 
 	#writeForm{width: 980px;}
 
-
 	#titleBox{margin-top: 20px;}
-
 	#boardTable thead tr th.th1{	width: 15%;}
 	#boardTable thead tr th.th2{	width: 10%;}
 	#boardTable thead tr th.th3{	width: 45%;}
@@ -294,11 +287,10 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;}
-	 #thead{width: 980px;}
+	#thead{width: 980px;}
 	#boardTable tbody{width: 980px; height: 500px;}
 	#boardTable tr{width: 980px;}
 	
-
 	#noticeboardWrap{
 		margin: 40px auto;
 		width: 980px;
@@ -1077,7 +1069,6 @@
 			float: left;
 			background-color: #fff;
 			} 
-		
 
 
 	/* 캘린더 아래 날짜 출력되는 부분 */
@@ -1723,15 +1714,8 @@
 	background: #f8f8f8;
 	border: 3px solid #ddd;
 	}
-
-
-
-
-
-
 		
 		/* ------------------------------------------------- 마이페이지 가이드 menu ------------------------------------------------- */
-
 		#guideWrap{width: 940px; position: relative; margin: 30px auto 0 auto;}
 		#guideWrap:after{clear: both; display: none; *zoom:1;}
 		
@@ -1747,7 +1731,6 @@
 
 
 		/* ----------------- 오른쪽 영역 스타일링  ------------------ */
-		
 		/* 타이틀 줄 모아서 관리 */
 		#guideWrap .profileWrap1 .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
@@ -1802,7 +1785,6 @@
 				cursor: pointer;
 			}
 
-
 		#guideWrap .profileWrap1 #guidehomeWrap{width: 100%; position: relative;}
 		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv{width: 680px; height: 397px; position: relative; background-color: #ddd; overflow: hidden; margin-bottom: 30px;}
 		#guideWrap .profileWrap1 #guidehomeWrap .guideimgDiv .guideimgBand2{width: 100%; height: 40px; background-color: rgba(0,0,0,0.75); filter:Alpha(opacity=75); position: absolute; top: 357px; color: #fff; line-height: 40px;}
@@ -1822,7 +1804,6 @@
 		#guidemodal-dialog{width: 800px;}
 		#guidemodal-dialog	.modal-body{height: 600px; overflow-y: scroll;}
 		/*가이드 내부 모달 페이지 CSS*/
-
 
 		/* Guide Request (m_guide1.php)*/
 		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
@@ -2306,12 +2287,7 @@
 		left: 120px;
 		color: #fff;
 	}
-
-
-
 	#productWrapAll .productDiv3 .picUpload:hover{background-color: #0699D3; opacity: 1;}
-
-
 
 	#productWrapAll .productDiv3 .picUpload img{width: 100%; height: 100%; display: block; cursor: pointer;}
 	#productWrapAll .productDiv3 .picUpload span.picture{position: absolute; right: 2%; top: 78%; font-size: 30pt; color: white;}
@@ -2393,8 +2369,6 @@
 
 	#productWrapAll #saveProduct{margin-left: 280px; margin-right: 5px;}
 	#productWrapAll .productInfo{width: 230px; border: 1px solid #f0f1f5; float: left; padding: 10px; background-color: #f9fafc;}
-
-
 
 /* View on Public */
 
@@ -2511,7 +2485,6 @@
 			opacity: 0;
 	}
 
-
 		#mypublicWrap #rightDiv #profileQuestion #inputImage:hover{
 			opacity: 0;
 			background: rgba(0, 0, 0,.2);
@@ -2520,7 +2493,6 @@
 			transition: all ease .6s;
 			font-size: 0px;
 		}
-
 
 	#mypublicWrap #rightDiv #profileQuestion .profilepicAdd .uploadImg{width: 100%; height: 100%;}
 
@@ -3643,5 +3615,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 	background: #f8f8f8;
 	border: 3px solid #ddd;
 	}
-
-
