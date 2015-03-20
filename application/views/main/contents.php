@@ -216,7 +216,7 @@
 		</section>
 	</div> <!-- contents wrap3 끝남 -->
 
-	<div id="contents wrap4">
+	<div id="contents_wrap4">
 		<section id="section4">
 			<div class="sub_title"> <h4>最新上传的首尔旅行 <span> / 最新准备的首尔旅行！</span></h4> </div>
 
@@ -360,7 +360,7 @@
 		function pushEvent(){
 			if(document.getElementById('section2').style.height == "0px"){
 				document.getElementById('section2').style.transition="all ease .8s";
-				document.getElementById('section2').style.height="390px";
+				document.getElementById('section2').style.height="370px";
 			}else{
 				document.getElementById('section2').style.transition="all ease .8s";
 				document.getElementById('section2').style.height="0px";
