@@ -340,8 +340,8 @@
 		margin-bottom: 50px;
 	}
 
-	#contents_wrap1>#section1{width: 940px; height: 250px; margin: 0px auto;}
-	#contents_wrap1>#section1>div.city_title{text-align: center; padding-top: 20px; padding-bottom: 10px;}
+	#contents_wrap1>#section1{width: 940px; height: 215px; margin: 0px auto;}
+	#contents_wrap1>#section1>div.city_title{text-align: center; padding-top: 5px;}
 
 	#contents_wrap1>#section1>div.city_icon>div:nth-of-type(1){margin-left: 11px;}
 	#contents_wrap1>#section1>div.city_icon>div{display: block; float: left; text-align: center; margin-right: 15px; margin-top: 15px; text-decoration: none; color: #666;}
