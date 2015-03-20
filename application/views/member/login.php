@@ -117,13 +117,18 @@
 		<script type="text/javascript">
 			function checkLoginState() {
 				FB.getLoginStatus(function(response) {
-					document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
+					if (response.status === 'connected') {
+						FB.api('/me', function(response) {
+							console.log(response);
+							document.getElementById('status').innerHTML =
+							'Thanks for logging in, ' + response.name + '!';
+						});
+					}
 					statusChangeCallback(response);
-					document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
-
 				});
 			}
 
+		
 			window.fbAsyncInit = function() {
 				FB.init({
 						appId      : '456909761123705',
@@ -133,9 +138,7 @@
 						version    : 'v2.2' // use version 2.2
 					});
 					FB.getLoginStatus(function(response) {
-						document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
 					statusChangeCallback(response);
-					document.getElementById('test').innerHTML = "::::>"+response.name + "::>"+response.name;
 				});
 			};
 
@@ -144,14 +147,13 @@
 				if (d.getElementById(id)) return;
 				js = d.createElement(s); js.id = id;
 				js.src = "//connect.facebook.net/en_US/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);http://www.linkasia.co.kr/application/views/images/main/bg03.jpg
+				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 
 			function testAPI() {
 				console.log('Welcome!  Fetching your information.... ');
 				FB.api('/me', function(response) {
 					console.log('Successful login for: ' + response.name);
-					alert(response.name);
 					document.getElementById('status').innerHTML =
 					'Thanks for logging in, ' + response.name + '!';
 				});
