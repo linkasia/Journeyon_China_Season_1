@@ -112,11 +112,15 @@
 				</div>
 			</div>
 		</div>
+		<div id='test'></div>
 		<!--/form-->
 		<script type="text/javascript">
 			function checkLoginState() {
 				FB.getLoginStatus(function(response) {
+					document.getElementById('test').innerHTML = "::::>"+response;
 					statusChangeCallback(response);
+					document.getElementById('test').innerHTML = "::::>"+response;
+
 				});
 			}
 
@@ -129,7 +133,9 @@
 						version    : 'v2.2' // use version 2.2
 					});
 					FB.getLoginStatus(function(response) {
+						document.getElementById('test').innerHTML = "::::>"+response;
 					statusChangeCallback(response);
+					document.getElementById('test').innerHTML = "::::>"+response;
 				});
 			};
 
@@ -145,6 +151,7 @@
 				console.log('Welcome!  Fetching your information.... ');
 				FB.api('/me', function(response) {
 					console.log('Successful login for: ' + response.name);
+					alert(response.name);
 					document.getElementById('status').innerHTML =
 					'Thanks for logging in, ' + response.name + '!';
 				});
