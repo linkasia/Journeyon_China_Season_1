@@ -101,6 +101,7 @@
 					LEFT JOIN country_table b ON a.mother_area_code = b.class AND a.mother_country_code = b.code
 					WHERE a.email = '".$mail."'
 					AND a.password = '".$password."'";
+					//print_r($sql);
 			$query = $this->db->query($sql);
 
 			if($query->num_rows() > 0)

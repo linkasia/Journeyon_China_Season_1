@@ -52,8 +52,8 @@ foreach($salesCityQnA as $v){
 						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
 					<?}?>
 				</div>
-					<textarea name="reviewArea" id="reviewArea" cols="30" rows="10" class="typingArea"></textarea>
-					<button class="btn btnQna" id="review"name="review" onclick="insertReview('<?=$this->session->userdata['num']?>')">上传</button>
+					<textarea name="quetionArea" id="quetionArea" cols="30" rows="10" class="typingArea"></textarea>
+					<button class="btn btnQna" id="review"name="review" onclick="insertQuetion('<?=$this->session->userdata['num']?>')">上传</button>
 			</div>
 		<?}
 		}?>

@@ -22,7 +22,6 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 
 	function index()
 	{
-
 		$data['country'] = $this->main_i->Country();
 		$data['Travel'] = $this->main_i->Travel();
 		$data['choice'] = $this->main_i->Admin_choice();
@@ -91,11 +90,11 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 			$mailTitle = "感谢您注册，请验证您的邮箱！";
 			$message="<div style='width: 100%; padding: 20px; background-color: #f0f1f5; color: #666;'>";
 			$message.="<div style='width: 800px; background-color: #fff; margin: 20px; border: 1px solid #f0f1f5; padding: 20px; font-size: 1.2em;'>";
-		
+
 			$message.="<h1 style='text-align:center;'>感谢您注册Journey on！</h1><br>";
 			$message.="<p>您的登陆名为：<span style='color:navy';>$mail</span><br>	点击以下链接，开始创造旅游新文化吧！</p><br>";
 			$message.="<a href='http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail' style='color:navy';>http://www.linkasia.co.kr/index.php/auth/member_comfirm?to=$mail</a><br><br><br><br>
-				
+
 					<p>如果以上链接无法访问，请将该网址复制并粘贴至新的浏览器窗口中。<br>如果你错误地收到了此电子邮件，你无需执行任何操作来取消帐号！此帐号将不会启动。</p>
 					<hr style='border:none; color:red; background-color:red; height: 1px; width: 99%;'>
 					<p>我是系统自动发送的邮件，请不要直接回复哦。</p>
@@ -103,7 +102,7 @@ class auth extends CI_Controller { // controller 파일이름이 곧 class파일
 			$message.="</div>";
 		}
 
-		
+
 
 		$config['mailtype']  = "html";
 		$config['charset']   = "utf-8";
