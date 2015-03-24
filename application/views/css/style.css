@@ -1135,7 +1135,7 @@
 		position: absolute;
 		top: 0px;
 		left: 13px;
-		margin-left: 50px;
+		margin-left: 44px;
 		}
 	#right_aside .aside-like{
 		position: relative;
@@ -1144,7 +1144,7 @@
 		}
 	#right_aside .aside-like span{
 		position: absolute;
-		top: 2px;
+		top: 7px;
 		left: 95px;
 		line-height: 30px;	
 	}

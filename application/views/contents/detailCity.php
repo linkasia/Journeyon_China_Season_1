@@ -126,9 +126,9 @@
 						<?if($bucketList != null){?>
 							<?foreach($bucketList as $c){
 								if($c->cnt == 0){?>
-									<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')"> <span>&nbsp;想去</span>
+									<img src='/application/views/images/contents/heart_g.png' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')"> <span>不想去</span>
 							<?}else{?>
-									<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')"> <span>&nbsp;想去</span>
+									<img src='/application/views/images/contents/heart.png' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')"> <span style="color:#f1592a;">&nbsp;想去</span>
 							<?}?>
 
 						<?}
@@ -379,7 +379,7 @@
 				data:{ salesNum : _salesNum},
 				url:"/index.php/city/country/procuctLike",
 				success: function (data){
-					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart_g.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('d')\"><span>&nbsp;想去</span>";
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart_g.png' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('d')\"><span>不想去</span>";
 				}
 			});
 		}else{
@@ -390,7 +390,7 @@
 				data:{ salesNum : _salesNum},
 				url:"/index.php/city/country/procuctLikeDown",
 				success: function (data){
-					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart.PNG' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('g')\"><span>&nbsp;想去</span>";
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart.png' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('g')\"><span style='color:#f1592a;'>&nbsp;想去</span>";
 				}
 			});
 		}
