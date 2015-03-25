@@ -687,7 +687,7 @@
 
 	/*타이틀, 아래 버튼*/
 	.title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px;} /*주의*/
-	.title .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
+	.title .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	.sort{width: 100%; height: 40px;}
 	.flr{float: right;}
 
@@ -823,7 +823,7 @@
 	#left_section .menuTab button{width: 120px;}
 	#left_section .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative;} /* 메뉴 아래로 contents 싸는 랩 */
 	#left_section .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-	#left_section .contents_wrap .title .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
+	#left_section .contents_wrap .title .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	.contents_text1{width: 690px; height: auto; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
 
 	#left_section .contents_wrap .contents_img{width: 660px; height: 576px; margin: 0 auto;}
@@ -844,7 +844,7 @@
 
 	#previewWrap{
 		width: 720px; margin: 20px auto 20px auto;
-		border: 1px solid #FF7D26;
+		border: 1px solid #53cbf1;
 		padding: 10px;
 		border-radius: 8px;
 		}
@@ -858,7 +858,7 @@
 	 .menuTab button{width: 120px;}
 	 .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative;} /* 메뉴 아래로 contents 싸는 랩 */
 	 .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-	 .contents_wrap .title .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
+	 .contents_wrap .title .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	 .contents_wrap .contents_text1{width: 690px; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
 
 	 .contents_wrap .contents_img{width: 660px; height: 576px; margin: 0 auto;}
@@ -917,21 +917,21 @@
 		/* salesCity1.php 전체 감싸는 wrap은 공유 */
 		#left_section .contents_wrap .profileWrap1{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#left_section .contents_wrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 20px;}
-		#left_section .contents_wrap .profileWrap1 .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#left_section .contents_wrap .profileWrap1 .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#left_section .contents_wrap .profileWrap1 .profile_text1{width: 190px; height: auto; text-align: right; float: left; margin-left: 40px;}
 		#left_section .contents_wrap .profileWrap1 .profile_text2{width: 220px; height: 200px; text-align: left; float: left; margin-left: 10px;}
 		#left_section .contents_wrap .profileWrap1 .sns_icon img{width: 24px; height: 24px; cursor: pointer; margin-top: 5px;}
 
 		#left_section .contents_wrap .profileWrap2{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#left_section .contents_wrap .profileWrap2 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#left_section .contents_wrap .profileWrap2 .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 300px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#left_section .contents_wrap .profileWrap2 .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 300px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#left_section .contents_wrap .profileWrap2 .profile_text3{width: 300px; height: ; float: left; margin-left: 40px;}
 		#left_section .contents_wrap .profileWrap2 .profile_text4{width: 300px; height: ; float: left; margin-left: 10px;}
 		#left_section .contents_wrap .profileWrap2 .profile_text3 .tag{width: ; height: 24px; background-color: #f0f1f5; border-radius: 10px; float: left; margin-right: 10px; line-height: ;}
 
 		#left_section .contents_wrap .profileWrap3{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#left_section .contents_wrap .profileWrap3 .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#left_section .contents_wrap .profileWrap3 .title3 .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#left_section .contents_wrap .profileWrap3 .title3 .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		#left_section .contents_wrap .profileWrap3 .contents_list1{width: 100%; height: 180px; border: solid #f0f1f5 1px; margin-top: 15px; position: relative; cursor: pointer;}
 		#left_section .contents_wrap .profileWrap3 .list_image1{width: 270px; height: 180px; background-color: #eee; position: relative; float: left; cursor: pointer;}
@@ -963,12 +963,12 @@
 		#left_section .contents_wrap .profileWrap4 .title4,
 		#left_section .contents_wrap .profileWrap5 .title5
 		{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#left_section .contents_wrap .profileWrap4 .title4 .underline{border-bottom: 2px #FF7D26 solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#left_section .contents_wrap .profileWrap4 .title4 .underline{border-bottom: 2px #53cbf1 solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		#left_section .contents_wrap .profileWrap4 .somenail_wrap{margin-left: 35px;}
 
 
-		#left_section .contents_wrap .profileWrap5 .title5 .underline{border-bottom: 2px #FF7D26 solid; width: 201px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#left_section .contents_wrap .profileWrap5 .title5 .underline{border-bottom: 2px #53cbf1 solid; width: 201px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		#left_section ul:after{clear: both; display: block; *zoom: 1;}
 		#left_section ul > li{float: left; margin-right: 13px; margin-bottom: 20px;}
@@ -998,7 +998,7 @@
 
 		#left_section .contents_wrap .profileWrap5{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#left_section .contents_wrap .profileWrap5 .title5{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#left_section .contents_wrap .profileWrap5 .title5 .underline{border-bottom: 2px #FF7D26 solid; width: 195px; height: 40px; line-height: 40px; font-size: 1.35em;}*/
+		#left_section .contents_wrap .profileWrap5 .title5 .underline{border-bottom: 2px #53cbf1 solid; width: 195px; height: 40px; line-height: 40px; font-size: 1.35em;}*/
 
 
 
@@ -1006,7 +1006,7 @@
 	#right_aside{width: 230px; height: auto; margin-left: 20px; margin-top: 120px; float: left;}
 	#right_aside .right_reservation{
 		width: 230px; margin-bottom: 20px; padding: 10px 10px 0 10px;
-		border-radius: 8px; padding-bottom: 30px; border: 1px solid #FF7D26;
+		border-radius: 8px; padding-bottom: 30px; border: 1px solid #53cbf1;
 		/*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);*/
 		}
@@ -1079,7 +1079,7 @@
 	.checkdateClosebtn{position: absolute; top: -7px; right: 3px; cursor: pointer;}
 
 	/*오른쪽 프로필 chating과 스타일링 공유 중 */
-	.right_profile{width: 230px; border: 1px solid #FF7D26; border-radius: 12px; position: relative; padding-bottom: 10px; padding-top: 10px;}
+	.right_profile{width: 230px; border: 1px solid #53cbf1; border-radius: 12px; position: relative; padding-bottom: 10px; padding-top: 10px;}
 	.right_profile .gray_box{width: 100%; height: 30px; top: 46px; position: absolute; text-indent: 120pt; line-height: 30px; color: #fff;
 		background: rgb(255,125,38); /* Old browsers */
 		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -1090,7 +1090,7 @@
 		background: -o-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* Opera 11.10+ */
 		background: -ms-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* IE10+ */
 		background: linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7d26', endColorstr='#ff9e42',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53cbf1', endColorstr='#ff9e42',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 	}
 	.right_profile .gray_box .profile_image{width: 74px; height: 74px; position: absolute; left: 10px; top:-20px;}
 	.right_profile .gray_box .flag_image{width: 20px; height: 14px; left: 0px; top: 10px; position: absolute;}
@@ -1180,7 +1180,7 @@
 		#mypage_wrap #mypage_rightWrap .profileWrap1{width: 710px; height: ; float: left; margin-bottom: 20px; position: relative;}
 		#mypage_wrap #mypage_rightWrap .profileWrap1:after{clear: both; display: none; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-		#mypage_wrap #mypage_rightWrap .profileWrap1 .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .profileWrap1 .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .profileWrap1 .profile_text1{width: 190px; height: auto; text-align: right; float: left; margin-left: 40px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap1 .profile_text2{width: 470px; height: 200px; text-align: left; float: left; margin-left: 10px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap1 .sns_icon img{width: 24px; height: 24px; cursor: pointer; margin-top: 5px; display: block; margin-right: 2px; float: left;}
@@ -1189,7 +1189,7 @@
 
 		#mypage_wrap #mypage_rightWrap .profileWrap2{width: 690px; height: ; float: left; margin-bottom: 20px; position: relative;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#mypage_wrap #mypage_rightWrap .profileWrap2 .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 300px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .profileWrap2 .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 300px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .profile_text3{width: 300px; height: ; float: left; margin-left: 40px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .profile_text4{width: 300px; height: ; float: left; margin-left: 10px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap2 .profile_text3 .tag{width: ; height: 24px; background-color: #f0f1f5; border-radius: 5px; float: left; margin-right: 10px; padding: 5px; line-height: ;}
@@ -1198,7 +1198,7 @@
 
 		#mypage_wrap #mypage_rightWrap .profileWrap3{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap3 .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#mypage_wrap #mypage_rightWrap .profileWrap3 .title3 .underline{border-bottom: 2px #FF7D26 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .profileWrap3 .title3 .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		/* 여기서부터 마이페이지 list페이지 1 */
 		#mypage_wrap #mypage_rightWrap .profileWrap3 .contents_list1{width: 100%; height: 180px; border: solid #f0f1f5 1px; margin-top: 15px; position: relative; cursor: pointer;}
@@ -1228,7 +1228,7 @@
 
 		#mypage_wrap #mypage_rightWrap .profileWrap4{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#mypage_wrap #mypage_rightWrap .profileWrap4 .title4{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#mypage_wrap #mypage_rightWrap .profileWrap4 .title4 .underline{border-bottom: 2px #FF7D26 solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .profileWrap4 .title4 .underline{border-bottom: 2px #53cbf1 solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .profileWrap4 .somenail_wrap{width: 100%; height: 800px; margin-left: 0px; border: 1px solid #f0f1f5; background-color: #fefefe;}
 
 		/*섬네일 끌어온 부분 CSS*/
@@ -1256,7 +1256,7 @@
 
 		#mypage_wrap #mypage_rightWrap  .profileWrap5{width: 690px; height: ; float: left; margin-bottom: 20px;}
 		#mypage_wrap #mypage_rightWrap  .profileWrap5 .title5{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
-		#mypage_wrap #mypage_rightWrap  .profileWrap5 .title5 .underline{border-bottom: 2px #FF7D26 solid; width: 200px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap  .profileWrap5 .title5 .underline{border-bottom: 2px #53cbf1 solid; width: 200px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		#mypage_wrap #mypage_rightWrap .reply{width: 100%; background-color: ; float: left; position: relative; margin-bottom: 20px;}
 		#mypage_wrap #mypage_rightWrap .reply .profile_pic{width: 110px; height: 90px; position: relative; background-color: ; float: left;}
@@ -1271,7 +1271,7 @@
 		#mypage_wrap #mypage_rightWrap .chatlistWrap{width: 710px; height: ; float: left; margin-bottom: 20px; position: relative;}
 		#mypage_wrap #mypage_rightWrap .chatlistWrap:after{clear: both; display: none; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap .chatlistWrap .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#mypage_wrap #mypage_rightWrap .chatlistWrap .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .chatlistWrap .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 45px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .chatlistWrap button{float: right; margin-left: 4px;}
 
 		#mypage_wrap #mypage_rightWrap .chatlistWrap .reply{width: 100%; background-color: ; float: left; position: relative; margin-bottom: 0px; margin-top: 30px; margin-left: 5px;}
@@ -1289,7 +1289,7 @@
 		#mypage_wrap #mypage_rightWrap .accountWrap{width: 710px; height: ; float: left; margin-bottom: 20px; position: relative;}
 		#mypage_wrap #mypage_rightWrap .accountWrap:after{clear: both; display: none; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap .accountWrap .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#mypage_wrap #mypage_rightWrap .accountWrap .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 75px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .accountWrap .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 75px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .accountWrap button{float: right; margin-right: 50px; margin-top: 0px;}
 
 		#mypage_wrap #mypage_rightWrap .accountWrap .accountInfo{width: 100%; height: 230px; background-color: ; padding-left: 15px;}
@@ -1309,7 +1309,7 @@
 		#mypage_wrap #mypage_rightWrap .hostWrap{width: 710px; height: ; float: left; margin-bottom: 20px; position: relative;}		
 		#mypage_wrap #mypage_rightWrap .hostWrap:after{clear: both; display: none; *zoom: 1;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 140px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 140px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .sort_button{width: 100%; height: 40px;}
 		#mypage_wrap #mypage_rightWrap .hostWrap button{margin-right: 5px; margin-top: 0px; float: right;}
 
@@ -1334,7 +1334,7 @@
 
 		/* host_sales 전체 싸는 랩은 위에 */
 		#mypage_wrap #mypage_rightWrap .hostWrap .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .sort_button{width: 100%; height: 40px;}
 		#mypage_wrap #mypage_rightWrap .hostWrap button{margin-right: 5px; margin-top: 0px; float: right;}
 
@@ -1358,7 +1358,7 @@
 		
 		/* host_sales 전체 싸는 랩은 위에 */
 		#mypage_wrap #mypage_rightWrap .hostWrap .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#mypage_wrap #mypage_rightWrap .hostWrap .title3 .underline{border-bottom: 2px #FF7D26 solid; width: 136px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#mypage_wrap #mypage_rightWrap .hostWrap .title3 .underline{border-bottom: 2px #53cbf1 solid; width: 136px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#mypage_wrap #mypage_rightWrap .hostWrap .sort_button{width: 100%; height: 40px;}
 
 		/* guestCounsel */
@@ -1408,19 +1408,19 @@
 
 		/* 타이틀 밑줄 */
 		#accountWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-		#accountWrap .profileWrap1 .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
-		#accountWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #FF7D26 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .profileWrap1 .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #53cbf1 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		#accountWrap .accountDetail .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-		#accountWrap .accountDetail .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .accountDetail .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 		#accountWrap .basicInformation .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-		#accountWrap .basicInformation .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .basicInformation .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		
 		#accountWrap .profileWrap1 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-		#accountWrap .profileWrap1 .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 136px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .profileWrap1 .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 136px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#accountWrap .profileWrap1 .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-		#accountWrap .profileWrap1 .title3 .underline{border-bottom: 2px #FF7D26 solid; width: 56px; height: 40px; line-height: 40px; font-size: 1.35em;}
+		#accountWrap .profileWrap1 .title3 .underline{border-bottom: 2px #53cbf1 solid; width: 56px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 
 		/* 오른쪽 영역 */
@@ -1734,13 +1734,13 @@
 		/* ----------------- 오른쪽 영역 스타일링  ------------------ */
 		/* 타이틀 줄 모아서 관리 */
 		#guideWrap .profileWrap1 .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
+		#guideWrap .profileWrap1 .title0 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 		#guideWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 116px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
+		#guideWrap .profileWrap1 .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 116px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 		#guideWrap .profileWrap1 .title1_2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #FF7D26 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
+		#guideWrap .profileWrap1 .title1_2 .underline{border-bottom: 2px #53cbf1 solid; width: 90px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 		#guideWrap .profileWrap1 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guideWrap .profileWrap1 .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 98px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
+		#guideWrap .profileWrap1 .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 98px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 
 		#guideWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
 		#guideWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
@@ -2115,7 +2115,7 @@
 
 		/*  타이틀, 아래 컨텐츠 CSS */
 		#guestWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 120px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
 
 		#guestWrap .profileWrap1 #guesthomeWrap{width: 100%; position: relative; float: left;}
 		#guestWrap .profileWrap1 #guesthomeWrap .guestimgDiv{width: 680px; height: 397px; position: relative; background-color: #ddd; overflow: hidden; margin-bottom: 30px;}
@@ -2131,11 +2131,11 @@
 
 		/* 게스트 두 번째 페이지 */
 		#guestWrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
-		#guestWrap .profileWrap1 .title9 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+		#guestWrap .profileWrap1 .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+		#guestWrap .profileWrap1 .title9 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
 		#guestWrap .profileWrap1 .title9{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guestWrap .profileWrap1 .title10{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
-		#guestWrap .profileWrap1 .title10 .underline{border-bottom: 2px #FF7D26 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
+		#guestWrap .profileWrap1 .title10 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0px 0 20px 0;}
 
 		#selectDiv{
 			width: 100%;
@@ -2572,7 +2572,7 @@
 	#chatlistWrap{width: 940px; min-height: 600px; position: relative; margin: 30px auto 0 auto;}
 	#chatlistWrap:after{clear: both; display: none; *zoom:1;}
 	#chatlistWrap .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-	#chatlistWrap .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
+	#chatlistWrap .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	#chatlistWrap .chatlistDiv{width: 100%; position: relative; border-bottom: 1px solid #f0f1f5; margin-bottom: 30px; float: left; cursor: pointer;}
 	#chatlistWrap .chatlistDiv .chat1{width: 100%; height: 140px;}
 
@@ -2726,28 +2726,28 @@
 		
 	
 #rightWrap .title0{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title0 .underline{border-bottom: 2px #FF7D26 solid; width: 42px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title0 .underline{border-bottom: 2px #53cbf1 solid; width: 42px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 #rightWrap .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title1 .underline{border-bottom: 2px #FF7D26 solid; width: 59px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 59px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 #rightWrap .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title2 .underline{border-bottom: 2px #FF7D26 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 #rightWrap .title3{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title3 .underline{border-bottom: 2px #FF7D26 solid; width: 118px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title3 .underline{border-bottom: 2px #53cbf1 solid; width: 118px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 #rightWrap .title4{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title4 .underline{border-bottom: 2px #FF7D26 solid; width: 116px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title4 .underline{border-bottom: 2px #53cbf1 solid; width: 116px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 #rightWrap .title5{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title5 .underline{border-bottom: 2px #FF7D26 solid; width: 138px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title5 .underline{border-bottom: 2px #53cbf1 solid; width: 138px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 #rightWrap .title6{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title6 .underline{border-bottom: 2px #FF7D26 solid; width: 97px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title6 .underline{border-bottom: 2px #53cbf1 solid; width: 97px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 #rightWrap .title7{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: ;}
-#rightWrap .title7 .underline{border-bottom: 2px #FF7D26 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
+#rightWrap .title7 .underline{border-bottom: 2px #53cbf1 solid; width: 79px; height: 40px; line-height: 40px; font-size: 1.35em;}
 
 
 /* Info */
@@ -2990,7 +2990,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 
 .somenail_fix{width: 300px; height: 240px; overflow: hidden;}
 .githubTest{width: 600; height: 400; background-color: #eee;}
-.txt_blue{font-weight: 600; color: #FF7D26;}
+.txt_blue{font-weight: 600; color: #53cbf1;}
 .sub_title{margin-bottom: 20px; font-size: 1.2em; margin-top: 20px;}
 
 

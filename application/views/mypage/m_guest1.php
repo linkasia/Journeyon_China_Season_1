@@ -3,7 +3,7 @@
 			<div class="title9">
 				<div class="underline">我的收藏</div>
 			</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
-
+			<img src="/application/views/images/mypage/bucket.jpg" alt="" class="mb20">
 			<div id="selectDiv" class="bd">
 				<?foreach($bucketList as $v){?>
 				<div id="somenailwrapDiv">
