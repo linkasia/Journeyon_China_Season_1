@@ -11,6 +11,8 @@
 	margin: 0 auto;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
+	background-image: url(/application/views/images/main/p01.png);
+	background-color: #f0f1f5;
 }
 
 .sp-slides-container {
