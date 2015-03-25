@@ -175,15 +175,16 @@ class adminMenu extends CI_Controller { // controller 파일이름이 곧 class�
 
 	/*공고저장*/
 	function adminInsertNotice(){
-
-		$head = $_REQUEST['head'];
+		$head = $_REQUEST['inputHeader'];
 		$subject = $_REQUEST['subject'];
-		$contents = $_REQUEST['contents'];
+		$contents = $_REQUEST['ir1'];
 		$num = $this->session->userdata['num'];
 
 		$insert['insertNotice'] = $this->adminProcess->noticeWrite($head, $subject,$contents, $num);
 		$data['noticeList'] = $this->adminProcess->noticeList();
+		$this->load->view('include/header');
 		$this->load->view('admin/adminNotice',$data);
+		$this->load->view('include/footer');
 	}
 
 	/*공고삭제*/

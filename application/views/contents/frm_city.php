@@ -73,7 +73,7 @@
 				</div> <!-- contents_list1 닫음  -->
 				<?}
 				}else{?>
-					<div class="firstGuideDiv">	
+					<div class="firstGuideDiv">
 						<div class="firstGuideband">
 							<p class="firstGuideP tac">최초의 가이드가 되어주세요</p>
 						</div>

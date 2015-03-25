@@ -56,6 +56,7 @@
 								) AS u
 								LEFT JOIN spot z ON u.product_num = z.product_num
 								GROUP BY product_num";
+								//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;
@@ -67,7 +68,15 @@
 			$sqlplus = "";
 
 			if($guideType != ""){
-				$sqlplus = "";
+
+				if(strripos($guideType,"0002") != ""){
+					$sqlplus .= "AND b.g_get_code = '0001'";
+				}
+
+				if(strripos($guideType,"0003") != ""){
+					$sqlplus .= " AND b.pg_get_code = '0001'";
+				}
+
 			}
 
 			if($genderCode != ""){
@@ -95,6 +104,8 @@
 							FROM(	SELECT b.mother_area_code,
 															b.mother_country_code,
 															b.v_get_code,
+															b.g_get_code,
+															b.pg_get_code,
 															b.face_img_path,
 															b.gender_code,
 															c.code_nm AS country_nm,
@@ -110,6 +121,7 @@
 															h.code_nm AS recom2,
 															h.ref1 AS refrecom2,
 															a.*,
+															COUNT(j.product_num) AS reviewCnt,
 															COUNT(i.product_num) AS cnt
 												FROM product a
 												LEFT JOIN USER b ON a.user_num=b.user_num
@@ -120,6 +132,7 @@
 												LEFT JOIN code_table g ON a.recommend1_code=g.code AND g.class = '0013'
 												LEFT JOIN code_table h ON a.recommend2_code=h.code AND h.class = '0013'
 												LEFT JOIN user_has_bucket_list i ON a.product_num = i.product_num
+												LEFT JOIN review j ON a.product_num = j.product_num
 											WHERE sortcountry='".$scountry."'
 											AND a.country_code='".$countryList."'
 											AND a.useYn = 'Y'

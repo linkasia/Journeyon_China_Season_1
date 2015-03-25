@@ -317,7 +317,7 @@
 			</div>
 			<div class="news_wrap">
 				<div class="title">卓尼在线 新闻</div>
-				<div id="noticeTablediv"onclick="notice()">
+				<div id="noticeTablediv">
 					<!-- <img src="/application/views/images/main/sns03.jpg" alt="" /> -->
 					<table id="noticeTable" class="table">
 						<thead class="tac">
@@ -328,21 +328,18 @@
 							</tr>
 						</thead>
 						<tbody>
+						<?
+						$i=0;
+						foreach($noticeList as $v){
+							if($i < 9){?>
 							<tr>
-								<td class="ntd1">[가이드]</td>
-								<td class="ntd2">어디 놀러갔다왔어요어디 놀러갔다왔어요어디 놀러 갔다 왔어요</td>
-								<td class="ntd3">2015-03-17</td>
+								<td class="ntd1"><?=$v->board_title?></td>
+								<td class="ntd2"><a href="/index.php/admin/adminMenu/adminNotice_review?num=<?=$v->board_num?>"><?=$v->board_subject?></a></td>
+								<td class="ntd3"><?=$v->board_reg_date?></td>
 							</tr>
-							<tr>
-								<td class="ntd1">[가이드]</td>
-								<td class="ntd2">어디 놀러갔다왔어요어디 놀러갔다왔어요어디 놀러 갔다 왔어요</td>
-								<td class="ntd3">2015-03-17</td>
-							</tr>
-							<tr>
-								<td class="ntd1">[가이드]</td>
-								<td class="ntd2">어디 놀러갔다왔어요어디 놀러갔다왔어요어디 놀러 갔다 왔어요</td>
-								<td class="ntd3">2015-03-17</td>
-							</tr>
+						<?}
+						$i++;
+						}?>
 						</tbody>
 					</table>
 				</div>
@@ -350,11 +347,12 @@
 		</section>
 
 	</div>
-	<div class="fb-comments" data-href="https://www.facebook.com/weihaikorea" data-numposts="5" data-colorscheme="light"></div>
-	<div id="fb-root"></div>
+	<!-- <div class="fb-comments" data-href="https://www.facebook.com/weihaikorea" data-numposts="5" data-colorscheme="light"></div>
+	<div id="fb-root"></div> -->
 <!-- <iframe src="https://www.facebook.com/shareevent/app_552924508082093" scrolling="no" frameborder="1" style="border:none; overflow:hidden; width:470px; height:250px;" id='frmFacebook' name='frmFacebook'> </iframe>
  -->
 	<script type="text/javascript">
+	/*
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -362,11 +360,12 @@
   js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&appId=1076643705712373&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
-		function notice(){
+*/
+/*
+		function notice(key){
 			location.href = "/index.php/admin/adminMenu/adminNotice";
 		}
-
+*/
 		function pushEvent(){
 			if(document.getElementById('section2').style.height == "0px"){
 				document.getElementById('section2').style.transition="all ease .8s";

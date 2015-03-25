@@ -52,6 +52,21 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 		<script type="text/javascript" src="/application/views/js/bootstrap-select.js"></script>
 
+		<!-- HTML 편집기-->
+		<script type="text/javascript" src="/application/views/js/HuskyEZCreator.js" charset="utf-8"></script>
+		<!-- <script type="text/javascript" src="/application/views/js/jindo.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/application/views/js/jindo_component.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/application/views/js/SE2B_Configuration_Service.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/application/views/js/SE2B_Configuration_General.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/application/views/js/SE2BasicCreator.js" charset="utf-8"></script>
+		<script src='/application/views/js/smarteditor2.min.js' charset='utf-8'></script>
+		<script src='photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js' charset='utf-8'></script>
+
+		<link href="/application/views/css/smart_editor2.css" rel="stylesheet" type="text/css"> -->
+		<!-- end-->
+
+		<script src='js/smarteditor2.min.js' charset='utf-8'></script>
+		<script src='photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js' charset='utf-8'></script>
 
 		<!-- 캘린더 js 불러온 부분 -->
 		<link rel="stylesheet" href="/application/views/jqwidgets/styles/jqx.base.css" type="text/css" />
