@@ -837,7 +837,7 @@
 
 	
 	div.information_wrap{width: 690px; border-bottom: 1px solid #a9a9a9; margin-bottom: 20px;}
-	div.information_wrap dl.information dt{margin-top: 10px; color: #0699D3;}
+	div.information_wrap dl.information dt{margin-top: 10px; color: #53CBF1;}
 	div.information_wrap dl.information dt img{margin-right: 5px;}
 	div.information_wrap dl.information dd{text-indent: 16pt; margin-bottom: 30px;}
 	.contents_text2{width: 690px; height: auto; margin-top: 50px;}
@@ -859,7 +859,7 @@
 	 .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative;} /* 메뉴 아래로 contents 싸는 랩 */
 	 .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
 	 .contents_wrap .title .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
-	 .contents_wrap .contents_text1{width: 690px; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
+	 .contents_wrap .contents_text1{width: 690px; margin: 0 auto 20px auto; font-size: 1.2em; color: #53CBF1;}
 
 	 .contents_wrap .contents_img{width: 660px; height: 576px; margin: 0 auto;}
 	
@@ -1005,15 +1005,17 @@
 	/*오른쪽 예약박스 detailCity.php */
 	#right_aside{width: 230px; height: auto; margin-left: 20px; margin-top: 120px; float: left;}
 	#right_aside .right_reservation{
-		width: 230px; margin-bottom: 20px; padding: 10px 10px 0 10px;
-		border-radius: 8px; padding-bottom: 30px; border: 1px solid #53cbf1;
+		float: left;
+		position: relative;
+		width: 230px; margin-bottom: 20px; padding: 10px 10px 10px 10px;
+		border-radius: 8px; border: 1px solid #53cbf1;
 		/*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);*/
 		}
 
 	#right_aside .right_reservation .price{margin-bottom: 30px;}
 	#right_aside .right_reservation .price .price_title{margin-top: 10px;}
-	#right_aside .right_reservation .price .price_sub{text-align: right; font-size: 1.3em; font-weight: 700; color: #0699D3;}
+	#right_aside .right_reservation .price .price_sub{text-align: right; font-size: 1.3em; font-weight: 700; color: #53CBF1;}
 	#right_aside .right_reservation .calandar img{margin-left: 5px; margin-top: 10px;}
 	#right_aside .right_reservation .calandar .select{}
 	#right_aside .right_reservation .calandar{margin-top: 10px;}
@@ -1079,20 +1081,23 @@
 	.checkdateClosebtn{position: absolute; top: -7px; right: 3px; cursor: pointer;}
 
 	/*오른쪽 프로필 chating과 스타일링 공유 중 */
-	.right_profile{width: 230px; border: 1px solid #53cbf1; border-radius: 12px; position: relative; padding-bottom: 10px; padding-top: 10px;}
+	.right_profile{
+		width: 230px; border: 1px solid #53cbf1; border-radius: 12px; position: relative; padding-bottom: 10px; padding-top: 10px;
+		float: left;
+		}
 	.right_profile .gray_box{width: 100%; height: 30px; top: 46px; position: absolute; text-indent: 120pt; line-height: 30px; color: #fff;
-		background: rgb(255,125,38); /* Old browsers */
-		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmY3ZDI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjZmY3ZDI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzElIiBzdG9wLWNvbG9yPSIjZmY5ZTQyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmOWU0MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-		background: -moz-linear-gradient(45deg,  rgba(255,125,38,1) 0%, rgba(255,125,38,1) 70%, rgba(255,158,66,1) 71%, rgba(255,158,66,1) 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(255,125,38,1)), color-stop(70%,rgba(255,125,38,1)), color-stop(71%,rgba(255,158,66,1)), color-stop(100%,rgba(255,158,66,1))); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* IE10+ */
-		background: linear-gradient(45deg,  rgba(255,125,38,1) 0%,rgba(255,125,38,1) 70%,rgba(255,158,66,1) 71%,rgba(255,158,66,1) 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53cbf1', endColorstr='#ff9e42',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+		background: rgb(135,224,253); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjODdlMGZkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNTNjYmYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA1YWJlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(45deg,  rgba(135,224,253,1) 1%, rgba(83,203,241,1) 50%, rgba(5,171,224,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,rgba(135,224,253,1)), color-stop(50%,rgba(83,203,241,1)), color-stop(100%,rgba(5,171,224,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  rgba(135,224,253,1) 1%,rgba(83,203,241,1) 50%,rgba(5,171,224,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  rgba(135,224,253,1) 1%,rgba(83,203,241,1) 50%,rgba(5,171,224,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  rgba(135,224,253,1) 1%,rgba(83,203,241,1) 50%,rgba(5,171,224,1) 100%); /* IE10+ */
+background: linear-gradient(45deg,  rgba(135,224,253,1) 1%,rgba(83,203,241,1) 50%,rgba(5,171,224,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 	}
-	.right_profile .gray_box .profile_image{width: 74px; height: 74px; position: absolute; left: 10px; top:-20px;}
+	.right_profile .gray_box .profile_image{width: 74px; height: 74px; position: absolute; left: 10px; top:-20px; display: block; text-indent: 0;}
 	.right_profile .gray_box .flag_image{width: 20px; height: 14px; left: 0px; top: 10px; position: absolute;}
 	.right_profile .gray_box .vmark_image{width: 18px; height: 18px; left: 68px; top: 40px; position: absolute;}
 	.right_profile .gray_box .btn{display: block; position: absolute; top: 20px; width: 150px;}
@@ -1129,24 +1134,38 @@
 
 	.profile-btn{display: block; bottom: 20px; margin-left: 50px;} /*버튼*/
 
-	#right_aside #pls_login{margin-left: 37px;}
-	#right_aside .aside-menu{margin-top: 5px;}
-	#right_aside .aside-like img{
+	#right_aside #pls_login{
 		position: absolute;
-		top: 0px;
-		left: 13px;
-		margin-left: 44px;
+		display: block;
+		top: 465px;
+		left: 78px;
+		font-size: 16px;
+		color: #fff;
+		cursor: pointer;
+		}
+
+	.likeImage{
+		cursor: pointer;
+	}
+	#right_aside .aside-menu{margin-top: 5px;
+	float: left;
+	}
+	#right_aside .aside-like img{
+		top: -10px;
+		left: 0px;
+		float: left;
 		}
 	#right_aside .aside-like{
 		position: relative;
-		height: 30px;
 		cursor: pointer;
 		}
 	#right_aside .aside-like span{
 		position: absolute;
-		top: 7px;
-		left: 95px;
+		top: 113px;
+		left: 100px;
 		line-height: 30px;	
+		color: #fff;
+		font-size: 24px;
 	}
 	#right_aside #likeUp{
 		float: left;
@@ -2426,7 +2445,7 @@
 		-moz-border-radius: 15px;
 		border-radius: 15px;
 		}
-	#mypublicWrap #rightDiv #introduceSelf .headline{font-size: 1.3em; color: #0699D3;}
+	#mypublicWrap #rightDiv #introduceSelf .headline{font-size: 1.3em; color: #53CBF1;}
 	#mypublicWrap #rightDiv #profileQuestion{
 		width: 660px;
 		position: relative;

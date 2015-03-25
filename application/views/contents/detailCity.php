@@ -64,7 +64,7 @@
 						{
 							if($this->session->userdata['email']!=null){
 							?>
-								<textarea class="mt20" name="recheckTextarea" id="recheckTextarea" placeholder="채팅 내용을 입력해주세요"></textarea>
+								<textarea class="mt20" name="recheckTextarea" id="recheckTextarea" placeholder="  채팅 내용을 입력해주세요"></textarea>
 							<?}
 						}?>
 					</div>
@@ -73,10 +73,11 @@
 						{
 							if($this->session->userdata['email']!=null){
 							?>
-						<button type="submit" class="btn btn-info mb20" id="calPop" name="calPop">定制游咨询</button>
+						<button type="submit" class="btn btn-info mb10" id="calPop" name="calPop">定制游咨询</button>
 						<?}
 						}else{?>
-							<input type='button' class="btn btn-default" id="pls_login" name="pls_login" value="马上去登陆或注册" onclick="loginUser()">
+							<img src="/application/views/images/contents/like_g.png" alt="" class="likeImage loginEvent" onclick="loginUser()">
+							<span id="pls_login" name="pls_login" onclick="loginUser()">马上去登陆或注册</span>
 						<?}?>
 						<!-- Modal 여기서부터 Overview 박스 시작 -->
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -126,9 +127,10 @@
 						<?if($bucketList != null){?>
 							<?foreach($bucketList as $c){
 								if($c->cnt == 0){?>
-									<img src='/application/views/images/contents/heart_g.png' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')"> <span>不想去</span>
+									<img src='/application/views/images/contents/like_g.png' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('g')"> <span onclick="likeChoice('g')">不想去</span>
 							<?}else{?>
-									<img src='/application/views/images/contents/heart.png' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')"> <span style="color:#f1592a;">&nbsp;想去</span>
+									<img src='/application/views/images/contents/like.png' alt='' id='likeProduct' name='likeProduct' onclick="likeChoice('d')">
+									<span style="color:#f1592a;" onclick="likeChoice('d')">&nbsp;想去</span>
 							<?}?>
 
 						<?}
@@ -315,6 +317,8 @@
 			});
 		});
 
+
+
 		$('#city3').click( function(){
 			var _user=document.getElementById('user_num').value;
 
@@ -379,7 +383,7 @@
 				data:{ salesNum : _salesNum},
 				url:"/index.php/city/country/procuctLike",
 				success: function (data){
-					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart_g.png' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('d')\"><span>不想去</span>";
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/like_g.png' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('d')\"><span onclick=\"likeChoice('d')\">不想去</span>";
 				}
 			});
 		}else{
@@ -390,7 +394,7 @@
 				data:{ salesNum : _salesNum},
 				url:"/index.php/city/country/procuctLikeDown",
 				success: function (data){
-					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/heart.png' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('g')\"><span style='color:#f1592a;'>&nbsp;想去</span>";
+					document.getElementById('likeUp').innerHTML = "<img src='/application/views/images/contents/like.png' alt='' id='likeProduct' name='likeProduct' onclick=\"likeChoice('g')\"><span style='color:#f1592a;' onclick=\"likeChoice('g')\">&nbsp;想去</span>";
 				}
 			});
 		}
