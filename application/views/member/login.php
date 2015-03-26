@@ -235,6 +235,8 @@
 								//failMessge += "</button>";
 								//failMessge += "<strong>登录失败。请再尝试。</strong>";
 								document.getElementById('alertDiv').style.display = "block";
+							}else if(data = "noLogin"){
+								alert("로그인 된 아이디 입니다.");
 							}
 
 							//alert("已发送密码至您的邮箱.");

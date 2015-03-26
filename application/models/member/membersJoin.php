@@ -114,6 +114,24 @@
 			}
 		}
 
+		function sessionLogin($mail)
+		{
+			$sql ="SELECT COUNT(*) AS cnt
+							FROM ci_sessions
+							WHERE user_data LIKE '%".$mail."%'";
+					//print_r($sql);
+			$query = $this->db->query($sql);
+
+			if($query->num_rows() > 0)
+			{
+				return $query->row();
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
+
 		function searchEmail($mail)
 		{
 			$sql ="SELECT *

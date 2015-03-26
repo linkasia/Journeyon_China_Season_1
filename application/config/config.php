@@ -246,6 +246,7 @@ $config['encryption_key'] = '1234';
 */
 $config['sess_cookie_name']		= 'ci_session';
 $config['sess_expiration']		= 0;
+//$config['sess_expiration']		= 7200; //기본 7200초 2시간,  0무한섹션
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= TRUE;
 $config['sess_use_database']	= TRUE;
