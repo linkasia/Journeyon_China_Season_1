@@ -274,14 +274,32 @@
 
 	#writeForm{width: 980px;}
 
-	#titleBox{margin-top: 20px;}
+	#titleBox{
+		border: 1px solid #53CBF1;
+		margin-top: 20px;
+		background-image: url(/application/views/images/main/p01.png);
+		color: #53cbf1;
+		padding-bottom: 15px;
+		border-radius: 15px;
+		margin-bottom: 20px;
+		}
+
+	#boardTable thead{
+		border-color: #53cbf1;
+		background-color: #53cbf1;
+		color: #fff;
+	}
 	#boardTable thead tr th.th1{	width: 15%;}
 	#boardTable thead tr th.th2{	width: 10%;}
 	#boardTable thead tr th.th3{	width: 45%;}
 	#boardTable thead tr th.th4{	width: 15%;}
 	#boardTable thead tr th.th5{	width: 15%;}
 
-	 #boardTable{width: 980px; table-layout:fixed;}
+	 #boardTable{
+		width: 980px; table-layout:fixed;
+		border-color: #53cbf1;		
+		}
+
 	 #boardTable td{
 		word-break:break-all;
 		text-overflow: ellipsis;
@@ -289,7 +307,10 @@
 		overflow: hidden;}
 	#thead{width: 980px;}
 	#boardTable tbody{width: 980px; height: 500px;}
-	#boardTable tr{width: 980px;}
+	#boardTable tr{
+		width: 980px;
+		border-color: #53cbf1;
+		}
 	
 	#noticeboardWrap{
 		margin: 40px auto;
@@ -299,20 +320,23 @@
 	#btnDiv{
 		padding-left: 770px;
 		margin-top: 20px;
+		margin-bottom: 40px;
 	}
 
 	#tableinDiv{width: 980px; float: left; text-overflow: ellipsis; overflow: hidden; padding: 10px;}
 
 	#btnDiv button{padding-left: 30px; padding-right: 30px; margin-right: 10px;}
 
-	#btnDiv2{padding-left: 657px; margin-top: 20px;}
-	#btnDiv2 button{padding-left: 30px; padding-right: 30px; float: right; margin-top: 10px;}
+	#btnDiv2{
+		padding-left: 700px;
+		margin-top: 20px;
+		float: left;
+		margin-bottom: 40px;
+		}
+	#btnDiv2 button{padding-left: 30px; padding-right: 30px; float: right; margin-top: 10px; margin-right: 5px;}
 
 	#leftDiv2{width: 140px; float: left; margin-right: 20px;}
 	#rightDiv2{width: 820px; float: left;}
-
-
-
 	.controls1{margin-bottom: 30px; float: left;}
 
 
@@ -3026,6 +3050,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 #leftmenuWrap{
 	width: 180px;
 	float: left;
+	cursor: pointer;
 }
 
 #leftmenuWrap .list-group-item:hover{
@@ -3062,6 +3087,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 	width: 1080px;
 	height: 1000px;
 	background-color: #f9fafc;
+	margin-bottom: 60px;
 }
 
 

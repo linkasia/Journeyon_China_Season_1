@@ -2,13 +2,13 @@
 
 	<div id="titleBox" class="tac">
 		<h3 class="pageTitle">Notice Board</h3>
-		<h4 class="textGrey tac mb60">궁금하신게 있다면 글을 남겨 주세요</h4>
+		<h4 class="textGrey tac">궁금하신게 있다면 글을 남겨 주세요</h4>
 	</div>
 
 	<!-- 테이블 시작 -->
 	<table id="boardTable" class="table success mb20" style="float: left;">
 		<thead class="tac">
-			<tr class="bgf9fafc tac">
+			<tr class="tac">
 				<th class="th1 tac">번호</th>
 				<th class="th2 tac">말머리</th>
 				<th class="th3 tac">제목</th>

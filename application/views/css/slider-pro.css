@@ -13,6 +13,7 @@
 	box-sizing: content-box;
 	background-image: url(/application/views/images/main/p01.png);
 	background-color: #e1f7fb;
+	padding-bottom: 5px;
 }
 
 .sp-slides-container {

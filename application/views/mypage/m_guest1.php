@@ -13,7 +13,6 @@
 					</div><!-- somenailDiv end  -->
 					<div class="somenailText"><?=$v->country_nm?></div>
 				</div>
-				
 				<?}?>
 			</div>
 

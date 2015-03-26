@@ -2,7 +2,7 @@
 
 	<div id="titleBox" class="tac">
 		<h3 class="pageTitle">Notice Board</h3>
-		<h4 class="textGrey tac mb60">궁금하신게 있다면 글을 남겨 주세요</h4>
+		<h4 class="textGrey tac">궁금하신게 있다면 글을 남겨 주세요</h4>
 	</div>
 
 	<div id="writeForm">
@@ -10,7 +10,7 @@
 		<table id="boardTable" cellspaCodeigniter="0" cellpadding="0" class="table success">
 	<!--  cellspaCodeigniter="0" cellpadding="0" -->
 		<thead id="thead">
-			<tr class="bgf9fafc">
+			<tr class="">
 				<th class="th1">번호 : <?=$v->board_num?></th>
 				<th class="th2">[<?=$v->board_title?>]</th>
 				<th class="th3"><?=$v->board_subject?></th>
@@ -23,7 +23,7 @@
 				<?=$v->board_contents?>
 			</div>
 
-					<div class="btnGroup" id="btnDiv2">
+					<div class="" id="btnDiv2">
 						<button class="btn btn-info" id="write_btn3" name="write_btn3">목록</button>
 						<?
 						if(@$this->session->userdata['logged_in'] == TRUE)

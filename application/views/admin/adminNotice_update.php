@@ -2,7 +2,7 @@
 
 	<div id="titleBox" class="tac">
 		<h3 class="pageTitle">Notice Board</h3>
-		<h4 class="textGrey tac mb60">궁금하신게 있다면 글을 남겨 주세요</h4>
+		<h4 class="textGrey tac">궁금하신게 있다면 글을 남겨 주세요</h4>
 	</div>
 <?foreach($noticeDetail as $v){?>
 <input type='hidden' id='board_num' name='board_num' value='<?=$v->board_num?>'>
