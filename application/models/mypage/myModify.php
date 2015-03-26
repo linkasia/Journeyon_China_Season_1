@@ -206,7 +206,7 @@
 															h.ref1 AS refrecom2,
 															a.*,
 															COUNT(j.product_num) AS reviewCnt,
-															COUNT(j.product_num) AS likeCnt
+															COUNT(i.product_num) AS likeCnt
 											FROM product a
 											LEFT JOIN USER b ON a.user_num=b.user_num
 											LEFT JOIN country_table c ON b.mother_area_code=c.class AND b.mother_country_code = c.code
@@ -223,7 +223,7 @@
 							) AS u
 							LEFT JOIN spot z ON u.product_num = z.product_num
 							GROUP BY product_num";
-
+//print_r($sql);
 			$query = $this->db->query($sql);
 			$result = $query->result();
 			return $result;

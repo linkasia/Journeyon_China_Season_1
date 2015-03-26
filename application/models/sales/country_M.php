@@ -1031,7 +1031,7 @@
 													0,
 													'".$productNum."',
 													'".$user_num."')";
-
+print_r($sql);
 			$query = $this->db->query($sql);
 		}
 
@@ -1041,7 +1041,7 @@
 			$sql ="DELETE FROM user_has_bucket_list
 											WHERE product_num = '".$productNum."'
 											AND user_num = '".$user_num."'";
-			//print_r($sql);
+			print_r($sql);
 			$query = $this->db->query($sql);
 		}
 
