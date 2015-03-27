@@ -127,7 +127,9 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<?
 
 							?>
+						<li class="writeProduct" id="writeProduct" name="writeProduct">上传旅游信息</li>
 						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static">如何参与</li>
+
 						<!-- <li class="how_works" name="how_works" id="how_works"><a href="/index.php/City/country/productUpload" class="product-upload" id='productUpload' name='productUpload'><span class="glyphicon glyphicon-pencil"></span>  我要参与</a></li> -->
 
 
