@@ -8,7 +8,7 @@
 				<?foreach($bucketList as $v){?>
 				<div id="somenailwrapDiv">
 					<div class="somenailDiv img-circle" onclick="myBucketList('<?=$v->sortcountry?>','<?=$v->country_code?>')">
-						<img src="/application/views/images/contents/01mongolia.jpg" alt="countryImg" id="somenailImg" name="somenailImg">
+						<img src="><?=$v->ref2?>" alt="countryImg" id="somenailImg" name="somenailImg">
 						<p class="contentsNumber"><?=$v->cnt?></p>
 					</div><!-- somenailDiv end  -->
 					<div class="somenailText"><?=$v->country_nm?></div>

@@ -171,7 +171,8 @@
 											b.sortcountry,
 											b.country_code,
 											c.code_nm AS country_nm,
-											c.ref1
+											c.ref1,
+											c.ref2
 								FROM user_has_bucket_list a
 								LEFT JOIN product b ON a.product_num = b.product_num
 								LEFT JOIN country_table c ON b.sortcountry = c.class AND b.country_code = c.code
