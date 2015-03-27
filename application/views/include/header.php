@@ -127,7 +127,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 							<?
 
 							?>
-						<li class="writeProduct" id="writeProduct" name="writeProduct">上传旅游信息</li>
+
 						<li class="how_works" name="how_works" id="how_works" data-toggle="modal" data-target="#how_worksmodal" data-backdrop="static">如何参与</li>
 
 						<!-- <li class="how_works" name="how_works" id="how_works"><a href="/index.php/City/country/productUpload" class="product-upload" id='productUpload' name='productUpload'><span class="glyphicon glyphicon-pencil"></span>  我要参与</a></li> -->
@@ -141,7 +141,10 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 								$data['bookCount']= $this->country_M->bookCount($this->session->userdata['num']);
 								$data['msgCount']= $this->country_M->realChat( $this->session->userdata['num']);
 							// $this -> load ->view('/include/realtimechat',$data);
+									if($this->session->userdata['g_get_code']!=null){
 							?>
+							<li class="writeProduct" id="writeProduct" name="writeProduct" onclick="writePage()">上传旅游信息</li>
+							<?}?>
 							<li class="become_host" name="become_host" id="become_host">申请加入当地微导游</li>
 							<!-- <li class="login_email"><a href="/index.php/mypage/myPage_M/mypageintro" id="mypage"><?=$this->session->userdata['email']?></a></li> 이메일 -->
 							<!-- <a href="/index.php/member/memberJoin/logout" class="logout"></a> -->
@@ -212,6 +215,10 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 			function goChat(){
 				location.href = "/index.php/auth/chat_List";
+			}
+
+			function writePage(){
+				location.href = "http://localhost/index.php/mypage/myPage_M/myguide?mode=2";
 			}
 
 			$(function(){
