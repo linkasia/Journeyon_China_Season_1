@@ -30,6 +30,13 @@
 		background-color: rgba(0,0,0,.5);
 		 opacity: 1;
 		}
+
+	#header_wrap img{
+		width: 100%;
+		min-width: 1920px;
+		max-height: 350px;
+	}
+
 	.vidHeight{height: 450px;}
 
 	#abc{
