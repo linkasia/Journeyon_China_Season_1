@@ -199,9 +199,9 @@
 			<?}
 			}?>
 			</div>
+			</div>
 			<?}?>
 		</div><!-- profileWrap1 -->
 <?}
 }?>
 
-<div id='test'></div>

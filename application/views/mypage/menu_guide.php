@@ -16,6 +16,7 @@
 			if($mode == "1"){
 				$data['profileCnt'] = $this->myModify->myProfileCnt($this->session->userdata['num']);
 				$data['gGuide'] = $this->myModify->myCerticificationG($this->session->userdata['num']);
+				$data['pgGuide'] = $this->myModify->myCerticificationPG($this->session->userdata['num']);
 				$this->load->view('mypage/m_guide1',$data);
 			}else if($mode == "2"){
 				$data['reservation'] = $this->myModify->myReservationPage($this->session->userdata['num']);
