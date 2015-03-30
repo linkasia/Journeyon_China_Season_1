@@ -116,7 +116,6 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					<source src="/application/views/images/Paris-P1-1.mp4">
 					<source src="/application/views/images/Paris-P1-1.webm">
 				</video> -->
-				<?$this -> load ->view('/include/headerimg')?>
 				<header id="header_top">
 					<div id="darken"></div>
 					<ul>
