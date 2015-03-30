@@ -1,3 +1,5 @@
+<?$this -> load ->view('/include/headerimg')?>
+
 <div id="guestWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active2">旅行者主页</span></span>

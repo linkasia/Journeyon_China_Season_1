@@ -1,3 +1,5 @@
+<?$this -> load ->view('/include/headerimg')?>
+
 <div id="accountWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active2">编辑及设定&nbsp;&nbsp;<span class="glyphicon glyphicon-cog" aria-hidden="true"></span></span>

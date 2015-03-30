@@ -111,13 +111,13 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 	<body id="page-top" class="index">
 		<div id="wrap"><!-- wrap 각주에 글씨-->
-			<header id="header_wrap">
+			<header id="">
 				<!-- <video autoplay loop id="bgvid">
 					<source src="/application/views/images/Paris-P1-1.mp4">
 					<source src="/application/views/images/Paris-P1-1.webm">
 				</video> -->
 				<header id="header_top">
-					<div id="darken"></div>
+
 					<ul>
 						<li class="logo" name="logo" id="logo"></li>
 							<?
@@ -173,10 +173,6 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 					</ul>
 
 				</header>
-				<div id="headerTitle">
-					<h2 id="headerText"><img src="/application/views/images/main/headerText.png" alt=""></h2>
-					<h4 id="headerContents"></h4>
-				</div>
 			</header>
 		</div>
 
@@ -245,8 +241,5 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 			});
 
 		</script>
-
-
-
 	</body>
 </html>

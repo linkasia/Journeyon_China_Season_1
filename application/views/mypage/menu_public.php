@@ -1,3 +1,5 @@
+<?$this -> load ->view('/include/headerimg')?>
+
 <div id="mypublicWrap">
 <form name="profileUploadfrm" id="profileUploadfrm" method='post' enctype="multipart/form-data" action="/index.php/mypage/mypage_M/profileModify">
 	<?foreach($user as $v){?>

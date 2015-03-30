@@ -1,3 +1,5 @@
+<?$this -> load ->view('/include/headerimg')?>
+
 <div id="guideWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active2">微导主页</span>

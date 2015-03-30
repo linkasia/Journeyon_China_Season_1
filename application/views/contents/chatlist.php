@@ -1,3 +1,5 @@
+<?$this -> load ->view('/include/headerimg')?>
+
 <div id="chatlistWrap">
 	<div class="title2"> <!-- 라인 들어가는 타이틀 city부분 복제 -->
 		<div class="underline">留言记录</div>

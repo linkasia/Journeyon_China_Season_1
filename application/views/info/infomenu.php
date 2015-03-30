@@ -1,3 +1,5 @@
+<?$this -> load ->view('/include/headerimg')?>
+
 <div id="companyInfoWrap">
 	<aside id="leftmenuWrap">
 		<span class="list-group-item active2">Information</span></span>

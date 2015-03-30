@@ -3,6 +3,7 @@ $scountry = $_REQUEST['scountry'];
 $countryList = $_REQUEST['countryList'];
 $cityList = $_REQUEST['cityList'];
 ?>
+<?$this -> load ->view('/include/headerimg')?>
 <div id="contents_wrapEX"> <!-- 컨텐츠 영역 나중에 include -->
 	<div id="contents_wrapcenter"> <!-- 가운데로 가로값 줘서 가운데 정렬시키는 wrap -->
 

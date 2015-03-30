@@ -1,4 +1,4 @@
-<?$this -> load ->view('/include/headerimg')?>
+<?$this -> load ->view('/include/headervid')?>
 	<div id="contents_wrap1"> <!-- 컨텐츠 영역 나중에 include -->
 		<section id="section1">
 			<div class="city_title">
