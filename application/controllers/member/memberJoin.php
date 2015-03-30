@@ -55,12 +55,6 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 			$password = $_REQUEST['password'];
 
 			$result = $this->membersJoin->loginMember($email,$password);
-			$sessionsCnt = $this->membersJoin->sessionLogin($result->email);
-
-			if($sessionsCnt->cnt > 0){
-				print_r("noLogin");
-				return;
-			}
 
 			if($result)
 			{
