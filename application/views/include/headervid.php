@@ -1,4 +1,4 @@
-<div id="header_wrap">
+<div id="header_wrap" class="vidHeight">
 	<div id="darken"></div>
 	<video autoplay loop id="bgvid">
 		<source src="/application/views/images/g3.mp4">
