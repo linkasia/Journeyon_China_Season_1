@@ -1,3 +1,5 @@
+<div class="title"><div class="underline">Q & A</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
+<div class="blueborder2"><span class="glyphicon glyphicon-info-sign bf"></span>  호스트에게 무엇이든 물어보세요</div>
 <?
 foreach($salesCityQnA as $v){
 ?>

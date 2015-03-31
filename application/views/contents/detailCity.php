@@ -2,7 +2,7 @@
 	$salesNum = $_REQUEST['salesNum'];
 	$mode = $_REQUEST['mode'];
 ?>
-
+<?$this -> load ->view('/include/headerimg')?>
 <div id="detailCity_wrap" style="position: relative; display: block;">
 	<section id="left_section" style="position: relative; display: block;">
 		<div class="menuTab">
