@@ -28,7 +28,7 @@
 				<div id="footer_logo"></div>
 				<div class="copyright">
 					<p>电话 : 021-3132-1017 | QQ : 1925498778 <br>
-						Copyright © 2014 All rights reserved. ver 1.00.00 </p>
+						版权所有：沪ICP备14035966号 | Copyright © 2014 All rights reserved. ver 1.00.00 </p>
 				</div>
 			</div>
 		</footer>
