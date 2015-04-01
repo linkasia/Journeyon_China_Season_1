@@ -50,6 +50,7 @@
 
 		<script type="text/javascript" src="/application/views/js/bootstrap-select.js"></script>
 
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=YOUR APPKEY" type="text/javascript" charset="utf-8"></script>
 
 
 		<!-- simple modal plugin -->
@@ -100,12 +101,12 @@
 					<div class="div2"><span>使用其他账号登录</span></div>
 					<div class="div3"></div>
 					<div class="sns_icon">
-						<img src="/application/views/images/main/sns01.png" alt="taobao">
-						<img src="/application/views/images/main/sns02.png" alt="weibo">
-						><img src="/application/views/images/main/sns03.png" alt="qq" onclick='toQzoneLogin()'>
-						<img src="/application/views/images/main/sns04.png" alt="instagram">
+						<!-- <img src="/application/views/images/main/sns01.png" alt="taobao"> -->
+						<!-- <img src="/application/views/images/main/sns02.png" alt="weibo"> -->
+						<wb:login-button type="3,2" onlogin="login" onlogout="logout"></wb:login-button>
+						<img src="/application/views/images/main/sns03.png" alt="qq" onclick='toQzoneLogin()'>
+						<!-- <img src="/application/views/images/main/sns04.png" alt="instagram"> -->
 						<img src="/application/views/images/main/sns05.png" alt="baidu">
-						<img src="/application/views/images/main/sns06.png" alt="rinrin">
 						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 						<!-- img src="/application/views/images/main/sns07.png" alt="facebook" onclick="checkLoginState()"-->
 						<img src="/application/views/images/main/sns08.png" alt="alipay">
@@ -119,6 +120,35 @@
 			 function toQzoneLogin(){
 				childWindow = window.open("/application/views/member/qqLigin.php","TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
 			}
+
+
+WB2.anyWhere(function (W) {
+
+    W.widget.connectButton({
+
+        id: "wb_connect_btn",
+
+        type: '3,2',
+
+        callback: {
+
+            login: function (o) { //登录后的回调函数
+
+                alert("login: " + o.screen_name)
+
+            },
+
+            logout: function () { //退出后的回调函数
+
+                alert('logout');
+
+            }
+
+        }
+
+    });
+
+});
 
 			function checkLoginState() {
 				FB.getLoginStatus(function(response) {

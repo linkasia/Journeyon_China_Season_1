@@ -6,6 +6,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 <html lang="ko">
 	<head>
 		<meta property="qc:admins" content="27305065516275265176636" />
+		<meta property="wb:webmaster" content="0a1b7117ea110b5e" />
 		<meta charset="UTF-8">
 		<meta name="Generator" content="EditPlus®">
 		<meta name="Author" content="">
