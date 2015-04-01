@@ -85,23 +85,24 @@
 							<div class="right_text"><?=$v->describe_contents?></div>
 							<div class="bottom_text">
 								<div class="line1">
-								<?if($v->tem1 != ""){?>
-									<div class="tag"><img src="<?=$v->refrem1?>" alt=""><?=$v->tem1?></div>
-								<?}?>
-								<?if($v->tem2 != ""){?>
-									<div class="tag"><img src="<?=$v->refrem2?>" alt=""><?=$v->tem2?></div>
-								<?}?>
-								<?if($v->tem3 != ""){?>
-									<div class="tag"><img src="<?=$v->refrem3?>" alt=""><?=$v->tem3?></div>
-								<?}?>
+									<?if($v->tem1 != ""){?>
+										<div class="tag"><img src="<?=$v->refrem1?>" alt=""><?=$v->tem1?></div>
+									<?}?>
+									<?if($v->tem2 != ""){?>
+										<div class="tag"><img src="<?=$v->refrem2?>" alt=""><?=$v->tem2?></div>
+									<?}?>
+									<?if($v->tem3 != ""){?>
+										<div class="tag"><img src="<?=$v->refrem3?>" alt=""><?=$v->tem3?></div>
+									<?}?>
 								</div>
+
 								<div class="line2">
-								<?if($v->recom1 != ""){?>
-									<div class="tag2"><img src="<?=$v->refrecom1?>" alt=""><?=$v->recom1?></div>
-								<?}?>
-								<?if($v->recom2 != ""){?>
-									<div class="tag2"><img src="<?=$v->refrecom2?>" alt=""><?=$v->recom2?></div>
-								<?}?>
+									<?if($v->recom1 != ""){?>
+										<div class="tag2"><img src="<?=$v->refrecom1?>" alt=""><?=$v->recom1?></div>
+									<?}?>
+									<?if($v->recom2 != ""){?>
+										<div class="tag2"><img src="<?=$v->refrecom2?>" alt=""><?=$v->recom2?></div>
+									<?}?>
 								</div>
 							</div> <!-- bottom_text 닫음 -->
 						</div> <!-- list_rightwrap 닫음 -->
@@ -151,6 +152,7 @@
 				<div class="title4">
 					<div class="underline">点评</div>
 				</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
+				<div class="blueborder2"><span class="glyphicon glyphicon-info-sign bf"></span>  아직 내용이 없습니다</div>
 				<div class="somenail_wrap">
 					<ul class="somenail_list">
 					</ul>

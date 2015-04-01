@@ -2010,8 +2010,8 @@ button.jqx-button, input[type=button].jqx-button,  input[type=submit].jqx-button
 .jqx-calendar-cell-today
 {
     color: #898989;
-    background-color: #ffffdb;
-    border: 1px solid #fdc066;
+    background-color: #c4f0f7;
+    border: 1px solid #53CBF1;
     margin: 0 0 0 0;
     cursor: pointer;
 }
@@ -3340,8 +3340,8 @@ of the horizontal scrollbar.*/
 }
 
 /*applied to all widgets*/
-.jqx-widget{-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none; zoom: 1; color: #a9a9a9; -moz-background-clip: padding; background-clip: padding-box; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-appearance: none; -webkit-background-clip: padding-box; direction: ltr !important; -webkit-tap-highlight-color: rgba(0,0,0,0); font-family: Verdana,Arial,sans-serif; font-style: normal; font-size: 13px;}
-.jqx-widget2{-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none; zoom: 1; color: #a9a9a9; -moz-background-clip: padding; background-clip: padding-box; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-appearance: none; -webkit-background-clip: padding-box; direction: ltr !important; -webkit-tap-highlight-color: rgba(0,0,0,0); font-family: Verdana,Arial,sans-serif; font-style: normal; font-size: 13px;}
+.jqx-widget{-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none; zoom: 1; color: #666; -moz-background-clip: padding; background-clip: padding-box; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-appearance: none; -webkit-background-clip: padding-box; direction: ltr !important; -webkit-tap-highlight-color: rgba(0,0,0,0); font-family: Verdana,Arial,sans-serif; font-style: normal; font-size: 13px;}
+.jqx-widget2{-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none; zoom: 1; color: #666; -moz-background-clip: padding; background-clip: padding-box; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-appearance: none; -webkit-background-clip: padding-box; direction: ltr !important; -webkit-tap-highlight-color: rgba(0,0,0,0); font-family: Verdana,Arial,sans-serif; font-style: normal; font-size: 13px;}
 
 .jqx-item{-ms-touch-action: none; -moz-box-sizing: content-box; box-sizing: content-box;  color: inherit; -webkit-text-size-adjust: none;}
 .jqx-item2{-ms-touch-action: none; -moz-box-sizing: content-box; box-sizing: content-box;  color: inherit; -webkit-text-size-adjust: none;}
@@ -3353,8 +3353,8 @@ of the horizontal scrollbar.*/
 .jqx-widget-header {-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none;-moz-background-clip: padding; -webkit-text-size-adjust: none; background-clip: padding-box; -webkit-background-clip: padding-box; -webkit-tap-highlight-color: rgba(0,0,0,0); border-color: #c5c5c5; background-color: #f9fafc;}
 
 .jqx-fill-state-normal{-moz-box-sizing: content-box; box-sizing: content-box; -ms-touch-action: none;font-family: Verdana,Arial,sans-serif; font-style: normal; font-size: 13px; border-color:#aaa; background: #efefef; }
-.jqx-fill-state-hover {-moz-box-sizing: content-box; box-sizing: content-box; border-color:#999;  background: #e8e8e8;}
-.jqx-fill-state-pressed{-moz-box-sizing: content-box; box-sizing: content-box; border-color:#999; background: #d1d1d1;}
+.jqx-fill-state-hover {-moz-box-sizing: content-box; box-sizing: content-box; border-color:#53CBF1;  background: #c4f0f7;}
+.jqx-fill-state-pressed{-moz-box-sizing: content-box; box-sizing: content-box; border-color:#53CBF1; background: #c4f0f7;}
 .jqx-fill-state-focus {border-color: #555; }
 .jqx-fill-state-disabled {cursor: default; color: #000; opacity: .55; filter:Alpha(Opacity=45);}
 .jqx-fill-state-normal td, .jqx-fill-state-hover td, .jqx-fill-state-pressed td, .jqx-fill-state-disabled td, .jqx-fill-state-focus td, .jqx-widget td, .jqx-widget-content td, .jqx-widget-header td {
