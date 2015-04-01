@@ -2,7 +2,7 @@
 	$salesNum = $_REQUEST['salesNum'];
 	$mode = $_REQUEST['mode'];
 ?>
-
+<?$this -> load ->view('/include/headerimg')?>
 <div id="detailCity_wrap" style="position: relative; display: block;">
 	<section id="left_section" style="position: relative; display: block;">
 		<div class="menuTab">
@@ -39,6 +39,7 @@
 		<input type='hidden' id='hiddenProduct' name='hiddenProduct' value='<?=$salesNum?>' >
 			<?foreach($salesBasic as $v){?>
 				<input type='hidden' id='hiddenUser' name='hiddenUser' value='<?=$v->user_num?>' >
+				<input type='hidden' id='hiddenImg' name='hiddenImg' value='<?=$v->ref2?>' >
 				<div class="right_reservation">
 					<div class="price">
 						<p class="price_title">价格 :</p>
@@ -191,6 +192,7 @@
 	var _tmpCheckDate = "";
 
 	$( document ).ready(function( $ ) {
+		document.getElementById('bakGround').src = $('#hiddenImg').val();
 		var today = new Date();
 		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
 

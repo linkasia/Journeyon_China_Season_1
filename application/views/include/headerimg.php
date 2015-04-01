@@ -1,3 +1,3 @@
 <div id="header_wrap">
-	<img src="/application/views/images/main/bg03.png" alt="">
+	<img src="" alt="" id='bakGround' name='bakGround'>
 </div>

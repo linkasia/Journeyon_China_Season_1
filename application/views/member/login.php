@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
+		<meta property="qc:admins" content="27305065516275265176636" />
 		<meta charset="UTF-8">
 		<meta name="Generator" content="EditPlus®">
 		<meta name="Author" content="">
@@ -101,7 +102,7 @@
 					<div class="sns_icon">
 						<img src="/application/views/images/main/sns01.png" alt="taobao">
 						<img src="/application/views/images/main/sns02.png" alt="weibo">
-						<img src="/application/views/images/main/sns03.png" alt="qq">
+						><img src="/application/views/images/main/sns03.png" alt="qq" onclick='toQzoneLogin()'>
 						<img src="/application/views/images/main/sns04.png" alt="instagram">
 						<img src="/application/views/images/main/sns05.png" alt="baidu">
 						<img src="/application/views/images/main/sns06.png" alt="rinrin">
@@ -115,6 +116,10 @@
 		<div id='test'></div>
 		<!--/form-->
 		<script type="text/javascript">
+			 function toQzoneLogin(){
+				childWindow = window.open("/application/views/member/qqLigin.php","TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+			}
+
 			function checkLoginState() {
 				FB.getLoginStatus(function(response) {
 					if (response.status === 'connected') {
