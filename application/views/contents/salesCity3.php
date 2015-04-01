@@ -1,8 +1,16 @@
 			<?foreach($userInfo as $v){?>
 			<div class="profileWrap1">
 				<div class="title1"><div class="underline">基本信息</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
-				<div class="profile_text1">是否是专业导游<br>Host<br>生活在<br>现居住在纽约<br>年龄<br>性别<br>注册时间<br>语言<br><br>职业<br>最近登录时间<br></div>
-				<div class="profile_text2"><?if($v ->g_get_code=="0001"){ ?>是<?}else{?>no<?}?><br><?if($v ->v_get_code=="0001"){ ?>Available<?}else{?>no<?}?><br><?=$v->live_country?><br><?=$v->live_country_year?>年<br><?=$v->age?>岁<br><?=$v->gender?><br><?=$v->create_day?><br><?=$v->lang1?>（<?=$v->langSkill1?>）<?=$v->lang2?>（<?=$v->langSkill2?>）<?=$v->lang3?>（<?=$v->langSkill3?>）<br>学生、专业<br>10分钟前（微博为准）<br>
+				<div class="profile_text1">是否是专业导游<br>Host<br>生活在<br>现居住在纽约<br>年龄<br>性别<br>注册时间<br>语言<br><br><br>职业<br>最近登录时间<br></div>
+				<div class="profile_text2">
+					<?if($v ->g_get_code=="0001"){ ?>是<?}else{?>no<?}?><br>
+					<?if($v ->v_get_code=="0001"){ ?>Available<?}else{?>no<?}?><br>
+					<?=$v->live_country?><br><?=$v->live_country_year?>年<br>
+					<?=$v->age?>岁<br>
+					<?=$v->gender?><br>
+					<?=$v->create_day?><br>
+					<?=$v->lang1?>（<?=$v->langSkill1?>）<br><?=$v->lang2?>（<?=$v->langSkill2?>）<br><?=$v->lang3?>（<?=$v->langSkill3?>）<br>
+					学生、专业<br>10分钟前（微博为准）<br>
 				<div class="sns_icon">
 					<img src="/application/views/images/main/sns01.png" alt="">
 					<img src="/application/views/images/main/sns02.png" alt="">
@@ -48,10 +56,10 @@
 						<div class="list_image1">
 							<div class="band">
 								<div class="wishcount">
-									<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image"><?=$v->cnt?>
+									<img src="/application/views/images/main/img23_heart.PNG" alt="" class="heart_image"> <?=$v->cnt?>
 								</div>
 								<div class="reviewcount">
-									<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image"><?=$v->reviewCnt?>
+									<img src="/application/views/images/main/img24_talkbox.PNG" alt="" class="talkbox_image"> <?=$v->reviewCnt?>
 								</div>
 								<div class="localcount">
 									<img src="/application/views/images/main/img27_navi.PNG" alt="" class="navi_image">	当地人
@@ -77,23 +85,24 @@
 							<div class="right_text"><?=$v->describe_contents?></div>
 							<div class="bottom_text">
 								<div class="line1">
-								<?if($v->tem1 != ""){?>
-									<div class="tag"><img src="<?=$v->refrem1?>" alt=""><?=$v->tem1?></div>
-								<?}?>
-								<?if($v->tem2 != ""){?>
-									<div class="tag"><img src="<?=$v->refrem2?>" alt=""><?=$v->tem2?></div>
-								<?}?>
-								<?if($v->tem3 != ""){?>
-									<div class="tag"><img src="<?=$v->refrem3?>" alt=""><?=$v->tem3?></div>
-								<?}?>
+									<?if($v->tem1 != ""){?>
+										<div class="tag"><img src="<?=$v->refrem1?>" alt=""><?=$v->tem1?></div>
+									<?}?>
+									<?if($v->tem2 != ""){?>
+										<div class="tag"><img src="<?=$v->refrem2?>" alt=""><?=$v->tem2?></div>
+									<?}?>
+									<?if($v->tem3 != ""){?>
+										<div class="tag"><img src="<?=$v->refrem3?>" alt=""><?=$v->tem3?></div>
+									<?}?>
 								</div>
+
 								<div class="line2">
-								<?if($v->recom1 != ""){?>
-									<div class="tag2"><img src="<?=$v->refrecom1?>" alt=""><?=$v->recom1?></div>
-								<?}?>
-								<?if($v->recom2 != ""){?>
-									<div class="tag2"><img src="<?=$v->refrecom2?>" alt=""><?=$v->recom2?></div>
-								<?}?>
+									<?if($v->recom1 != ""){?>
+										<div class="tag2"><img src="<?=$v->refrecom1?>" alt=""><?=$v->recom1?></div>
+									<?}?>
+									<?if($v->recom2 != ""){?>
+										<div class="tag2"><img src="<?=$v->refrecom2?>" alt=""><?=$v->recom2?></div>
+									<?}?>
 								</div>
 							</div> <!-- bottom_text 닫음 -->
 						</div> <!-- list_rightwrap 닫음 -->
@@ -143,6 +152,7 @@
 				<div class="title4">
 					<div class="underline">点评</div>
 				</div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
+				<div class="blueborder2"><span class="glyphicon glyphicon-info-sign bf"></span>  아직 내용이 없습니다</div>
 				<div class="somenail_wrap">
 					<ul class="somenail_list">
 					</ul>
@@ -150,6 +160,6 @@
 			</div><!-- profileWrap4 -->
 
 			<div class="profileWrap5">
-				<div class="title5"><div class="underline">Host References (10)</div></div>
+				<div class="title5"><div class="underline">Host References </div></div>
 				<!-- 라인 들어가는 타이틀 city부분 복제 -->
 			</div><!-- profileWrap5 -->
