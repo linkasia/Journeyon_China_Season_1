@@ -19,6 +19,7 @@ $cityList = $_REQUEST['cityList'];
 					</div>
 					<?foreach($choiceCountry as $v){?>
 					<div class="selectDiv"><span id='valueCountry'><?=$v->code_nm?></span>
+						<input type='hidden' id='hiddenImg' name='hiddenImg' value='<?=$v->ref2?>'>
 						<span id='change_button' name='change_button'><img src="/application/views/images/left_menu/check_box.png" alt=""  onclick="countryList()"></span>
 					</div>
 					<?}?>
@@ -292,7 +293,6 @@ $cityList = $_REQUEST['cityList'];
 </div> <!-- contents_wrap1 닫음  -->
 
 <script type="text/javascript">
-
 	//콤보박스 변경시
 	function selectCity(obj){
 		var _co="<?=$scountry?>";
@@ -320,12 +320,12 @@ $cityList = $_REQUEST['cityList'];
 	//상세페이지
 	function detail_page(num)
 	{
-		location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+num+"&mode='); ?>";
+		location.href = "/index.php/City/country/Detailcity_search?salesNum="+num+"&mode=";
 	}
 
 	function selecCountry(country,city)
 	{
-		location.href = "<?=site_url('City/country/city_search?scountry="+country+"&countryList="+city+"&cityList='); ?>";
+		location.href = "/index.php/City/country/city_search?scountry="+country+"&countryList="+city+"&cityList=";
 	}
 
 	function countryList()
@@ -345,7 +345,7 @@ $cityList = $_REQUEST['cityList'];
 
 		//메인 이미지 변경
 		$("#header_wrap").css("height","350px");
-		$("#header_wrap").css("background-image","url(/application/views/images/main/bg02.png)");
+		$("#header_wrap").css("background-image","url("+$('#hiddenImg').val()+")");
 
 		//헤더텍스트 높낮이 변경 padding
 		$("#headerText").css("padding-top","108px");

@@ -23,7 +23,7 @@
 		//선택나라
 		function choiceCountry($co,$ci)
 		{
-			$sql ="SELECT class,CODE,code_nm,ref1
+			$sql ="SELECT class,CODE,code_nm,ref1,ref2,ref3
 								FROM country_table
 								WHERE viewYn ='Y'
 								AND class = '".$co."'

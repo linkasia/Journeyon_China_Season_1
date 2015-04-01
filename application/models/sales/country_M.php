@@ -194,6 +194,8 @@
 											DATE_FORMAT(b.create_time,'%m') AS mon,
 											DATE_FORMAT(b.create_time,'%d') AS DAY,
 											p.img_path,
+											c.ref2,
+											c.ref3,
 											q.ref1 AS guide_country
 							FROM product a
 							LEFT JOIN USER b ON a.user_num = b.user_num
