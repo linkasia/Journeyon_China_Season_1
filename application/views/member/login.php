@@ -50,7 +50,7 @@
 
 		<script type="text/javascript" src="/application/views/js/bootstrap-select.js"></script>
 
-		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=YOUR APPKEY" type="text/javascript" charset="utf-8"></script>
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=278223120" type="text/javascript" charset="utf-8"></script>
 
 
 		<!-- simple modal plugin -->
