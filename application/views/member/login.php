@@ -121,7 +121,7 @@
 				childWindow = window.open("/application/views/member/qqLigin.php","TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");
 			}
 
-
+/*
 			WB2.anyWhere(function (W) {
 				W.widget.connectButton({
 					id: "wb_connect_btn",
@@ -135,6 +135,15 @@
 						}
 					}
 				});
+			});
+*/
+			WB2.login(function(){
+				//alert(WB2.screen_name);
+			});
+
+				
+			WB2.logout(function() {
+				//callback function
 			});
 
 			function checkLoginState() {
