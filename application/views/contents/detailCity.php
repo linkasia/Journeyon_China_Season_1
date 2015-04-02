@@ -192,7 +192,7 @@
 	var _tmpCheckDate = "";
 
 	$( document ).ready(function( $ ) {
-		document.getElementById('bakGround').src = $('#hiddenImg').val();
+		//document.getElementById('bakGround').src = $('#hiddenImg').val();
 		var today = new Date();
 		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
 
