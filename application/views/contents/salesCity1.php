@@ -23,7 +23,7 @@
 
 <div class="title"><div class="underline">微旅行</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
 	<?foreach($salesCity as $v){?>
-		<div class="contents_text1"><span class="glyphicon glyphicon-leaf"></span>  <?=$v->title?></div>
+		<!-- <div class="contents_text1"><span class="glyphicon glyphicon-leaf"></span>  <?=$v->title?></div> -->
 
 		<!-- 사진 슬라이더 시작 -->
 		<div id="example3" class="slider-pro">
