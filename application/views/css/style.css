@@ -18,8 +18,21 @@
 	#wrap{width: 100%; height: auto; margin: 0 auto;}
 
 /* Header 부분 스타일링 */
-	#header_wrap{width: 100%; background-size: 1920px 450px; background-attachment: fixed; background-position: center 0; position: relative; z-index: 100; overflow: hidden;}
-	#header_wrap2{width: 100%; height: 450px; background-size: 1920px 450px; background-attachment: fixed; background-position: center 0; z-index: 105;}
+	#header_wrap{
+		width: 100%; background-size: 1920px 450px; background-attachment: fixed; background-position: center 0; position: relative; z-index: 100; overflow: hidden;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		}
+
+	#header_wrap2{
+		width: 100%; height: 450px; background-size: 1920px 450px;
+		background-attachment: fixed; background-position: center 0; z-index: 105;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		}
+
 	#header_top{
 		width: 100%;
 		height: 55px;
@@ -29,6 +42,9 @@
 		border-color: #9bd4f8;
 		background-color: rgba(0,0,0,.5);
 		 opacity: 1;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
 		}
 
 	.bgimgDiv{
@@ -37,7 +53,107 @@
 		width: 100%;
 		height: 350px;
 		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
 	}
+
+	.bgimgDiv2{
+		background-image: url(/application/views/images/main/sample10.jpg);
+		background-position: center center;
+		width: 100%;
+		height: 350px;
+		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	}
+
+/*mypage쪽 배경*/
+	.bgimgDiv4{
+		background-image: url(/application/views/images/main/bg12.jpg);
+		background-position: center center;
+		width: 100%;
+		height: 350px;
+		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	}
+
+/*mypage쪽 배경*/
+	.bgimgDiv5{
+		background-image: url(/application/views/images/main/bg13.jpg);
+		background-position: center center;
+		width: 100%;
+		height: 350px;
+		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	}
+
+	.bgimgDiv6{
+		background-image: url(/application/views/images/main/bg14.jpg);
+		background-position: center center;
+		width: 100%;
+		height: 350px;
+		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	}
+
+	.bgimgDiv7{
+		background-image: url(/application/views/images/main/bg15.jpg);
+		background-position: center center;
+		width: 100%;
+		height: 350px;
+		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	}
+
+	.bgimgDiv8{
+		background-image: url(/application/views/images/main/bg16.jpg);
+		background-position: center center;
+		width: 100%;
+		height: 350px;
+		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	}
+
+	.bgimgDiv9{
+		background-image: url(/application/views/images/main/bg17.jpg);
+		background-position: center center;
+		width: 100%;
+		height: 350px;
+		z-index: 500;
+		box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+		-webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+	}
+
+
+	.detailCityTitleCenterWrap{
+		margin-left: auto;
+		margin-right: auto;
+		width: 940px;
+		position: relative;
+		padding-top: 100px;
+	}
+
+	.detailCityTitle{
+		color: #fff;
+		font-size: 20px;
+	}
+
+
+	
+
 
 	#header_wrap img.innerHeaderimg{
 		width: 100%;
@@ -140,7 +256,7 @@
 		width: 100%;
 		height: 450px;
 		position: absolute; top: 0px;
-		background-color: rgba(0,0,0,0.1);
+		background-color: rgba(0,0,0,0.65);
 		z-index: -30;
 		}
 
@@ -263,7 +379,13 @@
 	.sns_container > .div2{width: 130px; text-align: center;}
 	.sns_container > .div2 > span{color: white; font-size: 1.1em;}
 	.sns_container > .div3{border-top: 1px solid white; margin-top: 10px;}
-	.sns_container .sns_icon{width: 100%; height: 100px;}
+	.sns_container .sns_icon{
+		width: 98%;
+		height: 48px;
+		padding: 4px;
+		background-color: #fff;
+		border-radius: 10px;
+		}
 	.sns_container .sns_icon{clear: both; display: block; *zoom: 1;}
 	.sns_container .sns_icon > img{width: 32px; height: 32px; display: block; float: left; margin-right: 4px; cursor: pointer;}
 	.sns_container .sns_icon > img:first-child{margin-left: 4px;}
@@ -879,7 +1001,7 @@
 
 
 /* detailCity.php */
-	#detailCity_wrap{width: 940px; height: 100%; margin: 50px auto 0 auto;} /* 전체 wrap */
+	#detailCity_wrap{width: 940px; height: 100%; margin: 40px auto 0 auto;} /* 전체 wrap */
 	#detailCity_wrap:after{clear: both; display: block; *zoom: 1;}
 
 	#left_section{width: 690px; float: left;}
@@ -888,7 +1010,7 @@
 		border-radius: 0px;
 		}
 	#left_section .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative; margin-bottom: 60px;} /* 메뉴 아래로 contents 싸는 랩 */
-	#left_section .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
+	#left_section .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px;}
 	#left_section .contents_wrap .title .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	.contents_text1{width: 690px; height: auto; margin: 0 auto 20px auto; font-size: 1.2em; color: #0699D3;}
 
@@ -923,7 +1045,7 @@
 	}
 	 .menuTab button{width: 120px;}
 	 .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative;} /* 메뉴 아래로 contents 싸는 랩 */
-	 .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 40px;}
+	 .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px;}
 	 .contents_wrap .title .underline{border-bottom: 2px #53cbf1 solid; width: 60px; height: 40px; line-height: 40px; font-size: 1.35em;}
 	 .contents_wrap .contents_text1{width: 690px; margin: 0 auto 20px auto; font-size: 1.2em; color: #53CBF1;}
 
@@ -982,7 +1104,7 @@
 
 		/* salesCity1.php 전체 감싸는 wrap은 공유 */
 		#left_section .contents_wrap .profileWrap1{width: 690px; height: ; float: left; margin-bottom: 60px;}
-		#left_section .contents_wrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 20px;}
+		#left_section .contents_wrap .profileWrap1 .title1{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px;}
 		#left_section .contents_wrap .profileWrap1 .title1 .underline{border-bottom: 2px #53cbf1 solid; width: 80px; height: 40px; line-height: 40px; font-size: 1.35em;}
 		#left_section .contents_wrap .profileWrap1 .profile_text1{width: 190px; height: auto; text-align: right; float: left; margin-left: 40px;}
 		#left_section .contents_wrap .profileWrap1 .profile_text2{width: 220px; height: 200px; text-align: left; float: left; margin-left: 10px;}
@@ -1092,7 +1214,7 @@
 
 
 	/*오른쪽 예약박스 detailCity.php */
-	#right_aside{width: 230px; height: auto; margin-left: 20px; margin-top: 120px; float: left;}
+	#right_aside{width: 230px; height: auto; margin-left: 20px; margin-top: 100px; float: left;}
 	#right_aside .right_reservation{
 		float: left;
 		position: relative;
