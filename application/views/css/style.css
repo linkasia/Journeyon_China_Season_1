@@ -1008,6 +1008,8 @@
 	#left_section .menuTab button{
 		width: 120px;
 		border-radius: 0px;
+		color: #53cbf1;
+		border-color: #53cbf1;
 		}
 	#left_section .contents_wrap{width: 690px; height: 100%; margin-top: 20px; position: relative; margin-bottom: 60px;} /* 메뉴 아래로 contents 싸는 랩 */
 	#left_section .contents_wrap .title{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px;}
@@ -1662,8 +1664,10 @@
 		#accountWrap #rightWrap .accountDetail{width: 100%; height: 240px; margin-bottom: 80px; padding-bottom: 50px;}
 
 		.blueborder{
-			border: 1px solid #53cbf1;
-			padding: 20px; width: 100%;
+			/*border: 1px solid #53cbf1;
+			padding: 20px;*/
+			width: 100%;
+			padding-left: 20px;
 			float: left;
 			-webkit-border-radius: 15px;
 			-moz-border-radius: 15px;
@@ -1974,7 +1978,10 @@
 		#guideWrap .profileWrap1 .title2{width: 100%; height: 40px; border-bottom: 1px #f0f1f5 solid; margin-bottom: 20px; margin-top: 0px;}
 		#guideWrap .profileWrap1 .title2 .underline{border-bottom: 2px #53cbf1 solid; width: 98px; height: 40px; line-height: 40px; font-size: 1.35em; margin: 0 0 20px 0;}
 
-		#guideWrap #rightWrap{width: 680px; margin-left: 30px; float: left;}
+		#guideWrap #rightWrap{
+			width: 680px; margin-left: 30px; float: left;
+			margin-bottom: 80px;
+			}
 		#guideWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
 
 		#guideWrap .profileWrap1{width: 100%; position: relative;}
@@ -2040,7 +2047,17 @@
 
 		/* Guide Request (m_guide1.php)*/
 		#guideWrap .profileWrap1 #guideRequestWrap{width: 100%; position: relative;}
-		.guideRequestWrapinner{width: 100%; padding-left: 20px; padding-top: 20px; padding-bottom: 20px; border-radius: 10px; border: 1px solid #53cbf1; position: relative; float: left;}
+		.guideRequestWrapinner{
+			width: 100%;
+			padding-left: 20px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			/*border-radius: 10px;
+			border: 1px solid #53cbf1;*/
+			position: relative;
+			float: left;
+			}
+
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap{width: 100%; height: 260px; position: relative;}
 
 		#guideWrap .profileWrap1 #guideRequestWrap .processWrap .circle{
@@ -2311,7 +2328,11 @@
 					right: 0px;
 					}
 
-				#product_tab{margin-top: 20px;}
+				#product_tab{
+					margin-top: 20px;
+					min-height: 500px;
+					margin-bottom: 80px;
+					}
 
 	
 		/* ------------------------------------------------- 마이페이지 게스트 menu ------------------------------------------------- */
@@ -2666,10 +2687,10 @@
 		position: relative;
 		float: left;
 		padding: 29px;
-		border: 1px solid #53cbf1;
+		border: 1px solid #eee;
 		-webkit-border-radius: 15px;
 		-moz-border-radius: 15px;
-		border-radius: 15px;
+		border-radius: 0px;
 		margin-bottom: 50px;
 		}
 	#mypublicWrap #rightDiv #profileQuestion #saveProfile{margin-left: 450px; float: left;}
@@ -2956,6 +2977,10 @@
 		/* 오른쪽 메뉴 */
 		#companyInfoWrap #rightWrap{width: 680px; margin-left: 30px; float: left; margin-bottom: 50px;}
 		#companyInfoWrap #rightWrap:after{clear: both; display: none; *zoom:1;}
+
+		.minheight600{
+			min-height: 600px;
+		}
 
 		
 	
