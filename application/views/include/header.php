@@ -38,7 +38,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 		<script src="/application/views/js/jquery-1.11.0.min.js" type="text/javascript"></script>
 		<script src="/application/views/js/bootstrap.js" type="text/javascript"></script>
-		<script type="text/javascript" src = "https://maps.googleapis.com/maps/api/js?sensor=false&language=kr"></script>
+		<!-- <script type="text/javascript" src = "https://maps.googleapis.com/maps/api/js?sensor=false&language=kr"></script> -->
 
 		<!-- slider pro plugin install -->
 		<script type="text/javascript" src="/application/views/js/jquery.sliderPro.min.js"></script>

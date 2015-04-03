@@ -19,7 +19,7 @@
 					</ul>
 				</div>
 				<div class="menu_container2">
-					<iframe class="company_intro" width="437" height="246" src="//www.youtube.com/embed/JbGvVyCJCSM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					<!-- <iframe class="company_intro" width="437" height="246" src="//www.youtube.com/embed/JbGvVyCJCSM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 				</div>
 			</footer>
 		</div>
