@@ -1,13 +1,69 @@
 <?$this -> load ->view('/include/headervid')?>
 	<div id="contents_wrap1"> <!-- 컨텐츠 영역 나중에 include -->
 		<section id="section0">
+			<div class="section0divide">
+				<button class="btn btn-info">Become a Host</button>
+			</div>
+			<div class="section0divide">
+				<button class="btn btn-info">Become a Guest</button>
+			</div>
 		</section>
 		
 		<section id="section1">
 			<div class="city_title">
 				<h4 class="city_text">目前有<span class="font_orange">2万多</span>人访问了<span class="font_orange">200多</span>个不同的国家</h4>
 			</div>
-			<div class="city_icon">
+			<div class="map_jr">
+				<img src="/application/views/images/main/map2.png" alt="" class="img_map2">
+				<div class="map_sb1">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile01.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/20american.png" alt="" class="map_local_flag">
+				</div>
+				<div class="map_sb2">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile02.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/26mexico.png" alt="" class="map_local_flag">
+				</div>
+				<div class="map_sb3">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile03.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/24argentina.png" alt="" class="map_local_flag">
+				</div>
+				<div class="map_sb4">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile04.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/46uk.png" alt="" class="map_local_flag">
+				</div>
+				<div class="map_sb5">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile05.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/28australia.png" alt="" class="map_local_flag">
+				</div>			
+				<div class="map_sb6">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile06.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/11italy.png" alt="" class="map_local_flag">
+				</div>
+				<div class="map_sb7">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile07.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/14turkey.png" alt="" class="map_local_flag">
+				</div>
+				<div class="map_sb8">
+					<img src="/application/views/images/main/map_sb.png" alt="" class="map_local_icon">
+					<img src="/application/views/images/main/profile08.jpg" alt="" class="map_local_profile">
+					<img src="/application/views/images/flag/01korea.png" alt="" class="map_local_flag">
+				</div>
+				
+				<div class="map_sbRight">
+					<img src="/application/views/images/flag/01korea.png" alt="" class="map_sbRight_flag">
+					<p class="map_sbRightP1">&nbsp;> 加拿大</p>
+					<p class="map_sbRightP2"><巴西世界杯那些事儿></p>
+
+					<img src="/application/views/images/main/p02.png" alt="" class="map_sbRightP3_leftmark">
+					<p class="map_sbRightP3">  近北极圈，是加西观望北极光的最佳地点之一，也是育空地区的首府。这里是户外的天堂，野生动物的乐园，冬季的夜空里会洒满精...  <img src="/application/views/images/main/p02.png" alt="" class=""></p>
+				</div>
 			</div>
 		</section>
 
