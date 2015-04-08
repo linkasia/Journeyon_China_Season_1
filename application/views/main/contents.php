@@ -2,9 +2,13 @@
 	<div id="contents_wrap1"> <!-- 컨텐츠 영역 나중에 include -->
 		<section id="section0">
 			<div class="section0divide">
+				<p class="section0P1">One-on-One TLC</p>
+				<p>Your pup stays in their home or yours</p>
 				<button class="btn btn-info">Become a Host</button>
 			</div>
 			<div class="section0divide">
+				<p class="section0P1">Premium Insurance Included</p>
+				<p>Reservations covered by 24/7 Customer Care</p>
 				<button class="btn btn-info">Become a Guest</button>
 			</div>
 		</section>
@@ -336,71 +340,42 @@
 
 	<div id="contents_wrap5">
 		<section id="section5">
-			<div class="microstory_wrap">
-				<div class="title">微旅行故事</div>
-				<div class="microstoryDiv"><a href="http://weibo.com/3599379572/" target="_blank">
-					<!-- <img src="/application/views/images/main/sns01.jpg" alt="" /> -->
-					<p class="microstoryP"><span class="blit"></span>16 august 2015</p>
-					<p>更新了个人头像</p>
-					<p class="microstoryP"><span class="blit"></span>Post a new photo</p>
-					<p>BabyG 上传了新游记</p>
-					<p class="microstoryP"><span class="blit"></span>Post a new photo</p>
-					<p>BabyG 上传了新游记</p>
-					<div class="microstoryImg">
-						<img class="" src="/application/views/images/main/02.png" alt="">
-					</div>
-					<p class="microstoryP"><span class="blit"></span>Post a new photo</p>
-					<p>BabyG 上传了新游记</p></a>
-				</div>
+			<div class="section5divide plpr20">
+				<p class="section5divideP1">如何参与</p>
+				<p class="section5divideP2">在Journey On! 卓尼上</p>
+				<p class="section5divideP3">您会找到旅行的新体验，新乐趣。 在这里您会发现很多没有在旅游书上出现的景点和地道活动；更没有广告宣传和强制消费的束缚，您可以放心的去享受与别不同的旅游；尽情的感受当地的文化；拥抱您旅途上的人和事。 登录后，您可以收藏您感兴趣的微旅程和挑选您的微旅行导游；也可以一尝当导游的体验，带世界各地的朋友们去看您住的地方的好风光。 您也可以使用其他社区平台的账号来使用Journey On!卓尼，把微旅行文化分享到每个角落。</p>
+				<button class="btn btn-danger section5btn">更多</button>
 			</div>
-			<div class="travelstory_wrap">
-				<div class="title">游记</div>
-				<div>
-					<img src="/application/views/images/main/sns02.jpg" alt="" />
-				</div>
-				<div class="travelstoryDiv">
-					<div>
-						<p>港式游香港</p>
-						<p>69 想去  13 留言</p>
-					</div>
-					<div>
-						<button class="btn btn-info">想去</button>
-						<button class="btn btn-warning">留言</button>
-					</div>
-				</div>
-			</div>
-			<div class="news_wrap">
-				<div class="title">卓尼在线 新闻</div>
-				<div id="noticeTablediv">
-					<!-- <img src="/application/views/images/main/sns03.jpg" alt="" /> -->
-					<table id="noticeTable" class="table">
-						<thead class="tac">
-							<tr class="bgf9fafc tac">
-								<th class="nth1 tac">말머리</th>
-								<th class="nth2 tac">제목</th>
-								<th class="nth3 tac">날짜</th>
-							</tr>
-						</thead>
-						<tbody>
-						<?
-						$i=0;
-						foreach($noticeList as $v){
-							if($i < 9){?>
-							<tr>
-								<td class="ntd1"><?=$v->board_title?></td>
-								<td class="ntd2"><a href="/index.php/admin/adminMenu/adminNotice_review?num=<?=$v->board_num?>"><?=$v->board_subject?></a></td>
-								<td class="ntd3"><?=$v->board_reg_date?></td>
-							</tr>
-						<?}
-						$i++;
-						}?>
-						</tbody>
-					</table>
-				</div>
+			<div class="section5divide">
+				<img src="/application/views/images/main/sns05.jpg" alt="">
 			</div>
 		</section>
-
 	</div>
+
+	<div id="contents_wrap6">
+		<section id="section6">
+			<div class="section5divide">
+				<img src="/application/views/images/main/weibobg.png" alt="" class="weibobg">
+				<div class="weibopicWrap">
+					<div class="weibopic"><img src="/application/views/images/main/profile01.jpg" alt="weibopic"></div>
+					<div class="weibopic"><img src="/application/views/images/main/profile02.jpg" alt="weibopic"></div>
+					<div class="weibopic"><img src="/application/views/images/main/profile03.jpg" alt="weibopic"></div>
+					<div class="weibopic"><img src="/application/views/images/main/profile04.jpg" alt="weibopic"></div>
+					<div class="weibopic"><img src="/application/views/images/main/profile05.jpg" alt="weibopic"></div>
+					<div class="weibopic"><img src="/application/views/images/main/profile06.jpg" alt="weibopic"></div>
+					<div class="weibopic"><img src="/application/views/images/main/profile07.jpg" alt="weibopic"></div>
+					<div class="weibopic"><img src="/application/views/images/main/profile08.jpg" alt="weibopic"></div>
+				</div>
+				<p class="weiboP">123,916 people like Jouney On</p>
+			</div>
+			<div class="section5divide plpr40">
+				<p class="section5divideP1">微旅行故事</p>
+				<p class="section5divideP7">在Journey On! 卓尼上</p>
+				<p class="section5divideP6">您会找到旅行的新体验，新乐趣。 在这里您会发现很多没有在旅游书上出现的景点和地道活动；更没有广告宣传和强制消费的束缚，您可以放心的去享受与别不同的旅游；尽情的感受当地的文化；拥抱您旅途上的人和事。 登录后，您可以收藏您感兴趣的微旅程和挑选您的微旅行导游；也可以一尝当导游的体验，带世界各地的朋友们去看您住的地方的好风光。 您也可以使用其他社区平台的账号来使用Journey On!卓尼，把微旅行文化分享到每个角落。</p>
+			</div>
+		</section>
+	</div>
+
 	<!-- <div class="fb-comments" data-href="https://www.facebook.com/weihaikorea" data-numposts="5" data-colorscheme="light"></div>
 	<div id="fb-root"></div> -->
 <!-- <iframe src="https://www.facebook.com/shareevent/app_552924508082093" scrolling="no" frameborder="1" style="border:none; overflow:hidden; width:470px; height:250px;" id='frmFacebook' name='frmFacebook'> </iframe>

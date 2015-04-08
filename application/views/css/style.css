@@ -663,7 +663,28 @@
 		margin-bottom: 50px;
 	}
 
-	#contents_wrap1>#section0{width: 940px; height: 215px;}
+	#contents_wrap1>#section0{
+		width: 940px;
+		height: 215px;
+		margin: 0 auto;
+		}
+	.section0divide{
+		width: 470px;
+		float: left;
+		text-align: center;
+		padding-top: 50px;
+		}
+	.section0divide button{
+		width: 78%;
+		height: 40px;
+		border-radius: 8px;
+	}
+
+	.section0P1{
+		font-size: 13pt;
+		margin-bottom: 0;
+	}
+
 	#contents_wrap1>#section1{width: 100%; height: 480px; background-color: #9dddf2; padding-top: 20px; padding-bottom: 20px;}
 	.city_text{color: #fff;}
 
@@ -939,7 +960,76 @@
 	#section4 ul > li{float: left; margin-right: 13px; margin-bottom: 20px;}
 
 	#contents_wrap5{width: 100%; background-color: #f0f1f5; float: left;}
-	#section5{width: 940px; min-height: 480px; margin: 0 auto; padding-top: 40px;} 
+	#section5{width: 940px; min-height: 400px; margin: 0 auto; padding-top: 40px;} 
+
+	.section5divide{width: 470px; float: left; padding-left: 20px; position: relative;}
+
+	.section5divideP1{
+		font-size: 14pt;
+		color: #53cbf1;
+	}
+	.section5divideP2{
+		font-weight: 400;
+		font-size: 12pt;
+	}
+	.section5divideP3{
+		width: 100%;
+		min-height: 180px;
+		overflow: hidden;
+	}
+
+	.section5divideP6{
+		color: #fff;
+	}
+
+	.section5divideP7{
+		font-weight: 400;
+		font-size: 12pt;
+		color: #fff;
+	}
+
+	.section5btn{
+		width: 80px;
+		float: right;
+	}
+
+
+	.weibopicWrap{
+		width: 225px;
+		height: 115px;
+		overflow: hidden;
+		margin-top: 60px;
+		margin-left: 100px;
+	}
+
+	.weibopic{
+		float: left;
+		width: 50px;
+		height: 50px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+	}
+
+	.weibopic img{
+		float: left;
+		width: 100%;
+		height: 100%;
+	}
+
+	.weibobg{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	.weiboP{
+		position: absolute;
+		top: 169px;
+		right: 133px;
+		font-size: 9pt;
+		color: #fff;
+	}
+
 	#section5 .title{color: #fff; width: 100%; height: 35px; background-color: #434a54; text-align: center; line-height: 35px; font-size: 1.125em; margin-bottom: 0px; border-bottom: 0px;}
 	#section5:after{clear: both; display: block; *zoom: 1;}
 	#section5 > div{float: left;}
@@ -957,6 +1047,15 @@
 	#section5 .travelstory_wrap{width: 300px; height: 400px; margin-right: 20px; background-color: #fff;}
 	#section5 .news_wrap{width: 300px; height: 400px; background-color: #fff;}
 
+	#section6{width: 940px; min-height: 400px; margin: 0 auto; padding-top: 80px;}
+
+	#contents_wrap6{
+		width: 100%;
+		height: 420px;
+		background-image: url(/application/views/images/main/snsbg.jpg);
+		float: left;
+		background-position: center center;
+		}
 
 /* Footer 부분 스타일링 */
 	#footer_wrap{width: 100%; height: 320px; display: block; float: left;
@@ -998,9 +1097,7 @@
 
 
 
-
 /* ------------------------------------- 메인 페이지 끝 --------------------------------------------- */
-
 
 
 /* 도시별 정렬되는 페이지 City.php */
@@ -3914,6 +4011,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', end
 .pt20{padding-top: 20px;}
 .pb10{padding-bottom: 10px;}
 .pb20{padding-bottom: 20px;}
+.plpr20{padding-left: 20px; padding-right: 20px;}
+.plpr40{padding-left: 40px; padding-right: 40px;}
 .tac{text-align: center;}
 
 .textend{
