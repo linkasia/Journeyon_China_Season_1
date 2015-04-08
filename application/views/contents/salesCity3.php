@@ -1,7 +1,7 @@
 			<?foreach($userInfo as $v){?>
 			<div class="profileWrap1">
 				<div class="title1"><div class="underline">基本信息</div></div>  <!-- 라인 들어가는 타이틀 city부분 복제 -->
-				<div class="profile_text1">是否是专业导游<br>Host<br>生活在<br>现居住在纽约<br>年龄<br>性别<br>注册时间<br>语言<br><br><br>职业<br>最近登录时间<br></div>
+				<div class="profile_text1">是否是专业导游<br>Host<br>生活在<br>现居住在纽约<br>年龄<br>性别<br>注册时间<br>语言<br><br><br>职业<br>Job Detail<br>最近登录时间<br></div>
 				<div class="profile_text2">
 					<?if($v ->g_get_code=="0001"){ ?>是<?}else{?>no<?}?><br>
 					<?if($v ->v_get_code=="0001"){ ?>Available<?}else{?>no<?}?><br>
@@ -10,8 +10,8 @@
 					<?=$v->gender?><br>
 					<?=$v->create_day?><br>
 					<?=$v->lang1?>（<?=$v->langSkill1?>）<br><?=$v->lang2?>（<?=$v->langSkill2?>）<br><?=$v->lang3?>（<?=$v->langSkill3?>）<br>
-					学生、专业<br>10分钟前（微博为准）<br>
-				<div class="sns_icon">
+					<?=$v->job?><br><?=$v->job_detail?><br><?=$v->finaljoin?><br>
+				<!-- <div class="sns_icon">
 					<img src="/application/views/images/main/sns01.png" alt="">
 					<img src="/application/views/images/main/sns02.png" alt="">
 					<img src="/application/views/images/main/sns03.png" alt="">
@@ -21,7 +21,7 @@
 					<img src="/application/views/images/main/sns07.png" alt="">
 					<img src="/application/views/images/main/sns08.png" alt="">
 				</div>
-			</div>
+			</div> -->
 			</div><!-- profileWrap1 -->
 
 			<div class="profileWrap2">

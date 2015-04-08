@@ -282,7 +282,7 @@ $(function(){
 	$(function(){
 		$('#profileUploadfrm').ajaxForm({
 			success: function(data){
-				alert(data);
+				//alert(data);
 				if(data == "inputJobDetail"){
 					alert("添加工作经验和学历 최소 15자 이상입력해주세요");
 				}else if(data == "inputInteresting") {
