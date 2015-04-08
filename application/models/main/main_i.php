@@ -126,6 +126,12 @@
 			$result = $query->result();
 			return $result;
 		}
+
+		function finalJoin($num){
+			$sql ="UPDATE user SET finaljoin = SYSDATE()
+							WHERE user_num = '".$num."'";
+			$query = $this->db->query($sql);
+		}
 	}
 
 ?>

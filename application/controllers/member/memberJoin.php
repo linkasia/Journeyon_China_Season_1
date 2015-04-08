@@ -89,6 +89,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 				$this->session->set_userdata($newdata);
 				//데이터 이동
 				if($this->session->userdata['num']!=0){
+					$update['finalJoin'] = $this->main_i->finalJoin($result->user_num);
 					//echo "<script>alert('로그인 되었습니다.')</script>";
 					print_r("succes");
 /*
@@ -118,6 +119,7 @@ class memberJoin extends CI_Controller { // controller 파일이름이 곧 class
 		}
 		else
 		{
+			$update['finalJoin'] = $this->main_i->finalJoin($result->user_num);
 			$data['country'] = $this->main_i->Country();
 			$data['Travel'] = $this->main_i->Travel();
 			$data['choice'] = $this->main_i->Admin_choice();
