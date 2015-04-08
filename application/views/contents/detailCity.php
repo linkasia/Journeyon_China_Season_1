@@ -153,29 +153,24 @@
 					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
 					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
 
-					<input type='hidden' id='hiddenproductTheme1' name='hiddenproductTheme1' value='<?=$v->face_img_path?>'>
-					<input type='hidden' id='hiddenproductTheme2' name='hiddenproductTheme2' value='<?=$v->Name_cn_en?>'>
-					<input type='hidden' id='hiddenproductTheme3' name='hiddenproductTheme3' value='<?=$v->guide_country?>'>
-					<input type='hidden' id='hiddenproductRecom1' name='hiddenproductRecom1' value='<?=$v->guide_country_img?>'>
-					<input type='hidden' id='hiddenproductRecom2' name='hiddenproductRecom2' value='<?=$v->title?>'>
+					<input type='hidden' id='hiddenproductTheme1' name='hiddenproductTheme1' value='<?=$v->theme_img1?>'>
+					<input type='hidden' id='hiddenproductTheme2' name='hiddenproductTheme2' value='<?=$v->theme_img2?>'>
+					<input type='hidden' id='hiddenproductTheme3' name='hiddenproductTheme3' value='<?=$v->theme_img3?>'>
+					<input type='hidden' id='hiddenproductRecom1' name='hiddenproductRecom1' value='<?=$v->recommend1_img?>'>
+					<input type='hidden' id='hiddenproductRecom2' name='hiddenproductRecom2' value='<?=$v->recommend2_img?>'>
 
-					<input type='hidden' id='hiddenFaceImg' name='hiddenFaceImg' value='<?=$v->face_img_path?>'>
-					<input type='hidden' id='hiddenName' name='hiddenName' value='<?=$v->Name_cn_en?>'>
-					<input type='hidden' id='hiddenGuideCountry' name='hiddenGuideCountry' value='<?=$v->guide_country?>'>
-					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
-					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
+					<input type='hidden' id='hiddenproductThemeName1' name='hiddenproductThemeName1' value='<?=$v->theme_num1_nm?>'>
+					<input type='hidden' id='hiddenproductThemeName2' name='hiddenproductThemeName2' value='<?=$v->theme_num2_nm?>'>
+					<input type='hidden' id='hiddenproductThemeName3' name='hiddenproductThemeName3' value='<?=$v->theme_num3_nm?>'>
+					<input type='hidden' id='hiddenproductRecomName1' name='hiddenproductRecomName1' value='<?=$v->recommend1_nm?>'>
+					<input type='hidden' id='hiddenproductRecomName2' name='hiddenproductRecomName2' value='<?=$v->recommend2_nm?>'>
 
-					<input type='hidden' id='hiddenFaceImg' name='hiddenFaceImg' value='<?=$v->face_img_path?>'>
-					<input type='hidden' id='hiddenName' name='hiddenName' value='<?=$v->Name_cn_en?>'>
-					<input type='hidden' id='hiddenGuideCountry' name='hiddenGuideCountry' value='<?=$v->guide_country?>'>
-					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
-					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
+					<input type='hidden' id='hiddenProductCode1' name='hiddenProductCode1' value='<?=$v->theme_num1_code?>'>
+					<input type='hidden' id='hiddenProductCode2' name='hiddenProductCode2' value='<?=$v->theme_num2_code?>'>
+					<input type='hidden' id='hiddenProductCode3' name='hiddenProductCode3' value='<?=$v->theme_num3_code?>'>
+					<input type='hidden' id='hiddenProductCode4' name='hiddenProductCode4' value='<?=$v->recommend1_code?>'>
+					<input type='hidden' id='hiddenProductCode5' name='hiddenProductCode5' value='<?=$v->recommend2_code?>'>
 
-					<input type='hidden' id='hiddenFaceImg' name='hiddenFaceImg' value='<?=$v->face_img_path?>'>
-					<input type='hidden' id='hiddenName' name='hiddenName' value='<?=$v->Name_cn_en?>'>
-					<input type='hidden' id='hiddenGuideCountry' name='hiddenGuideCountry' value='<?=$v->guide_country?>'>
-					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
-					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
 
 					<img src="<?=$v->country_img?>" alt="" class="flag_image">
 					<?if ( $v->v_get_code == "0001"){ ?>
@@ -227,6 +222,41 @@
 		document.getElementById('productCountry').src = $('#hiddenGuideImg').val();
 		document.getElementById('productArea').innerHTML = $('#hiddenGuideCountry').val();
 		document.getElementById('productTitle').innerHTML = $('#hiddenTitle').val();
+
+		if($('#hiddenProductCode1').val() == "" ){
+			$('#div1').removeClass("header_tag");
+		}else{
+			document.getElementById('productTheme1').src = $('#hiddenproductTheme1').val();
+			document.getElementById('productThemeName1').innerHTML = $('#hiddenproductThemeName1').val();
+		}
+
+		if($('#hiddenProductCode2').val() == "" ){
+			$('#div2').removeClass("header_tag");
+		}else{
+			document.getElementById('productTheme2').src = $('#hiddenproductTheme2').val();
+			document.getElementById('productThemeName2').innerHTML = $('#hiddenproductThemeName2').val();
+		}
+
+		if($('#hiddenProductCode3').val() == "" ){
+			$('#div3').removeClass("header_tag");
+		}else{
+			document.getElementById('productTheme3').src = $('#hiddenproductTheme3').val();
+			document.getElementById('productThemeName3').innerHTML = $('#hiddenproductThemeName3').val();
+		}
+
+		if($('#hiddenProductCode4').val() == "" ){
+			$('#div4').removeClass("header_tag");
+		}else{
+			document.getElementById('productRecom1').src = $('#hiddenproductRecom1').val();
+			document.getElementById('productRecomName1').innerHTML = $('#hiddenproductRecomName1').val();
+		}
+
+		if($('#hiddenProductCode5').val() == "" ){
+			$('#div5').removeClass("header_tag");
+		}else{
+			document.getElementById('productRecom2').src = $('#hiddenproductRecom2').val();
+			document.getElementById('productRecomName2').innerHTML = $('#hiddenproductRecomName2').val();
+		}
 
 		var today = new Date();
 		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
