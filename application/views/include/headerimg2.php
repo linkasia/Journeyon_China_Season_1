@@ -1,4 +1,5 @@
 <div id="header_wrap3">
+	<div id="darken2"></div>
 	<div class="bgimgDiv2">
 		<!-- <img src="/application/views/images/main/bg08.jpg" alt="" class="innerHeaderimg"> -->
 		<!-- <img src="" alt="" id='bakGround' name='bakGround'> -->
