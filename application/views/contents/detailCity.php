@@ -39,7 +39,6 @@
 		<input type='hidden' id='hiddenProduct' name='hiddenProduct' value='<?=$salesNum?>' >
 			<?foreach($salesBasic as $v){?>
 				<input type='hidden' id='hiddenUser' name='hiddenUser' value='<?=$v->user_num?>' >
-				<input type='hidden' id='hiddenImg' name='hiddenImg' value='<?=$v->ref2?>' >
 				<div class="right_reservation">
 					<div class="price">
 						<p class="price_title">价格 :</p>
@@ -148,6 +147,36 @@
 			<div class="right_profile">
 				<div class="gray_box gray_boxbg"><span><img src="/application/views/images/main/img29_navi.PNG" alt="">  当地人</span>
 					<img src="<?=$v->face_img_path?>" alt="" class="img-circle profile_image">
+					<input type='hidden' id='hiddenFaceImg' name='hiddenFaceImg' value='<?=$v->face_img_path?>'>
+					<input type='hidden' id='hiddenName' name='hiddenName' value='<?=$v->Name_cn_en?>'>
+					<input type='hidden' id='hiddenGuideCountry' name='hiddenGuideCountry' value='<?=$v->guide_country?>'>
+					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
+					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
+
+					<input type='hidden' id='hiddenproductTheme1' name='hiddenproductTheme1' value='<?=$v->face_img_path?>'>
+					<input type='hidden' id='hiddenproductTheme2' name='hiddenproductTheme2' value='<?=$v->Name_cn_en?>'>
+					<input type='hidden' id='hiddenproductTheme3' name='hiddenproductTheme3' value='<?=$v->guide_country?>'>
+					<input type='hidden' id='hiddenproductRecom1' name='hiddenproductRecom1' value='<?=$v->guide_country_img?>'>
+					<input type='hidden' id='hiddenproductRecom2' name='hiddenproductRecom2' value='<?=$v->title?>'>
+
+					<input type='hidden' id='hiddenFaceImg' name='hiddenFaceImg' value='<?=$v->face_img_path?>'>
+					<input type='hidden' id='hiddenName' name='hiddenName' value='<?=$v->Name_cn_en?>'>
+					<input type='hidden' id='hiddenGuideCountry' name='hiddenGuideCountry' value='<?=$v->guide_country?>'>
+					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
+					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
+
+					<input type='hidden' id='hiddenFaceImg' name='hiddenFaceImg' value='<?=$v->face_img_path?>'>
+					<input type='hidden' id='hiddenName' name='hiddenName' value='<?=$v->Name_cn_en?>'>
+					<input type='hidden' id='hiddenGuideCountry' name='hiddenGuideCountry' value='<?=$v->guide_country?>'>
+					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
+					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
+
+					<input type='hidden' id='hiddenFaceImg' name='hiddenFaceImg' value='<?=$v->face_img_path?>'>
+					<input type='hidden' id='hiddenName' name='hiddenName' value='<?=$v->Name_cn_en?>'>
+					<input type='hidden' id='hiddenGuideCountry' name='hiddenGuideCountry' value='<?=$v->guide_country?>'>
+					<input type='hidden' id='hiddenGuideImg' name='hiddenGuideImg' value='<?=$v->guide_country_img?>'>
+					<input type='hidden' id='hiddenTitle' name='hiddenTitle' value='<?=$v->title?>'>
+
 					<img src="<?=$v->country_img?>" alt="" class="flag_image">
 					<?if ( $v->v_get_code == "0001"){ ?>
 						<img src="/application/views/images/main/img22_vmark.PNG" alt="" class="vmark_image">
@@ -192,7 +221,13 @@
 	var _tmpCheckDate = "";
 
 	$( document ).ready(function( $ ) {
-		//document.getElementById('bakGround').src = $('#hiddenImg').val();
+		$(".bgimgDiv2").css("background-image","url("+$('#hiddenImg').val()+")");
+		document.getElementById('productFace').src = $('#hiddenFaceImg').val();
+		document.getElementById('productName').innerHTML = $('#hiddenName').val();
+		document.getElementById('productCountry').src = $('#hiddenGuideImg').val();
+		document.getElementById('productArea').innerHTML = $('#hiddenGuideCountry').val();
+		document.getElementById('productTitle').innerHTML = $('#hiddenTitle').val();
+
 		var today = new Date();
 		$("#jqxWidget").jqxCalendar({width: 209, height: 200});
 

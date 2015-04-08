@@ -33,6 +33,7 @@
 				<?foreach($ImageCity as $k){?>
 					<div class="sp-slide">
 						<img class="sp-image" src="<?=$k->img_path?>" />
+						<input type='hidden' id='hiddenImg' name='hiddenImg' value='<?=$k->img_path?>' >
 
 						<!-- 사진 제목 올라가는 부분 -->
 						<p class="sp-layer sp-black sp-padding"

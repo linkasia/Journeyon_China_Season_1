@@ -159,10 +159,19 @@
 											a.fat_price,
 											a.theme_num1_code,
 											f.code_nm AS theme_num1_nm,
+											f.ref1 AS theme_img1,
 											a.theme_num2_code,
 											g.code_nm AS theme_num2_nm,
+											g.ref1 AS theme_img2,
 											a.theme_num3_code,
 											h.code_nm AS theme_num3_nm,
+											h.ref1 AS theme_img3,
+											a.recommend1_code,
+											r.code_nm AS recommend1_nm,
+											r.ref1 AS recommend1_img,
+											a.recommend2_code,
+											s.code_nm AS recommend2_nm,
+											s.ref1 AS recommend2_img,
 											b.messenger_qq,
 											b.messenger_weixin,
 											b.face_img_path,
@@ -196,7 +205,8 @@
 											p.img_path,
 											c.ref2,
 											c.ref3,
-											q.ref1 AS guide_country
+											q.code_nm AS guide_country,
+											q.ref1 AS guide_country_img
 							FROM product a
 							LEFT JOIN USER b ON a.user_num = b.user_num
 							LEFT JOIN country_table c ON b.mother_area_code = c.class AND b.mother_country_code=c.code
@@ -214,6 +224,8 @@
 							LEFT JOIN code_table o ON b.lang3_skill=o.code AND o.class='0014'
 							LEFT JOIN spot p ON a.product_num = p.product_num
 							LEFT JOIN country_table q ON a.sortcountry = q.class AND a.country_code=q.code
+							LEFT JOIN code_table r ON a.recommend1_code=r.code AND r.class='0013'
+							LEFT JOIN code_table s ON a.recommend2_code=s.code AND s.class='0013'
 							WHERE a.product_num='".$num."'
 							AND a.useYn = 'Y'
 							AND a.product_state = '0001'
