@@ -1,19 +1,17 @@
 <?$this -> load ->view('/include/headervid')?>
 	<div id="contents_wrap1"> <!-- 컨텐츠 영역 나중에 include -->
+		<section id="section0">
+		</section>
+		
 		<section id="section1">
 			<div class="city_title">
-				<h3 class="city_text">目前有<span class="font_orange">2万多</span>人访问了<span class="font_orange">200多</span>个不同的国家</h3>
+				<h4 class="city_text">目前有<span class="font_orange">2万多</span>人访问了<span class="font_orange">200多</span>个不同的国家</h4>
 			</div>
-
 			<div class="city_icon">
-
-			<?foreach($city as $v) {?>
-					<div id="city" class="city" name="city"><img src="<?=$v->ref1?>" alt="" onclick="Country_move('<?=$v->sclass?>','<?=$v->class?>','<?=$v->code?>')">
-						<p><?=$v->code_nm?></p>
-					</div>
-				<?}?>
 			</div>
 		</section>
+
+
 
 		<section id="section2">
 			<div class="s_button">
@@ -167,17 +165,17 @@
 										<img style="width: 300px; height: 240px;" src="<?=$v->image?>" alt="">
 								</div>
 								<?if($i== 1){?>
-									<div class="somenail_transbox" style="background-color:rgba(59,183,202,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(83,203,241,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 2){ ?>
-									<div class="somenail_transbox" style="background-color:rgba(195,119,228,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(242,87,76,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 3){?>
-									<div class="somenail_transbox" style="background-color:rgba(63,127,206,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(242,216,81,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 4){?>
-									<div class="somenail_transbox" style="background-color:rgba(255,210,5,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(28,177,153,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 5){?>
-									<div class="somenail_transbox" style="background-color:rgba(243,164,107,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(255,183,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}else if($i== 6){?>
-									<div class="somenail_transbox" style="background-color:rgba(48,59,76,.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(124,66,140,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 								<?}?>
 							</div>
 
@@ -234,11 +232,11 @@
 										<img style="width: 300px; height: 240px" src="<?=$v->image?>" alt="">
 									</div>
 									<?if($k== 1){?>
-									<div class="somenail_transbox" style="background-color:rgba(237,28,36,0.6)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(255,183,0,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}else if($k== 2){ ?>
-									<div class="somenail_transbox" style="background-color:rgba(195,119,228,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(28,177,153,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}else if($k== 3){?>
-									<div class="somenail_transbox" style="background-color:rgba(27,188,155 ,0.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
+									<div class="somenail_transbox" style="background-color:rgba(242,216,81,.8)" title='<?=$v->title?>'><p class="somenail_title"><?=$v->title?></p></div>
 									<?}?>
 								</div>
 								<div class="somenail_transcity" onclick="detailCity('<?=$v->product_num?>')">
@@ -391,11 +389,11 @@
 		function page_country(country,city){
 			location.href = "<?=site_url('City/country/city_search?scountry="+country+"&countryList="+city+"&cityList='); ?>";
 		}
-
+/*
 		function Country_move(a,b,c){
 			location.href = "<?=site_url('City/country/city_search?scountry="+a+"&countryList="+b+"&cityList="+c+"'); ?>";
 		}
-
+*/
 		function detailProfile(code)
 		{
 			location.href = "<?=site_url('City/country/Detailcity_search?salesNum="+code+"&mode=P'); ?>";

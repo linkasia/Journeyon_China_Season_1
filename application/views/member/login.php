@@ -103,11 +103,11 @@
 					<div class="sns_icon">
 						<!-- <img src="/application/views/images/main/sns01.png" alt="taobao"> -->
 						<!-- <img src="/application/views/images/main/sns02.png" alt="weibo"> -->
-						<wb:login-button type="3,2" onlogin="login" onlogout="logout"></wb:login-button>
-						<img src="/application/views/images/main/sns03.png" alt="qq" onclick='toQzoneLogin()'>
+						<wb:login-button type="3,2" onlogin="login" onlogout="logout" class="sns_iconsort"></wb:login-button>
+						<img src="/application/views/images/main/sns09.png" alt="qq" onclick='toQzoneLogin()'>
 						<!-- <img src="/application/views/images/main/sns04.png" alt="instagram"> -->
 						<img src="/application/views/images/main/sns05.png" alt="baidu">
-						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="sns_iconsort"></fb:login-button>
 						<!-- img src="/application/views/images/main/sns07.png" alt="facebook" onclick="checkLoginState()"-->
 						<img src="/application/views/images/main/sns08.png" alt="alipay">
 					</div>

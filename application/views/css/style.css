@@ -70,7 +70,7 @@
 
 /*mypage쪽 배경*/
 	.bgimgDiv4{
-		background-image: url(/application/views/images/main/bg12.jpg);
+		background-image: url(/application/views/images/main/sample20.jpg);
 		background-position: center center;
 		width: 100%;
 		height: 350px;
@@ -82,7 +82,7 @@
 
 /*mypage쪽 배경*/
 	.bgimgDiv5{
-		background-image: url(/application/views/images/main/bg13.jpg);
+		background-image: url(/application/views/images/main/sample21.jpg);
 		background-position: center center;
 		width: 100%;
 		height: 350px;
@@ -93,7 +93,7 @@
 	}
 
 	.bgimgDiv6{
-		background-image: url(/application/views/images/main/bg14.jpg);
+		background-image: url(/application/views/images/main/sample22.jpg);
 		background-position: center center;
 		width: 100%;
 		height: 350px;
@@ -104,7 +104,7 @@
 	}
 
 	.bgimgDiv7{
-		background-image: url(/application/views/images/main/bg15.jpg);
+		background-image: url(/application/views/images/main/sample23.jpg);
 		background-position: center center;
 		width: 100%;
 		height: 350px;
@@ -115,7 +115,7 @@
 	}
 
 	.bgimgDiv8{
-		background-image: url(/application/views/images/main/bg16.jpg);
+		background-image: url(/application/views/images/main/sample24.jpg);
 		background-position: center center;
 		width: 100%;
 		height: 350px;
@@ -475,7 +475,7 @@
 
 
 	.form-group{width: 610px; height: 620px; background-color: rgba(0,0,0,0.55); border-radius: 5px; margin: 120px auto 0 auto; position: relative;}
-	.form-group .input_container{width: 280px; height: auto; padding-top: 130px; margin: 0 auto;}
+	.form-group .input_container{width: 280px; height: auto; padding-top: 80px; margin: 0 auto;}
 	.form-group .input_container:after{clear: both; display: block; *zoom: 1;}
 	.form-group .input_container > span {color: white; font-weight: normal; display: block; float: right;}
 	.input-lg{width: 280px;}
@@ -494,7 +494,7 @@
 	.sns_container > .div3{border-top: 2px solid white; margin-top: 10px;}
 	.sns_container .sns_icon{width: 100%; height: 100px;}
 	.sns_container .sns_icon{clear: both; display: block; *zoom: 1;}
-	.sns_container .sns_icon > img{width: 32px; height: 32px; display: block; float: left; margin-right: 4px; cursor: pointer;}
+	.sns_container .sns_icon > img{display: block; float: left; margin-right: 4px; cursor: pointer;}
 	.sns_container .sns_icon > img:first-child{margin-left: 4px;}
 	.sns_container .sns_icon > img:last-child{margin-right: 0;}
 	#alertDiv{
@@ -532,14 +532,14 @@
 	.sns_container > .div3{border-top: 1px solid white; margin-top: 10px;}
 	.sns_container .sns_icon{
 		width: 98%;
-		height: 48px;
-		padding: 4px;
-		background-color: #fff;
+		height: 100px;
+		padding: 10px;
+		background-color: rgba(255,255,255,.8);
 		border-radius: 10px;
 		}
 	.sns_container .sns_icon{clear: both; display: block; *zoom: 1;}
-	.sns_container .sns_icon > img{width: 32px; height: 32px; display: block; float: left; margin-right: 4px; cursor: pointer;}
-	.sns_container .sns_icon > img:first-child{margin-left: 4px;}
+	.sns_container .sns_icon > img, .sns_iconsort{display: block; float: left; margin-right: 10px; margin-bottom: 10px; cursor: pointer; margin-top: 5px;}
+	.sns_container .sns_icon > img:first-child{margin-left: 10px;}
 	.sns_container .sns_icon > img:last-child{margin-right: 0;}
 	#ul_margin{margin: 0;}
 	#repeated_join{cursor: pointer; text-decoration: none;}
@@ -653,8 +653,9 @@
 		width: 100%;
 		height: auto;
 		float: left;
-		background-image: url(/application/views/images/main/p01.png);
+		/*background-image: url(/application/views/images/main/p01.png);*/
 	}
+
 	#contents_wrapEX{
 		width: 100%;
 		height: auto;
@@ -662,18 +663,20 @@
 		margin-bottom: 50px;
 	}
 
-	#contents_wrap1>#section1{width: 940px; height: 215px; margin: 0px auto;}
+	#contents_wrap1>#section0{width: 940px; height: 215px;}
+	#contents_wrap1>#section1{width: 100%; height: 480px; background-color: #9dddf2; padding-top: 20px; padding-bottom: 20px;}
+	.city_text{color: #fff;}
 	#contents_wrap1>#section1>div.city_title{text-align: center; padding-top: 5px;}
 
+	/* 날리심
 	#contents_wrap1>#section1>div.city_icon>div:nth-of-type(1){margin-left: 11px;}
 	#contents_wrap1>#section1>div.city_icon>div{display: block; float: left; text-align: center; margin-right: 15px; margin-top: 15px; text-decoration: none; color: #666;}
 	#contents_wrap1>#section1>div.city_icon>div:hover{color: #0699D3;}
-	#contents_wrap1>#section1>div.city_icon>div:nth-of-type(10){margin-right: 0px;} /* 10개 이미지 중 첫번째 선택자, 마지막 선택자 간격조절 */
+	#contents_wrap1>#section1>div.city_icon>div:nth-of-type(10){margin-right: 0px;}
 	#contents_wrap1>#section1>div>div>p{padding-top: 5px; font-size: 1em;}
-
 	#contents_wrap1>#section1>div.city_icon{overflow: hidden; cursor: pointer;}
-	#contents_wrap1>#section1>div.city_icon:after{clear: both; display: block; *zoom: 1;} /* Float 사용 후 정렬 */
-	#contents_wrap1>#section1>div.city_icon img{border-radius: 50%;}
+	#contents_wrap1>#section1>div.city_icon:after{clear: both; display: block; *zoom: 1;}
+	#contents_wrap1>#section1>div.city_icon img{border-radius: 50%;}*/
 
 	#contents_wrap1>#section2{width: 100%; height: 370px; background-color: #fff; margin: 0 auto; position: relative;}
 
