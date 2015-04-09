@@ -3676,7 +3676,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 #adminrightWrap{
 	float: left;
 	width: 1080px;
-	height: 1000px;
+	min-height: 1000px;
 	background-color: #f9fafc;
 	margin-bottom: 60px;
 }
