@@ -84,7 +84,7 @@
 
 
 	<!-- 페이지 넘버링 시작 -->
-	<nav id="pageNumber">
+	<!-- <nav id="pageNumber">
 	  <ul class="pagination">
 		<li>
 		  <a href="#" aria-label="Previous">
@@ -102,7 +102,7 @@
 		  </a>
 		</li>
 	  </ul>
-	</nav>
+	</nav> -->
 	<!-- 페이지 넘버링 끝 -->
 
 </div>

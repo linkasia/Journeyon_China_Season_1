@@ -24,7 +24,7 @@
 							LEFT JOIN code_table e ON a.v_get_code = e.code AND e.class = '0010'
 							LEFT JOIN code_table f ON a.g_get_code = f.code AND f.class = '0010'
 							LEFT JOIN code_table g ON a.pg_get_code = g.code AND g.class = '0010'
-							WHERE a.v_get_code in ('0004','0005','0006') OR a.g_get_code in ('0004','0005','0006') OR a.pg_get_code in ('0004','0005','0006')
+							-- WHERE a.v_get_code in ('0004','0005','0006') OR a.g_get_code in ('0004','0005','0006') OR a.pg_get_code in ('0004','0005','0006')
 							GROUP BY a.user_num";
 			$query = $this->db->query($sql);
 			$result = $query->result();
