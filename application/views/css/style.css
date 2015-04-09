@@ -1066,8 +1066,16 @@
 		}
 
 /* Footer 부분 스타일링 */
-	#footer_wrap{width: 100%; height: 320px; display: block; float: left;
-	background-image: url(/application/views/images/main/test.png);
+	#footer_wrap{width: 100%; display: block; float: left;
+	background-image: url(/application/views/images/main/test.png);}
+	#footer_wrap .center_wrap{width: 940px; height: 20px; margin: 0 auto;
+		/*background-image: url(/application/views/images/main/typo.png);*/
+	}
+	#typo{width: 100%; position: absolute;}
+
+	#footer_wrap .company_intro{float: right; margin-top: 38px;}
+	#footer_top{
+	width: 100%; height: 20px; color: #fff; padding-left: 20px; float: left;
 	background: rgb(135,224,253); /* Old browsers */
      /* IE9 SVG, needs conditional override of 'filter' to 'none' */
      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjODdlMGZkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDAlIiBzdG9wLWNvbG9yPSIjNTNjYmYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA1YWJlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
@@ -1079,29 +1087,29 @@
      background: linear-gradient(45deg,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* W3C */
      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 	}
-	#footer_wrap .center_wrap{width: 940px; height: 320px; margin: 0 auto;
-		/*background-image: url(/application/views/images/main/typo.png);*/
-	}
-	#typo{width: 100%; position: absolute;}
+	
 
-	#footer_wrap .company_intro{float: right; margin-top: 38px;}
-	#footer_top{width: 100%; height: 350px; color: #fff; padding-left: 20px;
-	}
 	#footer_top:after{clear: both; display: block; *zoom: 1;}
-	#footer_top .menu1{display: block; float: left; margin-top: 70px;}
-	#footer_top .menu2{display: block; float: left; margin-top: 70px; margin-left: 60px;}
-	#footer_top .menu_container1 > ul {font-size: 1.4em; font-style: bold; line-height: 22px;}
-	#footer_top .menu_container1 > ul > li{padding-left: 10px; font-size: 0.7em;}
-	#footer_top .menu_container1 > ul > li:nth-of-type(1){padding-top: 10px;}
-	#footer_top .li_cursor{cursor: pointer;}
-	#footer_top .menu_container1 > ul > li > a{color: #fff; text-decoration: none;}
+	#footer_bottom .menu1{display: block; float: left; margin-top: 20px;}
+	#footer_bottom .menu2{display: block; float: left; margin-top: 20px; margin-left: 60px;}
+	#footer_bottom .menu_container1 > ul {font-size: 1.4em; font-style: bold; line-height: 22px;}
+	#footer_bottom .menu_container1 > ul > li{padding-left: 10px; font-size: 0.7em;}
+	#footer_bottom .menu_container1 > ul > li:nth-of-type(1){padding-top: 10px;}
+	#footer_bottom .li_cursor{cursor: pointer;}
+	#footer_bottom .menu_container1 > ul > li > a{color: #fff; text-decoration: none;}
 
-
-	#footer_bottom{width: 100%; height: 100px; background-color: #000; font-size: 1em;}
-	#footer_logo{width: 173px; height: 55px; background-image: url(/application/views/images/main/img01_logo.png); display: block; float: left; margin: 20px; background-repeat: no-repeat;}
+	#footer_bottom{width: 100%; height: 160px; background-color: #5f5f5f; font-size: 1em; position: relative; float: left;}
+	#footer_logo{
+		width: 100%;
+		height: 55px;
+		display: block;
+		float: left;
+		background-repeat: no-repeat;
+		margin-top: 20px;
+		}
 	#footer_bottom .fb_container{width: 940px; height: auto; margin: 0 auto;}
 	#footer_bottom .fb_container:after{clear: both; display: block; *zoom:1;}
-	#footer_bottom .copyright{width: 940px; height: 100%; padding-top: 20px;}
+	#footer_bottom .copyright{width: 650px; height: 160px; text-align: right; float: left; color:#fff;}
 
 
 
@@ -3624,7 +3632,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
 /* 관리자 페이지 CSS시작 */
 #adminWrap{
 	width: 1280px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 52px;
 }
 
 

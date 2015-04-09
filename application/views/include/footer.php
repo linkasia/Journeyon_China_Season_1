@@ -1,6 +1,11 @@
 	<div id="footer_wrap">
-		<div class="center_wrap">
 			<footer id="footer_top">
+				
+			</footer>
+
+		<footer id="footer_bottom">
+			<div class="fb_container">
+
 				<div class="menu_container1">
 					<ul class="menu1">
 						<li><a href="/index.php/company/companyinfo/companyMain?list=1" class="li_cursor">关于</a></li>
@@ -21,12 +26,10 @@
 				<div class="menu_container2">
 					<!-- <iframe class="company_intro" width="437" height="246" src="//www.youtube.com/embed/JbGvVyCJCSM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 				</div>
-			</footer>
-		</div>
-		<footer id="footer_bottom">
-			<div class="fb_container">
-				<div id="footer_logo"></div>
+
+
 				<div class="copyright">
+					<div id="footer_logo"><img src="/application/views/images/main/img01_logo.png" alt=""></div>
 					<p>电话 : 021-3132-1017 | QQ : 1925498778 <br>
 						版权所有：沪ICP备14035966号 | Copyright © 2014 All rights reserved. ver 1.00.00 </p>
 				</div>
