@@ -12,6 +12,49 @@
 				<button class="btn btn-info">Become a Guest</button>
 			</div>
 		</section>
+
+
+<style>
+		*{margin:0;padding:0;}
+		.nav{list-style:none;width:1000px; margin:0 auto;}
+		.nav li{float:left;}
+		.nav a{width:200px;height:200px;display:block;
+			background:url('thumb.jpg');margin:0;}
+		.nav a.img1{background-position:0 0;}
+		.nav a.img2{background-position:-200px 0;}
+		.nav a.img3{background-position:-400px 0;}
+		.nav a.img4{background-position:-600px 0;}
+		.nav a.img5{background-position:-800px 0;}
+		.img{display:none;text-align:center;clear:both;}
+</style>
+
+		<!-- <section id="testsection">
+			<img src="/application/views/images/flag/01korea.png" onmouseover= alt="">
+				<ul class="nav">
+					<li><a href="#" class="img1">이미지1</a></li>
+					<li><a href="#" class="img2">이미지2</a></li>
+					<li><a href="#" class="img3">이미지3</a></li>
+					<li><a href="#" class="img4">이미지4</a></li>
+					<li><a href="#" class="img5">이미지5</a></li>
+				</ul>
+				<div class="img">내용1</div>
+				<div class="img">내용2</div>
+				<div class="img">내용3</div>
+				<div class="img">내용4</div>
+				<div class="img">내용5</div>
+
+
+				<script type="text/javascript">
+					$(document).ready(function(){
+						$('div.img').eq(0).show();
+						$('.nav a').click(function(){
+							imsi=$('.nav a').index($(this));
+							$('div.img').hide();
+							$('div.img').eq(imsi).show();
+						})
+					})
+				</script>
+		</section> -->
 		
 		<section id="section1">
 			<div class="city_title">
