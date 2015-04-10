@@ -24,6 +24,7 @@ $maincontents="当地人推荐的最佳自由行之地 Journey On";
 
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
+		<link rel="shoutcut icon" href="/application/views/images/favicon.ico">
 		<!-- <link href="/application/views/css/agency2.css" rel="stylesheet"> -->
 
 

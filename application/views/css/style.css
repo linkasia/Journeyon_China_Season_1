@@ -333,7 +333,7 @@
 	#header_wrap #headerTitle{width: 1200px; height: 280px; color: #fff; text-align: center; margin: 0 auto;}
 	#header_wrap #headerTitle #headerText{margin: 0 auto; padding-top: 195px;}
 	#header_top>ul{margin: 0 auto; width: 940px; height: 55px; position: relative;}
-	#header_top>ul>li{display: block; float: left; cursor: pointer; color:#fff; font-size: 1.25em;}
+	#header_top>ul>li{display: block; float: left; cursor: pointer; color:#fff; font-size: 13pt;}
 	#header_top>ul>li.logo{width: 173px; height: 55px; background-image: url(/application/views/images/main/img01_logo.png); position: absolute; left: 0px; top: 0px;}
 	#header_top>ul>li.become_host{width: 195px; height: 22px; /*background-image: url(/application/views/images/main/img02_text.png);*/ position: absolute; left: 183px; top: 20px;}
 	#header_top>ul>li.how_works{
@@ -1027,7 +1027,7 @@
 	.weibobg{
 		position: absolute;
 		top: 0px;
-		left: 0px;
+		left: 7px;
 	}
 
 	.weiboP{

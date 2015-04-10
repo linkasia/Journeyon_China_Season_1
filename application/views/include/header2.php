@@ -20,6 +20,7 @@
 		<!-- CustomCSS -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
 		<link href="/application/views/css/agency.css" rel="stylesheet">
+		<link rel="shoutcut icon" href="/application/views/images/favicon.ico">
 
 		<!-- Bootstrap Select -->
 		<link rel="stylesheet" type="text/css" href="/application/views/css/bootstrap-select.css">

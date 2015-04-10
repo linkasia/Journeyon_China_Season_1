@@ -355,7 +355,7 @@
 	<div id="contents_wrap6">
 		<section id="section6">
 			<div class="section5divide">
-				<img src="/application/views/images/main/weibobg.png" alt="" class="weibobg">
+				<img src="/application/views/images/main/weibobg2.png" alt="" class="weibobg">
 				<div class="weibopicWrap">
 					<div class="weibopic"><img src="/application/views/images/main/profile01.jpg" alt="weibopic"></div>
 					<div class="weibopic"><img src="/application/views/images/main/profile02.jpg" alt="weibopic"></div>
