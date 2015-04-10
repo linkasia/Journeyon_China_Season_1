@@ -209,7 +209,7 @@
 
 		$('.itemAdmin').click( function(){
 			var gGet = $('#hiddenGuide').val();
-			if(gGet == "0001"){
+			if(gGet == "0002"){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",
@@ -229,7 +229,7 @@
 
 		$('.salesAdmin').click( function(){
 			var gGet = $('#hiddenGuide').val();
-			if(gGet == "0001"){
+			if(gGet == "0002"){
 				$.ajax({
 					type:"POST" ,
 					dataType:"text",

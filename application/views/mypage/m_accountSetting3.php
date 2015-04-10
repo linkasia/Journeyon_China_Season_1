@@ -58,7 +58,13 @@
 					<div class="circle"><span>确认中 </span></div>
 				<?}?>
 				<?if($v->certicifi_type_code == "0004"){?>
-					<div class="circle bluegloss"><span>资料不足</span></div>
+					<div class="circle redgloss"><span>资料不足</span></div>
+					<div class="alert alert-danger alert-dismissible" role="alert" id="dismissingM">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<strong>原因：</strong> <?=$v->excuse?>
+					</div>
 				<?}else{?>
 					<div class="circle"><span>资料不足</span></div>
 				<?}?>
@@ -72,12 +78,7 @@
 				<img src="/application/views/images/mypage/icon_arrow01.png" alt="" class="arrow3">
 			</div>
 			<!-- bootstrap alert dismissing -->
-			<div class="alert alert-danger alert-dismissible" role="alert" id="dismissingM">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<strong>原因：</strong> 경고 메세지 들어갈 부분
-			</div>
+
 
 <hr>
 			<div class="vcertiWrap3">

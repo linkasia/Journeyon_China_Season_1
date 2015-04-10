@@ -53,7 +53,7 @@
 								<div class="circle whitegloss"><p>认证完成<br><span></span></p></div>
 							<?}?>
 
-							<?if($k->certicifi_type_code == "0001"){?>
+							<?if($k->certicifi_type_code == "0002"){?>
 								<div class="circle bluegloss3"><p>确认中</p></div>
 								<div class="circle bluegloss3"><p>资料不足<br><span><?=$k->modify_date?></span></p></div>
 								<div class="circle bluegloss3"><p>认证完成<br><span><?=$k->modify_date?></span></p></div>
@@ -88,7 +88,7 @@
 								<span class="btn btn-info" id="request" onclick="InsertGuide()">申请认证</span>
 							<?}?>
 						</div><!-- guideData end -->
-						<?if($k->certicifi_type_code == "0001"){?>
+						<?if($k->certicifi_type_code == "0002"){?>
 					</div>
 				</div><!-- guideRequestWrapinner End -->
 				<?if(count($pgGuide) == 0){?>
@@ -155,7 +155,7 @@
 								<div class="circle whitegloss"><p>认证完成<br><span></span></p></div>
 							<?}?>
 
-							<?if($j->certicifi_type_code == "0001"){?>
+							<?if($j->certicifi_type_code == "0003"){?>
 								<div class="circle bluegloss3"><p>确认中</p></div>
 								<div class="circle bluegloss3"><p>资料不足<br><span><?=$k->modify_date?></span></p></div>
 								<div class="circle bluegloss3"><p>认证完成<br><span><?=$k->modify_date?></span></p></div>
