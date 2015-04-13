@@ -18,8 +18,8 @@
 		<!-- <link href="/application/views/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"> -->
 		
 		<!-- CustomCSS -->
-		<link rel="stylesheet" type="text/css" href="/application/views/css/style.css">
-		<link href="/application/views/css/agency.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/application/views/css/style.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="/application/views/css/style.css"> -->
 		<link rel="shoutcut icon" href="/application/views/images/favicon.ico">
 
 		<!-- Bootstrap Select -->
